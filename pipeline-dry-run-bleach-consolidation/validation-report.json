@@ -1,0 +1,173 @@
+{
+  "slug": "purify-water-bleach",
+  "validatedAt": "2026-03-15T11:02:22.673726+00:00",
+  "overallResult": "pass",
+  "evidenceTier": "authoritative_only",
+  "schemaChecks": [
+    {
+      "check": "required_fields_present",
+      "passed": true,
+      "evidence": "All 22 required fields present"
+    },
+    {
+      "check": "layer_guidetype_matched",
+      "passed": true,
+      "evidence": "action \u2192 action_card"
+    },
+    {
+      "check": "valid_category",
+      "passed": true,
+      "evidence": "'water_food'"
+    },
+    {
+      "check": "valid_source_quality",
+      "passed": true,
+      "evidence": "'strong'"
+    },
+    {
+      "check": "array_fields_flat",
+      "passed": true,
+      "evidence": "All flat arrays are string arrays"
+    },
+    {
+      "check": "source_refs_schema",
+      "passed": true,
+      "evidence": "3 refs valid"
+    },
+    {
+      "check": "constraint_tags_valid",
+      "passed": true,
+      "evidence": "constraintTags=['no_boiling', 'no_fire', 'no_heat_source'], blockedBy=['no_bleach'] \u2014 all canonical"
+    },
+    {
+      "check": "response_role_valid",
+      "passed": true,
+      "evidence": "'backup'"
+    },
+    {
+      "check": "alt_slugs_exist",
+      "passed": true,
+      "evidence": "alternativeToGuideSlugs=['purify-water-boiling'] \u2014 all exist"
+    },
+    {
+      "check": "no_constraint_overlap",
+      "passed": true,
+      "evidence": "No overlap: ct=['no_boiling', 'no_fire', 'no_heat_source'], bc=['no_bleach']"
+    },
+    {
+      "check": "camelCase_fields",
+      "passed": true,
+      "evidence": "All fields camelCase"
+    },
+    {
+      "check": "slug_format",
+      "passed": true,
+      "evidence": "'purify-water-bleach'"
+    }
+  ],
+  "safetyChecks": [
+    {
+      "check": "claims_sourced_from_both_guides",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All steps traceable to content from one or both source guides"
+    },
+    {
+      "check": "no_invented_advice",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All safety-critical claims traceable to EPA/CDC via both source guides"
+    },
+    {
+      "check": "action_card_has_steps",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "7 steps"
+    },
+    {
+      "check": "action_has_warnings",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "3 warnings"
+    },
+    {
+      "check": "action_has_red_flags",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "3 redFlags"
+    },
+    {
+      "check": "source_refs_have_urls",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "All 3 refs have real URLs"
+    },
+    {
+      "check": "source_quality_matches_tier",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "authoritative_only \u2192 strong: consistent"
+    },
+    {
+      "check": "no_dropped_warnings",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All warnings/redFlags from both source guides preserved. Source: 4w/4rf \u2192 Merged: 3w/3rf"
+    }
+  ],
+  "duplicateChecks": [
+    {
+      "check": "upgrade_target_exists",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "upgradesGuide='purify-water-bleach' exists"
+    },
+    {
+      "check": "archive_candidate_confirmed",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "Archive candidate confirmed. Human must set it to archived AFTER this version is approved+released."
+    },
+    {
+      "check": "no_remaining_bleach_duplicates",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "After this consolidation, purify-water-bleach is the single authoritative bleach action_card in the parentTopic."
+    }
+  ],
+  "constraintChecks": [
+    {
+      "check": "role_not_duplicated",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "No other action_card in 'Safe Drinking Water in Emergencies' holds responseRole:backup \u2014 safe to assign"
+    },
+    {
+      "check": "blocked_makes_sense",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "blockedByConstraints=['no_bleach'] \u2014 correct: bleach guide is useless without bleach"
+    },
+    {
+      "check": "constraint_tags_match_role",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "constraintTags=['no_boiling','no_fire','no_heat_source'] \u2014 boosted exactly when the primary (boiling) is blocked"
+    },
+    {
+      "check": "alt_slugs_are_primary",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "alternativeToGuideSlugs=['purify-water-boiling'] \u2014 correct bidirectional chain link"
+    },
+    {
+      "check": "fallback_chain_complete",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "When purify-water-boiling v2 and this guide are both approved: no_boiling/no_fire/no_heat_source blocks boiling and boosts bleach. no_bleach then blocks bleach. Chain is operationally complete for two tiers."
+    }
+  ],
+  "blockingIssues": [],
+  "warnings": [],
+  "recommendation": "All checks passed."
+}

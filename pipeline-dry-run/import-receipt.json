@@ -1,0 +1,14 @@
+{
+  "slug": "during-landslide",
+  "guideId": "pending-actual-import",
+  "versionId": "pending-actual-import",
+  "versionNumber": "pending-actual-import",
+  "reviewStatus": "draft",
+  "isNew": false,
+  "changeSummary": "Upgraded from 4 to 9 step-by-step actions, expanded warnings from 1 to 4, expanded redFlags from 1 to 5, added post-impact steps, replaced placeholder content, added 3 authoritative source references with URLs from USGS and FEMA/Ready.gov.",
+  "apiWarnings": [],
+  "validationWarnings": [],
+  "importedAt": "pending — run run-import.sh from Mac to complete",
+  "reviewUrl": "http://localhost:3000/review?filter=draft",
+  "note": "The VM sandbox cannot reach localhost:3000. Run 'bash run-import.sh' from the pipeline-dry-run folder on your Mac with the admin app running to complete this step."
+}

@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-03-15T15:00:00Z",
+  "librarySnapshot": {
+    "totalGuides": 187,
+    "byCategory": {
+      "natural_disasters": 24,
+      "medical_safety": 34,
+      "core_skills": 18,
+      "water_food": 28,
+      "shelter_fire_warmth": 22,
+      "communication": 12,
+      "navigation": 10,
+      "power_utilities_home_safety": 14,
+      "preparedness": 15,
+      "weather_environment": 10
+    },
+    "byLayer": {
+      "action": 62,
+      "reference": 55,
+      "preparedness": 40,
+      "scenario": 30
+    }
+  },
+  "workItems": [
+    {
+      "priority": 1,
+      "action": "upgrade",
+      "targetSlug": "during-landslide",
+      "suggestedSlug": null,
+      "reason": "Existing action_card has only 4 steps (shallow for an active emergency), 1 warning, 1 red flag, placeholder content (summary duplicates quickAnswer), and a single source reference with no URL. USGS and FEMA publish authoritative guidance that could significantly strengthen this guide.",
+      "weaknessFlags": [
+        "shallow_steps",
+        "weak_sources",
+        "sources_missing_urls",
+        "placeholder_content"
+      ],
+      "category": "natural_disasters",
+      "parentTopic": "Landslides",
+      "suggestedLayer": "action",
+      "suggestedGuideType": "action_card",
+      "evidenceTier": "authoritative_only",
+      "estimatedEffort": "medium"
+    }
+  ],
+  "duplicateRisks": []
+}

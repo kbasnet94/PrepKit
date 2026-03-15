@@ -1,0 +1,108 @@
+{
+  "canonicalSlug": "purify-water-bleach",
+  "archiveSlug": "purifying-water-with-household-liquid-bleach",
+  "canonicalChoiceReason": "purify-water-bleach has 3 real source URLs (EPA + 2x CDC); cleaner, shorter slug; same sourceQuality:strong. Archive guide has more detailed steps and whatNotToDo but zero URL-populated source references.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical",
+      "source": "purify-water-bleach: 'Disinfect Water with Bleach'",
+      "note": "Action-verb phrasing ('Disinfect') is more scannable for a panicked user than 'Purifying Water with Household Liquid Bleach'"
+    },
+    {
+      "field": "summary",
+      "decision": "archive-preferred",
+      "source": "purifying-water-with-household-liquid-bleach",
+      "note": "Archive summary is more specific ('plain unscented bleach of known strength', 'wait at least 30 minutes'). Canonical summary uses hedging language ('may be a backup option')."
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "archive-preferred",
+      "source": "purifying-water-with-household-liquid-bleach",
+      "note": "Same reason as summary — archive version gives the user actionable specifics immediately."
+    },
+    {
+      "field": "whenToUse",
+      "decision": "merged",
+      "source": "both",
+      "note": "Canonical covers bleach-as-fallback-when-boiling-impossible; archive covers water source context. Both angles are useful. Merged to 2-item array."
+    },
+    {
+      "field": "preferredAction",
+      "decision": "synthesized",
+      "source": "both",
+      "note": "Canonical mentions product type, amount, mixing, and wait time. Archive mentions sodium hypochlorite strength. Combined into one sentence covering all four elements."
+    },
+    {
+      "field": "backupAction",
+      "decision": "synthesized",
+      "source": "both",
+      "note": "Canonical: if unsure of bleach strength, use safer source. Archive: if bleach unavailable, use tablets or boil. Both scenarios matter; merged to cover both."
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "6 steps from archive + logical reordering; canonical step[1] (bleach check) absorbed into archive step[0]; wait time conflict resolved",
+      "note": "Result: 6 steps. Archive's step ordering is better (bleach check → pre-filter → dose → wait → verify smell → store). Canonical's steps were a shallow subset."
+    },
+    {
+      "field": "warnings",
+      "decision": "merged",
+      "source": "both",
+      "note": "Canonical: 'wrong type or amount unsafe' + 'does not remove chemicals'. Archive: 'less effective cold/cloudy' + 'does not remove chemicals'. Chemical contamination warning deduplicated and strengthened. Cold/cloudy warning added from archive. Result: 3 warnings."
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "archive-preferred with canonical absorbed",
+      "source": "purifying-water-with-household-liquid-bleach (4 items) + canonical (2 items absorbed)",
+      "note": "Archive has superset of canonical's 2 items plus 2 unique additions ('do not guess strength', 'do not drink concentrated bleach'). Both canonical items deduplicated into archive equivalents. Result: 4 items."
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "both",
+      "note": "Archive has specific bleach-ingestion emergency flag (burning/breathing problems) not in canonical. Canonical has 'concentration unknown' flag not in archive. Both retained. Canonical's 'signs of waterborne illness' absorbed into archive's more specific 'vomiting/diarrhea' version. Result: 3 redFlags."
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "archive",
+      "source": "purifying-water-with-household-liquid-bleach",
+      "note": "Canonical has 0 preparednessTips. Archive has 3 specific, actionable tips (keep bleach in kit, store dosage tables, train household members). All 3 retained."
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "canonical",
+      "source": "purify-water-bleach",
+      "note": "Both cite EPA + 2x CDC, but canonical has all 3 real URLs. Archive has 3 empty URLs and one is a placeholder ('Local emergency chlorination adaptations' from a vague 'Emergency management guidance referencing EPA' source — not kept). Canonical refs are authoritative and directly linkable."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "canonical",
+      "source": "both: strong",
+      "note": "Both are 'strong'. No change."
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "both",
+      "note": "Union of both tag sets, minus organization-name tags ('cdc', 'epa') which are not useful search tags. Added 'emergency water' and 'water treatment' for consistency with purify-water-boiling."
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "stepByStepActions — wait time",
+      "valueA": "let it stand at least 30 minutes",
+      "sourceA": "purifying-water-with-household-liquid-bleach step[3]",
+      "valueB": "wait the recommended time before use",
+      "sourceB": "purify-water-bleach step[3]",
+      "resolution": "Use '30 minutes (or 60 minutes if the water is cold or cloudy)' — the 30-minute figure is the EPA's standard emergency wait time for clear water at room temperature. The canonical guide's vague 'recommended time' is technically correct but not actionable offline. The archive guide's specific figure is safer for emergency use when a user may not have access to a reference table.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "No other guides in the library have alternativeToGuideSlugs pointing to 'purifying-water-with-household-liquid-bleach' — safe to archive once merged version is approved.",
+    "Archive action is a HUMAN step in the admin UI: set purifying-water-with-household-liquid-bleach to review_status:archived AFTER the merged version of purify-water-bleach is approved and released."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

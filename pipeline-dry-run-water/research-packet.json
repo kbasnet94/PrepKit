@@ -1,0 +1,136 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "purify-water-boiling",
+    "category": "water_food",
+    "parentTopic": "Safe Drinking Water in Emergencies"
+  },
+  "evidenceTier": "authoritative_only",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "action",
+  "suggestedGuideType": "action_card",
+  "existingGuideUpgradeTarget": "purify-water-boiling",
+  "researchFindings": [
+    {
+      "claim": "Bring water to a rolling boil — large bubbles continuously rising and breaking the surface — for at least 1 minute at elevations below 6,500 feet (2,000 meters).",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Primary step: defines rolling boil and sea-level duration"
+    },
+    {
+      "claim": "At elevations above 6,500 feet (2,000 meters), boil water for at least 3 minutes because water boils at lower temperatures and the reduced temperature may be insufficient to kill all pathogens in 1 minute.",
+      "sourceTitle": "Make Water Safe in an Emergency",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Altitude adjustment step — critical for high-elevation users"
+    },
+    {
+      "claim": "If the water is cloudy or has visible particles, pre-filter it before boiling: let particles settle for several minutes, then pour through a clean cloth, paper towel, or coffee filter to remove sediment.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Pre-filtering step — sediment reduces boiling effectiveness"
+    },
+    {
+      "claim": "After boiling, allow water to cool naturally in the same container. Do not place the hot container in cold water or add ice to cool it faster — this risks contaminating the treated water.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Cooling step — prevents recontamination"
+    },
+    {
+      "claim": "Store cooled boiled water in a clean, food-grade container with a tight-fitting lid. Sanitize the storage container first if possible: wash with soap, rinse, then swirl 1 teaspoon of unscented bleach per quart (liter) of water, rinse, and air dry.",
+      "sourceTitle": "How to Create and Store an Emergency Water Supply",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Storage step — prevents post-treatment contamination"
+    },
+    {
+      "claim": "Label treated water containers clearly and use boiled water within 24 hours of cooling; after 24 hours, risk of recontamination increases significantly.",
+      "sourceTitle": "Make Water Safe in an Emergency",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Storage duration guidance — redFlag if water sits too long"
+    },
+    {
+      "claim": "Boiling kills bacteria, viruses, and parasites (protozoa). It is the most reliable method of emergency water purification for microbiological contamination.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "quickAnswer framing — what boiling actually does"
+    },
+    {
+      "claim": "Boiling does NOT remove chemical contaminants such as fuel, pesticides, heavy metals (lead, arsenic, mercury), PFAS ('forever chemicals'), nitrates, fluoride, or radioactive materials. If water is suspected of chemical or fuel contamination, boiling is not sufficient.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical warning — boiling limitations. Also: boiling can CONCENTRATE some chemicals."
+    },
+    {
+      "claim": "Boiling can concentrate dissolved chemicals (heavy metals, nitrates, PFAS) by evaporating water and leaving contaminants behind. Prolonged or repeated boiling of contaminated water can make it MORE dangerous, not less.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "whatNotToDo — counterintuitive danger for chemical-contaminated water"
+    },
+    {
+      "claim": "If a boil-water advisory is issued specifically for chemical or heavy metal contamination (not just biological), boiling is the wrong response. Follow official do-not-drink guidance instead.",
+      "sourceTitle": "Make Water Safe in an Emergency",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlag — distinguishes boil-water advisory types"
+    },
+    {
+      "claim": "Boiling water in unsafe containers (plastic bags not rated for heat, certain plastics that leach chemicals when hot, thin plastic water bottles) can introduce contaminants into the water.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "whatNotToDo — unsafe containers"
+    },
+    {
+      "claim": "Use only metal pots, heat-safe glass, or purpose-designed camping/survival boiling vessels. Do not boil in single-use plastic bottles, thin plastic containers, or any container with visible cracks or residue.",
+      "sourceTitle": "Make Water Safe in an Emergency",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "step — correct container guidance"
+    },
+    {
+      "claim": "Symptoms of waterborne illness (diarrhea, vomiting, cramps, fever) typically appear 1–3 days after drinking contaminated water; if symptoms appear after consuming what was believed to be boiled water, consider the source or post-boil contamination.",
+      "sourceTitle": "Water, Sanitation, and Hygiene (WASH) Emergency Guidance",
+      "sourceOrganization": "U.S. Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlag — post-treatment illness indicator"
+    }
+  ],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Altitude threshold for extended boiling duration",
+      "issue": "CDC specifies 6,500 feet (2,000 m) as the threshold requiring 3 minutes. EPA and FEMA/Ready.gov specify 5,000 feet. The scientific basis favors the lower threshold (5,000 ft / ~1,500 m) because water's boiling point decreases meaningfully even at 5,000 ft, reducing pathogen kill efficacy.",
+      "sourceA": "CDC (6,500 ft threshold)",
+      "sourceB": "EPA and FEMA (5,000 ft threshold)",
+      "resolution": "Use the more conservative guidance: 3 minutes above 5,000 feet (1,500 meters). This follows EPA and FEMA and errs toward safety. Note the discrepancy in the guide."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "No guidance for users without any heat source",
+      "impact": "The guide correctly covers boiling but gives no fallback when fire/heat is unavailable. The constraint system (blockedByConstraints: [no_boiling, no_fire, no_heat_source]) is the correct mechanism — the guide itself should note alternatives exist.",
+      "suggestion": "Add a backupAction pointing to chemical treatment. The guide's constraint metadata will block it and route users to the bleach guide automatically."
+    }
+  ],
+  "recommendation": "Upgrade purify-water-boiling with: (1) explicit 'rolling boil' definition, (2) correct altitude threshold using EPA/FEMA consensus (5,000 ft, not 6,500 ft), (3) real source URLs now available, (4) stronger chemical-contamination warnings including the concentration-increase risk, (5) correct container guidance. The constraint metadata should block this guide on no_boiling/no_fire/no_heat_source and set responseRole to primary. The backupAction should reference bleach/chemical treatment."
+}

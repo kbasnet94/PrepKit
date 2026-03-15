@@ -1,0 +1,170 @@
+{
+  "slug": "purify-water-boiling",
+  "validatedAt": "2026-03-15T10:39:27.987448+00:00",
+  "overallResult": "pass_with_warnings",
+  "evidenceTier": "authoritative_only",
+  "schemaChecks": [
+    {
+      "check": "required_fields_present",
+      "passed": true,
+      "evidence": "All 22 fields present"
+    },
+    {
+      "check": "layer_guidetype_matched",
+      "passed": true,
+      "evidence": "action \u2192 action_card"
+    },
+    {
+      "check": "valid_category",
+      "passed": true,
+      "evidence": "water_food (valid)"
+    },
+    {
+      "check": "valid_source_quality",
+      "passed": true,
+      "evidence": "sourceQuality='strong'"
+    },
+    {
+      "check": "array_fields_flat",
+      "passed": true,
+      "evidence": "All flat arrays are string arrays"
+    },
+    {
+      "check": "source_refs_schema",
+      "passed": true,
+      "evidence": "3 refs, all valid"
+    },
+    {
+      "check": "constraint_tags_valid",
+      "passed": true,
+      "evidence": "constraintTags=[], blockedBy=['no_boiling', 'no_fire', 'no_heat_source'] \u2014 all canonical"
+    },
+    {
+      "check": "response_role_valid",
+      "passed": true,
+      "evidence": "responseRole='primary'"
+    },
+    {
+      "check": "alt_slugs_exist",
+      "passed": true,
+      "evidence": "alternativeToGuideSlugs=[] \u2014 nothing to validate"
+    },
+    {
+      "check": "no_constraint_overlap",
+      "passed": true,
+      "evidence": "No overlap: constraintTags=[], blockedBy=['no_boiling', 'no_fire', 'no_heat_source']"
+    },
+    {
+      "check": "camelCase_fields",
+      "passed": true,
+      "evidence": "All fields camelCase"
+    },
+    {
+      "check": "slug_format",
+      "passed": true,
+      "evidence": "slug='purify-water-boiling' valid"
+    }
+  ],
+  "safetyChecks": [
+    {
+      "check": "claims_sourced",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All steps traceable to research"
+    },
+    {
+      "check": "no_invented_advice",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All safety claims grounded in EPA/CDC sources"
+    },
+    {
+      "check": "action_card_has_steps",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "7 steps"
+    },
+    {
+      "check": "action_has_warnings",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "4 warnings"
+    },
+    {
+      "check": "action_has_red_flags",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "5 redFlags"
+    },
+    {
+      "check": "source_quality_matches_tier",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "authoritative_only \u2192 strong: consistent"
+    },
+    {
+      "check": "source_refs_have_urls",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "All 3 refs have real URLs"
+    },
+    {
+      "check": "no_dropped_warnings",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All existing warnings/redFlags preserved. Existing: 2w/2rf \u2192 New: 4w/5rf"
+    }
+  ],
+  "duplicateChecks": [
+    {
+      "check": "upgrade_target_exists",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "upgradesGuide='purify-water-boiling' confirmed in library"
+    },
+    {
+      "check": "no_duplicate_new",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "Upgrade of existing slug \u2014 no new-guide duplicate risk"
+    },
+    {
+      "check": "duplicate_risk_bleach_guides",
+      "passed": false,
+      "severity": "warning",
+      "evidence": "FLAGGED: purify-water-bleach and purifying-water-with-household-liquid-bleach are both action_cards in this parentTopic with identical scope. Recommend consolidating before assigning responseRole:backup."
+    }
+  ],
+  "constraintChecks": [
+    {
+      "check": "role_not_duplicated",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "No existing primary in 'Safe Drinking Water in Emergencies' / action layer \u2014 safe to assign responseRole:primary"
+    },
+    {
+      "check": "blocked_makes_sense",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "blockedByConstraints=['no_boiling','no_fire','no_heat_source'] \u2014 logically correct for a boiling guide"
+    },
+    {
+      "check": "constraint_tags_intentionally_empty",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "constraintTags=[] is correct: boiling is the default primary; no constraint boosts it further"
+    },
+    {
+      "check": "fallback_chain_operational",
+      "passed": null,
+      "severity": "warning",
+      "evidence": "CHAIN GAP: purify-water-bleach has responseRole='None', constraintTags=None. The boiling guide's blockedByConstraints will suppress it, but no backup guide is boosted yet \u2014 users hitting no_boiling will get no water treatment guidance."
+    }
+  ],
+  "blockingIssues": [],
+  "warnings": [
+    "[dup] duplicate_risk_bleach_guides: FLAGGED: purify-water-bleach and purifying-water-with-household-liquid-bleach are both action_cards in this parentTopic with identical scope. Recommend consolidating before assigning responseRole:backup.",
+    "[constraint] fallback_chain_operational: CHAIN GAP: purify-water-bleach has responseRole='None', constraintTags=None. The boiling guide's blockedByConstraints will suppress it, but no backup guide is boosted yet \u2014 users hitting no_boiling will get no water treatment guidance."
+  ],
+  "recommendation": "May proceed to Import. Key warning: fallback chain is structurally incomplete until purify-water-bleach is annotated in a follow-up run."
+}

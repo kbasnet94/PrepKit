@@ -1,0 +1,94 @@
+{
+  "slug": "during-landslide",
+  "title": "During a Landslide",
+  "category": "natural_disasters",
+  "parentTopic": "Landslides",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "Immediate actions to take when a landslide is actively occurring or imminent, whether you are indoors, outdoors, or in a vehicle.",
+  "quickAnswer": "If indoors, get under sturdy furniture and stay inside — do not try to evacuate during an active landslide. If outdoors, move to the side away from the slide path.",
+  "whenToUse": [
+    "A landslide is actively occurring near your location",
+    "You hear roaring sounds, cracking trees, or boulders knocking together indicating debris movement",
+    "You see new cracks, bulges in the ground, or sudden changes in stream water levels during heavy rain",
+    "You are in a hillside area during or after intense rainfall and suspect ground movement",
+    "You are near a recent wildfire burn area during rain"
+  ],
+  "preferredAction": "If indoors, get under a sturdy desk or table, move to the downhill side of the building, and stay inside until the slide passes.",
+  "backupAction": "If outdoors, run to the left or right — perpendicular to the slide path. Do not attempt to outrun the slide uphill or downhill.",
+  "stepByStepActions": [
+    "If you have been told to evacuate or feel it is unsafe to remain, leave immediately — save yourself, not your belongings.",
+    "If indoors in a single-story building, get under a sturdy piece of furniture such as a desk or table and hold on.",
+    "If a second story is available, go upstairs to put distance between you and the ground-level debris.",
+    "Move to the downhill side of the building — the landslide could push through windows and walls on the uphill side.",
+    "Do NOT evacuate the building during an active landslide — the moving debris can carry you away. Stay inside until it passes.",
+    "If outdoors, run to the right or left away from the path of the slide. Do not try to go uphill or downhill — landslides travel downhill much faster than a person can run.",
+    "After the slide stops, do not assume it is safe — landslides may occur in pulses and the first slide may not be the last.",
+    "Check for injured and trapped persons near the slide area but do not enter the slide zone itself. Direct rescuers to their locations.",
+    "Report broken utility lines and damaged roadways to authorities so utilities can be shut off quickly, preventing further hazards."
+  ],
+  "warnings": [
+    "Landslides may occur in pulses — the first slide may not be the last. Do not assume it is safe after the initial slide.",
+    "If near a wildfire burn area, pay special attention during rain — burn scars are extremely susceptible to debris flows.",
+    "A sudden change in stream water levels, especially during or right after an intense storm, may indicate upstream landslide activity.",
+    "The landslide can push through windows and walls on the uphill side of a building — stay on the downhill side."
+  ],
+  "whatNotToDo": [
+    "Do not evacuate a building during an active landslide — the moving debris can carry you away.",
+    "Do not try to outrun a landslide uphill or downhill — move to the side instead.",
+    "Do not enter the slide zone after the slide to search for people — direct professional rescuers to their locations instead.",
+    "Do not delay evacuation if told to leave before a slide — save yourself, not your belongings."
+  ],
+  "redFlags": [
+    "Unusual sounds such as trees cracking, boulders knocking together, or a roaring sound like a freight train indicate moving debris.",
+    "New cracks or unusual bulges in the ground, sidewalks, or pavement are signs of active ground movement.",
+    "Springs, seeps, or saturated ground appearing in areas that have not typically been wet before.",
+    "A sudden rise or fall in stream or creek water levels, especially during or right after a storm.",
+    "Tilting trees, retaining walls shifting, or doors and windows that suddenly stick or jam."
+  ],
+  "preparednessTips": [
+    "Learn the landslide risk for your area by checking USGS landslide hazard maps.",
+    "Identify evacuation routes that lead away from hillsides and steep terrain.",
+    "During prolonged heavy rain, stay alert for the warning signs listed in this guide's red flags.",
+    "If you live on or near a slope, know where the downhill side of your building is relative to the hillside."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "during-landslide",
+  "appTags": [
+    "landslide",
+    "mudslide",
+    "debris flow",
+    "natural disaster",
+    "ground movement",
+    "hillside safety",
+    "evacuation"
+  ],
+  "sourceReferences": [
+    {
+      "title": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "organization": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "whyUseful": "Primary authoritative source for shelter-in-place procedures, outdoor escape direction, and critical counterintuitive safety rules during active landslides."
+    },
+    {
+      "title": "Landslide Preparedness",
+      "organization": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/programs/landslide-hazards/landslide-preparedness",
+      "whyUseful": "Authoritative source for auditory and visual warning signs, ground deformation indicators, and hydrological warning signals."
+    },
+    {
+      "title": "Landslides & Debris Flow",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/landslides-debris-flow",
+      "whyUseful": "Federal guidance on pre-impact evacuation decisions, post-slide response including checking for victims and reporting utility damage, and post-wildfire debris flow risk."
+    }
+  ],
+  "responseRole": "primary",
+  "constraintTags": [
+    "cant_move"
+  ],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": []
+}
