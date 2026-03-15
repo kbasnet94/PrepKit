@@ -1,0 +1,129 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "during-landslide",
+    "category": "natural_disasters",
+    "parentTopic": "Landslides"
+  },
+  "evidenceTier": "authoritative_only",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "action",
+  "suggestedGuideType": "action_card",
+  "existingGuideUpgradeTarget": "during-landslide",
+  "researchFindings": [
+    {
+      "claim": "If indoors in a single-story building, get under a sturdy piece of furniture (desk or table) and hold on. If a second story is available, go upstairs.",
+      "sourceTitle": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — shelter-in-place procedure"
+    },
+    {
+      "claim": "Move to the downhill side of the building. The landslide could push through windows and walls on the uphill side.",
+      "sourceTitle": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — positioning inside building"
+    },
+    {
+      "claim": "Do NOT evacuate a building during an active landslide — the landslide can carry you away. Stay inside until it passes.",
+      "sourceTitle": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "whatNotToDo — critical counterintuitive safety rule"
+    },
+    {
+      "claim": "If outdoors, run to the right or left away from the path of the slide. Do not try to go uphill or downhill — landslides travel downhill much faster than a person can run.",
+      "sourceTitle": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — outdoor escape direction"
+    },
+    {
+      "claim": "Listen for unusual sounds such as trees cracking, boulders knocking together, or a roaring sound like a freight train — these indicate moving debris.",
+      "sourceTitle": "Landslide Preparedness",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/landslide-preparedness",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlags — auditory warning signs"
+    },
+    {
+      "claim": "Watch for springs, seeps, or saturated ground in areas that have not typically been wet before.",
+      "sourceTitle": "Landslide Preparedness",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/landslide-preparedness",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlags — visual warning signs"
+    },
+    {
+      "claim": "New cracks or unusual bulges in the ground, sidewalks, or pavement are signs of ground movement.",
+      "sourceTitle": "Landslide Preparedness",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/landslide-preparedness",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlags — ground deformation"
+    },
+    {
+      "claim": "A sudden change in stream water levels, especially during or right after an intense storm, may indicate upstream landslide activity.",
+      "sourceTitle": "Landslide Preparedness",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/landslide-preparedness",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "redFlags — hydrological warning"
+    },
+    {
+      "claim": "Landslides may occur in pulses — the first landslide may not be the last. Do not assume it is safe after the initial slide.",
+      "sourceTitle": "What are the signs of landslide development? What do I do if a landslide occurs?",
+      "sourceOrganization": "U.S. Geological Survey",
+      "sourceUrl": "https://www.usgs.gov/programs/landslide-hazards/what-are-signs-landslide-development-what-do-i-do-if-a-landslide-occurs",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings — sequential slide risk"
+    },
+    {
+      "claim": "Leave if you have been told to evacuate or you feel it is unsafe to remain. Don't delay — save yourself, not your belongings.",
+      "sourceTitle": "Landslides & Debris Flow",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/landslides-debris-flow",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — pre-impact evacuation"
+    },
+    {
+      "claim": "After the slide, check for injured and trapped persons near (but not in) the slide area. Direct rescuers to their locations.",
+      "sourceTitle": "Landslides & Debris Flow",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/landslides-debris-flow",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — post-impact response"
+    },
+    {
+      "claim": "Report broken utility lines and damaged roadways to authorities. This gets utilities shut off quickly, preventing further hazards.",
+      "sourceTitle": "Landslides & Debris Flow",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/landslides-debris-flow",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "stepByStepActions — post-impact reporting"
+    },
+    {
+      "claim": "If near a wildfire burn area, pay special attention during rain — burn scars are extremely susceptible to debris flows.",
+      "sourceTitle": "Landslides & Debris Flow",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/landslides-debris-flow",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings — post-wildfire debris flow risk"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [],
+  "identifiedGaps": [
+    {
+      "area": "Vehicle-specific guidance during landslide",
+      "impact": "USGS mentions driving is hazardous during storms but does not give detailed in-vehicle instructions",
+      "suggestion": "Include basic vehicle guidance in warnings: pull over, avoid bridges, avoid river valleys"
+    }
+  ],
+  "recommendation": "Upgrade existing guide from 4 to 8+ steps, expand warnings from 1 to 4+, expand redFlags from 1 to 5+, add post-impact steps, replace placeholder content, and provide 3 authoritative source references with URLs."
+}

@@ -1,0 +1,27 @@
+{
+  "importedAt": "2026-03-15T11:05:57.591048+00:00",
+  "slug": "purify-water-bleach",
+  "guideId": "b4ad2956-c106-4d7a-81d9-d998527403b9",
+  "versionId": "e5e775cc-5bd0-402d-94a2-dca54c82c1a9",
+  "versionNumber": 2,
+  "reviewStatus": "in_review",
+  "isNew": false,
+  "previousVersionNumber": 1,
+  "changeSummary": "Consolidated purify-water-bleach (canonical) and purifying-water-with-household-liquid-bleach (archived) into single authoritative version. Best-of merge: 7 steps (from 4 canonical + 6 archive), 4 whatNotToDo items (archive superset absorbed canonical), 3 preparednessTips (archive had them, canonical had none), 3 real source URLs from canonical. One conflict resolved: wait time standardized to 30 min (clear/warm) / 60 min (cold/cloudy) per EPA guidance. First-ever constraint metadata assigned: responseRole=backup, constraintTags=[no_boiling,no_fire,no_heat_source], blockedByConstraints=[no_bleach], alternativeToGuideSlugs=[purify-water-boiling] — establishes bleach as tier-2 fallback in water safety chain.",
+  "importMethod": "Chrome browser fetch — POST /api/guides/import?action=save; review_status promoted to in_review via direct Supabase REST PATCH",
+  "pipelineType": "consolidation",
+  "canonicalSlug": "purify-water-bleach",
+  "archiveCandidate": "purifying-water-with-household-liquid-bleach",
+  "archiveAction": "PENDING HUMAN — set purifying-water-with-household-liquid-bleach to review_status:archived in admin UI after this version is approved and released",
+  "constraintMetadata": {
+    "responseRole": "backup",
+    "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+    "blockedByConstraints": ["no_bleach"],
+    "alternativeToGuideSlugs": ["purify-water-boiling"]
+  },
+  "fallbackChainStatus": {
+    "tier1_purify-water-boiling": "in_review (v2, responseRole=primary, blocked=[no_boiling,no_fire,no_heat_source])",
+    "tier2_purify-water-bleach": "in_review (v2, responseRole=backup, boosted=[no_boiling,no_fire,no_heat_source], blocked=[no_bleach])",
+    "tier3_choosing-safe-hydration-sources": "PENDING — needs responseRole=supporting + constraintTags=[no_bleach,no_clean_water]"
+  }
+}

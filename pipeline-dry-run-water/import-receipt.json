@@ -1,0 +1,17 @@
+{
+  "slug": "purify-water-boiling",
+  "guideId": "pending-actual-import",
+  "versionId": "pending-actual-import",
+  "versionNumber": "pending-actual-import",
+  "reviewStatus": "draft",
+  "isNew": false,
+  "changeSummary": "Upgraded purify-water-boiling: expanded from 5 to 7 steps with explicit rolling-boil definition, container guidance, and 24-hour storage limit; corrected altitude threshold from 2,000m to 5,000ft (1,500m) per EPA/FEMA consensus; warnings expanded from 2 to 4 including chemical-concentration risk; redFlags expanded from 2 to 5; replaced 3 source references with real URLs from EPA and CDC; added first-ever constraint metadata (responseRole=primary, blockedByConstraints=[no_boiling,no_fire,no_heat_source]) to enable fallback chain routing to bleach guide.",
+  "apiWarnings": [],
+  "validationWarnings": [
+    "Duplicate risk: purify-water-bleach and purifying-water-with-household-liquid-bleach cover identical scope. Recommend consolidating before assigning responseRole:backup to either.",
+    "Fallback chain incomplete: purify-water-bleach has no responseRole or constraintTags. No backup guide is boosted when boiling is unavailable. Follow-up run on purify-water-bleach required to complete the chain."
+  ],
+  "importedAt": "pending — run run-import.sh from Mac to complete",
+  "reviewUrl": "http://localhost:3000/review?filter=draft",
+  "note": "VM sandbox cannot reach localhost:3000. Run 'bash run-import.sh' from the pipeline-dry-run-water folder on your Mac with the admin app running."
+}

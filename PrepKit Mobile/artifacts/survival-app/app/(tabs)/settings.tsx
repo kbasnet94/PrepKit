@@ -1,7 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { router } from "expo-router";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Alert,
   Platform,
@@ -20,6 +20,7 @@ import { useChat } from "@/contexts/ChatContext";
 import { useKnowledge } from "@/contexts/KnowledgeContext";
 import { useAIMode } from "@/lib/ai/use-ai-mode";
 import type { AIRewriteMode } from "@/lib/ai/types";
+import { AppFeedback } from "@/components/AppFeedback";
 
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
@@ -29,6 +30,7 @@ export default function SettingsScreen() {
   const { mode: aiMode, setMode: setAIMode } = useAIMode();
   const { colors: C, isDark, toggleTheme } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
+  const [showAppFeedback, setShowAppFeedback] = useState(false);
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return "0 B";
@@ -211,6 +213,16 @@ export default function SettingsScreen() {
           </View>
         </View>
 
+        <Text style={styles.sectionTitle}>Feedback</Text>
+        <View style={styles.section}>
+          <SettingsRow
+            icon="star-outline"
+            title="Rate the App"
+            subtitle="Share your thoughts on PrepKit"
+            onPress={() => setShowAppFeedback(true)}
+          />
+        </View>
+
         <Text style={styles.sectionTitle}>Developer Tools</Text>
         <View style={styles.section}>
           <SettingsRow
@@ -254,6 +266,8 @@ export default function SettingsScreen() {
           </Text>
         </View>
       </ScrollView>
+
+      <AppFeedback visible={showAppFeedback} onClose={() => setShowAppFeedback(false)} />
     </View>
   );
 }

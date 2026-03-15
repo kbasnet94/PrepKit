@@ -1,0 +1,93 @@
+{
+  "slug": "purify-water-bleach",
+  "title": "Disinfect Water with Bleach",
+  "category": "water_food",
+  "parentTopic": "Safe Drinking Water in Emergencies",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "Use plain unscented household bleach of known strength to disinfect relatively clear water, then wait at least 30 minutes before drinking. This is a backup method for when boiling is not possible.",
+  "quickAnswer": "Add the correct dose of plain unscented household bleach to clear water, stir, and wait at least 30 minutes. Do not use scented, splashless, or color-safe bleach.",
+  "whenToUse": [
+    "Boiling is not possible and you have plain unscented household bleach of known concentration",
+    "Bottled or boiled water is unavailable and you must disinfect water from a tap, well, or relatively clear surface source"
+  ],
+  "preferredAction": "Use plain unscented household bleach with a known sodium hypochlorite percentage. Add the correct emergency dose for your bleach concentration and water volume, stir, and wait at least 30 minutes before drinking.",
+  "backupAction": "If bleach concentration is unknown or the label is missing, do not guess \u2014 find a different water source or treatment method. If bleach is unavailable entirely, use approved water purification tablets or boil the water.",
+  "stepByStepActions": [
+    "Confirm the bleach is plain, unscented, and not splashless, color-safe, or additive-containing. Check the label for the sodium hypochlorite percentage \u2014 correct dosing depends on concentration.",
+    "If the water is cloudy, let it settle for several minutes, then pour through a clean cloth, paper towel, or coffee filter. Bleach is significantly less effective in cloudy water.",
+    "Add the correct emergency dose for your bleach concentration and the volume of water you are treating. Use official dosage guidance from EPA or CDC \u2014 do not estimate.",
+    "Stir or shake the water well, then let it stand for at least 30 minutes before drinking. If the water is cold (below 12\u00b0C / 55\u00b0F) or still slightly cloudy, wait at least 60 minutes.",
+    "After the wait time, the water should have a faint but detectable chlorine smell. If you cannot smell any chlorine, add another dose and wait the same amount of time again.",
+    "If the water still has no chlorine smell after a second dose, do not drink it \u2014 the water may be too contaminated for bleach treatment to work. Find an alternative source.",
+    "Store treated water in clean, covered containers. Label them clearly as treated water with the date."
+  ],
+  "warnings": [
+    "Using the wrong bleach type or the wrong dose can be unsafe. Wrong-type bleach may introduce toxic additives; overdosing creates a hazardous solution.",
+    "Bleach does not remove chemical contaminants, fuel, heavy metals, or pesticides. Do not use this method if the water may have chemical or fuel contamination.",
+    "Bleach is significantly less effective in cold water (below 12\u00b0C / 55\u00b0F) or in turbid (cloudy) water. Extend wait time or find a cleaner source."
+  ],
+  "whatNotToDo": [
+    "Do not use scented, splashless, color-safe, or additive-containing bleach \u2014 only plain unscented household bleach with a labeled sodium hypochlorite percentage.",
+    "Do not guess at the bleach concentration if the label is missing or unreadable \u2014 unknown concentration makes correct dosing impossible.",
+    "Do not mix bleach with other cleaners, chemicals, or ammonia-based products.",
+    "Do not drink water that smells overwhelmingly of chlorine or has a burning quality \u2014 this indicates too much bleach was used."
+  ],
+  "redFlags": [
+    "Burning in the mouth or throat, breathing difficulty, or severe pain after bleach exposure \u2014 indicates concentrated bleach ingestion, a medical emergency. Call emergency services.",
+    "Persistent vomiting, diarrhea, stomach cramps, or fever appearing after drinking treated water \u2014 signs of waterborne illness or chemical exposure.",
+    "Bleach container is unlabeled, label is unreadable, or concentration is unknown \u2014 do not use this bleach for water treatment."
+  ],
+  "preparednessTips": [
+    "Keep a small bottle of plain unscented liquid bleach (5\u20138% sodium hypochlorite) in your emergency kit and replace it every 6\u201312 months as bleach degrades.",
+    "Store a printed EPA or CDC emergency water disinfection dosage table covering common container sizes (1 quart, 1 gallon, 5 gallons) and bleach concentrations (6%, 8.25%).",
+    "Make sure all adult household members know how to identify correct bleach, measure a dose, and perform the chlorine smell test."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "purify-water-bleach",
+  "appTags": [
+    "water",
+    "bleach",
+    "chlorination",
+    "purification",
+    "disinfection",
+    "emergency water",
+    "drinking water",
+    "water treatment"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Emergency Disinfection of Drinking Water",
+      "organization": "U.S. Environmental Protection Agency",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "whyUseful": "Primary authoritative source for bleach dosage tables, wait times, product type requirements, and chemical contamination limitations."
+    },
+    {
+      "title": "Make Water Safe in an Emergency",
+      "organization": "U.S. Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html",
+      "whyUseful": "CDC guidance on bleach type verification, chlorine smell test, and cold/cloudy water adjustments."
+    },
+    {
+      "title": "How to Create and Store an Emergency Water Supply",
+      "organization": "U.S. Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+      "whyUseful": "Guidance on storage container preparation and labeling for treated water."
+    }
+  ],
+  "notes": "Consolidated from purify-water-bleach (canonical) and purifying-water-with-household-liquid-bleach (archived). Steps: 7 final steps (best-of merge from 4 canonical + 6 archive). whatNotToDo: 4 items (archive superset absorbed canonical). preparednessTips: 3 items from archive (canonical had none). Source refs from canonical (real URLs). One conflict resolved: wait time standardized to 30 min (clear/warm) / 60 min (cold/cloudy) per EPA guidance. Archive slug 'purifying-water-with-household-liquid-bleach' should be set to review_status:archived by a human AFTER this version is approved and released.",
+  "responseRole": "backup",
+  "constraintTags": [
+    "no_boiling",
+    "no_fire",
+    "no_heat_source"
+  ],
+  "blockedByConstraints": [
+    "no_bleach"
+  ],
+  "alternativeToGuideSlugs": [
+    "purify-water-boiling"
+  ]
+}

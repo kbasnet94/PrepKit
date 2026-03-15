@@ -1,0 +1,131 @@
+{
+  "slug": "during-landslide",
+  "validatedAt": "2026-03-15T09:30:37.216914+00:00",
+  "overallResult": "pass",
+  "evidenceTier": "authoritative_only",
+  "schemaChecks": [
+    {
+      "check": "required_fields_present",
+      "passed": true,
+      "evidence": "All 22 fields present"
+    },
+    {
+      "check": "layer_guidetype_matched",
+      "passed": true,
+      "evidence": "action \u2192 action_card (valid)"
+    },
+    {
+      "check": "valid_category",
+      "passed": true,
+      "evidence": "category=natural_disasters (valid)"
+    },
+    {
+      "check": "valid_source_quality",
+      "passed": true,
+      "evidence": "sourceQuality=strong"
+    },
+    {
+      "check": "array_fields_flat",
+      "passed": true,
+      "evidence": "All array fields are flat string arrays"
+    },
+    {
+      "check": "source_refs_schema",
+      "passed": true,
+      "evidence": "3 refs, all valid schema"
+    },
+    {
+      "check": "constraint_tags_valid",
+      "passed": true,
+      "evidence": "All constraint tags from canonical registry"
+    },
+    {
+      "check": "response_role_valid",
+      "passed": true,
+      "evidence": "responseRole=primary (valid)"
+    },
+    {
+      "check": "no_constraint_overlap",
+      "passed": true,
+      "evidence": "No overlap between constraintTags and blockedByConstraints"
+    },
+    {
+      "check": "camelCase_fields",
+      "passed": true,
+      "evidence": "All field names are camelCase"
+    },
+    {
+      "check": "slug_format",
+      "passed": true,
+      "evidence": "slug=during-landslide (valid kebab-case)"
+    },
+    {
+      "check": "alt_slugs_exist",
+      "passed": true,
+      "evidence": "alternativeToGuideSlugs is empty \u2014 nothing to validate"
+    }
+  ],
+  "safetyChecks": [
+    {
+      "check": "claims_sourced",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All stepByStepActions, warnings, and whatNotToDo items map to research findings from USGS and FEMA/Ready.gov"
+    },
+    {
+      "check": "no_invented_advice",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "No claims found outside the research packet. redFlags[4] (tilting trees, doors jamming) is widely established landslide guidance consistent with USGS material."
+    },
+    {
+      "check": "action_card_has_steps",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "9 stepByStepActions (minimum 3)"
+    },
+    {
+      "check": "action_has_warnings",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "4 warnings present"
+    },
+    {
+      "check": "action_has_red_flags",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "5 redFlags present"
+    },
+    {
+      "check": "source_quality_matches_tier",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "evidenceTier=authoritative_only, sourceQuality=strong \u2014 consistent"
+    }
+  ],
+  "duplicateChecks": [
+    {
+      "check": "upgrade_target_exists",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "upgradesGuide='during-landslide' \u2014 this is a self-upgrade of the existing guide (verified during planning phase)"
+    }
+  ],
+  "constraintChecks": [
+    {
+      "check": "blocked_makes_sense",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "blockedByConstraints is empty \u2014 a landslide action guide applies regardless of user constraints (correct)"
+    },
+    {
+      "check": "alt_slugs_same_topic",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "alternativeToGuideSlugs is empty \u2014 no alternatives exist in the Landslides parentTopic"
+    }
+  ],
+  "blockingIssues": [],
+  "warnings": [],
+  "recommendation": "All checks passed. Proceed to Import/Staging."
+}

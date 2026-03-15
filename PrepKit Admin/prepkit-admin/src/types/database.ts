@@ -119,3 +119,23 @@ export interface GuideReleaseItem {
   guide_version_id: string;
   created_at: string;
 }
+
+export interface GuideFeedback {
+  id: string;
+  guide_id: string | null;
+  guide_slug: string;
+  guide_version_id: string | null;
+  rating: "thumbs_up" | "thumbs_down";
+  tags: string[];
+  comment: string | null;
+  device_id: string | null;
+  created_at: string;
+}
+
+export interface AppFeedback {
+  id: string;
+  star_rating: number;
+  comment: string | null;
+  device_id: string | null;
+  created_at: string;
+}

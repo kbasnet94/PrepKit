@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-03-15T15:30:00.000Z",
+  "scope": "Safe Drinking Water in Emergencies — fallback chain constraint test",
+  "librarySnapshot": {
+    "totalGuides": 187,
+    "guidesInTargetParentTopic": 10,
+    "guidesWithConstraintMetadata": 0,
+    "guidesWithConstraintMetadataInParentTopic": 0,
+    "note": "CRITICAL: Zero guides in 'Safe Drinking Water in Emergencies' have any constraint metadata (responseRole, constraintTags, blockedByConstraints, or alternativeToGuideSlugs). The fallback chain is structurally broken — the mobile chat cannot route users past boiling to chemical treatment."
+  },
+  "selectedWorkItem": {
+    "priority": 1,
+    "action": "upgrade",
+    "targetSlug": "purify-water-boiling",
+    "suggestedSlug": null,
+    "reason": "Primary action card in the fallback chain. Upgrading this guide with correct constraint metadata (blockedByConstraints: [no_boiling, no_fire, no_heat_source]) is the structural fix that makes the entire fallback chain functional. Secondary benefit: adds missing source URLs to 3 existing source references. This guide is the entry point — getting it right first anchors the entire cluster.",
+    "weaknessFlags": ["sources_missing_urls", "no_constraint_metadata"],
+    "category": "water_food",
+    "parentTopic": "Safe Drinking Water in Emergencies",
+    "suggestedLayer": "action",
+    "suggestedGuideType": "action_card",
+    "evidenceTier": "authoritative_only",
+    "estimatedEffort": "medium"
+  },
+  "clusterAnalysis": {
+    "parentTopic": "Safe Drinking Water in Emergencies",
+    "fallbackChainDesign": {
+      "tier1_primary": {
+        "slug": "purify-water-boiling",
+        "responseRole": "primary",
+        "blockedBy": ["no_boiling", "no_fire", "no_heat_source"],
+        "constraintTags": [],
+        "note": "THIS RUN: upgrade with constraint metadata"
+      },
+      "tier2_backup": {
+        "slug": "purify-water-bleach",
+        "responseRole": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+        "blockedBy": ["no_bleach"],
+        "alternativeTo": ["purify-water-boiling"],
+        "note": "FUTURE RUN: needs constraint annotation. Currently has no metadata."
+      },
+      "tier3_supporting": {
+        "slug": "choosing-safe-hydration-sources",
+        "responseRole": "supporting",
+        "constraintTags": ["no_bleach", "no_clean_water"],
+        "blockedBy": [],
+        "note": "FUTURE RUN: needs constraint annotation. Surfaces when neither boiling nor bleach is available."
+      },
+      "tier3_supporting_b": {
+        "slug": "when-treated-water-is-still-unsafe-to-drink",
+        "responseRole": "supporting",
+        "constraintTags": ["no_clean_water"],
+        "blockedBy": [],
+        "note": "FUTURE RUN: needed when user is unsure if treatment worked."
+      }
+    }
+  },
+  "duplicateRisks": [
+    {
+      "slugA": "purify-water-bleach",
+      "slugB": "purifying-water-with-household-liquid-bleach",
+      "overlapDescription": "Both are action_cards in 'Safe Drinking Water in Emergencies' covering household bleach water disinfection. purify-water-bleach has real source URLs and 4 steps; purifying-water-with-household-liquid-bleach has more detailed steps (6) but no URLs. They cover identical guidance.",
+      "recommendation": "Merge into purify-water-bleach: port the better step detail from purifying-water-with-household-liquid-bleach, keep the real URLs from purify-water-bleach. Archive purifying-water-with-household-liquid-bleach. Do not assign responseRole:backup to BOTH."
+    }
+  ],
+  "clusterWideGap": "All 10 guides in 'Safe Drinking Water in Emergencies' have null responseRole, null constraintTags, null blockedByConstraints. The fallback chain cannot function until at minimum purify-water-boiling and purify-water-bleach are annotated. This run addresses the primary (boiling). The backup (bleach) should be addressed in the next run after the duplicate is resolved."
+}
