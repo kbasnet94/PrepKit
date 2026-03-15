@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GuidePreview } from "@/components/guides/guide-preview";
 import { GuideEditorForm } from "@/components/guides/guide-editor-form";
+import { ReviewStatusSelect } from "@/components/guides/review-status-select";
 
 export default async function GuideDetailPage({
   params,
@@ -81,9 +82,13 @@ export default async function GuideDetailPage({
               <Badge>Published v{publishedVersion.version_number}</Badge>
             )}
             {latestVersion && (
-              <Badge variant={latestVersion.review_status === "published" ? "default" : "secondary"}>
-                Latest: {latestVersion.review_status}
-              </Badge>
+              <div className="flex items-center gap-1">
+                <span className="text-muted-foreground text-xs">Status:</span>
+                <ReviewStatusSelect
+                  versionId={latestVersion.id}
+                  currentStatus={latestVersion.review_status}
+                />
+              </div>
             )}
           </div>
         </div>
@@ -128,9 +133,10 @@ export default async function GuideDetailPage({
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-center gap-2">
                           <span className="font-medium">v{v.version_number}</span>
-                          <Badge variant={v.review_status === "published" ? "default" : "secondary"}>
-                            {v.review_status}
-                          </Badge>
+                          <ReviewStatusSelect
+                            versionId={v.id}
+                            currentStatus={v.review_status}
+                          />
                           {v.id === guide.current_published_version_id && (
                             <Badge>Currently published</Badge>
                           )}
