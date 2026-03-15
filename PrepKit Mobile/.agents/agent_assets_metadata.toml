@@ -1,0 +1,62 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "yJiKXpLjJLMCiS2xNKhLF"
+uri = "file://guides_master_export.json"
+type = "unspecified"
+title = "PrepKit — Master Guide Export (187 guides)"
+
+[[outputs]]
+id = "5Au-HZNXu73k1N7Y-v3Xu"
+uri = "file://guides_audit_report.json"
+type = "unspecified"
+title = "PrepKit — Guide Audit Report"
+
+[[outputs]]
+id = "bLDOK4zhCPbVreJBhY9mT"
+uri = "file://guides_master_export.cleaned.json"
+type = "unspecified"
+title = "PrepKit — Cleaned Master Export (187 guides)"
+
+[[outputs]]
+id = "uQYozm7eS7cMGMNZlwZmn"
+uri = "file://guides_cleanup_report.json"
+type = "unspecified"
+title = "PrepKit — Cleanup Report"
+
+[[outputs]]
+id = "xGh6czIEzvgxxb3M1ffrT"
+uri = "file://guides_cleanup_summary.md"
+type = "text"
+title = "PrepKit — Cleanup Summary"
+
+[[outputs]]
+id = "MAUfhr4i9T-w5F9wRav5u"
+uri = "file://guides_master_export.normalized.json"
+type = "unspecified"
+title = "PrepKit — Normalized Master Export (187 guides)"
+
+[[outputs]]
+id = "kMMLmW89WNn59ieVfOJiu"
+uri = "file://guides_parenttopic_normalization_report.json"
+type = "unspecified"
+title = "PrepKit — parentTopic Normalization Report"
+
+[[outputs]]
+id = "aN_YYnbwgelaxbCm3ImB3"
+uri = "file://guides_parenttopic_normalization_summary.md"
+type = "text"
+title = "PrepKit — Normalization Summary"
+
+[[outputs]]
+id = "h6O1Vlg4Xx2Tph0oXZ0Cn"
+uri = "file://constraint_metadata_patch.json"
+type = "unspecified"
+title = "constraint_metadata_patch.json"
+
+[[outputs]]
+id = "tm-FqBlisfNRlAMvHV00f"
+uri = "file://constraint_metadata_patch_summary.md"
+type = "text"
+title = "constraint_metadata_patch_summary.md"

@@ -1,0 +1,1676 @@
+{
+  "packTitle": "Shelter, Fire, and Warmth Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T10:00:53Z",
+  "notes": [
+    "Normalized from Perplexity category output for Shelter, Fire, and Warmth.",
+    "Card-first structure preserved for quick emergency lookup with expandable detail later.",
+    "Practical tarp/fire-construction items are included but marked needs_source_review where source strength is more field-practice than agency-standard.",
+    "Core indoor warmth, CO safety, heater safety, and shelter-priority guides are marked reviewed and ready for app use."
+  ],
+  "categories": [
+    {
+      "categoryName": "Shelter, Fire, and Warmth",
+      "summary": "Normalized shelter, fire, and warmth guides for short-term emergency shelter, cold-weather survival, fire use and safety, and indoor heating/CO risk management.",
+      "guides": [
+        {
+          "title": "Choosing a Safe Spot for Emergency Shelter",
+          "slug": "choosing-a-safe-spot-for-emergency-shelter",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Emergency Shelter Basics",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Shelter Building",
+          "quickAnswer": "Pick the safest dry, stable shelter you can reach, away from flood, fire, wind, and falling-debris hazards.",
+          "whenToUse": "When you must stay put for hours or overnight because of storms, cold, or being stranded.",
+          "preferredAction": "Choose a solid building first, using a small interior room or protected corner above ground level and away from obvious hazards.",
+          "backupAction": "If no building is safe, use a vehicle or natural windbreak while avoiding flood channels, unstable slopes, and dead branches.",
+          "steps": [
+            "Scan for the nearest intact shelter or protected spot.",
+            "Avoid low areas, riverbanks, rockfall zones, and avalanche or landslide paths.",
+            "Choose a small area out of wind and away from broken glass or loose debris.",
+            "Get off bare ground with pads, packs, cardboard, or spare clothing.",
+            "Keep exits clear and plan how to leave quickly if conditions worsen."
+          ],
+          "warnings": [
+            "Damaged buildings after storms or earthquakes may collapse without warning."
+          ],
+          "whatNotToDo": [
+            "Do not shelter in basements or low spots if flood risk exists.",
+            "Do not shelter under trees in severe wind or lightning."
+          ],
+          "redFlags": [
+            "Cracking sounds, sagging roof, or new wall cracks.",
+            "Rising water inside the shelter area.",
+            "Strong gas smell or smoke."
+          ],
+          "preparednessTips": [
+            "Know nearby public shelters or warming centers in advance.",
+            "Keep a small grab kit with hat, gloves, light, snacks, and water."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Public-health guidance on safe sheltering and cold-weather preparation."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Practical outdoor shelter and exposure-reduction advice."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "location-choice",
+            "safety",
+            "storms",
+            "cold",
+            "outdoors"
+          ]
+        },
+        {
+          "title": "Simple No-Tools Emergency Shelter Inside Buildings",
+          "slug": "simple-no-tools-emergency-shelter-inside-buildings",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Emergency Shelter Basics",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Close off one small interior room, block drafts, and build a warm \u201cnest\u201d with layers above and below you.",
+          "whenToUse": "During power outages or heating failure when you can remain inside a building.",
+          "preferredAction": "Use one small room, seal drafts, insulate the floor, and keep everyone in layered clothing and blankets.",
+          "backupAction": "If you cannot dedicate a room, create a smaller warm corner with furniture, mattresses, and blankets.",
+          "steps": [
+            "Move everyone into one small room away from exterior doors if possible.",
+            "Close doors, blinds, and curtains; block drafts under doors and leaky windows.",
+            "Hang blankets, tarps, or plastic sheeting to reduce the space you need to warm.",
+            "Put insulation on the floor using mats, cardboard, cushions, or folded clothing.",
+            "Wear hats, socks, and layers; share blankets and stay fed and hydrated if safe water is available."
+          ],
+          "warnings": [
+            "People can become hypothermic indoors if they are wet, underdressed, or immobile in very cold rooms."
+          ],
+          "whatNotToDo": [
+            "Do not use ovens, grills, camp stoves, generators, or unvented fuel devices indoors for heat."
+          ],
+          "redFlags": [
+            "Uncontrollable shivering, slurred speech, confusion, or drowsiness.",
+            "Indoor temperatures near freezing with no safe heat option."
+          ],
+          "preparednessTips": [
+            "Keep extra blankets, foam pads, hats, gloves, and duct tape accessible to quickly warm one room."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Winter at Home \u2013 Staying Warm Without Power",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/wrn/winter-at-home-sm",
+              "whyUseful": "Concrete actions for staying warm indoors during outages."
+            },
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Home preparation and cold-health risk guidance."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "indoor",
+            "no-power",
+            "winter",
+            "family"
+          ]
+        },
+        {
+          "title": "Basic Outdoor Emergency Shelter Without a Tent",
+          "slug": "basic-outdoor-emergency-shelter-without-a-tent",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Emergency Shelter Basics",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Shelter Building",
+          "quickAnswer": "Get off wet ground, reduce wind exposure, and create simple overhead cover with whatever materials you have.",
+          "whenToUse": "When stranded outdoors for many hours or overnight without a tent, especially in cold, wet, or windy conditions.",
+          "preferredAction": "Use a tarp or plastic sheet with cord to make a low, wind-sheltered lean-to or A-frame near a natural windbreak.",
+          "backupAction": "If you have no sheet or tarp, use branches, leaves, and other natural materials to build a simple debris shelter that blocks wind and insulates you from the ground.",
+          "steps": [
+            "Choose a spot above drainage channels and away from falling branches or rockfall.",
+            "Use trees, rocks, or trekking poles as supports for a tarp or sheet; pitch it low and tight with the open side away from wind.",
+            "Build a thick insulating layer under you using dry leaves, pine boughs, packs, or spare clothing.",
+            "Keep the shelter small so body heat can warm the space more effectively.",
+            "Keep your core and head insulated and change out of wet clothes if you have dry layers."
+          ],
+          "warnings": [
+            "Improvised shelters offer limited protection; hypothermia is still possible in wet, windy, or very cold conditions."
+          ],
+          "whatNotToDo": [
+            "Do not build in dry riverbeds, on ridge tops in storms, or under dead branches (\u201cwidow-makers\u201d)."
+          ],
+          "redFlags": [
+            "Numb hands or feet progressing to clumsiness or confusion.",
+            "Inability to stop shivering after shelter and dry layers."
+          ],
+          "preparednessTips": [
+            "Carry at least one emergency tarp or space blanket, cord, and a foam pad in outdoor kits."
+          ],
+          "sourceReferences": [
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Emphasizes shelter, insulation, and wind protection."
+            },
+            {
+              "title": "Blue FEMA-Spec\u2019d Tarps",
+              "organization": "Engineering for Change",
+              "url": "https://www.engineeringforchange.org/solutions/product/blue-fema-specd-tarps/",
+              "whyUseful": "Describes tarps designed for temporary human shelter and emergency roof sheeting."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "outdoors",
+            "improvised",
+            "tarp",
+            "cold",
+            "rain"
+          ]
+        },
+        {
+          "title": "Fast Tarp Lean-To for Wind and Rain",
+          "slug": "fast-tarp-lean-to-for-wind-and-rain",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Tarp and Improvised Shelter Construction",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Shelter Building",
+          "quickAnswer": "Pitch a tarp as a low lean-to facing away from the wind, with thick insulation underneath you.",
+          "whenToUse": "For short-term protection from wind and rain when you need quick setup and access to the outside.",
+          "preferredAction": "Anchor the top edge between two fixed points and keep the windward side low to block weather.",
+          "backupAction": "If anchors are poor, use poles, paddles, or sturdy branches and weigh them down with rocks or packs.",
+          "steps": [
+            "Face your back to the wind and find two anchors 2\u20133 meters apart.",
+            "Tie a ridgeline between them at about chest height.",
+            "Drape the tarp over the ridgeline so one side reaches the ground on the windward side.",
+            "Stake or weigh down the ground edge and angle the open side to shed rain while allowing ventilation.",
+            "Build a thick insulating layer underneath where you will sit or lie."
+          ],
+          "warnings": [
+            "A lean-to blocks wind on one side only; in very cold or windy conditions a lower A-frame may be warmer."
+          ],
+          "whatNotToDo": [
+            "Do not fully seal all edges in cold, damp conditions; trapped moisture can make you colder."
+          ],
+          "redFlags": [
+            "Dropping temperature, stronger wind, or soaking wetness that you cannot control with shelter and layers."
+          ],
+          "preparednessTips": [
+            "Practice one or two standard tarp pitches in good weather before you need them."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Blue FEMA-Spec\u2019d Tarps",
+              "organization": "Engineering for Change",
+              "url": "https://www.engineeringforchange.org/solutions/product/blue-fema-specd-tarps/",
+              "whyUseful": "Confirms tarps\u2019 emergency-shelter role."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Stresses wind, rain, and ground insulation."
+            }
+          ],
+          "appTags": [
+            "tarp",
+            "shelter-build",
+            "rain",
+            "wind",
+            "outdoors"
+          ]
+        },
+        {
+          "title": "Low A-Frame Tarp Shelter for Cold Nights",
+          "slug": "low-a-frame-tarp-shelter-for-cold-nights",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Tarp and Improvised Shelter Construction",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Shelter Building",
+          "quickAnswer": "Pitch the tarp low in an A-frame with both sides close to the ground to conserve heat and block wind.",
+          "whenToUse": "Overnight in cold, breezy, or light-snow conditions when you need more enclosure than a lean-to.",
+          "preferredAction": "Use a strong ridgeline and pull both tarp sides down close to the ground, leaving only small gaps for airflow.",
+          "backupAction": "If stakes are unavailable, use rocks, logs, or filled bags to hold the tarp edges down.",
+          "steps": [
+            "Choose slightly elevated ground with a natural windbreak.",
+            "Tie a ridgeline between two anchors at knee-to-thigh height.",
+            "Center the tarp over the ridgeline and pull both sides down toward the ground.",
+            "Stake or weigh down the edges to create a low triangular tunnel, leaving small openings at each end for condensation control.",
+            "Lay thick insulation underneath and sleep away from the open ends."
+          ],
+          "warnings": [
+            "Low shelters can collect condensation; wet gear and clothing reduce insulation and increase hypothermia risk."
+          ],
+          "whatNotToDo": [
+            "Do not light a fire inside or directly under the tarp; tarps are flammable and smoke will build up quickly."
+          ],
+          "redFlags": [
+            "Progressive cold, drowsiness, or confusion despite shelter and dry layers."
+          ],
+          "preparednessTips": [
+            "Carry a ground pad and emergency bivy or space blanket to boost warmth inside tarp shelters."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Cold Weather Camping and Hypothermia",
+              "organization": "U.S. Scouting Service Project",
+              "url": "http://usscouts.org/safety/safe-cold.asp",
+              "whyUseful": "Practical guidance on keeping shelters dry and insulated."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Emphasizes insulation and wind-blocking."
+            }
+          ],
+          "appTags": [
+            "tarp",
+            "shelter-build",
+            "cold-night",
+            "improvised",
+            "outdoors"
+          ]
+        },
+        {
+          "title": "Using Buildings and Tarps for Temporary Roof and Wall Protection",
+          "slug": "using-buildings-and-tarps-for-temporary-roof-and-wall-protection",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Tarp and Improvised Shelter Construction",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use heavy-duty tarps to cover damaged roofs or broken windows, but stay off unsafe structures.",
+          "whenToUse": "After storms or earthquakes when a building is mostly sound but has leaks or broken openings.",
+          "preferredAction": "Cover small to moderate roof or wall damage with a properly anchored tarp to keep the interior dry until repairs are possible.",
+          "backupAction": "If you cannot safely access the damage, confine living space to dry rooms and use containers to catch leaks.",
+          "steps": [
+            "Inspect roof and walls from the ground first; avoid climbing if anything looks unstable.",
+            "For reachable roof leaks, spread a tarp over the damage and extend it well past the leak.",
+            "Secure the tarp tightly with ropes, sandbags, or boards so it does not flap loose in the wind.",
+            "For broken windows, tape plastic sheeting or a tarp over the opening from the inside and seal the edges.",
+            "Keep one clear exit path and do not block vents needed by fuel-burning appliances."
+          ],
+          "warnings": [
+            "Working on damaged roofs causes many post-disaster injuries; falls and structural collapse are serious risks."
+          ],
+          "whatNotToDo": [
+            "Do not walk on obviously damaged roofs.",
+            "Do not cover chimneys or flue outlets that appliances need for safe venting."
+          ],
+          "redFlags": [
+            "Sagging roof, large cracks, or leaning walls.",
+            "Strong gas smell or visible sparking wires near damage."
+          ],
+          "preparednessTips": [
+            "Store at least one heavy-duty tarp, rope, and duct tape if you live in storm-prone areas.",
+            "Know whether local \u201cblue roof\u201d or similar programs operate in your area."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Blue FEMA-Spec\u2019d Tarps",
+              "organization": "Engineering for Change",
+              "url": "https://www.engineeringforchange.org/solutions/product/blue-fema-specd-tarps/",
+              "whyUseful": "Details tarp design for emergency shelter and roof sheeting."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "building",
+            "storm-damage",
+            "tarps",
+            "repair"
+          ]
+        },
+        {
+          "title": "Staying Warm in a Cold Home Without Power",
+          "slug": "staying-warm-in-a-cold-home-without-power",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Staying Warm Without Power or Heat",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Gather everyone in one small room, block drafts, insulate floors and windows, and use safe blankets and clothing\u2014not fuel devices\u2014to stay warm.",
+          "whenToUse": "Any winter power outage or heating-system failure when indoor temperatures are dropping.",
+          "preferredAction": "Shrink your living space, insulate yourself and the room, and use body heat, layers, and safe sleeping setups.",
+          "backupAction": "If your home cannot be kept reasonably warm, move to a safer location such as a friend\u2019s house, public shelter, or warming center if travel is safe.",
+          "steps": [
+            "Choose a small room and close off unused areas.",
+            "Cover windows, close curtains, and block drafts under doors.",
+            "Insulate the floor where you sit and sleep with rugs, mats, cardboard, or cushions.",
+            "Wear multiple layers including hat, scarf, gloves, and warm socks; change out of damp clothes.",
+            "Eat regular meals and drink fluids; check vulnerable household members often."
+          ],
+          "warnings": [
+            "Cold homes can lead to hypothermia, especially in infants, older adults, and people with chronic illness."
+          ],
+          "whatNotToDo": [
+            "Do not use ovens, stovetops, camp stoves, charcoal grills, or generators indoors for heat."
+          ],
+          "redFlags": [
+            "Confusion, slurred speech, drowsiness, or very cold skin.",
+            "Headache, dizziness, or nausea while a fuel-burning device is nearby (possible CO exposure)."
+          ],
+          "preparednessTips": [
+            "Keep extra blankets, warm clothing, and a battery or crank radio.",
+            "Know where local warming centers are announced."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Winter at Home \u2013 Staying Warm Without Power",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/wrn/winter-at-home-sm",
+              "whyUseful": "Practical actions for staying warm indoors during outages."
+            },
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Guidance on staying warm and avoiding cold-related illness."
+            },
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "Key warnings on indoor fuel use and CO risk."
+            }
+          ],
+          "appTags": [
+            "warmth",
+            "no-power",
+            "winter",
+            "indoor",
+            "safety"
+          ]
+        },
+        {
+          "title": "Layering Clothing and Bedding for Maximum Warmth",
+          "slug": "layering-clothing-and-bedding-for-maximum-warmth",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Staying Warm Without Power or Heat",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use several loose, dry layers and insulate underneath as well as on top to retain heat.",
+          "whenToUse": "Any cold-weather situation indoors or outdoors, especially overnight.",
+          "preferredAction": "Use a moisture-wicking inner layer, insulating middle layers, and an outer layer that blocks wind or moisture.",
+          "backupAction": "If you lack ideal gear, improvise with multiple dry shirts, pants, blankets, and good coverage of head, neck, hands, and feet.",
+          "steps": [
+            "Put on a thin moisture-wicking base layer if available.",
+            "Add one or more insulating layers such as fleece or wool.",
+            "Use an outer layer that blocks wind and sheds precipitation when outdoors.",
+            "For sleeping, put insulation under you and then cover with blankets or sleeping bags on top.",
+            "Adjust layers to avoid sweating and change out damp layers as soon as possible."
+          ],
+          "warnings": [
+            "Cotton holds moisture and can make you colder when wet in outdoor settings."
+          ],
+          "whatNotToDo": [
+            "Do not ignore wet socks, gloves, or base layers."
+          ],
+          "redFlags": [
+            "Shivering, clumsiness, or confusion that continue after adding layers and shelter."
+          ],
+          "preparednessTips": [
+            "Keep at least one non-cotton base layer, warm hat, gloves, and extra socks per person in emergency kits."
+          ],
+          "sourceReferences": [
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Clear layering and fabric guidance."
+            },
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Recommends appropriate winter clothing and layering."
+            }
+          ],
+          "appTags": [
+            "warmth",
+            "clothing",
+            "layering",
+            "hypothermia-prevention"
+          ]
+        },
+        {
+          "title": "Keeping Children, Elderly, and Frail Adults Warm Safely",
+          "slug": "keeping-children-elderly-and-frail-adults-warm-safely",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Staying Warm Without Power or Heat",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep vulnerable people in the warmest room, use safe layers and blankets, check them often, and avoid unsafe heating methods.",
+          "whenToUse": "Cold homes, power outages, or outdoor delays involving infants, older adults, or people with illness or disability.",
+          "preferredAction": "Move vulnerable people to the warmest sealed room, keep them off the floor, and monitor for early signs of hypothermia.",
+          "backupAction": "If you cannot keep them safely warm, relocate them to a friend\u2019s home, healthcare facility, or official shelter if possible.",
+          "steps": [
+            "Move vulnerable people to the warmest, best-sealed room and keep them off the floor.",
+            "Dress them in multiple layers and cover head, hands, and feet.",
+            "Offer warm drinks if they are awake and can swallow safely.",
+            "Check for unusual fatigue, confusion, slurred speech, or very cold skin.",
+            "Keep heaters and open flames away from bedding and clothing."
+          ],
+          "warnings": [
+            "Children, older adults, and people with chronic illness can develop hypothermia faster and may not report symptoms clearly."
+          ],
+          "whatNotToDo": [
+            "Do not rely on hot water bottles, electric blankets, or heaters directly against skin for people who cannot move away or feel burns.",
+            "Do not use unsafe fuel-burning heaters indoors."
+          ],
+          "redFlags": [
+            "Confusion, slurred speech, extreme sleepiness, or bluish/pale very cold skin."
+          ],
+          "preparednessTips": [
+            "Plan in advance where vulnerable household members could stay if your home becomes too cold.",
+            "Ensure smoke and CO alarms work and have backup power."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Notes higher-risk groups and protective steps."
+            },
+            {
+              "title": "Home Heating Safety: Get Ready for Cooler Weather",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/Safety-First-When-You-Turn-the-Heat-Back-On.html",
+              "whyUseful": "Emphasizes safe heating and alarms."
+            },
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "Warns against indoor fuel-burning devices."
+            }
+          ],
+          "appTags": [
+            "warmth",
+            "vulnerable-groups",
+            "indoor",
+            "hypothermia-risk"
+          ]
+        },
+        {
+          "title": "Keeping Dry in Rain and Snow Outdoors",
+          "slug": "keeping-dry-in-rain-and-snow-outdoors",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Keeping Clothing and Bedding Dry",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use water-resistant outer layers, protect hands and feet, and minimize time in heavy rain or slush to prevent dangerous chilling.",
+          "whenToUse": "Outdoor travel or work in wet, cold weather, especially when returning to shelter may be delayed.",
+          "preferredAction": "Wear waterproof or water-resistant outer layers, keep spare dry socks and gloves, and avoid soaking your clothing when possible.",
+          "backupAction": "If you lack waterproof gear, improvise with ponchos or plastic over critical areas and reduce exposure time.",
+          "steps": [
+            "Put on or improvise a water-resistant shell over insulating layers.",
+            "Protect shoes and socks and change into dry socks when you can.",
+            "Keep gloves or mittens as dry as possible and carry a spare pair if available.",
+            "Limit time standing in slush, puddles, or wet snow.",
+            "Once under shelter, remove wet outer layers and hang them to dry."
+          ],
+          "warnings": [
+            "Wet clothing greatly increases heat loss and hypothermia risk in cold or windy weather."
+          ],
+          "whatNotToDo": [
+            "Do not keep walking in wet cotton layers if you can change.",
+            "Do not ignore wet feet and hands."
+          ],
+          "redFlags": [
+            "Shivering that does not stop after shelter and dry clothes, or progressing clumsiness or confusion."
+          ],
+          "preparednessTips": [
+            "Carry simple rain protection and at least one spare pair of socks during cold seasons."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Urges staying dry to prevent heat loss."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Emphasizes proper clothing and staying dry."
+            }
+          ],
+          "appTags": [
+            "dryness",
+            "clothing",
+            "outdoors",
+            "rain",
+            "snow",
+            "hypothermia-prevention"
+          ]
+        },
+        {
+          "title": "Drying Wet Clothing and Bedding Safely Indoors",
+          "slug": "drying-wet-clothing-and-bedding-safely-indoors",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Keeping Clothing and Bedding Dry",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Hang wet items spread out in the warmest, best-ventilated space you have, away from heaters or flames that could ignite them.",
+          "whenToUse": "After getting wet during cold weather once you are in an indoor or sheltered area.",
+          "preferredAction": "Use clotheslines, hangers, or chairs to air-dry items while keeping them at least three feet from heaters.",
+          "backupAction": "If heat is limited, prioritize drying socks, gloves, and base layers; wring items thoroughly and rotate them closer to safe heat sources while supervising constantly.",
+          "steps": [
+            "Wring out wet clothes and bedding away from sleeping areas.",
+            "Hang items so air can circulate; avoid piling wet items in heaps.",
+            "Keep all fabrics at least three feet away from heaters, stoves, or open flames.",
+            "Ventilate briefly if possible to reduce dampness and mold risk.",
+            "Put on dry layers while items dry rather than waiting in wet clothing."
+          ],
+          "warnings": [
+            "Clothing or bedding too close to heaters is a common cause of home fires."
+          ],
+          "whatNotToDo": [
+            "Do not drape clothes directly on heaters or over open-flame devices.",
+            "Do not leave heaters unattended while drying items."
+          ],
+          "redFlags": [
+            "Smoke, scorch marks, burning smell, or any small fire that is not immediately controllable."
+          ],
+          "preparednessTips": [
+            "Keep clips or rope for indoor drying lines and maintain working smoke alarms near heating areas."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Home Heating Safety Tips",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/2018/11/28/red-cross-home-heating-safety.html",
+              "whyUseful": "Stresses keeping combustibles three feet from heat sources."
+            },
+            {
+              "title": "Safety Tips: Portable Space Heaters",
+              "organization": "Miami-Dade Fire Rescue",
+              "url": "https://www.miamidade.gov/global/fire/safety-space-heaters.page",
+              "whyUseful": "Practical heater safety distances and guidance."
+            }
+          ],
+          "appTags": [
+            "drying",
+            "indoor",
+            "heaters",
+            "fire-safety",
+            "clothing",
+            "bedding"
+          ]
+        },
+        {
+          "title": "Managing Moisture Inside Tents and Improvised Shelters",
+          "slug": "managing-moisture-inside-tents-and-improvised-shelters",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Keeping Clothing and Bedding Dry",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Shelter Building",
+          "quickAnswer": "Ventilate enough to reduce condensation while keeping wind and rain out, and keep sleeping areas off wet ground.",
+          "whenToUse": "When sleeping in tents or tarp shelters in damp, cold conditions.",
+          "preferredAction": "Use ground insulation, open small vents or gaps, and keep wet gear separate from sleeping areas.",
+          "backupAction": "If you cannot ventilate well, wipe condensation periodically and rotate damp items out of sleeping areas.",
+          "steps": [
+            "Pitch on slightly higher ground to avoid pooling water.",
+            "Use a groundsheet or tarp under the sleeping area, slightly smaller than the tent floor.",
+            "Open small vents or gaps at the top or downwind side to let moisture escape.",
+            "Keep wet clothing and boots away from sleeping insulation.",
+            "Wipe interior condensation with a cloth if it builds up."
+          ],
+          "warnings": [
+            "Humidity and condensation can chill you overnight and dampen insulation, increasing hypothermia risk."
+          ],
+          "whatNotToDo": [
+            "Do not fully seal all vents while cooking or using fuel appliances in or near the shelter."
+          ],
+          "redFlags": [
+            "Drowsiness, headaches, or nausea while any fuel-burning device is in use nearby."
+          ],
+          "preparednessTips": [
+            "Carry a small groundsheet and cloth for wiping condensation; learn your tent vents before emergencies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Cold Weather Camping and Hypothermia",
+              "organization": "U.S. Scouting Service Project",
+              "url": "http://usscouts.org/safety/safe-cold.asp",
+              "whyUseful": "Discusses keeping tents dry and managing moisture."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "moisture",
+            "tents",
+            "tarp",
+            "condensation",
+            "hypothermia"
+          ]
+        },
+        {
+          "title": "Recognizing and Responding to Hypothermia",
+          "slug": "recognizing-and-responding-to-hypothermia",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Cold and Wet Overnight Survival",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Hypothermia",
+          "quickAnswer": "Watch for shivering, confusion, slurred speech, and clumsiness; get the person dry, insulated, sheltered, and seek medical help for moderate or worse symptoms.",
+          "whenToUse": "Any cold exposure, especially when people are wet, tired, or underdressed.",
+          "preferredAction": "Stop further cooling, gently rewarm with dry clothing and insulation, and seek care early.",
+          "backupAction": "If medical help is delayed, keep the person horizontal, insulated above and below, and warm them gradually, especially the core.",
+          "steps": [
+            "Check for early signs such as intense shivering, cold pale skin, numb hands or feet, and mild confusion.",
+            "Move the person to shelter away from wind and wet conditions.",
+            "Remove wet clothing and replace with dry layers; wrap in blankets or a sleeping bag including head and neck.",
+            "Offer warm, sweet drinks if they are awake and can swallow.",
+            "Seek emergency care for worsening confusion, stiff muscles, severe drowsiness, or slowed breathing."
+          ],
+          "warnings": [
+            "Moderate to severe hypothermia is a medical emergency; rough handling can trigger dangerous heart problems."
+          ],
+          "whatNotToDo": [
+            "Do not give alcohol.",
+            "Do not put the person in a hot bath or directly against a heater.",
+            "Do not massage cold limbs vigorously."
+          ],
+          "redFlags": [
+            "Confusion, slurred speech, inability to walk normally, slowed pulse or breathing, or unconsciousness."
+          ],
+          "preparednessTips": [
+            "Learn hypothermia signs before trips and carry extra clothing, emergency blankets, and warm drink supplies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Hypothermia signs and response."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Detailed prevention and field treatment advice."
+            }
+          ],
+          "appTags": [
+            "hypothermia",
+            "cold",
+            "wet",
+            "first-aid",
+            "outdoors"
+          ]
+        },
+        {
+          "title": "Emergency Overnight Setup When You Are Already Wet",
+          "slug": "emergency-overnight-setup-when-you-are-already-wet",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Cold and Wet Overnight Survival",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Hypothermia",
+          "quickAnswer": "Get under cover, remove wet layers if possible, insulate yourself from the ground, and warm your core with dry clothes or shared insulation.",
+          "whenToUse": "Unexpected overnight in cold, wet conditions where you or others are already soaked.",
+          "preferredAction": "Use any available shelter, change into dry layers, and use dry blankets or sleeping bags to protect the core first.",
+          "backupAction": "If no dry clothes exist, wring out wet layers, put them back on, and maximize insulation with natural materials and shared coverings.",
+          "steps": [
+            "Move immediately to the best available shelter.",
+            "Remove wet upper-body clothing and replace it with anything dry; protect the head and torso well.",
+            "Lay down thick insulation under you using packs, branches, leaves, cardboard, or extra clothing.",
+            "Wrap in all available blankets, sleeping bags, or dry fabrics.",
+            "Eat and drink if safe to fuel heat production and avoid more exposure outside the shelter."
+          ],
+          "warnings": [
+            "Remaining in wet clothing in cold conditions can lead to hypothermia even above freezing temperatures."
+          ],
+          "whatNotToDo": [
+            "Do not sit or sleep directly on bare ground or metal.",
+            "Do not rely only on a fire if building one would be slow, unsafe, or impossible."
+          ],
+          "redFlags": [
+            "Any signs of moderate hypothermia such as confusion, slurred speech, or stumbling despite warming efforts."
+          ],
+          "preparednessTips": [
+            "Pack at least one fully dry emergency set of base layers and socks in a waterproof bag for cold/wet trips."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Advises staying dry and warm."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Highlights changing out of wet clothing and insulation."
+            }
+          ],
+          "appTags": [
+            "overnight",
+            "wet",
+            "cold",
+            "shelter",
+            "insulation"
+          ]
+        },
+        {
+          "title": "Overnight Survival in a Vehicle in Cold Weather",
+          "slug": "overnight-survival-in-a-vehicle-in-cold-weather",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Cold and Wet Overnight Survival",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Stay in the vehicle, insulate yourself, run the engine only periodically with a clear exhaust pipe, and avoid sleeping with continuous engine or heater use.",
+          "whenToUse": "When stranded in a vehicle during winter storms or extreme cold.",
+          "preferredAction": "Remain in the vehicle, keep visible to rescuers, and manage warmth with clothing, blankets, and carefully limited engine use.",
+          "backupAction": "If staying is unsafe, such as due to buried exhaust, fuel leak, or another immediate hazard, move to a safer nearby shelter only if you can do so without getting lost or badly exposed.",
+          "steps": [
+            "Stay with your vehicle; it is easier to find than a person on foot.",
+            "Check that the exhaust pipe is not blocked by snow or debris before running the engine.",
+            "Run the engine and heater only long enough to warm the interior, then shut it off to conserve fuel and reduce CO risk.",
+            "Open a window slightly on the side away from the wind for ventilation.",
+            "Wear all available layers and use blankets, sleeping bags, or extra clothing for insulation."
+          ],
+          "warnings": [
+            "Blocked exhaust pipes or running engines in enclosed spaces can cause deadly carbon monoxide poisoning."
+          ],
+          "whatNotToDo": [
+            "Do not sleep with the engine running continuously.",
+            "Do not use charcoal grills or camp stoves inside the vehicle."
+          ],
+          "redFlags": [
+            "Headache, dizziness, nausea, or confusion while the engine is running.",
+            "Snow building up around the vehicle."
+          ],
+          "preparednessTips": [
+            "Keep a winter car kit with blankets, hats, gloves, shovel, traction aid, food, water, and flashlight.",
+            "Maintain at least a half tank of fuel in winter."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Specific advice on staying in vehicles and checking exhaust pipes."
+            },
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "Explains CO dangers from engines and fuel devices."
+            }
+          ],
+          "appTags": [
+            "vehicle",
+            "cold",
+            "stranded",
+            "co-risk",
+            "winter"
+          ]
+        },
+        {
+          "title": "Basic Outdoor Fire Starting with Matches or Lighters",
+          "slug": "basic-outdoor-fire-starting-with-matches-or-lighters",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting Basics (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Prepare a safe fire site, build a small structure of tinder, kindling, and fuel, then light the tinder and add wood gradually.",
+          "whenToUse": "Outdoor situations where a fire is allowed and safe, for warmth, signaling, or boiling water.",
+          "preferredAction": "Use dry fine tinder, small kindling, and then larger fuel, protecting the flame from wind and keeping the fire small.",
+          "backupAction": "If matches or a lighter are weak, use multiple small tinder bundles and shield them carefully while lighting.",
+          "steps": [
+            "Confirm local rules and safety before building a fire.",
+            "Clear the fire area down to mineral soil and away from overhanging branches, tents, and flammables.",
+            "Gather three fuel sizes: tinder, kindling, and larger fuel wood.",
+            "Arrange tinder in a small bundle and build kindling around it with space for air.",
+            "Light the tinder from the windward side and add more kindling, then larger wood, as the fire strengthens."
+          ],
+          "warnings": [
+            "Even small fires can spread quickly in dry or windy conditions; embers can ignite nearby vegetation."
+          ],
+          "whatNotToDo": [
+            "Do not use gasoline or unknown flammable liquids.",
+            "Do not leave a fire unattended or build it against roots, logs, or peat soils."
+          ],
+          "redFlags": [
+            "Flames spreading beyond your cleared area or wind pushing sparks toward structures or vegetation."
+          ],
+          "preparednessTips": [
+            "Carry waterproof matches or a lighter and reliable tinder in a waterproof container when traveling outdoors."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor fire-building guidance",
+              "organization": "General wilderness safety sources",
+              "url": "",
+              "whyUseful": "Common safety-focused outdoor fire-starting practice, adapted to local rules."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "outdoors",
+            "warmth",
+            "signaling",
+            "cooking"
+          ]
+        },
+        {
+          "title": "Safe Fire Site Selection and Wind Management",
+          "slug": "safe-fire-site-selection-and-wind-management",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting Basics (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Choose an open, clear area away from vegetation, roots, and overhead branches, and account for wind so sparks and smoke blow away from people and shelter.",
+          "whenToUse": "Any time you plan to make an outdoor fire.",
+          "preferredAction": "Use existing fire rings or designated sites whenever possible; otherwise clear down to mineral soil and keep a bare radius around the fire.",
+          "backupAction": "If the ground cannot be cleared safely, skip the fire and rely on shelter, clothing, and hot drinks instead.",
+          "steps": [
+            "Look up and around; avoid branches, tents, tarps, and dry grass.",
+            "Select bare soil, sand, or gravel if possible and clear a 1\u20132 meter radius of flammable material.",
+            "Note wind direction and keep sparks blowing into nonflammable areas.",
+            "Keep water, dirt, or sand nearby to extinguish the fire quickly.",
+            "Keep the fire small and manageable."
+          ],
+          "warnings": [
+            "Wildfire risk can be extreme in dry or windy conditions; authorities may restrict all open flame."
+          ],
+          "whatNotToDo": [
+            "Do not build fires in high winds, during fire bans, inside or under shelters, or directly on peat or organic soils."
+          ],
+          "redFlags": [
+            "Rapidly moving grass fire, uncontrolled flames, or smoke threatening people or structures."
+          ],
+          "preparednessTips": [
+            "Check local fire danger ratings and learn at least one warming method that does not rely on open flame."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor fire-safety principles",
+              "organization": "Fire services and park guidance",
+              "url": "",
+              "whyUseful": "Standard fire-agency messaging on site selection, spark control, and fire bans."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "safety",
+            "outdoors",
+            "wildfire-risk",
+            "wind"
+          ]
+        },
+        {
+          "title": "Choosing and Preparing Dry Fuel",
+          "slug": "choosing-and-preparing-dry-fuel",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting Basics (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Collect small, dead, and dry wood from off the ground and sheltered areas, and split larger pieces to expose drier inner wood if you have the skill and tools.",
+          "whenToUse": "Any outdoor fire building, especially after rain or snow.",
+          "preferredAction": "Gather a generous supply of small, dry fuel before lighting; prioritize dead branches from standing trees and sheltered spots.",
+          "backupAction": "If most wood is damp, split thicker pieces to access drier cores and use extra tinder and kindling.",
+          "steps": [
+            "Look for dead branches still on trees or under logs and rocks where they stayed drier.",
+            "Snap small twigs; if they break crisply, they are more likely to be dry enough.",
+            "Collect plenty of kindling and medium sticks before lighting.",
+            "If experienced and properly equipped, split thicker pieces to expose dry inner surfaces.",
+            "Keep your driest fuel under cover once collected."
+          ],
+          "warnings": [
+            "Handling cutting tools when cold and tired increases injury risk."
+          ],
+          "whatNotToDo": [
+            "Do not cut live trees or branches in protected areas.",
+            "Do not rely on a tiny fuel pile and assume you can gather more after dark."
+          ],
+          "redFlags": [
+            "You cannot find or prepare enough dry fuel to stay warm and are already cold and wet."
+          ],
+          "preparednessTips": [
+            "Carry a small amount of known-dry fuel or prepared tinder where wood may be scarce or wet."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Fuel-selection strategies",
+              "organization": "Practical wilderness skills sources",
+              "url": "",
+              "whyUseful": "Widely taught fuel-selection and preparation techniques for outdoor fires."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "fuel",
+            "outdoors",
+            "wet-conditions",
+            "preparation"
+          ]
+        },
+        {
+          "title": "Finding and Using Dry Tinder in Wet Weather",
+          "slug": "finding-and-using-dry-tinder-in-wet-weather",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting in Wet Conditions (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Look in sheltered places for the driest fine material, and use more tinder than usual to overcome dampness.",
+          "whenToUse": "Rain, snow, or soaked ground make normal fire starting difficult, but a fire is still safe and allowed.",
+          "preferredAction": "Use carried tinder plus the driest inner wood or bark you can process into fine shavings.",
+          "backupAction": "If you have no carried tinder, collect dry inner wood, dead standing twigs, and fibrous bark and process them into thin curls or fibers.",
+          "steps": [
+            "Check your kit first for dry tinder stored in waterproof packaging.",
+            "Look under logs, under overhangs, or inside dead standing wood for dry material.",
+            "Shave or scrape dry inner wood or bark into thin curls or fibers.",
+            "Build a large tinder bundle, then surround it with very fine kindling.",
+            "Shield your tinder from rain with your body, pack, or tarp while lighting."
+          ],
+          "warnings": [
+            "Fire starting in wet conditions is skill-intensive and may fail; do not rely on it as your only survival plan."
+          ],
+          "whatNotToDo": [
+            "Do not strip bark from live trees in protected areas.",
+            "Do not waste your only ignition source on poorly prepared tinder."
+          ],
+          "redFlags": [
+            "Repeated failed attempts while you are becoming colder and wetter."
+          ],
+          "preparednessTips": [
+            "Always carry some dry tinder and a waterproof ignition source; do not assume you can improvise in all conditions."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Field-oriented hypothermia prevention guidance",
+              "organization": "Practical outdoor sources",
+              "url": "",
+              "whyUseful": "Supports prioritizing dryness and shelter and acknowledges the difficulty of wet-weather fire starting."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "wet-weather",
+            "tinder",
+            "outdoors",
+            "bushcraft"
+          ]
+        },
+        {
+          "title": "Building a Fire Lay That Survives Rain and Snow",
+          "slug": "building-a-fire-lay-that-survives-rain-and-snow",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting in Wet Conditions (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Raise the fire off soaked ground, protect it from above, and stack fuel so it can dry and catch as the fire grows.",
+          "whenToUse": "When the ground is wet or snow-covered but you still need and are allowed to build a fire.",
+          "preferredAction": "Create a small platform of sticks or rocks, build your tinder and kindling on top, and use overhead cover only if it can be kept well away from flames.",
+          "backupAction": "If you cannot provide overhead cover, build a compact fire with a windward log wall and keep it small and controlled.",
+          "steps": [
+            "Lay a base of small sticks or rocks to raise the fire off wet ground.",
+            "Place tinder on the platform and arrange kindling in a teepee or log-cabin style.",
+            "Stack larger damp fuel nearby so it can pre-dry from the heat once the fire is established.",
+            "If using a tarp or poncho for rain protection, keep it high and far enough from heat to avoid melting or ignition.",
+            "Keep the fire small and compact for better heat and fuel efficiency."
+          ],
+          "warnings": [
+            "Using overhead plastic or fabric covers near open flame is risky and must be constantly supervised."
+          ],
+          "whatNotToDo": [
+            "Do not build large fires in wet or windy conditions just because they are harder to start."
+          ],
+          "redFlags": [
+            "Spreading flames into nearby vegetation or inability to control the fire due to wind or fuel conditions."
+          ],
+          "preparednessTips": [
+            "Practice building small, efficient fires in safe settings before relying on them in emergencies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Practical field fire-lay techniques",
+              "organization": "Wilderness survival training materials",
+              "url": "",
+              "whyUseful": "Common wet-ground and wet-weather fire-lay techniques taught in field courses."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "wet-conditions",
+            "outdoors",
+            "advanced-skill"
+          ]
+        },
+        {
+          "title": "When Not to Attempt a Fire in Wet Conditions",
+          "slug": "when-not-to-attempt-a-fire-in-wet-conditions",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Starting in Wet Conditions (Outdoor)",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Fire Making",
+          "quickAnswer": "Skip building a fire if it is unsafe, banned, or would distract from higher-priority tasks like shelter and getting dry.",
+          "whenToUse": "Any wet, cold situation where building a fire is difficult or risky.",
+          "preferredAction": "Focus first on shelter, dry clothing, insulation, and food; treat fire as a backup tool only when conditions and safety allow.",
+          "backupAction": "Use chemical heat packs, movement if safe, or shared insulation if available.",
+          "steps": [
+            "Check local fire restrictions and evaluate wildfire risk.",
+            "Assess your skills, tools, and available dry tinder and fuel honestly.",
+            "If risk or difficulty is high, spend your time improving shelter, clothing, and bedding instead.",
+            "Maintain morale and body temperature with movement, warm drinks if possible, and social support."
+          ],
+          "warnings": [
+            "Spending hours trying to start a fire in harsh conditions can leave you colder, wetter, and more exhausted."
+          ],
+          "whatNotToDo": [
+            "Do not try risky improvisations with accelerants or unknown fuels out of frustration."
+          ],
+          "redFlags": [
+            "You are wet, cold, unable to stop shivering, and lack safe fire or better shelter options."
+          ],
+          "preparednessTips": [
+            "Plan so you rarely depend on fire alone: carry proper clothing, shelter, and emergency warming supplies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Hypothermia prevention principles",
+              "organization": "Cold-weather safety guidance",
+              "url": "",
+              "whyUseful": "Supports prioritizing shelter, dryness, and insulation over marginal fire attempts."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "decision-making",
+            "wet-conditions",
+            "safety-first"
+          ]
+        },
+        {
+          "title": "Fully Extinguishing Outdoor Fires",
+          "slug": "fully-extinguishing-outdoor-fires",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Drown the fire with water, stir the ashes, and repeat until everything is cold to the touch; never leave warm or smoking material behind.",
+          "whenToUse": "Any time you are done with an outdoor fire or must leave it unattended.",
+          "preferredAction": "Use plenty of water and stirring to cool all coals, not just visible flames.",
+          "backupAction": "If water is scarce, use dirt or sand while mixing thoroughly, then check for remaining heat; avoid relying on soil alone in peat or root systems.",
+          "steps": [
+            "Let the fire burn down to ash and small coals if time allows.",
+            "Pour water over the entire fire area, including logs and surrounding ground.",
+            "Stir with a stick or tool, exposing hidden coals; add more water until hissing stops and all material is cool.",
+            "If using dirt or sand, mix thoroughly and check again for heat.",
+            "Feel carefully near the surface; if it is warm, repeat the cooling steps."
+          ],
+          "warnings": [
+            "Poorly extinguished fires can smolder and later ignite wildfires, especially in dry or windy conditions."
+          ],
+          "whatNotToDo": [
+            "Do not leave coals or large unburned logs.",
+            "Do not bury a hot fire under thick soil without confirming it is cold."
+          ],
+          "redFlags": [
+            "Smoke or flames reappearing after you thought the fire was out and beginning to spread beyond your control."
+          ],
+          "preparednessTips": [
+            "Carry enough water for extinguishing or avoid fires altogether when water is limited and fire risk is high."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire-prevention fire-out guidance",
+              "organization": "Fire services and park agencies",
+              "url": "",
+              "whyUseful": "Conservative extinguishing practices consistent with park and wildfire-prevention messaging."
+            }
+          ],
+          "appTags": [
+            "fire",
+            "safety",
+            "extinguish",
+            "outdoors",
+            "wildfire-prevention"
+          ]
+        },
+        {
+          "title": "Safe Use of Portable Heaters Indoors",
+          "slug": "safe-use-of-portable-heaters-indoors",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep space heaters three feet from anything that can burn, plug them directly into wall outlets, and turn them off when you sleep or leave the room.",
+          "whenToUse": "Using electric or fuel-fired portable heaters during cold weather or power shortages.",
+          "preferredAction": "Use modern, certified heaters with tip-over and overheat protection exactly as directed.",
+          "backupAction": "If you lack safe heaters, rely on clothing, blankets, and room-sealing techniques rather than unsafe heat sources.",
+          "steps": [
+            "Place the heater on a flat, stable, nonflammable surface.",
+            "Keep a three-foot kid- and pet-free zone around it.",
+            "Plug electric heaters directly into a wall outlet, never a power strip or extension cord.",
+            "Turn heaters off and unplug them when leaving the room or going to sleep.",
+            "Install and test smoke alarms and carbon monoxide detectors where appropriate."
+          ],
+          "warnings": [
+            "Portable heaters are a leading cause of home heating fires and related deaths."
+          ],
+          "whatNotToDo": [
+            "Do not use damaged heaters, run cords under rugs, use heaters near water, or use outdoor fuel heaters indoors."
+          ],
+          "redFlags": [
+            "Burning smells, sparks, discolored outlets, or any small fire in the heater or nearby materials."
+          ],
+          "preparednessTips": [
+            "Inspect heaters before cold seasons and keep alarms working with backup power."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Home Heating Safety Tips",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/2018/11/28/red-cross-home-heating-safety.html",
+              "whyUseful": "Key portable-heater safety rules."
+            },
+            {
+              "title": "Safety Tips: Portable Space Heaters",
+              "organization": "Miami-Dade Fire Rescue",
+              "url": "https://www.miamidade.gov/global/fire/safety-space-heaters.page",
+              "whyUseful": "Practical heater safety advice."
+            }
+          ],
+          "appTags": [
+            "indoor-heat",
+            "heaters",
+            "fire-safety",
+            "co",
+            "winter"
+          ]
+        },
+        {
+          "title": "Fuel Storage and Handling During Emergencies",
+          "slug": "fuel-storage-and-handling-during-emergencies",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Store fuels outside living areas in approved containers, away from heat sources, and never use them indoors for open burning.",
+          "whenToUse": "Keeping gasoline, propane, or similar fuels on hand for generators, stoves, or vehicles during emergencies.",
+          "preferredAction": "Follow local rules for approved containers and store fuel outside the home, upright, sealed, and away from ignition sources.",
+          "backupAction": "If you must temporarily keep small quantities closer, ensure containers are closed, upright, and away from heat and sparks.",
+          "steps": [
+            "Use only approved, labeled fuel containers.",
+            "Store fuels outside living spaces in a shed or detached garage if possible.",
+            "Keep containers upright, sealed, and out of direct sunlight or high heat.",
+            "When refueling generators or stoves, turn them off and let them cool first.",
+            "Clean spills immediately and ventilate the area."
+          ],
+          "warnings": [
+            "Improper storage raises risks of fire, explosion, and toxic fumes including carbon monoxide when fuels are burned."
+          ],
+          "whatNotToDo": [
+            "Do not store fuel next to heaters, fireplaces, or cooking appliances.",
+            "Do not use gasoline or similar fuels to start indoor fires or stoves."
+          ],
+          "redFlags": [
+            "Strong fuel odors inside the home, visible leaks, or any ignition of spilled fuel."
+          ],
+          "preparednessTips": [
+            "Plan fuel needs realistically, avoid hoarding, and learn local storage and transport rules."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "Notes CO risks from fuel-burning devices."
+            }
+          ],
+          "appTags": [
+            "fuel",
+            "storage",
+            "fire-safety",
+            "generators",
+            "indoor-heat"
+          ]
+        },
+        {
+          "title": "Safe Options for Heating Indoors During Power Outages",
+          "slug": "safe-options-for-heating-indoors-during-power-outages",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Safe Indoor Heating During Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use built-in heating systems, properly vented fireplaces or wood stoves, and listed portable electric heaters; avoid unvented fuel devices.",
+          "whenToUse": "Cold-weather power outages or heating failures when you must stay in place.",
+          "preferredAction": "Rely on safe, code-compliant heating systems plus room sealing and clothing layers.",
+          "backupAction": "Use portable electric heaters on generator power only if the generator is outside and all heater safety steps are followed.",
+          "steps": [
+            "Use central heating if it still works safely; otherwise move to a small room and focus on insulation and clothing.",
+            "If using a fireplace or wood stove, ensure the chimney or flue is clear and keep combustibles three feet away.",
+            "Use only modern listed electric space heaters indoors and follow heater safety rules.",
+            "If powering heaters by generator, keep the generator outdoors away from windows and vents and use proper cords.",
+            "Monitor carbon monoxide and smoke alarms and never block vents or flues."
+          ],
+          "warnings": [
+            "Improper heating is a major cause of home fires and carbon monoxide poisoning during outages and cold spells."
+          ],
+          "whatNotToDo": [
+            "Do not use charcoal grills, camp stoves, or gas ovens for space heating.",
+            "Do not bring generators, patio heaters, or gas heaters indoors."
+          ],
+          "redFlags": [
+            "Headache, dizziness, nausea, or confusion during heater use.",
+            "Any signs of fire or smoke from heating equipment."
+          ],
+          "preparednessTips": [
+            "Have heating systems and chimneys inspected before winter and maintain working smoke and CO detectors."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Indoor heating and CO safety tips."
+            },
+            {
+              "title": "Home Heating Safety Tips",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/2018/11/28/red-cross-home-heating-safety.html",
+              "whyUseful": "Safe heater and fireplace use."
+            }
+          ],
+          "appTags": [
+            "indoor-heat",
+            "outage",
+            "co-safety",
+            "heaters",
+            "fireplace"
+          ]
+        },
+        {
+          "title": "Unsafe Indoor Heating Methods to Avoid",
+          "slug": "unsafe-indoor-heating-methods-to-avoid",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Safe Indoor Heating During Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Never use generators, charcoal grills, camp stoves, or gas ovens to heat your home; they can cause deadly carbon monoxide poisoning and fires.",
+          "whenToUse": "Any cold-weather emergency where people might feel tempted to improvise heat indoors.",
+          "preferredAction": "Reject unsafe methods and instead rely on clothing, bedding, room sealing, and safe heaters or relocation to a warming center.",
+          "backupAction": "If you cannot stay warm without unsafe methods, move to a safer location if possible.",
+          "steps": [
+            "Identify clearly unsafe indoor heat sources such as generators, camping stoves, charcoal or gas grills, and gas ovens left open.",
+            "Commit to not using them inside homes, garages, or near windows and vents.",
+            "Use staying-warm-without-power methods instead.",
+            "If others suggest unsafe heating, show them clear CO and fire warnings."
+          ],
+          "warnings": [
+            "CO is invisible and odorless; many people have died using generators and fuel-burning devices indoors for heat."
+          ],
+          "whatNotToDo": [
+            "Do not bring generators inside or run them near windows.",
+            "Do not use stoves or ovens for house heating.",
+            "Do not sleep in rooms with burning charcoal or unvented fuel devices."
+          ],
+          "redFlags": [
+            "Headache, dizziness, nausea, vomiting, chest pain, or confusion when a fuel device is in use nearby."
+          ],
+          "preparednessTips": [
+            "Install CO detectors with battery backup and learn which devices are safe only outdoors."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Warns against using generators and grills indoors."
+            },
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "CO dangers from fuel-burning devices."
+            }
+          ],
+          "appTags": [
+            "indoor-heat",
+            "unsafe-methods",
+            "co-poisoning",
+            "fire-risk"
+          ]
+        },
+        {
+          "title": "Recognizing and Responding to Carbon Monoxide Exposure",
+          "slug": "recognizing-and-responding-to-carbon-monoxide-exposure",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Safe Indoor Heating During Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If people around a fuel-burning device develop headache, dizziness, nausea, or confusion, get everyone into fresh air immediately and call emergency services.",
+          "whenToUse": "Any time generators, heaters, stoves, or other fuel-burning devices are used, especially during outages.",
+          "preferredAction": "Prevent CO buildup by keeping fuel devices outside or properly vented and relying on CO alarms as early warning.",
+          "backupAction": "If no CO alarm is present, watch closely for symptoms appearing in multiple people at once and act quickly if they appear.",
+          "steps": [
+            "Install CO detectors with battery backup on each floor and near sleeping areas; test them regularly.",
+            "Never use fuel-burning devices indoors or in attached garages; keep them well away from windows and vents.",
+            "If the CO alarm sounds or people feel unwell, turn off possible sources only if you can do so quickly and safely.",
+            "Evacuate everyone to fresh air outside, then call emergency services.",
+            "Do not re-enter until the building has been checked and declared safe."
+          ],
+          "warnings": [
+            "CO causes many emergency visits and deaths each year; symptoms can look like flu or fatigue."
+          ],
+          "whatNotToDo": [
+            "Do not ignore or silence CO alarms without finding the cause.",
+            "Do not sleep near running generators or fuel heaters outside windows."
+          ],
+          "redFlags": [
+            "Multiple people with headache, dizziness, nausea, shortness of breath, or confusion in the same area.",
+            "Unconsciousness or seizures in anyone."
+          ],
+          "preparednessTips": [
+            "Ensure CO alarms are installed and working before winter; have heating systems and chimneys inspected annually."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Clinical Guidance for Carbon Monoxide Poisoning",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/hcp/clinical-guidance/index.html",
+              "whyUseful": "Symptoms, risks, and prevention advice."
+            },
+            {
+              "title": "Home Heating Safety: Get Ready for Cooler Weather",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/Safety-First-When-You-Turn-the-Heat-Back-On.html",
+              "whyUseful": "Recommends CO detectors and system checks."
+            }
+          ],
+          "appTags": [
+            "co",
+            "indoor-heat",
+            "generators",
+            "emergency-signs",
+            "poisoning"
+          ]
+        },
+        {
+          "title": "Deciding When Shelter Matters More Than Fire",
+          "slug": "deciding-when-shelter-matters-more-than-fire",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "In most cold emergencies, getting under shelter and into dry, insulated clothing is more reliable and safer than trying to build a fire.",
+          "whenToUse": "Whenever you are exposed to cold and considering spending time and energy making a fire.",
+          "preferredAction": "Prioritize wind and rain protection, dry clothing, and insulation from the ground first; treat fire as a supplement.",
+          "backupAction": "If no shelter or adequate clothing is possible, then consider a carefully chosen, safe fire as an additional heat source where allowed.",
+          "steps": [
+            "Assess wind, wetness, and available shelter options.",
+            "Secure shelter and dry layers first, even if simple.",
+            "Once reasonably protected, decide whether a fire adds enough benefit to justify the risk and effort.",
+            "If you choose to build a fire, follow fire-safety guidance closely."
+          ],
+          "warnings": [
+            "Overemphasizing fire starting can waste critical time and energy while you continue losing heat."
+          ],
+          "whatNotToDo": [
+            "Do not delay getting under shelter or changing out of wet clothes because you are focused on getting a fire going."
+          ],
+          "redFlags": [
+            "Ongoing shivering, confusion, or clumsiness despite shelter and clothing improvements."
+          ],
+          "preparednessTips": [
+            "Practice quick shelter setups and carry proper clothing so you do not depend on fire as a primary survival tool."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Emphasizes staying dry and sheltered."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Highlights clothing, shelter, and moisture management over fire."
+            }
+          ],
+          "appTags": [
+            "decision-making",
+            "shelter",
+            "fire",
+            "priorities",
+            "cold"
+          ]
+        },
+        {
+          "title": "Prioritizing Tasks in the First 30 Minutes of Exposure",
+          "slug": "prioritizing-tasks-in-the-first-30-minutes-of-exposure",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use your first 30 minutes to get out of wind and rain, adjust clothing, protect hands and feet, and secure shelter; leave advanced fire tasks for later.",
+          "whenToUse": "Onset of any cold exposure emergency such as getting lost, being stranded, or the start of a power outage.",
+          "preferredAction": "Follow a simple order: location safety, shelter, clothing/layers, insulation, then warmth/food and communication.",
+          "backupAction": "If you must move because of immediate danger, prioritize reaching safer terrain and minimum shelter before anything else.",
+          "steps": [
+            "Move away from immediate hazards such as rising water, unstable structures, or avalanche paths.",
+            "Get under any available shelter.",
+            "Adjust or change clothing to a drier layered setup; protect head, hands, and feet.",
+            "Insulate from the ground using whatever you have.",
+            "Only then think about fire, additional insulation, or signaling for help."
+          ],
+          "warnings": [
+            "Poor early decisions such as staying in hazard areas or ignoring wet clothing quickly make later survival tasks harder."
+          ],
+          "whatNotToDo": [
+            "Do not wander aimlessly in storms.",
+            "Do not spend your first half hour on low-priority tasks while still exposed."
+          ],
+          "redFlags": [
+            "Immediate life threats such as rising water, structural collapse, or serious injury take precedence over warmth decisions."
+          ],
+          "preparednessTips": [
+            "Mentally rehearse a simple first-30-minutes checklist for your climate and activities and share it with family or group members."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Cold-weather and severe-weather safety principles",
+              "organization": "CDC and outdoor safety materials",
+              "url": "",
+              "whyUseful": "App-friendly checklist synthesized from multiple cold-exposure and severe-weather guidance sources."
+            }
+          ],
+          "appTags": [
+            "priorities",
+            "first-30-minutes",
+            "exposure",
+            "cold",
+            "shelter"
+          ]
+        },
+        {
+          "title": "When to Seek Public Shelters or Warming Centers",
+          "slug": "when-to-seek-public-shelters-or-warming-centers",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Shelter, Fire, and Warmth",
+          "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If you cannot keep your home above a safe temperature or must consider unsafe heating methods, go to a public shelter or warming center if travel is safe.",
+          "whenToUse": "Extended power outages, fuel shortages, or severe cold that overwhelm safe heating options at home.",
+          "preferredAction": "Monitor local alerts for shelter or warming center locations and go early before conditions worsen.",
+          "backupAction": "If travel is unsafe, use cold-home strategies while staying in contact with neighbors or authorities.",
+          "steps": [
+            "Follow local emergency alerts for shelter or warming center information.",
+            "Decide early whether your home can remain safely habitable.",
+            "Gather essential supplies such as medications, IDs, and warm clothing and move to the shelter if travel is safe.",
+            "Check on neighbors and vulnerable people who may also need help.",
+            "At the shelter, follow staff instructions and keep your personal emergency kit with you."
+          ],
+          "warnings": [
+            "Waiting too long can make travel more dangerous and reduce space at shelters."
+          ],
+          "whatNotToDo": [
+            "Do not stay in an unheated home and resort to unsafe devices instead of going to a shelter.",
+            "Do not ignore official evacuation or shelter guidance."
+          ],
+          "redFlags": [
+            "Household members showing hypothermia signs or indoor temperatures approaching freezing with no safe heat source."
+          ],
+          "preparednessTips": [
+            "Know in advance how local authorities announce shelters and where common locations are."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparing for a Winter Storm",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/winter-weather/safety/index.html",
+              "whyUseful": "Encourages planning for shelters and checking on others."
+            },
+            {
+              "title": "How to Heat Your Home Safely as Cold Weather Sets In",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/about-us/news-and-events/news/2024/how-to-heat-your-home-safely-as-cold-weather-sets-in.html",
+              "whyUseful": "Stresses safer alternatives and community support."
+            }
+          ],
+          "appTags": [
+            "shelters",
+            "warming-centers",
+            "indoor-heat",
+            "winter",
+            "community"
+          ]
+        }
+      ]
+    }
+  ]
+}

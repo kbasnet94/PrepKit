@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "PrepKit"
+version = "1.0.0"
+id = "artifacts/survival-app"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+localPort = 18491
+name = "expo"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/survival-app run dev"
+
+[services.env]
+PORT = "18491"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/survival-app", "run", "build"]
+run = ["pnpm", "--filter", "@workspace/survival-app", "run", "serve"]

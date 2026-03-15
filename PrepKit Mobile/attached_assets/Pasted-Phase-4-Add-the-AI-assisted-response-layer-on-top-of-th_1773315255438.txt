@@ -1,0 +1,171 @@
+Phase 4: Add the AI-assisted response layer on top of the deterministic answer engine
+
+The deterministic guide-routing and structured answer system is now working well. I want to add an optional AI layer that rewrites or summarizes the structured answer into more natural language, but does NOT replace the deterministic answer engine.
+
+Important:
+- keep everything offline-first in architecture
+- do not remove or bypass the deterministic answer builder
+- the deterministic answer must remain the source of truth
+- the AI layer should be optional and swappable
+- keep the app runnable at every step
+
+GOAL
+Add an AI-assisted response layer that:
+1. takes the structured answer + grounding context
+2. rewrites it into a cleaner, more natural response
+3. preserves safety constraints
+4. preserves source transparency
+5. gracefully falls back to deterministic-only mode if AI is unavailable
+
+==================================================
+ARCHITECTURE REQUIREMENTS
+==================================================
+
+Create an abstraction for AI response generation so the app can support:
+- no AI / deterministic only
+- Apple Foundation Models later
+- local downloadable model later
+- mocked AI for testing now
+
+Do NOT hardcode the app to one model implementation yet.
+
+==================================================
+TASKS
+==================================================
+
+1. Create AI response types
+Suggested file:
+- lib/ai/types.ts
+
+Add types such as:
+- AIRewriteMode = "off" | "assistive"
+- AIAvailabilityState = "available" | "unavailable" | "unknown"
+- AIEnhancedAnswer
+
+Suggested AIEnhancedAnswer fields:
+- query: string
+- rewrittenText: string
+- structuredAnswer: StructuredAnswer
+- usedAI: boolean
+- aiAvailability: AIAvailabilityState
+- fallbackReason?: string
+- sources: StructuredAnswerSource[]
+- strictSafetyMode: boolean
+
+2. Create an AI service abstraction
+Suggested files:
+- lib/ai/ai-service.ts
+- lib/ai/mock-ai-service.ts
+
+Define an interface like:
+- isAvailable(): Promise<boolean> | boolean
+- rewriteStructuredAnswer(input): Promise<string>
+
+The first implementation should be a mock/local placeholder service.
+It can do simple deterministic rewriting for now:
+- turn sections into smoother prose
+- compress repetitive phrases
+- preserve warnings clearly
+- preserve tone by mode
+
+This is just to validate the architecture before plugging in a real model.
+
+3. Create an AIAnswerBuilder
+Suggested file:
+- lib/ai/ai-answer-builder.ts
+
+Single entry point:
+- buildAIEnhancedAnswer(query)
+
+Flow:
+- build the deterministic structured answer first
+- check AI availability
+- if AI is available, generate a rewritten natural-language answer
+- if AI is unavailable, return deterministic-only fallback
+- always keep structuredAnswer attached
+- always keep sources attached
+
+4. Create prompt/context preparation helpers
+Suggested file:
+- lib/ai/prompt-builder.ts
+
+Create helper functions that prepare:
+- a compact grounding context text
+- a compact structured answer text
+- a mode-aware rewrite instruction
+
+The rewrite instruction should vary by mode:
+
+Practical/emergency:
+- concise
+- action-first
+- easy to scan
+- no background dumping
+
+Medical safety:
+- conservative
+- emphasize immediate priorities and red flags
+- do not provide invasive procedural instructions
+- preserve “what not to do”
+
+Preparedness:
+- checklist/planning tone
+- organized and practical
+
+Educational:
+- concise explanation with practical relevance
+
+Unknown/cautious:
+- uncertainty-forward
+- safe and limited claims
+
+5. Add AI safety constraints
+For medical_safety and strictSafetyMode:
+- AI must not introduce new instructions beyond the structured answer
+- AI must not add invasive guidance
+- AI must not remove red flags / warnings
+- AI rewrite should be more like paraphrasing and organizing, not expanding into novel medical advice
+
+General rule:
+The AI may improve clarity and readability, but must not change the safety meaning of the deterministic answer.
+
+6. Add UI support for dual answer modes
+Update the Answer Tester so I can see:
+- deterministic structured answer
+- AI-enhanced answer (if available)
+- whether AI was used
+- fallback reason if not used
+
+Optional UI ideas:
+- segmented toggle: Structured / AI Rewrite
+or
+- show AI Rewrite first with “View Structured Version” below
+
+7. Add feature flag / settings toggle
+In Developer Tools or Settings, add:
+- “AI Rewrite Mode”
+  - Off
+  - Assistive
+
+This will help compare behaviors.
+
+8. Keep sources visible
+Even in AI rewrite mode:
+- sources must still be shown
+- warnings must remain visible
+- medical disclaimer must remain visible where relevant
+
+9. Do not connect a real model yet unless the project already has one ready
+This phase is about architecture and safe integration.
+A mock AI service is acceptable for now.
+
+==================================================
+SUCCESS CRITERIA
+==================================================
+
+- The app still works fully with deterministic-only answers
+- There is a clean AI abstraction layer
+- The AI rewrite improves readability without replacing the structured answer engine
+- Medical/high-risk answers remain conservative
+- The UI can show whether AI was used or not
+- The app is ready for a real model integration in the next phase

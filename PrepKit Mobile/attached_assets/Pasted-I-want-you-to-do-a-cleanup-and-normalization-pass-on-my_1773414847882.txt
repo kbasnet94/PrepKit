@@ -1,0 +1,174 @@
+I want you to do a cleanup and normalization pass on my guide library using the exported source-of-truth files.
+
+Inputs to use:
+- guides_master_export.json
+- guides_audit_report.json
+
+Goal:
+Clean up the existing guide system without adding brand-new guides.
+This is a metadata and quality pass, not an expansion pass.
+
+Priority outcomes:
+1. assign missing parentTopic values
+2. improve missing source references where safely possible
+3. backfill missing warnings / redFlags for older legacy guides
+4. preserve compatibility with the current app structure and existing slugs/routes
+5. produce a clean updated export plus a change log
+
+Important rules:
+- do NOT delete guides
+- do NOT merge guides
+- do NOT rename slugs or ids unless absolutely necessary for correctness
+- do NOT invent fake sources
+- do NOT downgrade reviewed guides unless there is a clear reason
+- do NOT create new categories unless unavoidable
+- prefer using existing category and parent-topic patterns already in the library
+- if a field cannot be confidently filled, leave it empty/null and flag it for manual review
+- preserve current content as much as possible; only improve structure and safety fields
+- do not break the current repository / seed-data / routing structure
+
+What I want you to do:
+
+PHASE 1 — analyze the current export
+Read guides_master_export.json and guides_audit_report.json and identify:
+- all guides missing parentTopic
+- all guides missing sourceReferences
+- all guides missing warnings
+- all guides missing redFlags
+- any guides whose category and parentTopic look inconsistent
+- any guides whose layer / guideType combination looks inconsistent
+
+PHASE 2 — assign missing parentTopic values
+For every guide missing parentTopic:
+- assign the most appropriate existing parentTopic already used in the library
+- do not invent new parent topics unless absolutely necessary
+- use title, category, related guides, upgradesGuide, and content theme to infer the best fit
+- prefer grouping legacy base/reference guides under the parent topic used by newer upgraded/sub-guides
+
+Examples of the behavior I want:
+- legacy reference guides should usually be attached to the same parent topic as their upgraded action/scenario descendants
+- signaling references should map into the communication / rescue signaling topic system
+- old disaster references should map into the corresponding modern parent topics
+- old medical references should map into the appropriate modern parent topic, not stay ungrouped
+
+PHASE 3 — improve source references safely
+For guides missing sourceReferences:
+- first try to recover or infer references from:
+  - related/upgraded guides in the same parent topic
+  - existing source families already present in the library
+  - source patterns already used by sibling guides
+- if a source is strongly implied by the guide family and already used by closely related guides, you may reuse that source reference
+- if you cannot confidently infer a real source, do NOT invent one
+- instead:
+  - leave sourceReferences empty
+  - set contentStatus to needs_source_review if appropriate
+  - add a note explaining that source references still need manual review
+
+Important:
+- references must be plausible and consistent with nearby guides
+- do not paste raw URLs into notes if not needed
+- do not fabricate organizations or titles
+
+PHASE 4 — backfill warnings and redFlags
+For older guides missing warnings or redFlags:
+- add concise, conservative safety language matching the style of the newer guides
+- keep it practical and public-safe
+- do not add graphic detail
+- do not add invasive or advanced procedures
+- warnings should focus on misuse, escalation risk, and common mistakes
+- redFlags should focus on when to seek urgent professional help or emergency services
+
+Examples of what I want:
+- for medical guides: infection, breathing trouble, confusion, uncontrolled bleeding, worsening symptoms
+- for disaster guides: structural damage, gas smell, flooding, downed power lines, worsening weather
+- for field guides: hypothermia/heat illness signs, exhaustion, inability to navigate safely, rescue urgency
+
+PHASE 5 — normalize status and notes
+While cleaning:
+- keep reviewed guides reviewed unless there is a strong reason not to
+- for legacy guides that are structurally improved but still weak on sourcing, prefer:
+  - contentStatus: needs_source_review
+- use notes sparingly to explain:
+  - inferred parentTopic
+  - reused sibling references
+  - missing-source manual-review cases
+- do not overfill notes fields with long essays
+
+PHASE 6 — write updated outputs
+Create these files:
+1. guides_master_export.cleaned.json
+2. guides_cleanup_report.json
+3. guides_cleanup_summary.md
+
+guides_cleanup_report.json should include:
+- total guides processed
+- number of parentTopic fixes
+- number of sourceReference fixes
+- number of warnings backfilled
+- number of redFlags backfilled
+- list of guides still missing parentTopic
+- list of guides still missing sourceReferences
+- list of guides still missing warnings
+- list of guides still missing redFlags
+- list of guides whose contentStatus changed
+- list of guides whose parentTopic was assigned by inference
+- list of guides where sourceReferences were reused from sibling/related guides
+- list of guides flagged for manual review
+
+guides_cleanup_summary.md should include:
+- a short human-readable explanation of what changed
+- the biggest legacy cleanup improvements
+- what still needs manual review
+- whether the cleaned export is ready to become the new source of truth
+
+PHASE 7 — optionally update the app data layer
+If the project already has a clear canonical source file for guides:
+- update that canonical source using the cleaned data
+- do so only if you can preserve existing types and app behavior
+- if there is any risk of breaking the app, stop short of replacing the live source and just generate the cleaned export files
+
+Schema rules:
+Preserve this guide shape:
+{
+  "id": "stable_slug_or_id",
+  "slug": "stable-slug",
+  "title": "Guide Title",
+  "category": "Top Category",
+  "parentTopic": "Parent Topic Name",
+  "layer": "action | scenario | reference",
+  "guideType": "action_card | scenario_guide | preparedness_guide | reference_guide",
+  "summary": "short summary",
+  "quickAnswer": "string",
+  "whenToUse": ["..."],
+  "preferredAction": "string",
+  "backupAction": "string",
+  "stepByStepActions": ["..."],
+  "warnings": ["..."],
+  "whatNotToDo": ["..."],
+  "redFlags": ["..."],
+  "preparednessTips": ["..."],
+  "sourceQuality": "strong | mixed | weak",
+  "contentStatus": "reviewed | needs_source_review | planned | metadata_only | in_app | reference_summary",
+  "integrationDecision": "existing | upgrade_existing | add_new | add_subguide",
+  "upgradesGuide": "existing guide title or null",
+  "relatedGuides": ["..."],
+  "sourceReferences": [
+    {
+      "title": "source title",
+      "organization": "source org",
+      "url": "source url",
+      "whyUseful": "short note"
+    }
+  ],
+  "appTags": ["..."],
+  "notes": "optional normalization notes"
+}
+
+Final summary I want in chat after you finish:
+- total guides processed
+- number of parentTopic fixes
+- number of sourceReference fixes
+- number of warnings backfilled
+- number of redFlags backfilled
+- whether the cleaned export is safe to adopt as the next source of truth
+- which files you created

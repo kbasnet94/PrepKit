@@ -1,0 +1,270 @@
+The current offline AI behavior is not good enough for emergency or practical survival use. The problem is NOT just the model. The main issues are:
+1. retrieval is pulling the wrong kinds of text,
+2. source material is too broad/encyclopedic,
+3. chunking is too naive,
+4. prompts are too loose,
+5. the app is answering in “encyclopedia mode” instead of “practical emergency mode.”
+
+I need you to improve the app architecture and response quality for offline survival guidance.
+
+GOAL
+Make the AI much more useful in practical and emergency-style situations. When the user asks something like “How do I start a fire without matches or a lighter?”, the app should prioritize short, actionable, practical guidance, not history, archaeology, or broad background information.
+
+CORE PRODUCT CHANGES
+
+1. Add query classification
+Before answering, classify the user query into one of these modes:
+- emergency_urgent
+- practical_how_to
+- educational_background
+- inventory_related
+- preparedness_planning
+
+Use this classification to change retrieval and answer formatting.
+
+2. Add an emergency/practical response mode
+For emergency_urgent and practical_how_to queries:
+- prioritize practical instructions
+- prefer concise step-based answers
+- suppress history/background unless explicitly requested
+- do not dump raw excerpts
+- answer in a structured format
+
+Preferred answer structure for emergency/practical mode:
+- Direct answer
+- Best option
+- Backup option
+- Warnings / limitations
+- Sources used
+
+3. Improve retrieval strategy
+The current retrieval appears too keyword-based and is pulling irrelevant sections like history or archaeology.
+Update retrieval so it ranks practical/actionable content much higher than historical or descriptive sections.
+
+For emergency/practical queries:
+- prioritize quick guides
+- prioritize checklists
+- prioritize step-by-step sections
+- prioritize “what to do now” sections
+- down-rank history
+- down-rank archaeology
+- down-rank background/context
+- down-rank theory unless needed
+
+4. Improve chunking
+Do NOT chunk only by arbitrary character length.
+Chunk content by:
+- document
+- heading
+- section
+- subsection
+- intent type
+
+Each chunk should carry metadata such as:
+- topic
+- section title
+- intent tag
+- urgency level
+- difficulty
+- requires_tools
+- source title
+
+Suggested intent tags:
+- quick_answer
+- practical_steps
+- checklist
+- warning
+- background
+- history
+- theory
+- reference
+
+For example, a “Fire Making” source should not just be one blob. It should be split into chunks such as:
+- overview
+- quick answer
+- tinder basics
+- friction methods
+- tool-based methods
+- warnings
+- history
+
+Then emergency mode should ignore or strongly down-rank history/background chunks.
+
+5. Improve source architecture
+Wikipedia-style content is too broad by itself.
+Create a curated local survival knowledge layer on top of general reference content.
+
+Add a concept of “Action Cards” or “Quick Reference Cards” for high-priority topics.
+
+Examples:
+- start a fire without matches
+- build a tinder bundle
+- purify water by boiling
+- tarp shelter basics
+- emergency signaling basics
+- navigation without GPS
+
+Each action card should have structured fields like:
+- title
+- summary
+- when_to_use
+- prerequisites
+- best_option
+- backup_option
+- warnings
+- source_references
+- tags
+
+When answering emergency/practical questions, retrieval priority should be:
+1. action cards
+2. practical manual sections
+3. reference/wiki/background content
+
+6. Improve prompting
+The model should not just “summarize what it found.”
+It should behave as a practical survival assistant using retrieved local content.
+
+Create a stronger grounded prompt template with rules like:
+- prioritize practical instructions over history/background
+- ignore historical/contextual passages unless the user explicitly asks for them
+- answer using the most actionable retrieved content first
+- do not paste raw chunks unless necessary
+- if the retrieved information is weak or incomplete, say so clearly
+- be concise and practical
+- use source titles or section titles in the response
+
+For emergency_urgent and practical_how_to queries, the model should produce:
+- a direct answer first
+- then a short practical breakdown
+- then warnings
+- then sources
+
+7. Add fallback behavior
+If no strong practical source is found:
+- do not pretend confidence
+- say that the app could not find a sufficiently strong downloaded reference
+- optionally provide a clearly labeled general answer, but mark it as less reliable
+
+8. Add source transparency
+Show better citations in the UI.
+Do not just show the document name.
+Show:
+- source title
+- section title
+- optionally chunk type or tag
+
+Example:
+Source: Fire Making → Quick Tips
+Source: Fire Making → Friction Methods
+Not just:
+Source: Fire Making
+
+9. Preserve offline-first architecture
+Everything should still work offline.
+No cloud dependency for core behavior.
+Use local storage/database for:
+- downloaded source documents
+- action cards
+- chunk metadata
+- retrieval index
+- chat history
+
+IMPLEMENTATION TASKS
+
+Please update the React Native app architecture accordingly.
+
+A. Add query classification
+- Create a lightweight local classifier function for chat intent
+- It can be rules-based for now
+- Return one of the five modes:
+  emergency_urgent
+  practical_how_to
+  educational_background
+  inventory_related
+  preparedness_planning
+
+B. Add structured chunk schema
+Update the local knowledge model so each chunk includes fields like:
+- id
+- sourceId
+- sourceTitle
+- sectionTitle
+- topic
+- text
+- intentTag
+- urgency
+- difficulty
+- requiresTools
+- keywords
+
+C. Add action card schema
+Create a model for quick-reference survival action cards:
+- id
+- title
+- summary
+- whenToUse
+- prerequisites
+- bestOption
+- backupOption
+- warnings
+- sourceReferences
+- tags
+
+D. Update retrieval pipeline
+For emergency_urgent and practical_how_to:
+- retrieve action cards first
+- then practical chunks
+- exclude or strongly down-rank history/background chunks
+
+For educational_background:
+- allow broader retrieval
+
+E. Update answer generation
+Build a response formatter that changes based on mode.
+For emergency/practical:
+- concise structured answer
+For educational:
+- broader explanation is okay
+
+F. Add simple ranking rules
+For MVP, use rules and scoring rather than a complex ML ranker.
+Example scoring ideas:
+- +high score for quick_answer, practical_steps, checklist, warning
+- -high penalty for history, archaeology, background when in emergency mode
+- boost chunks whose section titles contain “quick”, “steps”, “how to”, “warnings”, “tips”
+- boost action cards above all other content
+
+G. Improve UI source display
+Add chips/cards below the answer showing:
+- source title
+- section title
+
+H. Do not rely on prompts alone
+Implement this as a retrieval, ranking, chunking, and formatting improvement, not just a prompt rewrite.
+
+IMPORTANT PRODUCT PRINCIPLE
+For emergency questions, the app should never behave like a general encyclopedia if it has better structured survival guidance available.
+
+EXPECTED RESULT
+If the user asks:
+“How do I start a fire without matches or a lighter?”
+the app should return something practical like:
+- immediate answer
+- likely best methods
+- quick steps
+- warnings
+- source sections used
+
+It should NOT return history of fire-making, archaeology, or long descriptive background unless explicitly requested.
+
+Please:
+1. refactor the architecture to support this,
+2. add the needed data structures,
+3. improve retrieval logic,
+4. improve prompt building,
+5. improve answer formatting,
+6. keep the implementation MVP-friendly and offline-first,
+7. keep the code clean and incremental,
+8. do not overengineer with remote services.
+
+If possible, implement this in stages and keep the app compiling/running at each step.

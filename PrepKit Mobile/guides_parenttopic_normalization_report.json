@@ -1,0 +1,183 @@
+{
+  "totalChecked": 187,
+  "totalChanged": 17,
+  "changes": [
+    {
+      "slug": "earthquake-during-shaking",
+      "title": "Earthquake Safety: During Shaking",
+      "before": "earthquake-safety-reference",
+      "after": "Earthquakes"
+    },
+    {
+      "slug": "earthquake-after-shaking",
+      "title": "Earthquake Safety: Right After Shaking",
+      "before": "earthquake-safety-reference",
+      "after": "Earthquakes"
+    },
+    {
+      "slug": "earthquake-tsunami-risk",
+      "title": "Earthquake Safety: Tsunami Risk After a Quake",
+      "before": "earthquake-safety-reference",
+      "after": "Earthquakes"
+    },
+    {
+      "slug": "earthquake-preparedness-checklist",
+      "title": "Earthquake Preparedness Checklist",
+      "before": "earthquake-safety-reference",
+      "after": "Earthquakes"
+    },
+    {
+      "slug": "flood-get-to-higher-ground",
+      "title": "Flood Survival: Get to Higher Ground",
+      "before": "flood-survival-reference",
+      "after": "Floods"
+    },
+    {
+      "slug": "floodwater-safety",
+      "title": "Floodwater Safety",
+      "before": "flood-survival-reference",
+      "after": "Floods"
+    },
+    {
+      "slug": "flood-reentry-cleanup",
+      "title": "Returning Home After Flooding",
+      "before": "flood-survival-reference",
+      "after": "Floods"
+    },
+    {
+      "slug": "tornado-take-shelter",
+      "title": "Tornado Safety: Take Shelter Immediately",
+      "before": "tornado-safety-reference",
+      "after": "Tornadoes"
+    },
+    {
+      "slug": "tornado-vehicle-mobile-home",
+      "title": "Tornado Safety: If You Are in a Vehicle or Mobile Home",
+      "before": "tornado-safety-reference",
+      "after": "Tornadoes"
+    },
+    {
+      "slug": "tornado-after",
+      "title": "After the Tornado",
+      "before": "tornado-safety-reference",
+      "after": "Tornadoes"
+    },
+    {
+      "slug": "wildfire-evacuate-early",
+      "title": "Wildfire Evacuation: Leave Early",
+      "before": "wildfire-smoke-evacuation",
+      "after": "Wildfire: Evacuation and Smoke Safety"
+    },
+    {
+      "slug": "wildfire-smoke-protection",
+      "title": "Wildfire Smoke: Protect Your Air",
+      "before": "wildfire-smoke-evacuation",
+      "after": "Wildfire: Evacuation and Smoke Safety"
+    },
+    {
+      "slug": "wildfire-return-home",
+      "title": "Returning After Wildfire",
+      "before": "wildfire-smoke-evacuation",
+      "after": "Wildfire: Evacuation and Smoke Safety"
+    },
+    {
+      "slug": "minor-cuts-scrapes",
+      "title": "Minor Cuts and Scrapes: Clean and Cover",
+      "before": "wound-care-reference",
+      "after": "Bleeding and Wound Care"
+    },
+    {
+      "slug": "bleeding-control-pressure-first",
+      "title": "Bleeding Control: Direct Pressure First",
+      "before": "wound-care-reference",
+      "after": "Bleeding and Wound Care"
+    },
+    {
+      "slug": "severe-bleeding-get-help-fast",
+      "title": "Severe Bleeding: Get Help Fast",
+      "before": "wound-care-reference",
+      "after": "Bleeding and Wound Care"
+    },
+    {
+      "slug": "wound-needs-urgent-care",
+      "title": "When a Wound Needs Urgent Medical Care",
+      "before": "wound-care-reference",
+      "after": "Bleeding and Wound Care"
+    }
+  ],
+  "remainingSlugStyleTopics": [],
+  "nearDuplicateClusters": [
+    {
+      "sharedPrefix": "fire starting",
+      "topics": [
+        "Fire Starting Basics (Outdoor)",
+        "Fire Starting in Wet Conditions (Outdoor)"
+      ]
+    }
+  ],
+  "topicInventory": {
+    "72-Hour Emergency Supplies and Go-Bags": 7,
+    "Air Quality, Smoke, Dust, and Ash": 2,
+    "Airway Emergencies": 3,
+    "Allergic Reactions": 1,
+    "Altitude-Related Exposure Basics": 1,
+    "Basic Camp and Bivouac Hygiene": 3,
+    "Battery Conservation & Backup Power": 3,
+    "Blackout Basics & First 30 Minutes": 4,
+    "Bleeding and Wound Care": 7,
+    "Burns": 2,
+    "Carbon Monoxide (CO) Safety": 2,
+    "Cold and Wet Overnight Survival": 2,
+    "Cold Exposure": 3,
+    "Cold Exposure, Hypothermia, and Frostbite": 2,
+    "Cold Weather: Prevention and Field Care": 1,
+    "Cordage, Knots, and Safe Tool Use": 1,
+    "Damaged Buildings After Storms or Earthquakes": 3,
+    "Earthquakes": 5,
+    "Emergency Shelter Basics": 3,
+    "Extreme Heat: Prevention and Emergencies": 3,
+    "Family Emergency and Communication Planning": 6,
+    "Fire Safety and Fuel Management (Outdoor and Indoor)": 3,
+    "Fire Starting Basics (Outdoor)": 3,
+    "Fire Starting in Wet Conditions (Outdoor)": 3,
+    "First 30 Minutes: Stay Oriented and Make a Simple Plan": 2,
+    "Floods": 5,
+    "Food Safety During Power Outages": 6,
+    "Gas Leaks and Utility Shutoff Basics": 2,
+    "Generator Safety": 3,
+    "Heat and Fluids": 4,
+    "Home Readiness Basics and Safety Checks": 4,
+    "If You Get Lost": 3,
+    "Keeping Clothing and Bedding Dry": 3,
+    "Knife and Multi-Tool Safety for Shelter, Food, and Repairs": 3,
+    "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling": 3,
+    "Land Navigation": 1,
+    "Land Rescue Signaling": 8,
+    "Landslides": 2,
+    "Lightning and Thunderstorm Exposure": 1,
+    "Maritime Rescue": 2,
+    "Medical Needs, Medicines, and Document Backup": 4,
+    "Musculoskeletal Injuries": 1,
+    "Packing and Using a Small Emergency Kit": 2,
+    "Pet Emergency Preparation": 2,
+    "Refrigerator, Freezer, and Food Safety During Outages": 2,
+    "Rescue Communication Tools": 1,
+    "Safe Drinking Water in Emergencies": 9,
+    "Safe Flashlight and Lantern Use": 3,
+    "Safe Indoor Heating During Emergencies": 3,
+    "Safe Water Collection (Before Purification)": 3,
+    "Sanitation and Contamination Prevention": 4,
+    "Shelter vs Fire vs Clothing: Choosing Priorities": 3,
+    "Shelter-in-Place Kits and Procedures": 2,
+    "Simple Rescue Signaling": 1,
+    "Simple, High-Value Knots and Cordage Uses": 2,
+    "Staying Warm Without Power or Heat": 3,
+    "Sun Exposure and UV-Related Heat Stress": 1,
+    "Tarp and Improvised Shelter Construction": 3,
+    "Tornadoes": 6,
+    "Water Collection and Basic Treatment Without Equipment": 3,
+    "When Weather Exposure Becomes a Medical Emergency": 1,
+    "Wildfire: Evacuation and Smoke Safety": 3
+  },
+  "safeToAdopt": true
+}

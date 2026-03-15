@@ -1,0 +1,1257 @@
+{
+  "packTitle": "Preparedness, Kits, and Home Readiness Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T09:45:47.818398Z",
+  "notes": [
+    "This batch normalizes Perplexity research into Replit-ready guide objects.",
+    "Guide types have been normalized to action_card, scenario_guide, preparedness_guide, or reference_guide.",
+    "Most items in this batch are net-new preparedness guides rather than upgrades to existing core survival topics.",
+    "The content is optimized for short card-style presentation with expandable detail underneath."
+  ],
+  "categories": [
+    {
+      "categoryName": "Preparedness, Kits, and Home Readiness",
+      "summary": "Preparedness, kits, communication planning, shelter-in-place, medical backup, pets, and home readiness guides normalized from Perplexity research.",
+      "guides": [
+        {
+          "title": "72-Hour Home Survival Kit (Shelter at Home)",
+          "slug": "72-hour-home-survival-kit-shelter-at-home",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "72-Hour Emergency Supplies and Go-Bags",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Store at least three days of water, food, light, radio, first aid, sanitation, and key documents in one clearly labeled home kit.",
+          "whenToUse": "Use before storms, earthquakes, or prolonged service disruptions when you may need to remain at home without safe water, power, or outside help.",
+          "preferredAction": [
+            "Build one centralized kit sized for everyone in the household for at least 72 hours.",
+            "Keep it in a cool, dry, easy-to-reach location that all household members know."
+          ],
+          "backupAction": [
+            "If you cannot fully stock 72 hours, start with water, flashlight, radio, medications, and basic food, then expand over time."
+          ],
+          "steps": [
+            "Plan at least 1 gallon of water per person per day for 3 days.",
+            "Pack 3 days of shelf-stable, easy-to-eat food and a manual can opener.",
+            "Add flashlights, spare batteries, and a battery-powered or hand-crank radio.",
+            "Include first aid, prescription medications, and essential medical supplies.",
+            "Pack sanitation items, hygiene supplies, blankets, sturdy shoes, and copies of critical documents.",
+            "Add infant, child, pet, or special-needs items as required.",
+            "Review and refresh the kit every 6\u201312 months."
+          ],
+          "warnings": [
+            "Utilities, tap water, and fuel may be unavailable after major disasters.",
+            "Temperature-sensitive medicines and devices need special planning during outages."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on cook-only foods that require large amounts of water or fuel.",
+            "Do not scatter supplies randomly around the house without one clearly marked core kit."
+          ],
+          "redFlags": [
+            "Running out of life-sustaining medication, safe water, or basic shelter supplies during an active emergency needs urgent outside help or official support.",
+            "Chest pain, confusion, breathing trouble, or medication failure should be treated as urgent medical issues."
+          ],
+          "preparednessTips": [
+            "Aim toward a 2-week home supply over time even if 72 hours is your baseline.",
+            "Keep a written inventory taped to or stored inside the kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency Preparedness Guidance",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Widely used household kit and go-bag guidance."
+            },
+            {
+              "title": "Build A Kit / Make A Plan materials",
+              "organization": "FEMA / Ready.gov",
+              "url": "",
+              "whyUseful": "Core all-hazards preparedness checklists used nationwide."
+            }
+          ],
+          "appTags": [
+            "kits",
+            "72-hour",
+            "home",
+            "checklist",
+            "shelter-in-place",
+            "food-water",
+            "first-aid",
+            "documents"
+          ]
+        },
+        {
+          "title": "Personal Evacuation Go-Bag (Adult)",
+          "slug": "personal-evacuation-go-bag-adult",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "72-Hour Emergency Supplies and Go-Bags",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep a grab-and-go backpack with three days of essentials so you can leave quickly during fires, floods, chemical incidents, or fast evacuations.",
+          "whenToUse": "Use for immediate evacuations, short shelter stays, or situations where you may be away from home for several days.",
+          "preferredAction": [
+            "Maintain one go-bag per adult near an exit and update it every 6\u201312 months."
+          ],
+          "backupAction": [
+            "If no prepared go-bag exists, quickly gather water, ID, medications, cash, phone power, and a change of clothing if there is still time to do so safely."
+          ],
+          "steps": [
+            "Choose a backpack you can carry comfortably for at least 15\u201320 minutes.",
+            "Pack water, compact shelf-stable snacks, a full change of clothes, and hygiene basics.",
+            "Include medications in original packaging, a small first-aid kit, and a written medication list.",
+            "Add a flashlight or headlamp, batteries, a whistle, and a small power bank.",
+            "Carry copies of ID, emergency contacts, and some cash in small bills.",
+            "Store the bag near an exit and practice grabbing it during drills."
+          ],
+          "warnings": [
+            "Some emergencies give you only minutes to leave.",
+            "Smoke, rising water, or chemical odors can quickly make your home unsafe."
+          ],
+          "whatNotToDo": [
+            "Do not make the bag so heavy that you cannot move quickly with it.",
+            "Do not pack only valuables while forgetting water, medications, and clothing."
+          ],
+          "redFlags": [
+            "If officials order immediate evacuation, leave at once.",
+            "If smoke, floodwater, or hazardous fumes are already present, prioritize life safety over finishing your packing."
+          ],
+          "preparednessTips": [
+            "Keep your vehicle fueled during high-risk seasons.",
+            "Add a laminated contact/medical card to the bag."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency Preparedness Guidance",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Widely used household kit and go-bag guidance."
+            },
+            {
+              "title": "Build A Kit / Make A Plan materials",
+              "organization": "FEMA / Ready.gov",
+              "url": "",
+              "whyUseful": "Core all-hazards preparedness checklists used nationwide."
+            }
+          ],
+          "appTags": [
+            "kits",
+            "go-bag",
+            "evacuation",
+            "adult",
+            "checklist",
+            "travel",
+            "wildfire",
+            "flood"
+          ]
+        },
+        {
+          "title": "Car / Work Mini Emergency Kit (24\u201372 Hours)",
+          "slug": "car-work-mini-emergency-kit-24-72-hours",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "72-Hour Emergency Supplies and Go-Bags",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep a compact emergency kit in your car or workplace so you can manage delays, sheltering, or being stranded away from home.",
+          "whenToUse": "Use for commuting, remote driving, workplace lockdowns, severe weather travel, or short disruptions that keep you away from home.",
+          "preferredAction": [
+            "Build a compact separate kit for your vehicle and another for your workplace with water, food, light, first aid, and basic tools."
+          ],
+          "backupAction": [
+            "If you cannot keep a full kit, at least keep water, snacks, a flashlight, and a small first-aid kit available."
+          ],
+          "steps": [
+            "Use a small bag or bin that fits in your trunk or under a desk.",
+            "Add bottled water, sealed snacks, and a basic first-aid kit.",
+            "Include a flashlight, spare batteries, and warmth items like a hat, gloves, socks, or emergency blanket where climate requires.",
+            "Pack a whistle, multitool, small duct tape, and a paper map.",
+            "Store printed key phone numbers and alternate route information.",
+            "Check food, water, and seasonal clothing twice a year."
+          ],
+          "warnings": [
+            "Cars become dangerous in extreme heat or cold.",
+            "Heat can damage some stored items in vehicles."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on phone navigation and battery life.",
+            "Do not store dangerous heat-sensitive aerosol items in parked vehicles."
+          ],
+          "redFlags": [
+            "If you are stranded in dangerous temperatures, injured, or your vehicle smells like fuel or is smoking, call for help early.",
+            "If you cannot safely remain with the vehicle, move only if conditions and official guidance support it."
+          ],
+          "preparednessTips": [
+            "Keep at least half a tank of fuel during storm or wildfire seasons.",
+            "Leave a medical-condition note in the glove box if useful for responders."
+          ],
+          "sourceReferences": [
+            {
+              "title": "72-Hour Kit / Preparedness guidance",
+              "organization": "University / campus emergency preparedness materials",
+              "url": "",
+              "whyUseful": "Common compact-kit structure for commuting and workplace use."
+            },
+            {
+              "title": "Emergency Kit Fact Sheets",
+              "organization": "US government / military-style preparedness references",
+              "url": "",
+              "whyUseful": "Helpful small-kit planning patterns for mobility."
+            }
+          ],
+          "appTags": [
+            "kits",
+            "car",
+            "work",
+            "travel",
+            "commuter",
+            "lockdown",
+            "24-72-hours",
+            "checklist"
+          ]
+        },
+        {
+          "title": "Kit Maintenance and Rotation Schedule",
+          "slug": "kit-maintenance-and-rotation-schedule",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "72-Hour Emergency Supplies and Go-Bags",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Emergency kits only work if you check and refresh them regularly. Replace expired food, water, batteries, and medications on a schedule.",
+          "whenToUse": "Use after creating kits and then every 6\u201312 months or before major risk seasons.",
+          "preferredAction": [
+            "Set a recurring reminder and use a checklist to review every kit on a regular schedule."
+          ],
+          "backupAction": [
+            "If you cannot do a full check, do a quick scan for expired food, dead batteries, low medications, and outdated documents."
+          ],
+          "steps": [
+            "Schedule a kit review every 6\u201312 months.",
+            "Discard and replace expired or damaged food and water.",
+            "Check emergency medications and refill backup supplies when possible.",
+            "Test flashlights, radios, smoke alarms, and battery-powered devices.",
+            "Update IDs, contact lists, insurance copies, and family-specific items.",
+            "Relabel or repack kits with the latest review date."
+          ],
+          "warnings": [
+            "Expired medications, swollen cans, dead batteries, and stale water can make a kit unreliable at the worst moment.",
+            "Home safety systems that fail can leave you without warning during fast-moving emergencies."
+          ],
+          "whatNotToDo": [
+            "Do not build kits and forget them for years.",
+            "Do not use kit items casually unless you have a strict replace-after-use habit."
+          ],
+          "redFlags": [
+            "If a disaster is underway and critical medicines or home warning systems are missing or broken, seek replacement or safe alternate shelter urgently.",
+            "If smoke alarms or carbon monoxide alarms fail and cannot be restored, consider temporary safer lodging where appropriate."
+          ],
+          "preparednessTips": [
+            "Use first-in, first-out rotation for stored food.",
+            "Keep a printed maintenance log with dates and notes."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Preparedness Kit Maintenance",
+              "organization": "American Red Cross / municipal preparedness checklists",
+              "url": "",
+              "whyUseful": "Common schedule-based kit maintenance guidance."
+            },
+            {
+              "title": "Smoke Alarm Guidance",
+              "organization": "USFA",
+              "url": "",
+              "whyUseful": "Useful for integrating alert-system maintenance with kit maintenance."
+            }
+          ],
+          "appTags": [
+            "maintenance",
+            "rotation",
+            "kits",
+            "checklist",
+            "schedule",
+            "medications",
+            "batteries"
+          ]
+        },
+        {
+          "title": "Basic Family Emergency Communication Plan",
+          "slug": "basic-family-emergency-communication-plan",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Family Emergency and Communication Planning",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Write down who to contact, how to reach them, and where to meet if phones, travel, or routines are disrupted during an emergency.",
+          "whenToUse": "Use for all households, especially those with children, older adults, caregivers, or family members who spend the day in different places.",
+          "preferredAction": [
+            "Create a simple printed family communication plan and give every household member a copy."
+          ],
+          "backupAction": [
+            "If you cannot print, handwrite the plan and store photos of it on phones plus one paper copy in a visible home location."
+          ],
+          "steps": [
+            "List names, mobile numbers, emails, and any key medical needs.",
+            "Choose one out-of-area contact who can relay updates.",
+            "Write down multiple contact methods such as text, calls, and email.",
+            "Record emergency numbers and local official hotlines.",
+            "Create wallet cards with emergency contacts and meeting points.",
+            "Store copies at home, in kits, and on phones.",
+            "Review annually or after any move or number change."
+          ],
+          "warnings": [
+            "Phone networks may be overloaded; texts may work when calls do not.",
+            "A single app or single device is not enough for family communication resilience."
+          ],
+          "whatNotToDo": [
+            "Do not assume everyone remembers phone numbers from memory.",
+            "Do not keep the only copy of the plan on one phone."
+          ],
+          "redFlags": [
+            "If family members are unreachable during an active life-threatening incident, contact authorities.",
+            "If a dependent person with urgent medical needs loses caregiver contact, seek emergency help."
+          ],
+          "preparednessTips": [
+            "Teach children how to call emergency services and state their name and address.",
+            "Set ICE contacts on phones."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Family Emergency Communication Plan Templates",
+              "organization": "Ready.gov / state emergency management",
+              "url": "",
+              "whyUseful": "Standard household planning format used broadly."
+            },
+            {
+              "title": "Get a Kit, Make a Plan",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Family planning guidance with contacts and meeting points."
+            }
+          ],
+          "appTags": [
+            "planning",
+            "communication",
+            "family",
+            "contacts",
+            "kids",
+            "template",
+            "offline"
+          ]
+        },
+        {
+          "title": "Meeting Places and Reunion Planning",
+          "slug": "meeting-places-and-reunion-planning",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Family Emergency and Communication Planning",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Choose and document meeting places near home, in the neighborhood, and outside your area so everyone knows where to go if separated.",
+          "whenToUse": "Use before disasters that might separate family members, such as fires, floods, wildfires, evacuations, or area-wide communication failures.",
+          "preferredAction": [
+            "Define at least three meeting places and share them clearly with everyone in the household."
+          ],
+          "backupAction": [
+            "If no prior plan exists, send one clear meeting point by text as soon as you become aware of a safe gathering location."
+          ],
+          "steps": [
+            "Choose a near-home meeting point for small incidents like house fires.",
+            "Choose a neighborhood location in case you cannot return home.",
+            "Choose an out-of-area meeting point for major evacuations.",
+            "Write the addresses and when each point should be used.",
+            "Practice walking key routes with children and caregivers.",
+            "Review and update the locations when hazards, roads, or home address changes."
+          ],
+          "warnings": [
+            "Some locations may become unsafe during specific disasters; review them with hazard context in mind.",
+            "Official shelter or evacuation instructions may override your default reunion locations."
+          ],
+          "whatNotToDo": [
+            "Do not choose vague places that children or visitors may misunderstand.",
+            "Do not assume everyone will pick the same place without documenting it."
+          ],
+          "redFlags": [
+            "If someone fails to arrive at a meeting point in known danger conditions, contact authorities.",
+            "If a child is missing near an active hazard, call emergency services immediately."
+          ],
+          "preparednessTips": [
+            "Mark meeting places on a printed map kept in kits.",
+            "Share reunion information with babysitters, schools, and close neighbors."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Family Emergency Communication Plan Templates",
+              "organization": "Ready.gov / state emergency management",
+              "url": "",
+              "whyUseful": "Standard household planning format used broadly."
+            },
+            {
+              "title": "Get a Kit, Make a Plan",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Family planning guidance with contacts and meeting points."
+            }
+          ],
+          "appTags": [
+            "planning",
+            "meeting-places",
+            "reunion",
+            "evacuation",
+            "map",
+            "family",
+            "kids"
+          ]
+        },
+        {
+          "title": "School, Work, and Caregiver Coordination",
+          "slug": "school-work-and-caregiver-coordination",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Family Emergency and Communication Planning",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Your family plan should fit the emergency procedures used by schools, workplaces, and caregivers\u2014not conflict with them.",
+          "whenToUse": "When children attend school or childcare, adults work away from home, or anyone depends on outside caregivers or home-health support.",
+          "preferredAction": [
+            "Collect written emergency procedures and contact details from every school, workplace, and caregiver involved in your household plan."
+          ],
+          "backupAction": [
+            "If no formal plan is available, confirm by phone how the location handles lockdowns, evacuations, and reunification."
+          ],
+          "steps": [
+            "For each school or childcare site, record contact numbers and pick-up rules.",
+            "For each workplace, note evacuation or shelter-in-place procedures.",
+            "List agencies, backup caregivers, and contact numbers for people with extra support needs.",
+            "Align your meeting places and pickup assumptions with those outside plans.",
+            "Store copies of these procedures with your family plan and go-bags.",
+            "Review them at the start of each school or work year."
+          ],
+          "warnings": [
+            "Schools and workplaces may not release people early during some emergencies.",
+            "Unauthorized pickup may be refused."
+          ],
+          "whatNotToDo": [
+            "Do not assume schools or employers will automatically notify your chosen out-of-area contact.",
+            "Do not leave caregivers without clear written emergency instructions."
+          ],
+          "redFlags": [
+            "If you cannot locate a child or dependent person during an emergency, speak to site officials and call authorities if needed.",
+            "If a medically dependent person is stranded without care, contact emergency services."
+          ],
+          "preparednessTips": [
+            "Save emergency hotline numbers for schools and workplaces in phones and on paper.",
+            "Review coordination details every year."
+          ],
+          "sourceReferences": [
+            {
+              "title": "State emergency family planning guidance",
+              "organization": "State emergency management",
+              "url": "",
+              "whyUseful": "Useful coordination framework for families, schools, and caregivers."
+            },
+            {
+              "title": "Municipal preparedness checklists",
+              "organization": "Local emergency agencies",
+              "url": "",
+              "whyUseful": "Practical pick-up and reunification planning ideas."
+            }
+          ],
+          "appTags": [
+            "planning",
+            "school",
+            "work",
+            "caregivers",
+            "children",
+            "elderly",
+            "coordination",
+            "medical"
+          ]
+        },
+        {
+          "title": "Practice Drills and Plan Refresh",
+          "slug": "practice-drills-and-plan-refresh",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Family Emergency and Communication Planning",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Plans work better when you rehearse them. Run simple drills for evacuation, meeting places, and communication, then update your plan based on what you learn.",
+          "whenToUse": "Use after creating or changing a family emergency plan and at least once a year thereafter.",
+          "preferredAction": [
+            "Schedule simple age-appropriate drills for evacuation, check-ins, and shelter-in-place scenarios."
+          ],
+          "backupAction": [
+            "If full drills are hard to run, do table-talk walk-throughs and scenario discussions instead."
+          ],
+          "steps": [
+            "Practice a home evacuation and meeting-point drill.",
+            "Walk to neighborhood reunion points with children.",
+            "Test communication methods with your out-of-area contact.",
+            "Run a basic shelter-in-place practice in the chosen room.",
+            "After each drill, note what worked and what failed.",
+            "Update your written plan and kit contents accordingly."
+          ],
+          "warnings": [
+            "Avoid causing panic or trauma during drills, especially for children or anxious household members.",
+            "Do not simulate dangerous conditions in ways that create real hazards."
+          ],
+          "whatNotToDo": [
+            "Do not skip drills because everyone 'already knows' the plan.",
+            "Do not practice only one scenario forever."
+          ],
+          "redFlags": [
+            "If mobility or anxiety issues prevent safe evacuation practice, seek professional or local emergency-management guidance.",
+            "Severe distress during drills may justify health-professional support."
+          ],
+          "preparednessTips": [
+            "Tie drills to time changes, school start, or storm seasons as reminders.",
+            "Let children occasionally help lead simple drills."
+          ],
+          "sourceReferences": [
+            {
+              "title": "USFA fire safety materials",
+              "organization": "USFA",
+              "url": "",
+              "whyUseful": "Drill and escape-practice principles."
+            },
+            {
+              "title": "Family plan templates",
+              "organization": "Ready-style planning materials",
+              "url": "",
+              "whyUseful": "Useful annual-refresh structure for household plans."
+            }
+          ],
+          "appTags": [
+            "planning",
+            "drills",
+            "practice",
+            "family",
+            "fire",
+            "shelter-in-place",
+            "kids"
+          ]
+        },
+        {
+          "title": "Shelter-in-Place Kit (Home)",
+          "slug": "shelter-in-place-kit-home",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Shelter-in-Place Kits and Procedures",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Prepare a dedicated kit so your household can remain indoors safely for at least three days during storms, air-quality events, chemical releases, or security incidents.",
+          "whenToUse": "Use when authorities advise staying indoors rather than evacuating, or when travel is too dangerous and the household must remain inside.",
+          "preferredAction": [
+            "Build a dedicated shelter-in-place kit that can be moved quickly into your chosen safe room."
+          ],
+          "backupAction": [
+            "If no dedicated kit exists, gather your 72-hour home supplies into the room you will use for sheltering."
+          ],
+          "steps": [
+            "Pack three days of water and food per person.",
+            "Add flashlights, batteries, and a radio.",
+            "Include sanitation items and simple waste-management supplies.",
+            "Keep plastic sheeting, duct tape, scissors, and towels for room sealing if official instructions call for it.",
+            "Store medications, first aid, pet supplies, and comfort items with the kit.",
+            "Identify the room where the kit would be used."
+          ],
+          "warnings": [
+            "Chemical or smoke incidents may require sealing the room and turning off ventilation only if authorities tell you to do so.",
+            "Indoor generator use can cause fatal carbon monoxide poisoning."
+          ],
+          "whatNotToDo": [
+            "Do not leave doors or windows open during a shelter-in-place order for smoke or chemical danger.",
+            "Do not rely only on candles for lighting."
+          ],
+          "redFlags": [
+            "Breathing difficulty, chest pain, confusion, or loss of consciousness need emergency help.",
+            "If you smell strong gas or chemical odors inside, follow emergency instructions and evacuate if safe and advised."
+          ],
+          "preparednessTips": [
+            "Choose an interior room with few windows in advance.",
+            "Keep a printed shelter-in-place steps sheet with the kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Shelter-in-Place Checklists",
+              "organization": "Municipal emergency management",
+              "url": "",
+              "whyUseful": "Common household room-sealing and supply guidance."
+            },
+            {
+              "title": "Preparedness kit guidance",
+              "organization": "American Red Cross / Ready-style materials",
+              "url": "",
+              "whyUseful": "Good overlap with dedicated indoor shelter kits."
+            }
+          ],
+          "appTags": [
+            "shelter-in-place",
+            "home",
+            "kit",
+            "air-quality",
+            "chemical",
+            "storm",
+            "checklist"
+          ]
+        },
+        {
+          "title": "Essential Medication Backup Planning",
+          "slug": "essential-medication-backup-planning",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Medical Needs, Medicines, and Document Backup",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Work with clinicians and pharmacists to maintain a backup supply of essential medicines and a clear medication list before disasters disrupt access.",
+          "whenToUse": "When anyone in the household depends on daily or life-sustaining prescription medicines, especially before storm, wildfire, flood, or outage seasons.",
+          "preferredAction": [
+            "Create an emergency medication plan that includes backup supply, safe storage, rotation, and a current medication list."
+          ],
+          "backupAction": [
+            "If you cannot get extra medicine, keep an up-to-date list of names, doses, prescribers, and pharmacies so care can be restored faster."
+          ],
+          "steps": [
+            "Make a list of every essential medication, dose, schedule, doctor, and pharmacy.",
+            "Ask your doctor or pharmacist about keeping a 7\u201330 day buffer supply if possible.",
+            "Understand refill and insurance rules before disasters happen.",
+            "Store medicine in original labeled packaging in a cool, dry place.",
+            "Plan specifically for temperature-sensitive medicines.",
+            "Rotate older medicine first and monitor expiry dates.",
+            "Keep copies of the medication list in your wallet, kit, and with a trusted contact."
+          ],
+          "warnings": [
+            "Stopping or changing critical medicines suddenly can be dangerous.",
+            "Improper storage can make some medicines unsafe or ineffective."
+          ],
+          "whatNotToDo": [
+            "Do not mix pills into unlabeled containers.",
+            "Do not store medicines in overheated cars or direct sun."
+          ],
+          "redFlags": [
+            "Running out of critical medication with symptoms such as chest pain, seizure activity, severe shortness of breath, or dangerous blood sugar problems needs urgent care.",
+            "Flood- or fire-contaminated medicine should not be used without professional guidance."
+          ],
+          "preparednessTips": [
+            "Keep photos of prescription labels with your document kit.",
+            "Record medication allergies clearly."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency medication planning",
+              "organization": "Public health / pharmacy disaster guidance",
+              "url": "",
+              "whyUseful": "Strong principles for refill planning, documentation, and storage."
+            },
+            {
+              "title": "Preparedness for medicines",
+              "organization": "CDC-style preparedness advice",
+              "url": "",
+              "whyUseful": "Supports backup supply planning and medical readiness."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "medications",
+            "planning",
+            "backup",
+            "pharmacy",
+            "chronic-conditions"
+          ]
+        },
+        {
+          "title": "Medical Information and Health Document Backup",
+          "slug": "medical-information-and-health-document-backup",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Medical Needs, Medicines, and Document Backup",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep copies of medical summaries, allergies, insurance information, and provider contacts in both paper and digital form so care can continue when systems are disrupted.",
+          "whenToUse": "Use for chronic illness, complex medical history, allergies, travel, evacuation, or any situation where records may be hard to access quickly.",
+          "preferredAction": [
+            "Create a waterproof health document packet plus secure digital copies that can travel with you or your go-bag."
+          ],
+          "backupAction": [
+            "If a full packet is hard to build, at least create a one-page medical summary with medicines, allergies, diagnoses, and emergency contacts."
+          ],
+          "steps": [
+            "Include medication lists, allergies, diagnoses, surgeries, implants, and provider contacts.",
+            "Add insurance cards or numbers and emergency contact details.",
+            "Store copies in a waterproof folder with other critical documents.",
+            "Keep digital copies on a secure device or cloud account with safe password access.",
+            "Update the packet annually or after major medical changes."
+          ],
+          "warnings": [
+            "Outdated medical info can cause mistakes.",
+            "Sensitive health information should be stored securely."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on one clinic's electronic record system.",
+            "Do not assume emergency providers will know your history without your help."
+          ],
+          "redFlags": [
+            "If records are unavailable during a serious medical event, seek care immediately and communicate what you know.",
+            "If your health data is exposed or stolen, notify providers and insurers promptly."
+          ],
+          "preparednessTips": [
+            "Keep a short medical summary for each family member in go-bags.",
+            "List preferred hospitals or clinics when useful."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Health document backup guidance",
+              "organization": "Public health / pharmacy disaster planning",
+              "url": "",
+              "whyUseful": "Good basis for medical summary and record continuity."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "documents",
+            "health",
+            "insurance",
+            "backup",
+            "go-bag"
+          ]
+        },
+        {
+          "title": "Household Critical Documents Kit",
+          "slug": "household-critical-documents-kit",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Medical Needs, Medicines, and Document Backup",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Gather copies of IDs, insurance, legal, financial, property, and emergency documents into a protected grab-and-go kit before disaster damages the originals.",
+          "whenToUse": "When building home emergency kits and go-bags or before floods, wildfires, storms, or evacuations that could destroy or isolate original documents.",
+          "preferredAction": [
+            "Create one protected paper-and-digital document kit that can be grabbed quickly during evacuation."
+          ],
+          "backupAction": [
+            "If you cannot copy everything at once, start by listing key account numbers, contact numbers, IDs, and insurance details."
+          ],
+          "steps": [
+            "Collect IDs, passports, birth certificates, and similar documents.",
+            "Add insurance policies, account details, wills, powers of attorney, and property records.",
+            "Include home and vehicle photos or inventories.",
+            "Store copies in a waterproof, fire-resistant folder and secure digital backup.",
+            "Keep the kit in an easy-to-reach but protected location.",
+            "Review after major life changes."
+          ],
+          "warnings": [
+            "Leaving all originals in one vulnerable spot can lead to complete loss.",
+            "Sensitive documents can be misused if poorly protected."
+          ],
+          "whatNotToDo": [
+            "Do not store the only copy in a damp basement without protection.",
+            "Do not share full document copies casually or through insecure channels."
+          ],
+          "redFlags": [
+            "If identity documents are destroyed or stolen, start replacement and fraud-protection steps quickly.",
+            "If legal or medical decision documents are unavailable before urgent care, inform providers immediately."
+          ],
+          "preparednessTips": [
+            "Keep a checklist on the folder cover so you know what should be inside.",
+            "Review annually."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Household document kit guidance",
+              "organization": "Municipal and state preparedness checklists",
+              "url": "",
+              "whyUseful": "Widely used public guidance for critical document readiness."
+            }
+          ],
+          "appTags": [
+            "documents",
+            "ID",
+            "insurance",
+            "finance",
+            "legal",
+            "evacuation",
+            "kits"
+          ]
+        },
+        {
+          "title": "Power-Dependent Medical Devices Planning",
+          "slug": "power-dependent-medical-devices-planning",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Medical Needs, Medicines, and Document Backup",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If someone depends on powered medical equipment, plan now for outages, backup batteries, alternate locations, and emergency contacts.",
+          "whenToUse": "When households rely on oxygen concentrators, CPAP/BiPAP, dialysis support, powered mobility devices, or similar equipment and outages are possible.",
+          "preferredAction": [
+            "Create a written outage plan with your doctor, equipment provider, and utility company where available."
+          ],
+          "backupAction": [
+            "If formal medical-priority utility registration is not available, prepare charged batteries and alternate powered locations ahead of time."
+          ],
+          "steps": [
+            "List each power-dependent device and its battery runtime.",
+            "Ask clinicians and suppliers about outage procedures and transport needs.",
+            "Check whether your utility has a medical-priority registration process.",
+            "Arrange backup power or alternate safe locations.",
+            "Store device instructions and emergency numbers with your medical documents.",
+            "Practice moving critical devices safely for evacuation."
+          ],
+          "warnings": [
+            "Indoor generator use causes fatal carbon monoxide risk.",
+            "Improvised unsafe wiring can create fire and shock hazards."
+          ],
+          "whatNotToDo": [
+            "Do not assume responders automatically know you rely on power-dependent equipment.",
+            "Do not leave all batteries uncharged or stored in flood-prone areas."
+          ],
+          "redFlags": [
+            "If a critical device fails and no backup exists, call emergency services immediately.",
+            "If a person dependent on oxygen, ventilation, or dialysis is in distress, seek urgent care."
+          ],
+          "preparednessTips": [
+            "Create a one-page device summary for responders.",
+            "Keep spare essential device parts when possible."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Home medical equipment outage planning",
+              "organization": "Health emergency planning guidance",
+              "url": "",
+              "whyUseful": "Consistent preparedness principles for device-dependent households."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "devices",
+            "power",
+            "outage",
+            "utilities",
+            "chronic-conditions",
+            "backup"
+          ]
+        },
+        {
+          "title": "Pet Emergency Go-Kit",
+          "slug": "pet-emergency-go-kit",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Pet Emergency Preparation",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Prepare a pet kit with food, water, medications, records, and containment so your animal can evacuate or shelter with you.",
+          "whenToUse": "When any household has pets and may need to evacuate, shelter in place, or stay away from home for days or weeks during a disaster.",
+          "preferredAction": [
+            "Keep a labeled pet emergency kit stored near your household go-bags."
+          ],
+          "backupAction": [
+            "If you cannot prepare a full kit yet, at least keep ID, proof of vaccination, food, and a way to contain the pet ready."
+          ],
+          "steps": [
+            "Store 2 weeks of pet food and safe water.",
+            "Pack bowls, a manual can opener if needed, medications, and written care instructions.",
+            "Include veterinary and vaccination records plus proof of ownership.",
+            "Keep collars, ID tags, microchip details, recent photos, and a carrier or crate ready.",
+            "Add sanitation and comfort items like litter, poop bags, toys, and bedding."
+          ],
+          "warnings": [
+            "Shelters may not accept pets in all areas.",
+            "Stress can make animals escape or behave unpredictably during emergencies."
+          ],
+          "whatNotToDo": [
+            "Do not leave pets behind if at all possible.",
+            "Do not assume pets can safely drink or eat from any available source."
+          ],
+          "redFlags": [
+            "Difficulty breathing, seizures, persistent vomiting, or serious injury needs veterinary emergency help.",
+            "If pets must be left temporarily, notify animal services or authorities as soon as possible."
+          ],
+          "preparednessTips": [
+            "Write clear feeding and medication instructions.",
+            "Keep carriers easy to reach, not buried in storage."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Pet disaster preparedness",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Strong baseline kit and evacuation guidance for pets."
+            },
+            {
+              "title": "Veterinary emergency preparedness",
+              "organization": "Veterinary emergency planning resources",
+              "url": "",
+              "whyUseful": "Helpful detail on medicines, records, and transport."
+            }
+          ],
+          "appTags": [
+            "pets",
+            "kit",
+            "evacuation",
+            "food",
+            "medications",
+            "records",
+            "carrier"
+          ]
+        },
+        {
+          "title": "Pet Evacuation and Shelter Planning",
+          "slug": "pet-evacuation-and-shelter-planning",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Pet Emergency Preparation",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Know where your pets can go before you need to evacuate. Confirm shelters, hotels, friends, or boarding options ahead of time.",
+          "whenToUse": "When building family evacuation plans or before hazards likely to trigger evacuation orders such as flood, wildfire, storm, or hazardous-material incidents.",
+          "preferredAction": [
+            "Identify pet-friendly options and write them into your family emergency plan before a disaster happens."
+          ],
+          "backupAction": [
+            "If you have no guaranteed option, still take your pet and kit to the nearest emergency shelter and ask for pet support or referral."
+          ],
+          "steps": [
+            "Research local pet-friendly shelters and emergency animal services.",
+            "List relatives, friends, boarding options, and pet-friendly hotels.",
+            "Write down addresses, contacts, and any vaccination requirements.",
+            "Keep carriers and leashes accessible and practice loading pets calmly.",
+            "Bring the pet kit and records on every evacuation."
+          ],
+          "warnings": [
+            "Some general shelters only allow service animals inside main areas.",
+            "Pets without vaccination records may be refused at some facilities."
+          ],
+          "whatNotToDo": [
+            "Do not release pets outdoors and assume they will survive alone.",
+            "Do not show up with uncontained aggressive animals if you can prevent that safely."
+          ],
+          "redFlags": [
+            "If you must leave pets temporarily, notify authorities or animal services as soon as possible.",
+            "Injured pets need veterinary emergency care."
+          ],
+          "preparednessTips": [
+            "Include pet plans in the family communication and reunion plan.",
+            "Practice short travel sessions so pets tolerate carriers and vehicles better."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Pet evacuation planning",
+              "organization": "CDC / local emergency pet safety guidance",
+              "url": "",
+              "whyUseful": "Useful planning structure for shelters and transport."
+            }
+          ],
+          "appTags": [
+            "pets",
+            "evacuation",
+            "shelter",
+            "hotels",
+            "planning",
+            "family-plan"
+          ]
+        },
+        {
+          "title": "Home Fire Safety and Escape Readiness",
+          "slug": "home-fire-safety-and-escape-readiness",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Home Readiness Basics and Safety Checks",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Install and test smoke alarms, keep extinguishers accessible, and practice two escape routes from every room with a family meeting point.",
+          "whenToUse": "For all households, especially multi-story homes or homes with children, older adults, or higher cooking/heating fire risk.",
+          "preferredAction": [
+            "Use a written home fire safety checklist and practice an escape plan regularly."
+          ],
+          "backupAction": [
+            "If you cannot do everything immediately, at least test alarms, clear exits, and choose a meeting place."
+          ],
+          "steps": [
+            "Install smoke alarms on every level and near sleeping areas.",
+            "Test alarms monthly and replace batteries as needed.",
+            "Replace alarms older than about 10 years.",
+            "Keep an ABC fire extinguisher on each floor if possible.",
+            "Identify two exits from each room and make sure they open easily.",
+            "Choose and practice an outside meeting place.",
+            "Keep exits clear of clutter."
+          ],
+          "warnings": [
+            "Home fires spread fast and can leave only minutes to escape.",
+            "Once outside, re-entry is extremely dangerous."
+          ],
+          "whatNotToDo": [
+            "Do not disable smoke alarms instead of fixing nuisance alarm causes.",
+            "Do not try to fight large or spreading fires instead of evacuating."
+          ],
+          "redFlags": [
+            "If an alarm sounds and you see or smell smoke, evacuate and call emergency services.",
+            "If exits are blocked or mobility issues prevent escape, seek professional planning help before an emergency."
+          ],
+          "preparednessTips": [
+            "Teach children to crawl low under smoke and never hide during a fire.",
+            "Use time-change dates or other regular reminders to test alarms."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Smoke alarm and home escape planning",
+              "organization": "USFA",
+              "url": "",
+              "whyUseful": "National fire-safety guidance for alarms and escape drills."
+            },
+            {
+              "title": "Home hazard checklists",
+              "organization": "Municipal fire / safety programs",
+              "url": "",
+              "whyUseful": "Practical room-by-room safety planning support."
+            }
+          ],
+          "appTags": [
+            "home",
+            "fire-safety",
+            "smoke-alarms",
+            "escape-plan",
+            "kids",
+            "drills"
+          ]
+        },
+        {
+          "title": "Utility Shutoff and Gas Leak Safety",
+          "slug": "utility-shutoff-and-gas-leak-safety",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Home Readiness Basics and Safety Checks",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Learn where your gas, water, and electrical shutoffs are and what to do if you smell gas or see dangerous utility damage.",
+          "whenToUse": "Use after earthquakes, storms, leaks, flooding, or during emergency planning and household maintenance.",
+          "preferredAction": [
+            "Locate and label shutoffs in advance, keep the right tools nearby, and evacuate rather than taking risks when you suspect a gas leak."
+          ],
+          "backupAction": [
+            "If you are unsure how to shut something off safely, leave and call the utility or emergency services."
+          ],
+          "steps": [
+            "Identify the gas, water, and electrical main shutoffs.",
+            "Keep a shutoff wrench where adults can find it.",
+            "If you smell gas or hear hissing, leave immediately without using switches, phones, or flames.",
+            "Turn off water for major leaks or contamination concerns.",
+            "Turn off the main breaker if flooding, fire, or obvious wiring damage is present and you can do so safely from a dry location.",
+            "Post utility instructions and contacts near the shutoffs."
+          ],
+          "warnings": [
+            "Only qualified personnel should restore gas service after shutoff.",
+            "Standing in water around electricity is highly dangerous."
+          ],
+          "whatNotToDo": [
+            "Do not ignore gas smell or repeated electrical warning signs.",
+            "Do not store flammables near gas or electrical equipment."
+          ],
+          "redFlags": [
+            "Strong gas odor, hissing, sparks, burning smell, or repeated breaker trips may need emergency help and utility response.",
+            "Symptoms like dizziness or nausea near suspected gas leaks warrant immediate evacuation and help."
+          ],
+          "preparednessTips": [
+            "Practice identifying shutoffs with all responsible adults.",
+            "Keep utility contact numbers with your family emergency plan."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Home utility and gas safety",
+              "organization": "Municipal home hazard / utility safety guidance",
+              "url": "",
+              "whyUseful": "Common household shutoff and leak-response principles."
+            }
+          ],
+          "appTags": [
+            "home",
+            "utilities",
+            "gas",
+            "water",
+            "electricity",
+            "safety",
+            "how-to"
+          ]
+        },
+        {
+          "title": "Basic Home Hazard and Injury Prevention Check",
+          "slug": "basic-home-hazard-and-injury-prevention-check",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Home Readiness Basics and Safety Checks",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Walk through your home to reduce the everyday fire, trip, electrical, and chemical hazards that become worse during disasters.",
+          "whenToUse": "When moving into a new home, before severe-weather seasons, or as an annual household safety check.",
+          "preferredAction": [
+            "Use a room-by-room checklist to find and fix small hazards before they become emergency problems."
+          ],
+          "backupAction": [
+            "If a full walkthrough is too much, start with bedrooms, exits, stairs, and the kitchen."
+          ],
+          "steps": [
+            "Check for overloaded outlets and damaged cords.",
+            "Clear walkways and stairs and secure rugs.",
+            "Store flammables away from heat sources.",
+            "Lock chemicals away from children and separate them from food.",
+            "Secure heavy furniture and shelves in earthquake-prone areas.",
+            "Check exterior paths and make sure the house number is visible from the street."
+          ],
+          "warnings": [
+            "Falls and fires are common home injuries that worsen under stress and poor lighting.",
+            "Small electrical issues can become major fire hazards."
+          ],
+          "whatNotToDo": [
+            "Do not ignore recurring flickering lights, hot outlets, or trip hazards.",
+            "Do not store flammables near stoves, heaters, or candles."
+          ],
+          "redFlags": [
+            "Frayed wiring, scorch marks, chemical exposure with breathing trouble, or dangerous structural instability need urgent attention and sometimes evacuation."
+          ],
+          "preparednessTips": [
+            "Repeat the same checklist yearly so improvements are trackable.",
+            "Involve older children in basic hazard awareness."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Home hazard checklists",
+              "organization": "Municipal fire / home safety programs",
+              "url": "",
+              "whyUseful": "Common room-by-room injury and fire prevention practices."
+            }
+          ],
+          "appTags": [
+            "home",
+            "hazards",
+            "fire",
+            "falls",
+            "electrical",
+            "checklist",
+            "chemical-safety"
+          ]
+        },
+        {
+          "title": "Alert Systems: Smoke Alarms, Weather Radio, and Phone Alerts",
+          "slug": "alert-systems-smoke-alarms-weather-radio-and-phone-alerts",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Preparedness, Kits, and Home Readiness",
+          "parentTopic": "Home Readiness Basics and Safety Checks",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use layered alerts: working smoke alarms, a weather radio, and emergency phone alerts so one failure does not leave you without warning.",
+          "whenToUse": "When setting up home readiness, before severe-weather seasons, or when building a multi-channel warning system for the household.",
+          "preferredAction": [
+            "Maintain smoke alarms, enable emergency phone alerts, and add a NOAA Weather Radio or equivalent official alert device where relevant."
+          ],
+          "backupAction": [
+            "If you cannot get a weather radio right away, make sure smoke alarms work and phone alerts are enabled while following local radio or TV channels."
+          ],
+          "steps": [
+            "Install smoke alarms on every level and in or near bedrooms.",
+            "Test alarms monthly and replace batteries or units as needed.",
+            "Set up a weather radio with battery backup if available in your area.",
+            "Enable Wireless Emergency Alerts or the local equivalent on phones.",
+            "Teach the household what each alarm or alert means and how to respond.",
+            "Keep backup charging options for phones and radios."
+          ],
+          "warnings": [
+            "One alert method can fail or be missed.",
+            "Turning off alerts for convenience can leave you without life-saving warning."
+          ],
+          "whatNotToDo": [
+            "Do not ignore emergency alerts assuming they are overblown.",
+            "Do not place radios where no one can hear them overnight."
+          ],
+          "redFlags": [
+            "Any severe emergency alert such as tornado warning, evacuation order, or active smoke alarm with no clear cause requires immediate action or cautious investigation.",
+            "If alarms sound and you cannot identify the cause safely, call authorities."
+          ],
+          "preparednessTips": [
+            "Test weather radios and alert settings regularly.",
+            "Keep a backup battery pack for phones."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Smoke alarm guidance",
+              "organization": "USFA",
+              "url": "",
+              "whyUseful": "Core home fire warning system guidance."
+            },
+            {
+              "title": "Weather Radio and Wireless Emergency Alerts",
+              "organization": "NOAA / FEMA / FCC",
+              "url": "",
+              "whyUseful": "Official layered warning-system information."
+            }
+          ],
+          "appTags": [
+            "alerts",
+            "smoke-alarms",
+            "weather-radio",
+            "WEA",
+            "phones",
+            "home-safety",
+            "warnings"
+          ]
+        }
+      ]
+    }
+  ]
+}

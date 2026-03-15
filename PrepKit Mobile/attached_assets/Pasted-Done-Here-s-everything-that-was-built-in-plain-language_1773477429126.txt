@@ -1,0 +1,46 @@
+Done. Here's everything that was built, in plain language:
+What was implemented
+New fields on each guide (all optional, backward compatible)
+Field	What it means
+responseRole	primary = first choice, backup = fallback when primary is blocked, supporting = adjacent info, reference = background only
+constraintTags	Conditions where this guide should be boosted (e.g. ["no_boiling"] on the bleach guide)
+blockedByConstraints	Conditions where this guide should be demoted (e.g. ["no_boiling"] on the boiling guide)
+alternativeToGuideSlugs	Direct alternatives to another guide — used for both ranking and related guide cards
+Constraint normalizer (new)
+
+Maps messy user phrasing to canonical tags:
+
+    "I don't have anything to boil with" → [no_boiling, no_heat_source]
+    "I don't have bleach either" → [no_bleach]
+    "What if I'm in a car?" → [in_vehicle]
+    "It's dark now" → [at_night]
+    "I'm vomiting too" → [vomiting, getting_worse]
+    Plus: no_signal, no_shelter, no_clean_water, no_power, cant_move, pregnant, child, alone, confused, unconscious
+
+Ranking changes (contextual path only)
+
+    +15 per matching constraintTag (capped at +30) — guide is good for this situation
+    −25 if blockedByConstraints match — guide is useless in this situation
+    +10 if it's a direct alternative to the guide the user just saw
+    responseRole tiebreaker (+3/0/−3/−8) — only applies when no active constraints, so constraints always win
+
+Related guide ordering
+
+Previously: siblings by contentStatus. Now: direct alternatives first → reverse alternatives → siblings ranked by role (backup → supporting → primary → reference).
+13 topic clusters annotated (65 guides total)
+
+Safe Drinking Water, Food Safety, Heat & Fluids, Extreme Heat, Cold Exposure, Hypothermia/Frostbite, If You Get Lost, Land Rescue Signaling, Wildfire, Air Quality, CO Safety, Generator Safety, Emergency Shelter, Staying Warm Without Power
+Water fallback — confirmed working
+
+User asks about purifying water → sees boiling guide. Then says "I can't boil":
+
+    Boiling guide: blockedByConstraints fires → −25
+    Bleach guide: constraintTags + alternativeToGuideSlugs → +25
+    "Using Non-Drinking Water Safely": only tagged for no_clean_water, no overlap → does not beat bleach guide ✓
+
+Dev logging
+
+In development, every contextual query logs: normalized constraint tags, which ranking boosts/demotions fired, the winning guide, score, and top-5 ranked guides.
+Remaining gaps
+
+The ~122 guides outside these 13 clusters have no annotations yet — they still rank normally via the existing keyword/contentStatus scoring and are fully unaffected.

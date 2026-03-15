@@ -1,0 +1,1502 @@
+{
+  "packTitle": "Power Utilities and Home Safety Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T00:00:00Z",
+  "notes": [
+    "Normalized from Perplexity category output for Power, Utilities, and Home Safety.",
+    "Generator and CO content is intentionally conservative and high-priority.",
+    "Food-safety overlap with the earlier Water, Food, and Sanitation batch is handled with add_subguide and upgrade_existing actions where cleaner than duplication.",
+    "Damaged-building, utility-shutoff, and fuel-burning-lighting guidance remains conservative and in some cases marked needs_source_review because local conditions and codes vary."
+  ],
+  "categories": [
+    {
+      "categoryName": "Power, Utilities, and Home Safety",
+      "summary": "Household blackout, generator, CO, utility, food-safety, and damaged-building guidance for outages and post-disaster home safety.",
+      "guides": [
+        {
+          "title": "First 30 Minutes of a Power Outage",
+          "slug": "first-30-minutes-of-a-power-outage",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Blackout Basics & First 30 Minutes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Stay calm, check for hazards, protect appliances, keep cold food closed up, and switch to safe battery lighting while you confirm whether the outage is local or widespread.",
+          "whenToUse": "As soon as power goes out unexpectedly at home or work.",
+          "preferredAction": "Stabilize the situation first: check for fire, gas, wiring, or flood hazards; protect appliances; preserve cold food; and conserve batteries.",
+          "backupAction": "If you cannot move safely because of debris, water, or structural damage, stay in the safest room, use one flashlight, and contact authorities or neighbors if possible.",
+          "steps": [
+            "Check immediately for fire, burning smell, sparks, downed lines outside, or gas smell; evacuate and call emergency services if any are present.",
+            "Confirm whether the outage is just your home or a wider area by checking outside, asking neighbors, or contacting building staff.",
+            "Turn off or unplug major appliances and electronics to reduce surge damage when power returns.",
+            "Leave one small light switched on so you notice when power comes back.",
+            "Use flashlights or battery lanterns for light and keep refrigerator and freezer doors closed.",
+            "Conserve phone battery and monitor official updates by radio, SMS, or trusted apps."
+          ],
+          "warnings": [
+            "Power can return suddenly with damaging surges.",
+            "Opening cold appliances unnecessarily can lead to food spoilage and illness.",
+            "Moving through debris, broken glass, or water in the dark raises injury and shock risk."
+          ],
+          "whatNotToDo": [
+            "Do not use candles if you can avoid them, especially around children, pets, or oxygen.",
+            "Do not touch downed power lines or anything touching them.",
+            "Do not start a generator inside any enclosed or partially enclosed space.",
+            "Do not repeatedly open fridges or freezers just to check them."
+          ],
+          "redFlags": [
+            "Arcing, sparks, or fire in wiring, outlets, or appliances.",
+            "Gas smell, hissing near gas lines, or suspected gas leak.",
+            "A downed or low-hanging power line nearby.",
+            "Electric shock, loss of consciousness, or breathing difficulty."
+          ],
+          "preparednessTips": [
+            "Keep at least one flashlight and spare batteries in an easy-to-reach place in each main room.",
+            "Store an emergency radio, power bank, and printed emergency contacts including utility emergency numbers.",
+            "Use appliance thermometers so you can judge fridge and freezer safety quickly."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            },
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "Avoid Foodborne Illness During Temporary Power Outages",
+              "organization": "FoodSafety.gov / USDA",
+              "url": "https://www.foodsafety.gov/blog/avoid-foodborne-illness-during-temporary-power-outages",
+              "whyUseful": "Specific refrigerator and freezer timelines plus food-safety advice during outages."
+            }
+          ],
+          "appTags": [
+            "power-outage",
+            "first-30-minutes",
+            "home-safety",
+            "food-safety",
+            "battery-conservation"
+          ]
+        },
+        {
+          "title": "Deciding Whether to Stay or Go During a Blackout",
+          "slug": "deciding-whether-to-stay-or-go-during-a-blackout",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Blackout Basics & First 30 Minutes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Stay if the building is sound and you can manage temperature and medical needs safely; leave if heat, cold, damage, or health risks make staying unsafe.",
+          "whenToUse": "After the first 30\u201360 minutes of an outage when it may last for hours or longer.",
+          "preferredAction": "Shelter safely at home if there are no structural, fire, or health hazards and you can manage temperature, water, and food safely.",
+          "backupAction": "If home is unsafe or you cannot support medical or temperature needs without power, relocate to an official shelter, cooling center, or a safe friend or family home if travel is safe.",
+          "steps": [
+            "Check building safety first for structural damage, flooding, fire, and gas smells.",
+            "Consider weather and whether you can safely stay warm or cool using approved methods.",
+            "Review household medical needs such as refrigerated medications, oxygen, or powered equipment.",
+            "Listen for outage estimates and shelter announcements from authorities.",
+            "If staying, set up a safe central room with light, radio, water, and medications.",
+            "If leaving, take medications, IDs, water, food, and go-bags, then travel only if routes are safe."
+          ],
+          "warnings": [
+            "Extreme indoor heat or cold can become life-threatening, especially for children, older adults, and people with chronic illness.",
+            "Unsafe heating or power improvisations indoors greatly increase fire and carbon-monoxide risk."
+          ],
+          "whatNotToDo": [
+            "Do not stay in a visibly damaged or partially collapsed building.",
+            "Do not travel through floodwater, downed lines, or active severe weather just to reach more comfortable conditions.",
+            "Do not rely on candles, charcoal grills, or gas stoves for long-term lighting or heating."
+          ],
+          "redFlags": [
+            "Indoor temperatures causing confusion, fainting, uncontrolled shivering, or breathing difficulty.",
+            "Medical devices cannot operate and no safe backup is available.",
+            "Authorities issue evacuation or shelter-elsewhere instructions."
+          ],
+          "preparednessTips": [
+            "Know the locations of official shelters or cooling centers in advance.",
+            "Store extra blankets, warm clothing, and battery fans or hand fans based on your climate.",
+            "Keep copies of medical information and prescriptions in your go-bag."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            },
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            }
+          ],
+          "appTags": [
+            "power-outage",
+            "stay-or-go",
+            "shelter-in-place",
+            "evacuation-decision",
+            "vulnerable-populations"
+          ]
+        },
+        {
+          "title": "Safe Home Lighting During Blackouts",
+          "slug": "safe-home-lighting-during-blackouts",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Blackout Basics & First 30 Minutes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use flashlights and battery-powered lanterns for light; avoid candles whenever possible.",
+          "whenToUse": "Whenever you need lighting during a blackout at home, work, or a shelter.",
+          "preferredAction": "Rely on LED flashlights and lanterns, using the lowest brightness that still lets you move safely.",
+          "backupAction": "If you must use candles, treat them as a last resort: keep them in sturdy holders on clear, nonflammable surfaces and never leave them unattended.",
+          "steps": [
+            "Gather flashlights and battery lanterns for each occupied room.",
+            "Use headlamps or small flashlights for hands-free tasks like cooking or first aid.",
+            "Place one lantern in a stable raised location to light shared space.",
+            "Keep spare batteries where you can find them in the dark.",
+            "If using a candle as a last resort, keep it well away from anything that can burn and extinguish it before sleep or leaving the room."
+          ],
+          "warnings": [
+            "Candles are a leading cause of home fires during outages.",
+            "Improvised fuel-burning lights can cause burns, fires, and carbon-monoxide poisoning."
+          ],
+          "whatNotToDo": [
+            "Do not leave candles or fuel-burning lanterns unattended.",
+            "Do not use open flames near oxygen equipment, curtains, bedding, or paper.",
+            "Do not hang lanterns by cords where they can fall."
+          ],
+          "redFlags": [
+            "Any flame that gets out of control or produces heavy smoke.",
+            "Burns that are deep, large, or involve the face, hands, genital area, or joints."
+          ],
+          "preparednessTips": [
+            "Stock several LED flashlights or headlamps and long-life batteries for each household member.",
+            "Store at least one safe battery lantern per main living area.",
+            "Teach children never to play with matches, lighters, or candles."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "home-lighting",
+            "flashlights",
+            "candles",
+            "fire-safety",
+            "blackout"
+          ]
+        },
+        {
+          "title": "Phone Battery Conservation in Emergencies",
+          "slug": "phone-battery-conservation-in-emergencies",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Battery Conservation & Backup Power",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Turn your phone into a low-power emergency tool: dim the screen, enable battery saver, close power-hungry apps, and use it mainly for key calls and messages.",
+          "whenToUse": "Whenever power may be out for more than a few hours or charging is uncertain.",
+          "preferredAction": "Enable battery-saver mode, reduce screen use, and prioritize SMS or critical calls over entertainment or background activity.",
+          "backupAction": "If battery is very low, turn the phone off completely between necessary uses such as scheduled check-ins or emergency calls.",
+          "steps": [
+            "Turn on battery saver or low-power mode.",
+            "Lower screen brightness and shorten screen timeout.",
+            "Turn off Wi-Fi, Bluetooth, and GPS unless needed for a specific task.",
+            "Close apps that stream video, play games, or constantly refresh.",
+            "Prefer SMS or short calls over long voice or video sessions.",
+            "If reception is poor, use airplane mode between planned check-ins so the phone does not keep searching for signal."
+          ],
+          "warnings": [
+            "Entertainment use can drain battery needed for emergency calls and alerts.",
+            "Damaged chargers, cables, or overheating batteries can create fire and shock risk."
+          ],
+          "whatNotToDo": [
+            "Do not leave phones or power banks charging on beds, sofas, or other flammable surfaces.",
+            "Do not use damaged cables or chargers with exposed wires."
+          ],
+          "redFlags": [
+            "Phone or power bank becomes very hot, swells, or smokes.",
+            "You cannot contact emergency services because the battery is dead during a safety or medical emergency."
+          ],
+          "preparednessTips": [
+            "Keep phones and power banks charged when storms or outages are possible.",
+            "Store at least one high-capacity power bank per household and test it regularly.",
+            "Keep a paper list of key phone numbers in case your device fails."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            },
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            }
+          ],
+          "appTags": [
+            "battery-conservation",
+            "mobile-phones",
+            "communications",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "Charging Plans and Backup Power Options",
+          "slug": "charging-plans-and-backup-power-options",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Battery Conservation & Backup Power",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Plan several safe ways to charge essential devices: mains power when available, power banks, vehicle charging, and if needed, generators or solar chargers used safely.",
+          "whenToUse": "When preparing your household for extended outages or during multi-day blackouts.",
+          "preferredAction": "Use certified power banks and safe wall chargers while power is available; during outages, rotate charging from vehicle power or properly placed generators.",
+          "backupAction": "If capacity is limited, designate one emergency phone and share charging in a planned rotation.",
+          "steps": [
+            "Identify essential devices such as one phone, a radio, and any battery-backed medical equipment.",
+            "Fully charge devices and power banks before storms or likely outages.",
+            "If using a generator, keep it outdoors and connect devices directly with appropriate cords.",
+            "If using a vehicle, run it only outdoors away from enclosed spaces and use built-in charging outlets safely.",
+            "Schedule charging windows so everyone gets some battery and one phone remains available for emergency contact."
+          ],
+          "warnings": [
+            "Improper generator or vehicle use can cause deadly carbon-monoxide poisoning.",
+            "Overloading outlets or daisy-chaining power strips increases fire risk."
+          ],
+          "whatNotToDo": [
+            "Do not connect a generator directly to home wiring unless a qualified electrician installed a transfer switch.",
+            "Do not run vehicles in garages or attached carports, even with doors open.",
+            "Do not rely on cheap or uncertified power banks that overheat."
+          ],
+          "redFlags": [
+            "Headache, dizziness, nausea, confusion, or collapse while a generator or vehicle is running nearby.",
+            "Electrical smells, smoke, or sparking from chargers, outlets, cords, or power banks."
+          ],
+          "preparednessTips": [
+            "Buy quality power banks, vehicle chargers, and if appropriate a properly sized generator before emergencies.",
+            "Practice your charging rotation plan during a short test outage.",
+            "Label which outlets and cables are safe to use with generator or vehicle power."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            },
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            }
+          ],
+          "appTags": [
+            "backup-power",
+            "generators",
+            "vehicle-charging",
+            "solar",
+            "planning"
+          ]
+        },
+        {
+          "title": "Safe Use of Extension Cords and Avoiding Overloads",
+          "slug": "safe-use-of-extension-cords-and-avoiding-overloads",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Battery Conservation & Backup Power",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use heavy-duty, undamaged cords rated for the load, plug them directly into outlets or generator sockets, and avoid daisy-chaining or overloading power strips.",
+          "whenToUse": "Whenever you are powering devices from generators, distant outlets, or limited working circuits during or after outages.",
+          "preferredAction": "Use one heavy-duty cord per major appliance or tool and connect only the devices you actually need.",
+          "backupAction": "If the cord capacity is unclear, limit use to low-power devices until you can confirm ratings or get a safer setup.",
+          "steps": [
+            "Check cord labels for amperage or wattage ratings and confirm they match the device.",
+            "Inspect for cuts, exposed wires, damaged plugs, or heat damage.",
+            "Plug extension cords directly into the outlet or generator; avoid chaining cords or strips together.",
+            "Keep cords uncoiled and away from standing water, doorways, and crush points.",
+            "Unplug by the plug, not by pulling the cable."
+          ],
+          "warnings": [
+            "Overloaded or damaged cords can overheat and cause fire or electric shock.",
+            "Cords in water or on damp ground greatly increase shock risk."
+          ],
+          "whatNotToDo": [
+            "Do not backfeed a generator into a home outlet.",
+            "Do not run cords under rugs, carpets, or bedding.",
+            "Do not use indoor-only cords outdoors."
+          ],
+          "redFlags": [
+            "Smoke, melting-plastic smell, or scorch marks on cords, outlets, or power strips.",
+            "Tingling, shock, or burns when touching appliances, cords, or nearby metal.",
+            "Fire in cords or outlets."
+          ],
+          "preparednessTips": [
+            "Buy at least one outdoor-rated heavy-duty extension cord sized for planned generator or high-load use.",
+            "Label and store cords with their ratings visible.",
+            "Teach family members not to overload strips or piggyback power bars."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            }
+          ],
+          "appTags": [
+            "extension-cords",
+            "electrical-safety",
+            "generator-use",
+            "outlet-safety"
+          ]
+        },
+        {
+          "title": "Keeping Food Safe During a Power Outage",
+          "slug": "keeping-food-safe-during-a-power-outage",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Refrigerator, Freezer, and Food Safety During Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Food Safety During Power Outages",
+          "quickAnswer": "Keep fridge and freezer doors closed; a refrigerator keeps food safe about 4 hours, and a full freezer 24\u201348 hours, if doors stay shut.",
+          "whenToUse": "As soon as power goes out and through the first day of an outage.",
+          "preferredAction": "Keep refrigerator doors shut, minimize freezer opening, and move perishables to coolers with ice only if the outage will exceed safe timelines.",
+          "backupAction": "If you lack ice or coolers, keep doors closed and plan to discard perishable refrigerated food after 4 hours without power.",
+          "steps": [
+            "Check that fridge and freezer temperatures are at safe ranges using appliance thermometers if you have them.",
+            "Immediately stop opening the refrigerator; use a cooler for any needed items if available.",
+            "Remember the main timelines: about 4 hours for an unopened fridge, about 48 hours for a full unopened freezer, and about 24 hours for a half-full freezer.",
+            "If the outage will likely last longer than 4 hours, move critical perishables to a cooler with ice if you can keep them at or below 4 C / 40 F."
+          ],
+          "warnings": [
+            "Food in the danger zone above 4 C / 40 F for more than 2 hours can cause foodborne illness.",
+            "Taste and smell are not reliable indicators of safety."
+          ],
+          "whatNotToDo": [
+            "Do not sample questionable food to see if it is safe.",
+            "Do not refreeze food that has been above 4 C / 40 F for more than 2 hours.",
+            "Do not rely on cool outside air unless you can keep food at safe, monitored temperatures."
+          ],
+          "redFlags": [
+            "Vomiting, diarrhea, fever, or severe abdominal pain after eating food stored during an outage.",
+            "Dehydration symptoms in vulnerable household members."
+          ],
+          "preparednessTips": [
+            "Keep appliance thermometers in fridge and freezer.",
+            "Store ice packs and frozen water bottles to buy extra time during outages.",
+            "Maintain a supply of shelf-stable foods that do not require refrigeration."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Are You and Your Food Prepared for a Power Outage?",
+              "organization": "USDA",
+              "url": "https://www.usda.gov/about-usda/news/blog/are-you-and-your-food-prepared-power-outage",
+              "whyUseful": "USDA food safety timelines for refrigerators and freezers during outages."
+            },
+            {
+              "title": "Avoid Foodborne Illness During Temporary Power Outages",
+              "organization": "FoodSafety.gov / USDA",
+              "url": "https://www.foodsafety.gov/blog/avoid-foodborne-illness-during-temporary-power-outages",
+              "whyUseful": "Specific refrigerator and freezer timelines plus food-safety advice during outages."
+            },
+            {
+              "title": "Food and Water Safety During Power Outages and Floods",
+              "organization": "FDA",
+              "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+              "whyUseful": "Confirms outage timelines and safety rules for food and water."
+            }
+          ],
+          "appTags": [
+            "food-safety",
+            "fridge-freezer",
+            "power-outage",
+            "perishable-food"
+          ]
+        },
+        {
+          "title": "Deciding What Food to Keep or Throw Away After an Outage",
+          "slug": "deciding-what-food-to-keep-or-throw-away-after-an-outage",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Refrigerator, Freezer, and Food Safety During Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Deciding When to Throw Away Food After an Outage",
+          "quickAnswer": "When power returns, keep perishable foods only if they stayed at or below 4 C / 40 F; when in doubt, throw it out.",
+          "whenToUse": "When power has returned or you must decide what to discard after a prolonged outage.",
+          "preferredAction": "Check temperatures and discard high-risk foods that were above 4 C / 40 F for 2 hours or more.",
+          "backupAction": "If no thermometer is available, use conservative time rules and discard perishable refrigerated items after 4 hours or more without safe cooling.",
+          "steps": [
+            "Check fridge and freezer temperatures when power returns.",
+            "Check high-risk foods such as meat, poultry, fish, eggs, dairy, and leftovers first.",
+            "Discard perishable foods that were above 4 C / 40 F for 2 hours or more.",
+            "Frozen foods with ice crystals and safe temperatures can usually be refrozen or cooked.",
+            "When uncertain, discard rather than risk illness."
+          ],
+          "warnings": [
+            "Unsafe foods may still look and smell normal.",
+            "Children, pregnant people, older adults, and immunocompromised people are at higher risk from foodborne illness."
+          ],
+          "whatNotToDo": [
+            "Do not refreeze thawed foods that were warm for too long.",
+            "Do not rely on touch alone to judge safety.",
+            "Do not feed questionable foods to pets or livestock."
+          ],
+          "redFlags": [
+            "Severe vomiting, diarrhea, or high fever after eating outage-stored food.",
+            "Confusion or dehydration in vulnerable people after suspected foodborne illness."
+          ],
+          "preparednessTips": [
+            "Keep printed charts of safe food timelines and discard rules with your emergency supplies.",
+            "Maintain thermometers in your fridge and freezer so decisions are easier."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Are You and Your Food Prepared for a Power Outage?",
+              "organization": "USDA",
+              "url": "https://www.usda.gov/about-usda/news/blog/are-you-and-your-food-prepared-power-outage",
+              "whyUseful": "USDA food safety timelines for refrigerators and freezers during outages."
+            },
+            {
+              "title": "Avoid Foodborne Illness During Temporary Power Outages",
+              "organization": "FoodSafety.gov / USDA",
+              "url": "https://www.foodsafety.gov/blog/avoid-foodborne-illness-during-temporary-power-outages",
+              "whyUseful": "Specific refrigerator and freezer timelines plus food-safety advice during outages."
+            },
+            {
+              "title": "Food and Water Safety During Power Outages and Floods",
+              "organization": "FDA",
+              "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+              "whyUseful": "Confirms outage timelines and safety rules for food and water."
+            }
+          ],
+          "appTags": [
+            "food-discard",
+            "food-safety",
+            "post-outage",
+            "refrigerator",
+            "freezer"
+          ]
+        },
+        {
+          "title": "Preparing Your Kitchen for Future Outages",
+          "slug": "preparing-your-kitchen-for-future-outages",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Refrigerator, Freezer, and Food Safety During Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Food Safety During Power Outages",
+          "quickAnswer": "Equip your kitchen with thermometers, ice, coolers, and shelf-stable foods so you can keep food safe during outages.",
+          "whenToUse": "During preparedness planning, before storms, or before any period when outages are likely.",
+          "preferredAction": "Stock thermometers, frozen water, coolers, and shelf-stable foods and keep your fridge and freezer at safe temperatures year-round.",
+          "backupAction": "If resources are limited, prioritize one reliable thermometer and a basic stock of shelf-stable foods.",
+          "steps": [
+            "Install appliance thermometers in the refrigerator and freezer and keep them at or below safe target temperatures.",
+            "Store ice packs and frozen water containers in the freezer to help hold temperatures during outages.",
+            "Keep at least one cooler large enough for key perishables.",
+            "Build a 3-day supply of shelf-stable foods that do not require refrigeration.",
+            "Rotate supplies periodically before expiration."
+          ],
+          "warnings": [
+            "If you do not track normal appliance temperatures, it is much harder to judge safety during outages."
+          ],
+          "whatNotToDo": [
+            "Do not wait until a storm is imminent to buy all supplies.",
+            "Do not overload your freezer so tightly that air cannot circulate."
+          ],
+          "redFlags": [
+            "Persistent refrigerator or freezer temperature problems even when power is on."
+          ],
+          "preparednessTips": [
+            "Combine kitchen planning with overall emergency kit planning for water, medicines, and lighting.",
+            "Teach all household members the basic outage food-safety rules."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Are You and Your Food Prepared for a Power Outage?",
+              "organization": "USDA",
+              "url": "https://www.usda.gov/about-usda/news/blog/are-you-and-your-food-prepared-power-outage",
+              "whyUseful": "USDA food safety timelines for refrigerators and freezers during outages."
+            },
+            {
+              "title": "Avoid Foodborne Illness During Temporary Power Outages",
+              "organization": "FoodSafety.gov / USDA",
+              "url": "https://www.foodsafety.gov/blog/avoid-foodborne-illness-during-temporary-power-outages",
+              "whyUseful": "Specific refrigerator and freezer timelines plus food-safety advice during outages."
+            },
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "preparedness",
+            "food-storage",
+            "kitchen",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "Safe Placement and Operation of Portable Generators",
+          "slug": "safe-placement-and-operation-of-portable-generators",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Generator Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Always use generators outdoors at least 6 m / 20 ft from doors, windows, and vents, with exhaust pointing away; never run them indoors or in garages.",
+          "whenToUse": "Any time you plan to start, place, or move a portable generator during or after an outage.",
+          "preferredAction": "Place the generator outside in a dry, ventilated location well away from openings, and follow the owner\u2019s manual exactly.",
+          "backupAction": "If you cannot place the generator safely outdoors far from openings, do not use it.",
+          "steps": [
+            "Read and follow the owner\u2019s manual and safety labels.",
+            "Place the generator outdoors on a firm, dry surface more than 20 ft from openings with exhaust directed away from people and buildings.",
+            "Protect it from rain or snow only with a cover designed for safe ventilation.",
+            "Plug appliances directly into generator outlets or use properly rated outdoor cords.",
+            "Turn it off and let it cool before refueling."
+          ],
+          "warnings": [
+            "Generator exhaust contains carbon monoxide that can kill in minutes.",
+            "CO can build up in enclosed or partially enclosed spaces even with doors or windows open."
+          ],
+          "whatNotToDo": [
+            "Do not use a generator inside homes, garages, basements, crawlspaces, sheds, or near windows and vents.",
+            "Do not run a generator on balconies, in stairwells, or near apartment openings.",
+            "Do not refuel while it is running or hot."
+          ],
+          "redFlags": [
+            "Anyone nearby develops headache, dizziness, nausea, confusion, or loss of consciousness.",
+            "CO alarm sounds.",
+            "Sparks, smoke, or unusual generator noises."
+          ],
+          "preparednessTips": [
+            "Decide in advance where you will place a generator safely.",
+            "Install and test CO detectors.",
+            "Store fuel safely in approved containers away from living spaces and heat sources."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            },
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            }
+          ],
+          "appTags": [
+            "generators",
+            "co-safety",
+            "outdoor-use",
+            "placement",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "Powering Appliances Safely with a Generator",
+          "slug": "powering-appliances-safely-with-a-generator",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Generator Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Plug only essential appliances directly into the generator with proper cords; never connect a portable generator to home wiring unless a qualified electrician installed a transfer switch.",
+          "whenToUse": "Whenever you plan to connect appliances or tools to a portable generator at home.",
+          "preferredAction": "Power only essential loads and connect them directly to the generator using heavy-duty outdoor-rated cords.",
+          "backupAction": "If you are unsure about load or connections, limit use to a few low-power devices until you can confirm ratings or get professional help.",
+          "steps": [
+            "List the essential appliances you need and check their wattage.",
+            "Keep total load below the generator\u2019s rated output.",
+            "Use one heavy-duty outdoor cord per major appliance when possible.",
+            "Start the generator, then connect appliances one by one.",
+            "Unplug appliances first before shutting the generator down.",
+            "If your home has a professionally installed transfer switch, follow the electrician\u2019s and manufacturer\u2019s instructions."
+          ],
+          "warnings": [
+            "Backfeeding power into home wiring can electrocute utility workers and neighbors and damage equipment.",
+            "Overloading a generator can overheat cords, outlets, and appliances."
+          ],
+          "whatNotToDo": [
+            "Do not connect a generator to a home outlet with a homemade or backfeed cord.",
+            "Do not overload the generator.",
+            "Do not run sensitive electronics without surge protection if possible."
+          ],
+          "redFlags": [
+            "Tingling, shock, or burning near appliances or cords.",
+            "Repeated breaker trips, visible sparks, or smoke from cords or appliances.",
+            "Any fire involving the generator, cords, or connected devices."
+          ],
+          "preparednessTips": [
+            "Have a licensed electrician install and label any transfer switch.",
+            "Keep a written list of the appliances or circuits safe to run from the generator.",
+            "Store appropriate cords and surge protection with the generator."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            }
+          ],
+          "appTags": [
+            "generators",
+            "appliances",
+            "electrical-safety",
+            "backfeeding",
+            "outage"
+          ]
+        },
+        {
+          "title": "Apartment and Multi-Unit Housing Generator Safety",
+          "slug": "apartment-and-multi-unit-housing-generator-safety",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Generator Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Portable generators are usually unsafe and often prohibited for balconies, hallways, stairwells, or shared indoor spaces; use non-fuel alternatives or official building plans instead.",
+          "whenToUse": "If you live in an apartment or multi-unit building and are considering generator use during an outage.",
+          "preferredAction": "Follow building rules and local codes and avoid portable fuel generators in or near the building.",
+          "backupAction": "If backup power is essential, rely on battery systems, community charging, or building-managed safe generator setups rather than personal balcony or hallway use.",
+          "steps": [
+            "Check building rules and local fire code about generators.",
+            "Do not use generators on balconies, roof decks, hallways, garages, or near windows and doors.",
+            "Prioritize battery-powered lights, power banks, and approved charging areas managed by the building or community.",
+            "If outages regularly threaten your health, discuss long-term backup options or relocation planning with building management."
+          ],
+          "warnings": [
+            "CO from a balcony or nearby generator can enter your unit and neighboring units.",
+            "Fire risk is higher in crowded multi-unit buildings."
+          ],
+          "whatNotToDo": [
+            "Do not run generators in apartments, stairwells, parking garages, or attached carports.",
+            "Do not run cords through doors or windows in ways that keep them from closing safely in storms."
+          ],
+          "redFlags": [
+            "CO alarm sounding anywhere in the building.",
+            "Exhaust smell inside apartments.",
+            "Unsafe generator use in a location that threatens multiple units."
+          ],
+          "preparednessTips": [
+            "Store multiple power banks and USB-rechargeable lights.",
+            "Know community charging centers or shelters in your area.",
+            "Encourage building management to create a safe centralized backup-power plan if appropriate."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            }
+          ],
+          "appTags": [
+            "apartments",
+            "generators",
+            "co-safety",
+            "multi-unit",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "Carbon Monoxide Basics and Symptoms",
+          "slug": "carbon-monoxide-basics-and-symptoms",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Carbon Monoxide (CO) Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Recognizing and Responding to Carbon Monoxide Exposure",
+          "quickAnswer": "Carbon monoxide is an odorless, colorless gas from fuel-burning devices that can kill quickly; early symptoms include headache, dizziness, weakness, nausea, and confusion.",
+          "whenToUse": "To understand CO risk whenever generators, heaters, stoves, grills, or vehicles may be used near buildings.",
+          "preferredAction": "Prevent exposure by keeping fuel-burning devices outside or properly vented and by installing working CO detectors.",
+          "backupAction": "If you suspect CO exposure, get everyone into fresh air immediately and call emergency services.",
+          "steps": [
+            "Learn the common CO sources in homes and outage situations.",
+            "Recognize early symptoms such as headache, dizziness, weakness, nausea, vomiting, chest pain, and confusion.",
+            "Treat a cluster of these symptoms around fuel appliances as a possible CO emergency.",
+            "Remember that sleeping or intoxicated people may not notice symptoms before they collapse."
+          ],
+          "warnings": [
+            "CO cannot be seen, smelled, or tasted.",
+            "CO poisoning can be fatal within minutes at high levels."
+          ],
+          "whatNotToDo": [
+            "Do not ignore mild symptoms shared by multiple people in a home with fuel devices running.",
+            "Do not assume opening a window is adequate protection when a device is being used unsafely."
+          ],
+          "redFlags": [
+            "CO alarm sounds.",
+            "Multiple people have sudden flu-like symptoms without fever.",
+            "Unconsciousness, severe confusion, or chest pain near fuel appliances."
+          ],
+          "preparednessTips": [
+            "Install battery-powered or battery-backup CO detectors on every level and near sleeping areas.",
+            "Test alarms monthly and replace batteries at least yearly.",
+            "Have fuel-burning appliances inspected and serviced regularly."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            }
+          ],
+          "appTags": [
+            "co-safety",
+            "poisoning",
+            "symptoms",
+            "detectors",
+            "fuel-devices"
+          ]
+        },
+        {
+          "title": "Preventing CO Poisoning During Outages",
+          "slug": "preventing-co-poisoning-during-outages",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Carbon Monoxide (CO) Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Recognizing and Responding to Carbon Monoxide Exposure",
+          "quickAnswer": "Never use fuel-burning devices indoors or in attached structures; keep generators, grills, and vehicles outside and far from doors, windows, and vents.",
+          "whenToUse": "During power outages when people may turn to alternative heating, cooking, or power sources.",
+          "preferredAction": "Use only properly vented fuel appliances and keep outdoor devices well away from buildings.",
+          "backupAction": "If you cannot use a device safely outdoors and vented, do not use it; rely on batteries, blankets, clothing, and shelters instead.",
+          "steps": [
+            "Place generators outdoors at least 6 m / 20 ft from any opening.",
+            "Never use charcoal or gas grills, camp stoves, or unvented heaters indoors or in garages.",
+            "Do not run vehicles in garages, even with doors open.",
+            "Clear snow, ice, or debris from vents on approved fuel appliances.",
+            "Install and test CO detectors before storm season."
+          ],
+          "warnings": [
+            "Improper use of generators and grills is a major cause of CO deaths after storms and outages."
+          ],
+          "whatNotToDo": [
+            "Do not heat your home with a gas oven, stovetop, grill, or camp stove.",
+            "Do not sleep in a room where a fuel-burning space heater is running unless it is properly vented and approved."
+          ],
+          "redFlags": [
+            "Any CO alarm activation.",
+            "Any CO symptoms while fuel-burning devices are in use."
+          ],
+          "preparednessTips": [
+            "Plan non-fuel backup heating such as extra blankets and warm clothing.",
+            "Teach all household members what devices are never safe indoors."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            }
+          ],
+          "appTags": [
+            "co-prevention",
+            "generators",
+            "grills",
+            "vehicles",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "What to Do if a CO Alarm Sounds",
+          "slug": "what-to-do-if-a-co-alarm-sounds",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Carbon Monoxide (CO) Safety",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Recognizing and Responding to Carbon Monoxide Exposure",
+          "quickAnswer": "Treat any CO alarm as an emergency: get everyone into fresh air immediately, then call emergency services from a safe location.",
+          "whenToUse": "Whenever a CO alarm activates or you suspect CO even without an alarm.",
+          "preferredAction": "Evacuate everyone outdoors, including pets, and call emergency services from outside.",
+          "backupAction": "If mobility issues or blocked exits make full evacuation difficult, move toward the nearest fresh air while waiting for help.",
+          "steps": [
+            "Do not ignore the alarm; stop what you are doing.",
+            "Get everyone out immediately using the quickest safe route.",
+            "Call emergency services and, if advised, your gas or utility company from outside.",
+            "Do not re-enter until authorities say it is safe.",
+            "Arrange inspection and repair of fuel-burning appliances and vents before using them again."
+          ],
+          "warnings": [
+            "Opening windows instead of leaving may delay escape while CO levels remain dangerous."
+          ],
+          "whatNotToDo": [
+            "Do not silence the alarm and continue normal activities.",
+            "Do not search for the source yourself while staying inside."
+          ],
+          "redFlags": [
+            "Anyone collapses, has severe confusion, breathing trouble, or chest pain."
+          ],
+          "preparednessTips": [
+            "Ensure everyone knows the CO alarm sound and escape routes.",
+            "Practice CO alarm drills the same way you practice fire drills."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            }
+          ],
+          "appTags": [
+            "co-alarm",
+            "evacuation",
+            "emergency-response",
+            "power-outage"
+          ]
+        },
+        {
+          "title": "Recognizing and Responding to a Gas Leak",
+          "slug": "recognizing-and-responding-to-a-gas-leak",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Gas Leaks and Utility Shutoff Basics",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Utility Shutoff and Gas Leak Safety",
+          "quickAnswer": "If you smell gas or suspect a leak, leave the building immediately without using switches or phones inside, then call the gas company or emergency services from a safe location.",
+          "whenToUse": "Whenever you smell rotten-egg odor, hear hissing near gas lines, or see damaged gas equipment after storms or earthquakes.",
+          "preferredAction": "Evacuate, avoid sparks, and report the leak; let trained professionals handle repairs and any needed shutoff.",
+          "backupAction": "If you have been taught how and local utility guidance allows it, you may shut off gas from outside only if it is clearly safe; otherwise leave and call.",
+          "steps": [
+            "Do not turn lights or appliances on or off and do not use flames.",
+            "Leave the building immediately and take others with you.",
+            "From outside and away from the suspected leak, call your gas utility emergency line or emergency services.",
+            "Stay away until professionals say it is safe."
+          ],
+          "warnings": [
+            "Gas leaks can cause explosions and fires.",
+            "Even small sparks can ignite gas-air mixtures."
+          ],
+          "whatNotToDo": [
+            "Do not use phones inside the building.",
+            "Do not adjust thermostats or electrical switches.",
+            "Do not try to locate the exact leak source yourself.",
+            "Do not re-enter until cleared by professionals."
+          ],
+          "redFlags": [
+            "Strong gas smell indoors or near meters or appliances.",
+            "Hissing or blowing sounds near gas lines.",
+            "Dead vegetation near buried gas lines with no clear cause."
+          ],
+          "preparednessTips": [
+            "Store your gas utility emergency number in your phone and post it at home.",
+            "Have gas appliances inspected regularly by qualified technicians."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "gas-leak",
+            "evacuation",
+            "utilities",
+            "explosion-risk",
+            "home-safety"
+          ]
+        },
+        {
+          "title": "Basics of Shutting Off Gas, Water, and Electricity",
+          "slug": "basics-of-shutting-off-gas-water-and-electricity",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Gas Leaks and Utility Shutoff Basics",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Utility Shutoff and Gas Leak Safety",
+          "quickAnswer": "Know where your main shutoffs are and when to use them, but only shut utilities off if authorities recommend it or if there is an immediate hazard and you have been shown how.",
+          "whenToUse": "During preparedness planning and during events like major leaks, flooding, or fires when safe shutoff is necessary.",
+          "preferredAction": "Ask your utility, landlord, or a qualified professional to show you how and when to shut off gas, water, and electricity safely, and label the controls clearly.",
+          "backupAction": "If you cannot safely identify or reach shutoffs, focus on evacuation and contacting utilities or emergency services.",
+          "steps": [
+            "Locate main gas, water, and electrical shutoffs with help from a qualified person if needed.",
+            "Label each shutoff and post utility emergency numbers nearby.",
+            "Know that electrical panels near water, scorch marks, or buzzing should be left to professionals.",
+            "Follow local utility guidance for gas shutoff and remember that many utilities do not want residents turning gas back on themselves.",
+            "Know how to shut water off if instructed during contamination or major leaks."
+          ],
+          "warnings": [
+            "Improper gas or electrical shutoff can cause fire, explosion, or electrocution."
+          ],
+          "whatNotToDo": [
+            "Do not stand in water while touching electrical panels or appliances.",
+            "Do not attempt to restore gas service yourself.",
+            "Do not force stuck valves or switches."
+          ],
+          "redFlags": [
+            "Water rising near electrical outlets or panels.",
+            "Sparking, smoke, or fire from panels or meters.",
+            "Damage to gas meters, lines, or any gas smell."
+          ],
+          "preparednessTips": [
+            "Ask utility-recommended professionals to review your home shutoffs and provide written instructions.",
+            "Practice locating shutoffs in daylight so you can find them quickly if needed."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "utility-shutoff",
+            "gas",
+            "water",
+            "electricity",
+            "preparedness"
+          ]
+        },
+        {
+          "title": "When Not to Touch Utility Controls and Call the Utility Instead",
+          "slug": "when-not-to-touch-utility-controls-and-call-the-utility-instead",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Gas Leaks and Utility Shutoff Basics",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Utility Shutoff and Gas Leak Safety",
+          "quickAnswer": "If there is flooding, visible damage, fire, or gas smell near utility controls, do not touch them; evacuate and call the utility or emergency services instead.",
+          "whenToUse": "After storms, earthquakes, fires, or flooding when meters, panels, or pipes may be damaged.",
+          "preferredAction": "Stay away from damaged or wet utilities and leave shutoff and repair work to professionals.",
+          "backupAction": "If you cannot reach authorities and an immediate threat exists, prioritize evacuation and warning others nearby.",
+          "steps": [
+            "Inspect from a safe distance for fallen lines, damaged meters, flooded panels, or broken pipes.",
+            "If any damage or water is present, do not approach or touch the equipment.",
+            "Keep people away and call utilities or emergency services.",
+            "Follow responder instructions and do not attempt temporary fixes."
+          ],
+          "warnings": [
+            "Water and electricity together are deadly.",
+            "Gas and sparks can cause explosions."
+          ],
+          "whatNotToDo": [
+            "Do not step in water near electrical equipment.",
+            "Do not use tools to poke, move, or manipulate damaged utility components."
+          ],
+          "redFlags": [
+            "Any downed or low-hanging power line.",
+            "Arcing, buzzing, or flames around utility equipment.",
+            "Gas smell or hissing near meters or pipes."
+          ],
+          "preparednessTips": [
+            "Save utility emergency numbers in your phone and post them at home.",
+            "Teach household members to treat all downed lines as live and extremely dangerous."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "utilities",
+            "damaged-infrastructure",
+            "stay-away",
+            "emergency-call"
+          ]
+        },
+        {
+          "title": "Checking if a Building Is Safe to Enter After a Disaster",
+          "slug": "checking-if-a-building-is-safe-to-enter-after-a-disaster",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Damaged Buildings After Storms or Earthquakes",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Do an external safety check first: if you see major structural damage, leaning walls, sagging roof, gas smell, or downed lines, do not enter.",
+          "whenToUse": "After storms, earthquakes, explosions, or similar damage, before going back inside a building.",
+          "preferredAction": "Stay out of clearly damaged buildings and wait for official or professional inspection.",
+          "backupAction": "If you must enter briefly for a life-saving reason and it appears reasonably safe, minimize time inside and leave at the first sign of danger.",
+          "steps": [
+            "Walk around the building from a safe distance and look for cracks, leaning walls, sagging roofs, broken windows, or partial collapse.",
+            "Look and listen for gas leaks, fires, electrical arcing, or rushing water.",
+            "Stay well away if downed power lines are on or near the building.",
+            "If nothing obvious is wrong, enter carefully while watching for falling debris, broken glass, and standing water.",
+            "Leave immediately if the building shifts, creaks loudly, sheds dust, or develops new cracks."
+          ],
+          "warnings": [
+            "Hidden damage can cause sudden collapse even when a building looks mostly intact.",
+            "Aftershocks can worsen earthquake damage."
+          ],
+          "whatNotToDo": [
+            "Do not enter buildings with visible major structural damage unless directed by trained rescuers.",
+            "Do not use candles or open flames where there may be gas leaks."
+          ],
+          "redFlags": [
+            "Strong gas odor, hissing pipes, or visible fire.",
+            "Major cracks, leaning walls, or partial collapse.",
+            "Downed power lines on or near the structure."
+          ],
+          "preparednessTips": [
+            "Know and follow local storm and earthquake re-entry guidance.",
+            "Document damage for insurance only after safety is confirmed."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "damaged-buildings",
+            "storms",
+            "earthquakes",
+            "reentry",
+            "structural-safety"
+          ]
+        },
+        {
+          "title": "Safe Behavior Inside a Damaged Building",
+          "slug": "safe-behavior-inside-a-damaged-building",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Damaged Buildings After Storms or Earthquakes",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Checking if a Building Is Safe to Enter After a Disaster",
+          "quickAnswer": "If you must go inside a lightly damaged building, move slowly, avoid hazards, and be ready to leave immediately if anything seems unsafe.",
+          "whenToUse": "When entering a building that appears mostly intact but may have minor damage.",
+          "preferredAction": "Limit time inside to essential tasks, keep exits clear, and watch constantly for hazards.",
+          "backupAction": "If you are unsure about safety, stay out and wait for inspection.",
+          "steps": [
+            "Use a flashlight to check floors, stairs, and ceilings before stepping forward.",
+            "Avoid walking under visibly cracked beams, loose ceiling material, or leaning walls.",
+            "Do not step into standing water if electrical equipment, cords, or outlets are nearby.",
+            "Keep at least one clear exit path at all times.",
+            "Leave immediately if you smell gas, see sparks, or feel the building shift."
+          ],
+          "warnings": [
+            "Hidden damage and aftershocks can turn minor damage into collapse risk.",
+            "Electrical faults and gas leaks can ignite fires inside damaged structures."
+          ],
+          "whatNotToDo": [
+            "Do not move heavy debris or structural components yourself.",
+            "Do not use elevators after earthquakes or when power is unstable."
+          ],
+          "redFlags": [
+            "New cracking, loud creaking, or falling debris.",
+            "Trapped or injured people inside beyond what you can safely reach."
+          ],
+          "preparednessTips": [
+            "Store sturdy shoes and gloves in your emergency kit to protect feet and hands from debris."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "damaged-buildings",
+            "indoor-safety",
+            "earthquakes",
+            "storms"
+          ]
+        },
+        {
+          "title": "When to Leave and Not Return Until Professionally Inspected",
+          "slug": "when-to-leave-and-not-return-until-professionally-inspected",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Damaged Buildings After Storms or Earthquakes",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Checking if a Building Is Safe to Enter After a Disaster",
+          "quickAnswer": "If a building has major structural, electrical, or gas damage, leave and do not return until authorities or qualified inspectors say it is safe.",
+          "whenToUse": "After severe storms, earthquakes, explosions, or fires.",
+          "preferredAction": "Evacuate, stay elsewhere, and wait for official clearance.",
+          "backupAction": "If staying nearby is unavoidable, stay outside or in an undamaged separate structure away from the affected building.",
+          "steps": [
+            "Identify major damage such as partial collapse, large structural cracks, displaced foundation, or major roof failure.",
+            "Leave the building and move to a safe location.",
+            "Notify authorities, landlord, or insurance and request inspection.",
+            "Follow official orders regarding unsafe buildings or restricted areas."
+          ],
+          "warnings": [
+            "Re-entering badly damaged buildings has caused injuries and deaths after disasters."
+          ],
+          "whatNotToDo": [
+            "Do not camp or sleep inside or immediately next to a severely damaged building.",
+            "Do not try to shore up structural components yourself."
+          ],
+          "redFlags": [
+            "Any new collapse, shifting, or severe cracking.",
+            "Fire or gas leaks from the building."
+          ],
+          "preparednessTips": [
+            "Review your insurance and local inspection processes before disasters occur."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "evacuation",
+            "damaged-buildings",
+            "inspections",
+            "storms",
+            "earthquakes"
+          ]
+        },
+        {
+          "title": "Using Flashlights and Battery Lanterns Safely",
+          "slug": "using-flashlights-and-battery-lanterns-safely",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Safe Flashlight and Lantern Use",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Safe Home Lighting During Blackouts",
+          "quickAnswer": "Use battery-powered lights on stable surfaces, away from water and heat, and keep spare batteries nearby; they are the safest lighting option in outages.",
+          "whenToUse": "Whenever you need light during outages or in damaged buildings.",
+          "preferredAction": "Use LED flashlights and lanterns and keep them dry, cool, and away from flammable materials.",
+          "backupAction": "If batteries are scarce, share a central lantern and rotate flashlight use among household members.",
+          "steps": [
+            "Place lanterns on flat, stable surfaces where they will not be knocked over.",
+            "Use headlamps when hands-free work is needed.",
+            "Keep lights away from open fuel containers, gas appliances, and water sources.",
+            "Store spare batteries in a cool, dry place and check them for leaks."
+          ],
+          "warnings": [
+            "Improper charging of rechargeable lights can lead to overheating and fire.",
+            "Water contact with battery devices can cause malfunction and sometimes shock risk."
+          ],
+          "whatNotToDo": [
+            "Do not attempt to repair damaged battery packs or cracked housings yourself.",
+            "Do not leave lights charging on bedding, sofas, or other flammable surfaces."
+          ],
+          "redFlags": [
+            "Smoke, unusual smell, or extreme heat from chargers or lighting devices."
+          ],
+          "preparednessTips": [
+            "Keep at least one flashlight per person and one lantern per main room.",
+            "Include extra batteries and a safe charger in your emergency kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            }
+          ],
+          "appTags": [
+            "flashlights",
+            "lanterns",
+            "battery-safety",
+            "blackout",
+            "lighting"
+          ]
+        },
+        {
+          "title": "Fuel-Burning Lanterns and Heaters: Last-Resort Guidance",
+          "slug": "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Safe Flashlight and Lantern Use",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Safe Home Lighting During Blackouts",
+          "quickAnswer": "Avoid fuel-burning lanterns and heaters indoors; if you must use one, follow manufacturer instructions strictly, keep ventilation adequate, and never sleep with it running.",
+          "whenToUse": "Only when no safer lighting or heating options exist and conditions are dangerous.",
+          "preferredAction": "Replace fuel-burning devices with battery-powered alternatives whenever possible.",
+          "backupAction": "If a fuel device must be used, use it briefly in a ventilated area, keep children and pets away, and ensure CO detectors are working.",
+          "steps": [
+            "Read and follow manufacturer warnings before use.",
+            "Use devices outdoors or in the safest ventilated space possible, away from combustibles.",
+            "Keep children and pets away from the device.",
+            "Turn the device off when leaving the room or going to sleep."
+          ],
+          "warnings": [
+            "Fuel-burning devices can produce carbon monoxide and cause fires and burns.",
+            "Many agencies simply advise against indoor use of these devices."
+          ],
+          "whatNotToDo": [
+            "Do not use unvented heaters or lanterns in small enclosed rooms.",
+            "Do not modify devices or use fuels not specified by the manufacturer."
+          ],
+          "redFlags": [
+            "Any CO symptoms or alarm activation.",
+            "Flames outside the intended burner area or fuel leaks."
+          ],
+          "preparednessTips": [
+            "Prioritize getting battery-powered alternatives so you rarely need this guide.",
+            "If you own a fuel-burning device, get local fire-authority guidance on safe use."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Carbon Monoxide and Generator Safety",
+              "organization": "Vermont Department of Health",
+              "url": "https://www.healthvermont.gov/sites/default/files/documents/pdf/English_CO_Safety_Tips.pdf",
+              "whyUseful": "Clear combined generator and CO safety guidance for household use."
+            },
+            {
+              "title": "Carbon Monoxide Safety in Power Outages",
+              "organization": "Maine.gov",
+              "url": "https://www.maine.gov/mema/maine-prepares/home-preparedness/carbon-monoxide-safety",
+              "whyUseful": "State emergency guidance on CO and generator placement."
+            },
+            {
+              "title": "Generator Safety Fact Sheet",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/carbon-monoxide/factsheets/generator-safety-fact-sheet.html",
+              "whyUseful": "Authoritative placement, fueling, and carbon-monoxide guidance for generators."
+            }
+          ],
+          "appTags": [
+            "heaters",
+            "lanterns",
+            "co-risk",
+            "fire-safety",
+            "last-resort"
+          ]
+        },
+        {
+          "title": "Child and Pet Safety Around Emergency Lighting",
+          "slug": "child-and-pet-safety-around-emergency-lighting",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Power, Utilities, and Home Safety",
+          "parentTopic": "Safe Flashlight and Lantern Use",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Safe Home Lighting During Blackouts",
+          "quickAnswer": "Keep all flames and hot lights out of reach of children and pets, and teach kids to use flashlights safely instead of matches or candles.",
+          "whenToUse": "When planning emergency lighting for homes with children or pets.",
+          "preferredAction": "Use cool, stable LED lighting and assign a responsible adult to manage any higher-risk devices.",
+          "backupAction": "If candles or fuel devices are unavoidable, keep them to one closely supervised area and keep children and pets elsewhere.",
+          "steps": [
+            "Store matches, lighters, and fuel where children cannot access them.",
+            "Give children flashlights and teach them not to shine them in eyes or play with them as toys near hazards.",
+            "Keep pets out of rooms with open flames or hot lanterns.",
+            "Explain family rules about not touching lighting or heating devices."
+          ],
+          "warnings": [
+            "Children and pets can easily knock over candles or lanterns and cause fires or burns."
+          ],
+          "whatNotToDo": [
+            "Do not leave children alone with any open flame or fuel-burning device.",
+            "Do not let pets chew cords or trip over lighting setups."
+          ],
+          "redFlags": [
+            "Burns, smoke inhalation, or a fire started by lighting devices."
+          ],
+          "preparednessTips": [
+            "Practice lights-out drills that include safe behavior around emergency lighting.",
+            "Keep a dedicated flashlight in each child\u2019s room for comfort during outages."
+          ],
+          "sourceReferences": [
+            {
+              "title": "During a Power Outage",
+              "organization": "FEMA / Ready.gov",
+              "url": "https://www.astribe.com/resources/pdf/newsletter/FEMA%20-%20During%20a%20Power%20Outage.pdf",
+              "whyUseful": "Federal guidance on safe behavior during outages, surge protection, and communication."
+            },
+            {
+              "title": "What You Need to Know When the Power Goes Out Unexpectedly",
+              "organization": "CDC",
+              "url": "https://www.cravencountync.gov/DocumentCenter/View/996/Power-Outage-Safety-CDC---English-PDF",
+              "whyUseful": "Practical CDC guidance on immediate outage actions, safety, food, and preparedness."
+            }
+          ],
+          "appTags": [
+            "children",
+            "pets",
+            "fire-safety",
+            "lighting",
+            "blackout"
+          ]
+        }
+      ]
+    }
+  ]
+}

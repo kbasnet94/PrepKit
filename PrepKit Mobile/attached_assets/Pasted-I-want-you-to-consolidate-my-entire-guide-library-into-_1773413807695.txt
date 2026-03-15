@@ -1,0 +1,102 @@
+I want you to consolidate my entire guide library into one clean source-of-truth export.
+
+Goal:
+Create a normalized export of all guides currently in the app so I can review, deduplicate, reorganize, and plan future cards outside the app.
+
+What I need from you:
+
+1. Read the current guide data from wherever it now lives in the project.
+   This may include:
+   - seed data
+   - merged import batches
+   - repository files
+   - content packs
+   - any normalized guide layer already in use by the app
+
+2. Produce one consolidated export file in JSON.
+   File name:
+   guides_master_export.json
+
+3. The export should include every guide currently known to the app, including:
+   - existing legacy guides
+   - upgraded guides
+   - newly added guides
+   - sub-guides
+   - reviewed guides
+   - lower-confidence or source-review guides
+   - planned or metadata-only guides if they still exist
+
+4. Normalize every guide into one schema.
+   Use this shape for each guide:
+
+   {
+     "id": "stable_slug_or_id",
+     "slug": "stable-slug",
+     "title": "Guide Title",
+     "category": "Top Category",
+     "parentTopic": "Parent Topic Name",
+     "layer": "action | scenario | reference",
+     "guideType": "action_card | scenario_guide | preparedness_guide | reference_guide",
+     "summary": "short summary",
+     "quickAnswer": "string",
+     "whenToUse": ["..."],
+     "preferredAction": "string",
+     "backupAction": "string",
+     "stepByStepActions": ["..."],
+     "warnings": ["..."],
+     "whatNotToDo": ["..."],
+     "redFlags": ["..."],
+     "preparednessTips": ["..."],
+     "sourceQuality": "strong | mixed | weak",
+     "contentStatus": "reviewed | needs_source_review | planned | metadata_only | in_app",
+     "integrationDecision": "existing | upgrade_existing | add_new | add_subguide",
+     "upgradesGuide": "existing guide title or null",
+     "relatedGuides": ["..."],
+     "sourceReferences": [
+       {
+         "title": "source title",
+         "organization": "source org",
+         "url": "source url",
+         "whyUseful": "short note"
+       }
+     ],
+     "appTags": ["..."],
+     "notes": "optional normalization notes"
+   }
+
+5. Also create a second export file:
+   guides_audit_report.json
+
+   This should contain:
+   - total guide count
+   - guides by category
+   - guides by parent topic
+   - guides by contentStatus
+   - guides by sourceQuality
+   - guides by layer
+   - guides by guideType
+   - list of exact duplicate titles
+   - list of near-duplicate titles
+   - list of guides that appear to overlap heavily
+   - list of guides missing source references
+   - list of guides missing parentTopic
+   - list of guides missing warnings or redFlags
+   - list of legacy guides that were upgraded
+   - list of sub-guides grouped under their parent topic
+
+6. Important consolidation rules:
+   - do not delete any guides during export
+   - do not merge content during export
+   - preserve all guides, even if duplicates exist
+   - if two guides overlap, keep both but flag them in guides_audit_report.json
+   - preserve existing slugs if already used by routing
+   - if fields are missing, include null or empty arrays instead of dropping the guide
+   - infer category or parentTopic only when obvious from the current data
+   - do not invent source references if they do not exist
+   - keep the export machine-readable and consistent
+
+7. After generating both files, give me a short summary in chat:
+   - how many total guides were exported
+   - how many categories and parent topics were found
+   - how many duplicate or near-duplicate guides were detected
+   - which files were created

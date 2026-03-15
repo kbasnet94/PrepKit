@@ -1,0 +1,322 @@
+[
+  {
+    "slug": "purify-water-boiling",
+    "responseRole": "primary",
+    "blockedByConstraints": [
+      "no_boiling",
+      "no_fire",
+      "no_heat_source"
+    ]
+  },
+  {
+    "slug": "purifying-water-with-household-liquid-bleach",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_boiling",
+      "no_fire",
+      "no_heat_source"
+    ],
+    "blockedByConstraints": [
+      "no_bleach"
+    ],
+    "alternativeToGuideSlugs": [
+      "purify-water-boiling"
+    ]
+  },
+  {
+    "slug": "purify-water-bleach",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_boiling",
+      "no_fire",
+      "no_heat_source"
+    ],
+    "blockedByConstraints": [
+      "no_bleach"
+    ],
+    "alternativeToGuideSlugs": [
+      "purify-water-boiling"
+    ]
+  },
+  {
+    "slug": "choosing-safe-hydration-sources",
+    "responseRole": "supporting",
+    "constraintTags": [
+      "no_boiling",
+      "no_bleach",
+      "no_clean_water"
+    ]
+  },
+  {
+    "slug": "using-non-drinking-water-safely",
+    "responseRole": "supporting",
+    "constraintTags": [
+      "no_clean_water"
+    ]
+  },
+  {
+    "slug": "when-treated-water-is-still-unsafe-to-drink",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "emergency-water-storage-at-home",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "water-purification-reference",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "solar-still",
+    "responseRole": "supporting",
+    "constraintTags": [
+      "no_boiling",
+      "no_bleach",
+      "no_clean_water"
+    ]
+  },
+  {
+    "slug": "refrigerator-safety-during-outages",
+    "responseRole": "primary",
+    "constraintTags": [
+      "no_power"
+    ]
+  },
+  {
+    "slug": "freezer-safety-during-outages",
+    "responseRole": "primary",
+    "constraintTags": [
+      "no_power"
+    ]
+  },
+  {
+    "slug": "deciding-when-to-throw-away-food-after-an-outage",
+    "responseRole": "primary",
+    "constraintTags": [
+      "no_power"
+    ]
+  },
+  {
+    "slug": "safe-food-handling-when-water-is-limited",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_clean_water",
+      "no_water"
+    ]
+  },
+  {
+    "slug": "food-preservation",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "food-safety-no-fridge",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "heat-stroke-emergency",
+    "responseRole": "primary",
+    "constraintTags": [
+      "vomiting",
+      "getting_worse",
+      "confused",
+      "unconscious"
+    ]
+  },
+  {
+    "slug": "heat-exhaustion-cool-rehydrate",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "dehydration-signs-and-immediate-care",
+    "responseRole": "backup",
+    "constraintTags": [
+      "vomiting",
+      "getting_worse"
+    ],
+    "alternativeToGuideSlugs": [
+      "heat-exhaustion-cool-rehydrate"
+    ]
+  },
+  {
+    "slug": "dehydration-reference",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "heat-prevention",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "everyday-extreme-heat-precautions",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "working-or-exercising-safely-in-high-heat",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "hypothermia-warm-core",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "frostbite-protect-rewarm",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "hypothermia-reference",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "staying-warm-and-dry-in-cold-weather",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "cold-wet-exposure-rain-wind-and-chill",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "lost-on-land-first-30-minutes",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "stay-put-vs-move-land",
+    "responseRole": "primary",
+    "constraintTags": [
+      "in_vehicle"
+    ],
+    "alternativeToGuideSlugs": [
+      "lost-on-land-first-30-minutes"
+    ]
+  },
+  {
+    "slug": "stay-put-vs-move",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "whistle-distress-signals-land",
+    "responseRole": "primary",
+    "blockedByConstraints": [
+      "no_signal"
+    ]
+  },
+  {
+    "slug": "mirror-and-light-signaling-land-day-and-night",
+    "responseRole": "primary",
+    "constraintTags": [
+      "at_night"
+    ]
+  },
+  {
+    "slug": "night-signaling-and-battery",
+    "responseRole": "backup",
+    "constraintTags": [
+      "at_night"
+    ],
+    "alternativeToGuideSlugs": [
+      "mirror-and-light-signaling-land-day-and-night"
+    ]
+  },
+  {
+    "slug": "maximizing-rescue-visibility-land",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "signal-for-rescue",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "ground-to-air-symbols-for-aircraft",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "distress-signaling",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "morse-code",
+    "responseRole": "reference"
+  },
+  {
+    "slug": "wildfire-evacuate-early",
+    "responseRole": "primary",
+    "blockedByConstraints": [
+      "cant_move"
+    ]
+  },
+  {
+    "slug": "wildfire-smoke-protection",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_shelter",
+      "cant_move"
+    ]
+  },
+  {
+    "slug": "wildfire-return-home",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "using-aqi-and-basic-smoke-air-quality-precautions",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "dust-ash-and-airborne-irritants-after-storms-eruptions-or-collapses",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "carbon-monoxide-basics-and-symptoms",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "preventing-co-poisoning-during-outages",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_power"
+    ]
+  },
+  {
+    "slug": "safe-placement-and-operation-of-portable-generators",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "powering-appliances-safely-with-a-generator",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "apartment-and-multi-unit-housing-generator-safety",
+    "responseRole": "backup"
+  },
+  {
+    "slug": "choosing-a-safe-spot-for-emergency-shelter",
+    "responseRole": "primary"
+  },
+  {
+    "slug": "simple-no-tools-emergency-shelter-inside-buildings",
+    "responseRole": "backup",
+    "constraintTags": [
+      "no_shelter"
+    ]
+  },
+  {
+    "slug": "shelter-building",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "staying-warm-in-a-cold-home-without-power",
+    "responseRole": "primary",
+    "constraintTags": [
+      "no_power"
+    ]
+  },
+  {
+    "slug": "layering-clothing-and-bedding-for-maximum-warmth",
+    "responseRole": "supporting"
+  },
+  {
+    "slug": "keeping-children-elderly-and-frail-adults-warm-safely",
+    "responseRole": "supporting",
+    "constraintTags": [
+      "child",
+      "pregnant"
+    ]
+  }
+]

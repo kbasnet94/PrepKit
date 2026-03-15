@@ -1,0 +1,1402 @@
+{
+  "packTitle": "Core Skills and Basic Survival Tasks Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T00:00:00Z",
+  "notes": [
+    "Normalized from Perplexity category output for Core Skills and Basic Survival Tasks.",
+    "Planning, signaling, and practical kit content is intentionally prioritized higher than advanced or judgment-heavy field skills.",
+    "Last-resort untreated-water guidance, knots, and knife-use content are included conservatively and generally marked needs_source_review or lower-ranked.",
+    "Knot guidance is explicitly non-technical and must never be interpreted as climbing, rescue, or life-safety rope instruction."
+  ],
+  "categories": [
+    {
+      "categoryName": "Core Skills and Basic Survival Tasks",
+      "summary": "Core field decision-making, simple rescue signaling, water collection, hygiene, basic cordage, safe tool use, and emergency kit guidance for public-facing survival and stranded-user scenarios.",
+      "guides": [
+        {
+          "title": "STOP-Think-Observe-Plan (First 30 Minutes)",
+          "slug": "stop-think-observe-plan-first-30-minutes",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "First 30 Minutes: Stay Oriented and Make a Simple Plan",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Pause, calm down, check for injuries and hazards, then make a simple plan instead of walking blindly.",
+          "whenToUse": "Any time you realize you are lost, stranded, off-route, or unexpectedly stuck outdoors.",
+          "preferredAction": "Use the STOP method, then act on the safest, simplest short plan.",
+          "backupAction": "If you cannot think clearly, focus only on immediate safety: move out of danger, treat obvious bleeding, get out of wind or rain, then rest and reassess.",
+          "steps": [
+            "Stop in a safe spot away from immediate hazards such as rockfall, traffic, avalanche terrain, surf, or fire.",
+            "Breathe slowly for 30 to 60 seconds to reduce panic.",
+            "Check yourself and others quickly for serious bleeding, breathing problems, or inability to move.",
+            "Observe the time of day, weather, terrain, nearby landmarks, last known point, and any cell signal or GPS information.",
+            "Ask what the main threat is in the next few hours: cold, heat, darkness, dehydration, or injury.",
+            "Make a simple 15 to 30 minute plan such as staying put, improving shelter, and signaling for help.",
+            "If possible, text or call emergency services and a trusted contact with your situation and last known location.",
+            "Carry out the short plan, then pause and reassess."
+          ],
+          "warnings": [
+            "Panic and aimless wandering are major causes of worsening lost-person outcomes.",
+            "Poor decisions made in the first 30 minutes can be hard to reverse in bad terrain or bad weather."
+          ],
+          "whatNotToDo": [
+            "Do not keep walking just to do something if you are unsure where you are.",
+            "Do not ignore injuries or severe cold or heat to push on a bit more.",
+            "Do not rely only on your memory of the route if you are clearly disoriented."
+          ],
+          "redFlags": [
+            "Severe bleeding, difficulty breathing, altered mental status, or inability to walk.",
+            "Rapidly worsening weather with poor shelter or warm or dry clothing.",
+            "Nightfall close at hand with no light, no clear route, or no shelter.",
+            "Immediate terrain hazards such as flooding, avalanche slopes, cliffs, or surf."
+          ],
+          "preparednessTips": [
+            "Share a trip plan with a trusted person including route and return time.",
+            "Carry a whistle, map, compass, charged phone, power bank, and simple emergency kit.",
+            "Practice the STOP method on day hikes so it feels automatic under stress."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "U.S. National Park Service",
+              "url": "https://www.nps.gov/articles/gtgemergencyplan.htm",
+              "whyUseful": "Clear public guidance on what to do if you get lost, including stopping, assessing, and staying put."
+            },
+            {
+              "title": "Lost Outdoors",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/lost-outdoors/",
+              "whyUseful": "Practical guidance on staying found and staying put once lost."
+            },
+            {
+              "title": "What should you do if you are lost during a hike",
+              "organization": "National Park Service (Taiwan)",
+              "url": "https://www.taroko.gov.tw/en/News_Content.aspx?n=7883&s=226668",
+              "whyUseful": "Accessible STOP-based guidance for lost hikers."
+            }
+          ],
+          "appTags": [
+            "core-plan",
+            "first-30-minutes",
+            "stay-put",
+            "decision-making",
+            "lost-outdoors"
+          ]
+        },
+        {
+          "title": "Decide: Stay Put or Move Carefully",
+          "slug": "decide-stay-put-or-move-carefully",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "First 30 Minutes: Stay Oriented and Make a Simple Plan",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Stay Put vs Move (Land)",
+          "quickAnswer": "If you are truly lost but not in immediate danger, staying put is usually safer and makes you easier to find; move only to escape danger or reach clearly safer ground.",
+          "whenToUse": "When you realize you are off-route or stranded and are deciding whether to stay or try to self-rescue.",
+          "preferredAction": "Stay put near your last known location, improve shelter, and make yourself visible unless there is an immediate life threat where you are.",
+          "backupAction": "If staying is clearly unsafe, move carefully to the nearest safer, more visible, and more sheltered area, then stop and re-establish your plan.",
+          "steps": [
+            "Identify immediate dangers such as rising water, unstable slopes, falling rocks, fire, lightning exposure, or traffic.",
+            "If no immediate danger exists, stay near your last known location where rescuers will likely search first.",
+            "Improve shelter and visibility in a spot that is safer but still findable.",
+            "If you must move, choose a conservative destination such as slightly higher ground above flood level or a safer forest edge.",
+            "Move slowly and avoid steep drop-offs, fast water crossings, avalanche paths, and dense terrain.",
+            "Once in a safer spot, stop again, mark your location if possible, and begin signaling."
+          ],
+          "warnings": [
+            "Wandering far from your last known route can drastically enlarge search areas and delay rescue.",
+            "Self-rescue over difficult terrain without skills or equipment leads to many injuries and fatalities."
+          ],
+          "whatNotToDo": [
+            "Do not descend blindly into gullies, canyons, or rivers just because downhill might lead to people.",
+            "Do not cross fast-moving water above your knees without training and proper gear.",
+            "Do not split your group unless absolutely necessary."
+          ],
+          "redFlags": [
+            "Very poor shelter options with severe weather imminent.",
+            "Active fire, unstable ground, or advancing water in your area.",
+            "A severely injured person who cannot be moved safely from a dangerous location."
+          ],
+          "preparednessTips": [
+            "Learn local terrain hazards before trips.",
+            "Carry a paper map and compass and know basic use.",
+            "Tell someone your route and turnaround time so search can begin from the right place."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "U.S. National Park Service",
+              "url": "https://www.nps.gov/articles/gtgemergencyplan.htm",
+              "whyUseful": "NPS guidance to stay put and conserve energy when lost."
+            },
+            {
+              "title": "Lost Outdoors",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/lost-outdoors/",
+              "whyUseful": "Clear recommendation to stay put once genuinely lost, with limited safety exceptions."
+            }
+          ],
+          "appTags": [
+            "stay-put",
+            "self-rescue-decision",
+            "terrain-safety",
+            "first-30-minutes"
+          ]
+        },
+        {
+          "title": "Simple Survival Priorities: What Comes First",
+          "slug": "simple-survival-priorities-what-comes-first",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "First 30 Minutes: Stay Oriented and Make a Simple Plan",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "For most short-term emergencies, focus on safety, first aid, shelter or warmth, signaling, and then water; food and complex tasks can wait.",
+          "whenToUse": "When making a quick plan for the next hours after becoming stranded or after an emergency.",
+          "preferredAction": "Follow a simple order: safety and severe injuries, shelter and temperature, signaling and communication, water, then food and extras.",
+          "backupAction": "If conditions are mild, adjust the order slightly but still avoid spending early energy on low-value tasks like foraging or elaborate construction.",
+          "steps": [
+            "Check airway, breathing, severe bleeding, and immediate hazards first.",
+            "Get out of wind, rain, or direct sun and adjust clothing to avoid hypothermia or heat illness.",
+            "Use phone, whistle, mirror, bright clothing, or ground signals early to make yourself findable.",
+            "Identify the safest available water source and plan how to treat it.",
+            "Conserve energy rather than hunting, foraging, or building complex structures in most short-term events."
+          ],
+          "warnings": [
+            "Hypothermia or heat illness can kill in hours, long before hunger.",
+            "Treating water is important, but usually less urgent than staying warm or cool."
+          ],
+          "whatNotToDo": [
+            "Do not spend your first hour on complex shelters or food gathering if you lack basic shelter or signaling.",
+            "Do not ignore obvious hazards while focused on secondary tasks.",
+            "Do not assume you must find food immediately."
+          ],
+          "redFlags": [
+            "Signs of hypothermia or severe heat illness.",
+            "Ongoing severe bleeding, chest pain, difficulty breathing, or altered consciousness."
+          ],
+          "preparednessTips": [
+            "Learn basic first aid and CPR through Red Cross or similar training.",
+            "Pack an emergency kit that supports shelter, signaling, and water treatment first.",
+            "Practice short priority drills on day hikes."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness Survival Priorities / Seven Priorities",
+              "organization": "Outdoor survival teaching resources",
+              "url": "https://www.wildsafe.org/resources/ask-the-experts/survival/survival-priorities/",
+              "whyUseful": "Summarizes common survival-priority frameworks around first aid, shelter, signaling, water, and food."
+            },
+            {
+              "title": "Wilderness Medical Society Practice Guidelines for Water Disinfection and Treatment",
+              "organization": "Wilderness Medical Society",
+              "url": "https://journals.sagepub.com/doi/10.1016/j.wem.2016.12.001",
+              "whyUseful": "Evidence-based guidance supporting conservative, realistic water priorities in the field."
+            }
+          ],
+          "appTags": [
+            "priorities",
+            "first-30-minutes",
+            "shelter-first",
+            "signaling",
+            "water-later"
+          ]
+        },
+        {
+          "title": "Whistle and Sound Signals (Three-Blast Distress)",
+          "slug": "whistle-and-sound-signals-three-blast-distress",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple Rescue Signaling",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Whistle Distress Signals (Land)",
+          "quickAnswer": "Use three short whistle blasts repeated regularly as your basic distress signal.",
+          "whenToUse": "Any time you are lost, injured, or need help and think searchers or other people may be within hearing range.",
+          "preferredAction": "Blow three short blasts on a whistle, wait 30 to 60 seconds, and repeat.",
+          "backupAction": "If you have no whistle, shout in patterns, bang metal objects, or use a radio or phone if available.",
+          "steps": [
+            "Carry the whistle on your person so it is always reachable.",
+            "Give three strong blasts, each about one second long.",
+            "Pause for 30 to 60 seconds to listen and conserve energy, then repeat.",
+            "If you hear two blasts or a vocal response, continue giving short blasts every 10 to 15 seconds to guide rescuers in.",
+            "If using a radio or phone, keep whistle signaling intermittent and consistent."
+          ],
+          "warnings": [
+            "Continuous blowing or yelling can exhaust you and make direction-finding harder for rescuers.",
+            "A whistle is less effective in strong wind, near loud rivers, or with helicopter noise."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on your voice.",
+            "Do not give random patterns; consistent three-blast signals are easier to recognize as distress."
+          ],
+          "redFlags": [
+            "Use whistle signals immediately if anyone is injured, unable to move, or stuck in dangerous terrain.",
+            "If no response comes and conditions are worsening, shift more effort toward shelter and self-protection while continuing intermittent signals."
+          ],
+          "preparednessTips": [
+            "Carry a pea-less plastic whistle on all trips, attached to your person not just your pack.",
+            "Practice the three-blast pattern in safe settings.",
+            "Include a whistle in every emergency kit and go-bag."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness and Remote First Aid Pocket Guide",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/content/dam/redcross/atg/PDF_s/Preparedness___Disaster_Recovery/Disaster_Preparedness/Wilderness-and-Remote-First-Aid-Pocket-Guide.pdf",
+              "whyUseful": "Authoritative Red Cross field guide listing three-whistle-blast emergency signaling."
+            },
+            {
+              "title": "Lost on the Trail? How a Mirror and Whistle Get You Found",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/lost-on-the-trail-how-a-mirror-and-whistle-get-you-found/",
+              "whyUseful": "Practical explanation of three-blast distress timing and field use."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "whistle",
+            "audio-signal",
+            "lost-outdoors"
+          ]
+        },
+        {
+          "title": "Using a Signal Mirror and Light",
+          "slug": "using-a-signal-mirror-and-light",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple Rescue Signaling",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Mirror and Light Signaling (Land, Day and Night)",
+          "quickAnswer": "Aim sunlight or a bright light at aircraft, boats, or distant people using a mirror or reflective object to create intense flashes.",
+          "whenToUse": "Daytime in open or partly open terrain when you can see aircraft, boats, or distant rescuers, or at night with a flashlight or headlamp.",
+          "preferredAction": "Use a dedicated signal mirror and aiming method to sweep flashes across potential rescuers.",
+          "backupAction": "If you lack a signal mirror, use any reflective surface or strobe mode on a light at night.",
+          "steps": [
+            "In sunlight, hold the mirror near your eye and use the V-finger method or built-in sight to walk the reflected spot onto the target.",
+            "Sweep flashes slowly across aircraft, ridgelines, trail corridors, or boats and repeat regularly.",
+            "At night, use a flashlight or headlamp to send groups of three flashes toward known search directions or moving lights.",
+            "If you cannot move much, prop a mirror or reflective blanket where it can catch light passively.",
+            "Pair mirror and light signaling with whistle or other methods."
+          ],
+          "warnings": [
+            "Mirrors are almost useless without direct or strong indirect light.",
+            "Do not shine high-intensity lights into nearby drivers’ or pilots’ eyes at close range."
+          ],
+          "whatNotToDo": [
+            "Do not rely on a mirror as your only signal.",
+            "Do not assume rescuers saw one flash; keep signaling when search activity is nearby."
+          ],
+          "redFlags": [
+            "If you see search aircraft, drones, or boats, prioritize signaling over non-essential tasks.",
+            "If injured and unable to move, set reflective items where they can work without constant effort."
+          ],
+          "preparednessTips": [
+            "Carry a small signal mirror or reflective card and practice aiming it before trips.",
+            "Keep your phone screen reasonably clean as a backup reflector.",
+            "Choose emergency blankets with a reflective side that can double as a visual signal."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Lost on the Trail? How a Mirror and Whistle Get You Found",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/lost-on-the-trail-how-a-mirror-and-whistle-get-you-found/",
+              "whyUseful": "Detailed mirror-signaling methods and realistic field limitations."
+            },
+            {
+              "title": "Wilderness and Remote First Aid Pocket Guide",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/content/dam/redcross/atg/PDF_s/Preparedness___Disaster_Recovery/Disaster_Preparedness/Wilderness-and-Remote-First-Aid-Pocket-Guide.pdf",
+              "whyUseful": "Authoritative Red Cross field guide listing mirrors and beacons as key signaling tools."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "mirror",
+            "light-signal",
+            "visual-signal"
+          ]
+        },
+        {
+          "title": "Ground, Fire, and Passive Visual Signals",
+          "slug": "ground-fire-and-passive-visual-signals",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple Rescue Signaling",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Ground-to-Air Symbols for Aircraft",
+          "quickAnswer": "Create big, simple, high-contrast shapes on the ground and use bright materials or smoke so rescuers can spot you from air or ground.",
+          "whenToUse": "When you are staying put or moving slowly and want to attract aircraft, drones, or distant ground searchers.",
+          "preferredAction": "Use large ground symbols and bright passive markers, and use fire or smoke only when safe and legal.",
+          "backupAction": "If you cannot make fire or large symbols, hang bright clothing or reflective materials in visible places and keep your area obvious.",
+          "steps": [
+            "Choose an open area visible from above or at a distance if possible.",
+            "Use rocks, logs, or gear to make letters or shapes such as SOS, X, or a large arrow at least several feet wide.",
+            "If fire is safe and allowed, build small signal fires and be ready to add green material for smoke when searchers are near.",
+            "Drape bright clothing or a reflective blanket over rocks or trees to create strong contrast.",
+            "At night, group three lights or fires in a line or triangle to signal distress.",
+            "Maintain signals and check that they remain visible."
+          ],
+          "warnings": [
+            "Fire signaling can be dangerous and may be illegal or reckless in dry or windy conditions.",
+            "Smoke can worsen breathing or hide your position if poorly placed."
+          ],
+          "whatNotToDo": [
+            "Do not build large fires in high wind, extreme dryness, or near flammable brush.",
+            "Do not create cluttered ground markings; simple, large shapes work best."
+          ],
+          "redFlags": [
+            "If you see aircraft or hear searchers, focus on boosting visibility quickly.",
+            "If fire escapes your control or wind shifts dangerously, move away immediately and reassess."
+          ],
+          "preparednessTips": [
+            "Carry a reflective emergency blanket and high-visibility clothing.",
+            "Pack at least one reliable fire-starting method if local regulations and wildfire risk allow signal fires.",
+            "Learn your area’s fire restrictions before depending on open-flame signaling."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness and Remote First Aid Pocket Guide",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/content/dam/redcross/atg/PDF_s/Preparedness___Disaster_Recovery/Disaster_Preparedness/Wilderness-and-Remote-First-Aid-Pocket-Guide.pdf",
+              "whyUseful": "Authoritative guide mentioning fires, smoke, mirrors, and whistles for signaling."
+            },
+            {
+              "title": "How to Signal for Help in the Wild",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/how-to-signal-for-help-in-the-wild/",
+              "whyUseful": "Practical advice on three fires, ground symbols, and layered signaling methods."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "ground-signals",
+            "fire-signal",
+            "visibility"
+          ]
+        },
+        {
+          "title": "Choosing the Safest Available Water Source",
+          "slug": "choosing-the-safest-available-water-source",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Safe Water Collection (Before Purification)",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Choosing Safe Hydration Sources (Bottled, Tap, Surface Water)",
+          "quickAnswer": "Pick the clearest, most upstream, and least contaminated-looking source you can, then plan to treat it.",
+          "whenToUse": "Whenever you must collect natural water for drinking or hygiene in the field.",
+          "preferredAction": "Select flowing water from higher, cleaner-looking locations and avoid sources near livestock, sewage, or heavy human activity.",
+          "backupAction": "If only poor-quality sources are available, choose the least bad option and treat it as thoroughly as your tools allow.",
+          "steps": [
+            "Look for flowing water rather than stagnant pools and avoid water with strong odor, scum, or dead animals.",
+            "Collect from upstream of camps, trails, or livestock areas whenever possible.",
+            "Prefer water that is clear to the eye; if silty, allow sediment to settle before treatment.",
+            "Avoid collecting from beaver ponds, irrigation channels, or near latrines and wastewater discharge.",
+            "Treat the water before drinking whenever possible."
+          ],
+          "warnings": [
+            "Even clear high-mountain water can contain microorganisms.",
+            "Contamination risk is higher downstream of agriculture, grazing, or human settlement."
+          ],
+          "whatNotToDo": [
+            "Do not assume natural equals safe.",
+            "Do not drink from obviously contaminated sources unless you face life-threatening dehydration and have no alternative."
+          ],
+          "redFlags": [
+            "Severe vomiting, diarrhea, or dehydration after drinking untreated water.",
+            "Known compromise of a public or shared supply after a disaster."
+          ],
+          "preparednessTips": [
+            "Carry at least one reliable treatment method on extended trips.",
+            "Learn local guidance about water safety in your destination.",
+            "Bring enough stored water for the first day where feasible."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness Medical Society Practice Guidelines for Water Disinfection and Treatment",
+              "organization": "Wilderness Medical Society",
+              "url": "https://journals.sagepub.com/doi/10.1016/j.wem.2016.12.001",
+              "whyUseful": "Evidence-based medical guidance supporting conservative field water collection and treatment decisions."
+            }
+          ],
+          "appTags": [
+            "water-collection",
+            "water-safety",
+            "wilderness-water",
+            "disaster-water"
+          ]
+        },
+        {
+          "title": "Collecting and Storing Water Safely Before Treatment",
+          "slug": "collecting-and-storing-water-safely-before-treatment",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Safe Water Collection (Before Purification)",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Use the cleanest container you have, avoid dipping with dirty hands or gear, and protect stored water from re-contamination.",
+          "whenToUse": "Whenever you gather water from natural or emergency sources before you can purify or disinfect it.",
+          "preferredAction": "Fill dedicated water containers directly from the source or by pouring, minimize contact with dirty surfaces, and separate untreated from treated water.",
+          "backupAction": "If you lack proper containers, improvise with food-grade bottles, cooking pots, or clean plastic bags and keep them away from waste and fuel.",
+          "steps": [
+            "Rinse containers with source water if they held something else and empty them fully.",
+            "Fill containers directly or pour from a cleaner cup or pot rather than dipping with dirty hands.",
+            "Keep untreated water separate from treated water.",
+            "Cover containers tightly to keep out dirt and insects.",
+            "Store in shade if possible and away from fuel, chemicals, or latrine areas.",
+            "Treat the water as soon as practical by boiling, filtration, or chemicals."
+          ],
+          "warnings": [
+            "Cross-contamination between treated and untreated water is a common failure point.",
+            "Some improvised containers may leach chemicals and should not be used."
+          ],
+          "whatNotToDo": [
+            "Do not store untreated water in containers that recently held fuel, pesticides, or unknown chemicals.",
+            "Do not top off treated water with untreated water without re-treating it."
+          ],
+          "redFlags": [
+            "Multiple people develop gastrointestinal illness after drinking from a shared source.",
+            "Fuel smell or chemical taste suggesting chemical contamination."
+          ],
+          "preparednessTips": [
+            "Include sturdy bottles, a collapsible container, and a treatment method in your emergency kit.",
+            "Practice using your filter, tablets, or other methods before an emergency.",
+            "For home emergencies, follow public guidance on storing tap water in clean containers."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness Medical Society Practice Guidelines for Water Disinfection and Treatment",
+              "organization": "Wilderness Medical Society",
+              "url": "https://journals.sagepub.com/doi/10.1016/j.wem.2016.12.001",
+              "whyUseful": "Technical and evidence-based field water handling and treatment principles."
+            }
+          ],
+          "appTags": [
+            "water-collection",
+            "storage",
+            "hygiene",
+            "disaster-prep"
+          ]
+        },
+        {
+          "title": "When It’s Better to Risk Untreated Water",
+          "slug": "when-its-better-to-risk-untreated-water",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Safe Water Collection (Before Purification)",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If you are at high risk of life-threatening dehydration and have no way to treat water, drinking the best available untreated water may be safer than not drinking at all.",
+          "whenToUse": "In extreme situations where you cannot treat water and are showing signs of severe dehydration.",
+          "preferredAction": "Choose the cleanest-appearing source available and drink enough to stabilize, understanding the infection risk.",
+          "backupAction": "If you can delay briefly, rest, reduce exertion, and see whether you can improvise treatment before deciding.",
+          "steps": [
+            "Assess severe dehydration signs such as dry mouth, minimal urine, dizziness, confusion, or inability to keep walking.",
+            "Confirm you truly cannot treat water with fire, fuel, filter, tablets, or safe containers.",
+            "Select the least contaminated source available.",
+            "Drink slowly at first, especially if nauseated.",
+            "After rescue or reaching care, tell medical personnel that you drank untreated water."
+          ],
+          "warnings": [
+            "This is a high-risk last-resort choice and can lead to gastrointestinal illness or infection.",
+            "Children, older adults, pregnant people, and those with chronic illness may be more vulnerable to waterborne disease."
+          ],
+          "whatNotToDo": [
+            "Do not drink clearly hazardous water with visible chemicals, strong fuel odor, or strong sewage smell unless the alternative is likely immediate death from dehydration.",
+            "Do not assume a small sip can test safety; pathogens are not detectable by taste."
+          ],
+          "redFlags": [
+            "Severe vomiting, diarrhea, blood in stool, fever, abdominal pain, or worsening dehydration after drinking suspect water."
+          ],
+          "preparednessTips": [
+            "Always carry a basic water treatment method on outdoor trips.",
+            "Store emergency water at home for several days per person.",
+            "Learn local emergency guidance on boil-water advisories and chemical spills."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness Medical Society Practice Guidelines for Water Disinfection and Treatment",
+              "organization": "Wilderness Medical Society",
+              "url": "https://journals.sagepub.com/doi/10.1016/j.wem.2016.12.001",
+              "whyUseful": "Provides the nuanced risk-benefit context behind last-resort untreated water decisions."
+            }
+          ],
+          "appTags": [
+            "water-collection",
+            "dehydration",
+            "high-risk-decision",
+            "last-resort"
+          ]
+        },
+        {
+          "title": "Hand Hygiene and Food Safety in the Field",
+          "slug": "hand-hygiene-and-food-safety-in-the-field",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Basic Camp and Bivouac Hygiene",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Clean your hands before eating and after toilet use, and keep food prep surfaces and utensils as clean and dry as possible.",
+          "whenToUse": "During any multi-hour or overnight stay outdoors, especially when preparing or eating food or after using the toilet.",
+          "preferredAction": "Wash hands with safe water and soap before eating or handling food and after toilet use; use alcohol-based sanitizer when water is limited.",
+          "backupAction": "If water is scarce, prioritize sanitizer before eating and after toilet use, and wipe away visible dirt first.",
+          "steps": [
+            "If you have safe water, wash hands with soap for at least 20 seconds and rinse well.",
+            "If no water is available, apply alcohol-based hand sanitizer and rub until dry.",
+            "Prepare food on the cleanest surface available and keep raw and cooked foods separate.",
+            "Wash utensils and dishes with safe water and soap if possible, then air-dry.",
+            "Store food away from waste and animals."
+          ],
+          "warnings": [
+            "Dirty hands are a major source of gastrointestinal illness in the field.",
+            "Some germs are harder to remove with sanitizer alone; soap and water are preferred when available."
+          ],
+          "whatNotToDo": [
+            "Do not prepare or eat food immediately after toileting or handling waste without cleaning your hands.",
+            "Do not use clearly contaminated water on food-contact items if you can avoid it."
+          ],
+          "redFlags": [
+            "Persistent vomiting, diarrhea, or inability to keep fluids down.",
+            "Signs of dehydration such as dizziness, confusion, or very low urine output."
+          ],
+          "preparednessTips": [
+            "Pack travel-sized soap, alcohol-based sanitizer, and resealable waste bags.",
+            "Include lightweight biodegradable soap for dishes and basic washing.",
+            "Practice hygiene habits at home so they are automatic in the field."
+          ],
+          "sourceReferences": [
+            {
+              "title": "When and How to Wash Your Hands",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/handwashing/when-how-handwashing.html",
+              "whyUseful": "Strong general handwashing guidance applicable in emergency and field settings."
+            },
+            {
+              "title": "Camping Hygiene: Tips for Staying Clean Outdoors",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/camping-hygiene-tips-for-staying-clean-outdoors/",
+              "whyUseful": "Practical limited-water outdoor hygiene guidance."
+            }
+          ],
+          "appTags": [
+            "hygiene",
+            "handwashing",
+            "food-safety",
+            "field-living"
+          ]
+        },
+        {
+          "title": "Human Waste and Washing Basics",
+          "slug": "human-waste-and-washing-basics",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Basic Camp and Bivouac Hygiene",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep waste and washing well away from water sources and camp, and bury human waste only where local rules allow.",
+          "whenToUse": "On overnight or multi-day trips without toilets, or when infrastructure fails in disasters.",
+          "preferredAction": "Use existing toilets or latrines where provided; if not, follow local guidance for catholes and washing at a distance from water.",
+          "backupAction": "In fragile or heavily regulated areas where burying waste is not allowed, pack out human waste using approved bags per local guidance.",
+          "steps": [
+            "Use toilets or latrines if they exist.",
+            "If none exist, choose a site at least about 60 to 70 meters from water, camp, and trails, following local recommendations.",
+            "Dig a small cathole 15 to 20 cm deep if allowed and bury waste; pack out toilet paper where required.",
+            "Carry wash water away from streams or lakes and scatter greywater broadly instead of dumping it in one spot.",
+            "Keep washing and waste areas separate from food storage and sleeping areas."
+          ],
+          "warnings": [
+            "Poor waste disposal can contaminate water, attract animals, and spread disease.",
+            "Local rules may differ and can override general advice, especially in sensitive or high-use areas."
+          ],
+          "whatNotToDo": [
+            "Do not defecate directly in or next to streams, lakes, or springs.",
+            "Do not wash dishes or yourself with soap directly in natural water sources."
+          ],
+          "redFlags": [
+            "Outbreaks of diarrhea or gastrointestinal illness in your group.",
+            "Community or park notices about water contamination."
+          ],
+          "preparednessTips": [
+            "Pack a small trowel, toilet paper, hand sanitizer, and waste bags where appropriate.",
+            "Learn local regulations before going out; some parks require packing out all waste.",
+            "For disasters at home, follow local public health guidance on sanitation and waste disposal."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Camping Hygiene: Tips for Staying Clean Outdoors",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/camping-hygiene-tips-for-staying-clean-outdoors/",
+              "whyUseful": "Practical outdoor hygiene and waste-management advice."
+            },
+            {
+              "title": "Handwashing in Emergencies",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/healthywater/emergency/sanitation-hygiene/handwashing.html",
+              "whyUseful": "Emergency hygiene principles that support conservative sanitation practices."
+            }
+          ],
+          "appTags": [
+            "hygiene",
+            "sanitation",
+            "human-waste",
+            "leave-no-trace"
+          ]
+        },
+        {
+          "title": "Managing Small Wounds and Skin Problems",
+          "slug": "managing-small-wounds-and-skin-problems",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Basic Camp and Bivouac Hygiene",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Caring for Minor Cuts and Scrapes",
+          "quickAnswer": "Clean small cuts and blisters early, keep them dry and covered, and watch closely for signs of infection.",
+          "whenToUse": "Any time you get a small cut, scrape, blister, or insect bite in the field.",
+          "preferredAction": "Rinse with clean or treated water, apply antiseptic if available, and cover with a clean bandage.",
+          "backupAction": "If you lack antiseptic, rinse with the best available safe water, gently remove dirt, and keep the wound as clean and dry as you can.",
+          "steps": [
+            "Clean your hands or use sanitizer before touching the wound.",
+            "Rinse gently with safe water to remove dirt and debris.",
+            "Apply antiseptic ointment if available.",
+            "Cover with a clean bandage or dressing without cutting off circulation.",
+            "Check daily for redness, swelling, pus, warmth, or increasing pain.",
+            "For blisters, protect from friction and avoid opening unless necessary for function."
+          ],
+          "warnings": [
+            "Even minor wounds can become serious infections in outdoor or disaster settings.",
+            "Some ointments and antiseptics can trigger allergic reactions."
+          ],
+          "whatNotToDo": [
+            "Do not apply dirt, ash, or unverified natural substances to open wounds.",
+            "Do not ignore increasing redness, swelling, or pain."
+          ],
+          "redFlags": [
+            "Spreading redness, warmth, significant swelling, fever, or red streaks.",
+            "Puncture wounds, animal bites, or deep cuts, especially near joints."
+          ],
+          "preparednessTips": [
+            "Carry a basic first aid kit with gloves, dressings, bandages, and antiseptic.",
+            "Learn basic first aid from Red Cross or similar organizations.",
+            "Keep tetanus immunizations up to date."
+          ],
+          "sourceReferences": [
+            {
+              "title": "When and How to Wash Your Hands",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/handwashing/when-how-handwashing.html",
+              "whyUseful": "Supports the importance of clean hands before wound care."
+            },
+            {
+              "title": "Emergency Supply Kit Checklist",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/kit",
+              "whyUseful": "Confirms basic wound-care items recommended in emergency kits."
+            }
+          ],
+          "appTags": [
+            "hygiene",
+            "wound-care",
+            "first-aid",
+            "infection-signs"
+          ]
+        },
+        {
+          "title": "Tying Down Tarps and Shelters (Taut-Line and Truckers’ Hitch)",
+          "slug": "tying-down-tarps-and-shelters-taut-line-and-truckers-hitch",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple, High-Value Knots and Cordage Uses",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Knot Tying",
+          "quickAnswer": "Use adjustable knots that can tension and re-tension guy lines to keep tarps and bivouacs stable.",
+          "whenToUse": "Any time you need to tension lines for tarps, tents, or improvised shelters.",
+          "preferredAction": "Use a taut-line hitch on guy lines to create an adjustable loop that slides when slack and grips when loaded.",
+          "backupAction": "Use simple wraps around trees and multiple half hitches if you do not know the named knots, understanding they are less adjustable.",
+          "steps": [
+            "Wrap cord around a stake or tree and create an adjustable loop in the standing line.",
+            "For a taut-line hitch, make two wraps inside the loop toward the anchor and one wrap outside, then tighten.",
+            "Slide the knot to adjust tension on the tarp as needed.",
+            "For a trucker’s hitch, create a loop in the standing line, run the working end through an anchor point and back through the loop, then pull to tension and secure with half hitches."
+          ],
+          "warnings": [
+            "Incorrectly tied knots can slip and cause shelter failure in bad weather.",
+            "High loads on thin cord can cut into bark or damage anchors."
+          ],
+          "whatNotToDo": [
+            "Do not overload light cordage with heavy loads such as body weight.",
+            "Do not rely on camping knots for technical rescue or climbing."
+          ],
+          "redFlags": [
+            "Shelter repeatedly collapsing in severe weather when you cannot maintain warmth and dryness."
+          ],
+          "preparednessTips": [
+            "Practice a very small set of knots at home until you can tie them under stress.",
+            "Carry several meters of strong cord or paracord in your emergency kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Knots for Survival and Rescue",
+              "organization": "Animated Knots",
+              "url": "https://www.animatedknots.com/",
+              "whyUseful": "Widely used visual reference for basic, non-technical knots, though it also includes advanced content the app should exclude."
+            }
+          ],
+          "appTags": [
+            "knots",
+            "shelter-building",
+            "cordage",
+            "basic-skills"
+          ]
+        },
+        {
+          "title": "Simple Loops and Attachment Knots (Figure-Eight on a Bight, Bowline)",
+          "slug": "simple-loops-and-attachment-knots-figure-eight-on-a-bight-bowline",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple, High-Value Knots and Cordage Uses",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Knot Tying",
+          "quickAnswer": "Use simple, non-slipping loops to attach lines to objects or create fixed loops for gear; do not use them for life-safety loads unless trained.",
+          "whenToUse": "For attaching gear to packs, hanging food, or creating fixed loops in a line for non-life-critical tasks.",
+          "preferredAction": "Use a bowline or figure-eight on a bight to create a fixed loop at the end or in the middle of a rope.",
+          "backupAction": "Use multiple overhand knots and backups if you do not know these knots, recognizing they may be harder to untie.",
+          "steps": [
+            "Tie a bowline by making a small loop, passing the working end up through the loop, around the standing part, and back down through the loop.",
+            "Tie a figure-eight on a bight by doubling the rope, forming a loop, wrapping around the standing part to make an 8, then passing the loop through and tightening.",
+            "Use these loops for gear attachment or fixed points for non-life-safety tasks.",
+            "Dress and tighten the knot carefully before loading it."
+          ],
+          "warnings": [
+            "Knots can loosen under repeated loading if not dressed and tightened.",
+            "For untrained users, any knot used for life safety is outside safe public guidance."
+          ],
+          "whatNotToDo": [
+            "Do not use these knots for rappelling, hauling people, or technical rescue.",
+            "Do not assume any knot is safe for life support unless you are trained and using proper systems."
+          ],
+          "redFlags": [
+            "If you think you need to move someone on steep terrain with ropes, call professional rescue rather than improvising rope systems."
+          ],
+          "preparednessTips": [
+            "Practice these knots under calm conditions.",
+            "Include printed or in-app diagrams for quick reference."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Knots for Survival and Rescue",
+              "organization": "Animated Knots",
+              "url": "https://www.animatedknots.com/",
+              "whyUseful": "Clear visual instruction for simple loops, though the app must filter out advanced rescue and climbing content."
+            }
+          ],
+          "appTags": [
+            "knots",
+            "loops",
+            "gear-attachment",
+            "non-technical"
+          ]
+        },
+        {
+          "title": "Everyday Cordage Uses in Emergencies",
+          "slug": "everyday-cordage-uses-in-emergencies",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Simple, High-Value Knots and Cordage Uses",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Cordage is most useful for shelter setup, securing gear, simple splints, and improvised repairs—not for climbing or rescue.",
+          "whenToUse": "In almost any outdoor or disaster scenario where you need to secure, bundle, or support non-life-critical loads.",
+          "preferredAction": "Use cord to pitch tarps, secure gear, lash broken items, or support simple improvised splints.",
+          "backupAction": "If you lack dedicated cordage, twist strips of strong fabric or webbing for temporary use.",
+          "steps": [
+            "Identify tasks where cord lowers risk, such as keeping shelter taut, bundling gear, or supporting a simple splint.",
+            "Use simple knots like half hitches, taut-line hitches, and bowlines for these tasks.",
+            "For splints, pad the injured area, place rigid supports, and tie gently above and below the injury rather than over it.",
+            "Check knots and cord tension regularly, especially before bad weather."
+          ],
+          "warnings": [
+            "Improvised splints require judgment and poor splinting can worsen injuries.",
+            "Thin cord can cause pressure injuries if tied too tightly around limbs."
+          ],
+          "whatNotToDo": [
+            "Do not attempt technical rescues, rappels, or body-weight systems with ordinary cordage.",
+            "Do not tie anything so tight that skin turns pale, blue, or numb unless you are applying a trained tourniquet for life-threatening bleeding."
+          ],
+          "redFlags": [
+            "Signs of reduced circulation below a tied area such as cold, pale, or numb extremities.",
+            "Serious fractures, deformity, or inability to move a limb."
+          ],
+          "preparednessTips": [
+            "Pack several meters of medium-strength cord or webbing in your kit.",
+            "Practice low-risk tasks like hanging tarps or securing bundles.",
+            "Include simple illustrated guides for splinting from recognized first-aid organizations."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency Supply Kit Checklist",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/kit",
+              "whyUseful": "Illustrates why rope or cord is commonly recommended in emergency kits."
+            }
+          ],
+          "appTags": [
+            "cordage",
+            "repairs",
+            "shelter",
+            "splint-support"
+          ]
+        },
+        {
+          "title": "Basic Knife Handling and Safe Zones",
+          "slug": "basic-knife-handling-and-safe-zones",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Keep your body and others out of your knife’s path, work slowly, and stop using knives when you are cold, exhausted, or impaired.",
+          "whenToUse": "Any time you use a knife or multi-tool outdoors or in an emergency.",
+          "preferredAction": "Use controlled cuts away from your body, keep others outside your arm’s-length safety bubble, and sheath the knife immediately when not in use.",
+          "backupAction": "If you are too cold, tired, or shaky to control the blade, delay the task or use safer alternatives such as tearing, breaking, or using scissors on a multi-tool.",
+          "steps": [
+            "Define your cutting safety bubble at full arm’s reach and keep others out of it.",
+            "Avoid cutting in the area between your thighs where a slip can hit major blood vessels.",
+            "Cut away from your body and hands using stable support where possible.",
+            "Keep blades sharp; dull blades require more force and slip more easily.",
+            "Close folding blades and sheath fixed blades immediately after use.",
+            "Stop and reassess if you feel rushed, overloaded, or unstable."
+          ],
+          "warnings": [
+            "Knife injuries can be life-threatening in remote settings because of bleeding and infection.",
+            "Cold, fatigue, and intoxication significantly increase accident risk."
+          ],
+          "whatNotToDo": [
+            "Do not use knives while intoxicated or under the influence of drugs.",
+            "Do not cut toward your own body or hold material in your lap while cutting.",
+            "Do not hand an open knife to another person; close it or pass it handle-first safely."
+          ],
+          "redFlags": [
+            "Deep cuts, heavy bleeding that does not stop with direct pressure, or suspected tendon or nerve injury.",
+            "Wounds in the groin, inner thigh, or neck."
+          ],
+          "preparednessTips": [
+            "Learn basic first aid for bleeding and carry proper dressings.",
+            "Choose a sturdy, simple knife or multi-tool with a secure locking mechanism.",
+            "Practice safe handling at home before relying on a knife in emergencies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "7 Crucial Safety Tips When Using Outdoor Knives",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/7-crucial-safety-tips-when-using-outdoor-knives/",
+              "whyUseful": "Accessible outdoor knife safety guidance including safe zones and risk factors."
+            }
+          ],
+          "appTags": [
+            "knife-safety",
+            "tools",
+            "bleeding-risk",
+            "basic-skills"
+          ]
+        },
+        {
+          "title": "Safe Cutting Tasks for Shelter and Repairs",
+          "slug": "safe-cutting-tasks-for-shelter-and-repairs",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Basic Knife Handling and Safe Zones",
+          "quickAnswer": "Use knives for small, controlled tasks—cutting cord, trimming branches, making stakes—not for heavy chopping or prying.",
+          "whenToUse": "When you need to create or repair basic shelter elements, prepare simple food, or cut cordage.",
+          "preferredAction": "Plan cuts, stabilize materials, and work from a safe position, taking breaks to avoid fatigue.",
+          "backupAction": "If you cannot safely cut, look for alternatives such as breaking branches by hand, using existing debris, or changing the repair approach.",
+          "steps": [
+            "Use the knife to sharpen stakes, cut cord, and trim small branches rather than chop large wood.",
+            "For repairs, make controlled cuts to remove frayed material and shape patches instead of using the knife to pry.",
+            "For food, cut on a stable surface and keep fingers curled and away from the blade path.",
+            "Brace workpieces on the ground or against a solid object instead of holding them loosely."
+          ],
+          "warnings": [
+            "Using a knife as a pry bar can break the blade and cause injury.",
+            "Heavy chopping with an unsuitable knife adds risk without much benefit in short-term survival settings."
+          ],
+          "whatNotToDo": [
+            "Do not attempt to cut large logs or branches when smaller deadfall will work.",
+            "Do not carve while walking or distracted."
+          ],
+          "redFlags": [
+            "Injury from a broken blade or large splinters.",
+            "Lacerations that do not stop bleeding with direct pressure."
+          ],
+          "preparednessTips": [
+            "Include a small saw if you anticipate regular shelter-building tasks.",
+            "Practice low-risk cutting tasks before emergencies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "7 Crucial Safety Tips When Using Outdoor Knives",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/7-crucial-safety-tips-when-using-outdoor-knives/",
+              "whyUseful": "Practical, public-facing knife-safety limits and task framing."
+            }
+          ],
+          "appTags": [
+            "knife-use",
+            "shelter",
+            "repairs",
+            "safe-tasks"
+          ]
+        },
+        {
+          "title": "When Not to Use a Knife",
+          "slug": "when-not-to-use-a-knife",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Basic Knife Handling and Safe Zones",
+          "quickAnswer": "Skip the knife if you are cold, exhausted, unstable, or tempted to use it for risky tasks like prying, throwing, or self-defense.",
+          "whenToUse": "When deciding whether a task truly justifies pulling out your knife.",
+          "preferredAction": "Ask whether you can solve the problem another way without adding blade risk.",
+          "backupAction": "If you must use a knife while not at your best, slow down, reduce the task scope, and consider whether a steadier person can do it instead.",
+          "steps": [
+            "Check whether your hands are cold or numb, whether you are very tired, or whether you are emotionally stressed.",
+            "Consider alternatives such as moving the shelter, using a different anchor, or breaking branches by hand.",
+            "If you proceed, choose the smallest and simplest cut that will work.",
+            "Stop after short intervals to reassess your control and need."
+          ],
+          "warnings": [
+            "Many serious outdoor knife injuries happen at the end of the day when people are cold and tired.",
+            "Panic-driven or tactical uses of knives increase risk without improving safety."
+          ],
+          "whatNotToDo": [
+            "Do not use knives for wildlife self-defense plans; follow official wildlife safety guidance instead.",
+            "Do not attempt knife skills you have only seen online without prior safe practice."
+          ],
+          "redFlags": [
+            "Any deep or heavily bleeding knife wound.",
+            "Wounds with loss of movement or feeling in fingers or toes."
+          ],
+          "preparednessTips": [
+            "Reduce knife dependence with pre-cut cord lengths or prepared stakes.",
+            "Train on safe tool use before extended trips."
+          ],
+          "sourceReferences": [
+            {
+              "title": "7 Crucial Safety Tips When Using Outdoor Knives",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/7-crucial-safety-tips-when-using-outdoor-knives/",
+              "whyUseful": "Supports conservative, safety-first decisions about whether to use a knife at all."
+            }
+          ],
+          "appTags": [
+            "knife-safety",
+            "risk-management",
+            "decision-making"
+          ]
+        },
+        {
+          "title": "Pocket Always-With-You Kit",
+          "slug": "pocket-always-with-you-kit",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Packing and Using a Small Emergency Kit",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Carry a tiny set of essentials—whistle, light, basic bandages, fire starter, and emergency blanket—on your person, not just in your pack.",
+          "whenToUse": "Everyday and on any outdoor trip where you might be separated from your main pack.",
+          "preferredAction": "Assemble a small kit that fits in a pocket or worn pouch and covers signaling, light, basic first aid, and minimal shelter.",
+          "backupAction": "If you cannot carry a full micro-kit, prioritize a whistle, small flashlight, and a way to contact help.",
+          "steps": [
+            "Include a whistle, small flashlight or headlamp, adhesive bandages, alcohol wipes, gauze, and tape.",
+            "Add a compact emergency blanket, lighter or matches if allowed, and a few water treatment tablets where appropriate.",
+            "Keep the kit on your body, not only in your backpack.",
+            "Check items regularly and replace dead batteries and expired supplies."
+          ],
+          "warnings": [
+            "Relying only on a larger kit in your pack can leave you vulnerable if you are separated from it.",
+            "Some items such as lighters may be restricted in specific environments."
+          ],
+          "whatNotToDo": [
+            "Do not overload the pocket kit so much that you stop carrying it.",
+            "Do not assume your phone alone is enough; batteries and signal can fail."
+          ],
+          "redFlags": [
+            "If you use critical items such as all your bandages or water tablets, treat that as a cue to shorten the trip or seek safer conditions."
+          ],
+          "preparednessTips": [
+            "Adapt official emergency kit guidance to pocket scale.",
+            "Customize for local conditions such as extra warmth in cold climates or sun protection in hot climates."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Build an Emergency Kit and Grab-and-Go Bag",
+              "organization": "Government of British Columbia",
+              "url": "https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedness-response-recovery/preparedness-at-home/build-an-emergency-kit-and-grab-and-go-bag",
+              "whyUseful": "Official checklist that supports small, practical grab-and-go essentials such as light, whistle, and first aid."
+            }
+          ],
+          "appTags": [
+            "emergency-kit",
+            "EDC",
+            "signaling",
+            "first-aid"
+          ]
+        },
+        {
+          "title": "Daypack-Size Emergency Kit for Hikes",
+          "slug": "daypack-size-emergency-kit-for-hikes",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Packing and Using a Small Emergency Kit",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Add core essentials to your hiking pack: navigation, light, extra clothing, shelter, water, food, first aid, fire, tools, and signaling.",
+          "whenToUse": "For day hikes, short trips, or local outings where an unplanned night out is possible.",
+          "preferredAction": "Pack items that let you survive an unplanned night outdoors: extra warmth, rain protection, emergency shelter, water and treatment, first aid, light, and signaling.",
+          "backupAction": "If space or budget is limited, prioritize shelter or warmth, light, signaling, and water over duplicate tools.",
+          "steps": [
+            "Carry map, compass, and or offline GPS or phone maps.",
+            "Pack an extra warm layer, hat, light rain shell, and emergency blanket or bivy.",
+            "Bring a headlamp and spare batteries.",
+            "Carry enough water for the day plus a treatment method.",
+            "Add extra high-energy snacks.",
+            "Pack a basic first aid kit, blister care, whistle, reflective item, and a small knife or multi-tool used conservatively."
+          ],
+          "warnings": [
+            "Overpacking can lead to leaving the kit behind; find a balance you will actually carry.",
+            "Some locations restrict open flame and certain tools."
+          ],
+          "whatNotToDo": [
+            "Do not pack only cool gear while neglecting basics like warm clothing or water treatment.",
+            "Do not assume group members will share kits; everyone should have basics."
+          ],
+          "redFlags": [
+            "If your kit cannot cover an unplanned night in current weather, consider shortening or turning back from the trip."
+          ],
+          "preparednessTips": [
+            "Use official emergency kit checklists as a baseline and adapt for hiking.",
+            "Review your kit after each trip and adjust based on what you used or missed."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Build an Emergency Kit and Grab-and-Go Bag",
+              "organization": "Government of British Columbia",
+              "url": "https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedness-response-recovery/preparedness-at-home/build-an-emergency-kit-and-grab-and-go-bag",
+              "whyUseful": "Official checklist that adapts well to an outdoor daypack kit."
+            },
+            {
+              "title": "Build A Kit",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/kit",
+              "whyUseful": "Strong official baseline for water, food, light, tools, and first aid priorities."
+            }
+          ],
+          "appTags": [
+            "emergency-kit",
+            "hiking",
+            "essentials",
+            "preparedness"
+          ]
+        },
+        {
+          "title": "Grab-and-Go Bag Basics (Home/Urban)",
+          "slug": "grab-and-go-bag-basics-home-urban",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Packing and Using a Small Emergency Kit",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Personal Evacuation Go-Bag (Adult)",
+          "quickAnswer": "Keep a small bag ready with water, food, light, communications, first aid, hygiene, documents, and basic tools to leave home quickly.",
+          "whenToUse": "For evacuations, sudden disasters, or when you must leave home or work on short notice.",
+          "preferredAction": "Follow official emergency kit guidance and customize for your household.",
+          "backupAction": "If you cannot assemble a full bag, gather the highest-priority items: medications, water, IDs, a flashlight, and a way to contact family.",
+          "steps": [
+            "Pack non-perishable food and water for several days where feasible.",
+            "Add flashlight, batteries or hand-crank light, radio, phone charger, and power bank.",
+            "Include first aid, personal medications, and hygiene items.",
+            "Add copies of important documents and some cash in small bills.",
+            "Include seasonal clothing, an emergency blanket, and a whistle.",
+            "Store the bag in an accessible location and review it at least annually."
+          ],
+          "warnings": [
+            "A heavy kit may be hard to carry; balance completeness with portability.",
+            "Medications expire and must be rotated regularly."
+          ],
+          "whatNotToDo": [
+            "Do not rely on last-minute packing during an evacuation.",
+            "Do not store the kit where it can be blocked in an emergency."
+          ],
+          "redFlags": [
+            "If local authorities issue evacuation or shelter-in-place orders, follow them and bring your bag.",
+            "If a family member runs out of critical medications, seek medical or pharmacy support quickly."
+          ],
+          "preparednessTips": [
+            "Follow local or national emergency preparedness websites for region-specific recommendations.",
+            "Include items for children, elders, and pets as needed.",
+            "Practice a quick grab-and-go drill with your household."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Build an Emergency Kit and Grab-and-Go Bag",
+              "organization": "Government of British Columbia",
+              "url": "https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedness-response-recovery/preparedness-at-home/build-an-emergency-kit-and-grab-and-go-bag",
+              "whyUseful": "Detailed official grab-and-go guidance for household evacuation readiness."
+            },
+            {
+              "title": "Build A Kit",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/kit",
+              "whyUseful": "Strong official U.S. emergency kit guidance on water, food, documents, tools, and medicines."
+            }
+          ],
+          "appTags": [
+            "emergency-kit",
+            "grab-and-go",
+            "household-prep",
+            "urban"
+          ]
+        },
+        {
+          "title": "Signs You Must Switch to Shelter and Warmth",
+          "slug": "signs-you-must-switch-to-shelter-and-warmth",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If you are getting cold, wet, or exhausted, stop non-essential tasks and put your energy into staying warm, dry, and out of the wind.",
+          "whenToUse": "When weather worsens, daylight fades, or you notice early signs of hypothermia or heat stress.",
+          "preferredAction": "Pause other activities and work on simple, effective shelter and clothing adjustments.",
+          "backupAction": "If you cannot build shelter, move to more protected terrain, huddle with others, and use any available insulation and emergency blankets.",
+          "steps": [
+            "Watch for uncontrollable shivering, clumsiness, confusion, or slurred speech in cold conditions.",
+            "If present, stop tasks like exploring or building elaborate shelters.",
+            "Add dry layers, get out of wind or rain, insulate from the ground, and share body warmth if appropriate.",
+            "In hot conditions, move to shade, loosen clothing, sip safe water, and rest.",
+            "Once basic comfort is restored, re-evaluate priorities and continue only essential tasks."
+          ],
+          "warnings": [
+            "Hypothermia and heat stroke can progress quickly and quietly.",
+            "Continuing physical work in these conditions can push you into collapse."
+          ],
+          "whatNotToDo": [
+            "Do not keep walking just to stay warm if you are wet, exhausted, and unsure of direction.",
+            "Do not ignore shivering or confusion in yourself or others."
+          ],
+          "redFlags": [
+            "Confusion, loss of coordination, or collapse in cold or hot environments.",
+            "Shivering that stops suddenly while the person is still cold."
+          ],
+          "preparednessTips": [
+            "Pack adequate clothing and an emergency blanket even on day trips.",
+            "Learn signs of hypothermia and heat illness through formal first-aid training.",
+            "Check forecasts and plan for worse-than-expected conditions."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "U.S. National Park Service",
+              "url": "https://www.nps.gov/articles/gtgemergencyplan.htm",
+              "whyUseful": "Supports conservative emergency planning and shelter-first behavior when stranded."
+            },
+            {
+              "title": "How To Avoid, Recognize and Treat Hypothermia",
+              "organization": "Washington Trails Association",
+              "url": "https://www.wta.org/go-outside/trail-smarts/how-to/how-to-avoid-prevent-and-recognize-hypothermia",
+              "whyUseful": "Practical exposure-recognition and shelter priorities for public outdoor users."
+            }
+          ],
+          "appTags": [
+            "shelter",
+            "warmth",
+            "hypothermia-signs",
+            "decision-making"
+          ]
+        },
+        {
+          "title": "When to Drop Tasks and Focus on Signaling",
+          "slug": "when-to-drop-tasks-and-focus-on-signaling",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "When rescuers are likely searching for you or you see or hear them, stop extra tasks and focus on being seen and heard.",
+          "whenToUse": "Any time you suspect a search has started or see aircraft, drones, boats, or search teams.",
+          "preferredAction": "Shift energy to whistle use, mirror or light flashes, and making your location obvious with ground or visual signals.",
+          "backupAction": "If you cannot actively signal continuously, set up passive signals like bright clothing or reflective blankets where they will be most visible.",
+          "steps": [
+            "When you hear or see potential rescuers, stop non-essential tasks.",
+            "Move to a visible area if safe, bringing whistle, mirror, and bright items.",
+            "Use three-blast whistle signals and mirror or light flashes toward rescuers.",
+            "Stand or place bright gear where you contrast with the surroundings.",
+            "Once contact seems likely, stay in place unless directed to move."
+          ],
+          "warnings": [
+            "Missing a narrow window of visibility can delay rescue significantly.",
+            "Over-focusing on camp tasks can make you miss distant sounds or signs of search teams."
+          ],
+          "whatNotToDo": [
+            "Do not continue long, noisy tasks that mask searcher calls or aircraft noise.",
+            "Do not hide under dense canopy when you could safely stand in a clearing."
+          ],
+          "redFlags": [
+            "If your condition is deteriorating, communicate that clearly as soon as contact is made."
+          ],
+          "preparednessTips": [
+            "Keep signaling tools accessible, not buried in your pack.",
+            "Establish a group plan so everyone pauses and signals when search activity appears."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wilderness and Remote First Aid Pocket Guide",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/content/dam/redcross/atg/PDF_s/Preparedness___Disaster_Recovery/Disaster_Preparedness/Wilderness-and-Remote-First-Aid-Pocket-Guide.pdf",
+              "whyUseful": "Authoritative field guide stressing signaling early and using whistles, mirrors, and beacons."
+            },
+            {
+              "title": "Lost on the Trail? How a Mirror and Whistle Get You Found",
+              "organization": "American Hiking Society",
+              "url": "https://americanhiking.org/resources/lost-on-the-trail-how-a-mirror-and-whistle-get-you-found/",
+              "whyUseful": "Practical field timing and responsiveness for signaling once a search may be active."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "priorities",
+            "rescue",
+            "decision-making"
+          ]
+        },
+        {
+          "title": "Balancing Activity and Rest to Avoid Exhaustion",
+          "slug": "balancing-activity-and-rest-to-avoid-exhaustion",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Core Skills and Basic Survival Tasks",
+          "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Pace yourself; overexertion increases risk of injury, poor decisions, and hypothermia or heat illness.",
+          "whenToUse": "Throughout any extended emergency or survival situation.",
+          "preferredAction": "Alternate periods of necessary work with rest, and stop tasks before you become exhausted or confused.",
+          "backupAction": "If you are already exhausted, simplify your plan and focus only on shelter, warmth, and minimal signaling until you recover.",
+          "steps": [
+            "After initial planning, schedule short work blocks followed by rest, especially in difficult conditions.",
+            "Keep tasks simple and high-value; avoid complex projects when tired.",
+            "Monitor yourself and others for fatigue, irritability, and poor coordination.",
+            "Adjust plans as daylight changes and avoid demanding work in the dark unless absolutely necessary."
+          ],
+          "warnings": [
+            "Exhaustion and low blood sugar impair judgment.",
+            "In cold or wet conditions, activity can hide early hypothermia until you stop moving."
+          ],
+          "whatNotToDo": [
+            "Do not insist on finishing non-critical tasks when you are clearly beyond your limits.",
+            "Do not work in hazardous terrain when extremely tired or in the dark unless it is the lesser danger."
+          ],
+          "redFlags": [
+            "Severe confusion, inability to follow simple instructions, or repeated falls.",
+            "Chest pain or shortness of breath not explained by mild exertion."
+          ],
+          "preparednessTips": [
+            "Maintain basic fitness and health.",
+            "Bring enough food and water to reduce exhaustion and dehydration risk."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "U.S. National Park Service",
+              "url": "https://www.nps.gov/articles/gtgemergencyplan.htm",
+              "whyUseful": "Supports conservative, energy-aware emergency planning once stranded."
+            },
+            {
+              "title": "Build A Kit",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/kit",
+              "whyUseful": "Reinforces that having supplies reduces the need for risky overexertion in emergencies."
+            }
+          ],
+          "appTags": [
+            "energy-management",
+            "rest",
+            "priorities",
+            "decision-making"
+          ]
+        }
+      ]
+    }
+  ]
+}

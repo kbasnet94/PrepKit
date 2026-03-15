@@ -1,0 +1,265 @@
+The grounded chat integration is already in place. Do not rebuild it.
+
+Goal:
+Fix the follow-up behavior so the chat can correctly handle user constraints and pivots within the same topic instead of dropping into low-confidence or repeating the wrong guide.
+
+Critical failure to fix:
+Current bad behavior:
+- User asks: "How to purify water?"
+- Chat correctly answers with "Purify Water by Boiling"
+- User follows up: "I don't have anything to boil the water with."
+- Chat wrongly falls into low-confidence / unclear intent and repeats the boiling guide
+
+Correct behavior:
+- Recognize this is a follow-up to the same water-purification topic
+- Recognize the user is rejecting the preferred method
+- Pivot to fallback methods and sibling guides
+- Answer with the backup option and related alternative guides
+- Do NOT treat this as a brand-new ambiguous query
+
+Main objective:
+Improve grounded chat so it supports:
+1. follow-up topic inheritance
+2. constraint detection
+3. fallback / backup-method pivoting
+4. sibling-guide retrieval inside the same parentTopic
+5. better low-confidence suppression for context-dependent follow-ups
+
+Current state:
+- grounded-chat-service.ts exists
+- chat already calls buildGuideGroundingContext -> buildAIEnhancedAnswer
+- matched guides, warnings, related guides, confidence, and source-review notices already render
+- existing guide retrieval utilities are already reused
+
+Do not:
+- do not rebuild chat from scratch
+- do not replace the UI
+- do not add a cloud LLM dependency
+- do not discard the current guide-grounded pipeline
+
+What to implement:
+
+1. Follow-up topic inheritance
+Add lightweight conversation context support to grounded chat.
+
+Behavior:
+- If the new message is short, reactive, or clearly dependent on the prior answer, bias retrieval toward the previous grounded topic.
+- Use the last assistant turn's top matched guide, parentTopic, category, and queryMode as soft context.
+- Only reuse prior context when the new message is elliptical or constraint-based.
+- If the user clearly changes topics, do not force old context.
+
+Examples that should inherit context:
+- "I don't have anything to boil the water with."
+- "What if I'm in a car?"
+- "What if there's no clean water?"
+- "What about at night?"
+- "What if it's a kid?"
+- "I don't have bleach."
+- "No shelter nearby."
+
+Implementation idea:
+- Pass a small conversationContext into getGroundedChatResponse
+- Include:
+  - previousTopGuideId
+  - previousParentTopic
+  - previousCategory
+  - previousQueryMode
+  - previousConfidence
+- Use this as a retrieval bias, not as a hard override
+
+2. Constraint detection
+Detect when the user is describing a limitation, blocker, or unavailable method.
+
+Examples of constraints:
+- "I can't do that"
+- "I don't have that"
+- "I can't boil it"
+- "I don't have bleach"
+- "I'm alone"
+- "I'm in a car"
+- "There's no signal"
+- "I can't move them"
+- "It's dark"
+- "I'm pregnant"
+- "I have no shelter"
+
+When a constraint is detected:
+- interpret it as a modifier of the previous answer, not as a fresh topic
+- look for:
+  1. backupAction in the current top guide
+  2. sibling guides under the same parentTopic
+  3. strongly related alternative guides in the same category
+- try to answer the new constraint directly
+
+3. Fallback / backup-method pivoting
+If the current guide's preferred method is blocked by the user's follow-up:
+- do not repeat the preferred method
+- pivot to:
+  - backupAction from the same guide
+  - next-best sibling guide under same parentTopic
+  - related practical guide representing an alternative method
+
+Water example:
+- initial guide: Purify Water by Boiling
+- follow-up: "I don't have anything to boil the water with"
+- expected answer:
+  - state that boiling is not available
+  - offer bleach / purification tablets if available
+  - mention choosing safest source and treatment limitations
+  - surface sibling guides such as:
+    - Purifying Water with Household Liquid Bleach
+    - Choosing the Safest Available Water Source
+- do NOT answer with low-confidence unless no real alternative exists
+
+4. Related-guides selection: make it parentTopic-first
+Change related guides so they are chosen in this order:
+1. same parentTopic as the current top matched guide
+2. same category with clearly complementary tags
+3. only then secondary score-based matches
+
+Rules:
+- exclude the current top matched guide
+- prioritize guides that are alternatives, siblings, or useful next steps
+- avoid near-duplicates
+- show none if there are no meaningful related guides
+
+5. Low-confidence suppression for follow-ups
+Do not drop into low-confidence mode too easily on follow-ups.
+
+Rules:
+- if previous answer had medium/high confidence
+- and current message is short + dependent
+- and there are valid sibling guides / backup methods in the same topic cluster
+then:
+- do NOT show "query intent unclear"
+- do NOT return the same top guide blindly
+- do NOT give a generic weak fallback
+Instead:
+- answer from the best fallback option in the same topic family
+
+Low-confidence should only trigger if:
+- no valid contextual sibling / backup path exists
+- or the follow-up is still too ambiguous after using prior context
+
+6. Emergency answer compression
+Keep urgent and medical answers short.
+For emergency / medical / urgent follow-ups:
+- immediate action first
+- 3 to 5 steps max
+- clear warnings / red flags
+- no long background paragraphs
+- AI rewrite must preserve brevity
+
+7. Ranking improvements
+Tighten ranking so:
+- reviewed guides get a stronger boost
+- needs_source_review gets a stronger demotion
+- metadata_only and planned are effectively excluded from normal chat
+- specific action/scenario guides outrank broad reference guides for practical questions
+- reference guides can lead only when user is clearly asking for explanation/background
+
+8. Confidence calibration
+Confidence should reflect:
+High:
+- strong match
+- reviewed guide(s)
+- same parentTopic consistency
+- no major conflict
+
+Medium:
+- decent match
+- some fallback or mixed guides
+- still grounded enough to answer
+
+Low:
+- weak or diffuse match
+- mostly under-review content
+- no clear contextual sibling path
+- user question outside coverage
+
+For contextual follow-ups, confidence should not crash just because the new message is short.
+
+9. Development logging
+In development only, log:
+- top 5 matches
+- whether prior context was used
+- whether constraint mode was detected
+- whether answer came from:
+  - same guide backupAction
+  - sibling guide pivot
+  - generic retrieval
+  - low-confidence fallback
+- final confidence reason
+
+10. Acceptance tests
+Verify these exact cases:
+
+A. Water fallback
+User: "How to purify water?"
+Expected:
+- boiling guide
+- high confidence
+
+Then user:
+"I don't have anything to boil the water with."
+Expected:
+- same parentTopic retained
+- answer pivots to bleach/tablets/alternative
+- related guides include bleach and safest source
+- no "query intent unclear"
+- no repeated boiling answer
+
+B. Water fallback second step
+After that:
+"I don't have bleach either."
+Expected:
+- still in water topic
+- answer moves to next safest available options / source choice / limits / last-resort framing
+- no fake authority
+
+C. Lost follow-up
+User: "I'm lost and it's getting dark."
+Then:
+"What if I'm in a car?"
+Expected:
+- if context fits, pivot to stranded vehicle / shelter / visibility / stay with vehicle guidance
+- not low-confidence unless truly no vehicle content exists
+
+D. Heat follow-up
+User: "I'm overheating."
+Then:
+"I'm vomiting too."
+Expected:
+- remain in heat-illness topic
+- escalate appropriately toward heat stroke / urgent care red flags
+- concise urgent response
+
+E. Off-topic
+User: "How do I survive on Mars?"
+Expected:
+- honest low-confidence fallback
+- no fake practical answer
+
+Files likely involved:
+- lib/chat/grounded-chat-service.ts
+- contexts/ChatContext.tsx
+- lib/guides/guide-matching.ts
+- lib/guides/retrieval-policy.ts
+- lib/guides/grounding-context.ts
+- app/chat/[id].tsx
+- any message/context utilities already carrying prior chat state
+
+Deliverables:
+1. Updated grounded chat with follow-up topic inheritance
+2. Constraint detection
+3. Fallback/sibling pivoting
+4. ParentTopic-first related guides
+5. Better low-confidence suppression for contextual follow-ups
+6. Short developer summary:
+   - what changed
+   - which files changed
+   - whether follow-up context is now supported
+   - whether constraint handling was added
+   - whether related guides are now parentTopic-first
+   - whether low-confidence behavior was tightened
+   - any remaining limitations

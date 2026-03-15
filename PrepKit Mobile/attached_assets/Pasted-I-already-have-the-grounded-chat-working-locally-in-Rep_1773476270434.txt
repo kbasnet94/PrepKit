@@ -1,0 +1,171 @@
+I already have the grounded chat working locally in Replit with the normalized guide library. Do not rebuild the app.
+
+Goal:
+Add a lightweight “constraint-aware guide relationship” system so local chat can handle follow-up constraints more intelligently without relying only on model prompting.
+
+Important context:
+- Replit is still using the current local guide dataset / local storage flow.
+- Chat is already grounded through the guide pipeline.
+- We already added follow-up detection and contextual retrieval.
+- I do NOT want a giant hardcoded priority map.
+- I want a small set of guide metadata fields plus deterministic ranking rules.
+- Local AI should help normalize user constraints, but final guide prioritization must remain deterministic and inspectable.
+
+What to implement:
+
+1. Extend the local guide model with optional fields
+Add these optional fields to the guide type and local data model:
+
+- responseRole: "primary" | "backup" | "supporting" | "reference"
+- constraintTags: string[]
+- blockedByConstraints: string[]
+- alternativeToGuideSlugs: string[]
+
+Meaning:
+- responseRole:
+  - primary = first-choice guide for a topic
+  - backup = alternative when primary is unavailable
+  - supporting = adjacent but useful
+  - reference = background only
+- constraintTags:
+  - situations where the guide should be boosted
+  - examples: no_boiling, no_bleach, no_signal, in_vehicle, at_night, child, pregnant, no_shelter, no_clean_water
+- blockedByConstraints:
+  - constraints that should demote the guide
+  - example: a boiling guide should be blockedByConstraints: ["no_boiling", "no_fire", "no_heat_source"]
+- alternativeToGuideSlugs:
+  - direct alternatives to another guide
+  - example: bleach guide can be an alternative to boil guide
+
+2. Add a lightweight constraint normalization layer
+Reuse the current follow-up detection / local AI layer, but normalize follow-up constraints into canonical tags.
+
+Add a small normalized constraint output such as:
+- no_boiling
+- no_fire
+- no_heat_source
+- no_bleach
+- no_signal
+- in_vehicle
+- at_night
+- child
+- pregnant
+- can’t_move
+- no_shelter
+- no_clean_water
+- vomiting
+- getting_worse
+
+Behavior:
+- local AI or local rule layer can interpret messy user phrasing into these normalized tags
+- retrieval logic should use these tags deterministically
+
+Examples:
+- “I don’t have anything to boil the water with” -> no_boiling / no_heat_source
+- “I don’t have bleach either” -> no_bleach
+- “What if I’m in a car?” -> in_vehicle
+- “It’s dark now” -> at_night
+- “I’m vomiting too” -> vomiting + getting_worse
+
+3. Update retrieval ranking to use the new fields
+After standard guide matching and parentTopic context:
+- boost guides whose constraintTags overlap the detected constraint tags
+- demote guides whose blockedByConstraints overlap the detected constraint tags
+- boost direct alternatives listed in alternativeToGuideSlugs
+- use responseRole in ranking:
+  - primary > backup > supporting > reference for practical/emergency answers
+  - reference can lead only for educational/explanatory queries
+
+Suggested relative ranking behavior:
+- primary: strong default for direct questions
+- backup: strong boost when a constraint invalidates the primary
+- supporting: visible as related but not first choice
+- reference: background only unless educational mode
+
+4. Annotate existing local guides for the highest-impact parent topics first
+Do NOT try to annotate all 187 guides in one pass.
+Start with the parent topics where fallback logic matters most.
+
+At minimum annotate these topic clusters if they exist:
+- Safe Drinking Water in Emergencies
+- Food Safety During Power Outages
+- Lost / Stay Put / Signaling
+- Extreme Heat
+- Cold Exposure / Hypothermia / Frostbite
+- Wildfire Smoke / Evacuation
+- Carbon Monoxide / Generator Safety
+- Shelter / Staying Warm Without Power
+
+For each cluster:
+- assign responseRole
+- add key constraintTags
+- add blockedByConstraints where appropriate
+- add alternativeToGuideSlugs where obvious
+
+Examples:
+Water:
+- Purifying Water by Boiling
+  - responseRole: primary
+  - blockedByConstraints: ["no_boiling", "no_fire", "no_heat_source"]
+- Purifying Water with Household Liquid Bleach
+  - responseRole: backup
+  - constraintTags: ["no_boiling", "no_fire", "no_heat_source"]
+  - alternativeToGuideSlugs: ["purify-water-by-boiling"]
+- Choosing Safe Hydration Sources
+  - responseRole: supporting
+  - constraintTags: ["no_boiling", "no_bleach", "no_clean_water"]
+- Using Non-Drinking Water Safely
+  - responseRole: supporting
+  - do not let this outrank actual drinking-water alternatives
+
+Heat:
+- Heat Stroke guide should outrank general heat guides when escalation tags like vomiting/getting_worse/confused exist
+
+Lost:
+- if user is lost and asks a follow-up about no_signal / at_night / in_vehicle, sibling or alternative guides should win over generic reference guides
+
+5. Update grounded chat to use these fields
+Integrate the new metadata into the current grounded-chat-service path:
+- standard query
+- contextual follow-up detection
+- normalized constraints
+- deterministic ranking with responseRole / constraintTags / blockedByConstraints / alternatives
+- structured answer
+- optional local AI rewrite
+
+6. Improve related guides using responseRole
+Related guides should still be parentTopic-first, but rank by:
+1. same parentTopic
+2. complementary responseRole
+3. relevant alternatives / supporting cards
+4. then score
+
+Behavior:
+- if current answer uses a primary guide, related guides should prefer backup/supporting guides
+- avoid showing random references first
+
+7. Development logging
+In development only, log:
+- normalized constraint tags
+- which ranking boosts/demotions fired
+- whether alternativeToGuideSlugs was used
+- final winning guide and why
+
+8. Keep backward compatibility
+- All new fields must be optional
+- Existing guides without these fields must still work
+- Do not break current chat or current guide rendering
+- Do not add a cloud dependency
+- Do not replace the current local data flow
+
+Deliverables:
+1. Updated local guide types
+2. Updated retrieval/ranking logic
+3. Constraint normalization integrated into grounded chat
+4. Initial metadata annotations for the high-impact topic clusters
+5. Short developer summary:
+   - files changed
+   - fields added
+   - which guide clusters were annotated
+   - whether water fallback now prefers bleach over non-drinking-water guides
+   - any remaining gaps where metadata has not yet been added

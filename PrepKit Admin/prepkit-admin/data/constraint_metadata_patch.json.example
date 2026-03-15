@@ -1,0 +1,11 @@
+{
+  "guides": [
+    {
+      "slug": "distress-signaling",
+      "responseRole": "primary",
+      "constraintTags": ["no_signal", "at_night"],
+      "blockedByConstraints": [],
+      "alternativeToGuideSlugs": []
+    }
+  ]
+}

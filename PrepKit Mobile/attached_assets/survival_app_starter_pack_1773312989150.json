@@ -1,0 +1,840 @@
+{
+  "pack": {
+    "id": "survival-app-starter-pack-v1",
+    "title": "Survival App Starter Pack",
+    "subtitle": "24 high-priority guides, source families, and Replit handoff metadata",
+    "version": "1.0.0",
+    "format": "starter-content-pack",
+    "contentStatus": "metadata_and_structure",
+    "description": "Offline-first survival app starter content pack. Action-card oriented guide metadata with source mapping and implementation notes.",
+    "designRules": [
+      "Use task-first titles.",
+      "For practical guides, use: Quick Answer, Best Option, Backup Option, Steps, Warnings, Sources.",
+      "For medical-safety guides, use: Immediate Priority, Red Flags, What You Can Do Right Now, What Not To Do, Sources.",
+      "Treat encyclopedia-style material as background only.",
+      "Store source title, section title, and risk level as metadata so the AI can rank content by usefulness."
+    ]
+  },
+  "sourceFamilies": [
+    {
+      "id": "sf-disasters",
+      "name": "Disasters and preparedness",
+      "recommendedProviders": [
+        "Ready.gov",
+        "FEMA"
+      ],
+      "bestFor": "Before/during/after guidance on earthquakes, floods, tornadoes, heat, plans, and emergency kits."
+    },
+    {
+      "id": "sf-first-aid",
+      "name": "Bleeding and first aid",
+      "recommendedProviders": [
+        "American Red Cross",
+        "AHA-style first-aid guidance"
+      ],
+      "bestFor": "Conservative, practical steps and escalation cues; avoid invented invasive care."
+    },
+    {
+      "id": "sf-cold-exposure",
+      "name": "Cold exposure",
+      "recommendedProviders": [
+        "CDC winter-weather guidance"
+      ],
+      "bestFor": "Hypothermia and frostbite recognition and immediate action."
+    },
+    {
+      "id": "sf-symptoms",
+      "name": "General symptom recognition",
+      "recommendedProviders": [
+        "MedlinePlus",
+        "CDC"
+      ],
+      "bestFor": "Dehydration and symptom-based public-facing health guidance."
+    },
+    {
+      "id": "sf-fire-safety",
+      "name": "Fire and camp safety",
+      "recommendedProviders": [
+        "National Park Service",
+        "official outdoor safety sources"
+      ],
+      "bestFor": "Conservative campfire and field-safety content, paired with concise action cards."
+    }
+  ],
+  "guides": [
+    {
+      "id": "guide-01",
+      "slug": "start-a-fire-without-matches",
+      "title": "Start a Fire Without Matches",
+      "category": "Core survival",
+      "riskLevel": "medium",
+      "cardType": "Action card",
+      "primarySourceDirection": "NPS fire safety / practical bushcraft source",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "core-survival",
+        "action-card",
+        "medium",
+        "start",
+        "fire",
+        "without",
+        "matches"
+      ]
+    },
+    {
+      "id": "guide-02",
+      "slug": "build-and-light-a-tinder-bundle",
+      "title": "Build and Light a Tinder Bundle",
+      "category": "Core survival",
+      "riskLevel": "low",
+      "cardType": "Action card",
+      "primarySourceDirection": "NPS fire safety / field-skills source",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "core-survival",
+        "action-card",
+        "low",
+        "build",
+        "and",
+        "light",
+        "tinder",
+        "bundle"
+      ]
+    },
+    {
+      "id": "guide-03",
+      "slug": "purify-water-by-boiling",
+      "title": "Purify Water by Boiling",
+      "category": "Water",
+      "riskLevel": "medium",
+      "cardType": "Action card",
+      "primarySourceDirection": "CDC/MedlinePlus/official safe-water guidance",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "water",
+        "action-card",
+        "medium",
+        "purify",
+        "boiling"
+      ]
+    },
+    {
+      "id": "guide-04",
+      "slug": "choose-a-water-purification-method",
+      "title": "Choose a Water Purification Method",
+      "category": "Water",
+      "riskLevel": "medium",
+      "cardType": "Decision guide",
+      "primarySourceDirection": "CDC/official drinking-water guidance",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "water",
+        "decision-guide",
+        "medium",
+        "choose",
+        "purification",
+        "method"
+      ]
+    },
+    {
+      "id": "guide-05",
+      "slug": "navigate-without-gps",
+      "title": "Navigate Without GPS",
+      "category": "Navigation",
+      "riskLevel": "medium",
+      "cardType": "Action card",
+      "primarySourceDirection": "Official outdoor safety + land navigation references",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "navigation",
+        "action-card",
+        "medium",
+        "navigate",
+        "without",
+        "gps"
+      ]
+    },
+    {
+      "id": "guide-06",
+      "slug": "build-a-basic-tarp-shelter",
+      "title": "Build a Basic Tarp Shelter",
+      "category": "Shelter",
+      "riskLevel": "medium",
+      "cardType": "Action card",
+      "primarySourceDirection": "NPS/outdoor field references",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "shelter",
+        "action-card",
+        "medium",
+        "build",
+        "basic",
+        "tarp"
+      ]
+    },
+    {
+      "id": "guide-07",
+      "slug": "use-knots-for-shelter-and-gear",
+      "title": "Use Knots for Shelter and Gear",
+      "category": "Shelter",
+      "riskLevel": "low",
+      "cardType": "Quick guide",
+      "primarySourceDirection": "Practical knot references",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "shelter",
+        "quick-guide",
+        "low",
+        "use",
+        "knots",
+        "for",
+        "and"
+      ]
+    },
+    {
+      "id": "guide-08",
+      "slug": "signal-for-rescue",
+      "title": "Signal for Rescue",
+      "category": "Communication",
+      "riskLevel": "medium",
+      "cardType": "Action card",
+      "primarySourceDirection": "Ready.gov / official rescue signaling guidance",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "communication",
+        "action-card",
+        "medium",
+        "signal",
+        "for",
+        "rescue"
+      ]
+    },
+    {
+      "id": "guide-09",
+      "slug": "use-morse-code-for-distress",
+      "title": "Use Morse Code for Distress",
+      "category": "Communication",
+      "riskLevel": "low",
+      "cardType": "Reference card",
+      "primarySourceDirection": "Morse reference + distress signaling source",
+      "sourceReferenceIds": [],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "communication",
+        "reference-card",
+        "low",
+        "use",
+        "morse",
+        "code",
+        "for",
+        "distress"
+      ]
+    },
+    {
+      "id": "guide-10",
+      "slug": "what-to-do-during-an-earthquake",
+      "title": "What to Do During an Earthquake",
+      "category": "Disaster",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "Ready.gov earthquake guidance",
+      "sourceReferenceIds": [
+        "ref-01"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "disaster",
+        "response-card",
+        "high",
+        "what",
+        "during",
+        "earthquake"
+      ]
+    },
+    {
+      "id": "guide-11",
+      "slug": "what-to-do-after-an-earthquake",
+      "title": "What to Do After an Earthquake",
+      "category": "Disaster",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "Ready.gov earthquake guidance",
+      "sourceReferenceIds": [
+        "ref-01"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "disaster",
+        "response-card",
+        "high",
+        "what",
+        "after",
+        "earthquake"
+      ]
+    },
+    {
+      "id": "guide-12",
+      "slug": "what-to-do-during-a-flood",
+      "title": "What to Do During a Flood",
+      "category": "Disaster",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "Ready.gov flood guidance",
+      "sourceReferenceIds": [
+        "ref-02"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "disaster",
+        "response-card",
+        "high",
+        "what",
+        "during",
+        "flood"
+      ]
+    },
+    {
+      "id": "guide-13",
+      "slug": "what-to-do-during-a-tornado",
+      "title": "What to Do During a Tornado",
+      "category": "Disaster",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "Ready.gov / NOAA tornado guidance",
+      "sourceReferenceIds": [
+        "ref-03"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "disaster",
+        "response-card",
+        "high",
+        "what",
+        "during",
+        "tornado"
+      ]
+    },
+    {
+      "id": "guide-14",
+      "slug": "stay-safe-in-extreme-heat",
+      "title": "Stay Safe in Extreme Heat",
+      "category": "Weather",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "Ready.gov heat guidance",
+      "sourceReferenceIds": [
+        "ref-04"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "weather",
+        "response-card",
+        "high",
+        "stay",
+        "safe",
+        "extreme",
+        "heat"
+      ]
+    },
+    {
+      "id": "guide-15",
+      "slug": "stay-warm-in-cold-conditions",
+      "title": "Stay Warm in Cold Conditions",
+      "category": "Weather",
+      "riskLevel": "high",
+      "cardType": "Response card",
+      "primarySourceDirection": "CDC hypothermia guidance",
+      "sourceReferenceIds": [
+        "ref-09",
+        "ref-10"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "weather",
+        "response-card",
+        "high",
+        "stay",
+        "warm",
+        "cold",
+        "conditions"
+      ]
+    },
+    {
+      "id": "guide-16",
+      "slug": "recognize-dehydration",
+      "title": "Recognize Dehydration",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "MedlinePlus / CDC hydration guidance",
+      "sourceReferenceIds": [
+        "ref-11"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "recognize",
+        "dehydration"
+      ]
+    },
+    {
+      "id": "guide-17",
+      "slug": "stop-severe-bleeding",
+      "title": "Stop Severe Bleeding",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "Red Cross severe bleeding guidance",
+      "sourceReferenceIds": [
+        "ref-07",
+        "ref-08"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "stop",
+        "severe",
+        "bleeding"
+      ]
+    },
+    {
+      "id": "guide-18",
+      "slug": "clean-and-protect-a-cut",
+      "title": "Clean and Protect a Cut",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "First-aid authority guidance",
+      "sourceReferenceIds": [
+        "ref-07",
+        "ref-08"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "clean",
+        "and",
+        "protect",
+        "cut"
+      ]
+    },
+    {
+      "id": "guide-19",
+      "slug": "recognize-infection-warning-signs",
+      "title": "Recognize Infection Warning Signs",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "Trusted first-aid/health source",
+      "sourceReferenceIds": [
+        "ref-07",
+        "ref-08"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "recognize",
+        "infection",
+        "warning",
+        "signs"
+      ]
+    },
+    {
+      "id": "guide-20",
+      "slug": "recognize-hypothermia",
+      "title": "Recognize Hypothermia",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "CDC hypothermia guidance",
+      "sourceReferenceIds": [
+        "ref-09",
+        "ref-10"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "recognize",
+        "hypothermia"
+      ]
+    },
+    {
+      "id": "guide-21",
+      "slug": "recognize-heat-exhaustion-vs-heat-stroke",
+      "title": "Recognize Heat Exhaustion vs Heat Stroke",
+      "category": "Medical safety",
+      "riskLevel": "high",
+      "cardType": "Medical-safety card",
+      "primarySourceDirection": "Ready.gov heat / official health source",
+      "sourceReferenceIds": [
+        "ref-04"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "medical-safety",
+        "medical-safety-card",
+        "high",
+        "recognize",
+        "heat",
+        "exhaustion",
+        "stroke"
+      ]
+    },
+    {
+      "id": "guide-22",
+      "slug": "build-a-72-hour-emergency-kit",
+      "title": "Build a 72-Hour Emergency Kit",
+      "category": "Preparedness",
+      "riskLevel": "low",
+      "cardType": "Checklist",
+      "primarySourceDirection": "Ready.gov Build A Kit",
+      "sourceReferenceIds": [
+        "ref-05"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "checklist",
+        "low",
+        "build",
+        "hour",
+        "emergency",
+        "kit"
+      ]
+    },
+    {
+      "id": "guide-23",
+      "slug": "make-a-family-emergency-plan",
+      "title": "Make a Family Emergency Plan",
+      "category": "Preparedness",
+      "riskLevel": "low",
+      "cardType": "Checklist",
+      "primarySourceDirection": "Ready.gov Make A Plan",
+      "sourceReferenceIds": [
+        "ref-06"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "checklist",
+        "low",
+        "make",
+        "family",
+        "emergency",
+        "plan"
+      ]
+    },
+    {
+      "id": "guide-24",
+      "slug": "prepare-a-go-bag-for-evacuation",
+      "title": "Prepare a Go-Bag for Evacuation",
+      "category": "Preparedness",
+      "riskLevel": "low",
+      "cardType": "Checklist",
+      "primarySourceDirection": "Ready.gov kit/plan + hazard-specific guidance",
+      "sourceReferenceIds": [
+        "ref-05",
+        "ref-06"
+      ],
+      "contentStatus": "metadata_only",
+      "summary": "",
+      "whenToUse": "",
+      "preferredOption": "",
+      "fallbackOption": "",
+      "steps": [],
+      "warnings": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "checklist",
+        "low",
+        "prepare",
+        "bag",
+        "for",
+        "evacuation"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ref-01",
+      "title": "Ready.gov \u2014 Earthquakes",
+      "provider": "Ready.gov",
+      "topic": "Earthquakes",
+      "url": "https://www.ready.gov/earthquakes"
+    },
+    {
+      "id": "ref-02",
+      "title": "Ready.gov \u2014 Floods",
+      "provider": "Ready.gov",
+      "topic": "Floods",
+      "url": "https://www.ready.gov/floods"
+    },
+    {
+      "id": "ref-03",
+      "title": "Ready.gov \u2014 Tornadoes",
+      "provider": "Ready.gov",
+      "topic": "Tornadoes",
+      "url": "https://www.ready.gov/tornadoes"
+    },
+    {
+      "id": "ref-04",
+      "title": "Ready.gov \u2014 Extreme Heat",
+      "provider": "Ready.gov",
+      "topic": "Extreme Heat",
+      "url": "https://www.ready.gov/heat"
+    },
+    {
+      "id": "ref-05",
+      "title": "Ready.gov \u2014 Build A Kit",
+      "provider": "Ready.gov",
+      "topic": "Build A Kit",
+      "url": "https://www.ready.gov/kit"
+    },
+    {
+      "id": "ref-06",
+      "title": "Ready.gov \u2014 Make A Plan",
+      "provider": "Ready.gov",
+      "topic": "Make A Plan",
+      "url": "https://www.ready.gov/plan"
+    },
+    {
+      "id": "ref-07",
+      "title": "American Red Cross \u2014 Life-threatening external bleeding",
+      "provider": "American Red Cross",
+      "topic": "Life-threatening external bleeding",
+      "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/bleeding-life-threatening-external"
+    },
+    {
+      "id": "ref-08",
+      "title": "American Red Cross \u2014 Severe bleeding course overview",
+      "provider": "American Red Cross",
+      "topic": "Severe bleeding course overview",
+      "url": "https://www.redcross.org/take-a-class/first-aid/first-aid-training/first-aid-classes/fast-training"
+    },
+    {
+      "id": "ref-09",
+      "title": "CDC \u2014 Preventing hypothermia",
+      "provider": "CDC",
+      "topic": "Preventing hypothermia",
+      "url": "https://www.cdc.gov/winter-weather/prevention/index.html"
+    },
+    {
+      "id": "ref-10",
+      "title": "CDC \u2014 Recognizing hypothermia",
+      "provider": "CDC",
+      "topic": "Recognizing hypothermia",
+      "url": "https://www.cdc.gov/natural-disasters/psa-toolkit/recognizing-hypothermia.html"
+    },
+    {
+      "id": "ref-11",
+      "title": "MedlinePlus \u2014 Dehydration",
+      "provider": "MedlinePlus",
+      "topic": "Dehydration",
+      "url": "https://medlineplus.gov/dehydration.html"
+    },
+    {
+      "id": "ref-12",
+      "title": "National Park Service \u2014 Wildland fire safety for park visitors",
+      "provider": "National Park Service",
+      "topic": "Wildland fire safety for park visitors",
+      "url": "https://www.nps.gov/subjects/fire/wildland-fire-safety-for-park-visitors.htm"
+    }
+  ],
+  "buildOrder": [
+    "Create the guide metadata model and the Action Card schema first.",
+    "Seed the app with the 24 guides and attach source metadata to each one.",
+    "Build 8-10 finished cards first: fire, water purification, navigation, tarp shelter, rescue signaling, earthquake, flood, severe bleeding, cuts, hypothermia.",
+    "Add a strict medical-safety and disaster-safety response policy before connecting everything to the AI.",
+    "Only after the action cards are solid should you let the AI summarize or ground on longer reference text."
+  ],
+  "handoffNotes": {
+    "bestApproach": "Give Replit a structured package, not one giant vague prompt.",
+    "stages": [
+      "Stage 1: models and seed data (Guide, ActionCard, SourceReference, risk metadata).",
+      "Stage 2: guide browsing UI and action-card UI.",
+      "Stage 3: retrieval policy and response templates.",
+      "Stage 4: AI grounding on top of the finished guides."
+    ],
+    "documentRole": "Use this content pack as a stable source file you can upload to Replit and keep revising."
+  }
+}

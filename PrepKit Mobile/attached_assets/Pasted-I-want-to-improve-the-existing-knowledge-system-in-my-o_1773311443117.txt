@@ -1,0 +1,148 @@
+I want to improve the existing knowledge system in my offline-first React Native survival app.
+
+Current downloaded guide topics already in the app:
+
+Communication
+- Distress Signaling
+- Morse Code
+
+Core Skills
+- Fire Making
+- Knot Tying
+- Shelter Building
+- Solar Still
+- Water Purification
+
+Food
+- Fishing Techniques
+- Food Preservation
+- Foraging
+- Trapping
+
+Medical
+- CPR
+- Dehydration
+- First Aid
+- Hypothermia
+- Wound Care
+
+Natural Disasters
+- Earthquake Safety
+- Flood Survival
+- Tornado Safety
+
+Navigation
+- Land Navigation
+
+These are currently wiki-style reference guides.
+
+IMPORTANT:
+Do NOT replace these guides.
+Instead, treat them as the reference layer and build a more practical layer on top of them.
+
+GOAL
+Refactor the knowledge system so the app can use:
+1. guide topics as source/reference material
+2. derived Action Cards as the practical field-guide layer
+
+The app should answer user questions using Action Cards first when possible, and use the wiki/reference guides as supporting sources.
+
+==================================================
+TASKS
+==================================================
+
+1. Add metadata to existing guides
+Create a Guide model or extend the current guide model with:
+- id
+- title
+- category
+- summary
+- size
+- riskLevel: "low" | "medium" | "high"
+- contentType: "practical_reference" | "background_reference" | "medical_reference" | "mixed"
+- preferredUse: "action_card_source" | "reference_only" | "conservative_medical_reference"
+
+Examples:
+- Fire Making -> category shelter_fire, risk medium, contentType mixed, preferredUse action_card_source
+- Water Purification -> category water_food, risk medium, contentType practical_reference, preferredUse action_card_source
+- Wound Care -> category medical_safety, risk high, contentType medical_reference, preferredUse conservative_medical_reference
+- CPR -> category medical_safety, risk high, contentType emergency_reference or medical_reference, preferredUse conservative_medical_reference
+
+2. Build Action Cards derived from current guides
+Use the current guide set as the base to create practical Action Cards.
+
+Create Action Cards such as:
+- Start a Fire Without Matches
+- Build a Tinder Bundle
+- Purify Water by Boiling
+- Signal for Rescue
+- Navigate Without GPS
+- Build a Basic Emergency Shelter
+- Stop Severe Bleeding
+- Clean and Protect a Cut
+- Recognize Dehydration
+- Stay Warm in Cold Conditions
+- Use Basic Knots for Shelter
+- Prepare for Flood Conditions
+- Prepare for Earthquakes
+
+Each Action Card should point back to one or more source guides.
+
+3. Create guide-to-action-card relationships
+Add a way to map:
+- one guide -> many action cards
+- one action card -> multiple source guides
+
+For example:
+- Fire Making -> Start a Fire Without Matches, Build a Tinder Bundle, Use a Ferro Rod
+- Wound Care + First Aid -> Clean and Protect a Cut, Stop Severe Bleeding
+- Land Navigation -> Navigate Without GPS
+- Distress Signaling + Morse Code -> Signal for Rescue
+
+4. Change retrieval priority
+Update the retrieval system so that:
+- Action Cards rank highest for practical and emergency queries
+- existing guides are used as supporting references
+- broad wiki-style sections are shown below the main answer
+- unrelated reference guides are filtered more aggressively
+
+5. Add medical safety rules for the Medical category
+For guides in the Medical category:
+- treat them as higher risk
+- use more conservative response templates
+- prioritize triage, immediate priorities, red flags, and safe first aid
+- avoid invasive procedural guidance
+- suppress unrelated medical references like CPR for basic cut questions unless directly relevant
+
+6. Improve browsing experience
+Allow the knowledge tab to show both:
+- Guide Topics
+- Action Cards
+
+Possible UI options:
+- top segmented control: “Guides” and “Quick Guides”
+or
+- one list with Action Cards featured above Guides
+
+7. Improve source transparency
+When an Action Card is shown, display:
+- Action Card title
+- source guide title(s)
+- optional source section title(s)
+
+8. Keep architecture extensible
+The system should support future unknown questions by:
+- matching to Action Cards when possible
+- falling back to guide references when needed
+- not assuming the current guides are the final set forever
+
+==================================================
+IMPORTANT PRODUCT RULE
+==================================================
+
+The current guide library is enough to start.
+The main problem is that the content is organized as topics, but users ask task-based questions.
+
+So the fix is to convert topic-based guides into a practical action-oriented layer, not just add more wiki pages.
+
+Please implement this incrementally, keep the app runnable, and avoid overengineering.

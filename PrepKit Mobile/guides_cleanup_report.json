@@ -1,0 +1,280 @@
+{
+  "totalProcessed": 187,
+  "parentTopicFixes": 40,
+  "sourceRefFixes": 15,
+  "warningsBackfilled": 26,
+  "redFlagsBackfilled": 33,
+  "contentStatusChanged": [
+    {
+      "slug": "solar-still",
+      "from": "reference_summary",
+      "to": "needs_source_review",
+      "reason": "no source refs available"
+    },
+    {
+      "slug": "fishing-techniques",
+      "from": "reference_summary",
+      "to": "needs_source_review",
+      "reason": "no source refs available"
+    },
+    {
+      "slug": "food-preservation",
+      "from": "reference_summary",
+      "to": "needs_source_review",
+      "reason": "no source refs available"
+    },
+    {
+      "slug": "foraging",
+      "from": "reference_summary",
+      "to": "needs_source_review",
+      "reason": "no source refs available"
+    },
+    {
+      "slug": "trapping",
+      "from": "reference_summary",
+      "to": "needs_source_review",
+      "reason": "no source refs available"
+    }
+  ],
+  "parentTopicInferred": [
+    {
+      "slug": "distress-signaling",
+      "assignedTopic": "Land Rescue Signaling"
+    },
+    {
+      "slug": "morse-code",
+      "assignedTopic": "Land Rescue Signaling"
+    },
+    {
+      "slug": "fire-making",
+      "assignedTopic": "Fire Starting Basics (Outdoor)"
+    },
+    {
+      "slug": "knot-tying",
+      "assignedTopic": "Cordage, Knots, and Safe Tool Use"
+    },
+    {
+      "slug": "shelter-building",
+      "assignedTopic": "Emergency Shelter Basics"
+    },
+    {
+      "slug": "solar-still",
+      "assignedTopic": "Safe Drinking Water in Emergencies"
+    },
+    {
+      "slug": "water-purification-reference",
+      "assignedTopic": "Safe Drinking Water in Emergencies"
+    },
+    {
+      "slug": "fishing-techniques",
+      "assignedTopic": "Water Collection and Basic Treatment Without Equipment"
+    },
+    {
+      "slug": "food-preservation",
+      "assignedTopic": "Food Safety During Power Outages"
+    },
+    {
+      "slug": "foraging",
+      "assignedTopic": "Water Collection and Basic Treatment Without Equipment"
+    },
+    {
+      "slug": "trapping",
+      "assignedTopic": "Water Collection and Basic Treatment Without Equipment"
+    },
+    {
+      "slug": "cpr-reference",
+      "assignedTopic": "Airway Emergencies"
+    },
+    {
+      "slug": "dehydration-reference",
+      "assignedTopic": "Heat and Fluids"
+    },
+    {
+      "slug": "first-aid-reference",
+      "assignedTopic": "Bleeding and Wound Care"
+    },
+    {
+      "slug": "hypothermia-reference",
+      "assignedTopic": "Cold Exposure"
+    },
+    {
+      "slug": "wound-care-reference",
+      "assignedTopic": "Bleeding and Wound Care"
+    },
+    {
+      "slug": "earthquake-safety-reference",
+      "assignedTopic": "Earthquakes"
+    },
+    {
+      "slug": "flood-survival-reference",
+      "assignedTopic": "Floods"
+    },
+    {
+      "slug": "tornado-safety-reference",
+      "assignedTopic": "Tornadoes"
+    },
+    {
+      "slug": "land-navigation",
+      "assignedTopic": "Land Navigation"
+    },
+    {
+      "slug": "heat-stroke-emergency",
+      "assignedTopic": "Heat and Fluids"
+    },
+    {
+      "slug": "heat-exhaustion-cool-rehydrate",
+      "assignedTopic": "Heat and Fluids"
+    },
+    {
+      "slug": "heat-prevention",
+      "assignedTopic": "Extreme Heat: Prevention and Emergencies"
+    },
+    {
+      "slug": "hypothermia-warm-core",
+      "assignedTopic": "Cold Exposure"
+    },
+    {
+      "slug": "frostbite-protect-rewarm",
+      "assignedTopic": "Cold Exposure"
+    },
+    {
+      "slug": "cold-prevention-layering",
+      "assignedTopic": "Cold Weather: Prevention and Field Care"
+    },
+    {
+      "slug": "purify-water-boiling",
+      "assignedTopic": "Safe Drinking Water in Emergencies"
+    },
+    {
+      "slug": "purify-water-bleach",
+      "assignedTopic": "Safe Drinking Water in Emergencies"
+    },
+    {
+      "slug": "emergency-water-storage",
+      "assignedTopic": "72-Hour Emergency Supplies and Go-Bags"
+    },
+    {
+      "slug": "build-72-hour-kit",
+      "assignedTopic": "72-Hour Emergency Supplies and Go-Bags"
+    },
+    {
+      "slug": "family-emergency-plan",
+      "assignedTopic": "Family Emergency and Communication Planning"
+    },
+    {
+      "slug": "evacuation-go-bag",
+      "assignedTopic": "72-Hour Emergency Supplies and Go-Bags"
+    },
+    {
+      "slug": "shelter-in-place-basics",
+      "assignedTopic": "Shelter-in-Place Kits and Procedures"
+    },
+    {
+      "slug": "signal-for-rescue",
+      "assignedTopic": "Land Rescue Signaling"
+    },
+    {
+      "slug": "stay-put-vs-move",
+      "assignedTopic": "If You Get Lost"
+    },
+    {
+      "slug": "night-signaling-and-battery",
+      "assignedTopic": "Land Rescue Signaling"
+    },
+    {
+      "slug": "power-outage-basics",
+      "assignedTopic": "Blackout Basics & First 30 Minutes"
+    },
+    {
+      "slug": "communication-outage-basics",
+      "assignedTopic": "Family Emergency and Communication Planning"
+    },
+    {
+      "slug": "sanitation-waste-basics",
+      "assignedTopic": "Sanitation and Contamination Prevention"
+    },
+    {
+      "slug": "food-safety-no-fridge",
+      "assignedTopic": "Food Safety During Power Outages"
+    }
+  ],
+  "sourceRefsReusedFromSiblings": [
+    {
+      "slug": "distress-signaling",
+      "count": 2
+    },
+    {
+      "slug": "morse-code",
+      "count": 1
+    },
+    {
+      "slug": "water-purification-reference",
+      "count": 2
+    },
+    {
+      "slug": "cpr-reference",
+      "count": 2
+    },
+    {
+      "slug": "dehydration-reference",
+      "count": 1
+    },
+    {
+      "slug": "first-aid-reference",
+      "count": 2
+    },
+    {
+      "slug": "hypothermia-reference",
+      "count": 1
+    },
+    {
+      "slug": "wound-care-reference",
+      "count": 2
+    },
+    {
+      "slug": "earthquake-safety-reference",
+      "count": 2
+    },
+    {
+      "slug": "flood-survival-reference",
+      "count": 2
+    },
+    {
+      "slug": "tornado-safety-reference",
+      "count": 2
+    },
+    {
+      "slug": "power-outage-basics",
+      "count": 2
+    },
+    {
+      "slug": "communication-outage-basics",
+      "count": 2
+    },
+    {
+      "slug": "sanitation-waste-basics",
+      "count": 1
+    },
+    {
+      "slug": "food-safety-no-fridge",
+      "count": 1
+    }
+  ],
+  "stillMissingParentTopic": [],
+  "stillMissingSourceReferences": [
+    "solar-still",
+    "fishing-techniques",
+    "food-preservation",
+    "foraging",
+    "trapping"
+  ],
+  "stillMissingWarnings": [],
+  "stillMissingRedFlags": [],
+  "flaggedForManualReview": [
+    "solar-still",
+    "fishing-techniques",
+    "food-preservation",
+    "foraging",
+    "trapping"
+  ]
+}

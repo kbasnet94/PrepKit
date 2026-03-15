@@ -1,0 +1,14 @@
+# Root-level catch-all
+
+# pnpm workspace node_modules (not covered by app-level .gitignore)
+node_modules/
+PrepKit Mobile/node_modules/
+
+# Claude Code local config
+.claude/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

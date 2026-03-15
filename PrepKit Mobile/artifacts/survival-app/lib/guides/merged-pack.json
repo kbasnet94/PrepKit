@@ -1,0 +1,3104 @@
+{
+  "packId": "survival-knowledge-merged-pack",
+  "version": "2026-03-12",
+  "generatedAt": "2026-03-12T14:24:02.693381Z",
+  "goal": "Merged offline knowledge pack combining the existing in-app reference library with new practical, source-backed action cards.",
+  "designRules": {
+    "layers": [
+      "action_card",
+      "scenario_guide",
+      "reference_guide"
+    ],
+    "retrievalPriority": {
+      "practical_or_emergency": [
+        "action_card",
+        "scenario_guide",
+        "reference_guide"
+      ],
+      "educational": [
+        "scenario_guide",
+        "reference_guide",
+        "action_card"
+      ],
+      "medical_safety": [
+        "medical_safety_action_card",
+        "scenario_guide",
+        "reference_guide"
+      ]
+    },
+    "notes": [
+      "Do not remove the original reference guides.",
+      "Surface short practical cards first, then broader scenario guides, then references.",
+      "Medical-safety cards should use conservative wording and clear red flags.",
+      "Some signaling content is included but flagged for source review before final public release."
+    ]
+  },
+  "categories": [
+    {
+      "id": "communication",
+      "label": "Communication & Rescue"
+    },
+    {
+      "id": "core_skills",
+      "label": "Core Skills"
+    },
+    {
+      "id": "medical_safety",
+      "label": "Medical & Safety"
+    },
+    {
+      "id": "natural_disasters",
+      "label": "Natural Disasters"
+    },
+    {
+      "id": "navigation",
+      "label": "Navigation"
+    },
+    {
+      "id": "preparedness",
+      "label": "Preparedness"
+    },
+    {
+      "id": "water_food",
+      "label": "Water & Food"
+    },
+    {
+      "id": "weather_environment",
+      "label": "Weather & Environment"
+    }
+  ],
+  "sourceFamilies": [
+    {
+      "id": "official_disaster",
+      "label": "Official disaster guidance",
+      "priority": "highest"
+    },
+    {
+      "id": "official_health",
+      "label": "Official public health / first aid",
+      "priority": "highest"
+    },
+    {
+      "id": "practical_field",
+      "label": "Practical responder / field guidance",
+      "priority": "high"
+    },
+    {
+      "id": "reference_background",
+      "label": "Reference/background material already in app",
+      "priority": "supporting_only"
+    },
+    {
+      "id": "needs_review",
+      "label": "Useful content with source-fit concerns",
+      "priority": "review_before_public_release"
+    }
+  ],
+  "guides": [
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "communication",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "distress-signaling",
+      "slug": "distress-signaling",
+      "title": "Distress Signaling",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "communication",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Methods to signal for rescue and help.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "communication",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "morse-code",
+      "slug": "morse-code",
+      "title": "Morse Code",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "communication",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Communication using dots and dashes for basic signaling.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "core_skills",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "fire-making",
+      "slug": "fire-making",
+      "title": "Fire Making",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "core_skills",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Techniques for starting fire in wilderness conditions.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "core_skills",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "knot-tying",
+      "slug": "knot-tying",
+      "title": "Knot Tying",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "core_skills",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Essential knots for survival situations.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "core_skills",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "shelter-building",
+      "slug": "shelter-building",
+      "title": "Shelter Building",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "core_skills",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Constructing emergency shelters from natural materials.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "solar-still",
+      "slug": "solar-still",
+      "title": "Solar Still",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Collecting water using solar energy.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "water-purification-reference",
+      "slug": "water-purification-reference",
+      "title": "Water Purification",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Methods to make water safer for drinking.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "fishing-techniques",
+      "slug": "fishing-techniques",
+      "title": "Fishing Techniques",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Catching fish for survival food.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "food-preservation",
+      "slug": "food-preservation",
+      "title": "Food Preservation",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Methods to store food long-term.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "foraging",
+      "slug": "foraging",
+      "title": "Foraging",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Identifying edible plants and wild food sources.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water_food",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "trapping",
+      "slug": "trapping",
+      "title": "Trapping",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "water_food",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Setting traps for small game.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "medical_safety",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "cpr-reference",
+      "slug": "cpr-reference",
+      "title": "CPR",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Cardiopulmonary resuscitation technique reference.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "medical_safety",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "dehydration-reference",
+      "slug": "dehydration-reference",
+      "title": "Dehydration",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Prevention and treatment of fluid loss.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "medical_safety",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "first-aid-reference",
+      "slug": "first-aid-reference",
+      "title": "First Aid",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Emergency medical treatment before professional help.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "medical_safety",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "hypothermia-reference",
+      "slug": "hypothermia-reference",
+      "title": "Hypothermia",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Recognizing and treating dangerous cold exposure.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "medical_safety",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "wound-care-reference",
+      "slug": "wound-care-reference",
+      "title": "Wound Care",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Cleaning, treating, and dressing injuries.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "natural_disasters",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "earthquake-safety-reference",
+      "slug": "earthquake-safety-reference",
+      "title": "Earthquake Safety",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "natural_disasters",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "How to survive and respond to earthquakes.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "natural_disasters",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "flood-survival-reference",
+      "slug": "flood-survival-reference",
+      "title": "Flood Survival",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "natural_disasters",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Safety during flooding events.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "natural_disasters",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "tornado-safety-reference",
+      "slug": "tornado-safety-reference",
+      "title": "Tornado Safety",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "natural_disasters",
+      "riskLevel": "medium",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Protective actions during tornadoes.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "navigation",
+        "reference",
+        "existing-library"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "current_app_library"
+      ],
+      "id": "land-navigation",
+      "slug": "land-navigation",
+      "title": "Land Navigation",
+      "layer": "reference_guide",
+      "cardType": "reference_summary",
+      "category": "navigation",
+      "riskLevel": "low",
+      "sourceQuality": "supporting_only",
+      "contentStatus": "reference_summary",
+      "summary": "Finding your way without GPS or modern technology.",
+      "whenToUse": "Use for deeper browsing, educational questions, and as supporting reference under action cards."
+    },
+    {
+      "preferredOption": "Get under sturdy furniture if possible, cover your head and neck, and hold on.",
+      "fallbackOption": "If no sturdy furniture is nearby, move only a few steps to an interior area away from glass and protect your head and neck.",
+      "steps": [
+        "Drop to hands and knees.",
+        "Cover head and neck under sturdy shelter if possible.",
+        "Hold on until shaking stops.",
+        "Stay indoors if already indoors.",
+        "If outdoors, move away from buildings and power lines.",
+        "If driving, pull over safely and stay in the vehicle."
+      ],
+      "warnings": [
+        "Falling glass, shelves, lights, and appliances can cause serious injury.",
+        "Aftershocks may follow."
+      ],
+      "whatNotToDo": [
+        "Do not run outside while the building is shaking.",
+        "Do not use elevators."
+      ],
+      "redFlags": [
+        "Serious injury, heavy bleeding, loss of consciousness, or major structural damage require urgent help."
+      ],
+      "preparednessTips": [
+        "Practice Drop, Cover, and Hold On.",
+        "Keep shoes and a flashlight near your bed."
+      ],
+      "limitations": [],
+      "tags": [
+        "earthquake",
+        "during",
+        "drop-cover-hold-on"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Stay Safe During an Earthquake",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/stay-safe-during-an-earthquake.html",
+          "whyUseful": "Clear public-facing actions by location.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Preparing for Earthquakes",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/index.html",
+          "whyUseful": "Preparedness planning and household actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Safety",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+          "whyUseful": "Plain-language before/during/after instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Preparedness and Response",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/earthquakes/preparedness",
+          "whyUseful": "Practical preparedness, hazard, and response guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "earthquake-during-shaking",
+      "slug": "earthquake-during-shaking",
+      "title": "Earthquake Safety: During Shaking",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "earthquake-safety-reference",
+      "summary": "Drop, Cover, and Hold On. Stay where you are and protect your head and neck until the shaking stops.",
+      "whenToUse": "Use during felt earthquake shaking or an official earthquake alert."
+    },
+    {
+      "preferredOption": "Check people for injuries first, then check for fire, gas leaks, unstable debris, and electrical hazards.",
+      "fallbackOption": null,
+      "steps": [
+        "Check yourself and nearby people for injuries.",
+        "Look and smell for hazards such as gas leaks and fire.",
+        "Leave immediately if you suspect gas, fire, or major structural damage.",
+        "Move to an open meeting area away from buildings and power lines if needed.",
+        "Be ready to Drop, Cover, and Hold On again during aftershocks.",
+        "Follow official instructions via radio or phone alerts."
+      ],
+      "warnings": [
+        "Damaged buildings and stairwells may fail without warning.",
+        "Downed power lines can cause electrocution."
+      ],
+      "whatNotToDo": [
+        "Do not use open flames if gas leaks are possible.",
+        "Do not re-enter heavily damaged buildings casually."
+      ],
+      "redFlags": [
+        "Gas smell, smoke, trapped people, or major structural cracks require urgent professional help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "earthquake",
+        "after",
+        "aftershocks"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Stay Safe During an Earthquake",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/stay-safe-during-an-earthquake.html",
+          "whyUseful": "Clear public-facing actions by location.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Preparing for Earthquakes",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/index.html",
+          "whyUseful": "Preparedness planning and household actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Safety",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+          "whyUseful": "Plain-language before/during/after instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Preparedness and Response",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/earthquakes/preparedness",
+          "whyUseful": "Practical preparedness, hazard, and response guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "earthquake-after-shaking",
+      "slug": "earthquake-after-shaking",
+      "title": "Earthquake Safety: Right After Shaking",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "earthquake-safety-reference",
+      "summary": "Check for injuries and hazards, move to a safer open area if needed, and be ready for aftershocks.",
+      "whenToUse": "Use immediately after earthquake shaking stops."
+    },
+    {
+      "preferredOption": "Evacuate on foot to higher ground or inland as soon as the shaking stops.",
+      "fallbackOption": null,
+      "steps": [
+        "Protect yourself during shaking first.",
+        "As soon as it is safe, go inland or to higher ground if strong or long shaking occurred.",
+        "Avoid beaches, shorelines, and low coastal roads.",
+        "Stay away until officials say it is safe."
+      ],
+      "warnings": [
+        "Tsunami waves can arrive quickly after coastal earthquakes.",
+        "Multiple waves may follow."
+      ],
+      "whatNotToDo": [
+        "Do not go to the shore to watch the water.",
+        "Do not return after the first wave."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "earthquake",
+        "tsunami",
+        "coastal"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Stay Safe During an Earthquake",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/stay-safe-during-an-earthquake.html",
+          "whyUseful": "Clear public-facing actions by location.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Preparing for Earthquakes",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/index.html",
+          "whyUseful": "Preparedness planning and household actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Safety",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+          "whyUseful": "Plain-language before/during/after instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Preparedness and Response",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/earthquakes/preparedness",
+          "whyUseful": "Practical preparedness, hazard, and response guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "earthquake-tsunami-risk",
+      "slug": "earthquake-tsunami-risk",
+      "title": "Earthquake Safety: Tsunami Risk After a Quake",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "earthquake-safety-reference",
+      "summary": "If you are near the coast and strong or long shaking occurs, move to higher ground or inland as soon as it is safe.",
+      "whenToUse": "Use in coastal or tsunami-risk areas after strong or long earthquake shaking."
+    },
+    {
+      "preferredOption": "Combine a family plan, a practiced drill, and a ready-to-grab supply kit.",
+      "fallbackOption": null,
+      "steps": [
+        "Secure bookshelves, cabinets, and heavy appliances.",
+        "Move heavy or breakable items lower.",
+        "Practice Drop, Cover, and Hold On.",
+        "Choose meeting points and an out-of-area contact.",
+        "Keep basic supplies ready."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "earthquake",
+        "preparedness",
+        "checklist"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Stay Safe During an Earthquake",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/stay-safe-during-an-earthquake.html",
+          "whyUseful": "Clear public-facing actions by location.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Preparing for Earthquakes",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/earthquakes/safety/index.html",
+          "whyUseful": "Preparedness planning and household actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Safety",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+          "whyUseful": "Plain-language before/during/after instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Earthquake Preparedness and Response",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/earthquakes/preparedness",
+          "whyUseful": "Practical preparedness, hazard, and response guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "earthquake-preparedness-checklist",
+      "slug": "earthquake-preparedness-checklist",
+      "title": "Earthquake Preparedness Checklist",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "earthquake-safety-reference",
+      "summary": "Secure heavy items, practice drills, and keep core supplies ready before an earthquake happens.",
+      "whenToUse": "Use for household, school, or workplace planning before an earthquake."
+    },
+    {
+      "preferredOption": "Evacuate to higher ground immediately when warnings are issued or water is rising around you.",
+      "fallbackOption": null,
+      "steps": [
+        "Monitor official alerts.",
+        "Leave low-lying areas and head to higher ground.",
+        "Avoid flooded roads and turn around if water covers the route.",
+        "If trapped indoors, move upward and signal rescuers if needed."
+      ],
+      "warnings": [
+        "Floodwater can hide debris, sewage, chemicals, wildlife, and power lines.",
+        "Even shallow moving water can knock a person down or sweep a vehicle away."
+      ],
+      "whatNotToDo": [
+        "Do not drive around barriers.",
+        "Do not walk, swim, or play in floodwater."
+      ],
+      "redFlags": [
+        "If someone is trapped, electrically shocked, or becomes ill after floodwater exposure, seek urgent help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "flood"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Turn Around Don't Drown®",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown",
+          "whyUseful": "Core floodwater safety rule.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Floodwater After a Disaster or Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/floods/safety/floodwater-after-a-disaster-or-emergency-safety.html",
+          "whyUseful": "Health risks and post-contact hygiene/safety.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Flood Safety and Preparedness",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/afc/FloodSafety",
+          "whyUseful": "Before/during/after flood actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "flood-get-to-higher-ground",
+      "slug": "flood-get-to-higher-ground",
+      "title": "Flood Survival: Get to Higher Ground",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "flood-survival-reference",
+      "summary": "Turn Around, Don't Drown. Never drive, walk, or swim through floodwater. Move to higher ground immediately.",
+      "whenToUse": "Use during flash floods, river overflows, urban flooding, or rapidly rising water."
+    },
+    {
+      "preferredOption": "Avoid floodwater entirely and use protective footwear and gloves if cleanup or unavoidable contact occurs.",
+      "fallbackOption": null,
+      "steps": [
+        "Avoid entering floodwater if possible.",
+        "If contact occurs, wash exposed skin thoroughly.",
+        "Clean and cover cuts quickly.",
+        "Discard heavily contaminated food or materials unless official guidance says otherwise."
+      ],
+      "warnings": [
+        "Floodwater may contain sewage, fuel, broken glass, and sharp debris.",
+        "Water can energize hidden electrical hazards."
+      ],
+      "whatNotToDo": [
+        "Do not let children play in floodwater.",
+        "Do not handle downed wires or objects touching them."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "flood"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Turn Around Don't Drown®",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown",
+          "whyUseful": "Core floodwater safety rule.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Floodwater After a Disaster or Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/floods/safety/floodwater-after-a-disaster-or-emergency-safety.html",
+          "whyUseful": "Health risks and post-contact hygiene/safety.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Flood Safety and Preparedness",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/afc/FloodSafety",
+          "whyUseful": "Before/during/after flood actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "floodwater-safety",
+      "slug": "floodwater-safety",
+      "title": "Floodwater Safety",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "flood-survival-reference",
+      "summary": "Treat floodwater as contaminated and dangerous. Avoid contact whenever possible.",
+      "whenToUse": "Use when floodwater is present around homes, roads, yards, or cleanup areas."
+    },
+    {
+      "preferredOption": "Wait for official clearance, then inspect cautiously using protective gear and clean lighting.",
+      "fallbackOption": null,
+      "steps": [
+        "Wait for local authorities to declare the area safe if possible.",
+        "Check for structural instability before entering.",
+        "Use flashlights instead of open flames.",
+        "Avoid turning on electricity or gas unless you know the systems are safe."
+      ],
+      "warnings": [
+        "Mold, sewage residue, gas leaks, and unstable floors can remain after water recedes."
+      ],
+      "whatNotToDo": [
+        "Do not use candles in a damaged building.",
+        "Do not re-energize flooded electrical systems casually."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "flood"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Turn Around Don't Drown®",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown",
+          "whyUseful": "Core floodwater safety rule.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Floodwater After a Disaster or Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/floods/safety/floodwater-after-a-disaster-or-emergency-safety.html",
+          "whyUseful": "Health risks and post-contact hygiene/safety.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Flood Safety and Preparedness",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/afc/FloodSafety",
+          "whyUseful": "Before/during/after flood actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "flood-reentry-cleanup",
+      "slug": "flood-reentry-cleanup",
+      "title": "Returning Home After Flooding",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "flood-survival-reference",
+      "summary": "Do not re-enter flooded or damaged homes until officials say it is safe, and watch for structural, electrical, and contamination hazards.",
+      "whenToUse": "Use after floodwater has receded and you are considering re-entering a building."
+    },
+    {
+      "preferredOption": "Go to a basement, storm cellar, or interior safe room immediately.",
+      "fallbackOption": "Use an interior room, hallway, closet, or bathroom on the lowest floor and protect yourself under sturdy furniture if available.",
+      "steps": [
+        "Move quickly to the safest shelter available.",
+        "Stay away from windows, large rooms, and exterior walls.",
+        "Get low and cover your head and neck.",
+        "Remain sheltered until the danger has clearly passed."
+      ],
+      "warnings": [
+        "Flying debris causes many tornado injuries and deaths.",
+        "Mobile homes and weak structures can fail quickly."
+      ],
+      "whatNotToDo": [
+        "Do not go under overpasses.",
+        "Do not open windows.",
+        "Do not use elevators."
+      ],
+      "redFlags": [
+        "After the tornado, gas smell, downed lines, serious injuries, or structural collapse require urgent help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "tornado",
+        "shelter"
+      ],
+      "sourceReferences": [
+        {
+          "title": "What to do During a Tornado",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/tornado-during",
+          "whyUseful": "Location-specific shelter instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Stay Safe During a Tornado",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/tornadoes/safety/stay-safe-during-a-tornado-safety.html",
+          "whyUseful": "Public safety actions and scenario guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Joint Statement on Tornado Safety",
+          "organization": "NWS & American Red Cross",
+          "url": "https://www.weather.gov/media/safety/NWS-ARC-Revised-Joint-Statement-on-Tornado-Safety_062209.pdf",
+          "whyUseful": "Consensus best practices on tornado sheltering.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "tornado-take-shelter",
+      "slug": "tornado-take-shelter",
+      "title": "Tornado Safety: Take Shelter Immediately",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "tornado-safety-reference",
+      "summary": "Get to the lowest level of a sturdy building, in an interior room away from windows, and protect your head and neck.",
+      "whenToUse": "Use during a tornado warning or when you observe tornado signs and shelter is available."
+    },
+    {
+      "preferredOption": "Get to a sturdy building before the tornado reaches you if there is time and a safe route.",
+      "fallbackOption": "If no sturdy shelter is reachable, get low in a safer nearby low area only if conditions make that safer than remaining exposed.",
+      "steps": [
+        "Monitor official alerts and decide early.",
+        "Leave mobile homes for sturdy shelter as soon as warnings are issued.",
+        "If driving and a sturdy building is nearby, go there promptly.",
+        "If no shelter is reachable, protect your head and neck and get as low as practical."
+      ],
+      "warnings": [
+        "Vehicles and mobile homes can overturn or be struck by debris.",
+        "Low areas may also flood in some storms."
+      ],
+      "whatNotToDo": [
+        "Do not try to outrun a close tornado in traffic.",
+        "Do not shelter under bridges or overpasses."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "tornado",
+        "vehicle",
+        "mobile-home"
+      ],
+      "sourceReferences": [
+        {
+          "title": "What to do During a Tornado",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/tornado-during",
+          "whyUseful": "Location-specific shelter instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Stay Safe During a Tornado",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/tornadoes/safety/stay-safe-during-a-tornado-safety.html",
+          "whyUseful": "Public safety actions and scenario guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Joint Statement on Tornado Safety",
+          "organization": "NWS & American Red Cross",
+          "url": "https://www.weather.gov/media/safety/NWS-ARC-Revised-Joint-Statement-on-Tornado-Safety_062209.pdf",
+          "whyUseful": "Consensus best practices on tornado sheltering.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "tornado-vehicle-mobile-home",
+      "slug": "tornado-vehicle-mobile-home",
+      "title": "Tornado Safety: If You Are in a Vehicle or Mobile Home",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "tornado-safety-reference",
+      "summary": "A sturdy building is safer than a vehicle or mobile home. Leave for shelter if you can do so early and safely.",
+      "whenToUse": "Use during a tornado warning when you are in a car, truck, RV, or mobile home."
+    },
+    {
+      "preferredOption": "Check for injuries, avoid unstable structures, and follow official instructions.",
+      "fallbackOption": null,
+      "steps": [
+        "Check yourself and others for injuries.",
+        "Avoid entering heavily damaged structures.",
+        "Stay away from downed power lines and gas leaks.",
+        "Follow official shelter, cleanup, or evacuation instructions."
+      ],
+      "warnings": [
+        "Secondary hazards often injure people after the tornado itself has passed."
+      ],
+      "whatNotToDo": [
+        "Do not use open flames around possible gas leaks.",
+        "Do not re-enter unstable buildings casually."
+      ],
+      "redFlags": [
+        "Heavy bleeding, unconsciousness, trouble breathing, gas smell, and structural collapse require emergency help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "tornado",
+        "after"
+      ],
+      "sourceReferences": [
+        {
+          "title": "What to do During a Tornado",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/tornado-during",
+          "whyUseful": "Location-specific shelter instructions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Stay Safe During a Tornado",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/tornadoes/safety/stay-safe-during-a-tornado-safety.html",
+          "whyUseful": "Public safety actions and scenario guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Joint Statement on Tornado Safety",
+          "organization": "NWS & American Red Cross",
+          "url": "https://www.weather.gov/media/safety/NWS-ARC-Revised-Joint-Statement-on-Tornado-Safety_062209.pdf",
+          "whyUseful": "Consensus best practices on tornado sheltering.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "tornado-after",
+      "slug": "tornado-after",
+      "title": "After the Tornado",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "tornado-safety-reference",
+      "summary": "Watch for structural collapse, gas leaks, broken glass, and downed lines after a tornado passes.",
+      "whenToUse": "Use once immediate tornado danger has passed."
+    },
+    {
+      "preferredOption": "Evacuate promptly via official routes before roads become blocked.",
+      "fallbackOption": null,
+      "steps": [
+        "Monitor local alerts and maps.",
+        "Keep a go-bag, medicines, documents, and pet supplies ready.",
+        "Leave early if an evacuation order is issued.",
+        "Drive with windows up and ventilation on recirculate if smoke is present."
+      ],
+      "warnings": [
+        "Roads can become blocked quickly by smoke, congestion, or fire.",
+        "Embers can ignite vehicles and structures."
+      ],
+      "whatNotToDo": [
+        "Do not wait until the last minute if an order is issued.",
+        "Do not assume familiar roads will remain open."
+      ],
+      "redFlags": [
+        "Chest pain, severe breathing trouble, worsening chronic symptoms, or burns require urgent help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wildfire"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Wildfire Evacuation Outreach Materials",
+          "organization": "FEMA/USFA",
+          "url": "https://www.usfa.fema.gov/wui/outreach/wildfire-evacuation.html",
+          "whyUseful": "Practical evacuation planning and public action checklists.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How Wildfire Smoke Affects Your Body",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/wildfires/risk-factors/index.html",
+          "whyUseful": "Health risks and high-risk group guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Public Health Advice During Wildfires",
+          "organization": "WHO Europe",
+          "url": "https://www.who.int/europe/news-room/questions-and-answers/item/public-health-advice-during-the-wildfires--how-to-protect-your-health-and-keep-safe",
+          "whyUseful": "Public-health smoke and safety guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "wildfire-evacuate-early",
+      "slug": "wildfire-evacuate-early",
+      "title": "Wildfire Evacuation: Leave Early",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wildfire-smoke-evacuation",
+      "summary": "If officials order evacuation or fire conditions become unsafe, leave early using planned routes.",
+      "whenToUse": "Use during active wildfire threats, evacuation warnings or orders, or when smoke and fire make remaining unsafe."
+    },
+    {
+      "preferredOption": "Stay indoors with windows and doors closed and use filtered or cleaner indoor air if possible.",
+      "fallbackOption": null,
+      "steps": [
+        "Check air quality and official alerts.",
+        "Close windows, doors, and outside vents if conditions allow.",
+        "Use HEPA filtration or the cleanest indoor air space available.",
+        "Limit physical activity and time outdoors.",
+        "Pay extra attention to children, older adults, pregnant people, and anyone with heart or lung disease."
+      ],
+      "warnings": [
+        "Wildfire smoke can worsen asthma, COPD, and heart conditions."
+      ],
+      "whatNotToDo": [
+        "Do not rely on a damp cloth as true smoke protection.",
+        "Do not do strenuous outdoor activity in heavy smoke unless absolutely necessary."
+      ],
+      "redFlags": [
+        "Chest pain, severe breathing trouble, worsening chronic symptoms, or burns require urgent help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wildfire"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Wildfire Evacuation Outreach Materials",
+          "organization": "FEMA/USFA",
+          "url": "https://www.usfa.fema.gov/wui/outreach/wildfire-evacuation.html",
+          "whyUseful": "Practical evacuation planning and public action checklists.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How Wildfire Smoke Affects Your Body",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/wildfires/risk-factors/index.html",
+          "whyUseful": "Health risks and high-risk group guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Public Health Advice During Wildfires",
+          "organization": "WHO Europe",
+          "url": "https://www.who.int/europe/news-room/questions-and-answers/item/public-health-advice-during-the-wildfires--how-to-protect-your-health-and-keep-safe",
+          "whyUseful": "Public-health smoke and safety guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "wildfire-smoke-protection",
+      "slug": "wildfire-smoke-protection",
+      "title": "Wildfire Smoke: Protect Your Air",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "weather_environment",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wildfire-smoke-evacuation",
+      "summary": "If you are not evacuating, reduce smoke exposure indoors and avoid unnecessary time outside.",
+      "whenToUse": "Use when wildfire smoke is affecting air quality near your home or shelter."
+    },
+    {
+      "preferredOption": "Wait for official clearance and return with protective gear, water, phone power, and basic supplies.",
+      "fallbackOption": null,
+      "steps": [
+        "Confirm re-entry is allowed.",
+        "Wear sturdy shoes, gloves, and a respirator if ash or smoke remain heavy.",
+        "Check for hot spots, unstable trees, utility damage, and structural hazards.",
+        "Use caution around ash, debris, and contaminated water or food."
+      ],
+      "warnings": [
+        "Ash and damaged utilities can still harm you after the flames have passed."
+      ],
+      "whatNotToDo": [
+        "Do not turn on damaged gas or electrical systems casually.",
+        "Do not let children play in ash or debris."
+      ],
+      "redFlags": [
+        "Gas smell, active hot spots, unstable structures, or heavy persistent smoke need professional help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wildfire"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Wildfire Evacuation Outreach Materials",
+          "organization": "FEMA/USFA",
+          "url": "https://www.usfa.fema.gov/wui/outreach/wildfire-evacuation.html",
+          "whyUseful": "Practical evacuation planning and public action checklists.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How Wildfire Smoke Affects Your Body",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/wildfires/risk-factors/index.html",
+          "whyUseful": "Health risks and high-risk group guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Public Health Advice During Wildfires",
+          "organization": "WHO Europe",
+          "url": "https://www.who.int/europe/news-room/questions-and-answers/item/public-health-advice-during-the-wildfires--how-to-protect-your-health-and-keep-safe",
+          "whyUseful": "Public-health smoke and safety guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "wildfire-return-home",
+      "slug": "wildfire-return-home",
+      "title": "Returning After Wildfire",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "natural_disasters",
+      "riskLevel": "high",
+      "sourceQuality": "medium",
+      "contentStatus": "ready",
+      "parentTopic": "wildfire-smoke-evacuation",
+      "summary": "Return only when authorities say it is safe, and watch for ash, unstable structures, utility damage, and lingering smoke.",
+      "whenToUse": "Use after evacuation or smoke sheltering once officials begin allowing re-entry."
+    },
+    {
+      "preferredOption": "Call emergency services immediately and begin rapid cooling with cool water, cold packs, and fanning.",
+      "fallbackOption": null,
+      "steps": [
+        "Call emergency services or get urgent help immediately.",
+        "Move the person to shade, air conditioning, or the coolest available place.",
+        "Apply cool water and cold packs to the neck, armpits, and groin if available.",
+        "Fan the person continuously while cooling.",
+        "Do not give fluids if the person is vomiting, confused, or not fully alert."
+      ],
+      "warnings": [
+        "Heat stroke can rapidly cause organ failure and death.",
+        "Delay makes outcomes worse."
+      ],
+      "whatNotToDo": [
+        "Do not leave the person alone.",
+        "Do not force fluids into someone who is not fully awake."
+      ],
+      "redFlags": [
+        "Confusion, seizures, fainting, hot dry skin, severe vomiting, or collapse require emergency care now."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "heat",
+        "heat-stroke"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Plan and Respond to a Heat Emergency",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/sites/default/files/activities_safety_in_5_heat_emergencies.pdf",
+          "whyUseful": "Concise emergency cooling and EMS actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Heat Cramps, Heat Exhaustion, Heat Stroke",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/heat-illness",
+          "whyUseful": "Clear symptom tiers and first aid actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "First Aid for Heat Illness",
+          "organization": "CDC",
+          "url": "https://stacks.cdc.gov/view/cdc/138337/cdc_138337_DS1.pdf",
+          "whyUseful": "Visual signs and immediate public guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "heat-stroke-emergency",
+      "slug": "heat-stroke-emergency",
+      "title": "Heat Stroke: Cool and Call for Help",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Heat stroke is an emergency. Call for help, move the person to a cooler place, and cool them aggressively while help is on the way.",
+      "whenToUse": "Use when someone in hot conditions has confusion, collapse, seizures, or very high body temperature."
+    },
+    {
+      "preferredOption": "Rest in shade or air conditioning, loosen clothing, cool the skin, and sip cool water if the person is alert.",
+      "fallbackOption": null,
+      "steps": [
+        "Move to a cool or shaded place.",
+        "Loosen or remove extra clothing.",
+        "Cool the skin with water and airflow.",
+        "Give small sips of cool water if the person is alert and not vomiting.",
+        "Watch closely for worsening symptoms."
+      ],
+      "warnings": [
+        "Heat exhaustion can progress to heat stroke."
+      ],
+      "whatNotToDo": [
+        "Do not ignore persistent vomiting, confusion, or collapse.",
+        "Do not send the person back into heat quickly."
+      ],
+      "redFlags": [
+        "Symptoms lasting more than a short period, chest pain, fainting, worsening confusion, or severe vomiting require medical evaluation."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "heat",
+        "heat-exhaustion"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Plan and Respond to a Heat Emergency",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/sites/default/files/activities_safety_in_5_heat_emergencies.pdf",
+          "whyUseful": "Concise emergency cooling and EMS actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Heat Cramps, Heat Exhaustion, Heat Stroke",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/heat-illness",
+          "whyUseful": "Clear symptom tiers and first aid actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "First Aid for Heat Illness",
+          "organization": "CDC",
+          "url": "https://stacks.cdc.gov/view/cdc/138337/cdc_138337_DS1.pdf",
+          "whyUseful": "Visual signs and immediate public guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "heat-exhaustion-cool-rehydrate",
+      "slug": "heat-exhaustion-cool-rehydrate",
+      "title": "Heat Exhaustion: Cool Down and Rehydrate",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Move to a cooler place, rest, and sip fluids if the person is alert. Escalate if symptoms worsen or do not improve.",
+      "whenToUse": "Use for heavy sweating, weakness, dizziness, cramps, nausea, or fatigue in hot conditions when the person is still alert."
+    },
+    {
+      "preferredOption": "Plan activities for cooler times, drink regularly, rest in shade, and monitor people at higher risk.",
+      "fallbackOption": null,
+      "steps": [
+        "Drink regularly and do not wait until you are very thirsty.",
+        "Wear lightweight, breathable clothing.",
+        "Schedule heavy activity for cooler hours when possible.",
+        "Take shade or cooling breaks frequently.",
+        "Check children, older adults, and people with chronic illness regularly."
+      ],
+      "warnings": [
+        "Heat illness can develop even in people who seem healthy, especially during heat waves."
+      ],
+      "whatNotToDo": [
+        "Do not leave people or pets in parked vehicles."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "heat",
+        "prevention"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Plan and Respond to a Heat Emergency",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/sites/default/files/activities_safety_in_5_heat_emergencies.pdf",
+          "whyUseful": "Concise emergency cooling and EMS actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Heat Cramps, Heat Exhaustion, Heat Stroke",
+          "organization": "NOAA National Weather Service",
+          "url": "https://www.weather.gov/safety/heat-illness",
+          "whyUseful": "Clear symptom tiers and first aid actions.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "First Aid for Heat Illness",
+          "organization": "CDC",
+          "url": "https://stacks.cdc.gov/view/cdc/138337/cdc_138337_DS1.pdf",
+          "whyUseful": "Visual signs and immediate public guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "heat-prevention",
+      "slug": "heat-prevention",
+      "title": "Heat Safety and Prevention",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Hydration, shade, lighter clothing, pacing, and checking vulnerable people reduce the risk of heat illness.",
+      "whenToUse": "Use before outdoor work, travel, sports, or heat waves."
+    },
+    {
+      "preferredOption": "Get the person into warm, dry shelter, remove wet clothes, insulate with dry layers, and warm the chest, neck, and groin first.",
+      "fallbackOption": null,
+      "steps": [
+        "Move the person out of cold, wind, and wet conditions.",
+        "Remove wet clothing gently and dry the skin if possible.",
+        "Wrap with dry blankets or layers, focusing on the core body first.",
+        "Give warm sweetened fluids only if the person is fully awake and can swallow safely.",
+        "Get urgent medical help if symptoms are severe or worsening."
+      ],
+      "warnings": [
+        "Severe hypothermia can be fatal.",
+        "Wet clothing and wind accelerate heat loss."
+      ],
+      "whatNotToDo": [
+        "Do not give alcohol.",
+        "Do not use direct intense heat on numb skin.",
+        "Do not give fluids to an unconscious person."
+      ],
+      "redFlags": [
+        "Shivering stops, confusion worsens, slow breathing, loss of consciousness, or inability to rewarm require emergency help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "cold",
+        "hypothermia"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Extreme Cold Guide",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/disasters/winter/pdf/extreme-cold-guide.pdf",
+          "whyUseful": "Practical recognition and warming steps.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Hypothermia and Frostbite",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/hypothermia-and-frostbite.htm",
+          "whyUseful": "Step-by-step emergency response and clear do/don't guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cold Stress Guide",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/emergency-preparedness/guides/cold-stress",
+          "whyUseful": "Pre-medical arrival handling of cold stress cases.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "hypothermia-warm-core",
+      "slug": "hypothermia-warm-core",
+      "title": "Hypothermia: Warm the Core and Get Help",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Move the person to a warm, dry place, remove wet clothing, insulate them, and focus on warming the core while seeking help if symptoms are severe.",
+      "whenToUse": "Use when cold-exposed people show intense shivering, confusion, slurred speech, clumsiness, or unusual drowsiness."
+    },
+    {
+      "preferredOption": "Protect the area from further cold and seek medical care, especially for extensive or severe frostbite.",
+      "fallbackOption": null,
+      "steps": [
+        "Move the person to shelter and protect the affected body part.",
+        "Remove wet gloves, socks, or tight items carefully.",
+        "Pad and protect the area from pressure and further cold.",
+        "Seek medical evaluation for significant frostbite."
+      ],
+      "warnings": [
+        "Refreezing after warming can make damage much worse.",
+        "Walking on frostbitten feet can increase injury."
+      ],
+      "whatNotToDo": [
+        "Do not rub the area.",
+        "Do not use direct high heat or hot water casually.",
+        "Do not puncture blisters."
+      ],
+      "redFlags": [
+        "Hard, waxy skin, large blisters, spreading numbness, or severe pain after rewarming need medical care."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "cold",
+        "frostbite"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Extreme Cold Guide",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/disasters/winter/pdf/extreme-cold-guide.pdf",
+          "whyUseful": "Practical recognition and warming steps.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Hypothermia and Frostbite",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/hypothermia-and-frostbite.htm",
+          "whyUseful": "Step-by-step emergency response and clear do/don't guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cold Stress Guide",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/emergency-preparedness/guides/cold-stress",
+          "whyUseful": "Pre-medical arrival handling of cold stress cases.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "frostbite-protect-rewarm",
+      "slug": "frostbite-protect-rewarm",
+      "title": "Frostbite: Protect and Rewarm Safely",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Protect the affected area from further freezing and do not rub it. Rewarm gently when refreezing is unlikely.",
+      "whenToUse": "Use when skin becomes numb, pale, waxy, hard, or blistered after cold exposure."
+    },
+    {
+      "preferredOption": "Use layered clothing with moisture management and keep backup dry gear available.",
+      "fallbackOption": null,
+      "steps": [
+        "Wear layered clothing with moisture-wicking and insulating materials when possible.",
+        "Keep spare dry socks, gloves, and a hat available.",
+        "Protect from wind and wet conditions early.",
+        "Limit time exposed in severe cold or wind chill.",
+        "Check companions frequently for early symptoms."
+      ],
+      "warnings": [
+        "Cold injuries can develop faster in wind, wet conditions, exhaustion, or poor nutrition."
+      ],
+      "whatNotToDo": [
+        "Do not rely on cotton alone in wet, cold conditions if better options are available."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "cold",
+        "prevention",
+        "layering"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Extreme Cold Guide",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/disasters/winter/pdf/extreme-cold-guide.pdf",
+          "whyUseful": "Practical recognition and warming steps.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Hypothermia and Frostbite",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/hypothermia-and-frostbite.htm",
+          "whyUseful": "Step-by-step emergency response and clear do/don't guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cold Stress Guide",
+          "organization": "OSHA",
+          "url": "https://www.osha.gov/emergency-preparedness/guides/cold-stress",
+          "whyUseful": "Pre-medical arrival handling of cold stress cases.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "cold-prevention-layering",
+      "slug": "cold-prevention-layering",
+      "title": "Cold Weather Prevention and Layering",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Stay dry, layer clothing, protect extremities, and limit exposure during cold, wet, or windy conditions.",
+      "whenToUse": "Use before winter travel, outdoor work, trekking, storms, or prolonged cold-weather exposure."
+    },
+    {
+      "preferredOption": "Apply direct pressure first, then gently clean and cover the wound.",
+      "fallbackOption": null,
+      "steps": [
+        "Wash hands if possible.",
+        "Press gently but firmly with a clean cloth or gauze until bleeding slows.",
+        "Rinse the wound with clean water.",
+        "Apply a clean covering or bandage.",
+        "Monitor for signs of infection."
+      ],
+      "warnings": [
+        "Dirty wounds can become infected."
+      ],
+      "whatNotToDo": [
+        "Do not repeatedly peel off forming clots just to check the wound."
+      ],
+      "redFlags": [
+        "Deep wounds, exposed fat or bone, numbness, or signs of infection need medical evaluation."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wound",
+        "bleeding"
+      ],
+      "sourceReferences": [
+        {
+          "title": "2024 AHA/Red Cross First Aid Guidelines",
+          "organization": "American Heart Association & Red Cross",
+          "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001281",
+          "whyUseful": "Latest evidence-based first aid guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cuts and Puncture Wounds",
+          "organization": "MedlinePlus (NIH)",
+          "url": "https://medlineplus.gov/ency/article/000043.htm",
+          "whyUseful": "Clear government guidance on minor wounds and infection prevention.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Emergency Wound Care PSA",
+          "organization": "CDC/HHS",
+          "url": "https://tools.cdc.gov/podcasts/media/pdf/Storm_EmergWoundCare_30.pdf",
+          "whyUseful": "Concise public guidance on pressure, cleaning, and bandaging.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "minor-cuts-scrapes",
+      "slug": "minor-cuts-scrapes",
+      "title": "Minor Cuts and Scrapes: Clean and Cover",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wound-care-reference",
+      "summary": "For minor wounds, stop the bleeding, rinse gently, and cover with a clean dressing.",
+      "whenToUse": "Use for minor cuts, scrapes, and small punctures with controllable bleeding."
+    },
+    {
+      "preferredOption": "Apply steady firm pressure with the cleanest material available and hold it without checking too often.",
+      "fallbackOption": null,
+      "steps": [
+        "Place clean cloth or gauze over the wound.",
+        "Press firmly and keep pressure steady.",
+        "Keep the person calm and still as practical.",
+        "If bleeding slows, continue protecting the wound and seek help if severity is uncertain."
+      ],
+      "warnings": [
+        "Heavy bleeding can become life-threatening quickly.",
+        "Loss of blood can lead to shock."
+      ],
+      "whatNotToDo": [
+        "Do not keep lifting the dressing to check every few seconds."
+      ],
+      "redFlags": [
+        "Spurting blood, soaking through multiple dressings, pale or cold skin, confusion, or collapse require urgent help."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wound",
+        "bleeding"
+      ],
+      "sourceReferences": [
+        {
+          "title": "2024 AHA/Red Cross First Aid Guidelines",
+          "organization": "American Heart Association & Red Cross",
+          "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001281",
+          "whyUseful": "Latest evidence-based first aid guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cuts and Puncture Wounds",
+          "organization": "MedlinePlus (NIH)",
+          "url": "https://medlineplus.gov/ency/article/000043.htm",
+          "whyUseful": "Clear government guidance on minor wounds and infection prevention.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Emergency Wound Care PSA",
+          "organization": "CDC/HHS",
+          "url": "https://tools.cdc.gov/podcasts/media/pdf/Storm_EmergWoundCare_30.pdf",
+          "whyUseful": "Concise public guidance on pressure, cleaning, and bandaging.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "bleeding-control-pressure-first",
+      "slug": "bleeding-control-pressure-first",
+      "title": "Bleeding Control: Direct Pressure First",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wound-care-reference",
+      "summary": "Firm direct pressure is the first step for most external bleeding.",
+      "whenToUse": "Use when a wound is bleeding more than a simple scrape but can still be directly compressed."
+    },
+    {
+      "preferredOption": "Call emergency services or get urgent help while someone applies firm direct pressure.",
+      "fallbackOption": null,
+      "steps": [
+        "Call for emergency help or direct someone to do it.",
+        "Apply firm direct pressure immediately.",
+        "Keep the person lying down if possible and monitor breathing and responsiveness.",
+        "Continue pressure until advanced help takes over or bleeding is clearly controlled."
+      ],
+      "warnings": [
+        "Uncontrolled severe bleeding can be fatal in minutes."
+      ],
+      "whatNotToDo": [
+        "Do not delay emergency help while searching for perfect supplies."
+      ],
+      "redFlags": [
+        "Loss of consciousness, trouble breathing, severe weakness, or ongoing uncontrolled bleeding are immediate emergencies."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wound",
+        "bleeding"
+      ],
+      "sourceReferences": [
+        {
+          "title": "2024 AHA/Red Cross First Aid Guidelines",
+          "organization": "American Heart Association & Red Cross",
+          "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001281",
+          "whyUseful": "Latest evidence-based first aid guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cuts and Puncture Wounds",
+          "organization": "MedlinePlus (NIH)",
+          "url": "https://medlineplus.gov/ency/article/000043.htm",
+          "whyUseful": "Clear government guidance on minor wounds and infection prevention.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Emergency Wound Care PSA",
+          "organization": "CDC/HHS",
+          "url": "https://tools.cdc.gov/podcasts/media/pdf/Storm_EmergWoundCare_30.pdf",
+          "whyUseful": "Concise public guidance on pressure, cleaning, and bandaging.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "severe-bleeding-get-help-fast",
+      "slug": "severe-bleeding-get-help-fast",
+      "title": "Severe Bleeding: Get Help Fast",
+      "layer": "action_card",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wound-care-reference",
+      "summary": "Severe bleeding is an emergency. Apply direct pressure immediately and get emergency help.",
+      "whenToUse": "Use when blood is spurting, soaking through dressings rapidly, or the person shows signs of shock or collapse."
+    },
+    {
+      "preferredOption": "Seek urgent medical care for deep, jagged, heavily contaminated, numb, or infected wounds.",
+      "fallbackOption": null,
+      "steps": [
+        "Assess depth, contamination, bleeding, pain, and function.",
+        "Look for numbness, loss of movement, exposed tissue, or severe contamination.",
+        "Watch for infection signs such as spreading redness, swelling, pus, or fever.",
+        "Get medical help if these signs are present or if you are unsure."
+      ],
+      "warnings": [
+        "Delay can worsen infection, tissue damage, and healing."
+      ],
+      "whatNotToDo": [
+        "Do not attempt invasive field closure or advanced wound procedures on your own."
+      ],
+      "redFlags": [
+        "Exposed bone or fat, persistent bleeding, numbness, severe contamination, spreading infection, or systemic illness require urgent care."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "wound",
+        "bleeding"
+      ],
+      "sourceReferences": [
+        {
+          "title": "2024 AHA/Red Cross First Aid Guidelines",
+          "organization": "American Heart Association & Red Cross",
+          "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001281",
+          "whyUseful": "Latest evidence-based first aid guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Cuts and Puncture Wounds",
+          "organization": "MedlinePlus (NIH)",
+          "url": "https://medlineplus.gov/ency/article/000043.htm",
+          "whyUseful": "Clear government guidance on minor wounds and infection prevention.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Emergency Wound Care PSA",
+          "organization": "CDC/HHS",
+          "url": "https://tools.cdc.gov/podcasts/media/pdf/Storm_EmergWoundCare_30.pdf",
+          "whyUseful": "Concise public guidance on pressure, cleaning, and bandaging.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "wound-needs-urgent-care",
+      "slug": "wound-needs-urgent-care",
+      "title": "When a Wound Needs Urgent Medical Care",
+      "layer": "scenario_guide",
+      "cardType": "medical_safety",
+      "category": "medical_safety",
+      "riskLevel": "high",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "parentTopic": "wound-care-reference",
+      "summary": "Some wounds need urgent professional care even if bleeding is partly controlled.",
+      "whenToUse": "Use when deciding whether a cut, puncture, or wound can be managed simply or needs urgent care."
+    },
+    {
+      "preferredOption": "Filter out visible particles first if needed, then boil the water vigorously long enough according to trusted emergency guidance.",
+      "fallbackOption": "If you cannot boil, use an approved backup method such as emergency disinfection guidance with the correct product and dosage.",
+      "steps": [
+        "Pre-filter cloudy water if possible.",
+        "Bring water to a vigorous boil.",
+        "Maintain boiling according to trusted guidance.",
+        "Let it cool and store it in a clean covered container."
+      ],
+      "warnings": [
+        "Boiling does not remove chemicals, fuel, or heavy metals."
+      ],
+      "whatNotToDo": [
+        "Do not assume boiling fixes water that smells of fuel or chemicals.",
+        "Do not store treated water in dirty containers."
+      ],
+      "redFlags": [
+        "Fuel smell, chemical odor, unusual discoloration after treatment, or persistent illness after drinking require safer alternatives and official guidance."
+      ],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water",
+        "boiling",
+        "purification"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Emergency Disinfection of Drinking Water",
+          "organization": "US EPA",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+          "whyUseful": "Step-by-step emergency boiling/bleach methods.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Make Water Safe in an Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/index.html",
+          "whyUseful": "Confirms boiling as primary and explains treatment limits.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Create and Store an Emergency Water Supply",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+          "whyUseful": "Storage quantities and container guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "purify-water-boiling",
+      "slug": "purify-water-boiling",
+      "title": "Purify Water by Boiling",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "water_food",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Boiling is the most reliable emergency way to make microbiologically unsafe water safer to drink when the main problem is germs rather than chemicals.",
+      "whenToUse": "Use when official guidance says water may be contaminated by germs or when you suspect biological contamination and have a heat source."
+    },
+    {
+      "preferredOption": "Use official emergency disinfection instructions exactly, including product type, amount, mixing, and wait time.",
+      "fallbackOption": "If you are unsure of the bleach type or strength, use a different safer source or treatment method rather than guessing.",
+      "steps": [
+        "Pre-filter cloudy water if possible.",
+        "Check that the bleach is unscented and appropriate for emergency water disinfection.",
+        "Follow official dosage guidance for the bleach strength and water amount.",
+        "Mix well and wait the recommended time before use."
+      ],
+      "warnings": [
+        "Wrong bleach type or wrong amount can be unsafe.",
+        "Bleach treatment does not remove chemicals or fuel contamination."
+      ],
+      "whatNotToDo": [
+        "Do not use scented or specialty bleach products.",
+        "Do not mix bleach with other cleaners."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "water",
+        "bleach",
+        "disinfection"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Emergency Disinfection of Drinking Water",
+          "organization": "US EPA",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+          "whyUseful": "Step-by-step emergency boiling/bleach methods.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Make Water Safe in an Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/index.html",
+          "whyUseful": "Confirms boiling as primary and explains treatment limits.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Create and Store an Emergency Water Supply",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+          "whyUseful": "Storage quantities and container guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "purify-water-bleach",
+      "slug": "purify-water-bleach",
+      "title": "Disinfect Water with Bleach",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "water_food",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "If you cannot boil water, emergency disinfection with the correct unscented household bleach and dosage may be a backup option.",
+      "whenToUse": "Use only when boiling is not possible and you have the right unscented bleach and official dosage guidance for the strength."
+    },
+    {
+      "preferredOption": "Store a multi-day supply of clean water in safe containers and rotate it regularly.",
+      "fallbackOption": null,
+      "steps": [
+        "Use food-grade containers or trusted sealed water supplies.",
+        "Label and date stored water.",
+        "Keep water in a cool, protected location.",
+        "Rotate or refresh stored supplies according to trusted guidance."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [
+        "Plan extra water for hot climates, children, medical needs, and pets."
+      ],
+      "limitations": [],
+      "tags": [
+        "water",
+        "storage"
+      ],
+      "sourceReferences": [
+        {
+          "title": "Emergency Disinfection of Drinking Water",
+          "organization": "US EPA",
+          "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+          "whyUseful": "Step-by-step emergency boiling/bleach methods.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Make Water Safe in an Emergency",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/index.html",
+          "whyUseful": "Confirms boiling as primary and explains treatment limits.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "How to Create and Store an Emergency Water Supply",
+          "organization": "CDC",
+          "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+          "whyUseful": "Storage quantities and container guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "emergency-water-storage",
+      "slug": "emergency-water-storage",
+      "title": "Emergency Water Storage",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "low",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Store emergency water before disasters so you are not forced to improvise under pressure.",
+      "whenToUse": "Use for home, vehicle, workplace, or travel preparedness planning."
+    },
+    {
+      "preferredOption": "Build a ready-to-grab kit with enough core supplies for at least several days.",
+      "fallbackOption": null,
+      "steps": [
+        "Store water and non-perishable food.",
+        "Add lighting, batteries, radio, first aid basics, medicines, hygiene items, and a whistle.",
+        "Keep copies of important documents and emergency contacts.",
+        "Include local maps, phone charging options, and basic tools.",
+        "Check the kit regularly and replace expired items."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "kit",
+        "72-hour"
+      ],
+      "sourceReferences": [
+        {
+          "title": "How to Prepare for Emergencies",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+          "whyUseful": "Family-focused planning, kits, and drills.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Build A Kit",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/kit",
+          "whyUseful": "Core kit item list and practical household baseline.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Make A Plan",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/plan",
+          "whyUseful": "Family communication and evacuation planning.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Shelter",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/shelter",
+          "whyUseful": "Shelter-in-place basics and official guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "build-72-hour-kit",
+      "slug": "build-72-hour-kit",
+      "title": "Build a 72-Hour Emergency Kit",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "low",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Build a simple grab-and-stay emergency kit with water, food, light, first aid basics, medicines, documents, and communication tools.",
+      "whenToUse": "Use before disasters such as earthquakes, floods, wildfire, storms, or outages."
+    },
+    {
+      "preferredOption": "Choose meeting points, assign roles, and pick an out-of-area contact.",
+      "fallbackOption": null,
+      "steps": [
+        "Discuss likely local hazards and what each person should do.",
+        "Choose household and neighborhood meeting points.",
+        "Pick an out-of-area contact who can relay information.",
+        "Write down key phone numbers and addresses.",
+        "Practice the plan periodically."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "family-plan"
+      ],
+      "sourceReferences": [
+        {
+          "title": "How to Prepare for Emergencies",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+          "whyUseful": "Family-focused planning, kits, and drills.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Build A Kit",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/kit",
+          "whyUseful": "Core kit item list and practical household baseline.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Make A Plan",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/plan",
+          "whyUseful": "Family communication and evacuation planning.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Shelter",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/shelter",
+          "whyUseful": "Shelter-in-place basics and official guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "family-emergency-plan",
+      "slug": "family-emergency-plan",
+      "title": "Make a Family Emergency Plan",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "low",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "A good emergency plan tells everyone how to reconnect, where to meet, and what to do if communication fails.",
+      "whenToUse": "Use for household preparedness before disasters or trips."
+    },
+    {
+      "preferredOption": "Pack a portable bag with essentials you can carry quickly.",
+      "fallbackOption": null,
+      "steps": [
+        "Pack medicines, documents, chargers, water, snacks, basic hygiene items, flashlight, and cash.",
+        "Include clothing layers and protective footwear if space allows.",
+        "Add child, pet, or disability-specific items if needed.",
+        "Store the bag near an exit and review it regularly."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "go-bag",
+        "evacuation"
+      ],
+      "sourceReferences": [
+        {
+          "title": "How to Prepare for Emergencies",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+          "whyUseful": "Family-focused planning, kits, and drills.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Build A Kit",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/kit",
+          "whyUseful": "Core kit item list and practical household baseline.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Make A Plan",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/plan",
+          "whyUseful": "Family communication and evacuation planning.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Shelter",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/shelter",
+          "whyUseful": "Shelter-in-place basics and official guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "evacuation-go-bag",
+      "slug": "evacuation-go-bag",
+      "title": "Evacuation Go-Bag Checklist",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Keep a fast-grab bag ready for evacuations so you are not scrambling during a crisis.",
+      "whenToUse": "Use where sudden evacuation is possible due to fire, flood, earthquake damage, storms, or conflict."
+    },
+    {
+      "preferredOption": "Move everyone into the safest indoor area available and maintain communication, supplies, and situational awareness.",
+      "fallbackOption": null,
+      "steps": [
+        "Bring people, pets, and essential supplies inside.",
+        "Close doors, windows, and vents if the hazard involves outdoor contamination or smoke.",
+        "Use official updates to know when conditions change.",
+        "Conserve water, power, and phone battery if disruption may last."
+      ],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "preparedness",
+        "shelter-in-place"
+      ],
+      "sourceReferences": [
+        {
+          "title": "How to Prepare for Emergencies",
+          "organization": "American Red Cross",
+          "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+          "whyUseful": "Family-focused planning, kits, and drills.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Build A Kit",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/kit",
+          "whyUseful": "Core kit item list and practical household baseline.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Make A Plan",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/plan",
+          "whyUseful": "Family communication and evacuation planning.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        },
+        {
+          "title": "Shelter",
+          "organization": "Ready.gov",
+          "url": "https://www.ready.gov/shelter",
+          "whyUseful": "Shelter-in-place basics and official guidance.",
+          "quality": "high",
+          "reviewStatus": "accepted"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "shelter-in-place-basics",
+      "slug": "shelter-in-place-basics",
+      "title": "Shelter in Place Basics",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "high",
+      "contentStatus": "ready",
+      "summary": "Sometimes staying inside is safer than evacuating. Prepare to remain indoors with supplies and information.",
+      "whenToUse": "Use for storms, hazardous air, unrest, utility disruptions, or other cases where official guidance says staying inside is safer."
+    },
+    {
+      "preferredOption": "Stay in the safest practical area and build simple visible and audible signals rescuers can notice.",
+      "fallbackOption": "If you have a mirror, flashlight, or whistle, use short repeated signaling bursts while conserving energy and battery.",
+      "steps": [
+        "Stay calm, assess injuries, and decide whether staying put improves your chance of rescue.",
+        "Create visible contrast with clothing, rocks, logs, or lights if possible.",
+        "Use whistle blasts or repeated light signals to draw attention.",
+        "Balance signaling with shelter, hydration, and warmth needs."
+      ],
+      "warnings": [
+        "Wandering can make you harder to find and increase injury or exposure risk."
+      ],
+      "whatNotToDo": [
+        "Do not keep moving without a clear survival reason.",
+        "Do not waste all battery power early."
+      ],
+      "redFlags": [],
+      "preparednessTips": [
+        "Carry a whistle, mirror, light, and tell someone your route before travel."
+      ],
+      "limitations": [],
+      "tags": [
+        "signaling",
+        "rescue",
+        "lost"
+      ],
+      "sourceReferences": [
+        {
+          "title": "General Guidance on Emergency Communication Strategies",
+          "organization": "NIST",
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.1827.pdf",
+          "whyUseful": "Useful communication concepts, but not ideal as a primary wilderness signaling source.",
+          "quality": "medium",
+          "reviewStatus": "needs_review"
+        },
+        {
+          "title": "Recommended Emergency Preparedness Guidelines for Rail Transit Systems",
+          "organization": "U.S. Department of Transportation",
+          "url": "https://www.transit.dot.gov/regulations-and-guidance/safety/recommended-emergency-preparedness-guidelines-rail-transit-systems",
+          "whyUseful": "Contains signaling and coordination patterns, but source fit for lost-person rescue needs review.",
+          "quality": "low",
+          "reviewStatus": "needs_review"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "signal-for-rescue",
+      "slug": "signal-for-rescue",
+      "title": "Signal for Rescue: Stay Visible and Be Heard",
+      "layer": "action_card",
+      "cardType": "practical",
+      "category": "communication",
+      "riskLevel": "medium",
+      "sourceQuality": "needs_review",
+      "contentStatus": "needs_source_review",
+      "summary": "If you are lost or stranded, make yourself easier to locate with visible, audible, and light-based signals while protecting yourself from the environment.",
+      "whenToUse": "Use when you are separated from your group, stranded, injured, or unable to self-rescue safely."
+    },
+    {
+      "preferredOption": "If staying put improves safety, shelter, and signaling, remain near your known location.",
+      "fallbackOption": "Move only if staying is clearly more dangerous or if movement meaningfully improves shelter, water, or rescue chances.",
+      "steps": [
+        "Assess injury, weather, terrain, water, daylight, and communication options.",
+        "Choose the safer option rather than the option that feels more active.",
+        "If staying, improve shelter and signaling.",
+        "If moving, do so deliberately and leave clear signs of your route if possible."
+      ],
+      "warnings": [
+        "Panic movement can increase exposure and separation from rescuers."
+      ],
+      "whatNotToDo": [
+        "Do not wander aimlessly.",
+        "Do not abandon a strong shelter or signal position without a reason."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "lost",
+        "navigation",
+        "decision-making"
+      ],
+      "sourceReferences": [
+        {
+          "title": "General Guidance on Emergency Communication Strategies",
+          "organization": "NIST",
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.1827.pdf",
+          "whyUseful": "Useful communication concepts, but not ideal as a primary wilderness signaling source.",
+          "quality": "medium",
+          "reviewStatus": "needs_review"
+        },
+        {
+          "title": "Recommended Emergency Preparedness Guidelines for Rail Transit Systems",
+          "organization": "U.S. Department of Transportation",
+          "url": "https://www.transit.dot.gov/regulations-and-guidance/safety/recommended-emergency-preparedness-guidelines-rail-transit-systems",
+          "whyUseful": "Contains signaling and coordination patterns, but source fit for lost-person rescue needs review.",
+          "quality": "low",
+          "reviewStatus": "needs_review"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "stay-put-vs-move",
+      "slug": "stay-put-vs-move",
+      "title": "Stay Put vs Move",
+      "layer": "scenario_guide",
+      "cardType": "practical",
+      "category": "navigation",
+      "riskLevel": "medium",
+      "sourceQuality": "needs_review",
+      "contentStatus": "needs_source_review",
+      "summary": "In many lost-person situations, staying near the last known point can improve rescue chances, but there are exceptions.",
+      "whenToUse": "Use when deciding whether to stay in place or move after becoming lost or stranded."
+    },
+    {
+      "preferredOption": "Use short repeated light signals while preserving battery for longer-term survival needs.",
+      "fallbackOption": null,
+      "steps": [
+        "Use repeated short flashes rather than leaving a light on continuously if battery is limited.",
+        "Balance signaling with warmth, shelter, and hydration needs.",
+        "Keep a reserve of battery for later if rescue may be delayed."
+      ],
+      "warnings": [],
+      "whatNotToDo": [
+        "Do not drain your only light source immediately if rescue may take time."
+      ],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "signaling",
+        "night",
+        "battery"
+      ],
+      "sourceReferences": [
+        {
+          "title": "General Guidance on Emergency Communication Strategies",
+          "organization": "NIST",
+          "url": "https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.1827.pdf",
+          "whyUseful": "Useful communication concepts, but not ideal as a primary wilderness signaling source.",
+          "quality": "medium",
+          "reviewStatus": "needs_review"
+        },
+        {
+          "title": "Recommended Emergency Preparedness Guidelines for Rail Transit Systems",
+          "organization": "U.S. Department of Transportation",
+          "url": "https://www.transit.dot.gov/regulations-and-guidance/safety/recommended-emergency-preparedness-guidelines-rail-transit-systems",
+          "whyUseful": "Contains signaling and coordination patterns, but source fit for lost-person rescue needs review.",
+          "quality": "low",
+          "reviewStatus": "needs_review"
+        }
+      ],
+      "derivedFrom": [
+        "perplexity_batch_2026_03"
+      ],
+      "id": "night-signaling-and-battery",
+      "slug": "night-signaling-and-battery",
+      "title": "Night Signaling and Battery Conservation",
+      "layer": "scenario_guide",
+      "cardType": "practical",
+      "category": "communication",
+      "riskLevel": "low",
+      "sourceQuality": "needs_review",
+      "contentStatus": "needs_source_review",
+      "summary": "At night, light signals can help rescuers find you, but battery and warmth conservation still matter.",
+      "whenToUse": "Use when stranded after dark or when aerial or distant visual spotting is possible."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "power outage",
+        "blackout",
+        "planned expansion"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "recommended_missing_topics"
+      ],
+      "id": "power-outage-basics",
+      "slug": "power-outage-basics",
+      "title": "Power Outage Basics",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "planned",
+      "contentStatus": "metadata_only",
+      "summary": "Basic lighting, food, refrigeration, charging, and safety actions during blackouts.",
+      "whenToUse": "Use during unplanned loss of electricity at home or work."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "communication outage",
+        "planned expansion"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "recommended_missing_topics"
+      ],
+      "id": "communication-outage-basics",
+      "slug": "communication-outage-basics",
+      "title": "Communication Outage Basics",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "planned",
+      "contentStatus": "metadata_only",
+      "summary": "Fallback communication habits when networks are overloaded or unavailable.",
+      "whenToUse": "Use when cell, internet, or local communication networks fail during emergencies."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "sanitation",
+        "planned expansion"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "recommended_missing_topics"
+      ],
+      "id": "sanitation-waste-basics",
+      "slug": "sanitation-waste-basics",
+      "title": "Sanitation and Waste Handling Basics",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "preparedness",
+      "riskLevel": "medium",
+      "sourceQuality": "planned",
+      "contentStatus": "metadata_only",
+      "summary": "Clean water, hand hygiene, and waste handling basics during disruption.",
+      "whenToUse": "Use when toilets, water service, or sewer service are disrupted."
+    },
+    {
+      "preferredOption": null,
+      "fallbackOption": null,
+      "steps": [],
+      "warnings": [],
+      "whatNotToDo": [],
+      "redFlags": [],
+      "preparednessTips": [],
+      "limitations": [],
+      "tags": [
+        "food safety",
+        "planned expansion"
+      ],
+      "sourceReferences": [],
+      "derivedFrom": [
+        "recommended_missing_topics"
+      ],
+      "id": "food-safety-no-fridge",
+      "slug": "food-safety-no-fridge",
+      "title": "Food Safety Without Refrigeration",
+      "layer": "scenario_guide",
+      "cardType": "checklist",
+      "category": "water_food",
+      "riskLevel": "medium",
+      "sourceQuality": "planned",
+      "contentStatus": "metadata_only",
+      "summary": "Food handling priorities when refrigeration and cooking are limited.",
+      "whenToUse": "Use during outages, evacuations, and prolonged sheltering."
+    }
+  ],
+  "topicMap": {
+    "earthquake": [
+      "earthquake-during-shaking",
+      "earthquake-after-shaking",
+      "earthquake-tsunami-risk",
+      "earthquake-preparedness-checklist",
+      "earthquake-safety-reference"
+    ],
+    "flood": [
+      "flood-get-to-higher-ground",
+      "floodwater-safety",
+      "flood-reentry-cleanup",
+      "flood-survival-reference"
+    ],
+    "tornado": [
+      "tornado-take-shelter",
+      "tornado-vehicle-mobile-home",
+      "tornado-after",
+      "tornado-safety-reference"
+    ],
+    "wildfire": [
+      "wildfire-evacuate-early",
+      "wildfire-smoke-protection",
+      "wildfire-return-home"
+    ],
+    "heat": [
+      "heat-stroke-emergency",
+      "heat-exhaustion-cool-rehydrate",
+      "heat-prevention"
+    ],
+    "cold": [
+      "hypothermia-warm-core",
+      "frostbite-protect-rewarm",
+      "cold-prevention-layering",
+      "hypothermia-reference"
+    ],
+    "wounds_and_bleeding": [
+      "minor-cuts-scrapes",
+      "bleeding-control-pressure-first",
+      "severe-bleeding-get-help-fast",
+      "wound-needs-urgent-care",
+      "wound-care-reference",
+      "first-aid-reference"
+    ],
+    "water": [
+      "purify-water-boiling",
+      "purify-water-bleach",
+      "emergency-water-storage",
+      "water-purification-reference"
+    ],
+    "preparedness": [
+      "build-72-hour-kit",
+      "family-emergency-plan",
+      "evacuation-go-bag",
+      "shelter-in-place-basics"
+    ],
+    "signaling": [
+      "signal-for-rescue",
+      "stay-put-vs-move",
+      "night-signaling-and-battery",
+      "distress-signaling",
+      "morse-code"
+    ]
+  },
+  "counts": {
+    "totalGuides": 57,
+    "referenceGuides": 20,
+    "actionCards": 19,
+    "scenarioGuides": 18,
+    "needsSourceReview": 3,
+    "plannedExpansion": 4
+  },
+  "replitNotes": [
+    "Import this pack as the master local knowledge seed file.",
+    "Do not delete the original reference guides when merging.",
+    "Use layer + cardType + category + riskLevel + sourceQuality in retrieval and filtering.",
+    "For practical/emergency queries, rank action cards first.",
+    "For medical_safety queries, use conservative templates and keep warnings/red flags prominent.",
+    "Hide or demote guides with contentStatus = needs_source_review from production answers until sources are improved.",
+    "It is okay to browse plannedExpansion topics in the library, but they should not be surfaced as strong matches until fully written."
+  ]
+}

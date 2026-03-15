@@ -1,0 +1,135 @@
+I uploaded a file called `survival_app_merged_knowledge_pack.json`.
+
+Use it to merge and upgrade the existing offline-first knowledge system in the React Native app.
+
+## Goal
+Preserve everything already in the app, add the new practical/source-backed guides, and make the library layer-aware.
+
+## Important rules
+- Do **not** delete the current knowledge system.
+- Do **not** delete the original reference guides already present in the app.
+- Treat the uploaded JSON as the new master merged content pack.
+- Keep everything offline/local.
+- Do not add cloud services.
+- Do not add maps or inventory in this phase.
+- Keep the app runnable at every step.
+
+## What to build
+
+### 1. Import the merged pack
+- Read the uploaded JSON file.
+- Replace the current hard-coded guide seed data with data loaded from this merged pack.
+- Preserve type safety.
+
+### 2. Support the content layers
+Each guide has a `layer` field:
+- `action_card`
+- `scenario_guide`
+- `reference_guide`
+
+And a `cardType` field such as:
+- `practical`
+- `medical_safety`
+- `checklist`
+- `reference_summary`
+
+Update the model layer so this is fully supported.
+
+### 3. Support source quality and content status
+Use:
+- `sourceQuality`
+- `contentStatus`
+
+Behaviors:
+- `needs_source_review` should still be visible in browse mode, but should be demoted or hidden from top emergency answer matches by default.
+- `metadata_only` should be visible only if the app already supports “coming soon” / placeholder cards; otherwise keep them excluded from strong matching.
+
+### 4. Update repositories/services
+Make sure repository functions can:
+- get all guides
+- get guide by slug
+- get guides by category
+- get guides by layer
+- get guides by parent topic
+- get topic map entries
+- search guides
+- filter by risk level
+- filter by source quality
+
+### 5. Update retrieval and ranking logic
+Preserve the current routing/interpreter system, but update retrieval policy:
+
+For practical or emergency queries:
+1. action_card
+2. scenario_guide
+3. reference_guide
+
+For educational queries:
+1. scenario_guide
+2. reference_guide
+3. action_card
+
+For medical safety queries:
+1. medical_safety action cards
+2. conservative scenario guides
+3. reference guides last
+
+Additional rules:
+- demote `needs_source_review`
+- do not surface `metadata_only` as strong matches
+- use `topicMap` and `parentTopic` to improve related-guide linking
+
+### 6. Update the guide browser UI
+Add support for:
+- filtering by layer
+- optionally grouping related cards under a parent topic
+- clearly marking:
+  - reference guide
+  - action card
+  - scenario guide
+- clearly marking:
+  - high risk
+  - review needed
+
+### 7. Update guide detail UI
+Render all supported fields if present:
+- summary
+- whenToUse
+- preferredOption
+- fallbackOption
+- steps
+- warnings
+- whatNotToDo
+- redFlags
+- preparednessTips
+- limitations
+- sourceReferences
+
+Also:
+- show related guides from the same `parentTopic` or `topicMap`
+- show source review warning for `needs_source_review`
+- show “planned expansion” label for `metadata_only`
+
+### 8. Update the answer engine
+Use the merged pack in:
+- guide matching
+- retrieval policy
+- structured answer generation
+- AI assistive rewrite flow
+
+Do not break the current deterministic answer engine.
+
+### 9. Keep safety behavior intact
+For medical/high-risk content:
+- preserve conservative wording
+- keep red flags prominent
+- do not expand into invasive procedures
+- keep deterministic answer as source of truth
+
+## Success criteria
+- the app still runs
+- all original guides remain available
+- the new practical cards are added
+- retrieval prefers better practical cards first
+- review-needed cards are marked and deprioritized
+- guide detail screens can show the merged data cleanly

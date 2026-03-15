@@ -1,0 +1,170 @@
+Phase 3: Build the structured answer engine on top of the query/matching layer
+
+The guide interpretation + matching layer is now working. Next, I want to add a response generation layer that turns matched guides into clear, structured answers before we connect any AI model.
+
+Important:
+- keep everything offline/local
+- do not add the AI model yet
+- do not break the existing guide browser or Query Tester
+- keep the app runnable at every step
+
+GOAL
+Create a guide-first answer engine that:
+1. uses the interpreted query + matched guides
+2. selects a response template based on query mode
+3. generates a structured answer from guide content
+4. behaves safely for medical/high-risk topics
+5. produces output that can later be compared against AI-generated output
+
+==================================================
+TASKS
+==================================================
+
+1. Create response output types
+Add types such as:
+- StructuredAnswer
+- StructuredAnswerSection
+- StructuredAnswerSource
+- ResponseTemplateType
+
+Suggested fields:
+StructuredAnswer
+- query: string
+- mode: QueryMode
+- title: string
+- summary?: string
+- sections: StructuredAnswerSection[]
+- warnings: string[]
+- sources: StructuredAnswerSource[]
+- confidence: "high" | "medium" | "low"
+- strictSafetyMode: boolean
+
+StructuredAnswerSection
+- id: string
+- label: string
+- content: string | string[]
+- emphasis?: "normal" | "important" | "warning"
+
+StructuredAnswerSource
+- guideId: string
+- guideTitle: string
+- sectionHints?: string[]
+
+2. Create a ResponsePolicyService
+Suggested file:
+- lib/guides/response-policy.ts
+
+This should choose a response template based on QueryMode.
+
+Use these templates:
+
+A. practical_how_to / emergency_urgent
+- Quick Answer
+- Preferred Method
+- Backup Method
+- Step-by-Step
+- Warnings
+- Sources
+
+B. medical_safety
+- Immediate Priority
+- Red Flags / When to Seek Urgent Help
+- What You Can Do Right Now
+- What Not To Do
+- Sources
+
+C. preparedness_planning
+- Goal
+- Recommended Priorities
+- Checklist / Steps
+- Warnings / Gaps
+- Sources
+
+D. educational_background
+- Short Explanation
+- Key Concepts
+- Practical Relevance
+- Sources
+
+E. unclear_or_unknown
+- Best Understanding of Your Question
+- What I Can Say Safely
+- What May Be Missing
+- Sources
+
+3. Create a StructuredAnswerBuilder
+Suggested file:
+- lib/guides/structured-answer-builder.ts
+
+This should:
+- take the GroundingContext
+- select the right guide(s)
+- map the guide content into the selected response template
+- prioritize the best-matching guide as the primary source
+- optionally use the second-best guide as supporting context
+- never just dump raw guide text
+
+Behavior rules:
+- prefer concise output
+- use the guide’s summary, whenToUse, preferredOption, fallbackOption, steps, warnings, and limitations
+- synthesize a direct answer from the best guide content
+- if confidence is low, say so clearly
+- if strict safety mode is on, be more conservative
+
+4. Add medical safety constraints
+For medical_safety mode:
+- do not provide invasive procedural guidance
+- do not instruct on stitching, cutting, draining, setting bones, etc.
+- if a matched guide contains high-risk content, filter/sanitize it into conservative first-aid language
+- prioritize immediate priorities, safe actions, and escalation/red flags
+- include a clear “What Not To Do” section
+
+5. Add a Guide Answer Tester
+Extend Settings → Developer Tools with a new tester screen or tab:
+- input query
+- show interpreted mode
+- show top matched guides
+- show generated structured answer
+
+This should let me see the answer engine working before any AI is connected.
+
+6. Add source transparency
+At the bottom of every structured answer, list:
+- primary guide
+- supporting guide(s)
+
+Do not just show raw IDs.
+Use titles and section hints where possible.
+
+7. Keep it deterministic
+This phase should not use any LLM.
+It should be a deterministic local answer builder based on the guide content.
+
+8. Suggested files
+- lib/guides/response-types.ts
+- lib/guides/response-policy.ts
+- lib/guides/structured-answer-builder.ts
+- app/settings/guide-answer-tester.tsx (or similar)
+- any shared UI component needed for displaying answer sections
+
+==================================================
+SUCCESS CRITERIA
+==================================================
+
+When I type:
+- “how do I start a fire without matches”
+I should get a practical structured answer.
+
+When I type:
+- “I need to stitch my leg”
+I should get a cautious medical-safety answer with immediate priorities, red flags, what to do now, and what not to do — not DIY stitching instructions.
+
+When I type:
+- “what causes earthquakes”
+I should get an educational-style answer, not a survival checklist.
+
+When I type:
+- “what should I pack for an earthquake”
+I should get a planning/checklist-style answer.
+
+The output should already be useful even before any AI model is added.

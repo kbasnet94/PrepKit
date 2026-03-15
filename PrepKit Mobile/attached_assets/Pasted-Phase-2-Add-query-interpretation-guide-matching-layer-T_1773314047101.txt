@@ -1,0 +1,106 @@
+Phase 2: Add query interpretation + guide matching layer
+
+The offline knowledge layer is working well. Now I want to add a local query interpretation and guide-matching system that can power future AI grounding.
+
+Important:
+- keep everything offline/local
+- do not add cloud services
+- do not add the actual AI model yet
+- do not break the current knowledge UI
+- keep the app runnable at every step
+
+Goals:
+1. interpret the user’s question
+2. classify the question into a useful mode
+3. assess risk/urgency
+4. find the best matching guide(s)
+5. prepare structured grounding output for future AI use
+
+Please implement the following:
+
+1. Create a QueryInterpretation type
+Include fields like:
+- normalizedQuery: string
+- primaryIntent: string
+- secondaryIntents?: string[]
+- riskLevel: "low" | "medium" | "high"
+- urgencyLevel: "low" | "medium" | "high"
+- answerStyle: string
+- shouldUseStrictSafetyMode: boolean
+- confidence: "high" | "medium" | "low"
+
+2. Create a QueryInterpreterService
+Start rules-based.
+Support initial categories like:
+- practical_how_to
+- emergency_urgent
+- educational_background
+- preparedness_planning
+- medical_safety
+- unclear_or_unknown
+
+Examples:
+- “how do I start a fire without matches” -> practical_how_to
+- “I need to stitch my leg” -> medical_safety
+- “what causes earthquakes” -> educational_background
+- “what should I pack for an earthquake” -> preparedness_planning
+
+3. Create a GuideMatchingService
+Add functions like:
+- interpretAndMatchGuides(query)
+- getBestGuidesForQuery(query)
+- getGuideMatchScores(query)
+
+Behavior:
+- prioritize title, summary, tags, category, and whenToUse
+- return top matching guides with scores
+- for medical_safety queries, use stricter conservative matching
+- down-rank weakly related guides
+- do not surface irrelevant content like CPR for generic cut questions unless clearly relevant
+
+4. Create a RetrievalPolicyService
+Choose matching strategy based on interpretation:
+- emergency_urgent -> prioritize practical action cards and immediate-response guides
+- practical_how_to -> prioritize action-oriented guides
+- educational_background -> allow broader explanatory guides
+- preparedness_planning -> prioritize checklist/preparedness guides
+- medical_safety -> prioritize conservative first-aid style guides with stricter safety mode
+- unclear_or_unknown -> cautious broad retrieval with lower confidence
+
+5. Create a GroundingContextBuilder
+Build a function like:
+- buildGuideGroundingContext(query)
+
+Return a structured object or formatted text containing:
+- interpreted query
+- selected response mode
+- top guide matches
+- extracted guide snippets or sections
+- warnings if confidence is low
+
+This should be designed for future AI prompt injection.
+
+6. Add a lightweight internal test/demo screen or debug panel
+Somewhere in the app, add a simple local test UI where I can type a query and see:
+- interpreted mode
+- risk/urgency
+- top guide matches
+- confidence
+- whether strict safety mode was triggered
+
+7. Keep the code modular
+Suggested files:
+- lib/guides/query-types.ts
+- lib/guides/query-interpreter.ts
+- lib/guides/guide-matching.ts
+- lib/guides/retrieval-policy.ts
+- lib/guides/grounding-context.ts
+
+8. Do not implement the AI generation step yet
+This phase is only about routing, matching, and future grounding preparation.
+
+Success criteria:
+- I can type a question and see which guide(s) the system thinks are most relevant
+- risky medical questions are routed more cautiously
+- irrelevant matches are reduced
+- the app remains fully offline and working

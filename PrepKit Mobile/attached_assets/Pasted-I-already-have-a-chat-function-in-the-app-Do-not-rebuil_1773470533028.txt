@@ -1,0 +1,177 @@
+I already have a chat function in the app. Do not rebuild chat from scratch.
+
+Goal:
+Improve the existing chat so it answers from the guide library first, stays grounded in our actual guide content, and stops returning weird, generic, or unauthoritative answers.
+
+Important product context:
+- This is an offline-first emergency/survival guidance app.
+- We already have a normalized guide library and working chat UI.
+- The device may use local AI (for example Apple Foundation Models on iPhone, Android local model equivalents, or fallback local rewrite logic).
+- Phase 1 should improve correctness using the existing guide library.
+- Do NOT assume a cloud LLM is required.
+- The guide library is the source of truth.
+- AI should only help rewrite and organize the retrieved answer, not invent unsupported advice.
+
+Main requirement:
+The chat must become a grounded guide assistant, not a freeform chatbot.
+
+What to change:
+1. Inspect the existing chat pipeline and identify where the current answer is being generated.
+2. Keep the current chat screen and message flow, but replace or wrap the answer generation logic with a grounded retrieval pipeline.
+3. The answer should be built in this order:
+
+   A. Interpret the user query
+   B. Retrieve the best matching guides from the existing guide library
+   C. Build a structured answer from those guides
+   D. Optionally rewrite the structured answer into natural language using the existing local AI layer
+   E. Return matched guides, safety flags, and confidence along with the answer
+
+Grounding rules:
+- The guide library is the primary source of truth.
+- Do not let the AI answer from general world knowledge if the guide library has relevant content.
+- Prefer reviewed guides over needs_source_review.
+- Prefer action/scenario guides for urgent queries.
+- Prefer preparedness guides for planning questions.
+- Prefer reference guides for educational/explanatory questions.
+- If no good match exists, the chat must say so clearly and only offer the nearest relevant guides.
+- Never hallucinate steps, medical procedures, or technical advice not grounded in the guides.
+
+Answer modes to support:
+1. emergency_urgent
+   - immediate action first
+   - short and direct
+   - max 3 to 5 key steps
+   - warnings and red flags visible
+
+2. practical_how_to
+   - quick answer
+   - preferred action
+   - backup action
+   - step-by-step actions
+   - common mistakes or warnings
+
+3. preparedness_planning
+   - priorities
+   - checklist
+   - missing items
+   - related guides
+
+4. educational_background
+   - short explanation
+   - key concepts
+   - practical relevance
+   - related guides
+
+5. unclear_or_low_confidence
+   - do not bluff
+   - say the app may not fully cover the question
+   - show nearest related guides instead of pretending certainty
+
+Retrieval requirements:
+- Reuse any existing guide query, matching, retrieval-policy, structured-answer, or AI-enhanced-answer code if it already exists.
+- If these utilities are present from earlier phases, wire chat directly into them rather than duplicating logic.
+- Rank results using:
+  1. strong title/tag/summary/whenToUse match
+  2. reviewed status boost
+  3. same parentTopic relevance
+  4. action/scenario boost for urgent queries
+  5. needs_source_review demotion
+  6. metadata_only / planned heavy demotion
+- Exclude extremely weak matches when confidence is low.
+
+Safety rules:
+- For medical, fire, utilities, vehicle, poisoning, disaster, or severe-weather topics:
+  - use stricter matching thresholds
+  - prefer reviewed guides
+  - avoid invasive or advanced procedures not explicitly in guides
+  - show red flags clearly
+  - escalate to emergency services language when guide redFlags indicate that
+- If the answer relies on guides marked needs_source_review, show a subtle notice in the UI:
+  "Includes guidance still under source review."
+- If confidence is low, say that clearly.
+
+Chat answer composition:
+The returned answer object should include:
+- answerText
+- structuredAnswer
+- matchedGuides
+- confidence
+- queryMode
+- usedAIRewrite
+- safetyFlags
+- relatedGuides
+- sourceReviewNotice (optional)
+
+UI requirements:
+Keep the current chat UI, but improve the output display:
+- show the main answer first
+- show top matched guides underneath
+- show warning / red-flag banner when present
+- show confidence or mode chips if already compatible with the UI
+- show related guides below the answer
+- keep everything readable and mobile-friendly
+
+Behavior requirements:
+- Do not answer with broad generic survival advice if the user asks something covered by a guide.
+- Do not produce long fluffy AI prose.
+- Do not mix unrelated guides into a single answer unless they are truly complementary.
+- Do not answer questions far outside the library as if the app knows the answer.
+- For follow-up questions, reuse the last matched topic context when appropriate.
+
+Implementation guidance:
+1. Inspect the current codebase and find:
+   - chat service / chat route
+   - guide repository
+   - query interpreter
+   - guide matching logic
+   - retrieval policy
+   - structured answer builder
+   - local AI rewrite service
+2. Reuse existing components wherever possible.
+3. Create a single grounded chat service entry point.
+   Suggested shape:
+   - getGroundedChatResponse(message, conversationContext?)
+4. The service should:
+   - interpret query
+   - retrieve best guides
+   - build structured answer
+   - optionally rewrite using local AI
+   - return a typed response payload
+5. Add logging for internal debugging:
+   - query
+   - mode
+   - top matched guides
+   - confidence
+   - whether AI rewrite was used
+   - whether fallback/low-confidence path was used
+
+Quality bar:
+The following examples should behave sensibly:
+- "I am overheating" → heat illness / heat stroke / heat exhaustion, urgent, concise, not generic
+- "How do I purify water?" → water purification guide, step-by-step, grounded
+- "I’m lost and it’s getting dark" → first 30 minutes / stay put / signaling / shelter priorities
+- "What is hypothermia?" → short explanation plus related action card
+- "Can I stitch my own wound?" → conservative answer, warnings, red flags, no reckless improvisation
+- "How do I survive on Mars?" → low confidence, nearest relevant guides only, no fake authority
+
+Do not:
+- do not remove existing chat UI
+- do not rebuild the entire app architecture
+- do not add a dependency on a cloud LLM for this phase
+- do not use embeddings unless necessary; start with the structured guide system already present
+- do not return raw JSON to the user-facing UI
+
+Deliverables:
+1. Updated grounded chat logic wired into the existing chat
+2. Any new/updated TypeScript types
+3. Reused or updated retrieval/structured-answer integration
+4. Improved UI rendering for matched guides / warnings / related guides
+5. Short developer summary of what changed
+6. A short test checklist showing how the sample queries behaved
+
+At the end, report:
+- which files were changed
+- whether existing retrieval utilities were reused
+- whether any fallback behavior remains
+- whether the chat is now guide-grounded by default
+- any known limitations

@@ -1,0 +1,1615 @@
+{
+  "packTitle": "Navigation, Rescue, and Signaling + Water, Food, and Sanitation Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T09:17:26Z",
+  "notes": [
+    "Normalized from Perplexity category batches for Navigation, Rescue, and Signaling plus Water, Food, and Sanitation.",
+    "Land rescue and signaling is treated as the primary context; maritime guides are included as a clearly separate secondary module.",
+    "Preparedness guides are mapped to layer 'scenario' to fit the current app layer badge system while retaining guideType='preparedness_guide'.",
+    "Use integrationAction to decide whether to upgrade existing broad guides or add new related sub-guides."
+  ],
+  "categories": [
+    {
+      "categoryName": "Navigation, Rescue, and Signaling",
+      "summary": "Land-first rescue, navigation, and signaling guidance with maritime rescue guides kept as a clearly separate secondary module.",
+      "guides": [
+        {
+          "title": "Lost on Land: First 30 Minutes",
+          "slug": "lost-on-land-first-30-minutes",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "If You Get Lost",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Land Navigation",
+          "quickAnswer": "Stop, calm down, assess your situation, try only a short safe backtrack if the route is obvious, then stay put, shelter, and start signaling.",
+          "whenToUse": "Use when you realize you may be off-route or lost on land and are not facing an immediate threat like fire, flash flood, or rockfall.",
+          "preferredAction": [
+            "Use STOP: Stop, Think, Observe, Plan.",
+            "If you cannot clearly and safely retrace to a known point, stay put and make yourself findable."
+          ],
+          "backupAction": [
+            "If communication and safe backtracking are not possible, choose a safer nearby base location, shelter, and begin signaling."
+          ],
+          "steps": [
+            "Stop moving as soon as you suspect you are lost.",
+            "Control breathing and avoid panic.",
+            "Check time, weather, terrain, last known point, and available gear.",
+            "If a short, obvious retrace is safe, try it once slowly.",
+            "If that fails or is uncertain, stop again and stay put.",
+            "Call or text for help if possible and share landmarks or GPS.",
+            "Pick a safer base area away from immediate hazards.",
+            "Start signaling with whistle, bright items, and light if needed.",
+            "Conserve warmth, water, and battery."
+          ],
+          "warnings": [
+            "Wandering often moves you farther from the expected search area.",
+            "Poor visibility and worsening weather sharply increase travel risk.",
+            "Night movement without a clear route is high-risk."
+          ],
+          "whatNotToDo": [
+            "Do not keep wandering without a deliberate plan.",
+            "Do not split the group.",
+            "Do not waste phone battery on non-essential use."
+          ],
+          "redFlags": [
+            "You are injured, hypothermic, dehydrated, or trapped by terrain.",
+            "Weather is worsening and you lack good shelter.",
+            "You are in avalanche terrain, flood drainages, cliff areas, or fire zones and need to move only far enough to reach safer ground."
+          ],
+          "preparednessTips": [
+            "Leave a route plan and return time with a trusted contact before trips.",
+            "Carry whistle, light, extra warm layer, basic shelter, map, and compass.",
+            "Learn local emergency numbers before travel."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Practical lost-person guidance for outdoor users."
+            },
+            {
+              "title": "UIAA Navigation in Poor Visibility",
+              "organization": "UIAA",
+              "url": "",
+              "whyUseful": "Supports conservative movement decisions in poor visibility."
+            },
+            {
+              "title": "Land SAR stay-vs-go guidance",
+              "organization": "Search and rescue practitioner education",
+              "url": "",
+              "whyUseful": "Useful for decision logic and searchability considerations."
+            }
+          ],
+          "appTags": [
+            "navigation",
+            "lost",
+            "decision-aid",
+            "land",
+            "sar",
+            "first-30-minutes",
+            "offline"
+          ]
+        },
+        {
+          "title": "Stay Put vs Move (Land)",
+          "slug": "stay-put-vs-move-land",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "If You Get Lost",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Land Navigation",
+          "quickAnswer": "Default to staying put once you know you are lost, unless your current location is clearly dangerous or you have a short, obvious, safe route to a known point.",
+          "whenToUse": "Use when you are already lost or uncertain of your location on land and must decide whether to remain or move.",
+          "preferredAction": [
+            "Stay put near your last known point or vehicle once you have called for help or accepted you are lost.",
+            "Move only to reach safer shelter or escape immediate danger."
+          ],
+          "backupAction": [
+            "If nobody knows your plan, you have no communication, and there is a short, clearly safe daylight route along an obvious feature, you may consider deliberate travel with strict limits."
+          ],
+          "steps": [
+            "Ask whether anyone knows your route and return time.",
+            "If you are at a vehicle, strongly favor staying with it.",
+            "Check for immediate hazards like fire, flood, falling rock, or avalanche terrain.",
+            "Compare safe known routes versus unknown terrain and worsening conditions.",
+            "If you move, do so only in daylight with a clear turnaround rule.",
+            "If you stay, build shelter, concentrate signals, and conserve energy."
+          ],
+          "warnings": [
+            "Moving while disoriented can sharply reduce your chances of early rescue.",
+            "Fog, storms, darkness, and exhaustion are strong reasons to stop rather than continue traveling."
+          ],
+          "whatNotToDo": [
+            "Do not alternate between wandering and staying without a plan.",
+            "Do not chase weak phone signal into dangerous terrain.",
+            "Do not leave a relatively safe position just because of anxiety alone."
+          ],
+          "redFlags": [
+            "You are close to physical limits from cold, heat, dehydration, or injury.",
+            "The terrain ahead is steep, dense, unstable, or otherwise hazardous.",
+            "Visibility has dropped so much that safe travel is no longer realistic."
+          ],
+          "preparednessTips": [
+            "Tell someone your route and turnaround time before going out.",
+            "Study major terrain handrails like roads, rivers, and ridgelines before the trip."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Strong stay-put guidance tied to expected search areas."
+            },
+            {
+              "title": "UIAA navigation guidance",
+              "organization": "UIAA",
+              "url": "",
+              "whyUseful": "Supports stopping when visibility and conditions worsen."
+            },
+            {
+              "title": "Land SAR stay-vs-go guidance",
+              "organization": "Search and rescue practitioner education",
+              "url": "",
+              "whyUseful": "Useful for decision framing, with caution on experience-based advice."
+            }
+          ],
+          "appTags": [
+            "navigation",
+            "stay-put",
+            "move",
+            "lost",
+            "land",
+            "decision-logic",
+            "sar"
+          ]
+        },
+        {
+          "title": "Whistle Distress Signals (Land)",
+          "slug": "whistle-distress-signals-land",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Land Rescue Signaling",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Distress Signaling",
+          "quickAnswer": "Use three loud whistle blasts, repeated regularly with pauses to listen, as your main land distress signal unless a local rescue convention says otherwise.",
+          "whenToUse": "Use when you are lost or injured on land and need to attract rescuers or nearby people while conserving energy.",
+          "preferredAction": [
+            "Use a whistle from a safe, reasonably open location.",
+            "Blow three strong blasts, pause, listen, and repeat regularly."
+          ],
+          "backupAction": [
+            "If you know a region-specific convention, such as alpine six-blast signaling, use it only where it clearly applies; otherwise stick to a clear repeated group of three."
+          ],
+          "steps": [
+            "Choose a safe location where sound can carry.",
+            "Blow three strong blasts in quick succession.",
+            "Pause to listen for a response.",
+            "Repeat every few minutes rather than continuously.",
+            "Pair whistle use with bright visual signals or lights when possible."
+          ],
+          "warnings": [
+            "Three-blast patterns are broadly taught, but some alpine regions use six-blast conventions.",
+            "Continuous random blowing is less recognizable than distinct patterns."
+          ],
+          "whatNotToDo": [
+            "Do not rely on voice shouting alone if a whistle is available.",
+            "Do not use random continuous noise instead of a repeated pattern.",
+            "Do not ignore region-specific guidance if you know it clearly applies."
+          ],
+          "redFlags": [
+            "You are getting dizzy, breathless, or experiencing chest pain while signaling.",
+            "You have no response over time but still have usable phone battery or another communication tool."
+          ],
+          "preparednessTips": [
+            "Carry a pealess emergency whistle on your body, not buried in a pack.",
+            "Teach your group a simple whistle code before trips."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Supports whistle signaling for lost outdoor users."
+            },
+            {
+              "title": "Outdoor safety education modules",
+              "organization": "Hunter/Bowhunter and wilderness safety education",
+              "url": "",
+              "whyUseful": "Common instruction on distress signal repetition."
+            },
+            {
+              "title": "Alpine signaling conventions",
+              "organization": "Mountain safety education",
+              "url": "",
+              "whyUseful": "Useful regional context for three vs six signals."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "whistle",
+            "land",
+            "audio-signal",
+            "sar",
+            "low-energy",
+            "offline"
+          ]
+        },
+        {
+          "title": "Mirror and Light Signaling (Land, Day and Night)",
+          "slug": "mirror-and-light-signaling-land-day-and-night",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Land Rescue Signaling",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Distress Signaling",
+          "quickAnswer": "In daylight, use a signal mirror or reflective surface to flash toward aircraft or distant searchers; at night, flash a bright light in deliberate patterns such as SOS or groups of three.",
+          "whenToUse": "Use when you can see or hear distant people, vehicles, or aircraft and have sunlight or a usable light source.",
+          "preferredAction": [
+            "Use a proper signal mirror with a sighting hole in direct sun.",
+            "At night, use your brightest light in clear repeated patterns instead of constant illumination."
+          ],
+          "backupAction": [
+            "If you lack a true signal mirror, use any reflective surface and combine it with passive bright ground signals."
+          ],
+          "steps": [
+            "Choose the most visible safe position you can reach.",
+            "In daylight, aim repeated mirror flashes toward aircraft or distant search directions.",
+            "At night, flash SOS or repeated groups of three with pauses.",
+            "Conserve battery by using intermittent patterns instead of leaving lights on constantly.",
+            "Combine mirror or light use with whistle and ground symbols."
+          ],
+          "warnings": [
+            "Mirrors are ineffective without enough sunlight.",
+            "Phone screens are weaker and drain battery quickly compared with dedicated mirrors or flashlights.",
+            "Do not blind pilots at close range with a constant beam."
+          ],
+          "whatNotToDo": [
+            "Do not use continuous bright light when nobody can see it.",
+            "Do not spend all phone battery on screen or light use if it may still be needed for emergency contact."
+          ],
+          "redFlags": [
+            "Aircraft or searchers seem nearby but are not noticing you; improve contrast and move to a more open spot if safe.",
+            "Your light source is nearly depleted in cold or dangerous conditions."
+          ],
+          "preparednessTips": [
+            "Carry a small dedicated signal mirror and a reliable flashlight or headlamp.",
+            "Add reflective or high-visibility items to pack or clothing."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Supports flashlight and mirror signaling, including SOS use."
+            },
+            {
+              "title": "Visual distress signal conspicuity testing",
+              "organization": "US Coast Guard research",
+              "url": "",
+              "whyUseful": "Provides strong evidence that mirrors are highly conspicuous in sun."
+            },
+            {
+              "title": "Signal mirror usage evaluations",
+              "organization": "Survival equipment testing and rescue signaling education",
+              "url": "",
+              "whyUseful": "Practical aiming and usage tips."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "mirror",
+            "light",
+            "day",
+            "night",
+            "land",
+            "sar",
+            "visibility",
+            "battery-management"
+          ]
+        },
+        {
+          "title": "Ground-to-Air Symbols for Aircraft",
+          "slug": "ground-to-air-symbols-for-aircraft",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Land Rescue Signaling",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Distress Signaling",
+          "quickAnswer": "Use large, high-contrast symbols such as V for assistance and X for medical help so aircraft can understand your situation from above.",
+          "whenToUse": "Use when aircraft search is likely or you can hear or see aircraft overhead and have access to an open area visible from above.",
+          "preferredAction": [
+            "Build one or more standardized symbols using high-contrast materials in as open and flat an area as possible."
+          ],
+          "backupAction": [
+            "If you cannot build standard symbols, create a large obvious X, SOS, or directional arrow that clearly marks your position."
+          ],
+          "steps": [
+            "Pick the flattest, most open safe area available.",
+            "Use bright or strongly contrasting materials like tarps, clothing, branches, or rocks.",
+            "Make symbols large enough to be visible from above.",
+            "Place yourself near the symbol but do not obstruct it.",
+            "Keep the symbol stable unless your situation changes."
+          ],
+          "warnings": [
+            "Small or low-contrast symbols may be invisible from search altitude.",
+            "These symbols may guide searchers to you but do not guarantee a landing zone."
+          ],
+          "whatNotToDo": [
+            "Do not keep changing symbols without reason.",
+            "Do not make messy or ambiguous shapes that could look like debris."
+          ],
+          "redFlags": [
+            "You have an injured person needing medical help and aircraft are not responding; increase other signals if safe.",
+            "Weather has closed in so aircraft are unlikely to fly; shift focus to shelter and ground-based signaling."
+          ],
+          "preparednessTips": [
+            "Learn the basic ICAO/NATO meanings for V, X, Y, N, and directional arrows.",
+            "Carry a high-visibility tarp or blanket that can help form symbols."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Ground-air visual signal codes",
+              "organization": "ICAO/NATO rescue communication references",
+              "url": "",
+              "whyUseful": "Primary standard for V, X, Y, N, and directional symbols."
+            },
+            {
+              "title": "Air-surface communication training materials",
+              "organization": "Aviation and search-and-rescue education",
+              "url": "",
+              "whyUseful": "Useful for practical visibility and response context."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "ground-to-air",
+            "aircraft",
+            "land",
+            "sar",
+            "visual-codes",
+            "reference",
+            "offline"
+          ]
+        },
+        {
+          "title": "Beacon and Locator Basics (PLB, EPIRB, Satellite Messengers)",
+          "slug": "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Rescue Communication Tools",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Use an approved emergency beacon or SOS-capable satellite messenger as your most reliable long-range distress tool, but still pair it with visual and audible signals.",
+          "whenToUse": "Use for remote travel with limited or no cell service where rescue may be slow or difficult and you need a reliable emergency alerting tool.",
+          "preferredAction": [
+            "For land travel, carry a registered PLB or SOS-capable satellite messenger.",
+            "For maritime travel, use a properly registered EPIRB or equivalent marine distress device."
+          ],
+          "backupAction": [
+            "If you lack a beacon, rely on voice or text contact if possible, combined with traditional signaling and a clearly left trip plan."
+          ],
+          "steps": [
+            "Register and test your beacon according to official guidance before the trip.",
+            "In a real emergency, activate SOS and keep the device where it has the clearest possible sky view.",
+            "If two-way communication is available, send details about injuries, terrain, and conditions.",
+            "Once activated, avoid unnecessary movement unless staying put is clearly unsafe.",
+            "Use whistle, light, and visible markers to help rescuers pinpoint you."
+          ],
+          "warnings": [
+            "False activations can trigger major rescue responses; use only for real emergencies.",
+            "Dense canopy, deep canyons, and buildings can reduce signal quality or delay updates."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on phone apps or consumer navigation apps in remote areas.",
+            "Do not turn the beacon off once activated unless rescue is complete or you are clearly instructed to do so."
+          ],
+          "redFlags": [
+            "Serious injury, severe weather exposure, or terrain trapping with no straightforward self-rescue route.",
+            "Loss of safe mobility or survival risk increasing faster than you can self-evacuate."
+          ],
+          "preparednessTips": [
+            "Treat a beacon as core safety gear for regular remote trips.",
+            "Carry it on your person rather than buried in luggage or pack.",
+            "Keep emergency contacts and registration details current."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Beacon registration and use guidance",
+              "organization": "NOAA / national beacon registration systems",
+              "url": "",
+              "whyUseful": "Primary source for registration and owner information requirements."
+            },
+            {
+              "title": "Marine distress and signaling systems",
+              "organization": "US Coast Guard",
+              "url": "",
+              "whyUseful": "Useful for EPIRB, distress systems, and rescue integration."
+            },
+            {
+              "title": "Emergency communication planning guidance",
+              "organization": "Search-and-rescue and public safety guidance",
+              "url": "",
+              "whyUseful": "Supports pairing beacon use with visible rescue signals."
+            }
+          ],
+          "appTags": [
+            "beacons",
+            "plb",
+            "epirb",
+            "satellite",
+            "emergency-comm",
+            "sar",
+            "remote-travel",
+            "offline-capable"
+          ]
+        },
+        {
+          "title": "Maximizing Rescue Visibility (Land)",
+          "slug": "maximizing-rescue-visibility-land",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Land Rescue Signaling",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Distress Signaling",
+          "quickAnswer": "Combine contrast, motion, light, and sound in one place so you stand out from the landscape to both air and ground searchers.",
+          "whenToUse": "Use when you are waiting for rescue on land after calling for help or activating a beacon, or when you suspect a search is underway.",
+          "preferredAction": [
+            "Create overlapping signals in one location: bright panels, ground symbols, whistle, and mirror or light."
+          ],
+          "backupAction": [
+            "If gear is limited, maximize contrast with clothing or natural materials and focus on one clear visible position."
+          ],
+          "steps": [
+            "Choose the safest visible location you can reach.",
+            "Lay out bright or contrasting items in large blocks or stripes.",
+            "Build simple ground symbols and, if useful, an arrow to your exact position.",
+            "Use mirror or light for active signaling when searchers may be nearby.",
+            "Use whistle patterns regularly and conserve your voice.",
+            "If fire signaling is safe and legal, consider it only with strong control and fire safety."
+          ],
+          "warnings": [
+            "Signal fires can start wildfires and may be illegal or unsafe depending on conditions.",
+            "Hand-waving alone is weak compared with mirrors, lights, and contrast panels."
+          ],
+          "whatNotToDo": [
+            "Do not spread signals across multiple locations.",
+            "Do not camouflage yourself when you want to be found.",
+            "Do not rely on a single method if you have alternatives."
+          ],
+          "redFlags": [
+            "Aircraft or vehicles are repeatedly nearby but do not notice you.",
+            "Visibility is worsening rapidly from weather, smoke, or darkness."
+          ],
+          "preparednessTips": [
+            "Carry at least one high-visibility item and a reflective emergency blanket.",
+            "Choose pack and shell colors that are visible if you often travel remotely."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Visual distress signal effectiveness testing",
+              "organization": "US Coast Guard research",
+              "url": "",
+              "whyUseful": "Controlled visibility testing for mirrors, flares, and hand-waving."
+            },
+            {
+              "title": "Outdoor emergency signaling guidance",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Supports combined sound and light signaling when lost."
+            },
+            {
+              "title": "Rescue signaling best practice education",
+              "organization": "Search-and-rescue training materials",
+              "url": "",
+              "whyUseful": "Useful for combining multiple methods."
+            }
+          ],
+          "appTags": [
+            "signaling",
+            "visibility",
+            "land",
+            "sar",
+            "aircraft",
+            "ground-search",
+            "high-visibility",
+            "rescue"
+          ]
+        },
+        {
+          "title": "Basic Navigation Without GPS (Land)",
+          "slug": "basic-navigation-without-gps-land",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Land Navigation",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Land Navigation",
+          "quickAnswer": "Use map and compass if you have them; otherwise use only broad terrain awareness for cautious short decisions, and avoid ambitious travel when lost.",
+          "whenToUse": "Use when GPS has failed, battery is low, or accuracy is poor and you need a fallback strategy on land.",
+          "preferredAction": [
+            "Use map and compass together to orient yourself and plan short safe movement along obvious terrain handrails like roads, trails, ridges, or major valleys."
+          ],
+          "backupAction": [
+            "If you lack tools or skill, use the sun and major terrain only for broad orientation, not precise navigation, and prefer staying put over long uncertain travel."
+          ],
+          "steps": [
+            "If you have a map and compass, orient the map to north and identify obvious terrain features around you.",
+            "Match roads, rivers, ridges, valleys, and lakes to the map.",
+            "Plan short, conservative travel legs along clear handrails.",
+            "If visibility is poor or your location estimate is unstable, stop traveling and shelter instead.",
+            "If you have no tools, use the sun only for general direction and avoid relying on folk methods as precise navigation."
+          ],
+          "warnings": [
+            "Many natural-navigation folklore tricks are unreliable.",
+            "Fog, storms, darkness, and whiteout conditions can defeat even experienced navigators.",
+            "Streams and valleys do not automatically lead safely to help."
+          ],
+          "whatNotToDo": [
+            "Do not over-trust smartphone navigation if battery is low or the device is cold.",
+            "Do not commit to long dead-reckoning travel in unfamiliar terrain.",
+            "Do not treat moss, plant growth, or similar folklore as reliable directional tools."
+          ],
+          "redFlags": [
+            "You repeatedly cannot match terrain to your map or keep changing your estimated position.",
+            "Visibility drops to the point that safe travel is no longer realistic.",
+            "You are becoming exhausted, hypothermic, or heat-stressed while trying to navigate."
+          ],
+          "preparednessTips": [
+            "Carry a paper map and simple baseplate compass even if using GPS.",
+            "Practice map and compass skills in easy terrain before relying on them remotely.",
+            "Learn local terrain features and hazards before your trip."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Navigation in poor visibility",
+              "organization": "UIAA",
+              "url": "",
+              "whyUseful": "Strong mountain guidance for when to stop or simplify navigation."
+            },
+            {
+              "title": "Mountain rescue navigation guidance",
+              "organization": "Mountain rescue education",
+              "url": "",
+              "whyUseful": "Supports prioritizing map and compass and limiting risky movement."
+            },
+            {
+              "title": "Outdoor Emergency Plan",
+              "organization": "US National Park Service",
+              "url": "",
+              "whyUseful": "Supports safe retracing only when obvious and controlled."
+            }
+          ],
+          "appTags": [
+            "navigation",
+            "no-gps",
+            "map-compass",
+            "land",
+            "skills",
+            "poor-visibility",
+            "sar",
+            "offline"
+          ]
+        },
+        {
+          "title": "Maritime Visual Distress Basics (Sea and Large Lakes)",
+          "slug": "maritime-visual-distress-basics-sea-and-large-lakes",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Maritime Rescue",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "On water, use coast-guard-approved visual distress signals such as flares, orange distress flags, smoke, and approved electronic lights; treat land-based signaling patterns only as secondary aids.",
+          "whenToUse": "Use at sea or on large lakes where maritime regulations and search-and-rescue systems apply.",
+          "preferredAction": [
+            "Carry and use approved visual distress devices appropriate to your vessel and waters, supplemented by mirror, horn, and bright visible items."
+          ],
+          "backupAction": [
+            "If approved devices are unavailable in a true emergency, use any visible and audible means you have while calling for help by radio or phone."
+          ],
+          "steps": [
+            "Know and carry the distress equipment required for your vessel and waters.",
+            "In an emergency, use radio first if possible, then deploy the most suitable day or night visual signal.",
+            "Use mirrors, bright cloth, and arm motion only as secondary aids.",
+            "Continue signaling intermittently rather than wasting all devices at once."
+          ],
+          "warnings": [
+            "Pyrotechnic flares and smoke devices can cause burns or fires if handled badly.",
+            "Not all bright LED devices meet legal distress-signal standards."
+          ],
+          "whatNotToDo": [
+            "Do not assume land whistle or mirror conventions meet maritime legal requirements.",
+            "Do not bury distress gear where it cannot be reached quickly."
+          ],
+          "redFlags": [
+            "Flooding, fire aboard, loss of propulsion in dangerous conditions, or a serious medical emergency at sea require immediate distress signaling.",
+            "If flares or lights get no response, continue with radio and other signaling methods."
+          ],
+          "preparednessTips": [
+            "Inspect and replace flares or time-limited devices regularly.",
+            "Train all crew on where distress gear is stored and how to deploy it."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Visual Distress Signals",
+              "organization": "US Coast Guard",
+              "url": "",
+              "whyUseful": "Primary source for maritime distress-signal requirements and legal distinctions."
+            },
+            {
+              "title": "Visual distress signal effectiveness testing",
+              "organization": "US Coast Guard research",
+              "url": "",
+              "whyUseful": "Evidence for signal visibility in real-world conditions."
+            }
+          ],
+          "appTags": [
+            "maritime",
+            "signaling",
+            "flares",
+            "uscg",
+            "visual-distress",
+            "sea",
+            "lakes",
+            "regulations"
+          ]
+        },
+        {
+          "title": "Maritime Electronic Distress Basics (Sea and Large Lakes)",
+          "slug": "maritime-electronic-distress-basics-sea-and-large-lakes",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Navigation, Rescue, and Signaling",
+          "parentTopic": "Maritime Rescue",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "At sea, use VHF radio distress calling, DSC, EPIRBs, and other approved electronic systems as primary alerting tools, with visual signals as backup for localization.",
+          "whenToUse": "Use for boating or offshore travel where marine radio and beacon systems are part of the emergency response system.",
+          "preferredAction": [
+            "Use VHF marine radio, DSC, and EPIRBs or similar approved devices as your main distress systems."
+          ],
+          "backupAction": [
+            "If marine systems are unavailable, use any phone, satellite device, or general PLB while staying with the vessel if safe."
+          ],
+          "steps": [
+            "Program and test marine radio and distress features before the trip.",
+            "Register and maintain EPIRBs correctly.",
+            "In distress, send a DSC alert if available, make a Mayday call, and activate the EPIRB if needed.",
+            "Maintain watch for responses and continue visual signaling as rescuers approach."
+          ],
+          "warnings": [
+            "Marine systems depend on correct setup, registration, and user familiarity.",
+            "Loss of vessel power can disable radios; self-powered beacons are a critical backup."
+          ],
+          "whatNotToDo": [
+            "Do not assume a phone alone is enough offshore.",
+            "Do not turn off an activated beacon without clear rescue-resolution reason or instructions."
+          ],
+          "redFlags": [
+            "Any major loss of vessel safety or serious medical emergency at sea warrants immediate distress communication."
+          ],
+          "preparednessTips": [
+            "Practice distress procedures with crew.",
+            "Store handheld radios and beacons where they can be reached instantly in abandon-ship situations."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Marine distress communications overview",
+              "organization": "US Coast Guard",
+              "url": "",
+              "whyUseful": "Primary source for Mayday, distress systems, and safety communication."
+            },
+            {
+              "title": "Integrated maritime distress systems",
+              "organization": "Maritime safety guidance and regulations",
+              "url": "",
+              "whyUseful": "Supports role of DSC, EPIRB, and related systems."
+            }
+          ],
+          "appTags": [
+            "maritime",
+            "electronic-distress",
+            "epirb",
+            "vhf",
+            "dsc",
+            "ais",
+            "sar",
+            "regulations"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Water, Food, and Sanitation",
+      "summary": "Emergency drinking water, outage food safety, and sanitation guidance, with purification and contamination limits separated clearly from non-drinking sanitation tasks.",
+      "guides": [
+        {
+          "title": "Choosing Safe Hydration Sources",
+          "slug": "choosing-safe-hydration-sources",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Water Purification",
+          "quickAnswer": "Use sealed bottled water first; use tap water only if officials say it is safe; otherwise boil or disinfect the clearest available source before drinking.",
+          "whenToUse": "Use when an emergency disrupts normal water service or you are unsure which available water is safest to drink, cook with, or use for brushing teeth.",
+          "preferredAction": [
+            "Drink sealed bottled water from trusted sources first.",
+            "Use utility tap water only when authorities explicitly say it is safe."
+          ],
+          "backupAction": [
+            "If neither is available, use the clearest water from the safest protected source you can find and then boil or disinfect it before use."
+          ],
+          "steps": [
+            "Check local emergency, health, or water authority alerts.",
+            "Rank your sources from safest to riskiest.",
+            "Reserve the safest water for drinking, infant formula, food preparation, brushing teeth, and wound cleaning.",
+            "Use lower-quality water only for non-contact uses like flushing or cleaning."
+          ],
+          "warnings": [
+            "Boiling or bleach does not remove fuel, toxic chemicals, or heavy metals.",
+            "Floodwater is usually contaminated with sewage, chemicals, and debris and should be treated as unsafe for drinking."
+          ],
+          "whatNotToDo": [
+            "Do not assume clear-looking water is safe.",
+            "Do not drink from radiators, boilers, chemically treated pools, or hot tubs.",
+            "Do not ignore boil-water or do-not-drink notices."
+          ],
+          "redFlags": [
+            "Vomiting, diarrhea, or fever after drinking questionable water.",
+            "Known sewage or chemical contamination exposure.",
+            "Infants, older adults, pregnant people, or immunocompromised people showing dehydration signs."
+          ],
+          "preparednessTips": [
+            "Store at least 1 gallon per person per day for at least 3 days, with 2 weeks as a better target if possible.",
+            "Keep printed boiling and bleach-treatment instructions with your emergency kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency water safety guidance",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Strong public guidance on choosing safe emergency water sources."
+            },
+            {
+              "title": "Emergency disinfection of drinking water",
+              "organization": "EPA",
+              "url": "",
+              "whyUseful": "Primary source for treatment methods and limitations."
+            },
+            {
+              "title": "Emergency WASH materials",
+              "organization": "IFRC / Red Cross",
+              "url": "",
+              "whyUseful": "Supports practical emergency communication and contamination limits."
+            }
+          ],
+          "appTags": [
+            "water",
+            "hydration",
+            "decision-aid",
+            "emergency",
+            "boil-water-notice",
+            "flood",
+            "cdc",
+            "epa"
+          ]
+        },
+        {
+          "title": "Purifying Water by Boiling",
+          "slug": "purifying-water-by-boiling",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Water Purification",
+          "quickAnswer": "Bring clear water to a rolling boil for at least 1 minute, or 3 minutes at high altitude, then cool and store it covered.",
+          "whenToUse": "Use when bottled water is unavailable and you must drink questionable tap, well, or surface water because of an emergency or boil-water advisory.",
+          "preferredAction": [
+            "Use boiling as the primary household method for making microbiologically unsafe water safer to drink whenever you have a safe heat source."
+          ],
+          "backupAction": [
+            "If boiling is impossible, use unscented household bleach or approved purification tablets according to instructions."
+          ],
+          "steps": [
+            "If water is cloudy, let particles settle and pre-filter through a clean cloth or filter.",
+            "Heat the water until it reaches a rolling boil.",
+            "Boil for at least 1 minute, or 3 minutes above about 2,000 meters elevation.",
+            "Allow it to cool naturally.",
+            "Store it in a clean covered container and label it as boiled drinking water."
+          ],
+          "warnings": [
+            "Boiling does not remove chemical contamination like fuel, pesticides, or heavy metals.",
+            "Hot water handling can cause serious burns."
+          ],
+          "whatNotToDo": [
+            "Do not boil water in unsafe containers that may melt or leach chemicals.",
+            "Do not add unsafe ice to cooled boiled water.",
+            "Do not mix boiled water back into untreated water."
+          ],
+          "redFlags": [
+            "Waterborne illness symptoms after drinking boiled water may point to non-microbial contamination or another unsafe source.",
+            "If authorities issue a do-not-drink advisory for chemicals, do not rely on boiling."
+          ],
+          "preparednessTips": [
+            "Store extra fuel and safe cooking equipment as part of emergency planning.",
+            "Keep heat-safe pots reserved for emergency water boiling.",
+            "Practice boiling and storing water safely before emergencies."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency disinfection of drinking water",
+              "organization": "EPA",
+              "url": "",
+              "whyUseful": "Primary boiling guidance and emergency treatment standards."
+            },
+            {
+              "title": "How to make water safe in an emergency",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Confirms boiling as a preferred household emergency method."
+            },
+            {
+              "title": "Emergency drinking water guidance",
+              "organization": "WHO-aligned emergency materials",
+              "url": "",
+              "whyUseful": "Supports boiling time and contamination-limit framing."
+            }
+          ],
+          "appTags": [
+            "water",
+            "boiling",
+            "purification",
+            "microbiological-safety",
+            "cdc",
+            "epa",
+            "how-to"
+          ]
+        },
+        {
+          "title": "Purifying Water with Household Liquid Bleach",
+          "slug": "purifying-water-with-household-liquid-bleach",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Water Purification",
+          "quickAnswer": "Use plain unscented household bleach of known strength to disinfect relatively clear water, then wait at least 30 minutes before drinking.",
+          "whenToUse": "Use when bottled or boiled water is unavailable and you must disinfect relatively clear water from a utility, well, or surface source.",
+          "preferredAction": [
+            "Use regular unscented liquid bleach with known sodium hypochlorite strength and follow emergency dosing guidance."
+          ],
+          "backupAction": [
+            "If bleach is unavailable, use approved purification tablets or boil water when possible."
+          ],
+          "steps": [
+            "Confirm the bleach is plain, unscented, and not splashless or color-safe.",
+            "If water is cloudy, let it settle and pre-filter it.",
+            "Add the correct emergency dose for the bleach strength and water volume.",
+            "Stir or shake and let it stand at least 30 minutes.",
+            "If there is no slight chlorine smell afterward, dose once more and wait again.",
+            "Store treated water in clean covered containers."
+          ],
+          "warnings": [
+            "Bleach is less effective in very cloudy or very cold water.",
+            "Bleach does not make chemically contaminated water safe."
+          ],
+          "whatNotToDo": [
+            "Do not use scented, splashless, color-safe, or additive-containing bleach.",
+            "Do not guess bleach strength if the label is missing.",
+            "Do not mix bleach with other cleaners or chemicals.",
+            "Do not drink concentrated bleach or overly strong solutions."
+          ],
+          "redFlags": [
+            "Burning, breathing problems, or severe pain after concentrated bleach exposure.",
+            "Persistent vomiting, stomach pain, or diarrhea after treated water."
+          ],
+          "preparednessTips": [
+            "Keep a small bottle of plain unscented bleach in your emergency kit and replace it periodically.",
+            "Store printed dosage tables for common container sizes and bleach strengths.",
+            "Train adult household members on correct dosing."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency disinfection of drinking water",
+              "organization": "EPA",
+              "url": "",
+              "whyUseful": "Primary source for bleach disinfection method and limits."
+            },
+            {
+              "title": "Emergency water safety guidance",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Supports emergency chlorination use and public messaging."
+            },
+            {
+              "title": "Local emergency chlorination adaptations",
+              "organization": "Emergency management guidance referencing EPA",
+              "url": "",
+              "whyUseful": "Useful for household dosing context."
+            }
+          ],
+          "appTags": [
+            "water",
+            "bleach",
+            "chlorination",
+            "purification",
+            "disinfection",
+            "cdc",
+            "epa"
+          ]
+        },
+        {
+          "title": "When Treated Water Is Still Unsafe to Drink",
+          "slug": "when-treated-water-is-still-unsafe-to-drink",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Water Purification",
+          "quickAnswer": "Water can remain unsafe after boiling or chlorination if it contains fuel, toxic chemicals, or heavy metals, or if authorities issue a do-not-drink notice.",
+          "whenToUse": "Use when you have already boiled or disinfected water but suspect chemical contamination or are under a stronger official advisory than a normal boil-water notice.",
+          "preferredAction": [
+            "Obey do-not-drink or do-not-use advisories and use only confirmed safe water for drinking, cooking, brushing teeth, and infant formula."
+          ],
+          "backupAction": [
+            "If no safe drinking water is available, use suspect water only for limited non-drinking tasks like flushing if allowed and seek emergency water distribution quickly."
+          ],
+          "steps": [
+            "Check whether the advisory is boil-water, do-not-drink, or do-not-use.",
+            "Inspect the water for oily sheen, strong chemical or fuel odor, or unusual contamination indicators.",
+            "Use safe water only for high-risk activities like drinking, cooking, infant feeding, brushing teeth, dish rinsing, and wound cleaning.",
+            "Reserve suspect water only for low-risk non-contact uses if officials allow it."
+          ],
+          "warnings": [
+            "Floodwater is often contaminated with sewage and chemicals.",
+            "Some dangerous contaminants have no obvious taste or smell."
+          ],
+          "whatNotToDo": [
+            "Do not drink water from vehicles, heating systems, or radiators.",
+            "Do not wash open wounds or medical devices with chemically suspect water.",
+            "Do not assume boiling fixes chemical hazards."
+          ],
+          "redFlags": [
+            "Sudden dizziness, chest pain, breathing problems, or confusion after exposure to contaminated water.",
+            "Known industrial or fuel contamination in the water system."
+          ],
+          "preparednessTips": [
+            "Store extra safe water so you are less likely to drink questionable sources.",
+            "Know where local emergency water distribution points may be located.",
+            "Keep a battery or solar radio for advisories."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency water safety and treatment limits",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Clear distinction between boil-water and do-not-drink situations."
+            },
+            {
+              "title": "Emergency disinfection of drinking water",
+              "organization": "EPA",
+              "url": "",
+              "whyUseful": "Important limits of boiling and chlorination methods."
+            },
+            {
+              "title": "Emergency WASH materials",
+              "organization": "IFRC / Red Cross",
+              "url": "",
+              "whyUseful": "Supports practical messaging on contamination and use restrictions."
+            }
+          ],
+          "appTags": [
+            "water",
+            "contamination-limits",
+            "do-not-drink",
+            "chemical-hazard",
+            "flood",
+            "cdc",
+            "epa"
+          ]
+        },
+        {
+          "title": "Emergency Water Storage at Home",
+          "slug": "emergency-water-storage-at-home",
+          "guideType": "preparedness_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Store at least 1 gallon of safe water per person per day for at least 3 days, and ideally up to 2 weeks, in clean food-grade containers.",
+          "whenToUse": "Use before emergencies, or when you still have safe water and time to prepare for outages, storms, or disaster disruption.",
+          "preferredAction": [
+            "Store safe tap or bottled water in clean tightly sealed food-grade containers in cool, dark locations away from chemicals."
+          ],
+          "backupAction": [
+            "If ideal containers are unavailable, carefully reuse suitable beverage bottles such as PET soda bottles after proper cleaning and sanitizing."
+          ],
+          "steps": [
+            "Calculate at least 1 gallon per person per day, with more for heat, pets, illness, or special needs.",
+            "Choose food-grade containers that close tightly and have not stored chemicals.",
+            "Wash, rinse, sanitize, and dry self-filled containers before use.",
+            "Fill with safe water and label with date and drinking-water designation.",
+            "Store away from sunlight, heat, fuels, pesticides, and chemical vapors.",
+            "Rotate self-filled stored water every 6 months."
+          ],
+          "warnings": [
+            "Vapors from gasoline, pesticides, and chemicals can penetrate some plastics.",
+            "Milk jugs and some food containers are poor long-term choices because residues can promote bacterial growth."
+          ],
+          "whatNotToDo": [
+            "Do not partially close containers.",
+            "Do not keep topping off old water without emptying, cleaning, and refilling.",
+            "Do not assume unknown plastics are food-grade."
+          ],
+          "redFlags": [
+            "Stored water smells foul, appears slimy, or has visible growth.",
+            "An emergency occurs and you have no safe stored water and unsafe public supply."
+          ],
+          "preparednessTips": [
+            "Aim for a 2-week supply if space and budget allow.",
+            "Store smaller grab-and-go bottles as well as larger home containers.",
+            "Use reminders to rotate stored water every 6 months."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency water supply guidance",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Primary household storage quantity and handling guidance."
+            },
+            {
+              "title": "Household water storage best practices",
+              "organization": "Emergency management and WASH guidance",
+              "url": "",
+              "whyUseful": "Supports container cleaning, storage, and rotation."
+            }
+          ],
+          "appTags": [
+            "water",
+            "storage",
+            "preparedness",
+            "home",
+            "rotation",
+            "cdc"
+          ]
+        },
+        {
+          "title": "Using Non-Drinking Water Safely",
+          "slug": "using-non-drinking-water-safely",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Safe Drinking Water in Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Reserve suspect or lower-quality water for low-risk tasks like flushing or cleaning non-food-contact surfaces, and keep it away from drinking, cooking, wounds, and infant feeding.",
+          "whenToUse": "Use when you have lower-quality or questionable water that is not safe to drink but may still be useful for limited non-drinking household needs.",
+          "preferredAction": [
+            "Clearly separate safe drinking water from non-drinking water and use only the lowest-risk source for each task."
+          ],
+          "backupAction": [
+            "If quality is uncertain and official guidance is unavailable, use questionable water only for flushing or other minimal-contact tasks."
+          ],
+          "steps": [
+            "Label containers clearly as drinking or non-drinking water.",
+            "Use safe water for food, teeth, dishes that contact food, infant feeding, and wounds.",
+            "Use lower-quality water only for flushing, some cleaning tasks, or other non-contact uses if allowed.",
+            "Avoid splashing contaminated water into living or food-prep areas.",
+            "Discard non-drinking water if it shows obvious chemical contamination that makes even handling unsafe."
+          ],
+          "warnings": [
+            "Using unsafe water for produce, utensils, wounds, or infant feeding can cause illness.",
+            "Gray water is not safe for handwashing or food contact."
+          ],
+          "whatNotToDo": [
+            "Do not rinse ready-to-eat foods with unsafe water.",
+            "Do not wash open wounds with suspect water.",
+            "Do not use contaminated water for final dish rinses or handwashing before food prep."
+          ],
+          "redFlags": [
+            "Chemical odor, oily sheen, or irritation from skin contact with suspect water.",
+            "Household illness cluster after using questionable water in food or cleaning processes."
+          ],
+          "preparednessTips": [
+            "Store extra water specifically designated for hygiene and cleaning.",
+            "Keep written instructions on which tasks require fully safe water."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency water safety guidance",
+              "organization": "CDC",
+              "url": "",
+              "whyUseful": "Supports safe vs unsafe uses of compromised water."
+            },
+            {
+              "title": "Emergency WASH materials",
+              "organization": "IFRC / Red Cross",
+              "url": "",
+              "whyUseful": "Useful for separating drinking and non-drinking water tasks."
+            }
+          ],
+          "appTags": [
+            "water",
+            "non-drinking",
+            "cleaning",
+            "flushing",
+            "contamination",
+            "emergency"
+          ]
+        },
+        {
+          "title": "Refrigerator Safety During Outages",
+          "slug": "refrigerator-safety-during-outages",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Food Safety During Power Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Food Preservation",
+          "quickAnswer": "Keep the fridge closed; perishable foods are generally safe for about 4 hours without power if the door stays shut and temperatures stay cold enough.",
+          "whenToUse": "Use during and immediately after a power outage when you still have refrigerated food that may be at risk.",
+          "preferredAction": [
+            "Keep refrigerator doors closed as much as possible.",
+            "Use an appliance thermometer to confirm temperature stays at or below 4\u00b0C / 40\u00b0F."
+          ],
+          "backupAction": [
+            "If the outage will exceed about 4 hours, move the most perishable items to a cooler with ice or gel packs if you can keep them cold enough."
+          ],
+          "steps": [
+            "Before outages, keep a thermometer in the refrigerator.",
+            "During outage, keep the door closed.",
+            "After outage, check temperature.",
+            "Discard high-risk foods that were above 4\u00b0C / 40\u00b0F for too long.",
+            "Keep low-risk items only if still cold and otherwise safe."
+          ],
+          "warnings": [
+            "Danger-zone temperatures allow rapid bacterial growth.",
+            "Smell and appearance are not reliable safety tests."
+          ],
+          "whatNotToDo": [
+            "Do not repeatedly open the refrigerator just to check.",
+            "Do not taste food to test safety.",
+            "Do not keep leftovers that sat warm too long."
+          ],
+          "redFlags": [
+            "Several people get vomiting, diarrhea, or fever after eating outage-affected refrigerated food.",
+            "Vulnerable household members have symptoms after eating questionable food."
+          ],
+          "preparednessTips": [
+            "Keep a thermometer in the fridge.",
+            "Store shelf-stable foods that do not require refrigeration.",
+            "Plan coolers and ice packs for longer outages."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Food safety during power outages",
+              "organization": "USDA / FoodSafety.gov",
+              "url": "",
+              "whyUseful": "Primary rules for refrigerator safety and discard decisions."
+            }
+          ],
+          "appTags": [
+            "food",
+            "refrigerator",
+            "power-outage",
+            "temperature",
+            "usda",
+            "foodsafety"
+          ]
+        },
+        {
+          "title": "Freezer Safety During Outages",
+          "slug": "freezer-safety-during-outages",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Food Safety During Power Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Food Preservation",
+          "quickAnswer": "A full freezer can stay cold about 48 hours, or 24 hours if half-full, if the door stays closed; food with ice crystals may still be safe to refreeze or cook.",
+          "whenToUse": "Use during and after a power outage when frozen food may be thawing.",
+          "preferredAction": [
+            "Keep the freezer closed and monitor with a thermometer if possible."
+          ],
+          "backupAction": [
+            "If the outage will be long, group foods together and move critical items to coolers with ice or dry ice if available."
+          ],
+          "steps": [
+            "Before outages, keep the freezer cold and reasonably full.",
+            "During outage, keep the door closed.",
+            "After outage, check for ice crystals and safe temperature.",
+            "Discard foods that have been above safe temperatures too long.",
+            "Refreeze only foods that stayed cold enough, understanding quality may decline."
+          ],
+          "warnings": [
+            "Food can become unsafe even if it still looks normal.",
+            "Do not rely only on smell or color."
+          ],
+          "whatNotToDo": [
+            "Do not open the freezer repeatedly.",
+            "Do not refreeze food that stayed warm too long.",
+            "Do not leave thawed food at room temperature for hours."
+          ],
+          "redFlags": [
+            "Household members become sick after eating outage-affected previously frozen food."
+          ],
+          "preparednessTips": [
+            "Keep a freezer thermometer installed.",
+            "Store extra ice or gel packs for coolers.",
+            "Label and group foods for quicker decision-making."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Food safety during power outages",
+              "organization": "USDA / FoodSafety.gov",
+              "url": "",
+              "whyUseful": "Primary source for freezer hold times and safety decisions."
+            }
+          ],
+          "appTags": [
+            "food",
+            "freezer",
+            "power-outage",
+            "temperature",
+            "usda",
+            "foodsafety"
+          ]
+        },
+        {
+          "title": "Deciding When to Throw Away Food After an Outage",
+          "slug": "deciding-when-to-throw-away-food-after-an-outage",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Food Safety During Power Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Food Preservation",
+          "quickAnswer": "When in doubt, throw it out\u2014discard perishable foods that were too warm too long, and never taste food to decide if it is safe.",
+          "whenToUse": "Use when power returns and you must decide what food to keep or discard from a refrigerator or freezer.",
+          "preferredAction": [
+            "Use time-and-temperature rules and err on the side of discarding questionable foods."
+          ],
+          "backupAction": [
+            "If you lack thermometers, use outage duration, door opening frequency, and remaining ice crystals to make conservative discard decisions."
+          ],
+          "steps": [
+            "Identify high-risk foods like meat, fish, poultry, eggs, dairy, and leftovers.",
+            "Apply refrigerator and freezer temperature rules.",
+            "Keep lower-risk foods only when clearly safe.",
+            "Discard swollen, leaking, badly damaged, or obviously spoiled items.",
+            "Avoid feeding questionable food to high-risk people."
+          ],
+          "warnings": [
+            "Tasting food is not a safe test.",
+            "Some dangerous bacteria do not change smell or appearance."
+          ],
+          "whatNotToDo": [
+            "Do not refreeze or keep food that warmed too long.",
+            "Do not feed suspect foods to children, pregnant people, older adults, or immunocompromised people."
+          ],
+          "redFlags": [
+            "Multiple people become ill after eating the same questionable food.",
+            "Neurological symptoms after canned food suggest a possible botulism emergency."
+          ],
+          "preparednessTips": [
+            "Keep printed food keep/discard lists from FoodSafety.gov.",
+            "Use fridge and freezer thermometers routinely.",
+            "Store shelf-stable alternatives for outages."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Food safety in emergencies and power outages",
+              "organization": "USDA / FoodSafety.gov",
+              "url": "",
+              "whyUseful": "Primary guidance on what to keep or discard after outages."
+            }
+          ],
+          "appTags": [
+            "food",
+            "discard",
+            "decision-aid",
+            "power-outage",
+            "usda",
+            "foodsafety"
+          ]
+        },
+        {
+          "title": "Safe Food Handling When Water Is Limited",
+          "slug": "safe-food-handling-when-water-is-limited",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Food Safety During Power Outages",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Use safe water for any food-contact task, and if safe water is scarce, prioritize drinking, medication, hand hygiene before food prep, and rinsing food-contact items.",
+          "whenToUse": "Use during emergencies when safe water is limited but you still need to prepare food or clean utensils and surfaces.",
+          "preferredAction": [
+            "Use safe water for handwashing before food prep, washing produce that will be eaten raw, rinsing utensils, and cleaning food-contact surfaces."
+          ],
+          "backupAction": [
+            "If safe water is scarce, use alcohol-based hand sanitizer on visibly clean hands and prioritize disposable utensils and minimal-contact food prep."
+          ],
+          "steps": [
+            "Prioritize safe water for drinking, medications, hand hygiene, food rinsing, and dish rinsing.",
+            "Wash hands with safe water and soap when possible.",
+            "Use hand sanitizer on visibly clean hands when water is limited.",
+            "Use safe water for produce eaten raw.",
+            "If dishwashing water is limited, scrape first, wash in small basins, and sanitize with safe-water-based solution."
+          ],
+          "warnings": [
+            "Using contaminated water on produce, utensils, or surfaces can re-contaminate food.",
+            "Gray water is not safe for food handling or handwashing."
+          ],
+          "whatNotToDo": [
+            "Do not rinse ready-to-eat foods with unsafe water.",
+            "Do not reuse dirty dishwater for final rinsing or hand hygiene."
+          ],
+          "redFlags": [
+            "Cluster of gastrointestinal illness after changes in water use or dishwashing.",
+            "Vomiting or diarrhea in vulnerable household members."
+          ],
+          "preparednessTips": [
+            "Store extra safe water labeled for cooking and kitchen hygiene.",
+            "Keep disposable utensils and sanitizer in emergency kits.",
+            "Plan low-water food preparation methods in advance."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency WASH and food safety guidance",
+              "organization": "CDC and food-safety emergency materials",
+              "url": "",
+              "whyUseful": "Supports safe kitchen use of limited water."
+            }
+          ],
+          "appTags": [
+            "food",
+            "hygiene",
+            "limited-water",
+            "handwashing",
+            "dishwashing",
+            "cdc"
+          ]
+        },
+        {
+          "title": "Emergency Toilet and Waste Management",
+          "slug": "emergency-toilet-and-waste-management",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Sanitation and Contamination Prevention",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Keep human waste contained, covered, and away from food, living spaces, and water sources using lined buckets, improvised toilets, or approved disposal methods.",
+          "whenToUse": "Use when toilets do not flush or sewage systems are damaged, unavailable, or backing up during an emergency.",
+          "preferredAction": [
+            "Use functioning toilets only while authorities say sewer systems are safe.",
+            "If not, set up an improvised toilet that keeps waste sealed and separated from people, food, and water."
+          ],
+          "backupAction": [
+            "If no toilet setup is possible, use a designated emergency latrine or pit only where local conditions and guidance make that safe."
+          ],
+          "steps": [
+            "Stop flushing if sewage systems are not working and backup is possible.",
+            "Set up a sturdy bucket or toilet frame lined with heavy-duty bags.",
+            "Add absorbent material after each use.",
+            "Seal and store bags in a covered container until safe disposal.",
+            "Keep waste areas away from food, children, and pets.",
+            "Follow local disposal instructions if available."
+          ],
+          "warnings": [
+            "Improper waste disposal can spread diarrheal disease and contaminate water sources.",
+            "Do not dispose of waste into open water or floodwater."
+          ],
+          "whatNotToDo": [
+            "Do not mix emergency toilet waste with regular household trash unless authorities instruct it.",
+            "Do not reuse waste bags or containers without thorough disinfection.",
+            "Do not allow sewage backup to continue unchecked if you can safely isolate the problem."
+          ],
+          "redFlags": [
+            "Community outbreak-like diarrhea after sanitation disruption.",
+            "Visible sewage backing into homes or communal living areas.",
+            "Leaking or unsealed waste storage near living spaces."
+          ],
+          "preparednessTips": [
+            "Store heavy-duty bags, absorbent material, disinfectants, and a bucket or portable toilet.",
+            "Learn local emergency waste disposal guidance in advance."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency WASH sanitation guidance",
+              "organization": "CDC and IFRC / Red Cross",
+              "url": "",
+              "whyUseful": "Strong basis for emergency toilet setup and contamination prevention."
+            }
+          ],
+          "appTags": [
+            "sanitation",
+            "toilets",
+            "waste",
+            "wash",
+            "emergency",
+            "redcross",
+            "cdc"
+          ]
+        },
+        {
+          "title": "Hand Hygiene When Water or Soap Is Scarce",
+          "slug": "hand-hygiene-when-water-or-soap-is-scarce",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Sanitation and Contamination Prevention",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Wash hands with safe water and soap when possible; otherwise use alcohol-based sanitizer on visibly clean hands and prioritize hygiene before eating, feeding children, or wound care.",
+          "whenToUse": "Use in emergencies with limited safe water, damaged water systems, or crowded conditions that increase disease spread.",
+          "preferredAction": [
+            "Wash with safe water and soap for at least 20 seconds after toilet use and before food or wound care."
+          ],
+          "backupAction": [
+            "If safe water or soap is unavailable, use alcohol-based sanitizer on visibly clean hands after wiping away dirt if possible."
+          ],
+          "steps": [
+            "Clean hands after toilet use, waste handling, food prep, feeding, and wound care.",
+            "Use safe water and soap when available.",
+            "If using sanitizer, cover all hand surfaces and rub until dry.",
+            "Set up hygiene stations near toilets and food prep if possible."
+          ],
+          "warnings": [
+            "Sanitizer works poorly on visibly dirty or greasy hands.",
+            "Crowded shelters and disrupted sanitation increase disease spread."
+          ],
+          "whatNotToDo": [
+            "Do not wash hands before food prep with contaminated water.",
+            "Do not wipe hands on visibly dirty cloths as a substitute for hand cleaning."
+          ],
+          "redFlags": [
+            "Rising diarrhea, vomiting, or respiratory illness despite hygiene efforts in a household or shelter."
+          ],
+          "preparednessTips": [
+            "Include soap, sanitizer, and disposable towels in emergency kits.",
+            "Plan dedicated handwashing or hygiene stations near toilet and kitchen areas."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency hygiene guidance",
+              "organization": "CDC WASH and IFRC / Red Cross",
+              "url": "",
+              "whyUseful": "Supports hand hygiene priorities under limited-water conditions."
+            }
+          ],
+          "appTags": [
+            "sanitation",
+            "handwashing",
+            "hygiene",
+            "limited-water",
+            "wash",
+            "cdc",
+            "redcross"
+          ]
+        },
+        {
+          "title": "Cleaning and Disinfection to Prevent Disease Spread",
+          "slug": "cleaning-and-disinfection-to-prevent-disease-spread",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Water, Food, and Sanitation",
+          "parentTopic": "Sanitation and Contamination Prevention",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": "",
+          "quickAnswer": "Clean visible dirt first, then disinfect high-touch and contaminated surfaces with an appropriate disinfectant or bleach solution made using safe water.",
+          "whenToUse": "Use during and after emergencies when flooding, sewage issues, or illness increase contamination risk around the home or shelter.",
+          "preferredAction": [
+            "Use safe water, soap or detergent, and an appropriate disinfectant on toilets, kitchens, handles, and visibly contaminated areas."
+          ],
+          "backupAction": [
+            "If supplies are limited, prioritize toilets, food-prep areas, and high-touch surfaces first."
+          ],
+          "steps": [
+            "Remove visible dirt with soap and water before disinfecting.",
+            "Prepare disinfectant safely according to instructions.",
+            "Disinfect toilets, sinks, counters, handles, and contaminated surfaces.",
+            "Allow the proper contact time before drying or wiping.",
+            "Use gloves and ventilation when using bleach or disinfectants."
+          ],
+          "warnings": [
+            "Floodwater or sewage-contaminated items may need to be discarded if they cannot be cleaned effectively.",
+            "Mixing bleach with ammonia or acids creates toxic fumes."
+          ],
+          "whatNotToDo": [
+            "Do not use contaminated water for cleaning food-contact surfaces.",
+            "Do not mix cleaning products together.",
+            "Do not use the same tools for toilet and kitchen cleaning without proper disinfection."
+          ],
+          "redFlags": [
+            "Rashes, breathing issues, or eye irritation after chemical exposure.",
+            "Persistent sewage contamination after cleaning attempts."
+          ],
+          "preparednessTips": [
+            "Store detergent, disinfectant, bleach, gloves, buckets, and cloths.",
+            "Keep printed dilution and safety instructions with your supplies.",
+            "Use separate cleaning tools for toilets versus kitchens."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Emergency environmental cleaning guidance",
+              "organization": "CDC WASH and emergency hygiene materials",
+              "url": "",
+              "whyUseful": "Supports household cleaning and disinfection after contamination events."
+            }
+          ],
+          "appTags": [
+            "sanitation",
+            "cleaning",
+            "disinfection",
+            "flood",
+            "sewage",
+            "wash",
+            "cdc"
+          ]
+        }
+      ]
+    }
+  ]
+}

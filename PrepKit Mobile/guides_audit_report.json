@@ -1,0 +1,1445 @@
+{
+  "exportedAt": "2026-03-13T15:00:06.351Z",
+  "totalGuides": 187,
+  "byCategory": {
+    "communication": 4,
+    "core_skills": 22,
+    "water_food": 21,
+    "medical_safety": 21,
+    "natural_disasters": 19,
+    "navigation": 11,
+    "preparedness": 30,
+    "weather_environment": 11,
+    "shelter_fire_warmth": 27,
+    "power_utilities_home_safety": 21
+  },
+  "categoryDetails": {
+    "communication": [
+      {
+        "slug": "distress-signaling",
+        "title": "Distress Signaling",
+        "parentTopic": null
+      },
+      {
+        "slug": "morse-code",
+        "title": "Morse Code",
+        "parentTopic": null
+      },
+      {
+        "slug": "signal-for-rescue",
+        "title": "Signal for Rescue: Stay Visible and Be Heard",
+        "parentTopic": null
+      },
+      {
+        "slug": "night-signaling-and-battery",
+        "title": "Night Signaling and Battery Conservation",
+        "parentTopic": null
+      }
+    ],
+    "core_skills": [
+      {
+        "slug": "fire-making",
+        "title": "Fire Making",
+        "parentTopic": null
+      },
+      {
+        "slug": "knot-tying",
+        "title": "Knot Tying",
+        "parentTopic": null
+      },
+      {
+        "slug": "shelter-building",
+        "title": "Shelter Building",
+        "parentTopic": null
+      },
+      {
+        "slug": "stop-think-observe-plan-first-30-minutes",
+        "title": "STOP-Think-Observe-Plan (First 30 Minutes)",
+        "parentTopic": "First 30 Minutes: Stay Oriented and Make a Simple Plan"
+      },
+      {
+        "slug": "simple-survival-priorities-what-comes-first",
+        "title": "Simple Survival Priorities: What Comes First",
+        "parentTopic": "First 30 Minutes: Stay Oriented and Make a Simple Plan"
+      },
+      {
+        "slug": "ground-fire-and-passive-visual-signals",
+        "title": "Ground, Fire, and Passive Visual Signals",
+        "parentTopic": "Simple Rescue Signaling"
+      },
+      {
+        "slug": "choosing-the-safest-available-water-source",
+        "title": "Choosing the Safest Available Water Source",
+        "parentTopic": "Safe Water Collection (Before Purification)"
+      },
+      {
+        "slug": "collecting-and-storing-water-safely-before-treatment",
+        "title": "Collecting and Storing Water Safely Before Treatment",
+        "parentTopic": "Safe Water Collection (Before Purification)"
+      },
+      {
+        "slug": "when-its-better-to-risk-untreated-water",
+        "title": "When It’s Better to Risk Untreated Water",
+        "parentTopic": "Safe Water Collection (Before Purification)"
+      },
+      {
+        "slug": "hand-hygiene-and-food-safety-in-the-field",
+        "title": "Hand Hygiene and Food Safety in the Field",
+        "parentTopic": "Basic Camp and Bivouac Hygiene"
+      },
+      {
+        "slug": "human-waste-and-washing-basics",
+        "title": "Human Waste and Washing Basics",
+        "parentTopic": "Basic Camp and Bivouac Hygiene"
+      },
+      {
+        "slug": "managing-small-wounds-and-skin-problems",
+        "title": "Managing Small Wounds and Skin Problems",
+        "parentTopic": "Basic Camp and Bivouac Hygiene"
+      },
+      {
+        "slug": "simple-loops-and-attachment-knots-figure-eight-on-a-bight-bowline",
+        "title": "Simple Loops and Attachment Knots (Figure-Eight on a Bight, Bowline)",
+        "parentTopic": "Simple, High-Value Knots and Cordage Uses"
+      },
+      {
+        "slug": "everyday-cordage-uses-in-emergencies",
+        "title": "Everyday Cordage Uses in Emergencies",
+        "parentTopic": "Simple, High-Value Knots and Cordage Uses"
+      },
+      {
+        "slug": "basic-knife-handling-and-safe-zones",
+        "title": "Basic Knife Handling and Safe Zones",
+        "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs"
+      },
+      {
+        "slug": "safe-cutting-tasks-for-shelter-and-repairs",
+        "title": "Safe Cutting Tasks for Shelter and Repairs",
+        "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs"
+      },
+      {
+        "slug": "when-not-to-use-a-knife",
+        "title": "When Not to Use a Knife",
+        "parentTopic": "Knife and Multi-Tool Safety for Shelter, Food, and Repairs"
+      },
+      {
+        "slug": "pocket-always-with-you-kit",
+        "title": "Pocket Always-With-You Kit",
+        "parentTopic": "Packing and Using a Small Emergency Kit"
+      },
+      {
+        "slug": "daypack-size-emergency-kit-for-hikes",
+        "title": "Daypack-Size Emergency Kit for Hikes",
+        "parentTopic": "Packing and Using a Small Emergency Kit"
+      },
+      {
+        "slug": "signs-you-must-switch-to-shelter-and-warmth",
+        "title": "Signs You Must Switch to Shelter and Warmth",
+        "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling"
+      },
+      {
+        "slug": "when-to-drop-tasks-and-focus-on-signaling",
+        "title": "When to Drop Tasks and Focus on Signaling",
+        "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling"
+      },
+      {
+        "slug": "balancing-activity-and-rest-to-avoid-exhaustion",
+        "title": "Balancing Activity and Rest to Avoid Exhaustion",
+        "parentTopic": "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling"
+      }
+    ],
+    "water_food": [
+      {
+        "slug": "solar-still",
+        "title": "Solar Still",
+        "parentTopic": null
+      },
+      {
+        "slug": "water-purification-reference",
+        "title": "Water Purification",
+        "parentTopic": null
+      },
+      {
+        "slug": "fishing-techniques",
+        "title": "Fishing Techniques",
+        "parentTopic": null
+      },
+      {
+        "slug": "food-preservation",
+        "title": "Food Preservation",
+        "parentTopic": null
+      },
+      {
+        "slug": "foraging",
+        "title": "Foraging",
+        "parentTopic": null
+      },
+      {
+        "slug": "trapping",
+        "title": "Trapping",
+        "parentTopic": null
+      },
+      {
+        "slug": "purify-water-boiling",
+        "title": "Purify Water by Boiling",
+        "parentTopic": null
+      },
+      {
+        "slug": "purify-water-bleach",
+        "title": "Disinfect Water with Bleach",
+        "parentTopic": null
+      },
+      {
+        "slug": "food-safety-no-fridge",
+        "title": "Food Safety Without Refrigeration",
+        "parentTopic": null
+      },
+      {
+        "slug": "choosing-safe-hydration-sources",
+        "title": "Choosing Safe Hydration Sources",
+        "parentTopic": "Safe Drinking Water in Emergencies"
+      },
+      {
+        "slug": "purifying-water-with-household-liquid-bleach",
+        "title": "Purifying Water with Household Liquid Bleach",
+        "parentTopic": "Safe Drinking Water in Emergencies"
+      },
+      {
+        "slug": "when-treated-water-is-still-unsafe-to-drink",
+        "title": "When Treated Water Is Still Unsafe to Drink",
+        "parentTopic": "Safe Drinking Water in Emergencies"
+      },
+      {
+        "slug": "emergency-water-storage-at-home",
+        "title": "Emergency Water Storage at Home",
+        "parentTopic": "Safe Drinking Water in Emergencies"
+      },
+      {
+        "slug": "using-non-drinking-water-safely",
+        "title": "Using Non-Drinking Water Safely",
+        "parentTopic": "Safe Drinking Water in Emergencies"
+      },
+      {
+        "slug": "refrigerator-safety-during-outages",
+        "title": "Refrigerator Safety During Outages",
+        "parentTopic": "Food Safety During Power Outages"
+      },
+      {
+        "slug": "freezer-safety-during-outages",
+        "title": "Freezer Safety During Outages",
+        "parentTopic": "Food Safety During Power Outages"
+      },
+      {
+        "slug": "deciding-when-to-throw-away-food-after-an-outage",
+        "title": "Deciding When to Throw Away Food After an Outage",
+        "parentTopic": "Food Safety During Power Outages"
+      },
+      {
+        "slug": "safe-food-handling-when-water-is-limited",
+        "title": "Safe Food Handling When Water Is Limited",
+        "parentTopic": "Food Safety During Power Outages"
+      },
+      {
+        "slug": "emergency-toilet-and-waste-management",
+        "title": "Emergency Toilet and Waste Management",
+        "parentTopic": "Sanitation and Contamination Prevention"
+      },
+      {
+        "slug": "hand-hygiene-when-water-or-soap-is-scarce",
+        "title": "Hand Hygiene When Water or Soap Is Scarce",
+        "parentTopic": "Sanitation and Contamination Prevention"
+      },
+      {
+        "slug": "cleaning-and-disinfection-to-prevent-disease-spread",
+        "title": "Cleaning and Disinfection to Prevent Disease Spread",
+        "parentTopic": "Sanitation and Contamination Prevention"
+      }
+    ],
+    "medical_safety": [
+      {
+        "slug": "cpr-reference",
+        "title": "CPR",
+        "parentTopic": null
+      },
+      {
+        "slug": "dehydration-reference",
+        "title": "Dehydration",
+        "parentTopic": null
+      },
+      {
+        "slug": "first-aid-reference",
+        "title": "First Aid",
+        "parentTopic": null
+      },
+      {
+        "slug": "hypothermia-reference",
+        "title": "Hypothermia",
+        "parentTopic": null
+      },
+      {
+        "slug": "wound-care-reference",
+        "title": "Wound Care",
+        "parentTopic": null
+      },
+      {
+        "slug": "heat-stroke-emergency",
+        "title": "Heat Stroke: Cool and Call for Help",
+        "parentTopic": null
+      },
+      {
+        "slug": "heat-exhaustion-cool-rehydrate",
+        "title": "Heat Exhaustion: Cool Down and Rehydrate",
+        "parentTopic": null
+      },
+      {
+        "slug": "hypothermia-warm-core",
+        "title": "Hypothermia: Warm the Core and Get Help",
+        "parentTopic": null
+      },
+      {
+        "slug": "frostbite-protect-rewarm",
+        "title": "Frostbite: Protect and Rewarm Safely",
+        "parentTopic": null
+      },
+      {
+        "slug": "minor-cuts-scrapes",
+        "title": "Minor Cuts and Scrapes: Clean and Cover",
+        "parentTopic": "wound-care-reference"
+      },
+      {
+        "slug": "bleeding-control-pressure-first",
+        "title": "Bleeding Control: Direct Pressure First",
+        "parentTopic": "wound-care-reference"
+      },
+      {
+        "slug": "severe-bleeding-get-help-fast",
+        "title": "Severe Bleeding: Get Help Fast",
+        "parentTopic": "wound-care-reference"
+      },
+      {
+        "slug": "wound-needs-urgent-care",
+        "title": "When a Wound Needs Urgent Medical Care",
+        "parentTopic": "wound-care-reference"
+      },
+      {
+        "slug": "wound-infection-red-flags",
+        "title": "Wound Infection: Red Flags",
+        "parentTopic": "Bleeding and Wound Care"
+      },
+      {
+        "slug": "dehydration-signs-and-immediate-care",
+        "title": "Dehydration: Signs and Immediate Care",
+        "parentTopic": "Heat and Fluids"
+      },
+      {
+        "slug": "first-aid-for-burns-minor",
+        "title": "First Aid for Burns (Minor)",
+        "parentTopic": "Burns"
+      },
+      {
+        "slug": "burns-that-need-emergency-care",
+        "title": "Burns That Need Emergency Care",
+        "parentTopic": "Burns"
+      },
+      {
+        "slug": "choking-responsive-adult-or-child",
+        "title": "Choking: Responsive Adult or Child",
+        "parentTopic": "Airway Emergencies"
+      },
+      {
+        "slug": "choking-unresponsive-adult-or-child",
+        "title": "Choking: Unresponsive Adult or Child",
+        "parentTopic": "Airway Emergencies"
+      },
+      {
+        "slug": "sprains-and-suspected-fractures",
+        "title": "Sprains and Suspected Fractures",
+        "parentTopic": "Musculoskeletal Injuries"
+      },
+      {
+        "slug": "allergic-reaction-and-anaphylaxis-warning-signs",
+        "title": "Allergic Reaction and Anaphylaxis Warning Signs",
+        "parentTopic": "Allergic Reactions"
+      }
+    ],
+    "natural_disasters": [
+      {
+        "slug": "earthquake-safety-reference",
+        "title": "Earthquake Safety",
+        "parentTopic": null
+      },
+      {
+        "slug": "flood-survival-reference",
+        "title": "Flood Survival",
+        "parentTopic": null
+      },
+      {
+        "slug": "tornado-safety-reference",
+        "title": "Tornado Safety",
+        "parentTopic": null
+      },
+      {
+        "slug": "earthquake-during-shaking",
+        "title": "Earthquake Safety: During Shaking",
+        "parentTopic": "earthquake-safety-reference"
+      },
+      {
+        "slug": "earthquake-after-shaking",
+        "title": "Earthquake Safety: Right After Shaking",
+        "parentTopic": "earthquake-safety-reference"
+      },
+      {
+        "slug": "earthquake-tsunami-risk",
+        "title": "Earthquake Safety: Tsunami Risk After a Quake",
+        "parentTopic": "earthquake-safety-reference"
+      },
+      {
+        "slug": "flood-get-to-higher-ground",
+        "title": "Flood Survival: Get to Higher Ground",
+        "parentTopic": "flood-survival-reference"
+      },
+      {
+        "slug": "floodwater-safety",
+        "title": "Floodwater Safety",
+        "parentTopic": "flood-survival-reference"
+      },
+      {
+        "slug": "flood-reentry-cleanup",
+        "title": "Returning Home After Flooding",
+        "parentTopic": "flood-survival-reference"
+      },
+      {
+        "slug": "tornado-take-shelter",
+        "title": "Tornado Safety: Take Shelter Immediately",
+        "parentTopic": "tornado-safety-reference"
+      },
+      {
+        "slug": "tornado-vehicle-mobile-home",
+        "title": "Tornado Safety: If You Are in a Vehicle or Mobile Home",
+        "parentTopic": "tornado-safety-reference"
+      },
+      {
+        "slug": "tornado-after",
+        "title": "After the Tornado",
+        "parentTopic": "tornado-safety-reference"
+      },
+      {
+        "slug": "wildfire-evacuate-early",
+        "title": "Wildfire Evacuation: Leave Early",
+        "parentTopic": "wildfire-smoke-evacuation"
+      },
+      {
+        "slug": "wildfire-return-home",
+        "title": "Returning After Wildfire",
+        "parentTopic": "wildfire-smoke-evacuation"
+      },
+      {
+        "slug": "driving-in-flood-conditions",
+        "title": "Driving in Flood Conditions",
+        "parentTopic": "Floods"
+      },
+      {
+        "slug": "tornado-safety-in-a-vehicle",
+        "title": "Tornado Safety in a Vehicle",
+        "parentTopic": "Tornadoes"
+      },
+      {
+        "slug": "tornado-safety-in-a-mobile-home",
+        "title": "Tornado Safety in a Mobile Home",
+        "parentTopic": "Tornadoes"
+      },
+      {
+        "slug": "during-landslide",
+        "title": "During Landslide",
+        "parentTopic": "Landslides"
+      },
+      {
+        "slug": "after-landslide",
+        "title": "After Landslide",
+        "parentTopic": "Landslides"
+      }
+    ],
+    "navigation": [
+      {
+        "slug": "land-navigation",
+        "title": "Land Navigation",
+        "parentTopic": null
+      },
+      {
+        "slug": "stay-put-vs-move",
+        "title": "Stay Put vs Move",
+        "parentTopic": null
+      },
+      {
+        "slug": "lost-on-land-first-30-minutes",
+        "title": "Lost on Land: First 30 Minutes",
+        "parentTopic": "If You Get Lost"
+      },
+      {
+        "slug": "stay-put-vs-move-land",
+        "title": "Stay Put vs Move (Land)",
+        "parentTopic": "If You Get Lost"
+      },
+      {
+        "slug": "whistle-distress-signals-land",
+        "title": "Whistle Distress Signals (Land)",
+        "parentTopic": "Land Rescue Signaling"
+      },
+      {
+        "slug": "mirror-and-light-signaling-land-day-and-night",
+        "title": "Mirror and Light Signaling (Land, Day and Night)",
+        "parentTopic": "Land Rescue Signaling"
+      },
+      {
+        "slug": "ground-to-air-symbols-for-aircraft",
+        "title": "Ground-to-Air Symbols for Aircraft",
+        "parentTopic": "Land Rescue Signaling"
+      },
+      {
+        "slug": "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+        "title": "Beacon and Locator Basics (PLB, EPIRB, Satellite Messengers)",
+        "parentTopic": "Rescue Communication Tools"
+      },
+      {
+        "slug": "maximizing-rescue-visibility-land",
+        "title": "Maximizing Rescue Visibility (Land)",
+        "parentTopic": "Land Rescue Signaling"
+      },
+      {
+        "slug": "maritime-visual-distress-basics-sea-and-large-lakes",
+        "title": "Maritime Visual Distress Basics (Sea and Large Lakes)",
+        "parentTopic": "Maritime Rescue"
+      },
+      {
+        "slug": "maritime-electronic-distress-basics-sea-and-large-lakes",
+        "title": "Maritime Electronic Distress Basics (Sea and Large Lakes)",
+        "parentTopic": "Maritime Rescue"
+      }
+    ],
+    "preparedness": [
+      {
+        "slug": "earthquake-preparedness-checklist",
+        "title": "Earthquake Preparedness Checklist",
+        "parentTopic": "earthquake-safety-reference"
+      },
+      {
+        "slug": "heat-prevention",
+        "title": "Heat Safety and Prevention",
+        "parentTopic": null
+      },
+      {
+        "slug": "cold-prevention-layering",
+        "title": "Cold Weather Prevention and Layering",
+        "parentTopic": null
+      },
+      {
+        "slug": "emergency-water-storage",
+        "title": "Emergency Water Storage",
+        "parentTopic": null
+      },
+      {
+        "slug": "build-72-hour-kit",
+        "title": "Build a 72-Hour Emergency Kit",
+        "parentTopic": null
+      },
+      {
+        "slug": "family-emergency-plan",
+        "title": "Make a Family Emergency Plan",
+        "parentTopic": null
+      },
+      {
+        "slug": "evacuation-go-bag",
+        "title": "Evacuation Go-Bag Checklist",
+        "parentTopic": null
+      },
+      {
+        "slug": "shelter-in-place-basics",
+        "title": "Shelter in Place Basics",
+        "parentTopic": null
+      },
+      {
+        "slug": "power-outage-basics",
+        "title": "Power Outage Basics",
+        "parentTopic": null
+      },
+      {
+        "slug": "communication-outage-basics",
+        "title": "Communication Outage Basics",
+        "parentTopic": null
+      },
+      {
+        "slug": "sanitation-waste-basics",
+        "title": "Sanitation and Waste Handling Basics",
+        "parentTopic": null
+      },
+      {
+        "slug": "72-hour-home-survival-kit-shelter-at-home",
+        "title": "72-Hour Home Survival Kit (Shelter at Home)",
+        "parentTopic": "72-Hour Emergency Supplies and Go-Bags"
+      },
+      {
+        "slug": "personal-evacuation-go-bag-adult",
+        "title": "Personal Evacuation Go-Bag (Adult)",
+        "parentTopic": "72-Hour Emergency Supplies and Go-Bags"
+      },
+      {
+        "slug": "car-work-mini-emergency-kit-24-72-hours",
+        "title": "Car / Work Mini Emergency Kit (24–72 Hours)",
+        "parentTopic": "72-Hour Emergency Supplies and Go-Bags"
+      },
+      {
+        "slug": "kit-maintenance-and-rotation-schedule",
+        "title": "Kit Maintenance and Rotation Schedule",
+        "parentTopic": "72-Hour Emergency Supplies and Go-Bags"
+      },
+      {
+        "slug": "basic-family-emergency-communication-plan",
+        "title": "Basic Family Emergency Communication Plan",
+        "parentTopic": "Family Emergency and Communication Planning"
+      },
+      {
+        "slug": "meeting-places-and-reunion-planning",
+        "title": "Meeting Places and Reunion Planning",
+        "parentTopic": "Family Emergency and Communication Planning"
+      },
+      {
+        "slug": "school-work-and-caregiver-coordination",
+        "title": "School, Work, and Caregiver Coordination",
+        "parentTopic": "Family Emergency and Communication Planning"
+      },
+      {
+        "slug": "practice-drills-and-plan-refresh",
+        "title": "Practice Drills and Plan Refresh",
+        "parentTopic": "Family Emergency and Communication Planning"
+      },
+      {
+        "slug": "shelter-in-place-kit-home",
+        "title": "Shelter-in-Place Kit (Home)",
+        "parentTopic": "Shelter-in-Place Kits and Procedures"
+      },
+      {
+        "slug": "essential-medication-backup-planning",
+        "title": "Essential Medication Backup Planning",
+        "parentTopic": "Medical Needs, Medicines, and Document Backup"
+      },
+      {
+        "slug": "medical-information-and-health-document-backup",
+        "title": "Medical Information and Health Document Backup",
+        "parentTopic": "Medical Needs, Medicines, and Document Backup"
+      },
+      {
+        "slug": "household-critical-documents-kit",
+        "title": "Household Critical Documents Kit",
+        "parentTopic": "Medical Needs, Medicines, and Document Backup"
+      },
+      {
+        "slug": "power-dependent-medical-devices-planning",
+        "title": "Power-Dependent Medical Devices Planning",
+        "parentTopic": "Medical Needs, Medicines, and Document Backup"
+      },
+      {
+        "slug": "pet-emergency-go-kit",
+        "title": "Pet Emergency Go-Kit",
+        "parentTopic": "Pet Emergency Preparation"
+      },
+      {
+        "slug": "pet-evacuation-and-shelter-planning",
+        "title": "Pet Evacuation and Shelter Planning",
+        "parentTopic": "Pet Emergency Preparation"
+      },
+      {
+        "slug": "home-fire-safety-and-escape-readiness",
+        "title": "Home Fire Safety and Escape Readiness",
+        "parentTopic": "Home Readiness Basics and Safety Checks"
+      },
+      {
+        "slug": "utility-shutoff-and-gas-leak-safety",
+        "title": "Utility Shutoff and Gas Leak Safety",
+        "parentTopic": "Home Readiness Basics and Safety Checks"
+      },
+      {
+        "slug": "basic-home-hazard-and-injury-prevention-check",
+        "title": "Basic Home Hazard and Injury Prevention Check",
+        "parentTopic": "Home Readiness Basics and Safety Checks"
+      },
+      {
+        "slug": "alert-systems-smoke-alarms-weather-radio-and-phone-alerts",
+        "title": "Alert Systems: Smoke Alarms, Weather Radio, and Phone Alerts",
+        "parentTopic": "Home Readiness Basics and Safety Checks"
+      }
+    ],
+    "weather_environment": [
+      {
+        "slug": "wildfire-smoke-protection",
+        "title": "Wildfire Smoke: Protect Your Air",
+        "parentTopic": "wildfire-smoke-evacuation"
+      },
+      {
+        "slug": "everyday-extreme-heat-precautions",
+        "title": "Everyday Extreme Heat Precautions (Non-Emergency)",
+        "parentTopic": "Extreme Heat: Prevention and Emergencies"
+      },
+      {
+        "slug": "working-or-exercising-safely-in-high-heat",
+        "title": "Working or Exercising Safely in High Heat",
+        "parentTopic": "Extreme Heat: Prevention and Emergencies"
+      },
+      {
+        "slug": "staying-warm-and-dry-in-cold-weather",
+        "title": "Staying Warm and Dry in Cold Weather (Prevention)",
+        "parentTopic": "Cold Exposure, Hypothermia, and Frostbite"
+      },
+      {
+        "slug": "cold-wet-exposure-rain-wind-and-chill",
+        "title": "Cold-Wet Exposure: Rain, Wind, and Chill",
+        "parentTopic": "Cold Exposure, Hypothermia, and Frostbite"
+      },
+      {
+        "slug": "using-aqi-and-basic-smoke-air-quality-precautions",
+        "title": "Using AQI and Basic Smoke/Air Quality Precautions",
+        "parentTopic": "Air Quality, Smoke, Dust, and Ash"
+      },
+      {
+        "slug": "dust-ash-and-airborne-irritants-after-storms-eruptions-or-collapses",
+        "title": "Dust, Ash, and Airborne Irritants After Storms, Eruptions, or Collapses",
+        "parentTopic": "Air Quality, Smoke, Dust, and Ash"
+      },
+      {
+        "slug": "immediate-actions-if-thunderstorm-or-lightning-approaches-outdoors",
+        "title": "Immediate Actions if Thunderstorm or Lightning Approaches Outdoors",
+        "parentTopic": "Lightning and Thunderstorm Exposure"
+      },
+      {
+        "slug": "everyday-sun-protection-and-uv-safety",
+        "title": "Everyday Sun Protection and UV Safety",
+        "parentTopic": "Sun Exposure and UV-Related Heat Stress"
+      },
+      {
+        "slug": "basic-altitude-illness-prevention-for-trekkers",
+        "title": "Basic Altitude Illness Prevention for Trekkers",
+        "parentTopic": "Altitude-Related Exposure Basics"
+      },
+      {
+        "slug": "weather-related-red-flag-symptoms",
+        "title": "Weather-Related Red Flag Symptoms (Heat, Cold, Air, Lightning)",
+        "parentTopic": "When Weather Exposure Becomes a Medical Emergency"
+      }
+    ],
+    "shelter_fire_warmth": [
+      {
+        "slug": "choosing-a-safe-spot-for-emergency-shelter",
+        "title": "Choosing a Safe Spot for Emergency Shelter",
+        "parentTopic": "Emergency Shelter Basics"
+      },
+      {
+        "slug": "simple-no-tools-emergency-shelter-inside-buildings",
+        "title": "Simple No-Tools Emergency Shelter Inside Buildings",
+        "parentTopic": "Emergency Shelter Basics"
+      },
+      {
+        "slug": "fast-tarp-lean-to-for-wind-and-rain",
+        "title": "Fast Tarp Lean-To for Wind and Rain",
+        "parentTopic": "Tarp and Improvised Shelter Construction"
+      },
+      {
+        "slug": "low-a-frame-tarp-shelter-for-cold-nights",
+        "title": "Low A-Frame Tarp Shelter for Cold Nights",
+        "parentTopic": "Tarp and Improvised Shelter Construction"
+      },
+      {
+        "slug": "using-buildings-and-tarps-for-temporary-roof-and-wall-protection",
+        "title": "Using Buildings and Tarps for Temporary Roof and Wall Protection",
+        "parentTopic": "Tarp and Improvised Shelter Construction"
+      },
+      {
+        "slug": "staying-warm-in-a-cold-home-without-power",
+        "title": "Staying Warm in a Cold Home Without Power",
+        "parentTopic": "Staying Warm Without Power or Heat"
+      },
+      {
+        "slug": "layering-clothing-and-bedding-for-maximum-warmth",
+        "title": "Layering Clothing and Bedding for Maximum Warmth",
+        "parentTopic": "Staying Warm Without Power or Heat"
+      },
+      {
+        "slug": "keeping-children-elderly-and-frail-adults-warm-safely",
+        "title": "Keeping Children, Elderly, and Frail Adults Warm Safely",
+        "parentTopic": "Staying Warm Without Power or Heat"
+      },
+      {
+        "slug": "keeping-dry-in-rain-and-snow-outdoors",
+        "title": "Keeping Dry in Rain and Snow Outdoors",
+        "parentTopic": "Keeping Clothing and Bedding Dry"
+      },
+      {
+        "slug": "drying-wet-clothing-and-bedding-safely-indoors",
+        "title": "Drying Wet Clothing and Bedding Safely Indoors",
+        "parentTopic": "Keeping Clothing and Bedding Dry"
+      },
+      {
+        "slug": "managing-moisture-inside-tents-and-improvised-shelters",
+        "title": "Managing Moisture Inside Tents and Improvised Shelters",
+        "parentTopic": "Keeping Clothing and Bedding Dry"
+      },
+      {
+        "slug": "emergency-overnight-setup-when-you-are-already-wet",
+        "title": "Emergency Overnight Setup When You Are Already Wet",
+        "parentTopic": "Cold and Wet Overnight Survival"
+      },
+      {
+        "slug": "overnight-survival-in-a-vehicle-in-cold-weather",
+        "title": "Overnight Survival in a Vehicle in Cold Weather",
+        "parentTopic": "Cold and Wet Overnight Survival"
+      },
+      {
+        "slug": "safe-fire-site-selection-and-wind-management",
+        "title": "Safe Fire Site Selection and Wind Management",
+        "parentTopic": "Fire Starting Basics (Outdoor)"
+      },
+      {
+        "slug": "choosing-and-preparing-dry-fuel",
+        "title": "Choosing and Preparing Dry Fuel",
+        "parentTopic": "Fire Starting Basics (Outdoor)"
+      },
+      {
+        "slug": "finding-and-using-dry-tinder-in-wet-weather",
+        "title": "Finding and Using Dry Tinder in Wet Weather",
+        "parentTopic": "Fire Starting in Wet Conditions (Outdoor)"
+      },
+      {
+        "slug": "building-a-fire-lay-that-survives-rain-and-snow",
+        "title": "Building a Fire Lay That Survives Rain and Snow",
+        "parentTopic": "Fire Starting in Wet Conditions (Outdoor)"
+      },
+      {
+        "slug": "when-not-to-attempt-a-fire-in-wet-conditions",
+        "title": "When Not to Attempt a Fire in Wet Conditions",
+        "parentTopic": "Fire Starting in Wet Conditions (Outdoor)"
+      },
+      {
+        "slug": "fully-extinguishing-outdoor-fires",
+        "title": "Fully Extinguishing Outdoor Fires",
+        "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)"
+      },
+      {
+        "slug": "safe-use-of-portable-heaters-indoors",
+        "title": "Safe Use of Portable Heaters Indoors",
+        "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)"
+      },
+      {
+        "slug": "fuel-storage-and-handling-during-emergencies",
+        "title": "Fuel Storage and Handling During Emergencies",
+        "parentTopic": "Fire Safety and Fuel Management (Outdoor and Indoor)"
+      },
+      {
+        "slug": "safe-options-for-heating-indoors-during-power-outages",
+        "title": "Safe Options for Heating Indoors During Power Outages",
+        "parentTopic": "Safe Indoor Heating During Emergencies"
+      },
+      {
+        "slug": "unsafe-indoor-heating-methods-to-avoid",
+        "title": "Unsafe Indoor Heating Methods to Avoid",
+        "parentTopic": "Safe Indoor Heating During Emergencies"
+      },
+      {
+        "slug": "recognizing-and-responding-to-carbon-monoxide-exposure",
+        "title": "Recognizing and Responding to Carbon Monoxide Exposure",
+        "parentTopic": "Safe Indoor Heating During Emergencies"
+      },
+      {
+        "slug": "deciding-when-shelter-matters-more-than-fire",
+        "title": "Deciding When Shelter Matters More Than Fire",
+        "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities"
+      },
+      {
+        "slug": "prioritizing-tasks-in-the-first-30-minutes-of-exposure",
+        "title": "Prioritizing Tasks in the First 30 Minutes of Exposure",
+        "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities"
+      },
+      {
+        "slug": "when-to-seek-public-shelters-or-warming-centers",
+        "title": "When to Seek Public Shelters or Warming Centers",
+        "parentTopic": "Shelter vs Fire vs Clothing: Choosing Priorities"
+      }
+    ],
+    "power_utilities_home_safety": [
+      {
+        "slug": "first-30-minutes-of-a-power-outage",
+        "title": "First 30 Minutes of a Power Outage",
+        "parentTopic": "Blackout Basics & First 30 Minutes"
+      },
+      {
+        "slug": "deciding-whether-to-stay-or-go-during-a-blackout",
+        "title": "Deciding Whether to Stay or Go During a Blackout",
+        "parentTopic": "Blackout Basics & First 30 Minutes"
+      },
+      {
+        "slug": "safe-home-lighting-during-blackouts",
+        "title": "Safe Home Lighting During Blackouts",
+        "parentTopic": "Blackout Basics & First 30 Minutes"
+      },
+      {
+        "slug": "phone-battery-conservation-in-emergencies",
+        "title": "Phone Battery Conservation in Emergencies",
+        "parentTopic": "Battery Conservation & Backup Power"
+      },
+      {
+        "slug": "charging-plans-and-backup-power-options",
+        "title": "Charging Plans and Backup Power Options",
+        "parentTopic": "Battery Conservation & Backup Power"
+      },
+      {
+        "slug": "safe-use-of-extension-cords-and-avoiding-overloads",
+        "title": "Safe Use of Extension Cords and Avoiding Overloads",
+        "parentTopic": "Battery Conservation & Backup Power"
+      },
+      {
+        "slug": "keeping-food-safe-during-a-power-outage",
+        "title": "Keeping Food Safe During a Power Outage",
+        "parentTopic": "Refrigerator, Freezer, and Food Safety During Outages"
+      },
+      {
+        "slug": "preparing-your-kitchen-for-future-outages",
+        "title": "Preparing Your Kitchen for Future Outages",
+        "parentTopic": "Refrigerator, Freezer, and Food Safety During Outages"
+      },
+      {
+        "slug": "safe-placement-and-operation-of-portable-generators",
+        "title": "Safe Placement and Operation of Portable Generators",
+        "parentTopic": "Generator Safety"
+      },
+      {
+        "slug": "powering-appliances-safely-with-a-generator",
+        "title": "Powering Appliances Safely with a Generator",
+        "parentTopic": "Generator Safety"
+      },
+      {
+        "slug": "apartment-and-multi-unit-housing-generator-safety",
+        "title": "Apartment and Multi-Unit Housing Generator Safety",
+        "parentTopic": "Generator Safety"
+      },
+      {
+        "slug": "carbon-monoxide-basics-and-symptoms",
+        "title": "Carbon Monoxide Basics and Symptoms",
+        "parentTopic": "Carbon Monoxide (CO) Safety"
+      },
+      {
+        "slug": "preventing-co-poisoning-during-outages",
+        "title": "Preventing CO Poisoning During Outages",
+        "parentTopic": "Carbon Monoxide (CO) Safety"
+      },
+      {
+        "slug": "recognizing-and-responding-to-a-gas-leak",
+        "title": "Recognizing and Responding to a Gas Leak",
+        "parentTopic": "Gas Leaks and Utility Shutoff Basics"
+      },
+      {
+        "slug": "when-not-to-touch-utility-controls-and-call-the-utility-instead",
+        "title": "When Not to Touch Utility Controls and Call the Utility Instead",
+        "parentTopic": "Gas Leaks and Utility Shutoff Basics"
+      },
+      {
+        "slug": "checking-if-a-building-is-safe-to-enter-after-a-disaster",
+        "title": "Checking if a Building Is Safe to Enter After a Disaster",
+        "parentTopic": "Damaged Buildings After Storms or Earthquakes"
+      },
+      {
+        "slug": "safe-behavior-inside-a-damaged-building",
+        "title": "Safe Behavior Inside a Damaged Building",
+        "parentTopic": "Damaged Buildings After Storms or Earthquakes"
+      },
+      {
+        "slug": "when-to-leave-and-not-return-until-professionally-inspected",
+        "title": "When to Leave and Not Return Until Professionally Inspected",
+        "parentTopic": "Damaged Buildings After Storms or Earthquakes"
+      },
+      {
+        "slug": "using-flashlights-and-battery-lanterns-safely",
+        "title": "Using Flashlights and Battery Lanterns Safely",
+        "parentTopic": "Safe Flashlight and Lantern Use"
+      },
+      {
+        "slug": "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+        "title": "Fuel-Burning Lanterns and Heaters: Last-Resort Guidance",
+        "parentTopic": "Safe Flashlight and Lantern Use"
+      },
+      {
+        "slug": "child-and-pet-safety-around-emergency-lighting",
+        "title": "Child and Pet Safety Around Emergency Lighting",
+        "parentTopic": "Safe Flashlight and Lantern Use"
+      }
+    ]
+  },
+  "byParentTopic": {
+    "(none)": 40,
+    "earthquake-safety-reference": 4,
+    "flood-survival-reference": 3,
+    "tornado-safety-reference": 3,
+    "wildfire-smoke-evacuation": 3,
+    "wound-care-reference": 4,
+    "Floods": 1,
+    "Tornadoes": 2,
+    "Landslides": 2,
+    "Bleeding and Wound Care": 1,
+    "Heat and Fluids": 1,
+    "Burns": 2,
+    "Airway Emergencies": 2,
+    "Musculoskeletal Injuries": 1,
+    "Allergic Reactions": 1,
+    "If You Get Lost": 2,
+    "Land Rescue Signaling": 4,
+    "Rescue Communication Tools": 1,
+    "Maritime Rescue": 2,
+    "Safe Drinking Water in Emergencies": 5,
+    "Food Safety During Power Outages": 4,
+    "Sanitation and Contamination Prevention": 3,
+    "72-Hour Emergency Supplies and Go-Bags": 4,
+    "Family Emergency and Communication Planning": 4,
+    "Shelter-in-Place Kits and Procedures": 1,
+    "Medical Needs, Medicines, and Document Backup": 4,
+    "Pet Emergency Preparation": 2,
+    "Home Readiness Basics and Safety Checks": 4,
+    "Emergency Shelter Basics": 2,
+    "Tarp and Improvised Shelter Construction": 3,
+    "Staying Warm Without Power or Heat": 3,
+    "Keeping Clothing and Bedding Dry": 3,
+    "Cold and Wet Overnight Survival": 2,
+    "Fire Starting Basics (Outdoor)": 2,
+    "Fire Starting in Wet Conditions (Outdoor)": 3,
+    "Fire Safety and Fuel Management (Outdoor and Indoor)": 3,
+    "Safe Indoor Heating During Emergencies": 3,
+    "Shelter vs Fire vs Clothing: Choosing Priorities": 3,
+    "Blackout Basics & First 30 Minutes": 3,
+    "Battery Conservation & Backup Power": 3,
+    "Refrigerator, Freezer, and Food Safety During Outages": 2,
+    "Generator Safety": 3,
+    "Carbon Monoxide (CO) Safety": 2,
+    "Gas Leaks and Utility Shutoff Basics": 2,
+    "Damaged Buildings After Storms or Earthquakes": 3,
+    "Safe Flashlight and Lantern Use": 3,
+    "Extreme Heat: Prevention and Emergencies": 2,
+    "Cold Exposure, Hypothermia, and Frostbite": 2,
+    "Air Quality, Smoke, Dust, and Ash": 2,
+    "Lightning and Thunderstorm Exposure": 1,
+    "Sun Exposure and UV-Related Heat Stress": 1,
+    "Altitude-Related Exposure Basics": 1,
+    "When Weather Exposure Becomes a Medical Emergency": 1,
+    "First 30 Minutes: Stay Oriented and Make a Simple Plan": 2,
+    "Simple Rescue Signaling": 1,
+    "Safe Water Collection (Before Purification)": 3,
+    "Basic Camp and Bivouac Hygiene": 3,
+    "Simple, High-Value Knots and Cordage Uses": 2,
+    "Knife and Multi-Tool Safety for Shelter, Food, and Repairs": 3,
+    "Packing and Using a Small Emergency Kit": 2,
+    "Knowing When to Stop Tasks and Focus on Shelter, Warmth, and Signaling": 3
+  },
+  "byContentStatus": {
+    "reference_summary": 16,
+    "reviewed": 136,
+    "needs_source_review": 31,
+    "metadata_only": 4
+  },
+  "bySourceQuality": {
+    "mixed": 77,
+    "strong": 110
+  },
+  "byLayer": {
+    "reference": 36,
+    "action": 61,
+    "scenario": 59,
+    "preparedness": 31
+  },
+  "byGuideType": {
+    "reference_guide": 36,
+    "action_card": 61,
+    "scenario_guide": 59,
+    "preparedness_guide": 31
+  },
+  "exactDuplicateTitles": [],
+  "nearDuplicateTitles": [],
+  "missingSourceReferences": {
+    "count": 20,
+    "slugs": [
+      "distress-signaling",
+      "morse-code",
+      "solar-still",
+      "water-purification-reference",
+      "fishing-techniques",
+      "food-preservation",
+      "foraging",
+      "trapping",
+      "cpr-reference",
+      "dehydration-reference",
+      "first-aid-reference",
+      "hypothermia-reference",
+      "wound-care-reference",
+      "earthquake-safety-reference",
+      "flood-survival-reference",
+      "tornado-safety-reference",
+      "power-outage-basics",
+      "communication-outage-basics",
+      "sanitation-waste-basics",
+      "food-safety-no-fridge"
+    ]
+  },
+  "missingParentTopic": {
+    "count": 40,
+    "slugs": [
+      "distress-signaling",
+      "morse-code",
+      "fire-making",
+      "knot-tying",
+      "shelter-building",
+      "solar-still",
+      "water-purification-reference",
+      "fishing-techniques",
+      "food-preservation",
+      "foraging",
+      "trapping",
+      "cpr-reference",
+      "dehydration-reference",
+      "first-aid-reference",
+      "hypothermia-reference",
+      "wound-care-reference",
+      "earthquake-safety-reference",
+      "flood-survival-reference",
+      "tornado-safety-reference",
+      "land-navigation",
+      "heat-stroke-emergency",
+      "heat-exhaustion-cool-rehydrate",
+      "heat-prevention",
+      "hypothermia-warm-core",
+      "frostbite-protect-rewarm",
+      "cold-prevention-layering",
+      "purify-water-boiling",
+      "purify-water-bleach",
+      "emergency-water-storage",
+      "build-72-hour-kit",
+      "family-emergency-plan",
+      "evacuation-go-bag",
+      "shelter-in-place-basics",
+      "signal-for-rescue",
+      "stay-put-vs-move",
+      "night-signaling-and-battery",
+      "power-outage-basics",
+      "communication-outage-basics",
+      "sanitation-waste-basics",
+      "food-safety-no-fridge"
+    ]
+  },
+  "missingWarnings": {
+    "count": 26,
+    "slugs": [
+      "distress-signaling",
+      "morse-code",
+      "solar-still",
+      "water-purification-reference",
+      "fishing-techniques",
+      "food-preservation",
+      "foraging",
+      "trapping",
+      "cpr-reference",
+      "dehydration-reference",
+      "first-aid-reference",
+      "hypothermia-reference",
+      "wound-care-reference",
+      "earthquake-safety-reference",
+      "flood-survival-reference",
+      "tornado-safety-reference",
+      "emergency-water-storage",
+      "build-72-hour-kit",
+      "family-emergency-plan",
+      "evacuation-go-bag",
+      "shelter-in-place-basics",
+      "night-signaling-and-battery",
+      "power-outage-basics",
+      "communication-outage-basics",
+      "sanitation-waste-basics",
+      "food-safety-no-fridge"
+    ]
+  },
+  "missingRedFlags": {
+    "count": 33,
+    "slugs": [
+      "distress-signaling",
+      "morse-code",
+      "solar-still",
+      "water-purification-reference",
+      "fishing-techniques",
+      "food-preservation",
+      "foraging",
+      "trapping",
+      "cpr-reference",
+      "dehydration-reference",
+      "first-aid-reference",
+      "hypothermia-reference",
+      "wound-care-reference",
+      "earthquake-safety-reference",
+      "flood-survival-reference",
+      "tornado-safety-reference",
+      "earthquake-tsunami-risk",
+      "tornado-vehicle-mobile-home",
+      "heat-prevention",
+      "cold-prevention-layering",
+      "purify-water-bleach",
+      "emergency-water-storage",
+      "build-72-hour-kit",
+      "family-emergency-plan",
+      "evacuation-go-bag",
+      "shelter-in-place-basics",
+      "signal-for-rescue",
+      "stay-put-vs-move",
+      "night-signaling-and-battery",
+      "power-outage-basics",
+      "communication-outage-basics",
+      "sanitation-waste-basics",
+      "food-safety-no-fridge"
+    ]
+  },
+  "upgradedGuides": [
+    {
+      "slug": "fire-making",
+      "title": "Fire Making",
+      "upgradesGuide": "Fire Making"
+    },
+    {
+      "slug": "knot-tying",
+      "title": "Knot Tying",
+      "upgradesGuide": "Knot Tying"
+    },
+    {
+      "slug": "shelter-building",
+      "title": "Shelter Building",
+      "upgradesGuide": "Shelter Building"
+    },
+    {
+      "slug": "land-navigation",
+      "title": "Land Navigation",
+      "upgradesGuide": "Land Navigation"
+    },
+    {
+      "slug": "earthquake-during-shaking",
+      "title": "Earthquake Safety: During Shaking",
+      "upgradesGuide": "Earthquake Safety"
+    },
+    {
+      "slug": "earthquake-after-shaking",
+      "title": "Earthquake Safety: Right After Shaking",
+      "upgradesGuide": "Earthquake Safety"
+    },
+    {
+      "slug": "earthquake-preparedness-checklist",
+      "title": "Earthquake Preparedness Checklist",
+      "upgradesGuide": "Earthquake Safety"
+    },
+    {
+      "slug": "flood-get-to-higher-ground",
+      "title": "Flood Survival: Get to Higher Ground",
+      "upgradesGuide": "Flood Survival"
+    },
+    {
+      "slug": "floodwater-safety",
+      "title": "Floodwater Safety",
+      "upgradesGuide": null
+    },
+    {
+      "slug": "flood-reentry-cleanup",
+      "title": "Returning Home After Flooding",
+      "upgradesGuide": "Flood Survival"
+    },
+    {
+      "slug": "tornado-take-shelter",
+      "title": "Tornado Safety: Take Shelter Immediately",
+      "upgradesGuide": "Tornado Safety"
+    },
+    {
+      "slug": "tornado-after",
+      "title": "After the Tornado",
+      "upgradesGuide": "Tornado Safety"
+    },
+    {
+      "slug": "wildfire-evacuate-early",
+      "title": "Wildfire Evacuation: Leave Early",
+      "upgradesGuide": "Wildfire Smoke / Evacuation"
+    },
+    {
+      "slug": "wildfire-smoke-protection",
+      "title": "Wildfire Smoke: Protect Your Air",
+      "upgradesGuide": "During Wildfire Smoke"
+    },
+    {
+      "slug": "heat-stroke-emergency",
+      "title": "Heat Stroke: Cool and Call for Help",
+      "upgradesGuide": "Heat Stroke: Suspected Life-Threatening Emergency"
+    },
+    {
+      "slug": "heat-exhaustion-cool-rehydrate",
+      "title": "Heat Exhaustion: Cool Down and Rehydrate",
+      "upgradesGuide": "Heat Exhaustion: On-the-Spot Care"
+    },
+    {
+      "slug": "hypothermia-warm-core",
+      "title": "Hypothermia: Warm the Core and Get Help",
+      "upgradesGuide": "Recognizing and Responding to Hypothermia"
+    },
+    {
+      "slug": "frostbite-protect-rewarm",
+      "title": "Frostbite: Protect and Rewarm Safely",
+      "upgradesGuide": "Frostbite: Local Cold Injury Care"
+    },
+    {
+      "slug": "minor-cuts-scrapes",
+      "title": "Minor Cuts and Scrapes: Clean and Cover",
+      "upgradesGuide": "Minor Cuts and Scrapes: Clean and Cover"
+    },
+    {
+      "slug": "bleeding-control-pressure-first",
+      "title": "Bleeding Control: Direct Pressure First",
+      "upgradesGuide": "Severe Bleeding: Apply Direct Pressure Fast"
+    },
+    {
+      "slug": "purify-water-boiling",
+      "title": "Purify Water by Boiling",
+      "upgradesGuide": "Water Purification"
+    },
+    {
+      "slug": "wound-infection-red-flags",
+      "title": "Wound Infection: Red Flags",
+      "upgradesGuide": "Wound Infection: Red Flags"
+    },
+    {
+      "slug": "dehydration-signs-and-immediate-care",
+      "title": "Dehydration: Signs and Immediate Care",
+      "upgradesGuide": "Dehydration: Signs and Immediate Care"
+    },
+    {
+      "slug": "first-aid-for-burns-minor",
+      "title": "First Aid for Burns (Minor)",
+      "upgradesGuide": "First Aid for Burns (Minor)"
+    },
+    {
+      "slug": "burns-that-need-emergency-care",
+      "title": "Burns That Need Emergency Care",
+      "upgradesGuide": "Burns That Need Emergency Care"
+    },
+    {
+      "slug": "stay-put-vs-move-land",
+      "title": "Stay Put vs Move (Land)",
+      "upgradesGuide": "Stay Put vs Move (Land)"
+    },
+    {
+      "slug": "whistle-distress-signals-land",
+      "title": "Whistle Distress Signals (Land)",
+      "upgradesGuide": "Whistle Distress Signals (Land)"
+    },
+    {
+      "slug": "mirror-and-light-signaling-land-day-and-night",
+      "title": "Mirror and Light Signaling (Land, Day and Night)",
+      "upgradesGuide": "Mirror and Light Signaling (Land, Day and Night)"
+    },
+    {
+      "slug": "deciding-when-to-throw-away-food-after-an-outage",
+      "title": "Deciding When to Throw Away Food After an Outage",
+      "upgradesGuide": "Deciding When to Throw Away Food After an Outage"
+    },
+    {
+      "slug": "personal-evacuation-go-bag-adult",
+      "title": "Personal Evacuation Go-Bag (Adult)",
+      "upgradesGuide": "Personal Evacuation Go-Bag (Adult)"
+    },
+    {
+      "slug": "utility-shutoff-and-gas-leak-safety",
+      "title": "Utility Shutoff and Gas Leak Safety",
+      "upgradesGuide": "Utility Shutoff and Gas Leak Safety"
+    },
+    {
+      "slug": "recognizing-and-responding-to-carbon-monoxide-exposure",
+      "title": "Recognizing and Responding to Carbon Monoxide Exposure",
+      "upgradesGuide": "Recognizing and Responding to Carbon Monoxide Exposure"
+    }
+  ],
+  "subguidesGroupedByParentTopic": {
+    "If You Get Lost": [
+      "lost-on-land-first-30-minutes"
+    ],
+    "Land Rescue Signaling": [
+      "ground-to-air-symbols-for-aircraft",
+      "maximizing-rescue-visibility-land"
+    ],
+    "Safe Drinking Water in Emergencies": [
+      "choosing-safe-hydration-sources",
+      "purifying-water-with-household-liquid-bleach",
+      "when-treated-water-is-still-unsafe-to-drink"
+    ],
+    "Food Safety During Power Outages": [
+      "refrigerator-safety-during-outages",
+      "freezer-safety-during-outages"
+    ],
+    "Emergency Shelter Basics": [
+      "choosing-a-safe-spot-for-emergency-shelter"
+    ],
+    "Tarp and Improvised Shelter Construction": [
+      "fast-tarp-lean-to-for-wind-and-rain",
+      "low-a-frame-tarp-shelter-for-cold-nights"
+    ],
+    "Keeping Clothing and Bedding Dry": [
+      "managing-moisture-inside-tents-and-improvised-shelters"
+    ],
+    "Cold and Wet Overnight Survival": [
+      "emergency-overnight-setup-when-you-are-already-wet"
+    ],
+    "Fire Starting Basics (Outdoor)": [
+      "safe-fire-site-selection-and-wind-management",
+      "choosing-and-preparing-dry-fuel"
+    ],
+    "Fire Starting in Wet Conditions (Outdoor)": [
+      "finding-and-using-dry-tinder-in-wet-weather",
+      "building-a-fire-lay-that-survives-rain-and-snow",
+      "when-not-to-attempt-a-fire-in-wet-conditions"
+    ],
+    "Refrigerator, Freezer, and Food Safety During Outages": [
+      "keeping-food-safe-during-a-power-outage",
+      "preparing-your-kitchen-for-future-outages"
+    ],
+    "Carbon Monoxide (CO) Safety": [
+      "carbon-monoxide-basics-and-symptoms",
+      "preventing-co-poisoning-during-outages"
+    ],
+    "Gas Leaks and Utility Shutoff Basics": [
+      "recognizing-and-responding-to-a-gas-leak",
+      "when-not-to-touch-utility-controls-and-call-the-utility-instead"
+    ],
+    "Damaged Buildings After Storms or Earthquakes": [
+      "safe-behavior-inside-a-damaged-building",
+      "when-to-leave-and-not-return-until-professionally-inspected"
+    ],
+    "Safe Flashlight and Lantern Use": [
+      "using-flashlights-and-battery-lanterns-safely",
+      "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+      "child-and-pet-safety-around-emergency-lighting"
+    ],
+    "Extreme Heat: Prevention and Emergencies": [
+      "working-or-exercising-safely-in-high-heat"
+    ],
+    "Cold Exposure, Hypothermia, and Frostbite": [
+      "staying-warm-and-dry-in-cold-weather",
+      "cold-wet-exposure-rain-wind-and-chill"
+    ],
+    "Simple Rescue Signaling": [
+      "ground-fire-and-passive-visual-signals"
+    ],
+    "Safe Water Collection (Before Purification)": [
+      "choosing-the-safest-available-water-source"
+    ],
+    "Basic Camp and Bivouac Hygiene": [
+      "managing-small-wounds-and-skin-problems"
+    ],
+    "Simple, High-Value Knots and Cordage Uses": [
+      "simple-loops-and-attachment-knots-figure-eight-on-a-bight-bowline"
+    ],
+    "Knife and Multi-Tool Safety for Shelter, Food, and Repairs": [
+      "safe-cutting-tasks-for-shelter-and-repairs",
+      "when-not-to-use-a-knife"
+    ]
+  }
+}

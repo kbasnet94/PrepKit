@@ -1,0 +1,1876 @@
+{
+  "packTitle": "Natural Disasters and Medical Safety Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T05:40:28.245018Z",
+  "notes": [
+    "This batch normalizes Perplexity research into Replit-ready guide objects.",
+    "Guide types have been normalized to action_card, scenario_guide, preparedness_guide, or reference_guide.",
+    "Integration decisions are best-effort recommendations against the current 57-guide app library.",
+    "Landslide guidance is included but marked as mixed source quality and needs_source_review."
+  ],
+  "categories": [
+    {
+      "categoryName": "Natural Disasters",
+      "summary": "Normalized natural-disaster guides compiled from Perplexity research with strong public-safety sources for earthquakes, floods, tornadoes, wildfire smoke/evacuation, and landslides.",
+      "guides": [
+        {
+          "title": "During Earthquake Shaking",
+          "slug": "during-earthquake-shaking",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Earthquakes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Earthquake Safety",
+          "quickAnswer": "Drop, Cover, and Hold On under sturdy furniture or next to an interior wall away from glass and falling objects.",
+          "whenToUse": "Use when you feel shaking, receive an earthquake alert, or experience a sudden jolt that makes standing difficult.",
+          "preferredAction": [
+            "Drop to your hands and knees.",
+            "Cover your head and neck under a sturdy table or desk if available.",
+            "Hold on until the shaking stops."
+          ],
+          "backupAction": [
+            "If no sturdy furniture is available, cover your head and neck and get low beside an interior wall away from windows and heavy objects."
+          ],
+          "steps": [
+            "Drop where you are.",
+            "Get under sturdy furniture if available.",
+            "Cover your head and neck.",
+            "Hold on until all shaking stops.",
+            "Stay inside until the shaking ends unless you are already in a clear outdoor area."
+          ],
+          "warnings": [
+            "Expect aftershocks.",
+            "Falling glass, shelves, and fixtures cause many injuries."
+          ],
+          "whatNotToDo": [
+            "Do not run outside while the building is shaking.",
+            "Do not use elevators.",
+            "Do not stand in doorways as your main strategy."
+          ],
+          "redFlags": [
+            "Serious injuries, heavy bleeding, major structural damage, or gas smell require urgent emergency help.",
+            "If near the coast and shaking was strong or long, be alert for tsunami evacuation needs as soon as you can move safely."
+          ],
+          "preparednessTips": [
+            "Practice earthquake drills.",
+            "Secure heavy furniture and appliances.",
+            "Know how to turn off utilities if trained and safe to do so."
+          ],
+          "sourceReferences": [
+            {
+              "title": "CDC Earthquake Safety Guidance",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/earthquakes/",
+              "whyUseful": "Clear public guidance for what to do during shaking in different environments."
+            },
+            {
+              "title": "Earthquake Safety",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+              "whyUseful": "Plain-language before, during, and after steps for households."
+            },
+            {
+              "title": "Earthquake Preparedness and Response",
+              "organization": "OSHA",
+              "url": "https://www.osha.gov/earthquakes/preparedness",
+              "whyUseful": "Practical hazard and preparedness guidance relevant to homes and workplaces."
+            }
+          ],
+          "appTags": [
+            "earthquake",
+            "during",
+            "drop-cover-hold",
+            "indoor-safety",
+            "aftershocks"
+          ]
+        },
+        {
+          "title": "After Earthquake",
+          "slug": "after-earthquake",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Natural Disasters",
+          "parentTopic": "Earthquakes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Earthquake Safety",
+          "quickAnswer": "Once shaking stops, check for injuries and hazards before moving or re-entering any damaged area.",
+          "whenToUse": "Use when the shaking has stopped and you need to decide whether to stay, leave, or seek help.",
+          "preferredAction": [
+            "Check yourself and others for injuries.",
+            "Look for hazards such as gas leaks, fire, sparks, broken glass, and structural damage.",
+            "Listen for official updates and aftershock warnings."
+          ],
+          "backupAction": [
+            "If the building looks unsafe, stay out and move to a safer open area away from structures and power lines."
+          ],
+          "steps": [
+            "Treat urgent injuries if you can do so safely.",
+            "If you smell gas or see fire, evacuate immediately.",
+            "Do not use candles if gas leaks are possible.",
+            "Use a flashlight for dark areas.",
+            "Be ready for aftershocks and repeat Drop, Cover, and Hold On if needed."
+          ],
+          "warnings": [
+            "Aftershocks can cause additional collapses.",
+            "Damaged wiring, fuel leaks, and unstable structures remain dangerous after the main shaking."
+          ],
+          "whatNotToDo": [
+            "Do not re-enter heavily damaged buildings.",
+            "Do not use open flames near possible gas leaks.",
+            "Do not ignore official evacuation or coastal tsunami guidance."
+          ],
+          "redFlags": [
+            "Gas leaks, fire, collapse risk, downed power lines, or serious injuries need urgent help."
+          ],
+          "preparednessTips": [
+            "Keep sturdy shoes, a flashlight, and emergency supplies accessible.",
+            "Have a family meeting point and an out-of-area contact."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Earthquake Safety",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+              "whyUseful": "Strong before/during/after guidance for families."
+            },
+            {
+              "title": "Earthquake Preparedness and Response",
+              "organization": "OSHA",
+              "url": "https://www.osha.gov/earthquakes/preparedness",
+              "whyUseful": "Useful checklists for hazards, re-entry, and utilities."
+            }
+          ],
+          "appTags": [
+            "earthquake",
+            "after",
+            "hazards",
+            "utilities",
+            "re-entry"
+          ]
+        },
+        {
+          "title": "Earthquake Preparedness Checklist",
+          "slug": "earthquake-preparedness-checklist",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Natural Disasters",
+          "parentTopic": "Earthquakes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Earthquake Safety",
+          "quickAnswer": "Prepare before a quake by securing heavy items, practicing drills, and keeping essential supplies and utility knowledge ready.",
+          "whenToUse": "Use before earthquakes as part of household, workplace, or school readiness planning.",
+          "preferredAction": [
+            "Secure heavy furniture and appliances.",
+            "Practice Drop, Cover, and Hold On.",
+            "Store an emergency kit and shoes/flashlight near sleeping areas."
+          ],
+          "backupAction": [
+            "If you cannot do everything, start with securing the most dangerous heavy items and building a simple family plan."
+          ],
+          "steps": [
+            "Anchor bookshelves and cabinets.",
+            "Move heavy items to lower shelves.",
+            "Know how to turn off gas, electricity, and water if safe and trained.",
+            "Build and refresh an emergency kit.",
+            "Practice where to shelter in each room."
+          ],
+          "warnings": [
+            "Unsecured furniture and glass are major indoor injury hazards.",
+            "Aftershocks can injure people even after the first quake has passed."
+          ],
+          "whatNotToDo": [
+            "Do not wait until after an earthquake to create your family plan.",
+            "Do not store all emergency supplies in one hard-to-reach place."
+          ],
+          "redFlags": [
+            "If your home shows major structural weakness or known earthquake risk issues, seek professional safety advice."
+          ],
+          "preparednessTips": [
+            "Keep local maps and emergency contacts accessible.",
+            "Include supplies for children, older adults, pets, and medications."
+          ],
+          "sourceReferences": [
+            {
+              "title": "CDC Earthquake Safety Guidance",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/earthquakes/",
+              "whyUseful": "Concise planning advice for homes and families."
+            },
+            {
+              "title": "Earthquake Safety",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/earthquake.html",
+              "whyUseful": "Household drills, planning, and kit guidance."
+            }
+          ],
+          "appTags": [
+            "earthquake",
+            "preparedness",
+            "checklist",
+            "kit",
+            "drills"
+          ]
+        },
+        {
+          "title": "During Flood Warning",
+          "slug": "during-flood-warning",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Floods",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Flood Survival",
+          "quickAnswer": "Move to higher ground immediately and follow evacuation orders. Never walk or drive through floodwater.",
+          "whenToUse": "Use during flood warnings, flash floods, fast-rising water, or when water is entering roads, buildings, or low areas.",
+          "preferredAction": [
+            "Go to higher ground immediately.",
+            "Follow official evacuation orders without delay.",
+            "Turn off utilities if safe to do so before leaving."
+          ],
+          "backupAction": [
+            "If you cannot evacuate safely, move to the highest safe level of the building, but avoid attics without a way out."
+          ],
+          "steps": [
+            "Monitor alerts by radio or phone.",
+            "If safe, shut off utilities.",
+            "Take essentials and leave early.",
+            "Avoid flooded roads and low crossings.",
+            "Move to higher ground or official shelter."
+          ],
+          "warnings": [
+            "Floodwater rises quickly and may hide strong currents, contamination, and electrical hazards.",
+            "Six inches of moving water can knock a person down; deeper water can move vehicles."
+          ],
+          "whatNotToDo": [
+            "Do not walk, swim, or drive through floodwater.",
+            "Do not ignore barriers or evacuation orders."
+          ],
+          "redFlags": [
+            "If trapped, water is entering the home, or someone is swept away or injured, call emergency services immediately."
+          ],
+          "preparednessTips": [
+            "Know evacuation routes.",
+            "Store a 3-day kit with water, medications, and documents."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Turn Around Don't Drown",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown",
+              "whyUseful": "Core floodwater survival rule and practical safety framing."
+            },
+            {
+              "title": "Flood Safety and Preparedness",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/afc/FloodSafety",
+              "whyUseful": "Strong before/during/after public guidance."
+            },
+            {
+              "title": "Floodwater Safety",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/floods/",
+              "whyUseful": "Contamination and injury prevention guidance."
+            }
+          ],
+          "appTags": [
+            "flood",
+            "warning",
+            "evacuation",
+            "higher-ground",
+            "floodwater"
+          ]
+        },
+        {
+          "title": "After Flood",
+          "slug": "after-flood",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Natural Disasters",
+          "parentTopic": "Floods",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Flood Survival",
+          "quickAnswer": "Avoid floodwater and damaged structures until hazards are checked. Treat all floodwater as contaminated.",
+          "whenToUse": "Use after floodwater recedes or when returning to a flooded home, neighborhood, or road.",
+          "preferredAction": [
+            "Stay out until officials say it is safe where possible.",
+            "Avoid contact with floodwater.",
+            "Check for structural damage, electrical hazards, and contamination before re-entry."
+          ],
+          "backupAction": [
+            "If return is delayed or the structure is unsafe, use temporary shelter and wait for official guidance."
+          ],
+          "steps": [
+            "Wear protective gear if returning.",
+            "Do not touch downed power lines or wet electrical systems.",
+            "Clean wounds exposed to floodwater promptly.",
+            "Use safe drinking water only; boil or treat if advised.",
+            "Photograph damage if needed for records once safe."
+          ],
+          "warnings": [
+            "Floodwater may contain sewage, chemicals, sharp debris, and electrical hazards.",
+            "Hidden structural damage may cause collapse or falls."
+          ],
+          "whatNotToDo": [
+            "Do not enter buildings with major visible damage alone.",
+            "Do not touch wet electrical equipment.",
+            "Do not assume water or food is safe after flooding."
+          ],
+          "redFlags": [
+            "Electrical shocks, serious injuries, infected wounds, gas leaks, or unstable buildings need urgent help."
+          ],
+          "preparednessTips": [
+            "Keep waterproof storage for documents and supplies.",
+            "Store gloves, boots, flashlights, and cleaning supplies in your emergency kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Floodwater Safety",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/floods/",
+              "whyUseful": "Health risks and cleanup safety."
+            },
+            {
+              "title": "Flood Safety",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html",
+              "whyUseful": "Plain-language before/during/after flood guidance."
+            }
+          ],
+          "appTags": [
+            "flood",
+            "after",
+            "re-entry",
+            "contamination",
+            "power-lines"
+          ]
+        },
+        {
+          "title": "Driving in Flood Conditions",
+          "slug": "driving-in-flood-conditions",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Floods",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Never drive through flooded roads. Turn around, find another route, and move to higher ground if needed.",
+          "whenToUse": "Use when roads are flooded, rainfall is intense, or visibility and drainage conditions are poor.",
+          "preferredAction": [
+            "Turn around and find a safer route.",
+            "Abandon a stalled vehicle in rising water if you can safely move to higher ground."
+          ],
+          "backupAction": [
+            "If you cannot safely leave the vehicle and water is not yet rising into it, call for help and monitor conditions closely."
+          ],
+          "steps": [
+            "Slow down and assess conditions before entering low areas.",
+            "Do not cross water-covered roads.",
+            "If your car stalls in rising water, get out if safe and move to higher ground.",
+            "Avoid bridges or roads that look damaged."
+          ],
+          "warnings": [
+            "Moving water can sweep vehicles away in surprisingly shallow depths.",
+            "Road damage may be hidden beneath floodwater."
+          ],
+          "whatNotToDo": [
+            "Do not drive around barricades.",
+            "Do not assume you can judge depth or road condition from the driver seat."
+          ],
+          "redFlags": [
+            "If trapped in rising water, call emergency services immediately."
+          ],
+          "preparednessTips": [
+            "Know alternate routes.",
+            "Keep a charged phone and emergency kit in the car during flood season."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Turn Around Don't Drown",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/flood-turn-around-dont-drown",
+              "whyUseful": "Best single-source public rule for flood driving safety."
+            }
+          ],
+          "appTags": [
+            "flood",
+            "driving",
+            "vehicle",
+            "turn-around-dont-drown",
+            "roads"
+          ]
+        },
+        {
+          "title": "Floodwater Safety",
+          "slug": "floodwater-safety",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Floods",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Treat all floodwater as contaminated and dangerous. Avoid direct contact whenever possible.",
+          "whenToUse": "Use when walking near, cleaning after, or being exposed to floodwater.",
+          "preferredAction": [
+            "Avoid floodwater whenever possible.",
+            "Wash exposed skin and clean wounds promptly if contact happens."
+          ],
+          "backupAction": [
+            "If exposure is unavoidable, use boots, gloves, and the safest route possible, then clean up immediately afterward."
+          ],
+          "steps": [
+            "Stay out of floodwater when possible.",
+            "If contact occurs, wash with clean water and soap as soon as possible.",
+            "Cover open wounds before exposure if you can.",
+            "Discard or disinfect contaminated items according to public-health guidance."
+          ],
+          "warnings": [
+            "Floodwater may contain sewage, chemicals, sharps, and hidden electrical risks."
+          ],
+          "whatNotToDo": [
+            "Do not let children play in floodwater.",
+            "Do not assume clear-looking water is safe."
+          ],
+          "redFlags": [
+            "Seek urgent help for infected wounds, electrical exposure, chemical burns, or severe illness after exposure."
+          ],
+          "preparednessTips": [
+            "Keep protective gloves, boots, and wound-care supplies available during flood season."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Floodwater Safety",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/floods/",
+              "whyUseful": "Primary health guidance on contamination and cleanup after floods."
+            }
+          ],
+          "appTags": [
+            "floodwater",
+            "contamination",
+            "infection",
+            "cleanup",
+            "exposure"
+          ]
+        },
+        {
+          "title": "During Tornado Warning",
+          "slug": "during-tornado-warning",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Tornadoes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Tornado Safety",
+          "quickAnswer": "Get to the lowest interior room of a sturdy building and protect your head and neck immediately.",
+          "whenToUse": "Use during a tornado warning, when a tornado is sighted, or when there are clear tornado danger signs.",
+          "preferredAction": [
+            "Go to a basement, storm shelter, or lowest interior room.",
+            "Put as many walls as possible between you and the outside.",
+            "Protect your head and neck."
+          ],
+          "backupAction": [
+            "If no basement is available, use a small interior room such as a closet, hallway, or bathroom on the lowest floor."
+          ],
+          "steps": [
+            "Move quickly to the safest room.",
+            "Get low under sturdy furniture if available.",
+            "Cover your head and neck with your arms, a helmet, or a mattress/blanket if available.",
+            "Stay there until the all-clear."
+          ],
+          "warnings": [
+            "Flying debris causes many tornado injuries.",
+            "Mobile homes are especially dangerous."
+          ],
+          "whatNotToDo": [
+            "Do not shelter under overpasses.",
+            "Do not stay near windows.",
+            "Do not wait to visually confirm the tornado if an official warning is issued."
+          ],
+          "redFlags": [
+            "Severe injuries, collapse, or trapped people require emergency help as soon as safe."
+          ],
+          "preparednessTips": [
+            "Plan a safe room in advance.",
+            "Practice tornado drills twice yearly.",
+            "Keep a weather radio and helmets or head protection in your shelter area."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Tornado Safety",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/tornado",
+              "whyUseful": "Best direct public guidance for shelter decisions."
+            },
+            {
+              "title": "Tornadoes",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/tornadoes",
+              "whyUseful": "Strong before/during/after preparedness guidance."
+            },
+            {
+              "title": "Stay Safe During a Tornado",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/tornadoes/",
+              "whyUseful": "Scenario-based health and safety steps."
+            }
+          ],
+          "appTags": [
+            "tornado",
+            "warning",
+            "shelter",
+            "interior-room",
+            "debris"
+          ]
+        },
+        {
+          "title": "After Tornado",
+          "slug": "after-tornado",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Natural Disasters",
+          "parentTopic": "Tornadoes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Tornado Safety",
+          "quickAnswer": "After winds stop, watch for debris, injuries, gas leaks, and downed power lines before moving through damaged areas.",
+          "whenToUse": "Use after the tornado passes and you are deciding whether it is safe to leave shelter or help others.",
+          "preferredAction": [
+            "Check injuries and immediate hazards first.",
+            "Watch for further tornado warnings or severe weather.",
+            "Avoid badly damaged areas unless rescue is essential and safe."
+          ],
+          "backupAction": [
+            "If the structure is unsafe, move carefully to safer shelter and follow emergency instructions."
+          ],
+          "steps": [
+            "Use shoes and gloves if available.",
+            "Avoid sharp debris and unstable buildings.",
+            "Report utility problems if possible.",
+            "Monitor radio or official alerts for updates."
+          ],
+          "warnings": [
+            "Additional tornadoes may follow the first.",
+            "Debris, dust, gas leaks, and damaged wiring remain dangerous after the storm."
+          ],
+          "whatNotToDo": [
+            "Do not enter heavily damaged buildings alone.",
+            "Do not touch downed lines or damaged electrical systems."
+          ],
+          "redFlags": [
+            "Stopped breathing, severe bleeding, trapped people, gas smell, or collapse hazards require emergency help."
+          ],
+          "preparednessTips": [
+            "Keep dust masks, flashlights, and sturdy footwear in your shelter kit."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Stay Safe During a Tornado",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/tornadoes/",
+              "whyUseful": "Post-event hazard and injury guidance."
+            },
+            {
+              "title": "Tornadoes",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/tornadoes",
+              "whyUseful": "Preparedness and recovery guidance."
+            }
+          ],
+          "appTags": [
+            "tornado",
+            "after",
+            "debris",
+            "injury",
+            "utilities"
+          ]
+        },
+        {
+          "title": "Tornado Safety in a Vehicle",
+          "slug": "tornado-safety-in-a-vehicle",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Tornadoes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If possible, drive to a sturdy shelter immediately. Do not try to shelter under an overpass.",
+          "whenToUse": "Use when a tornado warning occurs while you are in a car or on the road.",
+          "preferredAction": [
+            "Drive to the nearest sturdy building if there is time and a safe route.",
+            "If no sturdy shelter is reachable, follow official guidance for the safest available option and protect your head and neck."
+          ],
+          "backupAction": [
+            "If escape is impossible and conditions demand immediate protection, move to the lowest safe place available away from vehicles and debris if you can do so safely."
+          ],
+          "steps": [
+            "Look for the nearest sturdy building.",
+            "Do not stop under bridges or overpasses.",
+            "If you can reach shelter safely, do so immediately.",
+            "If not, protect your head and neck and follow local emergency guidance."
+          ],
+          "warnings": [
+            "Vehicles are poor tornado shelters.",
+            "Road visibility and debris may change very quickly."
+          ],
+          "whatNotToDo": [
+            "Do not try to outrun a tornado if traffic, storm movement, or visibility make it unsafe.",
+            "Do not shelter under overpasses."
+          ],
+          "redFlags": [
+            "If the vehicle is damaged, overturned, or you are injured, call emergency services when possible."
+          ],
+          "preparednessTips": [
+            "Plan frequent weather checks during tornado season.",
+            "Know sturdy shelter options along regular routes."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Tornado Safety",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/tornado",
+              "whyUseful": "Scenario-specific vehicle guidance from the core authority."
+            },
+            {
+              "title": "Tornadoes",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/tornadoes",
+              "whyUseful": "Preparedness and shelter guidance."
+            }
+          ],
+          "appTags": [
+            "tornado",
+            "vehicle",
+            "car",
+            "shelter",
+            "overpass"
+          ]
+        },
+        {
+          "title": "Tornado Safety in a Mobile Home",
+          "slug": "tornado-safety-in-a-mobile-home",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Tornadoes",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Leave mobile homes early for a sturdy shelter when tornado warnings are issued. Mobile homes are not safe tornado shelters.",
+          "whenToUse": "Use when you are in or near a mobile home during a tornado watch or warning.",
+          "preferredAction": [
+            "Go to a sturdy building or designated shelter immediately.",
+            "Have a preplanned shelter location before severe weather starts."
+          ],
+          "backupAction": [
+            "If you cannot reach sturdy shelter in time, move to the safest available low area away from trees and vehicles if that is your only option."
+          ],
+          "steps": [
+            "Monitor alerts closely.",
+            "Leave for shelter early rather than waiting to confirm the tornado visually.",
+            "Protect your head and neck once in shelter."
+          ],
+          "warnings": [
+            "Mobile homes can overturn or fail even in weaker tornadoes and straight-line winds."
+          ],
+          "whatNotToDo": [
+            "Do not stay inside a mobile home during a tornado warning.",
+            "Do not wait until debris is already visible if a warning is active."
+          ],
+          "redFlags": [
+            "If someone is trapped, injured, or shelter cannot be reached safely, call emergency services as soon as possible."
+          ],
+          "preparednessTips": [
+            "Know your nearest sturdy shelter and route in advance.",
+            "Keep a go-bag and weather radio ready."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Tornado Safety",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/tornado",
+              "whyUseful": "Clear public guidance that mobile homes are unsafe shelters."
+            },
+            {
+              "title": "Tornadoes",
+              "organization": "Ready.gov",
+              "url": "https://www.ready.gov/tornadoes",
+              "whyUseful": "Preparedness and shelter decision guidance."
+            }
+          ],
+          "appTags": [
+            "tornado",
+            "mobile-home",
+            "shelter",
+            "evacuation",
+            "warning"
+          ]
+        },
+        {
+          "title": "During Wildfire Smoke",
+          "slug": "during-wildfire-smoke",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Wildfire Smoke / Evacuation",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Wildfire Smoke / Evacuation",
+          "quickAnswer": "Stay indoors, seal the home as much as possible, and use cleaner-air strategies. Use an N95 only if you must go outside briefly.",
+          "whenToUse": "Use during wildfire smoke events, air-quality alerts, or when smoke is present nearby even without flames in the area.",
+          "preferredAction": [
+            "Stay inside and keep indoor air as clean as possible.",
+            "Use HEPA filtration or recirculating air if available.",
+            "Limit outdoor activity."
+          ],
+          "backupAction": [
+            "If you must go outside briefly, use a well-fitting N95 if available and return to cleaner air as soon as possible."
+          ],
+          "steps": [
+            "Close windows and doors.",
+            "Set AC to recirculate if available.",
+            "Use a HEPA filter or improvised cleaner-air room if possible.",
+            "Avoid indoor burning or activities that worsen indoor air."
+          ],
+          "warnings": [
+            "Smoke can worsen asthma, COPD, heart disease, and other breathing problems.",
+            "Children, older adults, pregnant people, and those with chronic illness are higher risk."
+          ],
+          "whatNotToDo": [
+            "Do not exercise outdoors in heavy smoke.",
+            "Do not rely on a wet cloth as meaningful smoke-particle protection.",
+            "Do not vacuum without suitable filtration during smoky conditions."
+          ],
+          "redFlags": [
+            "Seek urgent medical help for chest pain, severe breathing trouble, blue lips, confusion, or worsening chronic symptoms."
+          ],
+          "preparednessTips": [
+            "Stock N95s if appropriate for your household.",
+            "Keep medicines, inhalers, and a plan for cleaner indoor air."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire Evacuation Outreach Materials",
+              "organization": "FEMA / USFA",
+              "url": "https://www.usfa.fema.gov/wui/outreach/wildfire-evacuation.html",
+              "whyUseful": "Strong practical wildfire public guidance."
+            },
+            {
+              "title": "How Wildfire Smoke Affects Your Body",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/wildfires/risk-factors/index.html",
+              "whyUseful": "Health-risk guidance and higher-risk population advice."
+            },
+            {
+              "title": "Public Health Advice During Wildfires",
+              "organization": "WHO Europe",
+              "url": "https://www.who.int/europe/news-room/questions-and-answers/item/public-health-advice-during-the-wildfires--how-to-protect-your-health-and-keep-safe",
+              "whyUseful": "Clear smoke symptom and protection guidance."
+            }
+          ],
+          "appTags": [
+            "wildfire",
+            "smoke",
+            "air-quality",
+            "n95",
+            "indoor-air"
+          ]
+        },
+        {
+          "title": "Wildfire Evacuation",
+          "slug": "wildfire-evacuation",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Wildfire Smoke / Evacuation",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Wildfire Smoke / Evacuation",
+          "quickAnswer": "Leave early when told to evacuate or when conditions are becoming unsafe. Do not wait until roads are blocked or smoke is overwhelming.",
+          "whenToUse": "Use when evacuation orders are issued, fire is approaching, or authorities say conditions are unsafe.",
+          "preferredAction": [
+            "Evacuate promptly using planned routes.",
+            "Take your go-bag, medications, pets, and essential documents."
+          ],
+          "backupAction": [
+            "If evacuation is temporarily impossible, move to the safest available cleaner-air or official shelter location and monitor alerts continuously."
+          ],
+          "steps": [
+            "Follow local alerts.",
+            "Load go-bags, medications, and pet supplies.",
+            "Back the car in if you have time and keep the tank sufficiently fueled.",
+            "Drive with windows up and ventilation recirculating if smoky."
+          ],
+          "warnings": [
+            "Fires can spread rapidly and block roads.",
+            "Smoke can reduce visibility and impair breathing even ahead of flames."
+          ],
+          "whatNotToDo": [
+            "Do not wait until the last minute.",
+            "Do not return until officials say it is safe."
+          ],
+          "redFlags": [
+            "If fire is approaching, roads are cut off, or someone has severe breathing trouble or burns, seek emergency help immediately."
+          ],
+          "preparednessTips": [
+            "Maintain mapped evacuation routes.",
+            "Prepare pet plans and a ready go-bag before wildfire season."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire Evacuation Outreach Materials",
+              "organization": "FEMA / USFA",
+              "url": "https://www.usfa.fema.gov/wui/outreach/wildfire-evacuation.html",
+              "whyUseful": "Best practical wildfire evacuation public guidance."
+            },
+            {
+              "title": "How to Prepare for Emergencies",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+              "whyUseful": "Strong evacuation and readiness planning guidance."
+            }
+          ],
+          "appTags": [
+            "wildfire",
+            "evacuation",
+            "go-bag",
+            "leave-early",
+            "routes"
+          ]
+        },
+        {
+          "title": "During Landslide",
+          "slug": "during-landslide",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Natural Disasters",
+          "parentTopic": "Landslides",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Move quickly out of the slide path toward safer stable ground. Watch for additional slides or flooding.",
+          "whenToUse": "Use when you hear, see, or suspect an active landslide, slope failure, or debris flow.",
+          "preferredAction": [
+            "Move away from the slide path immediately.",
+            "Aim for more stable ground and avoid valleys or channels if debris is moving there."
+          ],
+          "backupAction": [
+            "If escape is not possible, protect yourself and move to the safest available position away from the moving debris."
+          ],
+          "steps": [
+            "Move out of the path as quickly as possible.",
+            "Warn others if you can do so safely.",
+            "Avoid river channels or low paths where debris may continue moving.",
+            "Once safe, monitor official updates."
+          ],
+          "warnings": [
+            "Landslides may trigger floods, secondary slides, and structural collapse."
+          ],
+          "whatNotToDo": [
+            "Do not remain in the slide path.",
+            "Do not re-enter unstable ground too quickly."
+          ],
+          "redFlags": [
+            "Ground cracking, rumbling, sudden slope movement, trapped people, or damaged structures require urgent emergency help."
+          ],
+          "preparednessTips": [
+            "Monitor saturated slopes during intense rain.",
+            "Know local high-risk areas and evacuation routes."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Landslide Safety Guidance",
+              "organization": "FEMA / public safety aligned sources",
+              "url": "",
+              "whyUseful": "Practical public-safety style guidance, but source set should be strengthened before top-tier ranking."
+            }
+          ],
+          "appTags": [
+            "landslide",
+            "debris-flow",
+            "slope",
+            "evacuation",
+            "unstable-ground"
+          ]
+        },
+        {
+          "title": "After Landslide",
+          "slug": "after-landslide",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Natural Disasters",
+          "parentTopic": "Landslides",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Stay away from unstable ground and damaged structures until authorities or qualified experts say it is safe.",
+          "whenToUse": "Use after the slide has stopped and you are deciding whether to return, search, or inspect damage.",
+          "preferredAction": [
+            "Keep clear of the affected area.",
+            "Watch for more slides, flooding, and damaged utilities."
+          ],
+          "backupAction": [
+            "If re-entry is delayed, use safer shelter and wait for official or expert advice."
+          ],
+          "steps": [
+            "Check for trapped or injured people only if it is safe.",
+            "Report utility damage if possible.",
+            "Listen for emergency updates.",
+            "Do not enter visibly unstable areas."
+          ],
+          "warnings": [
+            "Additional slides may follow the first event.",
+            "Unstable buildings, road edges, and buried utilities remain hazardous."
+          ],
+          "whatNotToDo": [
+            "Do not enter unstable structures.",
+            "Do not assume the slope is stable because movement has stopped once."
+          ],
+          "redFlags": [
+            "Structural cracks, trapped people, gas leaks, downed lines, or flooding require urgent emergency help."
+          ],
+          "preparednessTips": [
+            "Consult geotechnical or local hazard resources if you live in a landslide-prone area."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Post-Landslide Safety Guidance",
+              "organization": "FEMA / public safety aligned sources",
+              "url": "",
+              "whyUseful": "Reasonable public-safety principles, but source base should be reviewed and strengthened."
+            }
+          ],
+          "appTags": [
+            "landslide",
+            "after",
+            "inspection",
+            "re-entry",
+            "slope"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Medical Safety",
+      "summary": "Normalized medical-safety guides compiled from Perplexity research with strong first-aid and public-health sources; conservative, non-invasive public guidance.",
+      "guides": [
+        {
+          "title": "Controlling Severe Bleeding (External)",
+          "slug": "controlling-severe-bleeding-external",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Bleeding and Wound Care",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Severe Bleeding: Apply Direct Pressure Fast",
+          "quickAnswer": "Press hard directly on the wound, keep constant pressure, and get emergency help for life-threatening bleeding.",
+          "whenToUse": "Use for large or deep wounds with heavy, fast, or pooling bleeding, soaked dressings, or amputations.",
+          "preferredAction": [
+            "Call emergency services early while maintaining pressure.",
+            "Press directly on the wound with a clean cloth or dressing.",
+            "Use a tourniquet only if severe limb bleeding continues and you are trained and it is available."
+          ],
+          "backupAction": [
+            "If no bandages are available, use any clean cloth, clothing, or your hands directly over the wound."
+          ],
+          "steps": [
+            "Ensure the scene is safe.",
+            "Put on gloves if available.",
+            "Expose the wound if safe.",
+            "Press firmly with both hands over the wound.",
+            "If blood soaks through, add more dressings on top.",
+            "Keep the person lying flat and warm.",
+            "Use a commercial tourniquet above the wound on a limb only if trained and needed for life-threatening bleeding."
+          ],
+          "warnings": [
+            "Severe bleeding can be rapidly fatal.",
+            "Once a tourniquet is applied, it should not be loosened in the field unless directed by professionals."
+          ],
+          "whatNotToDo": [
+            "Do not keep checking under the dressing.",
+            "Do not remove soaked dressings.",
+            "Do not delay calling emergency services to see if it stops."
+          ],
+          "redFlags": [
+            "Spurting or pooling blood, shock signs, amputation, or major crush injuries need urgent help."
+          ],
+          "preparednessTips": [
+            "Stock gloves, pressure dressings, and a commercial tourniquet.",
+            "Take a bleeding-control or Red Cross first-aid course."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Life-Threatening External Bleeding",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/bleeding-life-threatening-external",
+              "whyUseful": "Strong public-facing severe bleeding protocol."
+            },
+            {
+              "title": "Severe Bleeding Online Course",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/take-a-class/first-aid/performing-first-aid/first-aid-steps",
+              "whyUseful": "Evidence-based bleeding control training principles."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "bleeding",
+            "trauma",
+            "shock",
+            "tourniquet",
+            "wound-care"
+          ]
+        },
+        {
+          "title": "Caring for Minor Cuts and Scrapes",
+          "slug": "caring-for-minor-cuts-and-scrapes",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Medical Safety",
+          "parentTopic": "Bleeding and Wound Care",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Minor Cuts and Scrapes: Clean and Cover",
+          "quickAnswer": "Rinse the wound with clean water, remove visible dirt, cover it with a clean dressing, and watch for infection.",
+          "whenToUse": "Use for shallow cuts and scrapes with slow, controllable bleeding and no deep tissue or large gap visible.",
+          "preferredAction": [
+            "Gently clean with clean running water.",
+            "Cover with a sterile or clean non-stick dressing.",
+            "Monitor the wound daily for infection signs."
+          ],
+          "backupAction": [
+            "If clean running water is not available, use the cleanest bottled or saline water you have and gently remove obvious dirt."
+          ],
+          "steps": [
+            "Wash or sanitize your hands if possible.",
+            "Apply gentle pressure if minor bleeding continues.",
+            "Rinse under clean water.",
+            "Clean around the wound with mild soap.",
+            "Pat the surrounding skin dry.",
+            "Cover with a clean dressing.",
+            "Change the dressing daily or when wet or dirty."
+          ],
+          "warnings": [
+            "Dirty wounds and high-risk contamination increase infection risk.",
+            "People with diabetes or poor circulation may need earlier medical review."
+          ],
+          "whatNotToDo": [
+            "Do not repeatedly use full-strength hydrogen peroxide, alcohol, or iodine inside the wound.",
+            "Do not close deep or heavily contaminated wounds in the field."
+          ],
+          "redFlags": [
+            "Gaping wounds, bites, embedded objects, visible bone/tendon/fat, uncontrollable bleeding, or high-risk contamination need urgent medical advice."
+          ],
+          "preparednessTips": [
+            "Keep dressings, saline or clean water, and mild soap in your kit.",
+            "Keep tetanus vaccination up to date."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Cuts and Puncture Wounds",
+              "organization": "MedlinePlus (NIH)",
+              "url": "https://medlineplus.gov/ency/article/000043.htm",
+              "whyUseful": "Public-friendly, conservative wound-cleaning guidance."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "minor-wound",
+            "cuts",
+            "scrapes",
+            "infection-prevention"
+          ]
+        },
+        {
+          "title": "Wound Infection: Red Flags",
+          "slug": "wound-infection-red-flags",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Bleeding and Wound Care",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Wound Infection: Red Flags",
+          "quickAnswer": "Watch for spreading redness, swelling, warmth, worsening pain, pus, red streaks, or fever, and seek care early if they appear.",
+          "whenToUse": "Use when monitoring any wound over hours to days, especially dirty wounds, bites, punctures, or wounds in people with chronic illness.",
+          "preferredAction": [
+            "Keep the wound clean and dry and inspect it daily.",
+            "Seek medical care promptly if infection signs develop or spread."
+          ],
+          "backupAction": [
+            "If care is delayed, continue gentle cleaning and dry dressings while seeking the earliest possible medical review."
+          ],
+          "steps": [
+            "Inspect the wound daily in good light.",
+            "Look for spreading redness or swelling.",
+            "Check for warmth, worsening pain, or throbbing.",
+            "Look for pus or foul-smelling drainage.",
+            "Monitor for fever or feeling unwell.",
+            "Seek medical care if symptoms worsen or spread."
+          ],
+          "warnings": [
+            "Infections near joints, face, or in people with diabetes or immune problems can worsen quickly."
+          ],
+          "whatNotToDo": [
+            "Do not tightly seal an infected or draining wound.",
+            "Do not start leftover antibiotics without professional advice."
+          ],
+          "redFlags": [
+            "Rapidly spreading redness, red streaks, high fever, severe pain, or inability to move the area normally require urgent help."
+          ],
+          "preparednessTips": [
+            "Keep a thermometer and spare dressings in your kit.",
+            "Use notes or photos to monitor changes over time."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wound Infection Warning Signs",
+              "organization": "Public health ministry / standard wound care guidance",
+              "url": "",
+              "whyUseful": "Common red-flag descriptions aligned with public first-aid practice."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "wound",
+            "infection",
+            "red-flags",
+            "fever",
+            "escalation"
+          ]
+        },
+        {
+          "title": "Dehydration: Signs and Immediate Care",
+          "slug": "dehydration-signs-and-immediate-care",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Medical Safety",
+          "parentTopic": "Heat and Fluids",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Dehydration: Signs and Immediate Care",
+          "quickAnswer": "Move to a cooler place and give small frequent sips of safe fluids if the person is awake and not vomiting.",
+          "whenToUse": "Use after heat exposure, vomiting, diarrhea, or prolonged exertion when someone is thirsty, weak, dizzy, or making very little dark urine.",
+          "preferredAction": [
+            "Rest in a cool or shaded place and sip water or oral rehydration solution slowly.",
+            "Monitor for improvement versus worsening signs."
+          ],
+          "backupAction": [
+            "If only limited fluids are available, use small frequent sips of the safest available drink and avoid alcohol."
+          ],
+          "steps": [
+            "Check for dry mouth, dark urine, dizziness, fatigue, or reduced urination.",
+            "Move to shade or a cool area.",
+            "Loosen tight clothing.",
+            "Give small sips of water or oral rehydration solution if fully awake.",
+            "Monitor over the next 1–2 hours."
+          ],
+          "warnings": [
+            "Children, older adults, and chronically ill people may worsen quickly.",
+            "Severe dehydration can cause shock and organ failure."
+          ],
+          "whatNotToDo": [
+            "Do not force fluids into someone who is vomiting repeatedly, very drowsy, or confused.",
+            "Do not rely on thirst alone."
+          ],
+          "redFlags": [
+            "No urine, confusion, fainting, repeated vomiting, seizures, or rapid worsening need urgent help."
+          ],
+          "preparednessTips": [
+            "Carry oral rehydration salts or electrolyte packets.",
+            "Teach urine-color awareness as a simple hydration check."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Signs of Dehydration",
+              "organization": "CDC / public health guidance",
+              "url": "",
+              "whyUseful": "Conservative public guidance on dehydration signs and when to seek help."
+            },
+            {
+              "title": "Dehydration Symptoms",
+              "organization": "Cleveland Clinic",
+              "url": "https://my.clevelandclinic.org/health/diseases/9013-dehydration",
+              "whyUseful": "Clear symptom guidance for public use."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "dehydration",
+            "fluids",
+            "vomiting",
+            "diarrhea",
+            "heat"
+          ]
+        },
+        {
+          "title": "Heat Exhaustion: On-the-Spot Care",
+          "slug": "heat-exhaustion-on-the-spot-care",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Heat and Fluids",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Heat Exhaustion: On-the-Spot Care",
+          "quickAnswer": "Move the person to a cooler place, loosen clothing, cool the body, and give fluids if they are fully awake and not vomiting.",
+          "whenToUse": "Use for heavy sweating, weakness, nausea, dizziness, headache, or cramps during or after heat exposure.",
+          "preferredAction": [
+            "Move the person to shade or cooler air immediately.",
+            "Cool the body and give small sips of fluid if appropriate.",
+            "Watch for progression to heat stroke."
+          ],
+          "backupAction": [
+            "If no building is available, use shade, wet cloths, and fanning."
+          ],
+          "steps": [
+            "Move to shade or air conditioning.",
+            "Have the person lie down.",
+            "Loosen or remove excess clothing.",
+            "Apply cool wet cloths or spray with cool water and fan.",
+            "Offer cool water or oral rehydration solution in small sips if fully awake.",
+            "Seek urgent help if symptoms worsen or do not improve within about 30 minutes."
+          ],
+          "warnings": [
+            "Heat exhaustion can progress to heat stroke.",
+            "Do not leave a confused, vomiting, or very weak person alone."
+          ],
+          "whatNotToDo": [
+            "Do not give alcohol or very sugary drinks.",
+            "Do not let the person continue strenuous activity."
+          ],
+          "redFlags": [
+            "Collapse, confusion, stopping sweating, seizures, chest pain, or breathing difficulty require urgent help."
+          ],
+          "preparednessTips": [
+            "Plan shade, water, and rest breaks during hot weather.",
+            "Teach users to recognize early heat illness signs."
+          ],
+          "sourceReferences": [
+            {
+              "title": "First Aid for Heat Illness",
+              "organization": "CDC",
+              "url": "https://stacks.cdc.gov/view/cdc/138337",
+              "whyUseful": "Public-facing heat illness first aid guidance."
+            },
+            {
+              "title": "Heat Illness",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/heat-illness",
+              "whyUseful": "Concise symptom and first-aid guidance."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "heat-exhaustion",
+            "cooling",
+            "hydration",
+            "outdoor"
+          ]
+        },
+        {
+          "title": "Heat Stroke: Suspected Life-Threatening Emergency",
+          "slug": "heat-stroke-suspected-life-threatening-emergency",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Heat and Fluids",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Heat Stroke: Suspected Life-Threatening Emergency",
+          "quickAnswer": "Call emergency services, move the person to a cooler place, and cool the body aggressively. Do not give fluids to a confused or unconscious person.",
+          "whenToUse": "Use for confusion, seizures, collapse, or extremely hot skin after heat exposure.",
+          "preferredAction": [
+            "Activate emergency services immediately.",
+            "Begin active cooling right away while help is on the way."
+          ],
+          "backupAction": [
+            "If no immediate medical help is available, continue safe cooling and monitor breathing and responsiveness."
+          ],
+          "steps": [
+            "Call emergency services.",
+            "Move the person to a cooler or shaded place.",
+            "Remove excess clothing.",
+            "Cool with wet cloths, cool water, and fanning.",
+            "Use cool packs at the neck, groin, and armpits if available.",
+            "If unconscious but breathing, place on their side and monitor airway and breathing."
+          ],
+          "warnings": [
+            "Delay in cooling can be fatal.",
+            "Giving fluids to a confused or unconscious person risks choking or aspiration."
+          ],
+          "whatNotToDo": [
+            "Do not just let the person rest in shade without active cooling.",
+            "Do not give fluids to someone who is confused, drowsy, or unconscious."
+          ],
+          "redFlags": [
+            "Any suspected heat stroke requires urgent emergency help."
+          ],
+          "preparednessTips": [
+            "Prevent heat illness by planning shade, water, rest breaks, and early recognition."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Heat Stroke First Aid",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/heat-illness",
+              "whyUseful": "Clear emergency heat stroke guidance."
+            },
+            {
+              "title": "First Aid for Heat Illness",
+              "organization": "CDC",
+              "url": "https://stacks.cdc.gov/view/cdc/138337",
+              "whyUseful": "Public-health first aid guidance for heat emergencies."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "heat-stroke",
+            "emergency",
+            "cooling",
+            "confusion",
+            "seizure"
+          ]
+        },
+        {
+          "title": "Hypothermia: Cold Exposure First Aid",
+          "slug": "hypothermia-cold-exposure-first-aid",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Cold Exposure",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Hypothermia: Cold Exposure First Aid",
+          "quickAnswer": "Move the person to warmth, remove wet clothing, warm the body core gradually, and seek help for moderate or severe symptoms.",
+          "whenToUse": "Use for shivering, confusion, slurred speech, drowsiness, or other cold-exposure symptoms.",
+          "preferredAction": [
+            "Move to warm, dry shelter and prevent further heat loss.",
+            "Warm the center of the body first while monitoring breathing."
+          ],
+          "backupAction": [
+            "If no shelter is available, block wind, insulate from the ground, and share body heat if needed."
+          ],
+          "steps": [
+            "Call emergency services for suspected moderate or severe hypothermia.",
+            "Move gently to a sheltered place.",
+            "Remove wet clothing.",
+            "Wrap in dry layers or blankets.",
+            "Warm the chest, neck, head, and groin first.",
+            "Offer warm non-alcoholic drinks only if fully awake and able to swallow.",
+            "Monitor breathing and responsiveness."
+          ],
+          "warnings": [
+            "Rough handling can trigger dangerous heart rhythms in severe hypothermia.",
+            "Do not use aggressive hot rewarming methods without medical oversight."
+          ],
+          "whatNotToDo": [
+            "Do not give alcohol or caffeine.",
+            "Do not vigorously rub or massage cold limbs in severe hypothermia."
+          ],
+          "redFlags": [
+            "Confusion, stopped shivering, very slow breathing, rigidity, or unconsciousness require urgent help."
+          ],
+          "preparednessTips": [
+            "Pack dry layers, emergency blankets, and waterproof outerwear.",
+            "Know local cold-weather shelter and emergency options."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Hypothermia and Frostbite",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/hypothermia-and-frostbite.html",
+              "whyUseful": "Public first-aid guidance for cold injuries."
+            },
+            {
+              "title": "Hypothermia and Cold Injuries",
+              "organization": "ANZCOR",
+              "url": "",
+              "whyUseful": "Conservative international first-aid principles."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "hypothermia",
+            "cold",
+            "warming",
+            "shelter",
+            "wet-clothes"
+          ]
+        },
+        {
+          "title": "Frostbite: Local Cold Injury Care",
+          "slug": "frostbite-local-cold-injury-care",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Cold Exposure",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Frostbite: Local Cold Injury Care",
+          "quickAnswer": "Get to warmth, remove wet items, and rewarm the area gently only if it will not refreeze.",
+          "whenToUse": "Use for numb, pale, hard, or waxy skin on fingers, toes, nose, ears, or cheeks after cold exposure.",
+          "preferredAction": [
+            "Protect the area from further cold and trauma.",
+            "Rewarm gradually with body heat or warm water only if refreezing is unlikely."
+          ],
+          "backupAction": [
+            "If you cannot prevent refreezing, protect the area and delay active rewarming until you reach stable warmth."
+          ],
+          "steps": [
+            "Move to a warm, dry area.",
+            "Remove wet clothing and jewelry.",
+            "Use body heat or warm water if safe from refreezing.",
+            "Cover loosely and protect the area after rewarming.",
+            "Seek medical care as soon as practical."
+          ],
+          "warnings": [
+            "Refreezing after thawing can make damage much worse.",
+            "Rewarming can be painful; handle gently."
+          ],
+          "whatNotToDo": [
+            "Do not rub with hands or snow.",
+            "Do not use direct dry heat like a stove or fire on numb skin."
+          ],
+          "redFlags": [
+            "Large areas, blackened tissue, blisters, or frostbite plus hypothermia signs need urgent help."
+          ],
+          "preparednessTips": [
+            "Use layered clothing, warm socks, gloves, and hats in cold environments.",
+            "Check companions for numbness or color changes early."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Cold Injuries and Frostbite",
+              "organization": "ANZCOR",
+              "url": "",
+              "whyUseful": "Conservative rewarming and protection guidance."
+            },
+            {
+              "title": "Hypothermia and Frostbite",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/hypothermia-and-frostbite.html",
+              "whyUseful": "Public-friendly first-aid steps."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "frostbite",
+            "cold",
+            "rewarming",
+            "extremities"
+          ]
+        },
+        {
+          "title": "First Aid for Burns (Minor)",
+          "slug": "first-aid-for-burns-minor",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Medical Safety",
+          "parentTopic": "Burns",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "First Aid for Burns (Minor)",
+          "quickAnswer": "Cool the burn with cool running water for at least 20 minutes, remove tight items, and cover loosely with a clean non-stick dressing.",
+          "whenToUse": "Use for small, superficial or superficial-partial burns that do not involve critical areas extensively.",
+          "preferredAction": [
+            "Cool with cool running water for at least 20 minutes.",
+            "Remove rings and tight items before swelling increases.",
+            "Cover loosely with a clean non-stick dressing."
+          ],
+          "backupAction": [
+            "If no tap water is available, use clean cool water or repeated cool wet cloths."
+          ],
+          "steps": [
+            "Stop the burning source.",
+            "Cool the area with cool water for 20 minutes.",
+            "Remove jewelry and tight items if not stuck.",
+            "Cover loosely with a clean dressing or plastic wrap.",
+            "Monitor for worsening or infection."
+          ],
+          "warnings": [
+            "Even minor burns can worsen over time.",
+            "Children and older adults may be more vulnerable to complications."
+          ],
+          "whatNotToDo": [
+            "Do not apply ice directly.",
+            "Do not use butter, oils, or thick ointments that trap heat.",
+            "Do not intentionally break blisters."
+          ],
+          "redFlags": [
+            "Burns larger than the person’s palm, burns to face/hands/feet/genitals/major joints, electrical or chemical burns, or infection signs need urgent care."
+          ],
+          "preparednessTips": [
+            "Keep clean water access, non-stick dressings, and plastic wrap in the kit.",
+            "Teach the 20-minute cooling rule."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Burn First Aid",
+              "organization": "American Burn Association",
+              "url": "",
+              "whyUseful": "Specialist burn first-aid guidance."
+            },
+            {
+              "title": "Burns: How to Help",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Public-friendly burn-care guidance."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "burn",
+            "thermal",
+            "cool-water",
+            "minor-injury"
+          ]
+        },
+        {
+          "title": "Burns That Need Emergency Care",
+          "slug": "burns-that-need-emergency-care",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Burns",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Burns That Need Emergency Care",
+          "quickAnswer": "Large, deep, or critical-area burns, or burns from chemicals, electricity, or inhalation need urgent medical attention.",
+          "whenToUse": "Use for burns that are more than minor superficial injuries or if the burn affects breathing, critical areas, or large surface area.",
+          "preferredAction": [
+            "Begin basic burn first aid while arranging urgent medical care or evacuation.",
+            "Prioritize airway and breathing if facial burns or smoke exposure are present."
+          ],
+          "backupAction": [
+            "If evacuation is delayed, continue gentle cooling if appropriate and keep the area clean and loosely covered while monitoring airway and circulation."
+          ],
+          "steps": [
+            "Assess size, depth, and location.",
+            "Call emergency services or arrange urgent transport.",
+            "Stop the burning source.",
+            "Cool with cool water for up to 20 minutes if still hot.",
+            "Remove tight items if not stuck.",
+            "Cover loosely and monitor breathing."
+          ],
+          "warnings": [
+            "Serious burns can cause fluid loss, shock, and airway compromise.",
+            "Deep burns may hurt less but still be more dangerous."
+          ],
+          "whatNotToDo": [
+            "Do not apply home remedies or thick creams to severe burns.",
+            "Do not delay transport after basic first aid is done."
+          ],
+          "redFlags": [
+            "Deep burns, face/airway burns, breathing difficulty, large burns, electrical, lightning, or chemical burns require urgent care."
+          ],
+          "preparednessTips": [
+            "Know where the nearest emergency care or burn-capable hospital is.",
+            "Teach quick burn classification by size and location."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Burn First Aid and Burn Center Referral",
+              "organization": "American Burn Association",
+              "url": "",
+              "whyUseful": "Specialist guidance for escalation criteria."
+            },
+            {
+              "title": "Burns Guidance",
+              "organization": "American Red Cross",
+              "url": "",
+              "whyUseful": "Public-facing burn first aid and when to seek help."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "burn",
+            "major-burn",
+            "emergency",
+            "airway",
+            "evacuation"
+          ]
+        },
+        {
+          "title": "Choking: Responsive Adult or Child",
+          "slug": "choking-responsive-adult-or-child",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Airway Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If the person cannot cough, speak, or breathe, give back blows and abdominal thrusts (or chest thrusts when appropriate) and call for help.",
+          "whenToUse": "Use when a responsive person shows signs of severe choking after eating or choking on an object.",
+          "preferredAction": [
+            "If they cannot speak or breathe, start severe choking first aid right away and get emergency help called."
+          ],
+          "backupAction": [
+            "If abdominal thrusts are inappropriate, use chest thrusts as recommended for pregnancy or body size considerations."
+          ],
+          "steps": [
+            "Ask if the person is choking.",
+            "If severe choking is confirmed, call for help.",
+            "Lean them forward and give up to 5 firm back blows.",
+            "If still choking, give up to 5 abdominal thrusts or chest thrusts when appropriate.",
+            "Alternate until the object comes out or the person becomes unresponsive."
+          ],
+          "warnings": [
+            "Use appropriate force and technique for size and age.",
+            "Move to unresponsive choking/CPR guidance if the person collapses."
+          ],
+          "whatNotToDo": [
+            "Do not do blind finger sweeps in a responsive person.",
+            "Do not interrupt an effective cough with severe choking maneuvers."
+          ],
+          "redFlags": [
+            "Any severe choking episode requires emergency help; persistent breathing difficulty after the object is removed also needs review."
+          ],
+          "preparednessTips": [
+            "Encourage formal first-aid and CPR training.",
+            "Reduce choking risks for children with age-appropriate foods and objects."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Choking First Aid",
+              "organization": "Mayo Clinic",
+              "url": "https://www.mayoclinic.org/first-aid/first-aid-choking/basics/art-20056637",
+              "whyUseful": "Clear public choking response steps."
+            },
+            {
+              "title": "Choking in Adults and Children",
+              "organization": "MedlinePlus",
+              "url": "https://medlineplus.gov/ency/article/000049.htm",
+              "whyUseful": "Public guidance reflecting consensus resuscitation practice."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "choking",
+            "airway",
+            "adult",
+            "child",
+            "back-blows",
+            "abdominal-thrusts"
+          ]
+        },
+        {
+          "title": "Choking: Unresponsive Adult or Child",
+          "slug": "choking-unresponsive-adult-or-child",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Airway Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Call for help, start CPR with chest compressions, and check the mouth only for an object you can clearly see and remove easily.",
+          "whenToUse": "Use when a choking person becomes unresponsive or is found unresponsive after suspected choking.",
+          "preferredAction": [
+            "Start CPR immediately and get emergency help and an AED if available.",
+            "Use compressions and airway checks rather than abdominal thrusts once the person is unresponsive."
+          ],
+          "backupAction": [
+            "If you do not know full CPR, follow dispatcher instructions and continue compressions."
+          ],
+          "steps": [
+            "Call for help and get an AED.",
+            "Place the person on a firm surface.",
+            "Check for breathing; if absent or gasping, begin CPR.",
+            "Give 30 chest compressions.",
+            "Before breaths, quickly look for a visible object and remove it only if easily accessible.",
+            "Continue cycles until help arrives or the person recovers."
+          ],
+          "warnings": [
+            "Do not waste time on prolonged searching in the mouth.",
+            "Compressions take priority in an unresponsive person."
+          ],
+          "whatNotToDo": [
+            "Do not do blind deep finger sweeps.",
+            "Do not stop CPR unless the person recovers or you cannot continue."
+          ],
+          "redFlags": [
+            "Any unresponsive person with suspected airway blockage needs urgent emergency response."
+          ],
+          "preparednessTips": [
+            "Teach CPR and AED use in first-aid training.",
+            "Know your local emergency number."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Choking (Unconscious Adult or Child)",
+              "organization": "MedlinePlus",
+              "url": "https://medlineplus.gov/ency/article/000049.htm",
+              "whyUseful": "Public-facing unresponsive choking and CPR distinction."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "choking",
+            "unresponsive",
+            "CPR",
+            "AED",
+            "airway"
+          ]
+        },
+        {
+          "title": "Sprains and Suspected Fractures",
+          "slug": "sprains-and-suspected-fractures",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Medical Safety",
+          "parentTopic": "Musculoskeletal Injuries",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "If you are unsure whether it is a sprain or fracture, treat it as a fracture: immobilize, avoid weight-bearing, use cold packs, and get medical assessment.",
+          "whenToUse": "Use after a fall, twist, or impact with swelling, deformity, severe pain, or difficulty moving or bearing weight.",
+          "preferredAction": [
+            "Immobilize the limb in the position found and arrange assessment.",
+            "Use cold packs and avoid further use of the limb."
+          ],
+          "backupAction": [
+            "If splints are unavailable, use rolled blankets or clothing to keep the limb still during transport."
+          ],
+          "steps": [
+            "Check for deformity, severe pain, numbness, or inability to use the limb.",
+            "If fracture is suspected, immobilize above and below the injury in the position found.",
+            "Use a wrapped cold pack for up to 20 minutes.",
+            "Elevate if comfortable and safe.",
+            "Arrange medical evaluation."
+          ],
+          "warnings": [
+            "Open fractures and circulation problems are emergencies.",
+            "Strong pain or deformity can hide nerve or blood-flow injury."
+          ],
+          "whatNotToDo": [
+            "Do not try to straighten a deformed limb.",
+            "Do not use tight compression over a suspected fracture or open wound."
+          ],
+          "redFlags": [
+            "Visible bone, gross deformity, pale/cold/numb limb, suspected spine injury, or inability to bear weight may need urgent help."
+          ],
+          "preparednessTips": [
+            "Pack triangular bandages, elastic wraps, and simple splint materials.",
+            "Teach basic immobilization."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Orthopedic First Aid Principles",
+              "organization": "Red Cross / standard first-aid aligned guidance",
+              "url": "",
+              "whyUseful": "Conservative immobilization-focused approach, but source specificity should be improved."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "sprain",
+            "fracture",
+            "immobilization",
+            "fall",
+            "limb"
+          ]
+        },
+        {
+          "title": "Allergic Reaction and Anaphylaxis Warning Signs",
+          "slug": "allergic-reaction-and-anaphylaxis-warning-signs",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Medical Safety",
+          "parentTopic": "Allergic Reactions",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Watch for hives plus swelling of the face or throat, trouble breathing, or feeling faint. Treat suspected anaphylaxis as an emergency.",
+          "whenToUse": "Use after exposure to foods, stings, medications, or unknown triggers, especially in someone with known allergies.",
+          "preferredAction": [
+            "Recognize anaphylaxis early, call emergency services, and help with prescribed epinephrine if available and you are trained or permitted."
+          ],
+          "backupAction": [
+            "If no epinephrine is available, keep the person at rest, watch breathing, and seek urgent emergency care."
+          ],
+          "steps": [
+            "Ask about known allergies.",
+            "Look for hives, facial swelling, or generalized itching.",
+            "Check for wheeze, throat tightness, swallowing difficulty, or voice changes.",
+            "Monitor dizziness, faintness, or weak rapid pulse.",
+            "Call emergency services for breathing or circulation involvement.",
+            "Help use an auto-injector if available and appropriate.",
+            "Keep the person in the most tolerable safe position and monitor closely."
+          ],
+          "warnings": [
+            "Anaphylaxis can progress very quickly.",
+            "Antihistamines alone do not treat airway or circulation collapse."
+          ],
+          "whatNotToDo": [
+            "Do not wait for all symptoms to appear before acting.",
+            "Do not let the person stand or walk if faint."
+          ],
+          "redFlags": [
+            "Breathing difficulty, throat tightness, tongue swelling, fainting, or rapid progression of symptoms require urgent help."
+          ],
+          "preparednessTips": [
+            "People at risk should carry two auto-injectors if prescribed.",
+            "Store allergy information and emergency contacts."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Anaphylaxis and Allergic Reaction Recognition",
+              "organization": "Major allergy/emergency consensus guidance",
+              "url": "",
+              "whyUseful": "Good public-health recognition principles, but the batch would benefit from stronger named primary sources."
+            }
+          ],
+          "appTags": [
+            "medical",
+            "allergy",
+            "anaphylaxis",
+            "epinephrine",
+            "breathing",
+            "swelling"
+          ]
+        }
+      ]
+    }
+  ]
+}

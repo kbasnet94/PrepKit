@@ -1,0 +1,905 @@
+{
+  "packTitle": "Weather and Environmental Exposure Import Batch",
+  "version": "1.0",
+  "createdAt": "2026-03-13T00:00:00Z",
+  "notes": [
+    "Normalized from Perplexity category output for Weather and Environmental Exposure.",
+    "Heat, air-quality, smoke, UV, and cross-topic red-flag content is strong and should be ranked normally.",
+    "Cold, lightning, and altitude content is useful but some references are indirect or secondary; related guides are marked reviewed or needs_source_review accordingly.",
+    "This batch is designed to complement earlier Natural Disasters, Medical Safety, Shelter/Fire/Warmth, and Power/Utilities batches without deleting prior guides."
+  ],
+  "categories": [
+    {
+      "categoryName": "Weather and Environmental Exposure",
+      "summary": "Practical guidance for heat, cold, smoke, dust, lightning, sun, altitude, and when weather exposure becomes a medical emergency.",
+      "guides": [
+        {
+          "title": "Everyday Extreme Heat Precautions (Non-Emergency)",
+          "slug": "everyday-extreme-heat-precautions",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Extreme Heat: Prevention and Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Stay cool, hydrated, out of direct sun, and check on high-risk people during extreme heat.",
+          "whenToUse": "During heat advisories, heat waves, or any period when temperatures or heat index are much higher than normal and you are not yet acutely ill.",
+          "preferredAction": "Limit heat exposure, use cooler indoor spaces or shade, drink water regularly, and shift activity to cooler parts of the day.",
+          "backupAction": "If you have no air-conditioning, use fans when outdoor air is cooler, cross-ventilation, cool showers, damp cloths, and frequent shaded rest.",
+          "steps": [
+            "Check local forecasts and heat alerts and plan outdoor tasks for early morning or evening.",
+            "Wear loose, light-colored clothing, a hat, and sunscreen on exposed skin.",
+            "Drink water in small, regular amounts rather than waiting until you feel very thirsty.",
+            "Limit alcohol, very sugary drinks, and heavy hot meals that can worsen dehydration or heat stress.",
+            "Use cool showers, baths, or damp cloths on neck, armpits, and groin if you feel overheated.",
+            "Check on older adults, infants, people with chronic disease, outdoor workers, and unhoused neighbors during heat waves.",
+            "Never leave children, disabled people, or pets in parked cars."
+          ],
+          "warnings": [
+            "Heat can worsen heart, lung, kidney, and other chronic conditions before obvious heat-illness symptoms appear.",
+            "Dehydration can be harder to notice in older adults and children."
+          ],
+          "whatNotToDo": [
+            "Do not rely only on thirst to decide when to drink.",
+            "Do not do strenuous activity during peak afternoon heat if it can be avoided.",
+            "Do not leave anyone in a closed parked vehicle."
+          ],
+          "redFlags": [
+            "Confusion, fainting, chest pain, trouble breathing, or vomiting during heat exposure.",
+            "Symptoms suggesting severe dehydration or heat stroke."
+          ],
+          "preparednessTips": [
+            "Identify the coolest room in your home and how to ventilate it safely.",
+            "Know locations of public cooling centers or air-conditioned public spaces.",
+            "Store extra drinking water and oral rehydration supplies if outages are common."
+          ],
+          "sourceReferences": [
+            {
+              "title": "About Heat and Your Health",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/heat-health/about/index.html",
+              "whyUseful": "Overview of heat risks and general protective actions."
+            },
+            {
+              "title": "Protect Yourself From the Dangers of Extreme Heat",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/climate-health/php/resources/protect-yourself-from-the-dangers-of-extreme-heat.html",
+              "whyUseful": "Practical stay-cool and hydration guidance."
+            },
+            {
+              "title": "Extreme Heat Safety",
+              "organization": "California Dept. of Public Health",
+              "url": "https://www.cdph.ca.gov/Programs/OPA/Pages/Communications-Toolkits/Heat-Summer-Safety.aspx",
+              "whyUseful": "Public-facing hot weather behavior guidance."
+            }
+          ],
+          "appTags": [
+            "heat",
+            "prevention",
+            "hydration",
+            "chronic-conditions",
+            "non-emergency"
+          ]
+        },
+        {
+          "title": "Recognizing and Treating Heat Exhaustion",
+          "slug": "recognizing-and-treating-heat-exhaustion",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Extreme Heat: Prevention and Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Heat Exhaustion: On-the-Spot Care",
+          "quickAnswer": "Move the person to a cooler place, cool them down, and give small sips of fluid; seek care if symptoms worsen or last about an hour.",
+          "whenToUse": "When someone in the heat has heavy sweating, weakness, nausea, headache, or dizziness but is still awake and able to drink.",
+          "preferredAction": "Cool the person promptly with shade or AC, wet cloths, and fluids, then monitor closely for worsening symptoms.",
+          "backupAction": "If you have no AC, use shade, loosen clothing, fan the person, and apply cool wet cloths while offering small sips of cool water if they can drink.",
+          "steps": [
+            "Move the person to a cooler area, ideally indoors with air-conditioning or otherwise into shade.",
+            "Lay them down and loosen or remove excess clothing.",
+            "Apply cool wet cloths, mist the skin, or use a cool bath if available and safe.",
+            "Give cool water or oral rehydration solution in small frequent sips if the person is fully awake and not vomiting.",
+            "Stay with them and monitor for at least an hour; seek medical care if symptoms do not improve or worsen."
+          ],
+          "warnings": [
+            "Heat exhaustion can progress to life-threatening heat stroke.",
+            "People with heart disease, kidney disease, or certain medications may need medical advice earlier."
+          ],
+          "whatNotToDo": [
+            "Do not give alcohol or very sugary drinks.",
+            "Do not leave the person alone or send them back to strenuous activity the same day."
+          ],
+          "redFlags": [
+            "Confusion, loss of consciousness, seizures, chest pain, or trouble breathing.",
+            "Vomiting that prevents the person from keeping fluids down.",
+            "Very hot or dry skin suggesting heat stroke."
+          ],
+          "preparednessTips": [
+            "Keep oral rehydration salts or electrolyte packets in first aid kits.",
+            "Teach early signs of heat illness to workers, athletes, and families."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Heat-related Illnesses",
+              "organization": "CDC NIOSH",
+              "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+              "whyUseful": "Defines heat exhaustion signs and first aid."
+            },
+            {
+              "title": "Heat Cramps, Exhaustion, Stroke",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/heat-illness",
+              "whyUseful": "Simple heat-illness triage and first-aid actions."
+            },
+            {
+              "title": "Signs and Symptoms of Heat Illness",
+              "organization": "UAB Medicine",
+              "url": "https://www.uabmedicine.org/news/the-signs-and-symptoms-of-heat-illness-and-tips-for-preventing-it/",
+              "whyUseful": "Clinical description of symptoms and escalation triggers."
+            }
+          ],
+          "appTags": [
+            "heat",
+            "heat-exhaustion",
+            "first-aid",
+            "outdoor-work",
+            "exertion"
+          ]
+        },
+        {
+          "title": "Recognizing and Responding to Heat Stroke (Medical Emergency)",
+          "slug": "recognizing-and-responding-to-heat-stroke",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Extreme Heat: Prevention and Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Heat Stroke: Suspected Life-Threatening Emergency",
+          "quickAnswer": "Call emergency services immediately, move the person to a cooler place, and start rapid cooling; do not give fluids to a confused or unconscious person.",
+          "whenToUse": "When someone exposed to heat has very high body temperature, confusion, seizure, collapse, or altered consciousness.",
+          "preferredAction": "Activate emergency medical services at once and start aggressive cooling with cool water, wet sheets, and airflow.",
+          "backupAction": "If EMS is delayed, continue cooling with any safe method available and arrange urgent transport to medical care.",
+          "steps": [
+            "Call emergency services as soon as heat stroke is suspected.",
+            "Move the person to the coolest accessible place and remove excess clothing.",
+            "Cool the body rapidly with cool water, wet cloths or sheets, or a cool bath if safe.",
+            "Fan the person while keeping the skin wet to increase evaporation.",
+            "If vomiting or unconscious, position on the side if safe and maintain the airway.",
+            "Continue active cooling until help arrives or the person is under medical supervision."
+          ],
+          "warnings": [
+            "Heat stroke can cause permanent organ damage or death.",
+            "Rapid cooling and emergency care are critical."
+          ],
+          "whatNotToDo": [
+            "Do not give fluids if the person is confused, vomiting, or unconscious.",
+            "Do not delay calling for help while trying home measures first.",
+            "Do not use alcohol rubs or extreme direct ice exposure over large areas as a substitute for standard cooling."
+          ],
+          "redFlags": [
+            "Any confusion, slurred speech, seizure, loss of consciousness, or very hot body with heat exposure.",
+            "Collapse or inability to respond normally in the heat."
+          ],
+          "preparednessTips": [
+            "Build a one-tap heat-stroke emergency action card in the app that emphasizes calling local emergency services first.",
+            "Use buddy checks for people working or exercising in high heat."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Heat-related Illnesses",
+              "organization": "CDC NIOSH",
+              "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+              "whyUseful": "Describes heat stroke and rapid cooling."
+            },
+            {
+              "title": "Heat Cramps, Exhaustion, Stroke",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/heat-illness",
+              "whyUseful": "Heat stroke first-aid priorities."
+            },
+            {
+              "title": "Signs and Symptoms of Heat Illness",
+              "organization": "UAB Medicine",
+              "url": "https://www.uabmedicine.org/news/the-signs-and-symptoms-of-heat-illness-and-tips-for-preventing-it/",
+              "whyUseful": "Confirms key emergency features and fluid cautions once mental status is altered."
+            }
+          ],
+          "appTags": [
+            "heat",
+            "heat-stroke",
+            "emergency",
+            "call-ems",
+            "first-aid"
+          ]
+        },
+        {
+          "title": "Working or Exercising Safely in High Heat",
+          "slug": "working-or-exercising-safely-in-high-heat",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Extreme Heat: Prevention and Emergencies",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Everyday Extreme Heat Precautions (Non-Emergency)",
+          "quickAnswer": "Increase water intake, schedule harder work for cooler times, take frequent shade breaks, and build up activity gradually in hot conditions.",
+          "whenToUse": "For outdoor workers, athletes, hikers, and anyone doing sustained physical activity in hot or humid weather.",
+          "preferredAction": "Adjust workload, rest breaks, clothing, and hydration while monitoring yourself and teammates for early symptoms.",
+          "backupAction": "If the schedule cannot change, shorten work, increase rest breaks, use every available shade or cooling option, and reduce intensity.",
+          "steps": [
+            "Check heat alerts and move the hardest tasks to early morning or evening if possible.",
+            "Build up activity gradually over 1 to 2 weeks on the first hot days to support acclimatization.",
+            "Drink small frequent amounts of water throughout the activity rather than waiting for thirst.",
+            "Take regular breaks in shade or cooling areas.",
+            "Wear light breathable clothing, a hat, and sunscreen.",
+            "Stop early if cramps, dizziness, nausea, headache, or unusual fatigue appear."
+          ],
+          "warnings": [
+            "Some medications, alcohol, and high humidity increase heat risk.",
+            "Heat illness can happen even when the temperature does not seem extreme if humidity is high and exertion is heavy."
+          ],
+          "whatNotToDo": [
+            "Do not perform maximal-effort workouts or the heaviest labor during the hottest parts of the day if it can be avoided.",
+            "Do not ignore cramps, dizziness, or nausea."
+          ],
+          "redFlags": [
+            "Confusion, chest pain, fainting, persistent vomiting, or symptoms that do not improve with rest and cooling."
+          ],
+          "preparednessTips": [
+            "Use work-rest and hydration reminders tied to local heat alerts.",
+            "Encourage buddy systems in hot environments."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Heat-related Illnesses",
+              "organization": "CDC NIOSH",
+              "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+              "whyUseful": "Risk factors and early symptoms for exertional heat illness."
+            },
+            {
+              "title": "Protect Yourself From the Dangers of Extreme Heat",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/climate-health/php/resources/protect-yourself-from-the-dangers-of-extreme-heat.html",
+              "whyUseful": "General outdoor planning and heat behavior advice."
+            }
+          ],
+          "appTags": [
+            "heat",
+            "outdoor-work",
+            "sports",
+            "prevention",
+            "alerts"
+          ]
+        },
+        {
+          "title": "Staying Warm and Dry in Cold Weather (Prevention)",
+          "slug": "staying-warm-and-dry-in-cold-weather",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Cold Exposure, Hypothermia, and Frostbite",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Staying Warm in a Cold Home Without Power",
+          "quickAnswer": "Dress in layers, stay dry, cover extremities, limit wind and wet exposure, and avoid overexertion that makes you sweat heavily.",
+          "whenToUse": "Whenever you must be outside in cold, windy, or freezing conditions and are not yet showing signs of hypothermia or frostbite.",
+          "preferredAction": "Use layered clothing, waterproof outer layers, hats, gloves, and insulated footwear, and seek warm shelter regularly.",
+          "backupAction": "If gear is limited, improvise insulation with dry spare clothing, blankets, plastic sheeting as a windbreak, and shared shelter.",
+          "steps": [
+            "Dress in loose layers: moisture-wicking base, insulating middle, and windproof or waterproof outer layer.",
+            "Cover head, ears, hands, and feet with hat, gloves or mittens, and appropriate footwear.",
+            "Stay as dry as possible and change out of wet clothes quickly.",
+            "Limit time in strong wind and take frequent warm-up breaks indoors or in sheltered areas.",
+            "Eat regular meals and drink warm non-alcoholic fluids when available."
+          ],
+          "warnings": [
+            "Being wet and exposed to wind speeds heat loss dramatically and can cause hypothermia even above freezing.",
+            "Tight clothing can reduce circulation and worsen cold injury risk."
+          ],
+          "whatNotToDo": [
+            "Do not use alcohol to warm up.",
+            "Do not keep wearing wet socks, gloves, or base layers if dry replacements exist."
+          ],
+          "redFlags": [
+            "Very cold, confused, or drowsy behavior.",
+            "Numb, pale, hard, or waxy skin on fingers, toes, ears, or nose."
+          ],
+          "preparednessTips": [
+            "Pack extra dry socks, gloves, and a hat whenever you go out in cold weather.",
+            "Keep a cold-weather vehicle kit with blankets, spare clothing, snacks, and chemical hand warmers."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What Is Hypothermia and Frostbite?",
+              "organization": "ABC11 relaying CDC content",
+              "url": "https://abc11.com/post/what-is-hypothermia-frostbite-center-for-disease-control-and-prevention-cdc/12612285/",
+              "whyUseful": "Summarizes CDC prevention advice on staying warm and dry."
+            },
+            {
+              "title": "Winter Safety Tips",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/local/dc-va-md-de/about-us/news-and-events/press-releases/red-cross-offers-15-ways-to-stay-safe-when-winter-hits.html",
+              "whyUseful": "Practical winter safety measures."
+            }
+          ],
+          "appTags": [
+            "cold",
+            "prevention",
+            "clothing",
+            "vehicle-kit",
+            "non-emergency"
+          ]
+        },
+        {
+          "title": "Field Response to Mild Hypothermia",
+          "slug": "field-response-to-mild-hypothermia",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Cold Exposure, Hypothermia, and Frostbite",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Recognizing and Responding to Hypothermia",
+          "quickAnswer": "Get the person out of cold and wet conditions, remove wet clothes, warm the body core first, and seek medical care if symptoms are moderate or severe.",
+          "whenToUse": "When someone is shivering, cold, tired, or mildly confused after cold exposure but is still conscious and responsive.",
+          "preferredAction": "Move to warm shelter, replace wet clothes with dry ones, insulate the person, and warm chest, neck, head, and groin first.",
+          "backupAction": "If full shelter is not available, use any windbreak, dry layers, blankets, and body-to-body contact under loose dry coverings.",
+          "steps": [
+            "Move the person to a warm room, vehicle with heat, or sheltered area out of wind and precipitation.",
+            "Gently remove wet clothing and replace it with dry clothing, blankets, or a sleeping bag.",
+            "Warm the center of the body first using blankets, warm packs, or body-to-body contact under dry layers.",
+            "Offer warm sweet non-alcoholic drinks if the person is awake and can swallow safely.",
+            "Keep the person comfortable and handle them gently.",
+            "Seek urgent medical care if symptoms persist, worsen, or mental status changes."
+          ],
+          "warnings": [
+            "Moderate to severe hypothermia can be fatal without medical care.",
+            "Rough handling can be dangerous in more severe hypothermia."
+          ],
+          "whatNotToDo": [
+            "Do not use very hot water or direct high heat.",
+            "Do not massage arms and legs vigorously.",
+            "Do not give alcohol."
+          ],
+          "redFlags": [
+            "Stops shivering, becomes very confused, cannot walk, is very drowsy, has slowed breathing, or becomes unconscious."
+          ],
+          "preparednessTips": [
+            "Include a hypothermia emergency flow in the app that emphasizes gentle handling and core rewarming.",
+            "Encourage users in cold regions to know local emergency numbers and warming center locations."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What Is Hypothermia and Frostbite?",
+              "organization": "ABC11 relaying CDC content",
+              "url": "https://abc11.com/post/what-is-hypothermia-frostbite-center-for-disease-control-and-prevention-cdc/12612285/",
+              "whyUseful": "Summarizes CDC rewarming steps and warnings."
+            }
+          ],
+          "appTags": [
+            "cold",
+            "hypothermia",
+            "first-aid",
+            "emergency"
+          ]
+        },
+        {
+          "title": "Field Response to Frostbite",
+          "slug": "field-response-to-frostbite",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Cold Exposure, Hypothermia, and Frostbite",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "Frostbite: Local Cold Injury Care",
+          "quickAnswer": "Protect the area from further cold, avoid walking on frostbitten feet, and rewarm in warm water only if you can prevent refreezing.",
+          "whenToUse": "When skin exposed to cold becomes numb, hard, pale, or waxy, especially on fingers, toes, nose, ears, or cheeks.",
+          "preferredAction": "Get to a warm place, remove wet or tight items, gently rewarm the area, and obtain medical care promptly.",
+          "backupAction": "If the tissue might refreeze, protect from further cold, pad and immobilize it, and delay active rewarming until refreezing risk is lower.",
+          "steps": [
+            "Move the person to warm shelter as soon as possible.",
+            "Remove wet gloves, socks, or shoes, avoiding force on stuck items.",
+            "Do not walk on frostbitten feet or toes unless absolutely necessary.",
+            "Rewarm the area in warm water that feels comfortable to unaffected skin if refreezing risk is low.",
+            "Protect the area with loose clean covering and seek medical care as soon as practical."
+          ],
+          "warnings": [
+            "Refreezing after thawing can cause severe tissue damage.",
+            "Rewarming can be painful but direct high heat can burn numb skin."
+          ],
+          "whatNotToDo": [
+            "Do not rub frostbitten skin with snow or massage it.",
+            "Do not use direct dry heat from fires, stoves, or heating pads."
+          ],
+          "redFlags": [
+            "Blistering, black or very dark skin, loss of sensation after rewarming, or large affected areas.",
+            "Frostbite plus hypothermia symptoms."
+          ],
+          "preparednessTips": [
+            "Teach users that early tingling or numbness is a warning to stop and rewarm before frostbite develops.",
+            "Carry extra socks, gloves, and a dry insulating layer on all cold outings."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What Is Hypothermia and Frostbite?",
+              "organization": "ABC11 relaying CDC content",
+              "url": "https://abc11.com/post/what-is-hypothermia-frostbite-center-for-disease-control-and-prevention-cdc/12612285/",
+              "whyUseful": "Summarizes basic field management of frostbite."
+            }
+          ],
+          "appTags": [
+            "cold",
+            "frostbite",
+            "first-aid",
+            "emergency"
+          ]
+        },
+        {
+          "title": "Cold-Wet Exposure: Rain, Wind, and Chill",
+          "slug": "cold-wet-exposure-rain-wind-and-chill",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Cold Exposure, Hypothermia, and Frostbite",
+          "sourceQuality": "mixed",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_subguide",
+          "existingGuideReference": "Emergency Overnight Setup When You Are Already Wet",
+          "quickAnswer": "In cold, wet, windy conditions, staying dry and sheltered is as important as temperature; seek windbreaks, change wet clothes, and insulate from the ground.",
+          "whenToUse": "For hikers, outdoor workers, or stranded travelers in cool to cold weather with rain, wet snow, or strong wind.",
+          "preferredAction": "Reduce exposure by finding or creating shelter, changing into dry layers, and staying off cold ground or metal.",
+          "backupAction": "If you cannot fully shelter, improvise with a vehicle, tarp, overhang, or dense trees where safe, and maximize insulation with dry materials.",
+          "steps": [
+            "Seek or create shelter from wind and precipitation.",
+            "Remove and replace wet clothing with dry items, or wring out clothes and add insulation if nothing else is available.",
+            "Sit or lie on insulating material instead of bare ground or metal.",
+            "Keep extremities covered and avoid sweating heavily into your clothes.",
+            "Monitor closely for early hypothermia and warm up early."
+          ],
+          "warnings": [
+            "Hypothermia risk is high in cold-wet-windy conditions even when air temperatures are above freezing."
+          ],
+          "whatNotToDo": [
+            "Do not ignore wet clothing.",
+            "Do not rely only on exertion to stay warm; exhaustion increases risk."
+          ],
+          "redFlags": [
+            "Confusion, extreme fatigue, stumbling, or other possible hypothermia signs."
+          ],
+          "preparednessTips": [
+            "Promote waterproof outer layers and emergency rain gear in gear checklists.",
+            "Encourage bail-out routes or shelter options when traveling in cold-wet environments."
+          ],
+          "sourceReferences": [
+            {
+              "title": "What Is Hypothermia and Frostbite?",
+              "organization": "ABC11 relaying CDC content",
+              "url": "https://abc11.com/post/what-is-hypothermia-frostbite-center-for-disease-control-and-prevention-cdc/12612285/",
+              "whyUseful": "Emphasizes wet clothing and warming."
+            },
+            {
+              "title": "Winter Safety Tips",
+              "organization": "American Red Cross",
+              "url": "https://www.redcross.org/local/dc-va-md-de/about-us/news-and-events/press-releases/red-cross-offers-15-ways-to-stay-safe-when-winter-hits.html",
+              "whyUseful": "Practical clothing and storm advice."
+            }
+          ],
+          "appTags": [
+            "cold",
+            "rain",
+            "windchill",
+            "hypothermia-risk",
+            "scenarios"
+          ]
+        },
+        {
+          "title": "Using AQI and Basic Smoke/Air Quality Precautions",
+          "slug": "using-aqi-and-basic-smoke-air-quality-precautions",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Air Quality, Smoke, Dust, and Ash",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Check AQI and reduce outdoor exertion, close windows, and protect sensitive groups first as air quality worsens.",
+          "whenToUse": "Whenever the air looks hazy, smells smoky or dirty, or authorities issue air-quality or wildfire-smoke alerts.",
+          "preferredAction": "Use AQI or local equivalent to guide behavior and reduce time and effort outdoors as conditions worsen.",
+          "backupAction": "If you cannot check AQI, treat visible smoke or strong odors as unhealthy and stay indoors with windows closed.",
+          "steps": [
+            "Check AQI through official sources like AirNow or local agencies when possible.",
+            "If AQI is unhealthy for sensitive groups or worse, reduce prolonged or heavy outdoor exertion, especially for children, older adults, and people with heart or lung disease.",
+            "If AQI is unhealthy or higher, stay indoors as much as possible and use a portable air cleaner if available.",
+            "Avoid adding indoor pollution such as smoking, candles, frying, or vacuuming without HEPA filtration.",
+            "Follow local guidance on respirators such as N95-type masks if you must be outdoors in heavy smoke."
+          ],
+          "warnings": [
+            "Poor air quality can worsen asthma, COPD, heart disease, and can trigger serious cardiorespiratory events."
+          ],
+          "whatNotToDo": [
+            "Do not rely on simple paper or cloth masks for fine smoke particles.",
+            "Do not exercise heavily outdoors during high smoke or pollution events."
+          ],
+          "redFlags": [
+            "Difficulty breathing, chest pain, severe coughing, wheezing not relieved by usual medications, or confusion after smoke exposure."
+          ],
+          "preparednessTips": [
+            "Users with asthma or heart disease should keep rescue medications accessible and follow clinician action plans.",
+            "Include AQI color explanations and offline behavior guidance in the app."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire Smoke: A Guide for Public Health Officials",
+              "organization": "AirNow / US EPA",
+              "url": "https://www.airnow.gov/sites/default/files/2021-09/wildfire-smoke-guide-chapters-4-5.pdf",
+              "whyUseful": "Detailed AQI-linked public advice."
+            },
+            {
+              "title": "Environmental and Health Impacts of Air Pollution: A Review",
+              "organization": "PMC",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044178/",
+              "whyUseful": "Summarizes health effects of particulate air pollution."
+            }
+          ],
+          "appTags": [
+            "air-quality",
+            "AQI",
+            "smoke",
+            "pollution",
+            "chronic-disease"
+          ]
+        },
+        {
+          "title": "Protecting Yourself from Wildfire Smoke Indoors",
+          "slug": "protecting-yourself-from-wildfire-smoke-indoors",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Air Quality, Smoke, Dust, and Ash",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "upgrade_existing",
+          "existingGuideReference": "During Wildfire Smoke",
+          "quickAnswer": "Stay inside with windows and doors closed, create one cleaner-air room if possible, and avoid adding indoor pollution.",
+          "whenToUse": "During wildfire smoke events when outdoor air is visibly smoky or AQI is unhealthy or worse and evacuation is not currently ordered.",
+          "preferredAction": "Create a cleaner-air room at home, school, or work and limit outdoor time and exertion.",
+          "backupAction": "If you have no filter or cleaner, close windows and doors, seal obvious gaps, and avoid indoor particle-generating activities.",
+          "steps": [
+            "Choose a room that can be closed off and is large enough for people to stay in.",
+            "Close windows and doors and seal obvious drafts if safe and temporary.",
+            "Use a portable HEPA air cleaner or approved box-fan filter setup if available and safe.",
+            "Set HVAC systems to recirculate indoor air if possible.",
+            "Avoid indoor activities that add particles such as smoking, frying, or vacuuming without HEPA filtration.",
+            "Leave for cleaner air elsewhere if the home remains very smoky or high-risk people become symptomatic."
+          ],
+          "warnings": [
+            "Indoor air can quickly become unhealthy if windows remain open during smoke events or indoor particle sources are added."
+          ],
+          "whatNotToDo": [
+            "Do not run systems that pull unfiltered outdoor air in during heavy smoke unless you have specific local guidance.",
+            "Do not use unvented gas, propane, or charcoal heaters indoors."
+          ],
+          "redFlags": [
+            "Severe breathing difficulty, chest pain, or signs of heart attack or stroke during smoke events."
+          ],
+          "preparednessTips": [
+            "Identify a cleaner-air room and obtain filters before wildfire season.",
+            "Build a checklist for assembling a basic cleaner-air space."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire Smoke: A Guide for Public Health Officials",
+              "organization": "AirNow / US EPA",
+              "url": "https://www.airnow.gov/sites/default/files/2021-09/wildfire-smoke-guide-chapters-4-5.pdf",
+              "whyUseful": "Indoor protection strategies and cleaner-air rooms."
+            }
+          ],
+          "appTags": [
+            "smoke",
+            "indoor-air",
+            "wildfire",
+            "chronic-disease",
+            "scenarios"
+          ]
+        },
+        {
+          "title": "Dust, Ash, and Airborne Irritants After Storms, Eruptions, or Collapses",
+          "slug": "dust-ash-and-airborne-irritants-after-storms-eruptions-or-collapses",
+          "guideType": "scenario_guide",
+          "layer": "scenario",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Air Quality, Smoke, Dust, and Ash",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Avoid breathing dust and ash, use appropriate masks if available, stay upwind, and clean up gently with moisture to avoid re-suspending particles.",
+          "whenToUse": "After dust storms, volcanic ashfall, building collapses, or wildfires when particles cover surfaces or air quality is poor.",
+          "preferredAction": "Limit outdoor time, especially for sensitive people, use fitted respiratory protection when cleaning, and keep children away from heavy dust.",
+          "backupAction": "If no respirator is available, cover nose and mouth with a damp cloth or scarf and avoid vigorous cleanup that kicks up dust.",
+          "steps": [
+            "Stay indoors as much as possible while dust or ash levels are high and close windows and doors.",
+            "If you must go outside or clean up, use a well-fitting respirator rated for fine particles if available.",
+            "Keep children, older adults, and people with lung or heart disease away from heavy dust and ash.",
+            "Lightly mist dusty surfaces and clean gently into sealed bags rather than dry sweeping.",
+            "Wash exposed skin and change clothes after cleanup."
+          ],
+          "warnings": [
+            "Some dusts and ashes can contain toxic substances and fine particles that harm lungs and other organs."
+          ],
+          "whatNotToDo": [
+            "Do not use leaf blowers or aggressive dry sweeping.",
+            "Do not allow children to play in ash or dust piles."
+          ],
+          "redFlags": [
+            "Sudden shortness of breath, chest pain, severe coughing, or eye injury after dust or ash exposure."
+          ],
+          "preparednessTips": [
+            "Store appropriate masks and eye protection if you live in dust-prone or volcanic regions.",
+            "Add local hazard-specific modules where relevant."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Wildfire Smoke: A Guide for Public Health Officials",
+              "organization": "AirNow / US EPA",
+              "url": "https://www.airnow.gov/sites/default/files/2021-09/wildfire-smoke-guide-chapters-4-5.pdf",
+              "whyUseful": "Cleanup and exposure reduction concepts for airborne particles."
+            },
+            {
+              "title": "Environmental and Health Impacts of Air Pollution: A Review",
+              "organization": "PMC",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044178/",
+              "whyUseful": "Health effects of particulate matter and dust."
+            }
+          ],
+          "appTags": [
+            "dust",
+            "ash",
+            "air-quality",
+            "cleanup",
+            "scenarios"
+          ]
+        },
+        {
+          "title": "Immediate Actions if Thunderstorm or Lightning Approaches Outdoors",
+          "slug": "immediate-actions-if-thunderstorm-or-lightning-approaches-outdoors",
+          "guideType": "action_card",
+          "layer": "action",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Lightning and Thunderstorm Exposure",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Get inside a substantial building or hard-topped metal vehicle immediately; if you cannot, move away from high points, isolated trees, and water.",
+          "whenToUse": "At the first sound of thunder or sight of lightning when you are outdoors, especially in open areas or on high ground.",
+          "preferredAction": "Stop outdoor activity and go to a fully enclosed building or a hard-topped vehicle with the windows closed.",
+          "backupAction": "If no shelter or vehicle is available, move quickly to lower terrain away from tall objects and water, spread out if in a group, and minimize ground contact.",
+          "steps": [
+            "At first thunder, stop swimming, boating, hiking on ridges, or field activity.",
+            "Head for the nearest substantial building with wiring and plumbing, or a hard-topped vehicle.",
+            "If caught on a ridge or open high ground, move downhill to lower terrain away from solitary trees and tall objects.",
+            "Get away from water, shorelines, metal fences, and railings."
+          ],
+          "warnings": [
+            "Lightning can strike miles from the center of a storm; if you hear thunder, you are close enough to be struck."
+          ],
+          "whatNotToDo": [
+            "Do not shelter under isolated trees, in small open structures, or near tall metal objects.",
+            "Do not stay in or near bodies of water."
+          ],
+          "redFlags": [
+            "Any lightning strike victim: call emergency services immediately and begin CPR if trained and needed."
+          ],
+          "preparednessTips": [
+            "Follow the principle: when thunder roars, go indoors.",
+            "Plan escape routes from fields, beaches, lakes, and peaks."
+          ],
+          "sourceReferences": [
+            {
+              "title": "7 lightning safety tips if you are caught outside during a thunderstorm",
+              "organization": "AccuWeather summarizing NOAA guidance",
+              "url": "https://www.accuweather.com/en/weather-news/7-lightning-safety-tips-if-youre-caught-outside-during-a-thunderstorm-2/434483",
+              "whyUseful": "Summarizes NOAA-style recommendations on seeking shelter quickly."
+            }
+          ],
+          "appTags": [
+            "lightning",
+            "thunderstorms",
+            "outdoor-safety",
+            "emergency"
+          ]
+        },
+        {
+          "title": "Everyday Sun Protection and UV Safety",
+          "slug": "everyday-sun-protection-and-uv-safety",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Sun Exposure and UV-Related Heat Stress",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Limit midday sun, cover skin, use high-SPF sunscreen, and protect your eyes to reduce UV damage and heat stress.",
+          "whenToUse": "Whenever you will be outdoors for more than brief periods, especially around midday, at high altitude, or near reflective surfaces.",
+          "preferredAction": "Use shade, clothing, hats, sunglasses, and sunscreen together and move activities to lower-UV times where possible.",
+          "backupAction": "If sunscreen or full clothing is not available, prioritize shade, hats, and limiting time in direct sun.",
+          "steps": [
+            "Plan outdoor activities for early morning or late afternoon when UV and heat are lower.",
+            "Wear long-sleeved tightly woven clothing, a broad-brimmed hat, and UV-blocking sunglasses.",
+            "Apply broad-spectrum high-SPF sunscreen to all exposed skin and reapply as directed.",
+            "Use shade whenever possible, especially during peak sun hours.",
+            "Drink water regularly to compensate for heat and sun exposure."
+          ],
+          "warnings": [
+            "Excessive solar UV causes skin cancer, cataracts, and other eye damage and can contribute to heat stress."
+          ],
+          "whatNotToDo": [
+            "Do not rely on sunscreen alone without clothing and shade.",
+            "Do not use tanning as a way to protect your skin."
+          ],
+          "redFlags": [
+            "Severe sunburn with large blisters, fever, chills, confusion, or signs of infection."
+          ],
+          "preparednessTips": [
+            "Carry sunscreen, a hat, and sunglasses in outdoor kits.",
+            "Remind users that cloudy days can still have high UV."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Health consequences of excessive solar UV radiation",
+              "organization": "WHO",
+              "url": "https://www.who.int/news/item/25-07-2006-health-consequences-of-excessive-solar-uv-radiation",
+              "whyUseful": "Risks and prevention recommendations for excessive UV exposure."
+            },
+            {
+              "title": "Protect Yourself From the Dangers of Extreme Heat",
+              "organization": "CDC",
+              "url": "https://www.cdc.gov/climate-health/php/resources/protect-yourself-from-the-dangers-of-extreme-heat.html",
+              "whyUseful": "Includes sunscreen, clothing, and shade advice."
+            }
+          ],
+          "appTags": [
+            "sun",
+            "UV",
+            "prevention",
+            "skin-cancer",
+            "eyes"
+          ]
+        },
+        {
+          "title": "Basic Altitude Illness Prevention for Trekkers",
+          "slug": "basic-altitude-illness-prevention-for-trekkers",
+          "guideType": "preparedness_guide",
+          "layer": "preparedness",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "Altitude-Related Exposure Basics",
+          "sourceQuality": "mixed",
+          "contentStatus": "needs_source_review",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Ascend gradually, include rest days, stay hydrated, avoid alcohol and overexertion, and stop or descend if symptoms appear.",
+          "whenToUse": "When planning or beginning treks, climbs, or travel above roughly 2,500 to 3,000 meters, especially if you are not acclimatized.",
+          "preferredAction": "Limit sleeping-altitude gain, schedule acclimatization days, and adjust plans based on symptoms.",
+          "backupAction": "If you must ascend faster, reduce exertion, monitor symptoms closely, and be ready to stop or descend early.",
+          "steps": [
+            "Above roughly 3,000 meters, plan no more than about 300 to 500 meters increase in sleeping altitude per day and include rest days every few days.",
+            "Maintain steady hydration and eat regular nutritious meals.",
+            "Avoid alcohol and sedatives, especially at night.",
+            "Watch closely for headache, nausea, unusual fatigue, sleep disruption, or worsening symptoms and stop ascending if they intensify."
+          ],
+          "warnings": [
+            "Rapid ascent increases the risk of altitude illness, which can become life-threatening if ignored."
+          ],
+          "whatNotToDo": [
+            "Do not ignore persistent or worsening symptoms while ascending.",
+            "Do not continue to higher sleeping altitude if you already have clear signs of altitude sickness."
+          ],
+          "redFlags": [
+            "Severe headache, repeated vomiting, trouble walking straight, shortness of breath at rest, or altered behavior at altitude."
+          ],
+          "preparednessTips": [
+            "Use region-specific altitude profiles and conservative ascent plans for routes such as the Himalaya.",
+            "Encourage pre-trip consultation with experienced providers about medications and higher-risk conditions."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Health and Safety Tips for High Altitude Sickness",
+              "organization": "Glorious Himalaya",
+              "url": "https://www.glorioushimalaya.com/healthy-and-safety-tips-for-high-altitude-trekking/",
+              "whyUseful": "Practical trekking-oriented prevention advice."
+            }
+          ],
+          "appTags": [
+            "altitude",
+            "trekking",
+            "prevention",
+            "himalaya"
+          ]
+        },
+        {
+          "title": "Weather-Related Red Flag Symptoms (Heat, Cold, Air, Lightning)",
+          "slug": "weather-related-red-flag-symptoms",
+          "guideType": "reference_guide",
+          "layer": "reference",
+          "category": "Weather and Environmental Exposure",
+          "parentTopic": "When Weather Exposure Becomes a Medical Emergency",
+          "sourceQuality": "strong",
+          "contentStatus": "reviewed",
+          "integrationAction": "add_new",
+          "existingGuideReference": null,
+          "quickAnswer": "Confusion, chest pain, trouble breathing, fainting, seizures, or loss of consciousness during weather exposure are medical emergencies.",
+          "whenToUse": "Any time someone becomes very unwell during extreme heat or cold, smoke or dust exposure, storms, or after a lightning strike.",
+          "preferredAction": "Recognize these signs quickly, move to the relevant emergency action guide, and call for help immediately.",
+          "backupAction": "If you cannot call right away, begin first aid and get help from others nearby as fast as possible.",
+          "steps": [
+            "Check for red-flag symptoms such as confusion, inability to walk or talk normally, chest pain, severe breathing difficulty, seizures, or unresponsiveness.",
+            "In heat, suspect heat stroke if the person is very hot, confused, or collapsed and call emergency services while cooling.",
+            "In cold, suspect severe hypothermia if the person is very cold, confused, or not shivering and call for help while warming gently.",
+            "In smoke or dust, treat severe shortness of breath, chest tightness, or blue lips as emergencies.",
+            "After lightning, treat all strikes as emergencies even if the person initially seems okay."
+          ],
+          "warnings": [
+            "Trying to tough it out with these symptoms can lead to death or permanent disability."
+          ],
+          "whatNotToDo": [
+            "Do not delay calling for help to see whether severe symptoms go away.",
+            "Do not rely only on over-the-counter medications when severe symptoms are present."
+          ],
+          "redFlags": [
+            "Confusion, collapse, chest pain, severe trouble breathing, seizures, or unresponsiveness after weather exposure."
+          ],
+          "preparednessTips": [
+            "Build a unified Red Flags screen in the app that links to emergency action cards and local emergency contacts.",
+            "Allow a quick tap from any weather guide into this red-flag reference."
+          ],
+          "sourceReferences": [
+            {
+              "title": "Heat-related Illnesses",
+              "organization": "CDC NIOSH",
+              "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+              "whyUseful": "Emergency heat-illness features and actions."
+            },
+            {
+              "title": "Heat Cramps, Exhaustion, Stroke",
+              "organization": "National Weather Service",
+              "url": "https://www.weather.gov/safety/heat-illness",
+              "whyUseful": "Clear emergency criteria for severe heat illness."
+            },
+            {
+              "title": "What Is Hypothermia and Frostbite?",
+              "organization": "ABC11 relaying CDC content",
+              "url": "https://abc11.com/post/what-is-hypothermia-frostbite-center-for-disease-control-and-prevention-cdc/12612285/",
+              "whyUseful": "Cold emergency signs summarized from CDC content."
+            },
+            {
+              "title": "Environmental and Health Impacts of Air Pollution: A Review",
+              "organization": "PMC",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7044178/",
+              "whyUseful": "Serious cardiorespiratory impacts of pollution and particulate exposure."
+            }
+          ],
+          "appTags": [
+            "emergency",
+            "red-flags",
+            "triage",
+            "cross-topic"
+          ]
+        }
+      ]
+    }
+  ]
+}

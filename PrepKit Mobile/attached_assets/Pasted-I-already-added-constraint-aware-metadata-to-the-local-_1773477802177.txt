@@ -1,0 +1,63 @@
+I already added constraint-aware metadata to the local guide library in Replit.
+
+Goal:
+Create a small export file that contains only the constraint-aware metadata for guides that were actually annotated, so I can sync those fields into Supabase through Cursor without overwriting other guide content.
+
+Important:
+- Do not rebuild the app.
+- Do not change chat behavior.
+- Do not modify existing guide content fields.
+- Only export the new metadata fields for guides that already have them.
+- Match guides by slug.
+- Keep the file shape clean and backfill-friendly.
+
+What to do:
+1. Inspect the current local guide dataset and find all guides where at least one of these fields is present and non-empty:
+   - responseRole
+   - constraintTags
+   - blockedByConstraints
+   - alternativeToGuideSlugs
+
+2. Create a new export file in the project root called:
+   constraint_metadata_patch.json
+
+3. The file should be an array of objects shaped exactly like this:
+   {
+     "slug": "guide-slug",
+     "responseRole": "primary",
+     "constraintTags": ["no_boiling"],
+     "blockedByConstraints": ["no_heat_source"],
+     "alternativeToGuideSlugs": ["some-other-guide-slug"]
+   }
+
+Rules:
+- Include only guides that actually have one or more of these metadata fields set.
+- Always include slug.
+- Include only these 5 fields:
+  - slug
+  - responseRole
+  - constraintTags
+  - blockedByConstraints
+  - alternativeToGuideSlugs
+- Do not include title, summary, body text, source refs, or any other content.
+- Keep camelCase keys exactly as written above.
+- Arrays should always be arrays, not comma-separated strings.
+- Omit fields if they are empty, except slug.
+- Validate that all slugs exist in the local guide dataset.
+- Deduplicate entries if needed.
+
+4. Also generate a short summary file:
+   constraint_metadata_patch_summary.md
+
+The summary should include:
+- total annotated guides exported
+- which parent topics were represented
+- a simple count by responseRole
+- a simple count of the most common constraint tags
+- any slugs referenced in alternativeToGuideSlugs that were not found locally
+
+5. Do not change existing runtime code unless needed for export.
+6. At the end, tell me:
+- which file was created
+- how many guides were exported
+- whether any invalid alternative slugs were found
