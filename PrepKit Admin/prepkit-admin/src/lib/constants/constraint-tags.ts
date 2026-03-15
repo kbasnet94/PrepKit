@@ -9,6 +9,8 @@ export const ALLOWED_CONSTRAINT_TAGS = [
   "no_fire",
   "no_heat_source",
   "no_bleach",
+  "no_tablets",
+  "no_filter",
   "no_signal",
   "in_vehicle",
   "at_night",
