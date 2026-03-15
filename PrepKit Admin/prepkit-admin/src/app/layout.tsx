@@ -24,6 +24,7 @@ import {
   ClipboardList,
   Package,
   Upload,
+  MessageSquare,
 } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -47,6 +48,7 @@ const navItems = [
   { title: "Import JSON", href: "/guides/import", icon: Upload },
   { title: "Review Queue", href: "/review", icon: ClipboardList },
   { title: "Releases", href: "/releases", icon: Package },
+  { title: "Feedback", href: "/feedback", icon: MessageSquare },
 ];
 
 export default function RootLayout({

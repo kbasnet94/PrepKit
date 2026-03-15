@@ -17,6 +17,7 @@ import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
 import { getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import type { Guide, GuideSourceRef } from "@/lib/guides";
+import { GuideFeedback } from "@/components/GuideFeedback";
 
 const RISK_COLORS: Record<string, string> = {
   low: "#2D6A4F",
@@ -361,6 +362,8 @@ export default function GuideDetailScreen() {
             </View>
           </Section>
         ) : null}
+
+        <GuideFeedback guideId={guide.id} guideSlug={guide.slug} />
       </ScrollView>
     </View>
   );
