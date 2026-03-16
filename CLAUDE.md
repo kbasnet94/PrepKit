@@ -1,17 +1,17 @@
-# PrepKit — Project Instructions for Claude
+# NorthKeep — Project Instructions for Claude
 
 ## What this project is
 
-PrepKit is an offline emergency survival app. This repo contains two main parts:
+NorthKeep is an offline emergency survival app. This repo contains two main parts:
 
-- **PrepKit Mobile** (`PrepKit Mobile/`) — React Native mobile app (read-only reference; don't modify unless asked)
-- **PrepKit Admin** (`PrepKit Admin/prepkit-admin/`) — Next.js admin app for managing guide content, running at `localhost:3000`
+- **NorthKeep Mobile** (`NorthKeep/`) — React Native mobile app (read-only reference; don't modify unless asked)
+- **NorthKeepAdmin** (`NorthKeepAdmin/northkeep-admin/`) — Next.js admin app for managing guide content, running at `localhost:3000`
 
-The admin app connects to a **Supabase** backend. Credentials are in `PrepKit Admin/prepkit-admin/.env.local`.
+The admin app connects to a **Supabase** backend. Credentials are in `NorthKeepAdmin/northkeep-admin/.env.local`.
 
 ## The guide content pipeline
 
-PrepKit uses an eight-step pipeline to create and upgrade emergency guides. **This is the most important workflow in the project.** When someone asks to "run the pipeline," "do a dry run," "check for gaps," "add a new topic," or "kick off the flow," they mean this pipeline.
+NorthKeep uses an eight-step pipeline to create and upgrade emergency guides. **This is the most important workflow in the project.** When someone asks to "run the pipeline," "do a dry run," "check for gaps," "add a new topic," or "kick off the flow," they mean this pipeline.
 
 ```
 Planning → Research → Writing → Constraint Annotation → Validation → Import/Staging → Human Review → Release
@@ -28,19 +28,19 @@ Each step has a skill with detailed instructions in `skills/<skill-name>/SKILL.m
 
 | Step | Skill | Input | Output |
 |------|-------|-------|--------|
-| 1. Planning | `prepkit-planning` | DB query or JSON export | `planning-packet.json` |
-| 2. Research | `prepkit-research` | Planning packet + evidence tier | `research-packet.json` |
-| 3. Writing | `prepkit-writing` | Research packet | `guide-draft.json` |
-| 3a. Consolidation | `prepkit-consolidator` | Two duplicate guides | `consolidation-report.json` + `guide-draft.json` |
-| 4. Constraint Annotation | `prepkit-constraint-annotator` | Guide draft + full library context | `guide-annotated.json` |
-| 5. Validation | `prepkit-validation` | Annotated guide + research packet + library | `validation-report.json` |
-| 6. Import/Staging | `prepkit-import-staging` | Annotated guide (validated) | `import-receipt.json` |
+| 1. Planning | `northkeep-planning` | DB query or JSON export | `planning-packet.json` |
+| 2. Research | `northkeep-research` | Planning packet + evidence tier | `research-packet.json` |
+| 3. Writing | `northkeep-writing` | Research packet | `guide-draft.json` |
+| 3a. Consolidation | `northkeep-consolidator` | Two duplicate guides | `consolidation-report.json` + `guide-draft.json` |
+| 4. Constraint Annotation | `northkeep-constraint-annotator` | Guide draft + full library context | `guide-annotated.json` |
+| 5. Validation | `northkeep-validation` | Annotated guide + research packet + library | `validation-report.json` |
+| 6. Import/Staging | `northkeep-import-staging` | Annotated guide (validated) | `import-receipt.json` |
 | 7. Human Review | Manual in admin UI | — | Status change: draft → in_review → approved |
-| 8. Release | `prepkit-release` | Approved versions | Published release bundle |
+| 8. Release | `northkeep-release` | Approved versions | Published release bundle |
 
 ### Pipeline architecture doc
 
-Full details on every skill's inputs, outputs, and handoff contracts: `prepkit-skill-pipeline-architecture.md`
+Full details on every skill's inputs, outputs, and handoff contracts: `northkeep-skill-pipeline-architecture.md`
 
 ### Completed pipeline run examples
 
@@ -65,7 +65,7 @@ When asked to run the pipeline:
 
 If the user says something like "check the database and recommend a topic" or "scan for gaps":
 
-1. Read `skills/prepkit-planning/SKILL.md`
+1. Read `skills/northkeep-planning/SKILL.md`
 2. Query Supabase for the full guide library (guides + latest versions with constraint metadata)
 3. Apply the weak-guide criteria and gap analysis from the planning skill
 4. Present findings and let the user pick what to work on
@@ -99,7 +99,7 @@ at_night, child, pregnant, cant_move, no_shelter, no_clean_water,
 no_water, no_power, vomiting, getting_worse, alone, confused, unconscious
 ```
 
-Defined in `PrepKit Admin/prepkit-admin/src/lib/constants/constraint-tags.ts`. New tags require a code change — skills can suggest but not unilaterally add.
+Defined in `NorthKeepAdmin/northkeep-admin/src/lib/constants/constraint-tags.ts`. New tags require a code change — skills can suggest but not unilaterally add.
 
 ### Admin app API endpoints
 
@@ -114,7 +114,7 @@ Defined in `PrepKit Admin/prepkit-admin/src/lib/constants/constraint-tags.ts`. N
 
 ### Database
 
-Supabase (PostgreSQL). Key tables: `guides`, `guide_versions`, `guide_categories`, `guide_parent_topics`, `releases`, `release_items`. The admin app uses the **anon key** (not service role) via `createAdminClient()` in `PrepKit Admin/prepkit-admin/src/lib/supabase/admin.ts`.
+Supabase (PostgreSQL). Key tables: `guides`, `guide_versions`, `guide_categories`, `guide_parent_topics`, `releases`, `release_items`. The admin app uses the **anon key** (not service role) via `createAdminClient()` in `NorthKeepAdmin/northkeep-admin/src/lib/supabase/admin.ts`.
 
 ### Fallback chain pattern
 
