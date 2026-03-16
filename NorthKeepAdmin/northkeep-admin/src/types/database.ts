@@ -139,3 +139,23 @@ export interface AppFeedback {
   device_id: string | null;
   created_at: string;
 }
+
+export type RequestStatus = "pending" | "planned" | "completed";
+
+export interface GuideRequest {
+  id: string;
+  topic: string;
+  description: string | null;
+  upvote_count: number;
+  device_id: string | null;
+  status: RequestStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface RequestUpvote {
+  id: string;
+  request_id: string;
+  device_id: string | null;
+  created_at: string;
+}

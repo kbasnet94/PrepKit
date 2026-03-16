@@ -25,6 +25,7 @@ import {
   Package,
   Upload,
   MessageSquare,
+  Lightbulb,
 } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -49,6 +50,7 @@ const navItems = [
   { title: "Review Queue", href: "/review", icon: ClipboardList },
   { title: "Releases", href: "/releases", icon: Package },
   { title: "Feedback", href: "/feedback", icon: MessageSquare },
+  { title: "Requests", href: "/requests", icon: Lightbulb },
 ];
 
 export default function RootLayout({

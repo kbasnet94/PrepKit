@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Modal,
   Platform,
   Pressable,
   ScrollView,
@@ -15,6 +16,9 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
+
+import { GuideRequestList } from "@/components/GuideRequestList";
+import { GuideRequestForm } from "@/components/GuideRequestForm";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -253,6 +257,8 @@ export default function KnowledgeScreen() {
   const [view, setView] = useState<ScreenView>("categories");
   const [selectedCategory, setSelectedCategory] = useState<GuideCategory | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [requestsModal, setRequestsModal] = useState(false);
+  const [requestFormTopic, setRequestFormTopic] = useState<string | null>(null);
   const {
     guides: allGuides,
     getCategoryState,
@@ -356,6 +362,16 @@ export default function KnowledgeScreen() {
               ? categoryLabel(selectedCategory)
               : "Knowledge"}
           </Text>
+          {view === "categories" ? (
+            <Pressable
+              onPress={() => { setRequestsModal(true); setRequestFormTopic(null); }}
+              style={({ pressed }) => [styles.requestsLink, pressed && { opacity: 0.6 }]}
+              hitSlop={4}
+            >
+              <Ionicons name="bulb-outline" size={13} color={C.accent} />
+              <Text style={styles.requestsLinkText}>Request a guide</Text>
+            </Pressable>
+          ) : null}
           {view === "categories" ? (
             <>
               <Text style={styles.headerSub}>
@@ -465,6 +481,18 @@ export default function KnowledgeScreen() {
               <Ionicons name="search-outline" size={44} color={C.textTertiary} />
               <Text style={styles.emptyTitle}>No results</Text>
               <Text style={styles.emptySubtitle}>Try a different search term</Text>
+              <Pressable
+                onPress={() => {
+                  setRequestsModal(true);
+                  setRequestFormTopic(null);
+                }}
+                style={({ pressed }) => [styles.requestPromptBtn, pressed && { opacity: 0.7 }]}
+              >
+                <Ionicons name="bulb-outline" size={14} color={C.accent} />
+                <Text style={styles.requestPromptText}>
+                  Request "{searchQuery}" as a guide topic
+                </Text>
+              </Pressable>
             </View>
           }
           showsVerticalScrollIndicator={false}
@@ -506,6 +534,48 @@ export default function KnowledgeScreen() {
           showsVerticalScrollIndicator={false}
         />
       )}
+
+      {/* Requests modal — list + form */}
+      <Modal
+        visible={requestsModal}
+        animationType="slide"
+        presentationStyle="pageSheet"
+        onRequestClose={() => { setRequestsModal(false); setRequestFormTopic(null); }}
+      >
+        <View style={[styles.modalContainer, { paddingTop: insets.top }]}>
+          <View style={styles.modalHeader}>
+            {requestFormTopic !== null ? (
+              <Pressable onPress={() => setRequestFormTopic(null)} hitSlop={8} style={styles.modalBack}>
+                <Ionicons name="arrow-back" size={20} color={C.textSecondary} />
+              </Pressable>
+            ) : (
+              <View style={{ width: 32 }} />
+            )}
+            <Text style={styles.modalTitle}>
+              {requestFormTopic !== null ? "New Request" : "Guide Requests"}
+            </Text>
+            <Pressable
+              onPress={() => { setRequestsModal(false); setRequestFormTopic(null); }}
+              hitSlop={8}
+              style={styles.modalClose}
+            >
+              <Ionicons name="close" size={20} color={C.textSecondary} />
+            </Pressable>
+          </View>
+
+          {requestFormTopic !== null ? (
+            <GuideRequestForm
+              initialTopic={requestFormTopic}
+              onSuccess={() => { setRequestFormTopic(null); setRequestsModal(false); }}
+            />
+          ) : (
+            <GuideRequestList
+              initialSearch={searchQuery}
+              onRequestNew={(topic) => setRequestFormTopic(topic)}
+            />
+          )}
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -732,6 +802,63 @@ function makeStyles(C: typeof Colors.light) {
       fontSize: 13,
       fontFamily: "Inter_400Regular",
       color: C.textSecondary,
+    },
+    requestsLink: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 4,
+      marginTop: 4,
+    },
+    requestsLinkText: {
+      fontSize: 12,
+      fontFamily: "Inter_500Medium",
+      color: C.accent,
+    },
+    requestPromptBtn: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      marginTop: 8,
+      backgroundColor: C.accentSurface,
+      borderRadius: 10,
+      paddingHorizontal: 14,
+      paddingVertical: 9,
+    },
+    requestPromptText: {
+      fontSize: 13,
+      fontFamily: "Inter_500Medium",
+      color: C.accent,
+      flex: 1,
+    },
+    modalContainer: {
+      flex: 1,
+      backgroundColor: C.background,
+    },
+    modalHeader: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: 16,
+      paddingVertical: 14,
+      borderBottomWidth: 1,
+      borderBottomColor: C.border,
+    },
+    modalBack: {
+      width: 32,
+      height: 32,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    modalTitle: {
+      fontSize: 16,
+      fontFamily: "Inter_600SemiBold",
+      color: C.text,
+    },
+    modalClose: {
+      width: 32,
+      height: 32,
+      alignItems: "center",
+      justifyContent: "center",
     },
   });
 }
