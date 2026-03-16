@@ -1,0 +1,81 @@
+{
+  "canonicalSlug": "stay-put-vs-move-land",
+  "archiveSlug": "stay-put-vs-move",
+  "canonicalChoiceReason": "stay-put-vs-move-land has significantly stronger content (6 steps vs 4, source_quality: strong vs mixed), real source URLs from NPS and American Hiking Society, reviewed content status, and already has a responseRole (primary) and constraint tag (in_vehicle). The archive guide (stay-put-vs-move) has inappropriate sources (NIST telecom doc, DOT rail transit doc — neither relevant to wilderness rescue), placeholder-level content where summary equals quick_answer verbatim, and is assigned role: reference with no constraint tags.",
+  "fieldDecisions": [
+    {
+      "field": "slug",
+      "decision": "canonical-kept",
+      "source": "stay-put-vs-move-land",
+      "note": "Canonical guide is the surviving slug. The generic 'stay-put-vs-move' slug from the archive is retired."
+    },
+    {
+      "field": "title",
+      "decision": "revised",
+      "source": "Both",
+      "note": "New title: 'Stay Put vs Move When Lost on Land' — cleaner, drops the parenthetical '(Land)' suffix, more user-facing phrasing"
+    },
+    {
+      "field": "summary",
+      "decision": "canonical-preferred",
+      "source": "stay-put-vs-move-land",
+      "note": "Canonical summary is specific and actionable; archive summary is identical to its quick_answer (placeholder quality)"
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "canonical-preferred",
+      "source": "stay-put-vs-move-land",
+      "note": "Same reasoning as summary — canonical version is better and differs from the summary"
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "Primarily stay-put-vs-move-land (6 steps), with one framing element from stay-put-vs-move integrated into step 1",
+      "note": "Added 'assess your situation' framing from archive guide's first step ('Assess injury, weather, terrain, water, daylight, and communication options') as the lead action in step 1. Result: 7 steps."
+    },
+    {
+      "field": "warnings",
+      "decision": "canonical-preferred",
+      "source": "stay-put-vs-move-land",
+      "note": "Archive warning ('Panic movement can increase exposure and separation from rescuers') is semantically covered by canonical's more specific 'Wandering far from your last known route can drastically enlarge search areas' and 'Self-rescue over difficult terrain without skills or equipment leads to many injuries and fatalities'"
+    },
+    {
+      "field": "redFlags",
+      "decision": "canonical-preferred",
+      "source": "stay-put-vs-move-land",
+      "note": "Archive red flags are duplicates of canonical at a lower quality level. Canonical's three flags are more specific and actionable."
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "canonical-kept",
+      "source": "stay-put-vs-move-land",
+      "note": "Archive sources (NIST telecom, DOT rail transit) are wholly inappropriate for wilderness navigation content and are discarded. Canonical has NPS and American Hiking Society with real URLs."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "canonical-kept",
+      "source": "stay-put-vs-move-land",
+      "note": "strong — canonical grade, justified by real NPS and AHS URLs"
+    },
+    {
+      "field": "contentStatus",
+      "decision": "set-to-draft",
+      "source": "Pipeline requirement",
+      "note": "Always 'draft' for new version entering pipeline"
+    },
+    {
+      "field": "integrationDecision",
+      "decision": "set-to-upgrade",
+      "source": "Pipeline requirement",
+      "note": "This consolidation produces an upgraded version of stay-put-vs-move-land"
+    }
+  ],
+  "conflicts": [],
+  "archiveCandidateWarnings": [
+    "No other guides have alternativeToGuideSlugs pointing to 'stay-put-vs-move' — safe to archive",
+    "The 'stay-put-vs-move' guide has role: reference — archiving it will not leave a gap in role coverage since stay-put-vs-move-land already holds role: primary",
+    "Human action required: set stay-put-vs-move to review_status: archived in the admin UI AFTER the merged version is approved and released"
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "food-safety-power-outage-action",
+  "validatedAt": "2026-03-16T00:00:00Z",
+  "overallResult": "pass",
+  "evidenceTier": "authoritative_only",
+  "schemaChecks": [
+    { "check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present" },
+    { "check": "layer_guidetype_matched", "passed": true, "evidence": "action → action_card ✓" },
+    { "check": "valid_category", "passed": true, "evidence": "water_food ✓" },
+    { "check": "valid_source_quality", "passed": true, "evidence": "strong ✓" },
+    { "check": "array_fields_flat", "passed": true, "evidence": "All array fields are flat string arrays ✓" },
+    { "check": "source_refs_schema", "passed": true, "evidence": "All 4 sourceReferences have title, organization, url, whyUseful ✓" },
+    { "check": "constraint_tags_valid", "passed": true, "evidence": "constraintTags: [no_power] — valid registry tag ✓; blockedByConstraints: [] ✓" },
+    { "check": "response_role_valid", "passed": true, "evidence": "primary ✓" },
+    { "check": "alt_slugs_exist", "passed": true, "evidence": "alternativeToGuideSlugs: [refrigerator-safety-during-outages] — confirmed exists in library ✓" },
+    { "check": "no_constraint_overlap", "passed": true, "evidence": "no_power in constraintTags; blockedByConstraints empty — no overlap ✓" },
+    { "check": "camelCase_fields", "passed": true, "evidence": "All field names camelCase ✓" },
+    { "check": "slug_format", "passed": true, "evidence": "food-safety-power-outage-action — lowercase kebab-case ✓" }
+  ],
+  "safetyChecks": [
+    { "check": "claims_sourced", "passed": true, "evidence": "4-hour fridge window: USDA FSIS ✓; 24/48-hour freezer window: FoodSafety.gov ✓; 2-hour discard rule: USDA FSIS ✓; never taste: USDA FSIS ✓; condiment 50°F rule: USDA FSIS ✓; cross-contamination discard: USDA FSIS ✓" },
+    { "check": "no_invented_advice", "passed": true, "evidence": "All temperature thresholds and time windows match USDA/FDA/CDC published guidance ✓" },
+    { "check": "action_card_has_steps", "passed": true, "evidence": "7 stepByStepActions present (minimum 3 required) ✓" },
+    { "check": "action_has_warnings", "passed": true, "evidence": "3 warnings present ✓" },
+    { "check": "action_has_red_flags", "passed": true, "evidence": "3 redFlags present ✓" },
+    { "check": "source_quality_matches_tier", "passed": true, "evidence": "strong quality with USDA FSIS, FoodSafety.gov, FDA, CDC — all authoritative_only government health agencies ✓" }
+  ],
+  "duplicateChecks": [
+    { "check": "no_duplicate_new", "passed": true, "evidence": "No existing action_card in Food Safety During Power Outages parentTopic — genuine gap fill ✓" }
+  ],
+  "constraintChecks": [
+    { "check": "role_not_duplicated", "passed": true, "evidence": "No other action layer guide in this parentTopic — primary role is clean ✓" },
+    { "check": "alt_slugs_same_topic", "passed": true, "evidence": "refrigerator-safety-during-outages is in same parentTopic ✓" },
+    { "check": "blocked_makes_sense", "passed": true, "evidence": "No blocked constraints — food safety action card is relevant in any power outage regardless of other constraints ✓" }
+  ],
+  "blockingIssues": [],
+  "warnings": [],
+  "recommendation": "Pass — no issues. Note: the existing cluster has three scenario guides all assigned role: primary (refrigerator, freezer, and deciding-when-to-throw-away). This action card is primary for the action layer only, which is correct layering. Safe to import to staging."
+}

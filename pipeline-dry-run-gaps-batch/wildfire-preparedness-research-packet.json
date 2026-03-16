@@ -1,0 +1,122 @@
+{
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "suggestedSlug": "wildfire-preparedness",
+    "category": "natural_disasters",
+    "parentTopic": "Wildfire: Evacuation and Smoke Safety"
+  },
+  "evidenceTier": "authoritative_plus_examples",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "preparedness",
+  "suggestedGuideType": "preparedness_guide",
+  "existingGuideUpgradeTarget": null,
+  "researchFindings": [
+    {
+      "claim": "Know your evacuation zone before fire season — many counties use a letter or number system; find your zone at your county's emergency management website and know what each level means",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core preparedness tip — know your zone"
+    },
+    {
+      "claim": "The Ready-Set-Go model: READY = prepare year-round; SET = when a wildfire threat is in your area, be ready to go immediately; GO = leave as soon as an evacuation warning or order is issued — do not wait for an order if you feel unsafe",
+      "sourceTitle": "Go Evacuation Guide | Ready for Wildfire",
+      "sourceOrganization": "ReadyForWildfire.org (CAL FIRE campaign)",
+      "sourceUrl": "https://www.readyforwildfire.org/prepare-for-wildfire/go-evacuation-guide/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core preparedness framework — Ready Set Go model"
+    },
+    {
+      "claim": "Prepack a go-bag with at least 72 hours of supplies: water, non-perishable food, N95 or P100 respirator mask for smoke, current medications, phone charger, cash, copies of critical documents, a change of clothing, battery-powered radio, and a flashlight",
+      "sourceTitle": "Wildfire Evacuation Checklist",
+      "sourceOrganization": "U.S. Fire Administration (USFA / FEMA)",
+      "sourceUrl": "https://www.usfa.fema.gov/downloads/pdf/publications/wildfire-evacuation-checklist.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Go-bag contents"
+    },
+    {
+      "claim": "Maintain at least half a tank of gas in your vehicle at all times during fire season — gas stations may be closed or gridlocked during an evacuation",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Vehicle preparedness tip"
+    },
+    {
+      "claim": "Create defensible space: Zone 1 (0–30 feet from structures) — remove all dead vegetation, flammable debris, and woodpiles; Zone 2 (30–100 feet) — space plants so they cannot carry fire from plant to plant; minimum spacing between plants is 3 times the plant's diameter",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Defensible space — key preparedness action"
+    },
+    {
+      "claim": "Ensure there are at least two ways out of your neighborhood; practice both evacuation routes by driving them so you know them when conditions are poor",
+      "sourceTitle": "2024 Wildfire Preparedness",
+      "sourceOrganization": "FEMA",
+      "sourceUrl": "https://www.fema.gov/press-release/20250122/2024-wildfire-preparedness",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Evacuation route planning"
+    },
+    {
+      "claim": "Sign up for emergency alerts through your county — most counties use Wireless Emergency Alerts (WEA) automatically and a local alert system (Nixle, Everbridge, or county-specific) requiring sign-up",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Alert sign-up preparedness tip"
+    },
+    {
+      "claim": "Keep cellphones charged; set phones to auto-charge overnight during fire season",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Communication preparedness"
+    },
+    {
+      "claim": "Early evacuation dramatically improves survival odds in fast-moving wildfires — residents who leave early spend less time in smoke and face lighter traffic than those who wait for a mandatory order",
+      "sourceTitle": "Go Evacuation Guide | Ready for Wildfire",
+      "sourceOrganization": "ReadyForWildfire.org (CAL FIRE campaign)",
+      "sourceUrl": "https://www.readyforwildfire.org/prepare-for-wildfire/go-evacuation-guide/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Evacuation timing warning — strongest preparedness message"
+    },
+    {
+      "claim": "Pre-select a family meeting place and designate an out-of-area contact in case family members are separated during evacuation",
+      "sourceTitle": "Wildfire Evacuation Checklist",
+      "sourceOrganization": "U.S. Fire Administration (USFA / FEMA)",
+      "sourceUrl": "https://www.usfa.fema.gov/downloads/pdf/publications/wildfire-evacuation-checklist.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Family emergency planning"
+    },
+    {
+      "claim": "Do not shelter in your home if fire reaches your structure — a burning structure is more dangerous than open air; however, if evacuation routes are cut off, go inside and call 911",
+      "sourceTitle": "Wildfires | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/wildfires",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical during-fire guidance, referenced in warnings"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Whether to shelter inside vs. leave when fire is at the doorstep",
+      "issue": "Some sources (FEMA) say if routes are cut off go inside and call 911; CAL FIRE generally says leave early. These are not truly contradictory — early departure is preferred, but last-resort indoor shelter is a fallback.",
+      "sourceA": "FEMA Ready.gov",
+      "sourceB": "ReadyForWildfire.org",
+      "resolution": "Include both: preferred action = leave early; backup = if routes are cut off, shelter inside and call 911. Clearly label as last resort."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Specific hardening materials (ember-resistant vents, fire-resistant roofing)",
+      "impact": "Important for homeowners in WUI zones but too technical for a general preparedness guide",
+      "suggestion": "Mention home hardening briefly and direct to USFA for detailed guidance"
+    }
+  ],
+  "recommendation": "Write a preparedness_guide for the Wildfire: Evacuation and Smoke Safety parentTopic. Core content: (1) know your evacuation zone and routes; (2) Ready-Set-Go framework; (3) go-bag contents including N95 mask; (4) keep gas tank half-full; (5) defensible space zones 0–30 and 30–100 feet; (6) sign up for local emergency alerts; (7) family plan with meeting place and out-of-area contact. Key message: leave early, don't wait for mandatory order. All claims sourced by FEMA, USFA, and CAL FIRE."
+}

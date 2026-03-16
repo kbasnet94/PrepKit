@@ -1,0 +1,44 @@
+{
+  "slug": "signal-for-rescue",
+  "validatedAt": "2026-03-16T00:00:00Z",
+  "overallResult": "pass_with_warnings",
+  "evidenceTier": "authoritative_plus_field_practice",
+  "schemaChecks": [
+    { "check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present" },
+    { "check": "layer_guidetype_matched", "passed": true, "evidence": "action → action_card ✓" },
+    { "check": "valid_category", "passed": true, "evidence": "communication ✓" },
+    { "check": "valid_source_quality", "passed": true, "evidence": "mixed ✓" },
+    { "check": "array_fields_flat", "passed": true, "evidence": "All array fields are flat string arrays ✓" },
+    { "check": "source_refs_schema", "passed": true, "evidence": "All 3 sourceReferences have title, organization, url, whyUseful ✓" },
+    { "check": "constraint_tags_valid", "passed": true, "evidence": "constraintTags: [no_signal, alone] — both valid registry tags ✓; blockedByConstraints: [] ✓" },
+    { "check": "response_role_valid", "passed": true, "evidence": "supporting ✓" },
+    { "check": "alt_slugs_exist", "passed": true, "evidence": "whistle-distress-signals-land ✓ and mirror-and-light-signaling-land-day-and-night ✓ — both confirmed in library ✓" },
+    { "check": "no_constraint_overlap", "passed": true, "evidence": "no_signal and alone in constraintTags; blockedByConstraints empty — no overlap ✓" },
+    { "check": "camelCase_fields", "passed": true, "evidence": "All field names camelCase ✓" },
+    { "check": "slug_format", "passed": true, "evidence": "signal-for-rescue — lowercase kebab-case ✓" }
+  ],
+  "safetyChecks": [
+    { "check": "claims_sourced", "passed": true, "evidence": "Rule of Three: BSA Scouting Magazine ✓; whistle 120dB/1-mile range: BSA Scouting Magazine ✓; mirror V-finger aiming: AdventureSmart ✓; ground signal 10-foot width: BSA Scouting Magazine ✓; stay-put principle: AdventureSmart ✓; PLB NOAA registration: NOAA ✓" },
+    { "check": "no_invented_advice", "passed": true, "evidence": "No claims beyond established SAR program and BSA field guidance ✓" },
+    { "check": "action_card_has_steps", "passed": true, "evidence": "8 stepByStepActions present ✓" },
+    { "check": "action_has_warnings", "passed": true, "evidence": "3 warnings present ✓" },
+    { "check": "action_has_red_flags", "passed": true, "evidence": "2 redFlags present ✓" },
+    { "check": "source_quality_matches_tier", "passed": true, "evidence": "mixed is the correct rating — primary technique sources (BSA, AdventureSmart) are authoritative field-practice but not government agencies. The NOAA PLB source is authoritative. mixed is honest and appropriate ✓" },
+    { "check": "no_dropped_warnings", "passed": true, "evidence": "Upgrade from v1: both original warnings preserved and expanded. Original warning 'Wandering can make you harder to find' is covered by upgraded warning 1 ('stay put once you begin signaling'). Original red flag 'Rescue signals going unanswered' preserved in redFlags[0] ✓" }
+  ],
+  "duplicateChecks": [
+    { "check": "upgrade_target_exists", "passed": true, "evidence": "upgradesGuide: signal-for-rescue — confirmed exists in library ✓" },
+    { "check": "upgrade_slug_matches", "passed": true, "evidence": "category communication and parentTopic 'Land Rescue Signaling' match the target ✓" }
+  ],
+  "constraintChecks": [
+    { "check": "role_not_duplicated", "passed": true, "evidence": "No other supporting role conflict in this layer — whistle and mirror guides are primary, not supporting. ✓" },
+    { "check": "alt_slugs_same_topic", "passed": true, "evidence": "Both alternativeToGuideSlugs are in the same parentTopic (Land Rescue Signaling) ✓" },
+    { "check": "blocked_makes_sense", "passed": true, "evidence": "No blocked constraints — a general overview signaling card should be available in all scenarios ✓" }
+  ],
+  "blockingIssues": [],
+  "warnings": [
+    "sourceQuality: mixed with 2 of 3 sources being field-practice organizations (BSA, AdventureSmart) rather than government agencies. This is appropriate for an authoritative_plus_field_practice evidence tier topic. Human reviewer should note this is a material improvement over v1 which cited NIST telecom and DOT rail transit (wholly irrelevant sources).",
+    "whistle-distress-signals-land has blockedByConstraints: [no_signal] in the existing library — this appears to be an error (a whistle doesn't require an electronic signal), flagged for future fix as a separate task."
+  ],
+  "recommendation": "Pass with warnings — both warnings are informational and do not block import. Signal-for-rescue is dramatically improved from v1: sources corrected from irrelevant telecom/transit docs to appropriate SAR program and BSA sources; steps expanded from 4 to 8; summary and quick_answer differentiated. Safe to import."
+}

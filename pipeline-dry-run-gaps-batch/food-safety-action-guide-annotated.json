@@ -1,0 +1,82 @@
+{
+  "slug": "food-safety-power-outage-action",
+  "title": "Food Safety After Power Loss: What to Keep and What to Toss",
+  "category": "water_food",
+  "parentTopic": "Food Safety During Power Outages",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "When power goes out, two rules govern food safety: keep the doors closed as long as possible to preserve cold, and never taste food to judge whether it's safe. This card gives you the exact time windows and decision rules for refrigerator, freezer, and cooler scenarios.",
+  "quickAnswer": "Keep refrigerator closed — food stays safe for 4 hours. Full freezer stays safe for 48 hours, half-full for 24 hours. Never taste food to test safety — when in doubt, throw it out.",
+  "whenToUse": [
+    "Power has just gone out and you need to know what to do immediately",
+    "You've returned home after an extended power outage and need to evaluate what food is safe",
+    "You're deciding whether to move food to a cooler or discard perishables"
+  ],
+  "preferredAction": "Keep both the refrigerator and freezer doors closed and track the time since power was lost to determine when to act.",
+  "backupAction": "If outage will exceed 4 hours, transfer refrigerated perishables to a cooler packed with ice or frozen gel packs and keep it at 40°F or below.",
+  "stepByStepActions": [
+    "Keep the refrigerator door closed — every opening costs 20–30 minutes of safe storage time. Food stays safe for up to 4 hours with the door closed.",
+    "Keep the freezer door closed — a full freezer stays safe for 48 hours; a half-full freezer stays safe for 24 hours.",
+    "If the outage is expected to last more than 4 hours, transfer refrigerated perishables (meat, poultry, fish, eggs, milk, and leftovers) to a cooler packed with ice. Keep the cooler at 40°F or below.",
+    "When power is restored (or after 4+ hours without power), check refrigerated food: discard any raw or cooked meat, poultry, fish, seafood, eggs, and leftovers that have been above 40°F for more than 2 hours.",
+    "Check freezer food when power returns: if items still contain ice crystals or register 40°F or below, they may be safely refrozen (quality may suffer). If fully thawed and above 40°F, discard meat, poultry, seafood, and egg-based items.",
+    "Never taste food to test whether it is safe — bacteria that cause food poisoning have no odor, color, or taste. A food can look, smell, and taste normal and still cause serious illness.",
+    "When in doubt, throw it out — the cost of replacing food is far less than the cost of foodborne illness."
+  ],
+  "warnings": [
+    "Food poisoning bacteria are odorless, colorless, and tasteless — safe-looking food can be dangerous after temperature abuse",
+    "Opened condiments (mayonnaise, tartar sauce, horseradish) must be discarded if held above 50°F for more than 8 hours",
+    "Bread, salad greens, or ready-to-eat foods contaminated by dripped raw meat juices must be discarded regardless of time or temperature history"
+  ],
+  "whatNotToDo": [
+    "Do not taste food to determine if it is safe — never rely on smell, color, or taste",
+    "Do not refreeze meat, poultry, or seafood that has fully thawed above 40°F",
+    "Do not open the refrigerator or freezer unnecessarily — every opening shortens the safe window"
+  ],
+  "redFlags": [
+    "Power has been out more than 4 hours and you have no cooler with ice for perishables",
+    "Freezer contents have fully thawed and meat or fish has reached room temperature",
+    "You are unsure how long the power was out — treat all perishables as potentially unsafe"
+  ],
+  "preparednessTips": [
+    "Keep an appliance thermometer in your refrigerator (target: 35–38°F) and freezer (target: 0°F) — it lets you verify safe temperatures after an outage without guessing",
+    "Freeze containers of water and keep them in the freezer to increase thermal mass — they help maintain safe temperatures longer during an outage and can supply drinking water if needed",
+    "Stock shelf-stable foods (canned goods, dried beans, peanut butter, crackers) so you can eat without opening the refrigerator during a short outage"
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": ["food safety", "power outage", "refrigerator", "freezer", "food poisoning", "electricity", "no power", "food spoilage", "cooler"],
+  "sourceReferences": [
+    {
+      "title": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "organization": "USDA Food Safety and Inspection Service (FSIS)",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "whyUseful": "Primary authoritative source; specifies 4-hour refrigerator window, discard rules, and never-taste rule"
+    },
+    {
+      "title": "Food Safety During Power Outage",
+      "organization": "FoodSafety.gov (USDA / HHS)",
+      "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "whyUseful": "Official charts for refrigerator (4 hr) and freezer (24–48 hr) safe windows; refreezing decision rules"
+    },
+    {
+      "title": "Food and Water Safety During Power Outages and Floods",
+      "organization": "U.S. Food and Drug Administration (FDA)",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "whyUseful": "FDA guidance on appliance thermometer use and food safety decisions during extended outages"
+    },
+    {
+      "title": "Keep Food Safe After a Disaster or Emergency",
+      "organization": "Centers for Disease Control and Prevention (CDC)",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html",
+      "whyUseful": "CDC guidance including the freeze-water-containers preparedness tip"
+    }
+  ],
+  "notes": null,
+  "responseRole": "primary",
+  "constraintTags": ["no_power"],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": ["refrigerator-safety-during-outages"]
+}

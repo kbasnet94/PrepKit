@@ -1,0 +1,113 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "signal-for-rescue",
+    "category": "communication",
+    "parentTopic": "Land Rescue Signaling"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "mixed",
+  "suggestedLayer": "action",
+  "suggestedGuideType": "action_card",
+  "existingGuideUpgradeTarget": "signal-for-rescue",
+  "researchFindings": [
+    {
+      "claim": "The universal distress signal is three of anything in succession — three whistle blasts, three mirror flashes, three fires in a triangle or straight line",
+      "sourceTitle": "Signaling for help in the wilderness",
+      "sourceOrganization": "Scouting Magazine (Boy Scouts of America)",
+      "sourceUrl": "https://scoutingmagazine.org/2019/02/signaling-for-help-in-the-wilderness/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Core principle — rule of three"
+    },
+    {
+      "claim": "A high-decibel emergency whistle (120 dB) can be heard up to one mile in forested areas; blow three short sharp blasts, wait 30–60 seconds, then repeat",
+      "sourceTitle": "Signaling for help in the wilderness",
+      "sourceOrganization": "Scouting Magazine (Boy Scouts of America)",
+      "sourceUrl": "https://scoutingmagazine.org/2019/02/signaling-for-help-in-the-wilderness/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Whistle signaling step"
+    },
+    {
+      "claim": "A properly aimed signal mirror can be seen up to 10 miles away on a clear day; aim by sighting the target (aircraft, person) between two outstretched V-fingers while reflecting sunlight through them",
+      "sourceTitle": "Communication & Signalling",
+      "sourceOrganization": "AdventureSmart (Canadian SAR program)",
+      "sourceUrl": "https://www.adventuresmart.ca/communication-signaling/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Mirror signaling step with aiming technique"
+    },
+    {
+      "claim": "If you don't have a signal mirror, any reflective surface works — belt buckle, polished metal container, space blanket, or smartphone screen",
+      "sourceTitle": "Signaling for help in the wilderness",
+      "sourceOrganization": "Scouting Magazine (Boy Scouts of America)",
+      "sourceUrl": "https://scoutingmagazine.org/2019/02/signaling-for-help-in-the-wilderness/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Mirror alternative — improvised signaling"
+    },
+    {
+      "claim": "Ground-to-air signals (X, SOS, or V) made from rocks, logs, or dug trenches should have each line at least 10 feet wide to be visible from aircraft; a 5:1 length-to-width ratio is recommended",
+      "sourceTitle": "Signaling for help in the wilderness",
+      "sourceOrganization": "Scouting Magazine (Boy Scouts of America)",
+      "sourceUrl": "https://scoutingmagazine.org/2019/02/signaling-for-help-in-the-wilderness/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Ground signal construction rules"
+    },
+    {
+      "claim": "Choose an open, visible location for signaling — a clearing, ridgetop, riverbank, or open rock — to maximize line-of-sight for both visual and auditory signals",
+      "sourceTitle": "Communication & Signalling",
+      "sourceOrganization": "AdventureSmart (Canadian SAR program)",
+      "sourceUrl": "https://www.adventuresmart.ca/communication-signaling/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Location selection step"
+    },
+    {
+      "claim": "Stay put once you begin signaling — search and rescue teams begin from the last known location and follow the planned route; moving away from your last known point dramatically enlarges the search area",
+      "sourceTitle": "Communication & Signalling",
+      "sourceOrganization": "AdventureSmart (Canadian SAR program)",
+      "sourceUrl": "https://www.adventuresmart.ca/communication-signaling/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Stay-put warning — key behavioral guidance"
+    },
+    {
+      "claim": "Personal Locator Beacons (PLBs) registered with NOAA transmit GPS coordinates to monitored satellite systems; when activated they take the 'search' out of search and rescue",
+      "sourceTitle": "NOAA PLB Registration",
+      "sourceOrganization": "National Oceanic and Atmospheric Administration (NOAA)",
+      "sourceUrl": "https://beaconregistration.noaa.gov",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Electronic signaling — highest-efficacy option"
+    },
+    {
+      "claim": "Signal fires should only be lit when you hear or see an aircraft or ground searchers — add green vegetation (pine boughs, green leaves) to create dense smoke visible from the air in daylight",
+      "sourceTitle": "Signaling for help in the wilderness",
+      "sourceOrganization": "Scouting Magazine (Boy Scouts of America)",
+      "sourceUrl": "https://scoutingmagazine.org/2019/02/signaling-for-help-in-the-wilderness/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Fire/smoke signaling step and safety note"
+    },
+    {
+      "claim": "Balance signaling with survival fundamentals — shelter, water, and warmth — so you remain physically capable of signaling when rescuers arrive",
+      "sourceTitle": "Communication & Signalling",
+      "sourceOrganization": "AdventureSmart (Canadian SAR program)",
+      "sourceUrl": "https://www.adventuresmart.ca/communication-signaling/",
+      "evidenceStrength": "established_field_practice",
+      "fieldRelevance": "Balance principle — prevents over-exertion on signaling"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Mirror visibility range",
+      "issue": "Sources cite 10 miles to 50 miles range for signal mirrors. The 10-mile figure is conservative and well-attested; 50 miles appears in some sources but is exceptional and depends on altitude and atmospheric conditions.",
+      "sourceA": "AdventureSmart (10 miles)",
+      "sourceB": "Multiple field sources (up to 50 miles)",
+      "resolution": "Use '10 miles on a clear day' as the conservative, more reliable figure"
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Authoritative government source specifically on wilderness rescue signaling",
+      "impact": "This topic is more thoroughly covered by established outdoor education organizations (BSA, Canadian SAR) than by government agencies. NOAA covers PLBs but not physical signaling techniques. The evidence tier authoritative_plus_field_practice is appropriate.",
+      "suggestion": "Set sourceQuality to 'mixed' — content is from reputable field-practice sources but not primarily government agencies. This is appropriate for the topic."
+    }
+  ],
+  "recommendation": "Upgrade signal-for-rescue action_card. Replace the existing NIST/DOT sources which are wholly inappropriate (NIST telecom and DOT rail transit are irrelevant to wilderness rescue signaling). New content: (1) stop and choose visible location, (2) rule of three — whistle, mirror, fire, (3) whistle: three blasts, pause, repeat, (4) signal mirror technique with V-finger aiming, (5) ground-to-air X/SOS, (6) fire signals only on searcher contact, (7) stay put, (8) balance with survival basics. Differentiate summary from quick_answer. Set sourceQuality: mixed (BSA/AdventureSmart are established but not government). This is a significant improvement over the current guide which has NIST telecom sources."
+}

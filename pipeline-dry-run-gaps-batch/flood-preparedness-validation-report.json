@@ -1,0 +1,38 @@
+{
+  "slug": "flood-preparedness",
+  "validatedAt": "2026-03-16T00:00:00Z",
+  "overallResult": "pass",
+  "evidenceTier": "authoritative_plus_examples",
+  "schemaChecks": [
+    { "check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present" },
+    { "check": "layer_guidetype_matched", "passed": true, "evidence": "preparedness → preparedness_guide ✓" },
+    { "check": "valid_category", "passed": true, "evidence": "natural_disasters ✓" },
+    { "check": "valid_source_quality", "passed": true, "evidence": "strong ✓" },
+    { "check": "array_fields_flat", "passed": true, "evidence": "All array fields are flat string arrays ✓" },
+    { "check": "source_refs_schema", "passed": true, "evidence": "All 4 sourceReferences have title, organization, url, whyUseful ✓" },
+    { "check": "constraint_tags_valid", "passed": true, "evidence": "constraintTags: [] and blockedByConstraints: [] — no tags to validate ✓" },
+    { "check": "response_role_valid", "passed": true, "evidence": "primary ✓" },
+    { "check": "alt_slugs_exist", "passed": true, "evidence": "alternativeToGuideSlugs: [] — nothing to validate ✓" },
+    { "check": "no_constraint_overlap", "passed": true, "evidence": "Both arrays empty — no overlap possible ✓" },
+    { "check": "camelCase_fields", "passed": true, "evidence": "All field names camelCase ✓" },
+    { "check": "slug_format", "passed": true, "evidence": "flood-preparedness — lowercase kebab-case ✓" }
+  ],
+  "safetyChecks": [
+    { "check": "claims_sourced", "passed": true, "evidence": "All content traced to FEMA V-1005 (July 2024), Ready.gov/floods, and Red Cross flood preparedness research packet findings" },
+    { "check": "no_invented_advice", "passed": true, "evidence": "6-inch and 12-inch water depth figures sourced from FEMA V-1005; NFIP 30-day requirement from Ready.gov; Turn Around Don't Drown from FEMA ✓" },
+    { "check": "reference_no_steps", "passed": true, "evidence": "stepByStepActions: [] as expected for preparedness_guide ✓" },
+    { "check": "source_quality_matches_tier", "passed": true, "evidence": "strong quality with 4 authoritative sources (FEMA ×2, Red Cross ×2) — appropriate ✓" },
+    { "check": "action_has_warnings", "passed": true, "evidence": "4 warnings present ✓" },
+    { "check": "action_has_red_flags", "passed": true, "evidence": "4 redFlags present ✓" }
+  ],
+  "duplicateChecks": [
+    { "check": "no_duplicate_new", "passed": true, "evidence": "No existing preparedness_guide in Floods parentTopic — genuine gap fill ✓" }
+  ],
+  "constraintChecks": [
+    { "check": "role_not_duplicated", "passed": true, "evidence": "No other preparedness layer guide in Floods parentTopic ✓" },
+    { "check": "blocked_makes_sense", "passed": true, "evidence": "No blocked constraints on preparedness guide — appropriate ✓" }
+  ],
+  "blockingIssues": [],
+  "warnings": [],
+  "recommendation": "Pass — no issues. Safe to import to staging."
+}
