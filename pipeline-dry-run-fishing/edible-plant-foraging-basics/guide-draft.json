@@ -1,0 +1,150 @@
+{
+  "slug": "edible-plant-foraging-basics",
+  "title": "Edible Plant Foraging in an Emergency",
+  "category": "water_food",
+  "parentTopic": "Emergency Food Procurement",
+  "layer": "scenario",
+  "guideType": "scenario_guide",
+  "summary": "A structured walkthrough for identifying and safely consuming wild plants when conventional food is unavailable. Plant misidentification is a potentially fatal risk — this guide covers the identification process, three high-confidence starter edibles, toxic lookalike warnings, and what to do if poisoning is suspected.",
+  "quickAnswer": "Only eat plants you can positively identify with certainty using multiple identification points; when in doubt, leave it out.",
+  "whenToUse": [
+    "You are in a prolonged survival situation with no conventional food access",
+    "You are lost or stranded in a wilderness or rural area and need to supplement food",
+    "A natural disaster has disrupted food supply and wild plants are available nearby",
+    "You are exploring foraging as an emergency preparedness skill before a crisis"
+  ],
+  "preferredAction": "Positively identify a plant using a regional field guide and at least three independent identification points before consuming any part of it.",
+  "backupAction": "If no field guide is available and you cannot make a positive ID, use the U.S. Army Universal Edibility Test as a last resort — but never use it on mushrooms.",
+  "stepByStepActions": [
+    "Step 1 — Assess the situation: Forage only when the caloric benefit outweighs the risk. In a short-term (24–48 hour) survival situation, water is more critical than food. Prioritize hydration first.",
+    "Step 2 — Choose your location carefully: Avoid foraging near roads, industrial areas, golf courses, city parks, farmland edges, or anywhere that may have been sprayed with pesticides or herbicides. Move off-trail into undisturbed areas.",
+    "Step 3 — Only harvest healthy plants: Skip any plants that are diseased, discolored, wilted, infested with insects, or growing in contaminated or stagnant water.",
+    "Step 4 — Apply the three-point identification rule: Before consuming any plant, confirm its identity using at least three independent characteristics — leaf shape, stem structure, flower color, root type, fragrance, habitat, and season. Do not rely on a single feature or a common name alone.",
+    "Step 5 — Check for danger signs and do NOT eat plants with: milky or discolored sap (use as a warning, not absolute rule — verify further), fine hairs or spines, umbrella-shaped flower clusters (the carrot/parsley family includes deadly hemlock), an almond or pear scent in woody parts or leaves, green/white/yellow berries, or a three-leaved growth pattern.",
+    "Step 6 — Start with the highest-confidence beginner edibles: Dandelion (Taraxacum officinale) — bright yellow blooms, toothed leaves from base, entire plant is edible raw or cooked. Broadleaf plantain (Plantago major) — oval leaves with parallel veins, central flower spike, edible raw or boiled. Cattail (Typha latifolia) — wetland plant with distinctive cigar-shaped brown tip, young shoots and rhizomes edible raw or cooked.",
+    "Step 7 — Test one plant at a time: Never introduce multiple new plants simultaneously. Eat a small amount of a single confirmed edible and wait at least 30–60 minutes before eating more to check for allergic or adverse reactions.",
+    "Step 8 — If you cannot positively identify a plant and must eat it (true survival emergency only), use the Universal Edibility Test: (a) separate the plant into components — leaves, stems, roots, seeds; (b) smell each part for acidic or almond-like odors; (c) fast for 8 hours; (d) press a piece against your inner elbow for 15 minutes — stop if there is burning, rash, or itching; (e) touch a small pinch to your outer lip for 3 minutes — stop if burning; (f) hold a small amount on your tongue for 15 minutes without chewing — stop if burning; (g) chew a small portion and hold for 15 minutes without swallowing — spit out if any irritation; (h) swallow a small amount and wait 8 hours; (i) if no reaction, eat a quarter-cup portion and wait another 8 hours. Test only one plant part at a time. This process takes approximately 24 hours per part.",
+    "Step 9 — Cook when possible: Cooking reduces bitterness in many edible plants, kills surface bacteria and parasites, and can neutralize some mild irritants. Do not eat raw mushrooms under any circumstances.",
+    "Step 10 — If you experience burning throat, uncontrollable salivation, nausea, vomiting, rapid heartbeat, difficulty breathing, confusion, or seizures after eating a wild plant: call Poison Control at 1-800-222-1222 or call 911 immediately. Do not induce vomiting unless specifically directed by Poison Control. Bring the plant or a photo to the emergency room."
+  ],
+  "warnings": [
+    "Misidentification of toxic plants can be fatal. The carrot/parsley family (Apiaceae) includes deadly poison hemlock and water hemlock that closely resemble edible wild carrot and parsnip — many experienced foragers refuse to harvest from this family entirely.",
+    "Foraging near roads, industrial sites, farmland edges, or treated lawns risks consuming plants contaminated with pesticides, herbicides, or heavy metals that are invisible and odorless.",
+    "Some plants are partially edible: elderberries are edible when cooked but toxic raw; rhubarb fruit is edible but leaves are toxic; the distinction is not obvious in the field.",
+    "Toxic plant symptoms can onset very quickly — poison hemlock can cause respiratory failure within 15 minutes of ingestion. Do not wait for symptoms to worsen before calling for help.",
+    "The Universal Edibility Test is not a guaranteed safety check. It does not detect slow-onset or cumulative toxins, and it does not protect against plants that cause organ damage without immediate symptoms.",
+    "Do NOT use the Universal Edibility Test on mushrooms. Many deadly mushrooms (e.g., Amanita phalloides — death cap) cause no immediate discomfort and destroy the liver over 24–72 hours.",
+    "Children are at higher risk — toxic plant doses that cause mild symptoms in adults can be lethal in children. Children should never forage independently.",
+    "Even plants considered safe edibles can cause allergic reactions in some individuals. Individual sensitivity varies."
+  ],
+  "whatNotToDo": [
+    "Do not eat any plant based solely on a common name match — common names overlap between edible and poisonous species.",
+    "Do not consume any plant from the carrot/parsley/celery family (Apiaceae — umbrella-shaped flower clusters) unless you have extensive specific training in that family, as the deadly lookalikes are extremely difficult to distinguish.",
+    "Do not eat green, white, or yellow berries from unknown plants.",
+    "Do not apply the Universal Edibility Test to mushrooms — it does not work for fungi.",
+    "Do not induce vomiting after suspected toxic plant ingestion unless specifically directed by Poison Control or a physician.",
+    "Do not eat raw mushrooms, including wild varieties you believe you recognize — always cook them thoroughly.",
+    "Do not assume that because an animal or bird is eating a plant it is safe for humans — many toxic plants are tolerated by wildlife but harmful to people.",
+    "Do not forage multiple unknown plants simultaneously — test one at a time so you can identify the source if a reaction occurs.",
+    "Do not trust plant identification apps as your only identification source — they have meaningful error rates with toxic lookalikes.",
+    "Do not harvest plants from water that appears stagnant, discolored, or near industrial runoff."
+  ],
+  "redFlags": [
+    "Burning or tingling sensation in mouth, throat, or lips immediately after tasting or swallowing any plant part — spit it out and call Poison Control (1-800-222-1222)",
+    "Nausea or vomiting within minutes to hours after eating a wild plant — call Poison Control immediately",
+    "Rapid or irregular heartbeat after plant ingestion — call 911",
+    "Difficulty breathing, tightness in throat, or shortness of breath after plant ingestion — call 911",
+    "Seizures or muscle spasms after plant ingestion — call 911 immediately",
+    "Confusion, disorientation, altered mental status, or sudden drowsiness after plant ingestion — call 911",
+    "Collapse or loss of consciousness — call 911 immediately",
+    "Excessive salivation or drooling after eating a plant — call Poison Control",
+    "Skin rash, hives, or swelling of face/lips/throat after plant contact or ingestion — treat as potential anaphylaxis, call 911",
+    "Any suspicious plant that has been eaten by a child — call Poison Control at 1-800-222-1222 immediately even with no symptoms yet"
+  ],
+  "preparednessTips": [
+    "Before any wilderness trip, obtain a region-specific field guide to edible and toxic plants — regional accuracy matters because species and lookalikes vary by geography.",
+    "Save Poison Control's number in your phone before heading outdoors: 1-800-222-1222 (US, 24/7, free).",
+    "Practice identifying three beginner edibles (dandelion, cattail, plantain) in your local area before relying on this knowledge in an emergency.",
+    "Take a local foraging walk led by a certified instructor or experienced naturalist — hands-on learning with expert verification is far more reliable than book learning alone.",
+    "Reference the USDA Plants Database (plants.usda.gov) for regional identification and range maps for plants in your area.",
+    "Consider the BSA Pocket Tutor Guide to Edible Wild Plants or Sam Thayer's Field Guide to Edible Wild Plants of Eastern and Central North America as your carry reference.",
+    "Learn to identify at least 5–10 toxic plants in your region (especially hemlock, water hemlock, nightshade, pokeweed, and foxglove) so you can exclude them with confidence.",
+    "Include a compact regional plant identification laminate or booklet in your emergency kit.",
+    "Understand seasonal availability: spring and early summer favor leafy greens; late summer and fall favor fruits, nuts, and seeds."
+  ],
+  "sourceQuality": "mixed",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": [
+    "foraging",
+    "edible plants",
+    "wild food",
+    "survival food",
+    "plant identification",
+    "plant poisoning",
+    "universal edibility test",
+    "dandelion",
+    "cattail",
+    "plantain",
+    "poison hemlock",
+    "emergency food",
+    "wilderness survival"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "organization": "USDA",
+      "url": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "whyUseful": "Authoritative USDA guidance on plant identification methodology, location safety, and sustainable foraging practices."
+    },
+    {
+      "title": "U.S. Army Survival Field Manual ATP 3-50.21 (and FM 21-76)",
+      "organization": "U.S. Department of Defense / U.S. Army",
+      "url": null,
+      "whyUseful": "Source of the Universal Edibility Test procedure — the standard military protocol for evaluating unknown plants in survival situations."
+    },
+    {
+      "title": "Identifying Danger: Toxic Plants That Look Like Carrots",
+      "organization": "Illinois Extension, University of Illinois",
+      "url": "https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots",
+      "whyUseful": "Authoritative university extension resource on poison hemlock and water hemlock misidentification with wild carrot — core safety-critical content."
+    },
+    {
+      "title": "Poison Hemlock and Western Water Hemlock: Deadly Plants That May Be Growing in Your Pasture",
+      "organization": "Oregon State University Extension Service",
+      "url": "https://extension.oregonstate.edu/catalog/poison-hemlock-western-waterhemlock-deadly-plants-may-be-growing-your-pasture",
+      "whyUseful": "Detailed clinical description of water hemlock toxicity (cicutoxin), symptom onset, and identification features."
+    },
+    {
+      "title": "Plants | Poison Help",
+      "organization": "HRSA / Poison Help",
+      "url": "https://poisonhelp.hrsa.gov/faq/plants",
+      "whyUseful": "Federal resource establishing Poison Control (1-800-222-1222) as the primary response for suspected plant ingestion."
+    },
+    {
+      "title": "Plant Poisonings: Symptoms, Treatment and First Aid",
+      "organization": "Healthgrades / MSD Manual",
+      "url": "https://resources.healthgrades.com/right-care/symptoms-and-conditions/plant-poisonings",
+      "whyUseful": "Clinical description of plant poisoning symptoms requiring 911 response and hospital treatment protocols including activated charcoal."
+    },
+    {
+      "title": "Foraging 101: What to Eat and Avoid",
+      "organization": "Cleveland Clinic",
+      "url": "https://health.clevelandclinic.org/foraging-101-what-to-eat-and-avoid",
+      "whyUseful": "Clinician-authored consumer guidance on physiological warning signs during plant consumption and safe foraging practice."
+    },
+    {
+      "title": "Pocket Tutor Guide Edible Wild Plants",
+      "organization": "Boy Scouts of America",
+      "url": "https://www.scoutshop.org/pocket-tutor-guide-edible-wild-plants-30401.html",
+      "whyUseful": "BSA field-practice reference for beginner North American edible plant identification used in youth outdoor education."
+    },
+    {
+      "title": "Surviving in the Wild: 19 Common Edible Plants",
+      "organization": "The Art of Manliness",
+      "url": "https://www.artofmanliness.com/skills/outdoor-survival/surviving-in-the-wild-19-common-edible-plants/",
+      "whyUseful": "Field-practice synthesis of widely recognized beginner edibles including dandelion, cattail, and plantain with identification features."
+    }
+  ]
+}

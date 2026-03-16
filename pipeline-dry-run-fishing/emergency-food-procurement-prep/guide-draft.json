@@ -1,0 +1,131 @@
+{
+  "slug": "emergency-food-procurement-prep",
+  "title": "Emergency Food Procurement: Building Skills and Supplies Before Disaster Strikes",
+  "category": "water_food",
+  "parentTopic": "Emergency Food Procurement",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "When supply chains collapse during extended emergencies, your ability to feed your household depends on decisions made long before the disaster. This guide covers how to build a deep food stockpile, learn active food procurement skills — fishing, foraging, gardening, and food preservation — and prepare for scenarios where stored food alone is not enough.",
+  "quickAnswer": "Build a layered food preparedness plan: start with a 2-week stockpile, work toward 3 months of non-perishables, and develop at least one active food procurement skill (fishing, gardening, or food preservation) before you need it.",
+  "whenToUse": [
+    "When planning your household emergency preparedness before a disaster occurs",
+    "When you want to extend your food self-sufficiency beyond a basic 72-hour kit",
+    "When assessing whether your current food stores can sustain your household through a prolonged emergency (2+ weeks)",
+    "When you live in an area prone to major storms, wildfires, or other events that can disrupt supply chains for weeks",
+    "When you want to learn food procurement skills — fishing, foraging, trapping, gardening, or canning — as part of long-term preparedness"
+  ],
+  "preferredAction": "Build a tiered food stockpile starting with FEMA's minimum 3-day supply, expanding to 2 weeks, then 3 months of non-perishable food for every household member — and practice at least one active food procurement skill annually.",
+  "backupAction": "If building a large stockpile is not feasible, focus on long-shelf-life bulk staples (beans, rice, wheat, salt, cooking oil) in sealed containers, and connect with a community garden, fishing spot, or local food network before an emergency.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Government emergency food supplies can fail catastrophically in major disasters — during Hurricane Katrina, FEMA's pre-positioned supplies were exhausted within days and evacuees received as little as two boxed meals per day; do not rely solely on relief organizations for extended emergencies.",
+    "A bulk-staple diet (wheat, corn, beans, salt) is calorie-sufficient but nutritionally incomplete — it lacks adequate calcium and vitamins A, C, B12, and E, which can cause serious health problems over weeks to months without supplementation.",
+    "Salty and spicy foods increase the body's water demand; during emergencies when water is scarce, high-sodium stored foods can worsen dehydration.",
+    "Improper home canning can produce botulism toxin, which is colorless and odorless and can be fatal — follow tested USDA canning recipes and methods exactly; do not modify ingredients or processing times.",
+    "Foraging for wild plants without verified identification training carries serious risk of poisoning — some toxic plants closely resemble edible species; never eat anything you cannot positively identify from multiple characteristics.",
+    "Emergency physical activity (hauling water, chopping wood, evacuating on foot) can increase caloric requirements well above baseline; stores sized only for sedentary daily needs may be insufficient.",
+    "Stored food has specific shelf-life windows — failure to rotate stock on schedule means your supplies may be spoiled or degraded when you need them most.",
+    "Gardens and fishing areas can fail due to drought, flood, disease, or pest pressure; wild food procurement skills should supplement stored food, not replace it."
+  ],
+  "whatNotToDo": [
+    "Do not assume a 72-hour kit is adequate for a prolonged regional disaster — supply chains can remain disrupted for 2–6 weeks or longer after major events.",
+    "Do not store foods your household does not normally eat — in a real emergency, unfamiliar foods may be rejected, especially by children, leading to dangerous under-eating.",
+    "Do not store very salty, spicy, or high-sodium foods as your primary stockpile — these increase water consumption when water is potentially limited.",
+    "Do not skip storing vitamin and mineral supplements alongside bulk staples — deficiencies develop silently and become serious over weeks.",
+    "Do not attempt to forage for wild plants without verified, hands-on identification training from a qualified instructor or established program.",
+    "Do not use charcoal grills or camp stoves indoors — these produce carbon monoxide, which is fatal in enclosed spaces.",
+    "Do not store food directly on concrete floors or in areas exposed to moisture, temperature extremes, or sunlight — these conditions degrade shelf life dramatically.",
+    "Do not wait until an emergency to try fishing, setting snares, or practicing food preservation — these skills require practice to execute reliably under stress."
+  ],
+  "redFlags": [
+    "You have fewer than 3 days of food on hand for all household members — you are below even the minimum preparedness threshold.",
+    "Your stored food is past its use-by date or shows signs of spoilage (swollen cans, off odors, rust, damage) — contaminated food causes illness when other medical resources are unavailable.",
+    "A major disaster warning has been issued for your area and local store shelves are already depleted — this indicates you are in a supply-chain disruption scenario where stored food is your primary resource.",
+    "A household member shows signs of nutritional deficiency (fatigue, gum problems, slow wound healing, vision changes) after weeks on stored food alone — this requires immediate attention and dietary adjustment.",
+    "Wild-foraged food has caused nausea, stomach pain, or neurological symptoms (dizziness, confusion, tingling) in any household member — cease consumption immediately and seek medical help.",
+    "Your area has experienced extended power outages (more than 24 hours) with no restoration timeline — refrigerated and frozen food is becoming unsafe and your non-perishable stores are now critical."
+  ],
+  "preparednessTips": [
+    "Start with FEMA's baseline: build a 72-hour kit first, then systematically expand to 2 weeks, then 3 months. Add a few extra canned or shelf-stable items with each grocery trip — small incremental purchases are more sustainable than a single large buy.",
+    "Target 2,000–2,500 calories per person per day, plus 20–30% more to account for increased physical activity during a crisis. Calculate total caloric need for your household before purchasing in bulk.",
+    "Store bulk long-life staples as your foundation: rice, dried beans, wheat, oats, pasta, cooking oil, iodized salt. UGA Extension recommends approximately 240 lbs of grain, 120 lbs of legumes, 20 lbs of fats/oils, and 5 lbs of salt per adult per year for full self-sufficiency.",
+    "Pair bulk staples with a variety of canned meats, fruits, vegetables, and powdered milk to address nutritional gaps. Store 365 multivitamin tablets per person annually to cover remaining micronutrient deficits.",
+    "Store bulk grains in nitrogen-packed cans or food-grade 5-gallon buckets with airtight lids. Keep all food in a cool (40°F–70°F), dry, dark location off the floor, away from moisture. Rotate canned goods every 2–4 years; use boxed items within 6 months.",
+    "Apply the 'store what you eat, eat what you store' principle: build your stockpile from foods your household regularly consumes. This ensures familiarity, rotation, and morale during extended emergencies.",
+    "Include special dietary needs in your planning: gluten-free options for those with celiac disease, lactose-free alternatives, infant formula if applicable. Mainstream bulk staples (wheat, powdered milk) are unsuitable for some household members.",
+    "Include comfort foods and treats in your stockpile — morale matters during extended emergencies, particularly for children. Hard candy, shelf-stable chocolate, and familiar snacks have outsized psychological value.",
+    "Learn at least one active food procurement skill before you need it. Fishing is widely accessible: acquire a fishing license, learn local regulations, obtain basic gear (rod, hooks, line, weights), and practice at a local body of water. Fishing techniques are perishable skills that degrade without practice.",
+    "Practice food preservation: take a USDA-compliant home canning course (many are offered through local Cooperative Extension offices) and preserve seasonal produce while it is cheapest. Understanding pressure canning vs. water-bath canning for different foods is a critical safety distinction.",
+    "Consider starting a vegetable garden, even a small container garden, before an emergency. Gardening skills — seed saving, soil preparation, pest management, knowing your growing season — take years to develop. A functioning garden during an extended disaster can supplement stored food meaningfully.",
+    "If you have hunting or fishing access, obtain necessary licenses and permits now and practice those skills at least annually. Hunting, trapping, and fishing require local knowledge, equipment familiarity, and practiced technique to be reliable food sources under stress.",
+    "Learn to identify at least 5–10 common edible plants in your local area through a formal course, field guide with multiple confirming characteristics, or instructor-led foraging program. Never forage based on a single feature or a single source; confirm identification from multiple distinguishing characteristics before consuming.",
+    "Build a basic food procurement kit and store it with your emergency supplies: manual can opener, cooking pot, camp stove and fuel, waterproof matches or lighter, fishing kit (hooks, line, weights, small lures), and basic snare wire. These tools have no value if they are not accessible or if you do not know how to use them.",
+    "Know your local community food resources before an emergency: food banks, community gardens, neighbors with gardens or livestock, local fishing areas. Mutual aid networks amplify individual preparedness — a neighbor with seeds, knowledge, or catches is a preparedness multiplier.",
+    "Research your local emergency management rules in advance: some jurisdictions have emergency exceptions to fishing license requirements during declared disasters; others do not. Knowing this before an emergency prevents legal and safety complications when you are already under stress.",
+    "Conduct an annual preparedness review: check expiration dates, rotate stock, practice one food procurement skill, update stockpile quantities for changes in household size, and restock any depleted items."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": [
+    "food",
+    "preparedness",
+    "stockpile",
+    "fishing",
+    "foraging",
+    "gardening",
+    "canning",
+    "food storage",
+    "long-term survival",
+    "supply chain",
+    "calories",
+    "nutrition",
+    "hunting",
+    "trapping"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Food | Ready.gov",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/food",
+      "whyUseful": "Authoritative federal baseline for minimum emergency food stockpile quantities, food selection criteria, and food safety during power outages"
+    },
+    {
+      "title": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "organization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "url": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "whyUseful": "Provides specific annual per-person quantities for bulk staples, shelf life guidance, nutritional gap analysis, and storage conditions for long-term food preparedness"
+    },
+    {
+      "title": "FM 3-05.70 Survival",
+      "organization": "U.S. Army / Department of Defense",
+      "url": "https://irp.fas.org/doddir/army/fm3-05-70.pdf",
+      "whyUseful": "Military survival manual providing field-validated food procurement prioritization, foraging and fishing techniques, and trapping guidance for extended survival scenarios"
+    },
+    {
+      "title": "11 Survival Skills That Could Save Your Life",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know",
+      "whyUseful": "Identifies foraging, fishing, and food procurement as essential survival skills and provides accessible framing for civilian preparedness"
+    },
+    {
+      "title": "Wilderness Survival Merit Badge",
+      "organization": "Scouting America (Boy Scouts of America)",
+      "url": "https://www.scouting.org/merit-badges/wilderness-survival/",
+      "whyUseful": "Established educational program validating the need to practice food procurement skills — fishing, snare-setting, foraging, and fire-based cooking — before emergencies"
+    },
+    {
+      "title": "The Federal Response to Hurricane Katrina: Lessons Learned",
+      "organization": "White House (George W. Bush Administration)",
+      "url": "https://georgewbush-whitehouse.archives.gov/reports/katrina-lessons-learned/",
+      "whyUseful": "Documents the failure of government food distribution during a major disaster, establishing the case for individual household food self-sufficiency"
+    },
+    {
+      "title": "NOLS - Wilderness Skills",
+      "organization": "National Outdoor Leadership School (NOLS)",
+      "url": "https://www.nols.edu/expeditions/skills/",
+      "whyUseful": "Established outdoor education program integrating food planning, fishing, and procurement skills as core expedition competencies"
+    }
+  ]
+}

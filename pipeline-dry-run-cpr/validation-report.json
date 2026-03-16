@@ -1,0 +1,125 @@
+{
+  "slug": "cardiac-arrest-cpr-steps",
+  "validatedAt": "2026-03-15T18:33:41.800Z",
+  "overallResult": "pass",
+  "evidenceTier": "authoritative_only",
+  "schemaChecks": [
+    {
+      "check": "required_fields_present",
+      "passed": true,
+      "evidence": "All 22 required fields present"
+    },
+    {
+      "check": "layer_guidetype_matched",
+      "passed": true,
+      "evidence": "action → action_card ✓"
+    },
+    {
+      "check": "valid_category",
+      "passed": true,
+      "evidence": "medical_safety ✓"
+    },
+    {
+      "check": "valid_source_quality",
+      "passed": true,
+      "evidence": "strong ✓"
+    },
+    {
+      "check": "array_fields_flat",
+      "passed": true,
+      "evidence": "All array fields are flat string arrays"
+    },
+    {
+      "check": "source_refs_schema",
+      "passed": true,
+      "evidence": "All source refs have required fields"
+    },
+    {
+      "check": "constraint_tags_valid",
+      "passed": true,
+      "evidence": "All constraint tags valid"
+    },
+    {
+      "check": "response_role_valid",
+      "passed": true,
+      "evidence": "primary ✓"
+    },
+    {
+      "check": "alt_slugs_exist",
+      "passed": true,
+      "evidence": "No alt slugs or all valid"
+    },
+    {
+      "check": "no_constraint_overlap",
+      "passed": true,
+      "evidence": "No overlap ✓"
+    },
+    {
+      "check": "camelCase_fields",
+      "passed": true,
+      "evidence": "All fields camelCase ✓"
+    },
+    {
+      "check": "slug_format",
+      "passed": true,
+      "evidence": "cardiac-arrest-cpr-steps ✓"
+    }
+  ],
+  "safetyChecks": [
+    {
+      "check": "action_card_has_steps",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "10 steps (min 3 required)"
+    },
+    {
+      "check": "action_has_warnings",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "5 warnings"
+    },
+    {
+      "check": "action_has_red_flags",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "4 red flags"
+    },
+    {
+      "check": "source_quality_matches_tier",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "sourceQuality=strong, evidenceTier=authoritative_only — match ✓"
+    }
+  ],
+  "duplicateChecks": [
+    {
+      "check": "no_duplicate_new",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "No existing guide with slug cardiac-arrest-cpr-steps ✓"
+    },
+    {
+      "check": "upgrade_target_exists",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "integrationDecision=new, upgradesGuide=null — N/A ✓"
+    }
+  ],
+  "constraintChecks": [
+    {
+      "check": "role_not_duplicated",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "No other primary in Cardiac Arrest/action layer ✓ (new parentTopic)"
+    },
+    {
+      "check": "blocked_makes_sense",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "blockedByConstraints=[] — CPR is never contraindicated for an unresponsive non-breathing person ✓"
+    }
+  ],
+  "blockingIssues": [],
+  "warnings": [],
+  "recommendation": "All checks passed. Ready for import/staging."
+}

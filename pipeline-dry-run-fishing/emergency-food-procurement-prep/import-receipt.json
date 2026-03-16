@@ -1,0 +1,12 @@
+{
+  "slug": "emergency-food-procurement-prep",
+  "versionId": "12d0b5d1-a1cf-4c6d-b97b-b085880191e3",
+  "versionNumber": 1,
+  "reviewStatus": "draft",
+  "isNew": true,
+  "changeSummary": "New preparedness_guide for long-term emergency food procurement. Covers tiered stockpile building (72hr → 2wk → 3mo), UGA Extension bulk quantities, active skill development (fishing, gardening, canning, foraging), and community food networks. sourceQuality: strong. Clean pass, no warnings.",
+  "apiWarnings": [],
+  "validationWarnings": [],
+  "importedAt": "2026-03-16T09:14:36.545Z",
+  "reviewUrl": "http://localhost:3000/review?filter=draft"
+}

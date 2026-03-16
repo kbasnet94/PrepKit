@@ -1,0 +1,84 @@
+{
+  "slug": "cpr-reference",
+  "title": "CPR: How It Works and When to Use It",
+  "category": "medical_safety",
+  "parentTopic": "Cardiac Arrest",
+  "layer": "reference",
+  "guideType": "reference_guide",
+  "summary": "CPR (cardiopulmonary resuscitation) manually circulates blood to the brain and vital organs when the heart has stopped. Bystander CPR can double or triple survival odds — but fewer than half of all cardiac arrests in the US receive it. Understanding how CPR works, how it differs for adults, children, and infants, and when to use an AED helps you act confidently when seconds count.",
+  "quickAnswer": "Push hard and fast in the center of the chest at 100–120 compressions per minute. For adults, compression-only CPR is acceptable if you are untrained. For children and infants, rescue breaths matter more. Use an AED as soon as one is available — it will tell you what to do.",
+  "whenToUse": [
+    "You want to understand how CPR works before taking a formal training class",
+    "You need to know the differences between adult, child, and infant CPR technique",
+    "You want to understand when to use compression-only CPR vs full CPR with rescue breaths",
+    "You want to understand how an AED fits into CPR and when to use it"
+  ],
+  "preferredAction": "For step-by-step instructions during an active emergency, use the Cardiac Arrest: Start CPR Immediately action card. This guide is for understanding and preparedness.",
+  "backupAction": "If you are unsure of technique during an emergency, compression-only CPR (no rescue breaths) is always better than no CPR — push hard and fast in the center of the chest and call 911.",
+  "stepByStepActions": [],
+  "warnings": [
+    "CPR can cause rib fractures in approximately 1 in 3 cases, especially in older adults. This is an expected complication and not a reason to stop — broken ribs can heal, brain death from no compressions cannot.",
+    "Rescue breathing carries a very low risk of disease transmission. The risk of not acting is far greater. If you are concerned, compression-only CPR is a highly effective alternative for adults.",
+    "AED shocks are safe for the rescuer as long as no one is touching the person when the shock is delivered. The AED will tell you to clear before analyzing or shocking."
+  ],
+  "whatNotToDo": [
+    "Do not wait to see if the person recovers on their own — every minute without CPR reduces survival odds by 7–10%.",
+    "Do not assume CPR is only for people with heart conditions — cardiac arrest can happen to anyone at any age.",
+    "Do not avoid starting CPR because you are afraid of doing it wrong — imperfect CPR is always better than no CPR."
+  ],
+  "redFlags": [],
+  "preparednessTips": [
+    "Take a CPR and AED course from the American Heart Association (cpr.heart.org) or American Red Cross (redcross.org) — hands-on training takes about 2 hours and builds the muscle memory to act under stress.",
+    "Compression rate memory trick: the Bee Gees song 'Stayin' Alive' is exactly 100 BPM. Use it as a mental metronome.",
+    "Know where the nearest AED is in your workplace, gym, school, and community spaces. Most are wall-mounted in a red or green cabinet. AEDs in public locations have saved thousands of lives — but only 12.6% of bystanders use them.",
+    "Children aged 12 and older can be taught effective CPR and AED use per 2025 AHA guidelines. Consider teaching CPR to older children at home.",
+    "If you have a family member with a known heart condition, ask their cardiologist whether a home AED is appropriate for your household."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "cpr-reference",
+  "appTags": [
+    "CPR",
+    "cardiac arrest",
+    "chest compressions",
+    "AED",
+    "rescue breaths",
+    "defibrillator",
+    "infant CPR",
+    "child CPR",
+    "hands-only CPR",
+    "bystander CPR"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for CPR and ECC",
+      "organization": "American Heart Association",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001369",
+      "whyUseful": "Primary authoritative source for adult bystander CPR: compression rate, depth, hands-only vs 30:2, AED use, and updated 2025 recommendations."
+    },
+    {
+      "title": "Part 6: Pediatric Basic Life Support: 2025 AHA/AAP Guidelines for CPR and ECC",
+      "organization": "American Heart Association / American Academy of Pediatrics",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001370",
+      "whyUseful": "Source for child and infant CPR technique differences, including the 2025 elimination of the two-finger infant technique in favor of two-thumb encircling."
+    },
+    {
+      "title": "CPR Facts and Stats",
+      "organization": "American Heart Association",
+      "url": "https://cpr.heart.org/en/resources/cpr-facts-and-stats",
+      "whyUseful": "Source for survival statistics: bystander CPR doubles/triples survival, 7–10% per-minute survival reduction, and AED bystander use rates."
+    },
+    {
+      "title": "CPR Steps: How to Perform CPR",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/take-a-class/cpr/performing-cpr/cpr-steps",
+      "whyUseful": "Red Cross lay-rescuer CPR sequence and guidance on rescue breath technique and compression-to-ventilation ratios."
+    }
+  ],
+  "notes": "v2 upgrade: replaced placeholder summary/quickAnswer, added survival statistics, age group comparison (adult/child/infant), compression-only vs full CPR guidance, 2025 AHA infant technique update (two-thumb, two-finger eliminated), AED basics, training resources. sourceQuality upgraded from mixed to strong. This guide complements the action card (cardiac-arrest-cpr-steps) — action card covers the emergency response, this covers understanding and preparedness.",
+  "responseRole": "reference",
+  "constraintTags": [],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": []
+}

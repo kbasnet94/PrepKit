@@ -1,0 +1,247 @@
+{
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "category": "water_food",
+    "parentTopic": "Emergency Food Procurement"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "mixed",
+  "suggestedLayer": "scenario",
+  "suggestedGuideType": "scenario_guide",
+  "existingGuideUpgradeTarget": null,
+  "researchFindings": [
+    {
+      "claim": "Only forage plants you can positively identify with certainty — when in doubt, leave it out. Never eat a wild plant unless you are 100% certain of its identification.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core safety rule for all plant foraging — primary preferredAction"
+    },
+    {
+      "claim": "Do not rely on common names alone — some wild edible plants share the same common names as poisonous plants. Use Latin scientific names when possible for reliable identification.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key identification rule — warnings"
+    },
+    {
+      "claim": "Learn the dangerous species in your area before foraging. If you know what poisonous plants you may encounter, you can forage for edible species with greater confidence.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Preparedness step — preparednessTips"
+    },
+    {
+      "claim": "Try new wild foods one at a time and start with a small amount. Some people are allergic to plants that are edible for most people. Wait before eating more to confirm no adverse reaction.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core step in safe consumption — stepByStepActions"
+    },
+    {
+      "claim": "Use at least three points of identification (color, leaf shape, stem, fruit, flower, fragrance, location, soil conditions, life cycle) before concluding a plant is a known edible species.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Identification methodology — stepByStepActions"
+    },
+    {
+      "claim": "Avoid foraging near roads, industrial areas, golf courses, city parks, or farmland. These areas may be contaminated with pesticides, herbicides, synthetic fertilizers, or heavy metals.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Location safety — warnings"
+    },
+    {
+      "claim": "Only harvest healthy-looking plants. Plants afflicted by disease, fungi, pests, or pollution are not safe to eat and provide fewer nutrients.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Plant selection quality — stepByStepActions"
+    },
+    {
+      "claim": "The Universal Edibility Test (UET) — from the U.S. Army Survival Field Manual ATP 3-50.21 — is a last-resort emergency procedure for testing an unknown plant. It takes approximately 24 hours per plant part and involves: (1) separating the plant into components, (2) smelling for acidic or almond-like odors, (3) fasting 8 hours, (4) skin contact test on inner elbow for 15 minutes, (5) lip test with a small pinch, (6) wait 3 minutes, (7) place a small amount on tongue for 15 minutes without chewing, (8) chew a small portion and hold for 15 minutes without swallowing, (9) swallow a small amount and wait 8 hours, (10) if no reaction, eat 1/4 cup and wait another 8 hours.",
+      "sourceTitle": "U.S. Army Survival Field Manual ATP 3-50.21",
+      "sourceOrganization": "U.S. Army / Department of Defense",
+      "sourceUrl": null,
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Emergency backup identification procedure — backupAction and stepByStepActions"
+    },
+    {
+      "claim": "Do NOT use the Universal Edibility Test on mushrooms. Mushrooms can be deadly without providing the warning signs (burning, bitterness) that many toxic plants give.",
+      "sourceTitle": "Universal Edibility Test",
+      "sourceOrganization": "U.S. Army / ATP 3-50.21 (multiple field sources)",
+      "sourceUrl": null,
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Critical warning — whatNotToDo"
+    },
+    {
+      "claim": "Never eat green, white, or yellow berries. These colors are associated with a high likelihood of toxicity across many North American species.",
+      "sourceTitle": "Universal Edibility Test: THE Complete Guide",
+      "sourceOrganization": "Greenbelly Meals (field practice synthesis)",
+      "sourceUrl": "https://www.greenbelly.co/pages/universal-edibility-test",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Quick visual rule for berries — whatNotToDo"
+    },
+    {
+      "claim": "Avoid plants with these traits: milky or discolored sap, fine hairs, spines or thorns, umbrella-shaped flower clusters (Apiaceae family), almond or pear scent in woody parts, beans/bulbs/seeds inside pods, three-leaved growth pattern.",
+      "sourceTitle": "Universal Edibility Test — Plant Avoidance Guidelines",
+      "sourceOrganization": "U.S. Army Survival Manual FM 21-76",
+      "sourceUrl": "https://trueprepper.com/wp-content/uploads/2022/11/FM-21-76-US-Army-Survival-Manual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Visual warning signs for toxic plants — warnings and whatNotToDo"
+    },
+    {
+      "claim": "Poison hemlock (Conium maculatum) is commonly mistaken for wild carrot, wild parsnip, or wild parsley. Every part is lethal. Symptoms appear within 15 minutes of ingestion and include nausea, vomiting, confusion, and respiratory failure. There is no antidote.",
+      "sourceTitle": "Identifying Danger: Toxic Plants That Look Like Carrots",
+      "sourceOrganization": "Illinois Extension / University of Illinois",
+      "sourceUrl": "https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical misidentification case — redFlags and warnings"
+    },
+    {
+      "claim": "Water hemlock (Cicuta species) is considered one of the most violently toxic plants in North America. Its toxin cicutoxin causes rapid-onset grand mal seizures. The plant resembles water parsnip and wild carrot. Fatal doses can come from a small amount of root material.",
+      "sourceTitle": "Poison Hemlock and Western Water Hemlock: Deadly Plants",
+      "sourceOrganization": "Oregon State University Extension Service",
+      "sourceUrl": "https://extension.oregonstate.edu/catalog/poison-hemlock-western-waterhemlock-deadly-plants-may-be-growing-your-pasture",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical misidentification case — redFlags and warnings"
+    },
+    {
+      "claim": "Elderberries (Sambucus) have edible cooked berries but toxic raw berries, and all other plant parts (leaves, stems, bark, roots) are toxic. Raw consumption causes nausea and vomiting.",
+      "sourceTitle": "19 Edible Wild Plants That Are Safe to Forage",
+      "sourceOrganization": "MasterClass",
+      "sourceUrl": "https://www.masterclass.com/articles/edible-wild-plants",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Edible-with-conditions example — warnings"
+    },
+    {
+      "claim": "Dandelion (Taraxacum officinale) is one of the safest and most reliably identifiable edible wild plants. The entire plant — leaves, stems, flowers, and roots — is edible raw or cooked. It is high in calcium, iron, and vitamins A and K.",
+      "sourceTitle": "Surviving in the Wild: 19 Common Edible Plants",
+      "sourceOrganization": "The Art of Manliness",
+      "sourceUrl": "https://www.artofmanliness.com/skills/outdoor-survival/surviving-in-the-wild-19-common-edible-plants/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "High-confidence beginner edible — scenario example for stepByStepActions"
+    },
+    {
+      "claim": "Cattail (Typha latifolia) is a widely distributed wetland plant that is nutritionally valuable. Young shoots, pollen, and flower spikes are edible in spring. Rootstock/rhizomes can be eaten raw or boiled year-round. Provides vitamin C, phosphorus, and potassium.",
+      "sourceTitle": "10 Edible Wild Plants for Survival",
+      "sourceOrganization": "TITAN Survival",
+      "sourceUrl": "https://www.titansurvival.com/blogs/survival-tips/10-edible-wild-plants-for-survival",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "High-confidence wetland edible — scenario example"
+    },
+    {
+      "claim": "Broadleaf plantain (Plantago major) grows in disturbed soils and roadsides worldwide. Leaves are edible raw or boiled. Seeds are edible raw or cooked. High in iron and vitamins. Has a distinctive oval leaf with parallel veins running its length.",
+      "sourceTitle": "Surviving in the Wild: 19 Common Edible Plants",
+      "sourceOrganization": "The Art of Manliness",
+      "sourceUrl": "https://www.artofmanliness.com/skills/outdoor-survival/surviving-in-the-wild-19-common-edible-plants/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "High-confidence beginner edible — scenario example"
+    },
+    {
+      "claim": "If you suspect ingestion of a toxic plant: call Poison Control immediately at 1-800-222-1222 (US, 24/7, free). Do NOT induce vomiting unless specifically directed by Poison Control or a physician. Bring the plant or a photo to the hospital.",
+      "sourceTitle": "Plants | Poison Help",
+      "sourceOrganization": "HRSA / Poison Help",
+      "sourceUrl": "https://poisonhelp.hrsa.gov/faq/plants",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Emergency response if poisoning occurs — redFlags and warnings"
+    },
+    {
+      "claim": "Call 911 immediately if the person who ingested a plant has collapsed, is unconscious, has seizures, severe difficulty breathing, or altered mental status.",
+      "sourceTitle": "Plant Poisonings: Symptoms, Treatment & First Aid",
+      "sourceOrganization": "Healthgrades / MSD Manual",
+      "sourceUrl": "https://resources.healthgrades.com/right-care/symptoms-and-conditions/plant-poisonings",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Emergency escalation red flags — redFlags"
+    },
+    {
+      "claim": "Hospital treatment for plant poisoning may include activated charcoal to prevent toxin absorption, and is most effective when administered soon after ingestion. Vital signs monitoring and symptomatic treatment are standard.",
+      "sourceTitle": "Plant Poisonings: Symptoms, Treatment & First Aid",
+      "sourceOrganization": "Healthgrades / MSD Manual",
+      "sourceUrl": "https://resources.healthgrades.com/right-care/symptoms-and-conditions/plant-poisonings",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Informs urgency of seeking immediate care — redFlags"
+    },
+    {
+      "claim": "The Boy Scouts of America Pocket Tutor Guide to Edible Wild Plants is a recognized introductory reference for North American edible species. Sam Thayer's Field Guide to Edible Wild Plants (National Outdoor Book Award 2023) is considered the most comprehensive current reference for Eastern and Central North America.",
+      "sourceTitle": "Pocket Tutor Guide Edible Wild Plants",
+      "sourceOrganization": "Boy Scouts of America",
+      "sourceUrl": "https://www.scoutshop.org/pocket-tutor-guide-edible-wild-plants-30401.html",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Field-practice resource recommendation — preparednessTips"
+    },
+    {
+      "claim": "Foraging is governed by land-use regulations. Most public lands have strict rules on harvesting wild plants; always check with the managing agency. Private land requires landowner permission.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Legal/context note — warnings"
+    },
+    {
+      "claim": "If you experience burning throat, uncontrollable salivation, nausea, or an unpalatable bitter taste after eating a plant, spit it out immediately — these are physiological warning signs of a toxic response.",
+      "sourceTitle": "Foraging 101: What to Eat (and Avoid)",
+      "sourceOrganization": "Cleveland Clinic",
+      "sourceUrl": "https://health.clevelandclinic.org/foraging-101-what-to-eat-and-avoid",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "In-the-moment red flag signals — redFlags"
+    }
+  ],
+  "suggestedSubGuides": [
+    {
+      "slug": "edible-mushroom-foraging-basics",
+      "layer": "scenario",
+      "guideType": "scenario_guide",
+      "reason": "Mushroom identification is a separate, higher-risk skill requiring its own distinct guidance. The UET does not apply to mushrooms, and misidentification risk is substantially higher."
+    },
+    {
+      "slug": "edible-berries-north-america",
+      "layer": "reference",
+      "guideType": "reference_guide",
+      "reason": "Berry identification deserves dedicated coverage given the high density of toxic lookalikes (nightshade, mistletoe, pokeweed vs. edible varieties)."
+    }
+  ],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "The Universal Edibility Test guarantees a plant is safe to eat",
+      "issue": "The UET is not definitive — it can miss slow-onset toxins and cumulative toxins. It is a last-resort survival procedure, not a reliable identification method.",
+      "sourceA": "U.S. Army ATP 3-50.21 (presents UET as a survival tool)",
+      "sourceB": "Multiple field practice sources note UET limitations for slow-acting toxins",
+      "resolution": "Present UET as an emergency last resort only, with explicit caveat that it does not guarantee safety."
+    },
+    {
+      "claim": "'Milky sap = toxic' as a universal rule",
+      "issue": "While milky or discolored sap is a warning sign, dandelion itself has milky sap and is edible. The rule is a heuristic, not absolute.",
+      "sourceA": "U.S. Army FM 21-76 warns about milky sap",
+      "sourceB": "USDA and field guides confirm dandelion (milky sap) is edible",
+      "resolution": "Frame milky sap as a warning indicator requiring additional verification, not an absolute exclusion rule. Do not present it as definitive."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Region-specific plant identification",
+      "impact": "Edible plants and their lookalikes vary significantly by region. This guide cannot cover all regional variants.",
+      "suggestion": "Add a strong preparednessTip directing users to obtain a region-specific field guide before any foraging."
+    },
+    {
+      "area": "Pediatric foraging safety",
+      "impact": "Children are at higher risk of accidental plant poisoning. No specific pediatric guidance found.",
+      "suggestion": "Add a warning that children should not forage independently and that toxic doses are smaller for children."
+    },
+    {
+      "area": "Specific caloric and nutrition yield in survival context",
+      "impact": "No authoritative source found quantifying caloric return of common wild plants in an emergency context.",
+      "suggestion": "Omit caloric specifics; focus on identification and safety rather than nutritional optimization."
+    }
+  ],
+  "recommendation": "Write a scenario_guide that walks through the decision process and safe procedure for emergency plant foraging. The guide must open with the strongest possible safety framing (misidentification can be fatal), then provide a structured identification approach, a description of the Universal Edibility Test as a last resort, three high-confidence beginner edibles (dandelion, cattail, plantain), toxic lookalike warnings (Apiaceae family / hemlock), and a clear emergency poisoning response protocol including Poison Control (1-800-222-1222). The warnings and redFlags arrays should be the most robust sections given the safety-critical nature of the content. The scenario_guide layer is appropriate because this is a multi-step situational walkthrough, not an immediate-action emergency card."
+}

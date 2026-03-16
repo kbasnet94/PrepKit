@@ -20,11 +20,13 @@ export function CreateReleaseForm() {
   const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
   const [releaseName, setReleaseName] = useState("");
-  const [semanticVersion, setSemanticVersion] = useState("v1.0.0");
+  const [semanticVersion, setSemanticVersion] = useState("");
   const [releaseNotes, setReleaseNotes] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   async function handleCreate() {
     setSaving(true);
+    setError(null);
     try {
       const res = await fetch("/api/releases", {
         method: "POST",
@@ -35,21 +37,33 @@ export function CreateReleaseForm() {
           release_notes: releaseNotes || null,
         }),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) {
+        const text = await res.text();
+        let msg = text;
+        try {
+          const json = JSON.parse(text);
+          if (json.message?.includes("duplicate key") && json.message?.includes("semantic_version")) {
+            msg = `Version "${semanticVersion}" already exists. Choose a different version.`;
+          } else {
+            msg = json.message ?? json.error ?? text;
+          }
+        } catch {}
+        throw new Error(msg);
+      }
       setOpen(false);
       setReleaseName("");
-      setSemanticVersion("v1.0.0");
+      setSemanticVersion("");
       setReleaseNotes("");
       router.refresh();
     } catch (e) {
-      console.error(e);
+      setError(e instanceof Error ? e.message : "Failed to create release");
     } finally {
       setSaving(false);
     }
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) setError(null); }}>
       <DialogTrigger asChild>
         <Button>Create release</Button>
       </DialogTrigger>
@@ -75,8 +89,8 @@ export function CreateReleaseForm() {
             <Input
               id="semanticVersion"
               value={semanticVersion}
-              onChange={(e) => setSemanticVersion(e.target.value)}
-              placeholder="v1.0.0"
+              onChange={(e) => { setSemanticVersion(e.target.value); setError(null); }}
+              placeholder="e.g. v1.1.0"
             />
           </div>
           <div className="grid gap-2">
@@ -89,6 +103,9 @@ export function CreateReleaseForm() {
             />
           </div>
         </div>
+        {error && (
+          <p className="text-destructive text-sm">{error}</p>
+        )}
         <DialogFooter>
           <Button variant="outline" onClick={() => setOpen(false)}>
             Cancel

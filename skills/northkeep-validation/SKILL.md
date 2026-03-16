@@ -119,3 +119,39 @@ Produce `validation-report.json`:
 - Don't flag style preferences as blocking issues. "I would have phrased it differently" is not a validation failure.
 - Don't skip the research-packet cross-check when a packet is available — it's the most important safety check.
 - Don't let a guide through with `sourceQuality: "strong"` if the sourceReferences are empty or contain only organization names without URLs.
+
+## Subagent Instructions
+
+This section applies when this skill is spawned as a subagent by `northkeep-orchestrator` during a batch pipeline run.
+
+### Expected prompt inputs
+
+The orchestrator will pass these values inline in the subagent prompt:
+- `guideAnnotatedPath` — absolute path to the annotated guide from the Constraint Annotator subagent
+- `researchPacketPath` — absolute path to the research packet from the Research subagent
+- `dryRunFolder` — absolute path to the batch run folder (e.g., `/Users/Karan/Desktop/PrepKit/pipeline-dry-run-<topic>`)
+- `slug` — the target slug for this guide
+- `evidenceTier` — the evidence tier used during research
+
+### What to do when spawned as a subagent
+
+1. Read this SKILL.md (you are already reading it)
+2. Read the annotated guide at `guideAnnotatedPath` and the research packet at `researchPacketPath`
+3. Run all validation categories (schema, safety, duplicate, constraint) in full
+4. Write the validation report to: `<dryRunFolder>/<slug>/validation-report.json`
+
+### Result message to return
+
+When finished, return a single result message in this format:
+
+```
+VALIDATION COMPLETE
+slug: <slug>
+status: pass | fail
+validationReportPath: <dryRunFolder>/<slug>/validation-report.json
+overallResult: pass | pass_with_warnings | fail
+blockingIssues: <comma-separated list, or "none">
+warnings: <comma-separated list, or "none">
+```
+
+The orchestrator collects all validation results before proceeding to Import/Staging. A `fail` result blocks that guide from import but does not block other guides in the batch.

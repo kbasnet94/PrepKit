@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-03-15T18:00:00.000Z",
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "suggestedSlugs": ["purify-water-chemical-tablets", "purify-water-filter"],
+    "category": "water_food",
+    "parentTopic": "Safe Drinking Water in Emergencies"
+  },
+  "evidenceTier": "authoritative_only",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "action",
+  "suggestedGuideType": "action_card",
+  "existingGuideUpgradeTarget": null,
+
+  "researchFindings": [
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Chemical purification tablets (chlorine, iodine, or chlorine dioxide) can disinfect water in emergencies. Follow the instructions on the product label as each product has different strength and dosage.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core framing for the guide: when to use tablets"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Iodine tablets kill most bacteria and viruses but will NOT kill Cryptosporidium, and are only marginally effective against Giardia without extended contact time.",
+      "sourceTitle": "Water Disinfection for Travelers — Yellow Book 2024",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical safety distinction — guides when iodine is/isn't sufficient"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Iodine tablets must NOT be used by people who are pregnant, have thyroid problems, or have a hypersensitivity to iodine.",
+      "sourceTitle": "About Water Treatment Options When Hiking, Camping, or Traveling",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Red flag / warning for the guide"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "No one should drink water disinfected with iodine for more than a few weeks at a time due to thyroid effects. Long-term use requires medical supervision.",
+      "sourceTitle": "Water Disinfection for Travelers — Yellow Book 2024",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Warning for extended-emergency situations"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Chlorine dioxide (ClO₂) tablets kill most waterborne pathogens including Cryptosporidium oocysts at practical doses and contact times — the broadest spectrum of any chemical tablet option.",
+      "sourceTitle": "Water Disinfection for Travelers — Yellow Book 2024",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core product recommendation — CIO₂ is preferred over iodine when Crypto is a risk"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Chlorine dioxide tablets require several hours of contact time for full disinfection — especially to kill Cryptosporidium. Follow the label exactly.",
+      "sourceTitle": "Water Disinfection for Travelers — Yellow Book 2024",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Step-by-step action — wait time is a critical variable"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Chlorine dioxide is volatile and sensitive to sunlight; do not expose tablets to air. Prepare and use solutions promptly. It provides no residual protection against recontamination.",
+      "sourceTitle": "Water Disinfection for Travelers — Yellow Book 2024",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/yellow-book/hcp/preparing-international-travelers/water-disinfection-for-travelers.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Storage and handling warning"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Tincture of iodine (2%): add 5 drops per quart of clear water, 10 drops per quart of turbid water. Wait at least 30 minutes before drinking.",
+      "sourceTitle": "Emergency Disinfection of Drinking Water",
+      "sourceOrganization": "U.S. Environmental Protection Agency",
+      "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Dosage step for iodine (tincture form — tablet form follows manufacturer label)"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "If the water is cloudy or turbid, filter it first through a clean cloth, paper towel, or coffee filter — or let it settle — then draw off the clear water before adding tablets. Turbid water neutralizes disinfectants and requires higher concentrations or longer contact times.",
+      "sourceTitle": "How to Make Water Safe in an Emergency",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical pre-treatment step — applies to all tablet types"
+    },
+    {
+      "guideTarget": "purify-water-chemical-tablets",
+      "claim": "Disinfectants do not work as well as boiling for some germs including Cryptosporidium and Giardia. Boiling remains the most reliable method; tablets are a backup when boiling is not possible.",
+      "sourceTitle": "How to Make Water Safe in an Emergency",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/water-emergency/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Framing the guide as backup — do not present tablets as equivalent to boiling"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "Filters with an absolute pore size of 1 micron or smaller remove protozoa (Cryptosporidium, Giardia, Naegleria fowleri). Hollow fiber/ultrafiltration and reverse osmosis achieve this.",
+      "sourceTitle": "About Choosing Home Water Filters",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core performance claim — what filters remove"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "Filters with an absolute pore size of 0.3 micron or smaller remove bacteria (Salmonella, E. coli) in addition to protozoa. Ultrafiltration and nanofiltration achieve this.",
+      "sourceTitle": "About Choosing Home Water Filters",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Explains that many portable filters (LifeStraw, Sawyer Squeeze at 0.1 micron) remove bacteria"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "Standard hollow fiber membrane filters do NOT remove viruses. Virus removal requires nanofiltration or reverse osmosis, which are not commonly available in portable backcountry filters.",
+      "sourceTitle": "About Choosing Home Water Filters",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drinking-water/prevention/about-choosing-home-water-filters.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "CRITICAL safety warning — must be prominently stated in the guide"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "After filtering, add a chemical disinfectant (iodine, chlorine, or chlorine dioxide) to the filtered water. The disinfectant will kill remaining viruses and bacteria. Most filters remove parasites but not viruses.",
+      "sourceTitle": "About Water Treatment Options When Hiking, Camping, or Traveling",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "When to combine filter + chemical treatment (international travel, flood water)"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "The LifeStraw Family 1.0 hollow fiber filter was evaluated by WHO and meets WHO performance criteria for comprehensive protection against bacteria (E. coli), viruses (MS2 coliphage), and protozoa (Cryptosporidium) in laboratory testing.",
+      "sourceTitle": "WHO International Scheme to Evaluate Household Water Treatment Technologies — LifeStraw Family 1.0 Evaluation",
+      "sourceOrganization": "World Health Organization",
+      "sourceUrl": "https://cdn.who.int/media/docs/default-source/wash-documents/regnet/products/whoscheme_r1_productreport_lifestrawfamily1.0.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Validation of LifeStraw's performance claims"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "NSF/ANSI Standard 53 (cyst reduction) and Standard 58 (reverse osmosis) certifications confirm a filter removes Cryptosporidium and Giardia. Consumers should look for these certifications when selecting filters.",
+      "sourceTitle": "A Guide to Water Filters — Cryptosporidium",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/parasites/crypto/gen_info/filters.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Product selection guidance — NSF certification as quality signal"
+    },
+    {
+      "guideTarget": "purify-water-filter",
+      "claim": "Even certified filters may fail due to manufacturing flaws that allow small numbers of Cryptosporidium to pass through. Changing filter cartridges on schedule and wearing gloves when handling used cartridges reduces contamination risk.",
+      "sourceTitle": "A Guide to Water Filters — Cryptosporidium",
+      "sourceOrganization": "CDC",
+      "sourceUrl": "https://www.cdc.gov/parasites/crypto/gen_info/filters.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Maintenance and handling warning"
+    }
+  ],
+
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Chlorine dioxide tablet contact time for Cryptosporidium kill",
+      "issue": "CDC states 'several hours of contact time' but does not specify exact hours. Product labels (Aquatabs, MSR Aquatabs CIO₂) specify 4 hours in clear water, up to 8+ hours in cold or turbid water. The guide should reference label instructions without specifying a number we cannot source from EPA/CDC directly.",
+      "sourceA": "CDC Yellow Book 2024 — 'requires several hours'",
+      "sourceB": "Manufacturer product labels — '4 hours clear water, longer cold/turbid'",
+      "resolution": "Follow the label. State 'several hours' as the CDC guidance and direct users to the specific label. Do not invent a number."
+    },
+    {
+      "claim": "LifeStraw portable personal filter vs LifeStraw Family 1.0 — virus removal",
+      "issue": "The WHO evaluated the LifeStraw Family 1.0 and found it meets comprehensive protection criteria including viruses. The standard LifeStraw personal straw filter (not the Family model) is a hollow fiber filter rated at 0.2 micron — it removes bacteria and protozoa but its virus removal status differs by product version. CDC's filter guidance (0.3 micron absolute for bacteria, nanofiltration for viruses) suggests most portable straw-style filters do NOT reliably remove viruses.",
+      "sourceA": "WHO LifeStraw Family 1.0 evaluation — comprehensive protection including viruses",
+      "sourceB": "CDC filter guidance — nanofiltration required for virus removal",
+      "resolution": "State that standard portable hollow fiber filters (0.1–0.2 micron pore size) remove bacteria and protozoa but most do NOT reliably remove viruses. Users should combine with chemical treatment if viruses are a concern (flood water, international travel, developing-country sourced water). Recommend verifying NSF certification on the specific product."
+    }
+  ],
+
+  "identifiedGaps": [
+    {
+      "area": "Freeze damage to hollow fiber filters",
+      "impact": "If a filter freezes, the fibers can crack and the filter fails silently — water passes through without being filtered. This is a critical safety gap for cold-weather emergency use. However, we could not find this warning in EPA/CDC sources at the authoritative_only tier.",
+      "suggestion": "Flag as a known limitation in the warnings field; cite manufacturer guidance (Sawyer, LifeStraw product manuals) with a note that this is manufacturer-level guidance. The writing skill should include it with an appropriate source note."
+    },
+    {
+      "area": "Backflushing (Sawyer Squeeze) maintenance procedure",
+      "impact": "Sawyer Squeeze and similar filters require periodic backflushing to restore flow rate. Failure to backflush reduces filter effectiveness. No authoritative government source covers this procedure.",
+      "suggestion": "Include as a preparedness tip with a note that this follows manufacturer guidance. The Writing skill should reference 'manufacturer instructions' without inventing specific steps."
+    },
+    {
+      "area": "Iodine tablet exact dosage (tablet form vs tincture form)",
+      "impact": "EPA provides dosage for 2% tincture of iodine. Commercial iodine tablets (Potable Aqua, tetraglycine hydroperiodide) have their own dosage on the label. We found no EPA/CDC specification for tablet form dosage.",
+      "suggestion": "Reference 'follow the package label' for tablet form. Do not specify a number of tablets without a reliable authoritative source."
+    }
+  ],
+
+  "suggestedSubGuides": [],
+
+  "recommendation": "Write two action_card guides:\n\n1. purify-water-chemical-tablets: Lead with chlorine dioxide tablets (ClO₂) as the preferred option — broadest spectrum, kills Crypto. Cover iodine as secondary option with explicit warnings (pregnant/thyroid/allergy, short-term only, won't kill Crypto). Include turbid water pre-filtering steps. Emphasize that tablets are backup to boiling, not equivalent. Dosage: follow the label. Wait time: follow the label (chlorine dioxide is several hours; iodine is at least 30 min for clear water). Source quality: STRONG — EPA, CDC, WHO.\n\n2. purify-water-filter: Lead with capability (removes bacteria + protozoa, not viruses). Name LifeStraw and Sawyer as common examples. Include critical safety warning: does NOT remove viruses — in flood water or international settings, follow with chemical treatment. Include NSF/ANSI 53 or 58 certification as purchase guidance. Include maintenance (follow manufacturer instructions). Source quality: STRONG — CDC, WHO."
+}

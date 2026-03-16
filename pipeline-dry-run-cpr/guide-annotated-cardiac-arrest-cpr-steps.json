@@ -1,0 +1,105 @@
+{
+  "slug": "cardiac-arrest-cpr-steps",
+  "title": "Cardiac Arrest: Start CPR Immediately",
+  "category": "medical_safety",
+  "parentTopic": "Cardiac Arrest",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "If someone is unresponsive and not breathing normally, they are likely in cardiac arrest. Start CPR immediately — every minute without compressions reduces survival odds by 7–10%. You do not need formal training to help: push hard and fast in the center of the chest until emergency services arrive.",
+  "quickAnswer": "Call 911, push hard and fast in the center of the chest at 100–120 compressions per minute, and use an AED as soon as one is available. Do not wait. Imperfect CPR is far better than no CPR.",
+  "whenToUse": [
+    "A person is unresponsive and not breathing normally (gasping or no breaths at all)",
+    "A person has collapsed suddenly and cannot be woken by shouting or tapping their shoulders",
+    "You are waiting for emergency services and need to keep blood flowing to the brain",
+    "An AED is available and you need to know how to use it alongside compressions"
+  ],
+  "preferredAction": "Call 911 immediately (or tell someone else to), then begin Hands-Only CPR: place the heel of your hand on the center of the chest, stack your other hand on top, and push straight down hard and fast at 100–120 compressions per minute. Do not stop until EMS arrives.",
+  "backupAction": "If you are trained in CPR: after every 30 compressions, give 2 rescue breaths (pinch nose, seal mouth, 1 breath per second, watch for chest rise). If alone and untrained, continue compression-only — do not attempt rescue breaths.",
+  "stepByStepActions": [
+    "Check the scene is safe. Tap the person's shoulders firmly and shout 'Are you OK?' If no response, they are unresponsive.",
+    "Call 911 immediately or shout for someone nearby to call. Ask them to bring an AED if one is available. Put 911 on speaker.",
+    "Check for breathing for no more than 10 seconds. Look for chest rise. Gasping, gurgling, or no movement all count as not breathing normally — start CPR.",
+    "Lay the person on their back on a firm, flat surface. Kneel beside their chest.",
+    "Place the heel of one hand on the lower half of the sternum — the center of the chest, between the nipples. Place your other hand on top and interlace your fingers. Keep fingers off the ribs.",
+    "Lock your elbows, position your shoulders directly over your hands, and compress straight down at least 2 inches (5 cm) but no more than 2.4 inches (6 cm). Push hard.",
+    "Push at a rate of 100–120 compressions per minute — roughly the beat of 'Stayin' Alive.' Let the chest fully rise back up after each compression. Do not lean on the chest between pushes.",
+    "If untrained: continue compressions without stopping. Do not attempt rescue breaths. If trained: after every 30 compressions, give 2 rescue breaths — tilt the head back, lift the chin, pinch the nose shut, seal your mouth over theirs, and give 1 breath per second. Each breath should make the chest visibly rise. Avoid blowing hard.",
+    "If an AED arrives: turn it on and follow the voice prompts. Attach pads to bare, dry skin. Clear everyone away from the person during analysis and before any shock. Resume compressions immediately after the shock, or immediately if no shock is advised.",
+    "Continue CPR until EMS takes over, the person begins breathing normally on their own, or you are physically unable to continue."
+  ],
+  "warnings": [
+    "Gasping, gurgling, or irregular breathing is NOT normal breathing. Do not wait to see if they breathe on their own — start CPR immediately.",
+    "If you hear or feel cracking during compressions, rib fractures occur in roughly 1 in 3 CPR cases. Do not stop — broken ribs can be repaired; brain death from no compressions cannot. Keep going.",
+    "Every minute without CPR reduces survival odds by 7–10%. Hesitation is the most dangerous mistake. Imperfect CPR is always better than no CPR.",
+    "If you cannot reach 911, use any available means to get help — flag down someone, shout, send a bystander. Do not leave the person alone to go find help unless you are truly the only person present.",
+    "For children (age 1 to puberty): compress to about 2 inches or one-third of the chest depth. Rescue breaths are more important for children because their cardiac arrests are usually caused by breathing failure, not heart rhythm problems. Give 30 compressions then 2 breaths even if untrained."
+  ],
+  "whatNotToDo": [
+    "Do not wait for the person to stop gasping before starting — gasping is not normal breathing and CPR should begin immediately.",
+    "Do not compress too deep (more than 2.4 inches for adults) or at the wrong location — place hands on the lower half of the sternum, not on the lower tip or upper chest.",
+    "Do not bend your elbows during compressions — locked arms and body weight over the hands produce the correct depth and reduce fatigue.",
+    "Do not lean on the chest between compressions — the chest must fully recoil after each push to let the heart refill with blood.",
+    "Do not pause compressions for more than 10 seconds for any reason, including rescue breaths or AED setup.",
+    "Do not blow too hard during rescue breaths — over-inflation pushes air into the stomach, causing vomiting and airway obstruction. Give just enough air to make the chest rise."
+  ],
+  "redFlags": [
+    "No movement, coughing, or normal breathing after several cycles of CPR and an AED shock — continue CPR, do not stop",
+    "Person vomits during CPR — quickly turn them on their side, clear the mouth with your fingers or cloth, and resume compressions",
+    "AED advises 'no shock recommended' — continue CPR immediately; this means the rhythm may be non-shockable but compressions are still needed",
+    "Person shows signs of returning to life (normal breathing, movement, opening eyes) — stop compressions, place in recovery position if breathing, and monitor closely until EMS arrives"
+  ],
+  "preparednessTips": [
+    "Take a CPR/AED course from the American Heart Association or American Red Cross — hands-on training builds the muscle memory and confidence to act in an emergency.",
+    "Know where the nearest AED is in your workplace, gym, school, or community center. Many are wall-mounted in public spaces with clear signage.",
+    "Practice the compression rate: download a metronome app or find 'Stayin' Alive' on a playlist. 100–120 BPM is the correct range.",
+    "Teach other household members where your home AED is (if you have one) and how to call 911 — having a second person on scene dramatically improves outcomes.",
+    "Cardiac arrest can happen to anyone. You cannot make a person worse by attempting CPR — you can only help."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": [
+    "CPR",
+    "cardiac arrest",
+    "chest compressions",
+    "AED",
+    "unresponsive",
+    "not breathing",
+    "heart attack",
+    "hands-only CPR",
+    "rescue breaths",
+    "defibrillator"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Part 7: Adult Basic Life Support: 2025 American Heart Association Guidelines for CPR and ECC",
+      "organization": "American Heart Association",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001369",
+      "whyUseful": "Primary authoritative source for adult bystander CPR: compression rate, depth, hands-only vs 30:2, AED use, and survival statistics."
+    },
+    {
+      "title": "Part 6: Pediatric Basic Life Support: 2025 AHA/AAP Guidelines for CPR and ECC",
+      "organization": "American Heart Association / American Academy of Pediatrics",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001370",
+      "whyUseful": "Source for child CPR differences: compression depth, rescue breath importance, and two-rescuer ratios."
+    },
+    {
+      "title": "CPR Steps: How to Perform CPR",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/take-a-class/cpr/performing-cpr/cpr-steps",
+      "whyUseful": "Step-by-step lay-rescuer CPR sequence, chest recoil guidance, rescue breath technique, and AED integration."
+    },
+    {
+      "title": "Cardiopulmonary resuscitation (CPR) complications encountered in forensic autopsy cases",
+      "organization": "PMC / National Library of Medicine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6396442/",
+      "whyUseful": "Peer-reviewed source establishing that rib fractures occur in approximately 1 in 3 CPR cases and are an expected complication, supporting the warning not to stop CPR when cracking is felt."
+    }
+  ],
+  "notes": "Scope is adult and adolescent (puberty and older). Infant CPR (under 1 year) intentionally excluded — requires different technique and warrants a separate guide. Child (1 yr – puberty) differences noted in warnings.",
+  "responseRole": "primary",
+  "constraintTags": ["unconscious", "getting_worse"],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": []
+}

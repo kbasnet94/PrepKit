@@ -1,0 +1,213 @@
+{
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "category": "water_food",
+    "parentTopic": "Emergency Food Procurement"
+  },
+  "evidenceTier": "authoritative_plus_examples",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "preparedness",
+  "suggestedGuideType": "preparedness_guide",
+  "existingGuideUpgradeTarget": null,
+  "researchFindings": [
+    {
+      "claim": "FEMA recommends at minimum a 72-hour (3-day) emergency food supply, but strongly encourages building toward a 2-week supply for home use and ultimately 3 months or more.",
+      "sourceTitle": "Food | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/food",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Baseline quantity target for household emergency food stockpile"
+    },
+    {
+      "claim": "Stock non-perishable, easy-to-prepare foods that require no refrigeration, minimal cooking, and little to no water. Ready-to-eat canned meats, fruits, vegetables, protein bars, peanut butter, dried fruit, and high-energy foods are recommended. Include a manual can opener and eating utensils.",
+      "sourceTitle": "Food | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/food",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core items for emergency food stockpile"
+    },
+    {
+      "claim": "Long-term bulk staple quantities for one adult per year: 240 lbs wheat, 240 lbs corn, 75 lbs powdered milk, 120 lbs soybeans, 5 lbs iodized salt, 20 lbs fats/oils, 180 grams vitamin C. Supplemented with canned meats, rice, dried beans, pasta, and dried fruits.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Quantified annual long-term storage target for true self-sufficiency"
+    },
+    {
+      "claim": "Bulk wheat should be #2 grade or better, protein content 12–15%, moisture less than 10%. Store in nitrogen-packed cans or sturdy 5-gallon food-grade plastic buckets with tight-fitting lids. Other grains: rye, rice, oats, triticale, barley, millet, pasta.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Specific storage specifications for core grain staples"
+    },
+    {
+      "claim": "Optimal storage conditions are cool (40°F–70°F / 4°C–21°C), dry, dark locations, off the floor, away from moisture sources. Shelf life by category: boxed milk/dried fruits/crackers use within 6 months; canned soups/fruits/vegetables/peanut butter use within 1 year; wheat/corn/rice/beans/salt/pasta/nitrogen-packed powdered milk/cooking oils have indefinite shelf life. Rotate canned goods every 2–4 years.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Storage conditions and rotation schedule for maintaining food viability"
+    },
+    {
+      "claim": "The average person needs approximately 2,000–2,500 calories per day at baseline. Active physical labor during emergencies (chopping wood, hunting, manual water retrieval) significantly increases caloric requirements above baseline. Include vitamin, mineral, and protein supplements in the stockpile.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Caloric and nutritional planning baseline for emergency food stores"
+    },
+    {
+      "claim": "A bulk staple-only diet (wheat, corn, beans, salt) will be deficient in calcium and vitamins A, C, B12, and E. Vitamin A and C from canned/bottled fruits and vegetables; B12 from canned meats and beef jerky; calcium from powdered milks; vitamin E from fats, oils, and nuts. Multivitamin supplements (365 tablets per person per year) should be stored.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Nutritional gap analysis for bulk-staple-only diets — critical to avoid malnutrition"
+    },
+    {
+      "claim": "Food procurement skills — foraging, hunting, and fishing — are valid long-term survival strategies. Foraging requires knowledge of local flora to avoid poisonous species. Fishing provides protein-rich sustenance; fish traps, cast nets, gill nets, and fishing equipment are useful near water. Basic trapping and snare techniques can secure small game.",
+      "sourceTitle": "11 Survival Skills That Could Save Your Life",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/articles/11-survival-skills-to-know",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Identifies foraging and fishing as essential survival skills for extended scenarios"
+    },
+    {
+      "claim": "Food procurement in long-term survival situations requires knowledge of two basic sources: plants and animals (including fish). Both provide calories, carbohydrates, fats, and proteins needed for daily functions. In a survival setting, seek more abundant and easily obtained wildlife first: insects, crustaceans, mollusks, fish, and reptiles — then set traps for larger game.",
+      "sourceTitle": "FM 3-05.70 Survival",
+      "sourceOrganization": "U.S. Army / Department of Defense",
+      "sourceUrl": "https://irp.fas.org/doddir/army/fm3-05-70.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Field-validated prioritization of food procurement in extended survival scenarios"
+    },
+    {
+      "claim": "Trapping and snares are more energy-efficient than active hunting. Passive food-gathering methods (fishing lines, snares, fish traps) allow the survivor to rest or work on other survival tasks simultaneously. Build multiple traps to increase probability of success.",
+      "sourceTitle": "FM 3-05.70 Survival",
+      "sourceOrganization": "U.S. Army / Department of Defense",
+      "sourceUrl": "https://irp.fas.org/doddir/army/fm3-05-70.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core field-practice guidance for energy-efficient food procurement"
+    },
+    {
+      "claim": "Practicing hands-on food procurement skills before an emergency is critical. The BSA Wilderness Survival merit badge program and survival campouts teach practical fishing, snare-setting, foraging identification, gutting and cleaning animals, and making fire for cooking — all skills that must be practiced, not just read about.",
+      "sourceTitle": "Wilderness Survival Merit Badge",
+      "sourceOrganization": "Scouting America (Boy Scouts of America)",
+      "sourceUrl": "https://www.scouting.org/merit-badges/wilderness-survival/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Established educational program validating the need to practice procurement skills before emergencies"
+    },
+    {
+      "claim": "Gardening is an excellent renewable food supplement for extended emergencies. Growing a garden reduces reliance on stored food. Gardens can be susceptible to problems (pests, drought, disease), so learning to deal with those in advance is itself a preparedness activity.",
+      "sourceTitle": "Long-Term Food Storage: Creative Solutions to Build a Critical Asset",
+      "sourceOrganization": "University of California Cooperative Extension (UCANR) / The Provident Prepper",
+      "sourceUrl": "https://ucanr.edu/sites/default/files/2020-09/335597.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Gardening as a renewable food procurement strategy to supplement stored supplies"
+    },
+    {
+      "claim": "Hurricane Katrina (2005): Nearly 250,000 people in shelters faced acute food shortages. FEMA pre-positioned supplies proved entirely inadequate. Evacuees in the Superdome received as little as two 9-ounce bottles of water and two boxed meals per day. Food bank networks had to distribute over 1 million pounds of relief supplies per week for the first two months.",
+      "sourceTitle": "The Federal Response to Hurricane Katrina: Lessons Learned",
+      "sourceOrganization": "White House (George W. Bush Administration)",
+      "sourceUrl": "https://georgewbush-whitehouse.archives.gov/reports/katrina-lessons-learned/",
+      "evidenceStrength": "documented_case",
+      "fieldRelevance": "Real-world case study showing government food supply chains fail catastrophically in major disasters, underscoring individual preparedness need"
+    },
+    {
+      "claim": "2021 Texas Winter Storm (Winter Storm Uri) and 2019 California wildfire power outages left residents without power for 2 weeks to over a month with grocery store shelves emptied. These events demonstrate that supply chain disruptions lasting weeks are plausible in common regional disasters.",
+      "sourceTitle": "How Much Survival Food Per Person: A Comprehensive Guide to Stockpiling",
+      "sourceOrganization": "Battlbox (citing documented events)",
+      "sourceUrl": "https://www.battlbox.com/blogs/outdoors/how-much-survival-food-per-person-a-comprehensive-guide-to-stockpiling",
+      "evidenceStrength": "documented_case",
+      "fieldRelevance": "Contemporary case examples establishing plausibility of multi-week food disruptions from common events"
+    },
+    {
+      "claim": "Food should NOT be very salty or spicy in emergency stockpiles, as these increase the need for drinking water, which may be in short supply. Avoid high-sodium canned goods if water is limited.",
+      "sourceTitle": "Food | Ready.gov",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/food",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Specific stockpile selection warning — salty foods increase water demand"
+    },
+    {
+      "claim": "Store only foods your household will actually eat. Storing foods that are difficult to prepare or unlikely to be eaten is a costly mistake. Comfort foods that boost morale are also appropriate to include.",
+      "sourceTitle": "Preparing an Emergency Food Supply, Long Term Food Storage",
+      "sourceOrganization": "University of Georgia Cooperative Extension (UGA FACS)",
+      "sourceUrl": "https://www.fcs.uga.edu/extension/preparing-an-emergency-food-supply-long-term-food-storage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical practical guideline to prevent food waste and ensure emergency stores are actually used"
+    },
+    {
+      "claim": "Learning to can and preserve food allows extending the utility of seasonal fresh food. Purchase extra produce during growing season (cheapest) and preserve for winter. Follow safe canning practices rigorously — improper canning can cause botulism.",
+      "sourceTitle": "Low and No Cost Preparedness",
+      "sourceOrganization": "FEMA / Ready.gov",
+      "sourceUrl": "https://www.ready.gov/low-and-no-cost",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Food preservation as a preparedness skill and cost-saving strategy"
+    },
+    {
+      "claim": "NOLS wilderness education integrates food procurement with broader expedition skills: planning appropriate food quantities, understanding caloric needs, and fishing as part of outdoor living skills. Their curriculum teaches that expedition success depends on adequate food planning before departure.",
+      "sourceTitle": "NOLS - Wilderness Skills",
+      "sourceOrganization": "National Outdoor Leadership School (NOLS)",
+      "sourceUrl": "https://www.nols.edu/expeditions/skills/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Established outdoor education program validating pre-planning and food procurement skill integration"
+    }
+  ],
+  "suggestedSubGuides": [
+    {
+      "slug": "foraging-edible-plants-identification",
+      "layer": "reference",
+      "guideType": "reference_guide",
+      "reason": "Plant identification for foraging is highly region-specific and requires significant detail; a separate reference guide with identification criteria, common safe plants, and danger signs would serve users better"
+    },
+    {
+      "slug": "fishing-emergency-techniques",
+      "layer": "action",
+      "guideType": "action_card",
+      "reason": "Improvised fishing with minimal gear (bent wire hooks, improvised lines, fish traps) is a distinct skill set that warrants a focused action_card for when you need to actually procure food in the field"
+    },
+    {
+      "slug": "small-game-trapping-emergency",
+      "layer": "action",
+      "guideType": "action_card",
+      "reason": "Setting snares and primitive traps is a discrete, learnable skill best covered in its own action_card; trapping techniques are too detailed for a preparedness guide"
+    }
+  ],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Insects, crustaceans, and reptiles as primary early food sources",
+      "issue": "FM 3-05.70 recommends insects and reptiles as abundant first-priority wild food for survival situations. This is valid field guidance but may create repulsion/non-compliance in civilian contexts. Red Cross materials do not specifically address this.",
+      "sourceA": "U.S. Army FM 3-05.70",
+      "sourceB": "American Red Cross survival skills guidance",
+      "resolution": "Include as a preparedness awareness note (know that these are viable) rather than a primary recommendation in the preparedness guide — defer detailed instruction to a future action_card"
+    },
+    {
+      "claim": "Exact caloric requirements during emergency physical labor",
+      "issue": "FEMA and UGA Extension reference general 2,000 calorie baseline but do not specify how much more is needed for heavy manual labor scenarios. Multiple sources note that emergencies increase caloric demand without quantifying it.",
+      "sourceA": "UGA Extension Long-Term Food Storage",
+      "sourceB": "FM 3-05.70 (notes increased physical demand)",
+      "resolution": "Use 2,000 calories/day as baseline and advise storing 20–30% above calculated minimum to account for activity increases — this is conservative and consistent with authoritative guidance intent"
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Region-specific fishing and foraging regulations",
+      "impact": "Fishing and foraging in emergencies may conflict with local fish and game laws (license requirements, season restrictions). No authoritative source reviewed addresses emergency exception provisions.",
+      "suggestion": "Add a warning that users should research local emergency exception rules in advance, and consider acquiring appropriate licenses and permits before they are needed"
+    },
+    {
+      "area": "Food allergy and special dietary needs in long-term storage",
+      "impact": "Bulk staple recommendations (wheat, dairy) are problematic for users with celiac disease or lactose intolerance. Guidance for special dietary needs in long-term storage is sparse in authoritative sources.",
+      "suggestion": "Flag as a warning to tailor stockpile to household dietary needs; note that special-diet MREs and freeze-dried options are commercially available"
+    },
+    {
+      "area": "Specific guidance for urban users without hunting/fishing access",
+      "impact": "Wild food procurement skills (fishing, foraging, hunting) are not applicable to dense urban environments. Authoritative sources do not provide urban-specific alternatives beyond stockpiling.",
+      "suggestion": "Preparedness tips should differentiate between urban (focus on stockpile depth and community networks) and rural (stockpile plus wild procurement skills) strategies"
+    }
+  ],
+  "recommendation": "Produce a preparedness_guide covering the full spectrum of long-term emergency food preparedness: (1) building a tiered food stockpile from FEMA minimums through multi-month stores using bulk staples with UGA Extension quantities, (2) storage conditions and rotation practices, (3) nutritional completeness to avoid malnutrition on bulk-staple-only diets, (4) active food procurement skills to learn before an emergency — gardening, fishing, hunting, trapping, foraging, food preservation/canning — and where to obtain training, (5) practical warnings about foraging dangers, high-sodium foods increasing water need, and dietary accommodations. All preparation steps go in preparednessTips (not stepByStepActions per preparedness_guide format). Include warnings and redFlags. Do NOT add constraint metadata fields."
+}

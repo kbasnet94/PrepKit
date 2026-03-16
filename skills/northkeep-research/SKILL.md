@@ -126,3 +126,38 @@ Produce `research-packet.json`:
 - Don't silently resolve conflicts — always flag them in `conflictsOrWeakClaims`
 - Don't produce a research packet with zero `researchFindings` — if you can't find sources, say so and recommend the user provide source material
 - Don't hallucinate URLs — if you can't find the exact URL, set it to null and note the source title/organization so it can be verified
+
+## Subagent Instructions
+
+This section applies when this skill is spawned as a subagent by `northkeep-orchestrator` during a batch pipeline run.
+
+### Expected prompt inputs
+
+The orchestrator will pass these values inline in the subagent prompt:
+- `workItem` — the full work item JSON object from `planning-packet.json`
+- `evidenceTier` — one of `authoritative_only`, `authoritative_plus_field_practice`, `authoritative_plus_examples`
+- `dryRunFolder` — absolute path to the batch run folder (e.g., `/Users/Karan/Desktop/PrepKit/pipeline-dry-run-<topic>`)
+
+### What to do when spawned as a subagent
+
+1. Read this SKILL.md (you are already reading it)
+2. Use the `workItem` and `evidenceTier` from the prompt — do not query planning-packet.json
+3. Run the full research process for that one guide only
+4. Write the artifact to: `<dryRunFolder>/<slug>/research-packet.json`
+
+### Result message to return
+
+When finished, return a single result message in this format (plain text is fine, not JSON):
+
+```
+RESEARCH COMPLETE
+slug: <slug>
+status: pass | fail
+researchPacketPath: <dryRunFolder>/<slug>/research-packet.json
+sourceQuality: strong | mixed | weak
+findingCount: <number>
+gaps: <comma-separated list of gap areas, or "none">
+notes: <any blocking issues or warnings>
+```
+
+If research fails (cannot find compliant sources), set `status: fail` and explain in `notes`. The orchestrator will surface this to the user before proceeding.

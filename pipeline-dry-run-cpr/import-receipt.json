@@ -1,0 +1,13 @@
+{
+  "slug": "cardiac-arrest-cpr-steps",
+  "guideId": null,
+  "versionId": "cecd08ad-6acc-4878-9600-0660ebfbe225",
+  "versionNumber": 1,
+  "reviewStatus": "draft",
+  "isNew": true,
+  "changeSummary": "New guide: cardiac-arrest-cpr-steps. First CPR action card in the library. AHA 2025 + Red Cross sourced. Validation: PASS.",
+  "apiWarnings": [],
+  "validationWarnings": [],
+  "importedAt": "2026-03-16T00:00:00.000Z",
+  "reviewUrl": "http://localhost:3000/review?filter=draft"
+}

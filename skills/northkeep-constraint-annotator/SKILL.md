@@ -91,3 +91,40 @@ Include a brief annotation summary:
 - Don't assign `primary` responseRole if the parentTopic already has a primary guide in the same layer (assign `backup` or `supporting` instead)
 - Don't leave all four fields empty — every guide should have at least a `responseRole`. The other three may be empty arrays if genuinely not applicable.
 - Don't overlap `constraintTags` and `blockedByConstraints`
+
+## Subagent Instructions
+
+This section applies when this skill is spawned as a subagent by `northkeep-orchestrator` during a batch pipeline run.
+
+### Expected prompt inputs
+
+The orchestrator will pass these values inline in the subagent prompt:
+- `guideDraftPath` — absolute path to the guide draft produced by the Writing subagent
+- `dryRunFolder` — absolute path to the batch run folder (e.g., `/Users/Karan/Desktop/PrepKit/pipeline-dry-run-<topic>`)
+- `slug` — the target slug for this guide
+
+### What to do when spawned as a subagent
+
+1. Read this SKILL.md (you are already reading it)
+2. Read the guide draft at `guideDraftPath`
+3. Query Supabase (or use the library export) to check existing guides in the same parentTopic
+4. Assign all four constraint metadata fields following this skill's process
+5. Write the annotated guide to: `<dryRunFolder>/<slug>/guide-annotated.json`
+
+### Result message to return
+
+When finished, return a single result message in this format:
+
+```
+ANNOTATION COMPLETE
+slug: <slug>
+status: pass | fail
+guideAnnotatedPath: <dryRunFolder>/<slug>/guide-annotated.json
+responseRole: primary | backup | supporting | reference
+constraintTags: <comma-separated, or "none">
+blockedByConstraints: <comma-separated, or "none">
+alternativeToGuideSlugs: <comma-separated, or "none">
+notes: <any issues, e.g. suggested new tags not in registry, role conflicts found>
+```
+
+If annotation cannot be completed (e.g., unresolvable role conflict in the cluster), set `status: fail` and explain in `notes`. The orchestrator will surface this to the user before proceeding.

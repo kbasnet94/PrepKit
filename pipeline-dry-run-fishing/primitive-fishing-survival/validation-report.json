@@ -1,0 +1,152 @@
+{
+  "slug": "primitive-fishing-survival",
+  "validatedAt": "2026-03-16T00:00:00.000Z",
+  "overallResult": "pass_with_warnings",
+  "evidenceTier": "authoritative_plus_field_practice",
+  "schemaChecks": [
+    {
+      "check": "required_fields_present",
+      "passed": true,
+      "evidence": "All 22 required fields present: slug, title, category, parentTopic, layer, guideType, summary, quickAnswer, whenToUse, preferredAction, backupAction, stepByStepActions, warnings, whatNotToDo, redFlags, preparednessTips, sourceQuality, contentStatus, integrationDecision, upgradesGuide, appTags, sourceReferences"
+    },
+    {
+      "check": "layer_guidetype_matched",
+      "passed": true,
+      "evidence": "layer='action' paired with guideType='action_card' — valid pairing"
+    },
+    {
+      "check": "valid_category",
+      "passed": true,
+      "evidence": "category='water_food' is one of the 10 canonical category values"
+    },
+    {
+      "check": "valid_source_quality",
+      "passed": true,
+      "evidence": "sourceQuality='mixed' is a valid canonical value"
+    },
+    {
+      "check": "array_fields_flat",
+      "passed": true,
+      "evidence": "whenToUse (5), stepByStepActions (10), warnings (8), whatNotToDo (8), redFlags (5), preparednessTips (6), appTags (12) are all flat arrays of strings with no nested objects"
+    },
+    {
+      "check": "source_refs_schema",
+      "passed": true,
+      "evidence": "All 7 sourceReferences entries contain the required fields: title, organization, url, whyUseful"
+    },
+    {
+      "check": "constraint_tags_valid",
+      "passed": true,
+      "evidence": "constraintTags=['alone'] and blockedByConstraints=['cant_move'] — both tags are in the canonical registry of 21 tags"
+    },
+    {
+      "check": "response_role_valid",
+      "passed": true,
+      "evidence": "responseRole='primary' is one of the four valid values"
+    },
+    {
+      "check": "alt_slugs_exist",
+      "passed": true,
+      "evidence": "All three alternativeToGuideSlugs confirmed present in Supabase: fishing-techniques (id: 1c0c6f36-53c9-46f7-a0ce-eaf9134762c0), foraging, trapping"
+    },
+    {
+      "check": "no_constraint_overlap",
+      "passed": true,
+      "evidence": "constraintTags=['alone'] and blockedByConstraints=['cant_move'] — no tags in common"
+    },
+    {
+      "check": "camelCase_fields",
+      "passed": true,
+      "evidence": "All field names use camelCase; no snake_case fields detected"
+    },
+    {
+      "check": "slug_format",
+      "passed": true,
+      "evidence": "slug='primitive-fishing-survival' is lowercase kebab-case with no spaces or uppercase characters"
+    }
+  ],
+  "safetyChecks": [
+    {
+      "check": "claims_sourced",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "All stepByStepActions and warnings cross-reference research packet findings. Key mappings: weir construction (FM 21-76 Chapter 8), gorge hook (Wilderness College), dawn/dusk timing (TakeMeFishing.org), 145°F cook temperature (FDA Hazards Guidance), Giardia inactivation (WMS Guidelines), bait sources (Wilderness College), field dressing (FM 21-76 Chapter 8), preservation (FM 21-76 Chapter 8)"
+    },
+    {
+      "check": "no_invented_advice",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "No medical or safety claims appear beyond what is in the research packet. All 8 warnings and 8 whatNotToDo items trace back to research findings. The refraction correction tip (aim below apparent fish position) maps to the Wilderness College spearing guidance. The 200-foot innard disposal distance is a well-established Leave No Trace / camping hygiene standard consistent with FM 21-76 field dressing guidance."
+    },
+    {
+      "check": "action_card_has_steps",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "10 stepByStepActions present; minimum required is 3"
+    },
+    {
+      "check": "action_has_warnings",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "8 warnings present covering food safety, legal status, energy expenditure, parasite risk, refraction, wildlife attraction, and preservation"
+    },
+    {
+      "check": "action_has_red_flags",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "5 redFlags present covering foodborne illness symptoms, prolonged failure to catch, algal bloom detection, dehydration priority, and abnormal fish appearance"
+    },
+    {
+      "check": "source_quality_matches_tier",
+      "passed": true,
+      "severity": "warning",
+      "evidence": "Evidence tier is authoritative_plus_field_practice. sourceQuality='mixed' is appropriate: FM 21-76 (U.S. Army), FDA, and Wilderness Medical Society provide authoritative grounding; Wilderness College and Willow Haven Outdoor are field-practice sources. The mixed designation correctly reflects this split. No authoritative_only tier was required."
+    },
+    {
+      "check": "no_dropped_warnings",
+      "passed": true,
+      "severity": "blocking",
+      "evidence": "N/A — integrationDecision is 'new', not 'upgrade'; no previous guide to compare against"
+    }
+  ],
+  "duplicateChecks": [
+    {
+      "check": "upgrade_target_exists",
+      "passed": true,
+      "evidence": "N/A — integrationDecision is 'new'; upgradesGuide is null"
+    },
+    {
+      "check": "no_duplicate_new",
+      "passed": true,
+      "evidence": "Slug 'primitive-fishing-survival' does not exist in Supabase. The existing 'fishing-techniques' guide is a reference_guide in parentTopic 'Water Collection and Basic Treatment Without Equipment' — different guideType (reference_guide vs action_card), different parentTopic, and different scope (background knowledge vs step-by-step survival action). No duplication."
+    },
+    {
+      "check": "upgrade_slug_matches",
+      "passed": true,
+      "evidence": "N/A — integrationDecision is 'new'"
+    }
+  ],
+  "constraintChecks": [
+    {
+      "check": "role_not_duplicated",
+      "passed": true,
+      "evidence": "parentTopic 'Emergency Food Procurement' is a new parentTopic not yet in the database. The three existing guides in the nearest cluster (fishing-techniques, foraging, trapping — parentTopic 'Water Collection and Basic Treatment Without Equipment') all have responseRole=null. No primary role conflict exists."
+    },
+    {
+      "check": "alt_slugs_same_topic",
+      "passed": false,
+      "severity": "warning",
+      "evidence": "alternativeToGuideSlugs ['fishing-techniques', 'foraging', 'trapping'] are in parentTopic 'Water Collection and Basic Treatment Without Equipment', not in 'Emergency Food Procurement'. This is unavoidable: 'Emergency Food Procurement' is a new parentTopic with no other guides yet. The alternatives are the closest semantically related guides in the water_food category and are a reasonable cross-parentTopic link."
+    },
+    {
+      "check": "blocked_makes_sense",
+      "passed": true,
+      "evidence": "blockedByConstraints=['cant_move'] is logically consistent: primitive fishing requires scouting water bodies, building weirs, collecting bait, and moving to productive spots. A user who cannot move cannot perform any of these steps. The block is correct."
+    }
+  ],
+  "blockingIssues": "none",
+  "warnings": [
+    "alt_slugs_same_topic: alternativeToGuideSlugs point to guides in a different parentTopic ('Water Collection and Basic Treatment Without Equipment') because 'Emergency Food Procurement' is a new parentTopic with no sibling guides yet; this will resolve naturally as additional food procurement guides are added to the cluster"
+  ],
+  "recommendation": "Guide passes all schema and safety checks with no blocking issues. One non-blocking warning exists about cross-parentTopic alternative slugs, which is expected for the first guide in a new parentTopic. Guide may proceed to Import/Staging. The human reviewer should note: (1) the 'Emergency Food Procurement' parentTopic will be auto-created on import, and (2) the alternative slug links to 'fishing-techniques', 'foraging', and 'trapping' provide useful cross-referencing even across parentTopics."
+}

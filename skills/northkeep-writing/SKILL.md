@@ -155,3 +155,37 @@ Group related guides under a shared parentTopic string. Look at sibling guides i
 - Don't write stepByStepActions for reference_guides or preparedness_guides
 - Don't use `"high"`, `"low"`, or `"unknown"` for sourceQuality — only `"strong"`, `"mixed"`, `"weak"`
 - Don't populate constraint metadata fields (responseRole, constraintTags, etc.)
+
+## Subagent Instructions
+
+This section applies when this skill is spawned as a subagent by `northkeep-orchestrator` during a batch pipeline run.
+
+### Expected prompt inputs
+
+The orchestrator will pass these values inline in the subagent prompt:
+- `researchPacketPath` — absolute path to the research packet produced by the Research subagent
+- `dryRunFolder` — absolute path to the batch run folder (e.g., `/Users/Karan/Desktop/PrepKit/pipeline-dry-run-<topic>`)
+- `slug` — the target slug for this guide
+
+### What to do when spawned as a subagent
+
+1. Read this SKILL.md (you are already reading it)
+2. Read the research packet at `researchPacketPath`
+3. Produce the complete `guide-draft.json` following this skill's workflow
+4. Write the artifact to: `<dryRunFolder>/<slug>/guide-draft.json`
+
+### Result message to return
+
+When finished, return a single result message in this format:
+
+```
+WRITING COMPLETE
+slug: <slug>
+status: pass | fail
+guideDraftPath: <dryRunFolder>/<slug>/guide-draft.json
+guideType: action_card | reference_guide | preparedness_guide | scenario_guide
+layer: action | reference | preparedness | scenario
+notes: <any issues or decisions worth flagging>
+```
+
+If writing fails (e.g., research packet is empty or has no usable findings), set `status: fail` and explain in `notes`.

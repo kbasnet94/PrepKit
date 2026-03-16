@@ -1,0 +1,129 @@
+{
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "category": "medical_safety",
+    "parentTopic": "Musculoskeletal Injuries"
+  },
+  "evidenceTier": "authoritative_only",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "action",
+  "suggestedGuideType": "action_card",
+  "existingGuideUpgradeTarget": null,
+  "researchFindings": [
+    {
+      "claim": "You will likely not be able to tell the difference between a sprain, dislocation, and fracture without an X-ray. Treat all suspected bone/joint injuries as potential fractures and decide whether to call 911 based on signs and symptoms.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core principle — quickAnswer and step 1"
+    },
+    {
+      "claim": "Signs that suggest a fracture: severe pain that worsens with movement or pressure, rapid swelling and bruising, deformity (limb bent at unnatural angle, shortened, or rotated), inability to bear weight or move the area.",
+      "sourceTitle": "Fractures: Types, Symptoms, and Treatment",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fractures",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Recognition signs — whenToUse and redFlags"
+    },
+    {
+      "claim": "Call 911 for: compound/open fractures (bone through skin), large bone fractures (femur/hip/pelvis), signs of shock, suspected head/neck/spinal injury, loss of sensation or circulation below the injury.",
+      "sourceTitle": "Fractures: Types, Symptoms, and Treatment",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fractures",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "When to call 911 — redFlags and warnings"
+    },
+    {
+      "claim": "Splint an injury in the position you find it. Never try to straighten or realign a deformed limb or push a bone protruding through the skin back in.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core immobilization rule — stepByStepActions and whatNotToDo"
+    },
+    {
+      "claim": "When splinting, immobilize the joint above AND below the injury. For example, a forearm fracture requires the splint to extend from above the elbow to below the wrist.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Splint technique — stepByStepActions"
+    },
+    {
+      "claim": "Improvised splints can be made from rigid materials: rolled magazine, piece of wood, umbrella, pillow (for ankle/foot), or bind an injured leg to the uninjured leg using triangular bandages. Pad the splint with soft material to prevent pressure injuries.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Improvised splinting — stepByStepActions"
+    },
+    {
+      "claim": "Check for circulation (feeling, warmth, skin color) below the injury site both before and after applying a splint. Recheck regularly. Numbness, coldness, or pale/blue skin below the injury are emergency signs.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Circulation check — stepByStepActions and redFlags"
+    },
+    {
+      "claim": "Apply a cold pack wrapped in cloth to the injured area for up to 20 minutes at a time to reduce swelling and pain. Ice or cooling may be applied for up to 20 consecutive minutes to sprained joints and soft-tissue injuries. Do not apply ice directly to skin or for longer than 20 consecutive minutes — this can damage the skin.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Ice/cooling — stepByStepActions and warnings"
+    },
+    {
+      "claim": "Elevate the injured area above heart level if possible and if it does not cause more pain. This reduces swelling and promotes drainage of excess fluid.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Elevation — stepByStepActions"
+    },
+    {
+      "claim": "All fractures should be assessed for internal and external bleeding. Treat for shock if the person is pale, cold, faint, or breathing rapidly — especially for large-bone fractures (femur can lose 1–2 liters of blood internally).",
+      "sourceTitle": "Fractures: Types, Symptoms, and Treatment",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fractures",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Shock risk — warnings and redFlags"
+    },
+    {
+      "claim": "Do not ask the person to move or test the injured area. Do not use tight compression directly over a suspected fracture or open wound.",
+      "sourceTitle": "Muscle, Bone and Joint Injury — First Aid",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "whatNotToDo"
+    },
+    {
+      "claim": "For suspected head, neck, or spinal injuries: tell the person not to move, leave them in position found, and call 911. Do not move them unless needed for safety, CPR, or to control bleeding.",
+      "sourceTitle": "Fractures: Types, Symptoms, and Treatment",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fractures",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Spinal injury exception — warnings"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Use POLICE (Protection, Optimal Loading, Ice, Compression, Elevation) rather than RICE",
+      "issue": "POLICE is the preferred modern sports medicine framework for ongoing rehabilitation. However, Red Cross 2024 first aid guidelines use RICE (Rest, Immobilize, Cool, Elevate) for the acute bystander phase — which is what this action card covers. POLICE is relevant for recovery, not the emergency first 30 minutes.",
+      "sourceA": "Red Cross / AHA 2024 First Aid Guidelines (RICE for acute phase)",
+      "sourceB": "Sports medicine literature (POLICE for rehabilitation)",
+      "resolution": "Use RICE framing (Rest, Immobilize, Cool, Elevate) for the action card. Note that a medical professional will guide ongoing care. Do not include POLICE guidance — it is beyond the bystander scope of this guide."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Compression wrapping technique (Ace bandage)",
+      "impact": "Compression is part of RICE/PRICE but Red Cross 2024 explicitly warns against tight compression directly over suspected fractures. For sprains only, compression is appropriate. Including it in a guide that covers both would risk misapplication.",
+      "suggestion": "Omit compression from steps. Note in whatNotToDo that tight compression should not be applied over a suspected fracture or open wound. Defer compression technique to the follow-up scenario guide."
+    }
+  ],
+  "recommendation": "Write a new action_card for the first ~30 minutes of a sprain or suspected fracture. Scope: bystander response, limb injuries (not spine/skull). Primary action: RICE — stop movement, improvised splint, cool (wrapped ice 20 min), elevate. Emphasize 'treat as fracture if unsure' and the circulation check. Call 911 criteria clearly listed as red flags. Sources: Red Cross Muscle/Bone/Joint and Fractures pages — sourceQuality: strong."
+}

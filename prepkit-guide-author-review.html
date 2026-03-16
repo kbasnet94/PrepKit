@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #faf9f5;
+      --surface: #ffffff;
+      --border: #e8e6dc;
+      --text: #141413;
+      --text-muted: #b0aea5;
+      --accent: #d97757;
+      --accent-hover: #c4613f;
+      --green: #788c5d;
+      --green-bg: #eef2e8;
+      --red: #c44;
+      --red-bg: #fceaea;
+      --header-bg: #141413;
+      --header-text: #faf9f5;
+      --radius: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .header .instructions {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 0.25rem;
+    }
+    .header .progress {
+      font-size: 0.875rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    /* ---- Main content ---- */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ---- Sections ---- */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .section-header {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.75rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .section-body {
+      padding: 1rem;
+    }
+
+    /* ---- Config badge ---- */
+    .config-badge {
+      display: inline-block;
+      padding: 0.2rem 0.625rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+    .config-badge.config-primary {
+      background: rgba(33, 150, 243, 0.12);
+      color: #1976d2;
+    }
+    .config-badge.config-baseline {
+      background: rgba(255, 193, 7, 0.15);
+      color: #f57f17;
+    }
+
+    /* ---- Prompt ---- */
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ---- Outputs ---- */
+    .output-file {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .output-file + .output-file {
+      margin-top: 1rem;
+    }
+    .output-file-header {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .output-file-header .dl-btn {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+    .output-file-header .dl-btn:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .output-file-content {
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .output-file-content pre {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .output-file-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .output-file-content iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    .output-file-content table {
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      width: 100%;
+    }
+    .output-file-content table td,
+    .output-file-content table th {
+      border: 1px solid var(--border);
+      padding: 0.375rem 0.5rem;
+      text-align: left;
+    }
+    .output-file-content table th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+    .output-file-content .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .output-file-content .download-link:hover {
+      background: var(--border);
+    }
+    .empty-state {
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* ---- Feedback ---- */
+    .prev-feedback {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.625rem 0.75rem;
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .prev-feedback-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted);
+    }
+    .feedback-textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      resize: vertical;
+      color: var(--text);
+    }
+    .feedback-textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .feedback-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      min-height: 1.1em;
+    }
+
+    /* ---- Grades (collapsible) ---- */
+    .grades-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grades-toggle:hover {
+      color: var(--accent);
+    }
+    .grades-toggle .arrow {
+      margin-right: 0.5rem;
+      transition: transform 0.15s;
+      font-size: 0.75rem;
+    }
+    .grades-toggle .arrow.open {
+      transform: rotate(90deg);
+    }
+    .grades-content {
+      display: none;
+      margin-top: 0.75rem;
+    }
+    .grades-content.open {
+      display: block;
+    }
+    .grades-summary {
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grade-badge {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .grade-pass { background: var(--green-bg); color: var(--green); }
+    .grade-fail { background: var(--red-bg); color: var(--red); }
+    .assertion-list {
+      list-style: none;
+    }
+    .assertion-item {
+      padding: 0.625rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+    .assertion-item:last-child { border-bottom: none; }
+    .assertion-status {
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .assertion-status.pass { color: var(--green); }
+    .assertion-status.fail { color: var(--red); }
+    .assertion-evidence {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ---- View tabs ---- */
+    .view-tabs {
+      display: flex;
+      gap: 0;
+      padding: 0 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.625rem 1.25rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .view-tab:hover { color: var(--text); }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .view-panel { display: none; }
+    .view-panel.active { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+    /* ---- Benchmark view ---- */
+    .benchmark-view {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .benchmark-table {
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-table th, .benchmark-table td {
+      padding: 0.625rem 0.75rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .benchmark-table th {
+      font-family: 'Poppins', sans-serif;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 500;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .benchmark-table tr:hover { background: var(--bg); }
+    .benchmark-table tr.benchmark-row-with { background: rgba(33, 150, 243, 0.06); }
+    .benchmark-table tr.benchmark-row-without { background: rgba(255, 193, 7, 0.06); }
+    .benchmark-table tr.benchmark-row-with:hover { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-without:hover { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-table tr.benchmark-row-avg { font-weight: 600; border-top: 2px solid var(--border); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-with { background: rgba(33, 150, 243, 0.12); }
+    .benchmark-table tr.benchmark-row-avg.benchmark-row-without { background: rgba(255, 193, 7, 0.12); }
+    .benchmark-delta-positive { color: var(--green); font-weight: 600; }
+    .benchmark-delta-negative { color: var(--red); font-weight: 600; }
+    .benchmark-notes {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+    .benchmark-notes h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+    }
+    .benchmark-notes ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+    .benchmark-notes li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 0.375rem;
+    }
+    .benchmark-empty {
+      color: var(--text-muted);
+      font-style: italic;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    /* ---- Navigation ---- */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-shrink: 0;
+    }
+    .nav-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      transition: all 0.15s;
+    }
+    .nav-btn:hover:not(:disabled) {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .done-btn {
+      font-family: 'Poppins', sans-serif;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .done-btn:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+    .done-btn.ready {
+      border: none;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+    .done-btn.ready:hover {
+      background: var(--accent-hover);
+    }
+    /* ---- Done overlay ---- */
+    .done-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .done-overlay.visible {
+      display: flex;
+    }
+    .done-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+    }
+    .done-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .done-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .done-card .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .done-card button {
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+    .done-card button:hover {
+      background: var(--bg);
+    }
+    /* ---- Toast ---- */
+    .toast {
+      position: fixed;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 0.625rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 200;
+    }
+    .toast.visible {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" style="height:100vh; display:flex; flex-direction:column;">
+    <div class="header">
+      <div>
+        <h1>Eval Review: <span id="skill-name"></span></h1>
+        <div class="instructions">Review each output and leave feedback below. Navigate with arrow keys or buttons. When done, copy feedback and paste into Claude Code.</div>
+      </div>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- View tabs (only shown when benchmark data exists) -->
+    <div class="view-tabs" id="view-tabs" style="display:none;">
+      <button class="view-tab active" onclick="switchView('outputs')">Outputs</button>
+      <button class="view-tab" onclick="switchView('benchmark')">Benchmark</button>
+    </div>
+
+    <!-- Outputs panel (qualitative review) -->
+    <div class="view-panel active" id="panel-outputs">
+    <div class="main">
+      <!-- Prompt -->
+      <div class="section">
+        <div class="section-header">Prompt <span class="config-badge" id="config-badge" style="display:none;"></span></div>
+        <div class="section-body">
+          <div class="prompt-text" id="prompt-text"></div>
+        </div>
+      </div>
+
+      <!-- Outputs -->
+      <div class="section">
+        <div class="section-header">Output</div>
+        <div class="section-body" id="outputs-body">
+          <div class="empty-state">No output files found</div>
+        </div>
+      </div>
+
+      <!-- Previous Output (collapsible) -->
+      <div class="section" id="prev-outputs-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="togglePrevOutputs()">
+            <span class="arrow" id="prev-outputs-arrow">&#9654;</span>
+            Previous Output
+          </div>
+        </div>
+        <div class="grades-content" id="prev-outputs-content"></div>
+      </div>
+
+      <!-- Grades (collapsible) -->
+      <div class="section" id="grades-section" style="display:none;">
+        <div class="section-header">
+          <div class="grades-toggle" onclick="toggleGrades()">
+            <span class="arrow" id="grades-arrow">&#9654;</span>
+            Formal Grades
+          </div>
+        </div>
+        <div class="grades-content" id="grades-content"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="section">
+        <div class="section-header">Your Feedback</div>
+        <div class="section-body">
+          <textarea
+            class="feedback-textarea"
+            id="feedback"
+            placeholder="What do you think of this output? Any issues, suggestions, or things that look great?"
+          ></textarea>
+          <div class="feedback-status" id="feedback-status"></div>
+          <div class="prev-feedback" id="prev-feedback" style="display:none;">
+            <div class="prev-feedback-label">Previous feedback</div>
+            <div id="prev-feedback-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav" id="outputs-nav">
+      <button class="nav-btn" id="prev-btn" onclick="navigate(-1)">&#8592; Previous</button>
+      <button class="done-btn" id="done-btn" onclick="showDoneDialog()">Submit All Reviews</button>
+      <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next &#8594;</button>
+    </div>
+    </div><!-- end panel-outputs -->
+
+    <!-- Benchmark panel (quantitative stats) -->
+    <div class="view-panel" id="panel-benchmark">
+      <div class="benchmark-view" id="benchmark-content">
+        <div class="benchmark-empty">No benchmark data available. Run a benchmark to see quantitative results here.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Done overlay -->
+  <div class="done-overlay" id="done-overlay">
+    <div class="done-card">
+      <h2>Review Complete</h2>
+      <p>Your feedback has been saved. Go back to your Claude Code session and tell Claude you're done reviewing.</p>
+      <div class="btn-row">
+        <button onclick="closeDoneDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---- Embedded data (injected by generate_review.py) ----
+    const EMBEDDED_DATA = {"skill_name": "prepkit-guide-author", "runs": [{"id": "gas-leak-action-card-with_skill", "prompt": "Write a guide for what to do if you smell gas in your house. It should be something someone reads in the moment of the emergency.", "eval_id": 0, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"gas-leak-home-immediate-response\",\n  \"title\": \"Gas Leak in Your Home: Immediate Response\",\n  \"category\": \"power_utilities_home_safety\",\n  \"parentTopic\": \"Gas Safety and Leaks\",\n  \"layer\": \"action\",\n  \"guideType\": \"action_card\",\n  \"summary\": \"If you smell natural gas or suspect a leak in your home, evacuate immediately and call emergency services from a safe location. Do not use electrical switches, phones indoors, or create sparks.\",\n  \"quickAnswer\": \"Smell gas? Leave the house immediately, go outside, and call 911 or your gas company's emergency line from a safe distance.\",\n  \"whenToUse\": [\n    \"You smell rotten eggs or a sulfurous odor inside your home\",\n    \"You hear a hissing sound near gas appliances or pipes\",\n    \"You suspect a gas leak but are unsure of its source\",\n    \"Your gas meter is making unusual sounds or showing signs of damage\",\n    \"You notice dead plants or dead grass patches in a concentrated area outside (possible underground leak)\"\n  ],\n  \"preferredAction\": \"Immediately evacuate the house and move to fresh air at least 300 feet away. Call 911 or your local gas company emergency line from a safe location.\",\n  \"backupAction\": null,\n  \"stepByStepActions\": [\n    \"Do NOT ignore the smell \u2014 act immediately.\",\n    \"If you are indoors, leave the house right away. Do not wait or investigate.\",\n    \"Do not use elevators if you are in an apartment or multi-unit building \u2014 use stairs only.\",\n    \"Leave all doors and windows open as you exit to allow gas to dissipate.\",\n    \"Once outside, move at least 300 feet (100 meters) away from the building.\",\n    \"From a safe location, call 911 or your gas company's emergency line. Provide your address and describe the situation.\",\n    \"Do not return to the building until the gas company or fire department has inspected and cleared it.\",\n    \"If others are nearby, warn them to evacuate immediately.\",\n    \"If you are in a multi-unit building, do not alert neighbors by knocking on doors \u2014 let them evacuate naturally or alert them from outside.\"\n  ],\n  \"warnings\": [\n    \"Do NOT use electrical switches, light switches, or any electrical devices indoors \u2014 they can create sparks that ignite gas.\",\n    \"Do NOT smoke, light matches, or use any open flame.\",\n    \"Do NOT use your cell phone, landline, or doorbell inside the house \u2014 electrical ignition risk.\",\n    \"Do NOT stay indoors to locate the source of the leak \u2014 time is critical.\",\n    \"Do NOT run appliances or start your car in the garage.\",\n    \"Do NOT assume the smell is coming from your apartment only in a multi-unit building \u2014 the source could be in the building's main line.\",\n    \"Do NOT allow children or pets to stay indoors during evacuation.\"\n  ],\n  \"whatNotToDo\": [\n    \"Do not take time to gather belongings or pets before leaving \u2014 evacuate first, gather later.\",\n    \"Do not try to repair the leak yourself.\",\n    \"Do not open windows and doors BEFORE leaving \u2014 leave them open as you exit to reduce pressure buildup.\",\n    \"Do not re-enter the building for any reason until emergency responders clear it.\",\n    \"Do not use your vehicle to seal off the building or block access.\",\n    \"Do not dismiss a strong sulfur smell as harmless \u2014 treat all suspected leaks as emergencies.\"\n  ],\n  \"redFlags\": [\n    \"Persistent strong rotten-egg or sulfurous smell that doesn't fade\",\n    \"Hissing or whistling sound from gas lines or appliances\",\n    \"Dead patches of grass or plants in your yard in a concentrated area (possible underground leak)\",\n    \"Dizziness, nausea, headaches, or difficulty breathing after smelling gas (signs of gas exposure)\",\n    \"Fire or explosion risk: if you see flames, hear an explosion, or suspect an active fire, evacuate immediately and call 911.\",\n    \"Visible damage to gas pipes, meters, or connections\"\n  ],\n  \"preparednessTips\": [\n    \"Know your gas company's 24/7 emergency phone number \u2014 post it on your refrigerator and program it into your phone.\",\n    \"Know the location of your natural gas meter and shut-off valve; learn how to turn it off if instructed by emergency responders.\",\n    \"Install natural gas detectors (if available in your area) near bedrooms and kitchens; test them monthly.\",\n    \"Have a family evacuation plan that includes a meeting point outside your home and at least 300 feet away.\",\n    \"Teach all household members that a gas smell is an immediate-evacuation signal \u2014 no exceptions.\",\n    \"Do not store flammable materials near gas appliances or pipes.\",\n    \"Have a working landline or cell phone with charged battery accessible for emergency calls.\"\n  ],\n  \"sourceQuality\": \"high\",\n  \"contentStatus\": \"reviewed\",\n  \"integrationDecision\": \"new\",\n  \"upgradesGuide\": null,\n  \"appTags\": [\n    \"gas-leak\",\n    \"natural-gas\",\n    \"home-safety\",\n    \"evacuation\",\n    \"emergency-response\",\n    \"utilities\",\n    \"immediate-action\"\n  ],\n  \"sourceReferences\": [\n    {\n      \"title\": \"If You Smell Natural Gas\",\n      \"organization\": \"U.S. Department of Energy & major utility companies (standard emergency guidance)\",\n      \"url\": null,\n      \"whyUseful\": \"Established emergency response protocol for gas leaks, widely adopted by gas utilities and fire departments across the US\"\n    },\n    {\n      \"title\": \"Natural Gas Safety\",\n      \"organization\": \"FEMA and National Fire Protection Association (NFPA)\",\n      \"url\": null,\n      \"whyUseful\": \"Guidance on hazards, evacuation procedures, and when to call emergency services\"\n    },\n    {\n      \"title\": \"Gas Leak Detection and Response\",\n      \"organization\": \"American Gas Association\",\n      \"url\": null,\n      \"whyUseful\": \"Industry-standard safety procedures for occupants and emergency protocols\"\n    }\n  ]\n}\n"}, {"name": "summary.txt", "type": "text", "content": "DECISION SUMMARY: Gas Leak Immediate Response Guide\n\nThis guide was authored as an action_card (layer: action) because the scenario is explicitly crisis-moment: someone smelling gas in their home needs to know what to do *right now*, not background information. The content prioritizes immediate evacuation, clear step-by-step actions, and critical don'ts to prevent ignition. backupAction is null because there is no credible fallback to immediate evacuation and emergency contact\u2014any alternative delays life-saving response.\n\nsourceQuality is set to \"high\" because the guidance is derived from widely established and consistent protocols published by the U.S. Department of Energy, FEMA, the National Fire Protection Association, and utility companies nationwide. These organizations converge on identical safety recommendations: evacuate, move to fresh air, call 911 or the gas company emergency line, and never use electrical devices indoors.\n\ncontentStatus is \"reviewed\" (rather than \"draft\") because every field is grounded in established emergency guidance with no gaps or speculation. integrationDecision is \"new\" because this addresses a distinct, standalone emergency scenario not covered by existing gas-safety guides in the PrepKit taxonomy. upgradesGuide is null\u2014no prior guide is being replaced. All required fields are populated; no fields are omitted or vague. The guide is deterministic and action-oriented, suitable for reading in real-time distress.\n"}], "grading": {"eval_id": 0, "config": "with_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card', expected guideType='action_card'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "All 3 refs have correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 9 items"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide (is action_card), assertion N/A"}], "pass_count": 7, "total": 7}}, {"id": "gas-leak-action-card-without_skill", "prompt": "Write a guide for what to do if you smell gas in your house. It should be something someone reads in the moment of the emergency.", "eval_id": 0, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"gas-leak-immediate-response\",\n  \"title\": \"What to Do If You Smell Gas in Your House\",\n  \"category\": \"power_utilities_home_safety\",\n  \"parentTopic\": \"Home Safety and Utilities\",\n  \"layer\": \"action\",\n  \"guideType\": \"action_card\",\n  \"summary\": \"Immediate steps to safely respond to a potential gas leak in your home, prioritizing evacuation and professional help.\",\n  \"quickAnswer\": \"Leave immediately without using any electrical switches, flames, or electronics. Go outside and call 911 or your gas company's emergency line from a safe distance.\",\n  \"whenToUse\": \"During an active gas leak emergency when you smell rotten egg odor (mercaptan) or suspect natural gas is escaping inside your home.\",\n  \"preferredAction\": {\n    \"title\": \"Evacuate and Call for Help\",\n    \"description\": \"Immediately leave the building without triggering ignition sources, then call 911 or your gas company emergency number from outside or a neighbor's house.\"\n  },\n  \"backupAction\": {\n    \"title\": \"If You Cannot Leave Immediately\",\n    \"description\": \"Move to an open window or door, avoid creating sparks or flames, and call 911 from your mobile phone (preferable since cellular doesn't create sparks like landlines might in extreme cases).\"\n  },\n  \"stepByStepActions\": [\n    {\n      \"step\": 1,\n      \"action\": \"EVACUATE IMMEDIATELY\",\n      \"details\": \"Leave your home right now. Do not delay to gather belongings, pets, or investigate the smell. Move to the nearest exit.\",\n      \"critical\": true\n    },\n    {\n      \"step\": 2,\n      \"action\": \"Avoid Creating Sparks or Flames\",\n      \"details\": \"Do not flip light switches, use electrical appliances, start your car, use your stove/oven, light matches, or use lighters. Do not touch doorbells, thermostats, or anything that creates a spark. The tiniest spark could ignite gas.\",\n      \"critical\": true\n    },\n    {\n      \"step\": 3,\n      \"action\": \"Leave Door Open if Safely Possible\",\n      \"details\": \"If you can do so without causing delay, leave your front door or nearest exit open. This allows gas to dissipate and helps ventilate the area.\",\n      \"critical\": false\n    },\n    {\n      \"step\": 4,\n      \"action\": \"Move to Safe Distance\",\n      \"details\": \"Get at least 300 feet away from your home (about the length of a football field). Position yourself upwind from the house if possible so you're not breathing fumes.\",\n      \"critical\": true\n    },\n    {\n      \"step\": 5,\n      \"action\": \"Call for Emergency Help\",\n      \"details\": \"From your mobile phone or a neighbor's phone, call 911 and/or your gas company's emergency number. Provide your address and describe the gas smell. Do not return inside or use your home phone if possible.\",\n      \"critical\": true\n    },\n    {\n      \"step\": 6,\n      \"action\": \"Tell Responders About the Gas Leak\",\n      \"details\": \"When police or fire department arrive, clearly inform them that you smell gas and suspect a leak. They are trained and equipped to investigate safely.\",\n      \"critical\": true\n    },\n    {\n      \"step\": 7,\n      \"action\": \"Do Not Re-enter Until Authorities Clear the Home\",\n      \"details\": \"Wait for fire department or utility company personnel to inspect and declare your home safe. Only when they confirm the area is safe should you return.\",\n      \"critical\": true\n    }\n  ],\n  \"warnings\": [\n    {\n      \"warning\": \"Natural gas itself is odorless\u2014the rotten egg smell is an additive called mercaptan to alert you to leaks.\",\n      \"severity\": \"informational\"\n    },\n    {\n      \"warning\": \"A single spark\u2014even from a light switch or static electricity\u2014can ignite natural gas and cause an explosion.\",\n      \"severity\": \"critical\"\n    },\n    {\n      \"warning\": \"Natural gas can displace oxygen and cause asphyxiation if accumulated in a confined space.\",\n      \"severity\": \"critical\"\n    },\n    {\n      \"warning\": \"Do not attempt to find the source of the leak yourself. You are not trained and the risk is too high.\",\n      \"severity\": \"critical\"\n    },\n    {\n      \"warning\": \"Carbon monoxide may also be present with a gas leak. Symptoms include headache, dizziness, nausea, and confusion.\",\n      \"severity\": \"high\"\n    },\n    {\n      \"warning\": \"Do not use elevators in apartment buildings. Use stairs to evacuate.\",\n      \"severity\": \"high\"\n    }\n  ],\n  \"whatNotToDo\": [\n    \"Do not investigate or try to locate the leak source yourself\",\n    \"Do not use any electrical switches, including light switches\",\n    \"Do not use your phone inside the house (use mobile or neighbor's phone outside)\",\n    \"Do not start your car or any engine-powered equipment in or near the building\",\n    \"Do not use matches, lighters, candles, or create any open flames\",\n    \"Do not use smoking materials of any kind\",\n    \"Do not use the oven, stove, or other appliances to heat your home\",\n    \"Do not turn on or off gas valves yourself\",\n    \"Do not re-enter the home to get pets, valuables, or documents\",\n    \"Do not assume the smell will go away on its own\",\n    \"Do not wait to see if symptoms develop before evacuating\"\n  ],\n  \"redFlags\": [\n    {\n      \"flag\": \"Strong rotten egg or sulfur odor coming from appliances, walls, or ground\",\n      \"action\": \"Evacuate immediately\"\n    },\n    {\n      \"flag\": \"Hissing sound near gas appliances or pipes\",\n      \"action\": \"Leave home and call for emergency help\"\n    },\n    {\n      \"flag\": \"Dead or dying houseplants and pets without other explanation\",\n      \"action\": \"Suspect gas leak and evacuate, have professionals investigate\"\n    },\n    {\n      \"flag\": \"Dizziness, nausea, headache, or confusion during suspected leak\",\n      \"action\": \"Evacuate immediately and seek fresh air; these may indicate carbon monoxide poisoning\"\n    },\n    {\n      \"flag\": \"Visible cracks in gas lines, corroded pipes, or damaged connections\",\n      \"action\": \"Do not touch; evacuate and call gas company\"\n    },\n    {\n      \"flag\": \"Neighbors reporting the same smell or evacuating their homes\",\n      \"action\": \"This indicates widespread leak; evacuate and call 911\"\n    }\n  ],\n  \"preparednessTips\": [\n    {\n      \"tip\": \"Know where your gas meter is located and how to access it safely.\",\n      \"category\": \"knowledge\"\n    },\n    {\n      \"tip\": \"Learn the location of your gas supply shut-off valve in case authorities ask you to turn it off (only do this if told by utility company).\",\n      \"category\": \"knowledge\"\n    },\n    {\n      \"tip\": \"Post your gas company's emergency number on your refrigerator and save it in your phone contacts.\",\n      \"category\": \"preparation\"\n    },\n    {\n      \"tip\": \"Ensure your home address is clearly visible from the street so emergency responders can find you quickly.\",\n      \"category\": \"preparation\"\n    },\n    {\n      \"tip\": \"Have a family evacuation plan that includes a meeting spot outside and away from your home.\",\n      \"category\": \"planning\"\n    },\n    {\n      \"tip\": \"Teach family members never to ignore a gas smell\u2014it's always worth investigating with professional help.\",\n      \"category\": \"training\"\n    },\n    {\n      \"tip\": \"Have your gas appliances inspected annually by a licensed professional to detect potential leaks before they become emergencies.\",\n      \"category\": \"maintenance\"\n    },\n    {\n      \"tip\": \"Install battery-powered or plug-in carbon monoxide detectors in your home, especially near bedrooms.\",\n      \"category\": \"equipment\"\n    },\n    {\n      \"tip\": \"Keep a list of emergency contacts near your phone and teach children when and how to call 911.\",\n      \"category\": \"planning\"\n    }\n  ],\n  \"sourceQuality\": \"high\",\n  \"contentStatus\": \"verified\",\n  \"integrationDecision\": \"approved_for_production\",\n  \"upgradesGuide\": \"Future versions should include: video demonstrations of proper evacuation, interactive decision tree for different leak scenarios (indoor vs. outdoor), information on gas company response times by region, post-leak home return procedures and safety inspection guidance.\",\n  \"appTags\": [\n    \"emergency-action\",\n    \"real-time-guidance\",\n    \"gas-safety\",\n    \"home-hazards\",\n    \"evacuation\",\n    \"utility-emergencies\",\n    \"high-priority\",\n    \"life-safety\"\n  ],\n  \"sourceReferences\": [\n    {\n      \"source\": \"National Fire Protection Association (NFPA)\",\n      \"relevance\": \"Safety standards for natural gas systems\"\n    },\n    {\n      \"source\": \"Occupational Safety and Health Administration (OSHA)\",\n      \"relevance\": \"Hazard communication and gas leak procedures\"\n    },\n    {\n      \"source\": \"U.S. Department of Homeland Security\",\n      \"relevance\": \"Emergency response and evacuation procedures\"\n    },\n    {\n      \"source\": \"American Gas Association\",\n      \"relevance\": \"Natural gas utility safety recommendations\"\n    },\n    {\n      \"source\": \"National Gas Safety Institute\",\n      \"relevance\": \"Gas leak detection and response protocols\"\n    }\n  ]\n}\n"}], "grading": {"eval_id": 0, "config": "without_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card', expected guideType='action_card'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str, not list; stepByStepActions[0] is dict, not str; warnings[0] is dict, not str; redFlags[0] is dict, not str; preparednessTips[0] is dict, not str"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "Invalid: contentStatus='verified', integrationDecision='approved_for_production'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "refs[0] missing: {'url', 'organization', 'title', 'whyUseful'}; refs[1] missing: {'url', 'organization', 'title', 'whyUseful'}; refs[2] missing: {'url', 'organization', 'title', 'whyUseful'}; refs[3] missing: {'url', 'organization', 'title', 'whyUseful'}; refs[4] missing: {'url', 'organization', 'title', 'whyUseful'}"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 7 items"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide (is action_card), assertion N/A"}], "pass_count": 4, "total": 7}}, {"id": "tornado-preparedness-with_skill", "prompt": "Create a preparedness guide for tornado season \u2014 what families should do before tornado season starts to get ready.", "eval_id": 1, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"tornado-season-family-preparedness\",\n  \"title\": \"Family Tornado Season Preparedness Guide\",\n  \"category\": \"preparedness\",\n  \"parentTopic\": \"Tornado Safety\",\n  \"layer\": \"preparedness\",\n  \"guideType\": \"preparedness_guide\",\n  \"summary\": \"This guide covers essential pre-season planning for families in tornado-prone areas, including identifying safe rooms, assembling emergency supplies, creating communication plans, and conducting household drills.\",\n  \"quickAnswer\": \"Before tornado season starts, identify a safe room in your home (interior room on lowest floor, away from windows), stock a 72-hour emergency kit, establish a family communication plan, and practice tornado drills with your household.\",\n  \"whenToUse\": [\n    \"Preparing for spring/fall tornado season\",\n    \"Moving to a tornado-prone region\",\n    \"Reviewing or updating family emergency plans\",\n    \"Before tornado watches or warnings are issued\",\n    \"As part of annual household safety planning\"\n  ],\n  \"preferredAction\": \"Identify and prepare your family's designated safe room with emergency supplies before tornado season begins\",\n  \"backupAction\": \"If a dedicated safe room cannot be prepared, identify the most interior room on your lowest floor and stock it with emergency supplies and communication devices\",\n  \"stepByStepActions\": [],\n  \"warnings\": [\n    \"Mobile homes offer little protection from tornadoes and should be evacuated to a sturdy shelter well before a tornado approaches\",\n    \"Rooms with large windows, skylights, or exterior doors are not safe tornado shelter locations\",\n    \"Attics and upper floors are dangerous during tornadoes due to structural collapse risk\",\n    \"Do not rely on windows or roofs for protection \u2014 tornadoes can shatter glass and lift or destroy roofs\",\n    \"Delayed preparation makes last-minute decisions chaotic and increases injury risk\"\n  ],\n  \"whatNotToDo\": [\n    \"Do not designate an exterior room, room with windows, or upper-floor space as your safe room\",\n    \"Do not wait until tornado season is underway or until a storm is approaching to plan your shelter strategy\",\n    \"Do not assume your car will provide adequate protection \u2014 it offers almost no protection from tornadoes\",\n    \"Do not store emergency supplies outside your designated safe room or in locations that are hard to access quickly\",\n    \"Do not rely only on weather alerts from neighbors or social media; ensure you have independent alert capability\",\n    \"Do not choose a room without discussing the plan with all household members\"\n  ],\n  \"redFlags\": [\n    \"Your household has no identified safe room or agreed evacuation plan\",\n    \"No household member knows how to access emergency supplies or where the safe room is located\",\n    \"Your family has never conducted a tornado drill or practiced reaching shelter\",\n    \"You live in a mobile home or upper-floor apartment with no designated shelter access plan\",\n    \"Your household has no weather alert capability (radio, app, or phone notifications)\"\n  ],\n  \"preparednessTips\": [\n    \"Identify the interior room on the lowest floor of your home with the fewest windows (bathroom, interior hallway, or basement room ideal)\",\n    \"Stock your safe room with a 72-hour emergency kit including water (1 gallon per person per day), non-perishable food, first aid supplies, medications, flashlights, batteries, and a hand-crank or battery-powered weather radio\",\n    \"Establish a family communication plan with out-of-state contact numbers and ensure all household members know the plan\",\n    \"Create a household roster with each person's phone number, workplace location, and school location, posted near your safe room\",\n    \"Install a weather radio with alerts enabled in your safe room or primary sleeping area to receive tornado warnings\",\n    \"If you live in a mobile home, identify a sturdy building (neighbor's house, community shelter, school) where you can go during tornado season\",\n    \"Conduct a tornado drill at the start of tornado season: practice reaching your safe room, assembling emergency supplies, and sheltering in place with the lights off\",\n    \"Review your plan with all household members, including children and elderly family members, explaining why each part is important\",\n    \"Take photos of your home and valuables for insurance purposes and store them securely outside your home\",\n    \"Trim tree branches near your home that could become projectiles, and secure outdoor objects that could be blown away\",\n    \"Mark your safe room clearly (if children are in the home) with a visual indicator or label so everyone can find it in darkness or confusion\",\n    \"Keep a 'go-bag' near your safe room with important documents, insurance papers, and irreplaceable items in a waterproof container\"\n  ],\n  \"sourceQuality\": \"high\",\n  \"contentStatus\": \"draft\",\n  \"integrationDecision\": \"new\",\n  \"upgradesGuide\": null,\n  \"appTags\": [\n    \"tornado\",\n    \"tornado-preparedness\",\n    \"severe-weather\",\n    \"family-planning\",\n    \"emergency-kit\",\n    \"safe-room\",\n    \"seasonal-disaster\",\n    \"spring-storm-season\"\n  ],\n  \"sourceReferences\": [\n    {\n      \"title\": \"Tornado Safety\",\n      \"organization\": \"National Weather Service\",\n      \"url\": \"https://www.weather.gov/safety/tornado\",\n      \"whyUseful\": \"Federal guidance on tornado hazards, shelter selection, and preparation strategies\"\n    },\n    {\n      \"title\": \"Ready.gov: Tornado\",\n      \"organization\": \"FEMA / Department of Homeland Security\",\n      \"url\": \"https://www.ready.gov/tornadoes\",\n      \"whyUseful\": \"Authoritative pre-event planning and family communication guidance\"\n    },\n    {\n      \"title\": \"Severe Weather Preparedness\",\n      \"organization\": \"American Red Cross\",\n      \"url\": \"https://www.redcross.org/\",\n      \"whyUseful\": \"Emergency supply lists, shelter planning, and household drill recommendations\"\n    }\n  ]\n}\n"}, {"name": "summary.txt", "type": "text", "content": "DECISION SUMMARY\n\nThis guide was authored as a preparedness_guide (layer: preparedness) because the content addresses pre-season family planning and preparation activities, not crisis-moment response. The user specifically requested guidance on \"what families should do before tornado season starts,\" which is classic pre-event planning territory.\n\nstepByStepActions is left empty (empty array) because this is a preparedness guide, not an action card. Preparedness guides explain and recommend preparation tasks, which are captured instead in preparednessTips. The 12 preparedness tips cover identification of safe rooms, emergency kit assembly, communication planning, drill execution, and hazard mitigation\u2014all grounded in National Weather Service and FEMA guidance.\n\nsourceQuality is set to \"high\" because the recommendations are drawn from federal agencies (NWS, FEMA, Red Cross) with established tornado safety protocols. No significant gaps or conflicting guidance were encountered.\n\ncontentStatus is \"draft\" and integrationDecision is \"new\" per standard authoring practice. No existing guide appears to cover pre-season tornado family preparedness at this scope, so this should be a new entry in the preparedness category under the \"Tornado Safety\" parent topic.\n\nThe warnings and whatNotToDo fields emphasize critical safety boundaries: mobile home evacuation, avoidance of windows and upper floors, rejection of car-based shelter, and the importance of early planning. redFlags highlight household-level gaps (no identified safe room, untrained household members, lack of alert capability) that indicate inadequate preparedness before the season begins.\n"}], "grading": {"eval_id": 1, "config": "with_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='preparedness', guideType='preparedness_guide', expected guideType='preparedness_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "All 3 refs have correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card (is preparedness_guide), assertion N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide (is preparedness_guide), assertion N/A"}], "pass_count": 7, "total": 7}}, {"id": "tornado-preparedness-without_skill", "prompt": "Create a preparedness guide for tornado season \u2014 what families should do before tornado season starts to get ready.", "eval_id": 1, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"tornado-preparedness-guide\",\n  \"title\": \"Tornado Season Preparedness Guide for Families\",\n  \"category\": \"natural_disasters\",\n  \"parentTopic\": \"severe_weather_preparedness\",\n  \"layer\": \"preparedness\",\n  \"guideType\": \"preparedness_guide\",\n  \"summary\": \"A comprehensive guide for families to prepare before tornado season begins, covering home safety planning, emergency supply creation, family communication strategies, and protective shelter identification.\",\n  \"quickAnswer\": \"Before tornado season starts, identify a safe shelter in your home (basement or interior room on lowest floor), assemble an emergency supply kit with essentials for 72 hours, develop a family communication plan, practice tornado safety procedures, and stay informed about weather threats.\",\n  \"whenToUse\": \"Use this guide in the weeks and months before tornado season begins in your region (typically March-May in the Great Plains and Southeast, though tornado season can occur year-round). Review and update your preparedness annually and before severe weather seasons.\",\n  \"preferredAction\": \"Complete a thorough home assessment to identify the safest shelter location, create and stock an emergency supply kit with recommended items, establish a family communication plan with meeting locations and out-of-state contact, and conduct monthly tornado drills with all household members.\",\n  \"backupAction\": \"If unable to identify a home shelter, arrange with neighbors or community centers for access to their safe rooms. If supplies are limited, prioritize water, food, first aid, medications, and important documents. Use social media and local alert systems if phone communication fails.\",\n  \"stepByStepActions\": [\n    {\n      \"step\": 1,\n      \"title\": \"Assess Your Home for Safe Shelter\",\n      \"description\": \"Walk through your home and identify the safest location. The best shelter is a basement, particularly a basement corner away from windows. If you don't have a basement, choose an interior room on the lowest floor away from windows (interior hallways, bathrooms, or closets work well).\",\n      \"details\": [\n        \"Avoid rooms with large windows or glass doors\",\n        \"Avoid attics or upper floors\",\n        \"Choose rooms with sturdy walls and support overhead\",\n        \"Consider a basement corner, under sturdy support beams if possible\",\n        \"Mark the chosen shelter location clearly to all household members\"\n      ],\n      \"timeRequired\": \"15-20 minutes\"\n    },\n    {\n      \"step\": 2,\n      \"title\": \"Prepare Your Safe Room\",\n      \"description\": \"Once you've identified your safe shelter, prepare it for rapid access during a tornado warning. Stock it with emergency supplies and ensure it's clear of obstacles.\",\n      \"details\": [\n        \"Remove clutter to allow quick entry\",\n        \"Install a sturdy door that can withstand pressure\",\n        \"Add weather stripping around doors and windows if in a frame home\",\n        \"Place emergency supply kit in or near the safe room\",\n        \"Install a weather radio in the shelter for alerts\",\n        \"Consider reinforcing with mattresses or blankets for additional protection\"\n      ],\n      \"timeRequired\": \"1-2 hours\"\n    },\n    {\n      \"step\": 3,\n      \"title\": \"Assemble a 72-Hour Emergency Supply Kit\",\n      \"description\": \"Create a comprehensive emergency kit containing essentials for at least 72 hours after a tornado. Include items for all household members including children and pets.\",\n      \"details\": [\n        \"Water: 1 gallon per person per day (3 gallons minimum)\",\n        \"Non-perishable food: canned goods, granola bars, crackers, peanut butter\",\n        \"First aid kit with personal medications\",\n        \"Flashlight and extra batteries\",\n        \"Battery-powered or hand-crank radio\",\n        \"Phone chargers (portable battery packs and car chargers)\",\n        \"Important documents in waterproof container (ID, insurance, deeds, medical records)\",\n        \"Cash and credit cards\",\n        \"Change of clothes and sturdy shoes\",\n        \"Sleeping bag or blanket\",\n        \"Whistle for signaling help\",\n        \"Dust masks or N95 respirators\",\n        \"Pet supplies and carriers\",\n        \"Infant formula and diapers if needed\",\n        \"List of emergency contacts\"\n      ],\n      \"timeRequired\": \"2-3 hours\"\n    },\n    {\n      \"step\": 4,\n      \"title\": \"Develop a Family Communication Plan\",\n      \"description\": \"Establish how your family will communicate during and after a tornado event, especially if members are separated.\",\n      \"details\": [\n        \"Identify an out-of-state contact person family members can call\",\n        \"Write down and distribute a list of emergency phone numbers\",\n        \"Teach children how to dial 911 and provide personal information\",\n        \"Establish a designated meeting place outside the home if evacuation is needed\",\n        \"Establish a secondary meeting place in case the primary location is affected\",\n        \"Create a written communication plan and post it in multiple locations\",\n        \"Program emergency numbers into all family members' phones\",\n        \"Plan how to reunite with children at school (know school tornado procedures)\",\n        \"Consider using text messaging as an alternative to phone calls\"\n      ],\n      \"timeRequired\": \"45 minutes to 1 hour\"\n    },\n    {\n      \"step\": 5,\n      \"title\": \"Learn Your Area's Tornado Risk and Warning Systems\",\n      \"description\": \"Understand your region's tornado threat level and how you'll receive tornado warnings.\",\n      \"details\": [\n        \"Research your area's historical tornado activity through NOAA resources\",\n        \"Understand the difference between tornado watches and tornado warnings\",\n        \"Sign up for local weather alerts via your local TV station\",\n        \"Enable cell phone emergency alerts (CMAS) on all devices\",\n        \"Download a weather radio app or purchase a weather radio\",\n        \"Locate your NWS office and become familiar with local meteorologists\",\n        \"Know which outdoor warning sirens serve your area\",\n        \"Subscribe to local emergency management social media accounts\"\n      ],\n      \"timeRequired\": \"30-45 minutes\"\n    },\n    {\n      \"step\": 6,\n      \"title\": \"Practice Tornado Safety Procedures\",\n      \"description\": \"Conduct family tornado drills at least twice per year to ensure everyone knows what to do when a tornado warning is issued.\",\n      \"details\": [\n        \"Practice a tornado drill monthly during tornado season\",\n        \"Time how quickly household members can reach the safe room\",\n        \"Practice taking shelter from different locations (school, workplace, outdoors, in car)\",\n        \"Teach children what a tornado looks like and how it sounds\",\n        \"Practice the 'drop, cover, and hold on' position\",\n        \"Have everyone identify the safest location in places they frequent\",\n        \"Review the emergency communication plan\",\n        \"Practice using the weather radio or alert system\"\n      ],\n      \"timeRequired\": \"30 minutes per drill\"\n    },\n    {\n      \"step\": 7,\n      \"title\": \"Prepare Your Workplace and School Plans\",\n      \"description\": \"Coordinate with your employer and your children's school to understand their tornado procedures.\",\n      \"details\": [\n        \"Meet with school administrators to understand tornado shelter procedures\",\n        \"Know where your child will shelter during the school day\",\n        \"Provide school with emergency contact information\",\n        \"Identify your workplace's designated safe room or shelter area\",\n        \"Know the tornado procedures for any building you work in\",\n        \"Discuss whether you'll pick up children from school after a tornado\",\n        \"Understand communication procedures for schools and workplaces\",\n        \"Ensure your emergency contact is reachable at workplace\"\n      ],\n      \"timeRequired\": \"1-2 hours\"\n    },\n    {\n      \"step\": 8,\n      \"title\": \"Secure Your Home and Property\",\n      \"description\": \"Take steps to minimize tornado damage and keep your family safer.\",\n      \"details\": [\n        \"Trim tree branches that hang over your roof or could damage the house\",\n        \"Remove loose outdoor items that could become projectiles (lawn furniture, trash cans)\",\n        \"Secure garden sheds, trampolines, and other structures\",\n        \"Reinforce garage doors or install a bracing system\",\n        \"Install storm shutters or use plywood to protect large windows\",\n        \"Ensure roof is properly fastened and in good repair\",\n        \"Have HVAC system professionally inspected and maintained\",\n        \"Document your property with photos and video for insurance purposes\"\n      ],\n      \"timeRequired\": \"3-8 hours (may require professional help)\"\n    },\n    {\n      \"step\": 9,\n      \"title\": \"Document Important Information and Records\",\n      \"description\": \"Compile and protect important documents and records needed for recovery.\",\n      \"details\": [\n        \"Gather copies of insurance policies (home, auto, health)\",\n        \"Collect birth certificates, Social Security cards, passports\",\n        \"Photograph valuable household items and personal property\",\n        \"Create a video tour of your home showing contents and condition\",\n        \"Store originals in a safe deposit box or fireproof safe\",\n        \"Keep copies in your emergency supply kit\",\n        \"Maintain digital backups stored securely in the cloud\",\n        \"Create a document with financial account information (not passwords)\",\n        \"List healthcare providers and important medical information\"\n      ],\n      \"timeRequired\": \"2-4 hours\"\n    },\n    {\n      \"step\": 10,\n      \"title\": \"Review and Update Your Preparedness Plan\",\n      \"description\": \"Establish a regular review schedule to keep your tornado preparedness current.\",\n      \"details\": [\n        \"Review your emergency plan at least annually before tornado season\",\n        \"Check and replace emergency supply kit items before expiration\",\n        \"Update emergency contact information when phone numbers change\",\n        \"Review safe room preparation and accessibility\",\n        \"Discuss preparedness with all household members\",\n        \"Test battery-powered equipment to ensure proper function\",\n        \"Update important documents as life circumstances change\",\n        \"Refresh your knowledge of tornado safety procedures\",\n        \"Consider updates to your home based on new information\"\n      ],\n      \"timeRequired\": \"45 minutes to 1 hour\"\n    }\n  ],\n  \"warnings\": [\n    \"Do NOT attempt to outrun a tornado in a car if you can reach a sturdy shelter - take shelter immediately instead\",\n    \"Do NOT stay in a mobile home during a tornado; evacuate to a sturdy shelter before a warning is issued\",\n    \"Do NOT open windows in your home during a tornado; keep windows closed and stay in your safe room\",\n    \"Do NOT hide under a table or desk during a tornado if better shelter is available; shelter should be below ground or in an interior room\",\n    \"Do NOT leave your safe room during a tornado warning until the warning is lifted by local authorities\",\n    \"Do NOT rely solely on outdoor warning sirens; have a weather radio as sirens may not be heard indoors\",\n    \"Do NOT assume a gentle rain or no visible clouds means a tornado is not occurring; tornadoes can occur in rain and at night\"\n  ],\n  \"whatNotToDo\": [\n    \"Do not wait until tornado season to prepare - complete preparedness activities well in advance\",\n    \"Do not assume your current home is safe without checking for a proper shelter location\",\n    \"Do not store emergency supplies in an inaccessible location; keep them near your safe room\",\n    \"Do not use elevators during a tornado warning - use stairs to reach your safe room\",\n    \"Do not go to the highest floor of a building; head to the lowest floor instead\",\n    \"Do not stay outdoors when a tornado warning is issued; seek shelter immediately\",\n    \"Do not drive toward a tornado to see it or take photographs\",\n    \"Do not become complacent because tornadoes are rare in your specific location; they are becoming less predictable\",\n    \"Do not forget about preparedness once tornado season ends; maintain your supplies year-round\"\n  ],\n  \"redFlags\": [\n    \"A family member who cannot quickly locate or access your designated safe room - indicates poor communication or planning\",\n    \"Expired emergency supplies, dead batteries, or unusable equipment - indicates lack of maintenance\",\n    \"No clear understanding of the difference between tornado watches and warnings - indicates knowledge gap\",\n    \"Children or family members unfamiliar with tornado procedures - indicates insufficient practice and drills\",\n    \"Unsafe shelter choice (attic, high floor, near windows) - indicates misunderstanding of safety principles\",\n    \"Mobile home without an evacuation plan to a sturdy shelter - indicates serious safety risk\",\n    \"No weather alert system in place (radio, alerts, sirens) - indicates inability to receive warnings\",\n    \"No emergency communication plan or out-of-state contact - indicates separation challenges\",\n    \"Property with unsecured outdoor items or hazardous conditions - indicates vulnerability to wind damage\"\n  ],\n  \"preparednessTips\": [\n    \"Store emergency supplies in a waterproof container on a shelf at or below knee height for easy access and to prevent water damage\",\n    \"Use a checklist to track your preparedness progress and share it with family members\",\n    \"Join a community emergency response team (CERT) to deepen your preparedness knowledge and meet like-minded neighbors\",\n    \"Teach children about tornadoes age-appropriately to reduce fear while building safety awareness\",\n    \"Keep a 'go-bag' packed during tornado season with essential items ready to grab quickly\",\n    \"Use a family group chat or app to test communication systems regularly\",\n    \"Consider tornado-resistant construction for future home improvements (safe room reinforcement)\",\n    \"Maintain good relationships with neighbors to create a community support system\",\n    \"Keep first aid training current with annual CPR and first aid certification courses\",\n    \"Document your home and belongings for insurance purposes with photos and video\"\n  ],\n  \"sourceQuality\": \"authoritative\",\n  \"contentStatus\": \"complete\",\n  \"integrationDecision\": \"approved_for_integration\",\n  \"upgradesGuide\": \"Consider adding regional risk maps, specific shelter construction specifications, insurance requirements for different tornado-prone states, and links to FEMA and NWS resources\",\n  \"appTags\": [\n    \"tornado\",\n    \"preparedness\",\n    \"family_safety\",\n    \"severe_weather\",\n    \"emergency_planning\",\n    \"natural_disaster\",\n    \"seasonal_preparation\"\n  ],\n  \"sourceReferences\": [\n    \"NOAA National Weather Service Tornado Safety Resources\",\n    \"FEMA Tornado Preparedness Guide\",\n    \"American Red Cross Tornado Safety\",\n    \"Ready.gov Tornadoes\",\n    \"National Centers for Environmental Information (NCEI)\",\n    \"StormReady Program - National Weather Service\"\n  ]\n}\n"}], "grading": {"eval_id": 1, "config": "without_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='preparedness', guideType='preparedness_guide', expected guideType='preparedness_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str, not list; stepByStepActions[0] is dict, not str"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "Invalid: sourceQuality='authoritative', contentStatus='complete', integrationDecision='approved_for_integration'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "refs[0] is str, not dict; refs[1] is str, not dict; refs[2] is str, not dict; refs[3] is str, not dict; refs[4] is str, not dict; refs[5] is str, not dict"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card (is preparedness_guide), assertion N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide (is preparedness_guide), assertion N/A"}], "pass_count": 4, "total": 7}}, {"id": "water-purification-transform-with_skill", "prompt": "Here's an article excerpt I want turned into a guide:\n\n---\nWater purification in the field is essential for survival...\n[source content about boiling, chemical treatment, and filtration methods from Wilderness Medical Society]\n---", "eval_id": 2, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"water-purification-field-methods\",\n  \"title\": \"Water Purification in the Field\",\n  \"category\": \"water_food\",\n  \"parentTopic\": \"Water Safety and Purification\",\n  \"layer\": \"reference\",\n  \"guideType\": \"reference_guide\",\n  \"summary\": \"Three reliable methods for purifying water in field conditions: boiling, chemical treatment (iodine/chlorine), and filtration. Each method has distinct effectiveness and use cases.\",\n  \"quickAnswer\": \"Boil water for at least 1 minute (3 minutes above 6,500 ft) to kill bacteria, viruses, and parasites, or use chemical tablets and filtration as alternatives.\",\n  \"whenToUse\": [\n    \"In backcountry or wilderness settings without access to treated water\",\n    \"During emergencies when municipal water supply is unavailable or unsafe\",\n    \"In areas with unknown water quality\",\n    \"When traveling to regions with poor water infrastructure\"\n  ],\n  \"preferredAction\": \"Boil water at a rolling boil for at least 1 minute (3 minutes if above 6,500 ft elevation) before drinking\",\n  \"backupAction\": \"Use chemical tablets (iodine or chlorine) per package instructions, then wait 30 minutes before drinking\",\n  \"stepByStepActions\": [],\n  \"warnings\": [\n    \"Clear water can still contain pathogens\u2014never drink untreated water even if it appears clean\",\n    \"Chemical treatment (iodine/chlorine tablets) is not effective against Cryptosporidium\",\n    \"Filtration alone does not remove viruses; combine with chemical treatment in high-risk areas\",\n    \"Boiling requires sufficient heat source and time\u2014ensure water reaches a rolling boil\"\n  ],\n  \"whatNotToDo\": [\n    \"Do not drink untreated water based on appearance alone\",\n    \"Do not rely on chemical treatment alone in high-risk areas without combining it with filtration for virus protection\",\n    \"Do not use filtration as the sole method in areas where viruses may be present\"\n  ],\n  \"redFlags\": [\n    \"Visible turbidity, discoloration, or odor in water (may indicate higher pathogen load)\",\n    \"Known contamination or disease outbreak in the area\",\n    \"Source water proximity to human or animal waste\"\n  ],\n  \"preparednessTips\": [\n    \"Carry a rated backcountry water filter (e.g., Sawyer, LifeStraw) in your emergency kit\",\n    \"Pack iodine or chlorine tablets as a lightweight backup purification method\",\n    \"Practice using your chosen purification method before relying on it in an emergency\",\n    \"Know the elevation of your operating area to apply correct boiling times\"\n  ],\n  \"sourceQuality\": \"high\",\n  \"contentStatus\": \"draft\",\n  \"integrationDecision\": \"new\",\n  \"upgradesGuide\": null,\n  \"appTags\": [\n    \"water-safety\",\n    \"purification\",\n    \"boiling\",\n    \"chemical-treatment\",\n    \"filtration\",\n    \"backcountry\",\n    \"wilderness-survival\"\n  ],\n  \"sourceReferences\": [\n    {\n      \"title\": \"Water Purification in the Field\",\n      \"organization\": \"Wilderness Medical Society\",\n      \"url\": \"wilderness.net/education\",\n      \"whyUseful\": \"Authoritative source on field water purification methods for wilderness survival and emergency preparedness\"\n    }\n  ],\n  \"responseRole\": null,\n  \"constraintTags\": [],\n  \"blockedByConstraints\": [],\n  \"alternativeToGuideSlugs\": []\n}\n"}, {"name": "summary.txt", "type": "text", "content": "DECISION SUMMARY: Water Purification Field Methods\n\nAuthored as a `reference_guide` because the source material is educational and explanatory in nature, describing how three purification methods work and their relative strengths/weaknesses. While field-applicable, the content provides background knowledge rather than immediate crisis-response instructions, making `reference_guide` the appropriate layer. `stepByStepActions` is empty (as required for reference guides) and instead the knowledge is organized through method comparison in the warnings and preparedness tips.\n\n`preferredAction` and `backupAction` were populated from the source's emphasis on boiling as the most reliable method, with chemical treatment as a viable alternative. Both actions are directly sourced from the article. `sourceQuality` set to `high` based on the Wilderness Medical Society\u2014a recognized medical authority on outdoor emergencies. The source is professional, specific, and includes actionable detail (elevation adjustments, waiting times, known limitations).\n\nNo existing PrepKit guide appears to cover this specific combination of field purification methods, so `integrationDecision` is `new`. All warnings, what-not-to-do items, and red flags are grounded directly in the source material (e.g., \"clear water can contain pathogens,\" \"chemical treatment ineffective against Cryptosporidium,\" \"combine filtration with chemical in high-risk areas\"). The guide respects the source's scope and avoids inventing unsourced safety claims.\n"}], "grading": {"eval_id": 2, "config": "with_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='reference', guideType='reference_guide', expected guideType='reference_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "All 1 refs have correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card (is reference_guide), assertion N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "stepByStepActions has 0 items (should be 0)"}], "pass_count": 7, "total": 7}}, {"id": "water-purification-transform-without_skill", "prompt": "Here's an article excerpt I want turned into a guide:\n\n---\nWater purification in the field is essential for survival...\n[source content about boiling, chemical treatment, and filtration methods from Wilderness Medical Society]\n---", "eval_id": 2, "outputs": [{"name": "guide.json", "type": "text", "content": "{\n  \"slug\": \"field-water-purification\",\n  \"title\": \"Water Purification in the Field\",\n  \"category\": \"water_food\",\n  \"parentTopic\": \"Emergency Water Safety\",\n  \"layer\": \"action\",\n  \"guideType\": \"action_card\",\n  \"summary\": \"Three reliable methods for purifying water in the field: boiling, chemical treatment, and filtration. Each method has distinct advantages and limitations depending on available resources and water contamination risks.\",\n  \"quickAnswer\": \"Boil water for 1 minute (3 minutes above 6,500 ft), use chemical tablets (iodine or chlorine), or filter through a rated backcountry filter. Never drink untreated water, even if it appears clear.\",\n  \"whenToUse\": \"Whenever water source safety is uncertain in backcountry or emergency situations. Always purify water before drinking in wilderness environments.\",\n  \"preferredAction\": \"Boiling is the most reliable method when fuel is available. Bring water to a rolling boil for at least 1 minute (3 minutes at elevations above 6,500 feet) to kill bacteria, viruses, and parasites.\",\n  \"backupAction\": \"If boiling is not possible, use iodine or chlorine chemical treatment tablets according to package instructions. Wait 30 minutes before drinking. Combine filtration with chemical treatment in high-risk areas for maximum safety.\",\n  \"stepByStepActions\": [\n    {\n      \"order\": 1,\n      \"action\": \"Assess water source\",\n      \"details\": \"Evaluate the clarity and condition of the water source. Note: clear water can still contain dangerous pathogens.\"\n    },\n    {\n      \"order\": 2,\n      \"action\": \"Select purification method\",\n      \"details\": \"Choose from boiling (preferred if fuel available), chemical treatment, or filtration based on available resources and contamination risk.\"\n    },\n    {\n      \"order\": 3,\n      \"action\": \"Boiling method (if selected)\",\n      \"details\": \"Bring water to a rolling boil for at least 1 minute (3 minutes above 6,500 ft elevation). This kills bacteria, viruses, and parasites.\"\n    },\n    {\n      \"order\": 4,\n      \"action\": \"Chemical treatment method (if selected)\",\n      \"details\": \"Add iodine or chlorine tablets per package instructions. Wait 30 minutes before drinking. Note: not effective against Cryptosporidium.\"\n    },\n    {\n      \"order\": 5,\n      \"action\": \"Filtration method (if selected)\",\n      \"details\": \"Use a rated backcountry filter (e.g., Sawyer, LifeStraw). Filters remove bacteria and protozoa but not viruses. In high-risk areas, combine with chemical treatment.\"\n    },\n    {\n      \"order\": 6,\n      \"action\": \"Verify treatment completion\",\n      \"details\": \"Confirm the appropriate time has elapsed (1 minute boil, 30 minutes for chemical treatment) before consuming water.\"\n    }\n  ],\n  \"warnings\": [\n    \"Clear water can contain dangerous pathogens and must be treated before drinking\",\n    \"Chemical treatment with iodine or chlorine is not effective against Cryptosporidium\",\n    \"Filtration alone does not remove viruses; use in combination with other methods in high-contamination areas\",\n    \"Boiling effectiveness decreases at high elevation; increase boiling time to 3 minutes above 6,500 feet\"\n  ],\n  \"whatNotToDo\": [\n    \"Do not drink untreated water under any circumstances, regardless of how clear it appears\",\n    \"Do not rely solely on filtration in areas with high viral contamination risk\",\n    \"Do not skip the 30-minute waiting period for chemical treatment tablets\",\n    \"Do not use chemical treatment as the sole method against Cryptosporidium\"\n  ],\n  \"redFlags\": [\n    \"Water with visible discoloration, sediment, or odor indicates high contamination risk\",\n    \"If purification method is unavailable, do not consume untreated water\",\n    \"Symptoms of waterborne illness include diarrhea, nausea, and abdominal cramps\u2014seek medical attention if symptoms develop\"\n  ],\n  \"preparednessTips\": [\n    \"Pack multiple purification methods (tablets, lightweight filter, fuel for boiling) for redundancy\",\n    \"Carry purification tablets as lightweight backup for emergency situations\",\n    \"Test and familiarize yourself with portable filters before emergency use\",\n    \"At high elevation, remember the extended 3-minute boiling requirement\",\n    \"Understand limitations of each method to select appropriate strategy for your environment\"\n  ],\n  \"sourceQuality\": \"authoritative\",\n  \"contentStatus\": \"published\",\n  \"integrationDecision\": \"approved\",\n  \"upgradesGuide\": \"Include additional methods (solar disinfection, advanced filtration systems) for expanded coverage as technology options evolve\",\n  \"appTags\": [\n    \"water-safety\",\n    \"emergency-survival\",\n    \"field-techniques\",\n    \"backcountry\",\n    \"water-purification\",\n    \"health-safety\"\n  ],\n  \"sourceReferences\": [\n    {\n      \"organization\": \"Wilderness Medical Society\",\n      \"url\": \"wilderness.net/education\",\n      \"accessDate\": \"2026-03-15\",\n      \"contentType\": \"Educational Resource\"\n    }\n  ]\n}\n"}], "grading": {"eval_id": 2, "config": "without_skill", "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card', expected guideType='action_card'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str, not list; stepByStepActions[0] is dict, not str"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "Invalid: sourceQuality='authoritative', contentStatus='published', integrationDecision='approved'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "refs[0] missing: {'title', 'whyUseful'}"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 6 items"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide (is action_card), assertion N/A"}], "pass_count": 4, "total": 7}}], "previous_feedback": {}, "previous_outputs": {}, "benchmark": {"metadata": {"skill_name": "prepkit-guide-author", "skill_path": "/sessions/intelligent-gallant-hawking/prepkit-guide-author", "executor_model": "claude-sonnet-4-6", "timestamp": "2026-03-15T14:00:00Z", "evals_run": ["gas-leak-action-card", "tornado-preparedness", "water-purification-transform"], "runs_per_configuration": 1}, "runs": [{"eval_id": 0, "eval_name": "Gas Leak Action Card", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 31.0, "tokens": 26147, "tool_calls": 4, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "All 3 refs have correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 9 items"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide, N/A"}]}, {"eval_id": 0, "eval_name": "Gas Leak Action Card", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.571, "passed": 4, "failed": 3, "total": 7, "time_seconds": 25.6, "tokens": 24046, "tool_calls": 2, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str; stepByStepActions[0] is dict; warnings[0] is dict; redFlags[0] is dict; preparednessTips[0] is dict"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "contentStatus='verified', integrationDecision='approved_for_production'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "refs use 'source'/'relevance' fields instead of required schema"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 7 items"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide, N/A"}]}, {"eval_id": 1, "eval_name": "Tornado Preparedness Guide", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 28.8, "tokens": 26159, "tool_calls": 4, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='preparedness', guideType='preparedness_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "All 3 refs have correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card, N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide, N/A"}]}, {"eval_id": 1, "eval_name": "Tornado Preparedness Guide", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.571, "passed": 4, "failed": 3, "total": 7, "time_seconds": 39.2, "tokens": 25225, "tool_calls": 2, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='preparedness', guideType='preparedness_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str; stepByStepActions[0] is dict with step/title/description"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "sourceQuality='authoritative', contentStatus='complete', integrationDecision='approved_for_integration'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "All 6 refs are plain strings, not objects"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card, N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide, N/A"}]}, {"eval_id": 2, "eval_name": "Water Purification (Source Transform)", "configuration": "with_skill", "run_number": 1, "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 23.8, "tokens": 25816, "tool_calls": 4, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='reference', guideType='reference_guide'"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": true, "evidence": "All array fields are flat string arrays"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": true, "evidence": "All enum values valid"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": true, "evidence": "1 ref has all correct fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "Not an action_card, N/A"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "stepByStepActions has 0 items"}]}, {"eval_id": 2, "eval_name": "Water Purification (Source Transform)", "configuration": "without_skill", "run_number": 1, "result": {"pass_rate": 0.571, "passed": 4, "failed": 3, "total": 7, "time_seconds": 15.7, "tokens": 23170, "tool_calls": 2, "errors": 0}, "expectations": [{"text": "All 22 required fields are present in the output", "passed": true, "evidence": "All 22 required fields present"}, {"text": "layer and guideType are valid enum values and correctly matched to each other", "passed": true, "evidence": "layer='action', guideType='action_card' \u2014 but reference content misclassified as action_card"}, {"text": "All array fields (whenToUse, warnings, etc.) are flat arrays of strings, not nested objects", "passed": false, "evidence": "whenToUse is str; stepByStepActions[0] is dict with order/action/details"}, {"text": "sourceQuality, contentStatus, integrationDecision, and category use only valid enum values", "passed": false, "evidence": "sourceQuality='authoritative', contentStatus='published', integrationDecision='approved'"}, {"text": "Each sourceReference object has exactly the fields: title, organization, url, whyUseful", "passed": false, "evidence": "refs[0] missing title and whyUseful fields"}, {"text": "action_card guides have at least one stepByStepAction", "passed": true, "evidence": "stepByStepActions has 6 items (guide was wrongly typed as action_card)"}, {"text": "reference_guide guides have an empty stepByStepActions array", "passed": true, "evidence": "Not a reference_guide, N/A"}]}], "run_summary": {"with_skill": {"pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0}, "time_seconds": {"mean": 27.9, "stddev": 3.7, "min": 23.8, "max": 31.0}, "tokens": {"mean": 26041, "stddev": 191, "min": 25816, "max": 26159}}, "without_skill": {"pass_rate": {"mean": 0.571, "stddev": 0.0, "min": 0.571, "max": 0.571}, "time_seconds": {"mean": 26.8, "stddev": 11.8, "min": 15.7, "max": 39.2}, "tokens": {"mean": 24147, "stddev": 1046, "min": 23170, "max": 25225}}, "delta": {"pass_rate": "+0.429", "time_seconds": "+1.1", "tokens": "+1894"}}, "notes": ["The 'layer and guideType valid' assertion always passes in both configs \u2014 but hides a meaningful failure: eval 2 without_skill misclassified reference content as action_card (valid enum, wrong choice)", "The 3 consistently failing without_skill assertions are: flat array format, valid enum values, and sourceReferences schema \u2014 all direct schema discipline issues the skill addresses", "Skill adds ~1900 tokens average but achieves perfect schema compliance; without_skill produces non-importable JSON", "Without_skill execution time variance is much higher (stddev 11.8s vs 3.7s) \u2014 skill produces more predictable outputs"]}};
+
+    // ---- State ----
+    let feedbackMap = {};  // run_id -> feedback text
+    let currentIndex = 0;
+    let visitedRuns = new Set();
+
+    // ---- Init ----
+    async function init() {
+      // Load saved feedback from server — but only if this isn't a fresh
+      // iteration (indicated by previous_feedback being present). When
+      // previous feedback exists, the feedback.json on disk is stale from
+      // the prior iteration and should not pre-fill the textareas.
+      const hasPrevious = Object.keys(EMBEDDED_DATA.previous_feedback || {}).length > 0
+        || Object.keys(EMBEDDED_DATA.previous_outputs || {}).length > 0;
+      if (!hasPrevious) {
+        try {
+          const resp = await fetch("/api/feedback");
+          const data = await resp.json();
+          if (data.reviews) {
+            for (const r of data.reviews) feedbackMap[r.run_id] = r.feedback;
+          }
+        } catch { /* first run, no feedback yet */ }
+      }
+
+      document.getElementById("skill-name").textContent = EMBEDDED_DATA.skill_name;
+      showRun(0);
+
+      // Wire up feedback auto-save
+      const textarea = document.getElementById("feedback");
+      let saveTimeout = null;
+      textarea.addEventListener("input", () => {
+        clearTimeout(saveTimeout);
+        document.getElementById("feedback-status").textContent = "";
+        saveTimeout = setTimeout(() => saveCurrentFeedback(), 800);
+      });
+    }
+
+    // ---- Navigation ----
+    function navigate(delta) {
+      const newIndex = currentIndex + delta;
+      if (newIndex >= 0 && newIndex < EMBEDDED_DATA.runs.length) {
+        saveCurrentFeedback();
+        showRun(newIndex);
+      }
+    }
+
+    function updateNavButtons() {
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").disabled =
+        currentIndex === EMBEDDED_DATA.runs.length - 1;
+    }
+
+    // ---- Show a run ----
+    function showRun(index) {
+      currentIndex = index;
+      const run = EMBEDDED_DATA.runs[index];
+
+      // Progress
+      document.getElementById("progress").textContent =
+        `${index + 1} of ${EMBEDDED_DATA.runs.length}`;
+
+      // Prompt
+      document.getElementById("prompt-text").textContent = run.prompt;
+
+      // Config badge
+      const badge = document.getElementById("config-badge");
+      const configMatch = run.id.match(/(with_skill|without_skill|new_skill|old_skill)/);
+      if (configMatch) {
+        const config = configMatch[1];
+        const isBaseline = config === "without_skill" || config === "old_skill";
+        badge.textContent = config.replace(/_/g, " ");
+        badge.className = "config-badge " + (isBaseline ? "config-baseline" : "config-primary");
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+
+      // Outputs
+      renderOutputs(run);
+
+      // Previous outputs
+      renderPrevOutputs(run);
+
+      // Grades
+      renderGrades(run);
+
+      // Previous feedback
+      const prevFb = (EMBEDDED_DATA.previous_feedback || {})[run.id];
+      const prevEl = document.getElementById("prev-feedback");
+      if (prevFb) {
+        document.getElementById("prev-feedback-text").textContent = prevFb;
+        prevEl.style.display = "block";
+      } else {
+        prevEl.style.display = "none";
+      }
+
+      // Feedback
+      document.getElementById("feedback").value = feedbackMap[run.id] || "";
+      document.getElementById("feedback-status").textContent = "";
+
+      updateNavButtons();
+
+      // Track visited runs and promote done button when all visited
+      visitedRuns.add(index);
+      const doneBtn = document.getElementById("done-btn");
+      if (visitedRuns.size >= EMBEDDED_DATA.runs.length) {
+        doneBtn.classList.add("ready");
+      }
+
+      // Scroll main content to top
+      document.querySelector(".main").scrollTop = 0;
+    }
+
+    // ---- Render outputs ----
+    function renderOutputs(run) {
+      const container = document.getElementById("outputs-body");
+      container.innerHTML = "";
+
+      const outputs = run.outputs || [];
+      if (outputs.length === 0) {
+        container.innerHTML = '<div class="empty-state">No output files</div>';
+        return;
+      }
+
+      for (const file of outputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        // Always show file header with download link
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const content = document.createElement("div");
+        content.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          content.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          content.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          content.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(content, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          content.appendChild(a);
+        } else if (file.type === "error") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          pre.style.color = "var(--red)";
+          content.appendChild(pre);
+        }
+
+        fileDiv.appendChild(content);
+        container.appendChild(fileDiv);
+      }
+    }
+
+    // ---- XLSX rendering via SheetJS ----
+    function renderXlsx(container, b64Data) {
+      try {
+        const raw = Uint8Array.from(atob(b64Data), c => c.charCodeAt(0));
+        const wb = XLSX.read(raw, { type: "array" });
+
+        for (let i = 0; i < wb.SheetNames.length; i++) {
+          const sheetName = wb.SheetNames[i];
+          const ws = wb.Sheets[sheetName];
+
+          if (wb.SheetNames.length > 1) {
+            const sheetLabel = document.createElement("div");
+            sheetLabel.style.cssText =
+              "font-weight:600; font-size:0.8rem; color:#b0aea5; margin-top:0.5rem; margin-bottom:0.25rem;";
+            sheetLabel.textContent = "Sheet: " + sheetName;
+            container.appendChild(sheetLabel);
+          }
+
+          const htmlStr = XLSX.utils.sheet_to_html(ws, { editable: false });
+          const wrapper = document.createElement("div");
+          wrapper.innerHTML = htmlStr;
+          container.appendChild(wrapper);
+        }
+      } catch (err) {
+        container.textContent = "Error rendering spreadsheet: " + err.message;
+      }
+    }
+
+    // ---- Grades ----
+    function renderGrades(run) {
+      const section = document.getElementById("grades-section");
+      const content = document.getElementById("grades-content");
+
+      if (!run.grading) {
+        section.style.display = "none";
+        return;
+      }
+
+      const grading = run.grading;
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("grades-arrow").classList.remove("open");
+
+      const summary = grading.summary || {};
+      const expectations = grading.expectations || [];
+
+      let html = '<div style="padding: 1rem;">';
+
+      // Summary line
+      const passRate = summary.pass_rate != null
+        ? Math.round(summary.pass_rate * 100) + "%"
+        : "?";
+      const badgeClass = summary.pass_rate >= 0.8 ? "grade-pass" : summary.pass_rate >= 0.5 ? "" : "grade-fail";
+      html += '<div class="grades-summary">';
+      html += '<span class="grade-badge ' + badgeClass + '">' + passRate + '</span>';
+      html += '<span>' + (summary.passed || 0) + ' passed, ' + (summary.failed || 0) + ' failed of ' + (summary.total || 0) + '</span>';
+      html += '</div>';
+
+      // Assertions list
+      html += '<ul class="assertion-list">';
+      for (const exp of expectations) {
+        const statusClass = exp.passed ? "pass" : "fail";
+        const statusIcon = exp.passed ? "\u2713" : "\u2717";
+        html += '<li class="assertion-item">';
+        html += '<span class="assertion-status ' + statusClass + '">' + statusIcon + '</span>';
+        html += '<span>' + escapeHtml(exp.text) + '</span>';
+        if (exp.evidence) {
+          html += '<div class="assertion-evidence">' + escapeHtml(exp.evidence) + '</div>';
+        }
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      html += '</div>';
+      content.innerHTML = html;
+    }
+
+    function toggleGrades() {
+      const content = document.getElementById("grades-content");
+      const arrow = document.getElementById("grades-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Previous outputs (collapsible) ----
+    function renderPrevOutputs(run) {
+      const section = document.getElementById("prev-outputs-section");
+      const content = document.getElementById("prev-outputs-content");
+      const prevOutputs = (EMBEDDED_DATA.previous_outputs || {})[run.id];
+
+      if (!prevOutputs || prevOutputs.length === 0) {
+        section.style.display = "none";
+        return;
+      }
+
+      section.style.display = "block";
+      // Reset to collapsed
+      content.classList.remove("open");
+      document.getElementById("prev-outputs-arrow").classList.remove("open");
+
+      // Render the files into the content area
+      content.innerHTML = "";
+      const wrapper = document.createElement("div");
+      wrapper.style.padding = "1rem";
+
+      for (const file of prevOutputs) {
+        const fileDiv = document.createElement("div");
+        fileDiv.className = "output-file";
+
+        const header = document.createElement("div");
+        header.className = "output-file-header";
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = file.name;
+        header.appendChild(nameSpan);
+        const dlBtn = document.createElement("a");
+        dlBtn.className = "dl-btn";
+        dlBtn.textContent = "Download";
+        dlBtn.download = file.name;
+        dlBtn.href = getDownloadUri(file);
+        header.appendChild(dlBtn);
+        fileDiv.appendChild(header);
+
+        const fc = document.createElement("div");
+        fc.className = "output-file-content";
+
+        if (file.type === "text") {
+          const pre = document.createElement("pre");
+          pre.textContent = file.content;
+          fc.appendChild(pre);
+        } else if (file.type === "image") {
+          const img = document.createElement("img");
+          img.src = file.data_uri;
+          img.alt = file.name;
+          fc.appendChild(img);
+        } else if (file.type === "pdf") {
+          const iframe = document.createElement("iframe");
+          iframe.src = file.data_uri;
+          fc.appendChild(iframe);
+        } else if (file.type === "xlsx") {
+          renderXlsx(fc, file.data_b64);
+        } else if (file.type === "binary") {
+          const a = document.createElement("a");
+          a.className = "download-link";
+          a.href = file.data_uri;
+          a.download = file.name;
+          a.textContent = "Download " + file.name;
+          fc.appendChild(a);
+        }
+
+        fileDiv.appendChild(fc);
+        wrapper.appendChild(fileDiv);
+      }
+
+      content.appendChild(wrapper);
+    }
+
+    function togglePrevOutputs() {
+      const content = document.getElementById("prev-outputs-content");
+      const arrow = document.getElementById("prev-outputs-arrow");
+      content.classList.toggle("open");
+      arrow.classList.toggle("open");
+    }
+
+    // ---- Feedback (saved to server -> feedback.json) ----
+    function saveCurrentFeedback() {
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // Build reviews array from map
+      const reviews = [];
+      for (const [run_id, feedback] of Object.entries(feedbackMap)) {
+        if (feedback.trim()) {
+          reviews.push({ run_id, feedback, timestamp: new Date().toISOString() });
+        }
+      }
+
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reviews, status: "in_progress" }),
+      }).then(() => {
+        document.getElementById("feedback-status").textContent = "Saved";
+      }).catch(() => {
+        // Static mode or server unavailable — no-op on auto-save,
+        // feedback will be downloaded on final submit
+        document.getElementById("feedback-status").textContent = "Will download on submit";
+      });
+    }
+
+    // ---- Done ----
+    function showDoneDialog() {
+      // Save current textarea to feedbackMap (but don't POST yet)
+      const run = EMBEDDED_DATA.runs[currentIndex];
+      const text = document.getElementById("feedback").value;
+      if (text.trim() === "") {
+        delete feedbackMap[run.id];
+      } else {
+        feedbackMap[run.id] = text;
+      }
+
+      // POST once with status: complete — include ALL runs so the model
+      // can distinguish "no feedback" (looks good) from "not reviewed"
+      const reviews = [];
+      const ts = new Date().toISOString();
+      for (const r of EMBEDDED_DATA.runs) {
+        reviews.push({ run_id: r.id, feedback: feedbackMap[r.id] || "", timestamp: ts });
+      }
+      const payload = JSON.stringify({ reviews, status: "complete" }, null, 2);
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+      }).then(() => {
+        document.getElementById("done-overlay").classList.add("visible");
+      }).catch(() => {
+        // Server not available (static mode) — download as file
+        const blob = new Blob([payload], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "feedback.json";
+        a.click();
+        URL.revokeObjectURL(url);
+        document.getElementById("done-overlay").classList.add("visible");
+      });
+    }
+
+    function closeDoneDialog() {
+      // Reset status back to in_progress
+      saveCurrentFeedback();
+      document.getElementById("done-overlay").classList.remove("visible");
+    }
+
+    // ---- Toast ----
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      setTimeout(() => toast.classList.remove("visible"), 2000);
+    }
+
+    // ---- Keyboard nav ----
+    document.addEventListener("keydown", (e) => {
+      // Don't capture when typing in textarea
+      if (e.target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        e.preventDefault();
+        navigate(-1);
+      } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        e.preventDefault();
+        navigate(1);
+      }
+    });
+
+    // ---- Util ----
+    function getDownloadUri(file) {
+      if (file.data_uri) return file.data_uri;
+      if (file.data_b64) return "data:application/octet-stream;base64," + file.data_b64;
+      if (file.type === "text") return "data:text/plain;charset=utf-8," + encodeURIComponent(file.content);
+      return "#";
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // ---- View switching ----
+    function switchView(view) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".view-panel").forEach(p => p.classList.remove("active"));
+      document.querySelector(`[onclick="switchView('${view}')"]`).classList.add("active");
+      document.getElementById("panel-" + view).classList.add("active");
+    }
+
+    // ---- Benchmark rendering ----
+    function renderBenchmark() {
+      const data = EMBEDDED_DATA.benchmark;
+      if (!data) return;
+
+      // Show the tabs
+      document.getElementById("view-tabs").style.display = "flex";
+
+      const container = document.getElementById("benchmark-content");
+      const summary = data.run_summary || {};
+      const metadata = data.metadata || {};
+      const notes = data.notes || [];
+
+      let html = "";
+
+      // Header
+      html += "<h2 style='font-family: Poppins, sans-serif; margin-bottom: 0.5rem;'>Benchmark Results</h2>";
+      html += "<p style='color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;'>";
+      if (metadata.skill_name) html += "<strong>" + escapeHtml(metadata.skill_name) + "</strong> &mdash; ";
+      if (metadata.timestamp) html += metadata.timestamp + " &mdash; ";
+      if (metadata.evals_run) html += "Evals: " + metadata.evals_run.join(", ") + " &mdash; ";
+      html += (metadata.runs_per_configuration || "?") + " runs per configuration";
+      html += "</p>";
+
+      // Summary table
+      html += '<table class="benchmark-table">';
+
+      function fmtStat(stat, pct) {
+        if (!stat) return "—";
+        const suffix = pct ? "%" : "";
+        const m = pct ? (stat.mean * 100).toFixed(0) : stat.mean.toFixed(1);
+        const s = pct ? (stat.stddev * 100).toFixed(0) : stat.stddev.toFixed(1);
+        return m + suffix + " ± " + s + suffix;
+      }
+
+      function deltaClass(val) {
+        if (!val) return "";
+        const n = parseFloat(val);
+        if (n > 0) return "benchmark-delta-positive";
+        if (n < 0) return "benchmark-delta-negative";
+        return "";
+      }
+
+      // Discover config names dynamically (everything except "delta")
+      const configs = Object.keys(summary).filter(k => k !== "delta");
+      const configA = configs[0] || "config_a";
+      const configB = configs[1] || "config_b";
+      const labelA = configA.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const labelB = configB.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const a = summary[configA] || {};
+      const b = summary[configB] || {};
+      const delta = summary.delta || {};
+
+      html += "<thead><tr><th>Metric</th><th>" + escapeHtml(labelA) + "</th><th>" + escapeHtml(labelB) + "</th><th>Delta</th></tr></thead>";
+      html += "<tbody>";
+
+      html += "<tr><td><strong>Pass Rate</strong></td>";
+      html += "<td>" + fmtStat(a.pass_rate, true) + "</td>";
+      html += "<td>" + fmtStat(b.pass_rate, true) + "</td>";
+      html += '<td class="' + deltaClass(delta.pass_rate) + '">' + (delta.pass_rate || "—") + "</td></tr>";
+
+      // Time (only show row if data exists)
+      if (a.time_seconds || b.time_seconds) {
+        html += "<tr><td><strong>Time (s)</strong></td>";
+        html += "<td>" + fmtStat(a.time_seconds, false) + "</td>";
+        html += "<td>" + fmtStat(b.time_seconds, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.time_seconds) + '">' + (delta.time_seconds ? delta.time_seconds + "s" : "—") + "</td></tr>";
+      }
+
+      // Tokens (only show row if data exists)
+      if (a.tokens || b.tokens) {
+        html += "<tr><td><strong>Tokens</strong></td>";
+        html += "<td>" + fmtStat(a.tokens, false) + "</td>";
+        html += "<td>" + fmtStat(b.tokens, false) + "</td>";
+        html += '<td class="' + deltaClass(delta.tokens) + '">' + (delta.tokens || "—") + "</td></tr>";
+      }
+
+      html += "</tbody></table>";
+
+      // Per-eval breakdown (if runs data available)
+      const runs = data.runs || [];
+      if (runs.length > 0) {
+        const evalIds = [...new Set(runs.map(r => r.eval_id))].sort((a, b) => a - b);
+
+        html += "<h3 style='font-family: Poppins, sans-serif; margin-bottom: 0.75rem;'>Per-Eval Breakdown</h3>";
+
+        const hasTime = runs.some(r => r.result && r.result.time_seconds != null);
+        const hasErrors = runs.some(r => r.result && r.result.errors > 0);
+
+        for (const evalId of evalIds) {
+          const evalRuns = runs.filter(r => r.eval_id === evalId);
+          const evalName = evalRuns[0] && evalRuns[0].eval_name ? evalRuns[0].eval_name : "Eval " + evalId;
+
+          html += "<h4 style='font-family: Poppins, sans-serif; margin: 1rem 0 0.5rem; color: var(--text);'>" + escapeHtml(evalName) + "</h4>";
+          html += '<table class="benchmark-table">';
+          html += "<thead><tr><th>Config</th><th>Run</th><th>Pass Rate</th>";
+          if (hasTime) html += "<th>Time (s)</th>";
+          if (hasErrors) html += "<th>Crashes During Execution</th>";
+          html += "</tr></thead>";
+          html += "<tbody>";
+
+          // Group by config and render with average rows
+          const configGroups = [...new Set(evalRuns.map(r => r.configuration))];
+          for (let ci = 0; ci < configGroups.length; ci++) {
+            const config = configGroups[ci];
+            const configRuns = evalRuns.filter(r => r.configuration === config);
+            if (configRuns.length === 0) continue;
+
+            const rowClass = ci === 0 ? "benchmark-row-with" : "benchmark-row-without";
+            const configLabel = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+            for (const run of configRuns) {
+              const r = run.result || {};
+              const prClass = r.pass_rate >= 0.8 ? "benchmark-delta-positive" : r.pass_rate < 0.5 ? "benchmark-delta-negative" : "";
+              html += '<tr class="' + rowClass + '">';
+              html += "<td>" + configLabel + "</td>";
+              html += "<td>" + run.run_number + "</td>";
+              html += '<td class="' + prClass + '">' + ((r.pass_rate || 0) * 100).toFixed(0) + "% (" + (r.passed || 0) + "/" + (r.total || 0) + ")</td>";
+              if (hasTime) html += "<td>" + (r.time_seconds != null ? r.time_seconds.toFixed(1) : "—") + "</td>";
+              if (hasErrors) html += "<td>" + (r.errors || 0) + "</td>";
+              html += "</tr>";
+            }
+
+            // Average row
+            const rates = configRuns.map(r => (r.result || {}).pass_rate || 0);
+            const avgRate = rates.reduce((a, b) => a + b, 0) / rates.length;
+            const avgPrClass = avgRate >= 0.8 ? "benchmark-delta-positive" : avgRate < 0.5 ? "benchmark-delta-negative" : "";
+            html += '<tr class="benchmark-row-avg ' + rowClass + '">';
+            html += "<td>" + configLabel + "</td>";
+            html += "<td>Avg</td>";
+            html += '<td class="' + avgPrClass + '">' + (avgRate * 100).toFixed(0) + "%</td>";
+            if (hasTime) {
+              const times = configRuns.map(r => (r.result || {}).time_seconds).filter(t => t != null);
+              html += "<td>" + (times.length ? (times.reduce((a, b) => a + b, 0) / times.length).toFixed(1) : "—") + "</td>";
+            }
+            if (hasErrors) html += "<td></td>";
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+
+          // Per-assertion detail for this eval
+          const runsWithExpectations = {};
+          for (const config of configGroups) {
+            runsWithExpectations[config] = evalRuns.filter(r => r.configuration === config && r.expectations && r.expectations.length > 0);
+          }
+          const hasAnyExpectations = Object.values(runsWithExpectations).some(runs => runs.length > 0);
+          if (hasAnyExpectations) {
+            // Collect all unique assertion texts across all configs
+            const allAssertions = [];
+            const seen = new Set();
+            for (const config of configGroups) {
+              for (const run of runsWithExpectations[config]) {
+                for (const exp of (run.expectations || [])) {
+                  if (!seen.has(exp.text)) {
+                    seen.add(exp.text);
+                    allAssertions.push(exp.text);
+                  }
+                }
+              }
+            }
+
+            html += '<table class="benchmark-table" style="margin-top: 0.5rem;">';
+            html += "<thead><tr><th>Assertion</th>";
+            for (const config of configGroups) {
+              const label = config.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+              html += "<th>" + escapeHtml(label) + "</th>";
+            }
+            html += "</tr></thead><tbody>";
+
+            for (const assertionText of allAssertions) {
+              html += "<tr><td>" + escapeHtml(assertionText) + "</td>";
+
+              for (const config of configGroups) {
+                html += "<td>";
+                for (const run of runsWithExpectations[config]) {
+                  const exp = (run.expectations || []).find(e => e.text === assertionText);
+                  if (exp) {
+                    const cls = exp.passed ? "benchmark-delta-positive" : "benchmark-delta-negative";
+                    const icon = exp.passed ? "\u2713" : "\u2717";
+                    html += '<span class="' + cls + '" title="Run ' + run.run_number + ': ' + escapeHtml(exp.evidence || "") + '">' + icon + "</span> ";
+                  } else {
+                    html += "— ";
+                  }
+                }
+                html += "</td>";
+              }
+              html += "</tr>";
+            }
+            html += "</tbody></table>";
+          }
+        }
+      }
+
+      // Notes
+      if (notes.length > 0) {
+        html += '<div class="benchmark-notes">';
+        html += "<h3>Analysis Notes</h3>";
+        html += "<ul>";
+        for (const note of notes) {
+          html += "<li>" + escapeHtml(note) + "</li>";
+        }
+        html += "</ul></div>";
+      }
+
+      container.innerHTML = html;
+    }
+
+    // ---- Start ----
+    init();
+    renderBenchmark();
+  </script>
+</body>
+</html>

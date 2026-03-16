@@ -38,6 +38,8 @@ Each step has a skill with detailed instructions in `skills/<skill-name>/SKILL.m
 | 7. Human Review | Manual in admin UI | — | Status change: draft → in_review → approved |
 | 8. Release | `northkeep-release` | Approved versions | Published release bundle |
 
+**For batch runs (2+ guides):** Use `northkeep-orchestrator` instead of running steps 2–6 manually. The orchestrator spawns one subagent per guide in parallel, collects results, and runs Import/Staging sequentially with user confirmation. Single-guide runs still use the individual skills directly.
+
 ### Pipeline architecture doc
 
 Full details on every skill's inputs, outputs, and handoff contracts: `northkeep-skill-pipeline-architecture.md`

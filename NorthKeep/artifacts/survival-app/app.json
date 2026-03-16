@@ -14,7 +14,8 @@
       "backgroundColor": "#F5F0EB"
     },
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.anonymous.survival-app"
     },
     "android": {},
     "web": {

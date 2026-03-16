@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "primitive-fishing-survival",
+    "versionId": "016b6464-585d-45e3-8d18-d07aa7d8bfd7",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "changeSummary": "New action_card for primitive fishing in survival situations. Covers passive weir construction, improvised hooks, dawn/dusk timing, field dressing, and cooking safety. sourceQuality: mixed. Warning: alternativeToGuideSlugs cross parentTopic boundaries — resolves as cluster grows.",
+    "apiWarnings": [],
+    "validationWarnings": [],
+    "importedAt": "2026-03-16T09:14:31.626Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  },
+  {
+    "slug": "edible-plant-foraging-basics",
+    "versionId": "b19cba5a-b0fd-43af-909d-c2389e0e9cf4",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "changeSummary": "New scenario_guide for emergency foraging. Covers 3-point identification rule, beginner edibles (dandelion, plantain, cattail), toxic lookalike warnings (Apiaceae/hemlock), Universal Edibility Test, and Poison Control response. sourceQuality: mixed. Warning: new parentTopic Emergency Food Procurement auto-created.",
+    "apiWarnings": [],
+    "validationWarnings": [],
+    "importedAt": "2026-03-16T09:14:34.072Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  },
+  {
+    "slug": "emergency-food-procurement-prep",
+    "versionId": "12d0b5d1-a1cf-4c6d-b97b-b085880191e3",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "changeSummary": "New preparedness_guide for long-term emergency food procurement. Covers tiered stockpile building (72hr → 2wk → 3mo), UGA Extension bulk quantities, active skill development (fishing, gardening, canning, foraging), and community food networks. sourceQuality: strong. Clean pass, no warnings.",
+    "apiWarnings": [],
+    "validationWarnings": [],
+    "importedAt": "2026-03-16T09:14:36.545Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  }
+]

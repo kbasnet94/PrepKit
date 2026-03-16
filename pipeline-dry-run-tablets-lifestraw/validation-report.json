@@ -1,0 +1,105 @@
+{
+  "validatedAt": "2026-03-15T18:30:00.000Z",
+  "evidenceTier": "authoritative_only",
+  "overallResult": "pass_with_warnings",
+  "guides": [
+    {
+      "slug": "purify-water-chemical-tablets",
+      "overallResult": "pass_with_warnings",
+      "schemaChecks": [
+        { "check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present: slug, title, category, parentTopic, layer, guideType, summary, quickAnswer, whenToUse, preferredAction, backupAction, stepByStepActions, warnings, whatNotToDo, redFlags, preparednessTips, sourceQuality, contentStatus, integrationDecision, upgradesGuide, appTags, sourceReferences" },
+        { "check": "layer_guidetype_matched", "passed": true, "evidence": "layer=action, guideType=action_card — valid pair" },
+        { "check": "valid_category", "passed": true, "evidence": "category=water_food — in canonical list" },
+        { "check": "valid_source_quality", "passed": true, "evidence": "sourceQuality=strong — valid value" },
+        { "check": "array_fields_flat", "passed": true, "evidence": "whenToUse (5 strings), stepByStepActions (7 strings), warnings (5 strings), whatNotToDo (6 strings), redFlags (5 strings), preparednessTips (5 strings), appTags (10 strings) — all flat string arrays" },
+        { "check": "source_refs_schema", "passed": true, "evidence": "3 sourceReferences, each with title, organization, url, whyUseful. All URLs populated." },
+        { "check": "constraint_tags_valid", "passed": true, "evidence": "constraintTags=[no_boiling, no_fire, no_heat_source, no_bleach] — all in canonical registry. blockedByConstraints=[] — no invalid tags." },
+        { "check": "response_role_valid", "passed": true, "evidence": "responseRole=backup — valid value" },
+        { "check": "alt_slugs_exist", "passed": true, "evidence": "alternativeToGuideSlugs=[purify-water-boiling] — verified in Supabase library (187 guides)" },
+        { "check": "no_constraint_overlap", "passed": true, "evidence": "constraintTags and blockedByConstraints have no tags in common (blockedByConstraints is empty)" },
+        { "check": "camelCase_fields", "passed": true, "evidence": "All field names use camelCase" },
+        { "check": "slug_format", "passed": true, "evidence": "purify-water-chemical-tablets — lowercase, kebab-case, no spaces or uppercase" }
+      ],
+      "safetyChecks": [
+        { "check": "claims_sourced", "passed": true, "evidence": "Core claims traceable to research packet: chlorine dioxide kills Cryptosporidium (CDC Yellow Book 2024), iodine contraindications (CDC), pre-filtering turbid water (CDC, EPA), tablets do not remove chemicals (CDC, EPA), wait time framing (CDC 'several hours', EPA 30 min for iodine tincture)" },
+        { "check": "no_invented_advice", "passed": true, "severity": "warning", "evidence": "One parenthetical in stepByStepActions[3] states 'typically 4 hours for clear water at room temperature' for chlorine dioxide. This number is consistent with manufacturer product labels (Aquatabs, MSR AquaTabs CIO₂) but was explicitly noted in the research packet conflictsOrWeakClaims as a number not sourceable from EPA/CDC directly. Resolution was 'state several hours and direct to label.' The guide includes 'typically 4 hours' as a parenthetical alongside 'several hours' — directionally accurate but below the authoritative_only sourcing threshold. Flagged as warning, not blocking, as the claim is not harmful and is consistent with manufacturer guidance." },
+        { "check": "action_card_has_steps", "passed": true, "evidence": "7 stepByStepActions — exceeds minimum of 3" },
+        { "check": "action_has_warnings", "passed": true, "evidence": "5 warnings present" },
+        { "check": "action_has_red_flags", "passed": true, "evidence": "5 redFlags present" },
+        { "check": "source_quality_matches_tier", "passed": true, "evidence": "Evidence tier authoritative_only, sourceQuality=strong. All 3 source references are from EPA and CDC with live URLs." }
+      ],
+      "duplicateChecks": [
+        { "check": "upgrade_target_exists", "passed": true, "evidence": "integrationDecision=new, upgradesGuide=null — not applicable" },
+        { "check": "no_duplicate_new", "passed": true, "evidence": "No existing guide in water_food + Safe Drinking Water in Emergencies + action layer with substantially similar title. Nearest guides are purify-water-bleach (bleach-specific) and purify-water-boiling (heat-specific) — distinct scope." }
+      ],
+      "constraintChecks": [
+        { "check": "role_not_duplicated", "passed": true, "evidence": "responseRole=backup. Primary is purify-water-boiling. Multiple backup guides are valid (purify-water-bleach and purifying-water-with-household-liquid-bleach also hold backup roles)." },
+        { "check": "alt_slugs_same_topic", "passed": true, "evidence": "purify-water-boiling is in Safe Drinking Water in Emergencies — same parentTopic" },
+        { "check": "blocked_makes_sense", "passed": false, "severity": "warning", "evidence": "blockedByConstraints is empty. The natural blocking constraint would be no_tablets (user does not have tablets available). This tag does not exist in the current 19-tag registry. The guide will never be blocked/hidden even when the user explicitly states they have no tablets. The annotator correctly flagged this and proposed no_tablets as a new tag. This is a known limitation — not a content error. Will resolve when no_tablets is added to constraint-tags.ts." }
+      ],
+      "blockingIssues": [],
+      "warnings": [
+        "stepByStepActions[3] includes 'typically 4 hours' for chlorine dioxide contact time — this number is consistent with manufacturer labels but was identified in the research packet as not directly sourceable from EPA/CDC. Consider removing the parenthetical and leaving only 'several hours' with instruction to follow the label.",
+        "blockedByConstraints is empty because no_tablets tag does not yet exist in the registry. Guide cannot be properly gated when tablets are unavailable. Blocked pending code change to add no_tablets to constraint-tags.ts."
+      ],
+      "recommendation": "Pass with warnings. No blocking issues. The guide may proceed to Import/Staging for human review. The two warnings should be visible to the reviewer: (1) the '4 hours' parenthetical is a minor sourcing edge case — reviewer may choose to simplify to 'several hours' at review time; (2) the missing blockedByConstraints is a structural gap requiring a code change, tracked in annotation summary."
+    },
+    {
+      "slug": "purify-water-filter",
+      "overallResult": "pass_with_warnings",
+      "schemaChecks": [
+        { "check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present" },
+        { "check": "layer_guidetype_matched", "passed": true, "evidence": "layer=action, guideType=action_card — valid pair" },
+        { "check": "valid_category", "passed": true, "evidence": "category=water_food — in canonical list" },
+        { "check": "valid_source_quality", "passed": true, "evidence": "sourceQuality=strong — valid value" },
+        { "check": "array_fields_flat", "passed": true, "evidence": "whenToUse (5 strings), stepByStepActions (7 strings), warnings (4 strings), whatNotToDo (5 strings), redFlags (5 strings), preparednessTips (5 strings), appTags (11 strings) — all flat string arrays" },
+        { "check": "source_refs_schema", "passed": true, "evidence": "3 sourceReferences, each with title, organization, url, whyUseful. All URLs populated." },
+        { "check": "constraint_tags_valid", "passed": true, "evidence": "constraintTags=[no_boiling, no_fire, no_heat_source] — all in canonical registry. blockedByConstraints=[] — no invalid tags." },
+        { "check": "response_role_valid", "passed": true, "evidence": "responseRole=backup — valid value" },
+        { "check": "alt_slugs_exist", "passed": true, "evidence": "alternativeToGuideSlugs=[purify-water-boiling] — verified in library" },
+        { "check": "no_constraint_overlap", "passed": true, "evidence": "No overlap (blockedByConstraints is empty)" },
+        { "check": "camelCase_fields", "passed": true, "evidence": "All field names use camelCase" },
+        { "check": "slug_format", "passed": true, "evidence": "purify-water-filter — lowercase, kebab-case, valid format" }
+      ],
+      "safetyChecks": [
+        { "check": "claims_sourced", "passed": true, "evidence": "Core claims traceable: filters do not remove viruses (CDC filter guidance), NSF/ANSI 53/58 certifications (CDC), combining filter + chemical treatment (CDC), LifeStraw WHO evaluation (WHO product report). Pore size claims (0.1–0.2 micron for named products) are consistent with CDC's general filter pore guidance and widely documented product specifications." },
+        { "check": "no_invented_advice", "passed": false, "severity": "warning", "evidence": "warnings[1] states 'If hollow fiber membranes freeze, the fibers can crack and the filter will no longer block pathogens.' This warning was identified in the research packet as a gap at the authoritative_only evidence tier — no EPA, CDC, or WHO source explicitly states this. It is manufacturer-level guidance (Sawyer, LifeStraw product manuals) and widely accepted field knowledge. The research packet recommended including it with a note. It is accurate and safety-critical but below the authoritative_only sourcing threshold. Flagged as warning — the claim is not harmful (it errs toward caution) but technically unverified at tier." },
+        { "check": "action_card_has_steps", "passed": true, "evidence": "7 stepByStepActions — exceeds minimum of 3" },
+        { "check": "action_has_warnings", "passed": true, "evidence": "4 warnings present — includes critical virus limitation warning" },
+        { "check": "action_has_red_flags", "passed": true, "evidence": "5 redFlags present" },
+        { "check": "source_quality_matches_tier", "passed": true, "evidence": "Evidence tier authoritative_only, sourceQuality=strong. Sources are CDC and WHO with live URLs." }
+      ],
+      "duplicateChecks": [
+        { "check": "upgrade_target_exists", "passed": true, "evidence": "integrationDecision=new, upgradesGuide=null — not applicable" },
+        { "check": "no_duplicate_new", "passed": true, "evidence": "No existing guide in water_food + Safe Drinking Water in Emergencies + action layer covering filter-based purification." }
+      ],
+      "constraintChecks": [
+        { "check": "role_not_duplicated", "passed": true, "evidence": "responseRole=backup. Primary is purify-water-boiling. Multiple backups are valid." },
+        { "check": "alt_slugs_same_topic", "passed": true, "evidence": "purify-water-boiling is in Safe Drinking Water in Emergencies — same parentTopic" },
+        { "check": "blocked_makes_sense", "passed": false, "severity": "warning", "evidence": "blockedByConstraints is empty. The natural blocking constraint would be no_filter (user has no filter, or filter is frozen/damaged). This tag does not exist in the current registry. Proposed in annotation summary as new tag. Guide cannot be properly gated when filter is unavailable. Blocked pending code change to add no_filter to constraint-tags.ts." }
+      ],
+      "blockingIssues": [],
+      "warnings": [
+        "warnings[1] (freeze damage) is safety-critical and accurate but was identified in the research packet as lacking an authoritative EPA/CDC/WHO source at the authoritative_only tier. Sourced from manufacturer guidance. Reviewer should confirm the claim is acceptable at this tier or note the source limitation.",
+        "blockedByConstraints is empty because no_filter tag does not yet exist in the registry. Guide cannot be properly gated when filters are unavailable. Blocked pending code change to add no_filter to constraint-tags.ts."
+      ],
+      "recommendation": "Pass with warnings. No blocking issues. The guide may proceed to Import/Staging for human review. Two warnings for reviewer: (1) freeze damage claim is manufacturer guidance, below authoritative_only tier — reviewer should decide whether to keep or add a qualifier; (2) missing no_filter blockedByConstraints tag requires a code change before the fallback chain ordering can be enforced."
+    }
+  ],
+  "clusterValidation": {
+    "parentTopic": "Safe Drinking Water in Emergencies",
+    "fallbackChainAfterImport": [
+      { "slug": "purify-water-boiling", "role": "primary", "blockedBy": ["no_boiling", "no_fire", "no_heat_source"] },
+      { "slug": "purify-water-chemical-tablets", "role": "backup", "boostedBy": ["no_boiling", "no_fire", "no_heat_source", "no_bleach"], "blockedBy": ["(no_tablets — proposed tag, not yet in registry)"] },
+      { "slug": "purify-water-filter", "role": "backup", "boostedBy": ["no_boiling", "no_fire", "no_heat_source"], "blockedBy": ["(no_filter — proposed tag, not yet in registry)"] },
+      { "slug": "purify-water-bleach", "role": "backup", "boostedBy": ["no_boiling", "no_fire", "no_heat_source"], "blockedBy": ["no_bleach"], "note": "Intended as last resort but currently ordered identically to tablets and filter — requires no_tablets and no_filter to be added to its constraintTags to differentiate" }
+    ],
+    "openIssues": [
+      "purifying-water-with-household-liquid-bleach is a duplicate of purify-water-bleach and should be archived. Flagged in planning-packet duplicateRisks.",
+      "no_tablets and no_filter must be added to constraint-tags.ts before the full chain can enforce ordering correctly.",
+      "purify-water-bleach needs a metadata update (add no_tablets, no_filter to constraintTags) once new tags are registered."
+    ]
+  },
+  "blockingIssues": [],
+  "recommendation": "Both guides pass with warnings. No blocking issues across either guide. May proceed to Import/Staging for human review in draft status. Three open items require follow-up after import: (1) add no_tablets and no_filter to constraint-tags.ts; (2) update purify-water-bleach constraint metadata; (3) archive purifying-water-with-household-liquid-bleach."
+}

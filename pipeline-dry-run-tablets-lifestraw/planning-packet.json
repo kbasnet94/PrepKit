@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-03-15T17:45:00.000Z",
+  "scope": "Safe Drinking Water in Emergencies — extend fallback chain with chemical tablet and filter-based purification",
+  "librarySnapshot": {
+    "totalGuides": 187,
+    "byCategory": {
+      "preparedness": 30,
+      "natural_disasters": 19,
+      "medical_safety": 21,
+      "power_utilities_home_safety": 21,
+      "core_skills": 22,
+      "weather_environment": 11,
+      "navigation": 11,
+      "shelter_fire_warmth": 27,
+      "water_food": 21,
+      "communication": 4
+    },
+    "byLayer": {
+      "preparedness": 31,
+      "scenario": 59,
+      "action": 61,
+      "reference": 36
+    },
+    "byReviewStatus": {
+      "published": 184,
+      "draft": 1,
+      "archived": 1,
+      "approved": 1
+    },
+    "guidesInTargetParentTopic": 9,
+    "note": "No guides exist for chemical water purification tablets (iodine, chlorine dioxide, NaDCC) or filter-based purification (LifeStraw, Sawyer, hollow-fiber membranes). The fallback chain jumps directly from boiling to bleach. Bleach is currently positioned as tier-2 backup but should be last resort — this requires new constraint tags (no_tablets, no_filter) to gate it correctly."
+  },
+  "currentFallbackChain": {
+    "parentTopic": "Safe Drinking Water in Emergencies",
+    "currentChain": [
+      {
+        "slug": "purify-water-boiling",
+        "role": "primary",
+        "blockedBy": ["no_boiling", "no_fire", "no_heat_source"],
+        "constraintTags": [],
+        "note": "Good. Solid action_card, 7 steps, 4 warnings, 5 red flags, strong sources."
+      },
+      {
+        "slug": "purify-water-bleach",
+        "role": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+        "blockedBy": ["no_bleach"],
+        "note": "Currently tier 2. Should move to LAST RESORT once tablets and filter are added. Needs bleach-duplicate resolved and constraint update (add no_tablets, no_filter to constraintTags)."
+      },
+      {
+        "slug": "purifying-water-with-household-liquid-bleach",
+        "role": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+        "blockedBy": ["no_bleach"],
+        "note": "DUPLICATE of purify-water-bleach. Same role, same constraints. Should be archived."
+      },
+      {
+        "slug": "choosing-safe-hydration-sources",
+        "role": "supporting",
+        "constraintTags": ["no_boiling", "no_bleach", "no_clean_water"],
+        "blockedBy": [],
+        "note": "Scenario guide. Surfaces when all chemical methods are off the table."
+      }
+    ],
+    "targetChain": [
+      {
+        "tier": 1,
+        "slug": "purify-water-boiling",
+        "role": "primary",
+        "blockedBy": ["no_boiling", "no_fire", "no_heat_source"]
+      },
+      {
+        "tier": 2,
+        "slug": "purify-water-chemical-tablets",
+        "role": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+        "blockedBy": ["no_tablets"],
+        "alternativeTo": ["purify-water-boiling"],
+        "note": "NEW — this run"
+      },
+      {
+        "tier": 2,
+        "slug": "purify-water-filter",
+        "role": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source"],
+        "blockedBy": ["no_filter"],
+        "alternativeTo": ["purify-water-boiling"],
+        "note": "NEW — this run"
+      },
+      {
+        "tier": 3,
+        "slug": "purify-water-bleach",
+        "role": "backup",
+        "constraintTags": ["no_boiling", "no_fire", "no_heat_source", "no_tablets", "no_filter"],
+        "blockedBy": ["no_bleach"],
+        "alternativeTo": ["purify-water-boiling"],
+        "note": "EXISTING — update needed: add no_tablets, no_filter to constraintTags to push to last resort. Requires new constraint tags."
+      },
+      {
+        "tier": 4,
+        "slug": "choosing-safe-hydration-sources",
+        "role": "supporting",
+        "constraintTags": ["no_boiling", "no_bleach", "no_clean_water"],
+        "note": "No change needed."
+      }
+    ]
+  },
+  "workItems": [
+    {
+      "priority": 1,
+      "action": "new",
+      "targetSlug": null,
+      "suggestedSlug": "purify-water-chemical-tablets",
+      "reason": "No guide exists for chemical purification tablets (iodine, chlorine dioxide/Aquatabs, NaDCC). These are the primary backcountry and emergency kit alternative when boiling is not possible and bleach is unavailable. Common in go-bags and emergency supply lists. Should be tier-2 backup to boiling in the fallback chain.",
+      "weaknessFlags": [],
+      "category": "water_food",
+      "parentTopic": "Safe Drinking Water in Emergencies",
+      "suggestedLayer": "action",
+      "suggestedGuideType": "action_card",
+      "evidenceTier": "authoritative_only",
+      "estimatedEffort": "medium",
+      "guidanceNotes": "Cover iodine tablets (not for pregnant women, thyroid conditions, shellfish allergy), chlorine dioxide tablets (Aquatabs, Potable Aqua CIO2 — preferred per WHO), NaDCC tablets. Include wait times, dosage, turbid water steps (pre-filter or double dose), storage/expiry. Key sources: EPA, WHO, CDC, Wilderness Medical Society."
+    },
+    {
+      "priority": 2,
+      "action": "new",
+      "targetSlug": null,
+      "suggestedSlug": "purify-water-filter",
+      "reason": "No guide exists for filter-based water purification (LifeStraw, Sawyer Squeeze, hollow-fiber membrane filters). These are increasingly common in emergency kits and are effective against bacteria and protozoa but NOT viruses — a critical safety distinction. Should be tier-2 backup to boiling.",
+      "weaknessFlags": [],
+      "category": "water_food",
+      "parentTopic": "Safe Drinking Water in Emergencies",
+      "suggestedLayer": "action",
+      "suggestedGuideType": "action_card",
+      "evidenceTier": "authoritative_only",
+      "estimatedEffort": "medium",
+      "guidanceNotes": "Cover hollow-fiber membrane filters (LifeStraw, Sawyer Squeeze). Must clearly state: effective against bacteria + protozoa, NOT effective against viruses — in US/Canada backcountry this is usually acceptable; in international/flood contexts must combine with chemical treatment. Include backflushing for Sawyer, freeze damage warning, storage. Key sources: NSF/ANSI 58, EPA Guide to Drinking Water Treatment, CDC travelers' health."
+    },
+    {
+      "priority": 3,
+      "action": "update_constraint_metadata",
+      "targetSlug": "purify-water-bleach",
+      "suggestedSlug": null,
+      "reason": "With tablets and filter added as tier-2 options, bleach must move to last resort. This requires adding no_tablets and no_filter to its constraintTags so the mobile chat only surfaces it when the user has confirmed tablets and filter are also unavailable. Requires new constraint tags (see proposedNewTags).",
+      "weaknessFlags": [],
+      "category": "water_food",
+      "parentTopic": "Safe Drinking Water in Emergencies",
+      "suggestedLayer": "action",
+      "suggestedGuideType": "action_card",
+      "evidenceTier": "authoritative_only",
+      "estimatedEffort": "low"
+    }
+  ],
+  "proposedNewTags": {
+    "note": "Two new constraint tags are required to correctly gate bleach as last resort. These must be added to constraint-tags.ts (PrepKit Admin/prepkit-admin/src/lib/constants/constraint-tags.ts) before the constraint annotation step can be finalized. This is a proposed code change — not applied during dry run.",
+    "tags": [
+      {
+        "tag": "no_tablets",
+        "description": "User does not have water purification tablets available (iodine, chlorine dioxide, NaDCC)",
+        "affectedGuides": ["purify-water-bleach (constraintTags — boost when no tablets)"]
+      },
+      {
+        "tag": "no_filter",
+        "description": "User does not have a water filter available (LifeStraw, Sawyer, hollow-fiber membrane filter)",
+        "affectedGuides": ["purify-water-bleach (constraintTags — boost when no filter)"]
+      }
+    ]
+  },
+  "duplicateRisks": [
+    {
+      "slugA": "purify-water-bleach",
+      "slugB": "purifying-water-with-household-liquid-bleach",
+      "overlapDescription": "Both are action_cards in 'Safe Drinking Water in Emergencies' covering household bleach disinfection. Both have role=backup, same constraintTags, same blockedBy. purify-water-bleach has 7 steps and 3 source refs; purifying-water-with-household-liquid-bleach has 6 steps and 3 source refs. Near-identical coverage.",
+      "recommendation": "Archive purifying-water-with-household-liquid-bleach. Its better step details were already ported to purify-water-bleach during the bleach consolidation run. The duplicate should not remain as a second 'backup' with identical metadata — it produces conflicting results in the mobile chat fallback chain."
+    }
+  ]
+}
