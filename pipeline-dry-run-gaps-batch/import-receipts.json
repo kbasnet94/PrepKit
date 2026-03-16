@@ -1,0 +1,61 @@
+{
+  "importedAt": "2026-03-16T00:00:00Z",
+  "reviewUrl": "http://localhost:3000/review?filter=draft",
+  "guides": [
+    {
+      "slug": "tornado-preparedness",
+      "versionId": "22c764ba-fc67-42fb-9474-6ac4ed3a389e",
+      "versionNumber": 1,
+      "isNew": true,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": []
+    },
+    {
+      "slug": "flood-preparedness",
+      "versionId": "dbfa1fb1-2b08-4f6c-b350-10a5cb7744cb",
+      "versionNumber": 1,
+      "isNew": true,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": []
+    },
+    {
+      "slug": "wildfire-preparedness",
+      "versionId": "3d9b3024-e5a3-444e-aae4-32a5be83db55",
+      "versionNumber": 1,
+      "isNew": true,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": []
+    },
+    {
+      "slug": "food-safety-power-outage-action",
+      "versionId": "faf46789-5d50-4979-b44f-4b4812bacacd",
+      "versionNumber": 1,
+      "isNew": true,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": []
+    },
+    {
+      "slug": "stay-put-vs-move-land",
+      "versionId": "d4b598f7-e88d-43c8-9bcf-b90f8b21b4d5",
+      "versionNumber": 2,
+      "isNew": false,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": ["Dual-primary role with lost-on-land-first-30-minutes in same scenario layer — review and differentiate roles if desired"],
+      "humanAction": "After approval, set stay-put-vs-move to review_status: archived in admin UI"
+    },
+    {
+      "slug": "signal-for-rescue",
+      "versionId": "df51ca38-328e-47e8-a505-384442c949b2",
+      "versionNumber": 2,
+      "isNew": false,
+      "reviewStatus": "draft",
+      "apiWarnings": [],
+      "validationWarnings": ["sourceQuality: mixed is intentional — BSA/AdventureSmart are field-practice sources, appropriate for this topic"]
+    }
+  ]
+}

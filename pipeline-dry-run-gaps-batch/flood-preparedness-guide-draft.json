@@ -1,0 +1,80 @@
+{
+  "slug": "flood-preparedness",
+  "title": "Flood Preparedness: Know Your Risk and Plan Your Escape",
+  "category": "natural_disasters",
+  "parentTopic": "Floods",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "Flooding is the most common and deadliest natural disaster in the U.S. Preparation done before a flood — knowing your zone, planning your escape routes, and building an emergency kit — can be the difference between safety and tragedy.",
+  "quickAnswer": "Know your flood zone, identify at least two evacuation routes to higher ground, and build an emergency kit with waterproof document storage before flood season.",
+  "whenToUse": [
+    "You live near a river, creek, coastline, or low-lying area prone to flooding",
+    "You want to prepare before rainy season or hurricane season",
+    "You have not yet made an evacuation plan or built an emergency kit for flood events"
+  ],
+  "preferredAction": "Evacuate to pre-identified higher ground before floodwaters rise and cut off your escape routes.",
+  "backupAction": "If evacuation routes are already cut off, move to the highest floor of your building, call 911, and wait for rescue — do not enter floodwater.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Flash floods can occur with little to no warning — do not wait for an official order if water is actively rising near you",
+    "Floodwater is often contaminated with sewage, chemicals, agricultural runoff, and concealed debris",
+    "Downed power lines in standing water create a lethal electrocution hazard — never approach them",
+    "Evacuating after routes are flooded is extremely dangerous; early departure is always safer"
+  ],
+  "whatNotToDo": [
+    "Never drive through flooded roadways — Turn Around, Don't Drown; 12 inches of water can sweep away a vehicle",
+    "Never walk through moving floodwater — 6 inches of fast-moving water can knock an adult off their feet",
+    "Do not assume standard homeowner's insurance covers flood damage — it does not; NFIP flood policies take 30 days to go into effect",
+    "Do not return home after a flood until local authorities confirm it is safe — hidden structural damage, gas leaks, and contamination are common"
+  ],
+  "redFlags": [
+    "A flash flood WARNING has been issued for your area — move to high ground immediately",
+    "You see water rising visibly toward doorways, vents, or your first floor",
+    "Evacuation order issued by local authorities — do not delay",
+    "Hearing rushing water or seeing debris-filled water moving rapidly nearby"
+  ],
+  "preparednessTips": [
+    "Find your flood zone using FEMA's Flood Map Service Center (msc.fema.gov) — search your address to know whether you are in a Special Flood Hazard Area. Remember: flooding doesn't follow lines on a map.",
+    "Know the three alert levels: flood WATCH = flooding is possible, stay alert; flood WARNING = flooding is occurring or imminent, take action; flash flood WARNING = life-threatening rapid flooding, move to high ground immediately.",
+    "Identify and practice at least two evacuation routes to higher ground — drive both routes so you know them well before an emergency. Designate a destination: a relative's home, a hotel on high ground, or an official emergency shelter.",
+    "Sign up for your county's emergency alert system (most are free) and confirm that Wireless Emergency Alerts are enabled on your smartphone.",
+    "Build a 3-day emergency kit: 1 gallon of water per person per day, non-perishable food, battery-powered radio, flashlight and extra batteries, first aid kit, medications, and cash.",
+    "Store copies of critical documents — ID, insurance policies, medical records, property deeds — in a waterproof, portable container. Create secure digital backups in cloud storage.",
+    "Protect your home in flood-prone areas: install check valves in plumbing pipes to prevent sewage backflow, consider a sump pump with battery backup, and move valuables to upper floors before flood season.",
+    "In a flood-prone neighborhood, sandbags and flood barriers can slow water entry — obtain them from your local emergency management office in advance, not during a flood warning.",
+    "Note that standard homeowners and renters insurance does NOT cover flood damage. Flood insurance through the National Flood Insurance Program (NFIP) must be purchased at least 30 days before a flood to be active.",
+    "Create a family plan: designate a meeting place on high ground and identify an out-of-area contact in case local communication is disrupted."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": ["flood", "flooding", "flash flood", "evacuation", "preparedness", "flood zone", "FEMA", "emergency kit", "Turn Around Don't Drown"],
+  "sourceReferences": [
+    {
+      "title": "Be Prepared for a Flood (FEMA V-1005, July 2024)",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/sites/default/files/2025-01/fema_flood-hazard-info-sheet.pdf",
+      "whyUseful": "Official 2024 FEMA flood preparedness fact sheet; source for risk statistics and Turn Around Don't Drown water depth data"
+    },
+    {
+      "title": "Floods | Ready.gov",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/floods",
+      "whyUseful": "Federal flood preparedness hub; source for evacuation planning, alert sign-up, and NFIP insurance guidance"
+    },
+    {
+      "title": "Flood Safety | Flood Preparedness",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/flood.html",
+      "whyUseful": "Authoritative preparedness checklist; source for kit contents, evacuation planning, and home protection measures"
+    },
+    {
+      "title": "Flood Preparedness Checklist",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/content/dam/redcross/get-help/pdfs/flood/EN_Flood-Preparedness-Checklist.pdf",
+      "whyUseful": "Detailed before/during/after checklist for flood events"
+    }
+  ],
+  "notes": null
+}

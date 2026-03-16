@@ -1,0 +1,84 @@
+{
+  "slug": "tornado-preparedness",
+  "title": "Tornado Preparedness: Safe Place, Kit, and Family Plan",
+  "category": "natural_disasters",
+  "parentTopic": "Tornadoes",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "Surviving a tornado depends almost entirely on preparation done before the storm. Identify your safe shelter now, build an emergency kit, and make sure every household member knows exactly where to go when a tornado warning is issued.",
+  "quickAnswer": "Designate a safe room (basement or lowest-floor interior room), build a 3-day emergency kit, set up NOAA weather alerts, and create a family plan before tornado season.",
+  "whenToUse": [
+    "You live in a tornado-prone region and want to prepare before severe weather season",
+    "You have not yet identified a safe shelter location in your home",
+    "You want to build or review your family's tornado emergency plan"
+  ],
+  "preferredAction": "Go to your basement or designated interior room on the lowest floor immediately when a tornado warning is issued.",
+  "backupAction": "If no basement is available, go to the lowest floor interior room with no windows, cover your head and neck with your arms, and shelter under a heavy table or mattress if available.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Tornadoes can form faster than warning systems can respond — do not treat a tornado watch as all-clear",
+    "Mobile homes and manufactured homes offer no meaningful protection in a tornado, even if anchored",
+    "Seeking shelter in a car or under a highway overpass is extremely dangerous and offers no protection",
+    "Upper-floor interior rooms are not safe — always go to the lowest floor"
+  ],
+  "whatNotToDo": [
+    "Do not shelter in a car during a tornado — abandon it and find a sturdy building",
+    "Do not shelter under a highway overpass — it creates dangerous wind tunnels and offers no protection",
+    "Do not go outside to watch the storm approach",
+    "Do not assume a tornado warning is for someone else's area — take every warning seriously"
+  ],
+  "redFlags": [
+    "A tornado WARNING (not just watch) has been issued for your area — seek shelter immediately",
+    "You see a visible funnel cloud, debris cloud, or rotating wall cloud overhead",
+    "You hear a loud continuous roar like a freight train with no visible storm",
+    "Dark greenish sky with large hail — signs of a supercell capable of producing tornadoes"
+  ],
+  "preparednessTips": [
+    "Identify your safe shelter now: the best option is a basement or storm cellar; second-best is an interior room on the lowest floor with no windows (bathroom, closet, or hallway). For multi-story buildings, go to a central hallway on the lowest floor you can reach in time.",
+    "If you live in a mobile home or manufactured home, identify the nearest sturdy building now — no mobile home is safe in a tornado, even if tied down. Plan to leave for that building when a tornado WATCH is issued.",
+    "Know the difference: tornado WATCH means conditions are favorable for tornadoes — stay alert; tornado WARNING means a tornado has been confirmed by radar or sighting — seek shelter immediately.",
+    "Install a NOAA Weather Radio All Hazards with battery backup in your home — it will alert you even at night when you cannot check your phone.",
+    "Enable Wireless Emergency Alerts on your smartphone and check that they are turned on in your phone's settings.",
+    "Build a 3-day emergency kit: 1 gallon of water per person per day, non-perishable food, battery-powered or hand-crank radio, flashlight and extra batteries, first aid kit, at least a 7-day supply of essential medications, and copies of important documents.",
+    "Create a family emergency plan: designate two meeting places (one near home, one outside your neighborhood), identify an out-of-area contact, and make sure all household members know the plan.",
+    "Practice your tornado drill at least once a year — time how fast each family member can reach the safe place from every room in the house.",
+    "Before severe weather season, secure or bring indoors any outdoor furniture, decorations, tools, or garden items that could become windborne projectiles.",
+    "After a tornado, wait for the official all-clear before leaving your shelter; watch for downed power lines, structural damage, and gas leaks when exiting."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": ["tornado", "severe weather", "preparedness", "safe room", "emergency kit", "family plan", "NOAA", "tornado warning", "tornado watch"],
+  "sourceReferences": [
+    {
+      "title": "Tornado Safety | Tornado Preparedness",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/tornado.html",
+      "whyUseful": "Primary authoritative source for tornado preparedness actions, shelter identification, and emergency kit contents"
+    },
+    {
+      "title": "Tornado Preparedness Checklist",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/content/dam/redcross/get-help/pdfs/tornado/EN_Tornado-Safety-Checklist.pdf",
+      "whyUseful": "Detailed before/during/after checklist; source for family plan steps and kit contents"
+    },
+    {
+      "title": "Safe Rooms for Tornadoes and Hurricanes (FEMA P-361)",
+      "organization": "FEMA",
+      "url": "https://www.fema.gov/emergency-managers/risk-management/building-science/safe-rooms",
+      "whyUseful": "Authoritative standard for residential safe room design and protection criteria"
+    },
+    {
+      "title": "Tornadoes | Ready.gov",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/tornadoes",
+      "whyUseful": "Federal preparedness guidance on alerts, shelter, and emergency kit for tornado events"
+    }
+  ],
+  "notes": null,
+  "responseRole": "primary",
+  "constraintTags": [],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": []
+}

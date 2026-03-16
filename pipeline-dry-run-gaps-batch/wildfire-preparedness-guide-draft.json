@@ -1,0 +1,80 @@
+{
+  "slug": "wildfire-preparedness",
+  "title": "Wildfire Preparedness: Go Bag, Evacuation Plan, and Defensible Space",
+  "category": "natural_disasters",
+  "parentTopic": "Wildfire: Evacuation and Smoke Safety",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "Surviving a wildfire requires preparation done well before fire season: a ready go-bag, clear evacuation routes, and maintained defensible space around your home are the three pillars of wildfire preparedness. The single most important action is leaving early.",
+  "quickAnswer": "Have a go-bag packed with 72 hours of supplies including an N95 mask, keep your gas tank half-full, know your evacuation zone and both exit routes, and leave when a warning-level order is issued — don't wait for a mandatory order.",
+  "whenToUse": [
+    "You live in a wildland-urban interface (WUI) or fire-prone region",
+    "You want to prepare before fire season begins",
+    "You have not yet identified your evacuation zone, routes, or packed a go-bag"
+  ],
+  "preferredAction": "Leave early when a wildfire warning order is issued for your zone — do not wait for a mandatory evacuation order.",
+  "backupAction": "If evacuation routes are cut off by fire, go inside the most fire-resistant building available, close all windows and vents, call 911, and wait for rescue.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Wildfires can move faster than a person can run — last-minute evacuation is far more dangerous than early departure",
+    "Smoke inhalation from wildfire can be life-threatening long before flames reach your area — an N95 mask is essential",
+    "Evacuating at night in heavy smoke with low visibility dramatically increases accident risk — know your routes by daylight",
+    "Gas stations and roads may be gridlocked or closed during mass evacuation — a half-tank of fuel can be the difference"
+  ],
+  "whatNotToDo": [
+    "Do not wait for a mandatory evacuation order if you feel unsafe — early voluntary departure dramatically improves survival odds",
+    "Do not stop to gather non-essential belongings once an evacuation order is issued — possessions can be replaced",
+    "Do not shelter inside a structure once fire reaches it — a burning building is more dangerous than the open; this is a last resort only",
+    "Do not return to an evacuated area until local authorities give the all-clear — fire damage weakens structures and air quality may remain hazardous"
+  ],
+  "redFlags": [
+    "A mandatory evacuation ORDER has been issued for your zone — leave immediately without delay",
+    "You can see, smell, or hear an active fire or heavy smoke approaching your area",
+    "Your primary evacuation route has been blocked by fire or emergency vehicles",
+    "Embers or spot fires are appearing near your home from wind-driven sparks"
+  ],
+  "preparednessTips": [
+    "Find your evacuation zone before fire season. Many counties use a letter (A-B-C) or number system. Go to your county's Office of Emergency Services website to find your zone and learn what each alert level means.",
+    "Follow the Ready-Set-Go model: READY (year-round preparation), SET (when fire is in your general area, be ready to leave at a moment's notice), GO (leave immediately when a warning or order is issued for your zone).",
+    "Build and maintain a go-bag with at least 72 hours of supplies: water, non-perishable food, N95 or P100 respirator mask for wildfire smoke, essential medications (7-day supply), phone charger and portable battery, cash, copies of critical documents (ID, insurance), a change of clothing, and a battery-powered radio.",
+    "Keep at least half a tank of gas in your vehicle at all times during fire season — gas stations may be closed or gridlocked during an evacuation.",
+    "Create defensible space around your home: Zone 1 (0–30 feet from structures) — remove dead vegetation, dried leaves, woodpiles, and flammable debris; Zone 2 (30–100 feet) — space plants at least three times their diameter apart so fire cannot jump from plant to plant.",
+    "Identify and drive at least two different evacuation routes out of your neighborhood — practice them so you know them under stress and poor visibility conditions.",
+    "Sign up for your county's emergency alert system. Most counties use a local system (Nixle, Everbridge, or county-specific app) plus Wireless Emergency Alerts sent automatically to your phone. Confirm WEA alerts are enabled in your phone's notification settings.",
+    "Pre-select a family meeting place and designate an out-of-area contact so family members can find each other if separated during evacuation.",
+    "Keep cellphones charged every night during fire season — a dead phone during evacuation is a serious hazard.",
+    "Consider home-hardening improvements: ember-resistant vents, metal roof, and non-combustible eaves and soffits reduce ignition risk from wind-driven embers, which start most home fires during wildfires."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": ["wildfire", "fire", "evacuation", "go bag", "defensible space", "smoke", "N95", "preparedness", "evacuation zone", "fire season"],
+  "sourceReferences": [
+    {
+      "title": "Wildfire Evacuation Checklist",
+      "organization": "U.S. Fire Administration (USFA / FEMA)",
+      "url": "https://www.usfa.fema.gov/downloads/pdf/publications/wildfire-evacuation-checklist.pdf",
+      "whyUseful": "Official federal checklist for go-bag contents and evacuation preparation"
+    },
+    {
+      "title": "Wildfires | Ready.gov",
+      "organization": "FEMA / Ready.gov",
+      "url": "https://www.ready.gov/wildfires",
+      "whyUseful": "Federal hub for wildfire preparedness including defensible space, alerts, and evacuation planning"
+    },
+    {
+      "title": "Go Evacuation Guide | Ready for Wildfire",
+      "organization": "ReadyForWildfire.org (CAL FIRE public education campaign)",
+      "url": "https://www.readyforwildfire.org/prepare-for-wildfire/go-evacuation-guide/",
+      "whyUseful": "Source for Ready-Set-Go framework and early evacuation guidance"
+    },
+    {
+      "title": "Prepare | CAL FIRE",
+      "organization": "California Department of Forestry and Fire Protection (CAL FIRE)",
+      "url": "https://www.fire.ca.gov/prepare",
+      "whyUseful": "State fire agency preparedness guidance for defensible space and evacuation planning"
+    }
+  ],
+  "notes": null
+}
