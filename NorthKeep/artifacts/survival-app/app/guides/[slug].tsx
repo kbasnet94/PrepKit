@@ -18,6 +18,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import type { Guide, GuideSourceRef } from "@/lib/guides";
 import { GuideFeedback } from "@/components/GuideFeedback";
+import { useGuideStore } from "@/contexts/GuideStoreContext";
 
 const RISK_COLORS: Record<string, string> = {
   low: "#2D6A4F",
@@ -193,7 +194,8 @@ export default function GuideDetailScreen() {
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
 
-  const guide = slug ? getGuideBySlug(slug) : undefined;
+  const { getOnlineGuide } = useGuideStore();
+  const guide = slug ? (getGuideBySlug(slug) ?? getOnlineGuide(slug)) : undefined;
   const related = guide ? getRelatedGuides(guide) : [];
 
   if (!guide) return <NotFoundScreen styles={styles} C={C} />;

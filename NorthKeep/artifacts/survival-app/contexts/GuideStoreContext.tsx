@@ -4,6 +4,7 @@ import React, {
   useState,
   useCallback,
   useEffect,
+  useRef,
   ReactNode,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -39,6 +40,11 @@ interface GuideStoreContextValue {
   removeCategory: (categorySlug: string) => Promise<void>;
   checkForUpdates: () => Promise<void>;
   reloadGuides: () => Promise<void>;
+  // Online browsing
+  onlineGuidesCache: Map<string, Guide[]>;
+  onlineFetchingCategories: Set<string>;
+  fetchOnlineGuides: (categorySlug: string) => Promise<Guide[]>;
+  getOnlineGuide: (slug: string) => Guide | undefined;
 }
 
 const GuideStoreContext = createContext<GuideStoreContextValue | null>(null);
@@ -56,6 +62,11 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
   const [availableCategories, setAvailableCategories] = useState<AvailableCategory[]>([]);
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [latestReleaseVersion, setLatestReleaseVersion] = useState<string | null>(null);
+
+  // Online browsing cache — ephemeral, not persisted
+  const [onlineGuidesCache, setOnlineGuidesCache] = useState<Map<string, Guide[]>>(new Map());
+  const [onlineFetchingCategories, setOnlineFetchingCategories] = useState<Set<string>>(new Set());
+  const fetchingRef = useRef<Set<string>>(new Set());
 
   // Load guides from SQLite on startup
   const reloadGuides = useCallback(async () => {
@@ -83,6 +94,8 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
       const stored = await AsyncStorage.getItem(RELEASE_VERSION_KEY);
       if (stored !== release.semanticVersion) {
         setUpdateAvailable(true);
+        // Clear online cache when a new release is detected
+        setOnlineGuidesCache(new Map());
       }
 
       // Also fetch available categories for the download UI
@@ -127,6 +140,14 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         setLatestReleaseVersion(release.semanticVersion);
         setUpdateAvailable(false);
 
+        // Clear this category from online cache (now downloaded)
+        setOnlineGuidesCache((prev) => {
+          if (!prev.has(categorySlug)) return prev;
+          const next = new Map(prev);
+          next.delete(categorySlug);
+          return next;
+        });
+
         // Reload full guide store from SQLite
         await reloadGuides();
       } finally {
@@ -157,6 +178,63 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     [downloadingCategories, downloadedCategories]
   );
 
+  // Fetch guides for a category from Supabase (online browsing, not persisted)
+  const fetchOnlineGuides = useCallback(
+    async (categorySlug: string): Promise<Guide[]> => {
+      // Already downloaded — no need for online fetch
+      if (downloadedCategories.has(categorySlug)) return [];
+
+      // Already in cache
+      const cached = onlineGuidesCache.get(categorySlug);
+      if (cached) return cached;
+
+      // Already fetching (dedup)
+      if (fetchingRef.current.has(categorySlug)) return [];
+
+      fetchingRef.current.add(categorySlug);
+      setOnlineFetchingCategories((prev) => new Set(prev).add(categorySlug));
+
+      try {
+        const release = await fetchLatestRelease();
+        if (!release) return [];
+
+        const items = await fetchGuidesByCategory(categorySlug, release.id);
+        const fetchedGuides = items.map(({ guide }) => guide);
+
+        setOnlineGuidesCache((prev) => {
+          const next = new Map(prev);
+          next.set(categorySlug, fetchedGuides);
+          return next;
+        });
+
+        return fetchedGuides;
+      } catch {
+        // No internet — return empty
+        return [];
+      } finally {
+        fetchingRef.current.delete(categorySlug);
+        setOnlineFetchingCategories((prev) => {
+          const next = new Set(prev);
+          next.delete(categorySlug);
+          return next;
+        });
+      }
+    },
+    [downloadedCategories, onlineGuidesCache]
+  );
+
+  // Look up a single guide across all online caches
+  const getOnlineGuide = useCallback(
+    (slug: string): Guide | undefined => {
+      for (const guides of onlineGuidesCache.values()) {
+        const found = guides.find((g) => g.slug === slug);
+        if (found) return found;
+      }
+      return undefined;
+    },
+    [onlineGuidesCache]
+  );
+
   return (
     <GuideStoreContext.Provider
       value={{
@@ -172,6 +250,10 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         removeCategory,
         checkForUpdates,
         reloadGuides,
+        onlineGuidesCache,
+        onlineFetchingCategories,
+        fetchOnlineGuides,
+        getOnlineGuide,
       }}
     >
       {children}

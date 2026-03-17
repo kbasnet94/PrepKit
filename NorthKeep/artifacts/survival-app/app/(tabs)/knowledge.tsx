@@ -266,6 +266,10 @@ export default function KnowledgeScreen() {
     updateAvailable,
     checkForUpdates,
     availableCategories,
+    downloadedCategories,
+    onlineGuidesCache,
+    onlineFetchingCategories,
+    fetchOnlineGuides,
   } = useGuideStore();
 
   const totalGuides = allGuides.length;
@@ -309,7 +313,13 @@ export default function KnowledgeScreen() {
 
   const categoryGuides = useMemo(() => {
     if (!selectedCategory) return [];
-    const guides = allGuides.filter((g) => g.category === selectedCategory);
+    // Use downloaded guides if category is downloaded, otherwise use online cache
+    let guides: Guide[];
+    if (downloadedCategories.has(selectedCategory)) {
+      guides = allGuides.filter((g) => g.category === selectedCategory);
+    } else {
+      guides = onlineGuidesCache.get(selectedCategory) ?? [];
+    }
     if (!searchQuery.trim()) return guides;
     const q = searchQuery.toLowerCase();
     return guides.filter(
@@ -318,18 +328,40 @@ export default function KnowledgeScreen() {
         g.summary.toLowerCase().includes(q) ||
         g.tags.some((t) => t.includes(q))
     );
-  }, [allGuides, selectedCategory, searchQuery]);
+  }, [allGuides, selectedCategory, searchQuery, downloadedCategories, onlineGuidesCache]);
 
   const searchResults = useMemo(() => {
     if (!searchQuery.trim() || view !== "categories") return null;
-    return searchGuides(searchQuery);
-  }, [searchQuery, view]);
+    const downloaded = searchGuides(searchQuery);
+    // Also search online cached guides
+    const downloadedSlugs = new Set(downloaded.map((g) => g.slug));
+    const q = searchQuery.trim().toLowerCase();
+    const onlineMatches: Guide[] = [];
+    for (const guides of onlineGuidesCache.values()) {
+      for (const g of guides) {
+        if (downloadedSlugs.has(g.slug)) continue; // avoid duplicates
+        if (
+          g.title.toLowerCase().includes(q) ||
+          g.summary.toLowerCase().includes(q) ||
+          g.category.toLowerCase().includes(q) ||
+          g.tags.some((t) => t.includes(q))
+        ) {
+          onlineMatches.push(g);
+        }
+      }
+    }
+    return [...downloaded, ...onlineMatches];
+  }, [searchQuery, view, onlineGuidesCache]);
 
   const handleSelectCategory = (category: GuideCategory) => {
     if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setSelectedCategory(category);
     setView("category-guides");
     setSearchQuery("");
+    // Fetch guides from Supabase if not downloaded (online browsing)
+    if (!downloadedCategories.has(category)) {
+      fetchOnlineGuides(category);
+    }
   };
 
   const handleDownloadCategory = (category: GuideCategory) => {
@@ -525,11 +557,19 @@ export default function KnowledgeScreen() {
             </View>
           }
           ListEmptyComponent={
-            <View style={styles.emptyContainer}>
-              <Ionicons name="search-outline" size={44} color={C.textTertiary} />
-              <Text style={styles.emptyTitle}>No guides</Text>
-              <Text style={styles.emptySubtitle}>Nothing matches your search</Text>
-            </View>
+            selectedCategory && onlineFetchingCategories.has(selectedCategory) ? (
+              <View style={styles.emptyContainer}>
+                <ActivityIndicator size="large" color={C.accent} />
+                <Text style={styles.emptyTitle}>Loading guides...</Text>
+                <Text style={styles.emptySubtitle}>Fetching from server</Text>
+              </View>
+            ) : (
+              <View style={styles.emptyContainer}>
+                <Ionicons name="search-outline" size={44} color={C.textTertiary} />
+                <Text style={styles.emptyTitle}>No guides</Text>
+                <Text style={styles.emptySubtitle}>Nothing matches your search</Text>
+              </View>
+            )
           }
           showsVerticalScrollIndicator={false}
         />

@@ -31,7 +31,6 @@ export default function SettingsScreen() {
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const { colors: C, isDark, toggleTheme } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
-  const [showAppFeedback, setShowAppFeedback] = useState(false);
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return "0 B";
@@ -212,16 +211,6 @@ export default function SettingsScreen() {
               </Pressable>
             ))}
           </View>
-        </View>
-
-        <Text style={styles.sectionTitle}>Feedback</Text>
-        <View style={styles.section}>
-          <SettingsRow
-            icon="star-outline"
-            title="Rate the App"
-            subtitle="Share your thoughts on PrepKit"
-            onPress={() => setShowAppFeedback(true)}
-          />
         </View>
 
         <Text style={styles.sectionTitle}>Developer Tools</Text>
