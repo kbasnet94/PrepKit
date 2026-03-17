@@ -255,3 +255,39 @@ export async function getCachedGuideCount(): Promise<number> {
   );
   return row?.count ?? 0;
 }
+
+export async function hasAnyCachedGuides(): Promise<boolean> {
+  const count = await getCachedGuideCount();
+  return count > 0;
+}
+
+// Returns a map of slug → supabase_version_id for delta sync comparison.
+export async function getLocalManifest(): Promise<Map<string, string>> {
+  if (Platform.OS === "web") {
+    const rows = await webGetAllRows();
+    const map = new Map<string, string>();
+    for (const r of rows) {
+      if (r.supabase_version_id) map.set(r.slug, r.supabase_version_id);
+    }
+    return map;
+  }
+  const database = await getDatabase();
+  const rows: { slug: string; supabase_version_id: string | null }[] = await database.getAllAsync(
+    "SELECT slug, supabase_version_id FROM guides_cache"
+  );
+  const map = new Map<string, string>();
+  for (const r of rows) {
+    if (r.supabase_version_id) map.set(r.slug, r.supabase_version_id);
+  }
+  return map;
+}
+
+export async function deleteCachedGuide(slug: string): Promise<void> {
+  if (Platform.OS === "web") {
+    const rows = await webGetAllRows();
+    await webSetAllRows(rows.filter((r) => r.slug !== slug));
+    return;
+  }
+  const database = await getDatabase();
+  await database.runAsync("DELETE FROM guides_cache WHERE slug = ?", slug);
+}

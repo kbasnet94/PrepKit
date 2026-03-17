@@ -45,6 +45,28 @@ export async function POST(
     if (versionsError) {
       return NextResponse.json({ message: versionsError.message }, { status: 400 });
     }
+
+    // 4. Auto-archive any superseded versions of the same guides
+    // (other versions of the same guide_id that are not in this release)
+    const { data: guideRows } = await supabase
+      .from("guide_versions")
+      .select("guide_id")
+      .in("id", versionIds);
+
+    const guideIds = [...new Set((guideRows ?? []).map((r) => r.guide_id).filter(Boolean))];
+    if (guideIds.length > 0) {
+      const { error: archiveError } = await supabase
+        .from("guide_versions")
+        .update({ review_status: "archived" })
+        .in("guide_id", guideIds)
+        .not("id", "in", `(${versionIds.join(",")})`)
+        .not("review_status", "in", "(archived,published)");
+
+      if (archiveError) {
+        // Non-fatal: log but don't fail the publish
+        console.error("Auto-archive error:", archiveError.message);
+      }
+    }
   }
 
   return NextResponse.json(data);

@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/table";
 import { ReviewStatusSelect } from "@/components/guides/review-status-select";
 import { ReviewSearchInput } from "@/components/guides/review-search-input";
+import { ApprovedGuidesTable, type ApprovedVersion } from "@/components/guides/approved-guides-table";
 import { Suspense } from "react";
 
 export default async function ReviewQueuePage({
@@ -101,10 +102,13 @@ export default async function ReviewQueuePage({
           <CardTitle>Guides</CardTitle>
           <p className="text-muted-foreground text-sm">
             {list.length} version(s){query ? ` matching "${q}"` : ""}
+            {filter === "approved" && list.length > 0 && " · select guides below to publish"}
           </p>
         </CardHeader>
         <CardContent>
-          {list.length === 0 ? (
+          {filter === "approved" ? (
+            <ApprovedGuidesTable versions={list as ApprovedVersion[]} />
+          ) : list.length === 0 ? (
             <p className="text-muted-foreground py-8 text-center text-sm">No items match the filter.</p>
           ) : (
             <Table>

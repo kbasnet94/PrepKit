@@ -29,7 +29,6 @@ import {
 } from "@/lib/guides";
 import type { Guide, GuideCategory } from "@/lib/guides";
 import { useGuideStore } from "@/contexts/GuideStoreContext";
-import type { CategoryDownloadState } from "@/contexts/GuideStoreContext";
 
 const CATEGORY_ICONS: Record<string, string> = {
   natural_disasters: "alert-circle-outline",
@@ -128,56 +127,17 @@ function LayerBadge({ layer, contentStatus }: { layer: string; contentStatus: st
   );
 }
 
-function DownloadButton({
-  state,
-  onPress,
-  C,
-}: {
-  state: CategoryDownloadState;
-  onPress: () => void;
-  C: typeof Colors.light;
-}) {
-  const btnBase = { width: 32, height: 32, borderRadius: 16, alignItems: "center" as const, justifyContent: "center" as const, backgroundColor: C.accentSurface };
-  if (state === "downloading") {
-    return (
-      <View style={btnBase}>
-        <ActivityIndicator size="small" color={C.accent} />
-      </View>
-    );
-  }
-  if (state === "downloaded") {
-    return (
-      <View style={btnBase}>
-        <Ionicons name="checkmark" size={15} color={C.accent} />
-      </View>
-    );
-  }
-  return (
-    <Pressable
-      onPress={onPress}
-      hitSlop={8}
-      style={({ pressed }) => [btnBase, pressed && { opacity: 0.6 }]}
-    >
-      <Ionicons name="cloud-download-outline" size={17} color={C.accent} />
-    </Pressable>
-  );
-}
-
 function CategoryCard({
   category,
   count,
-  downloadState,
   onPress,
-  onDownload,
   index,
   C,
   styles,
 }: {
   category: GuideCategory;
   count: number;
-  downloadState: CategoryDownloadState;
   onPress: () => void;
-  onDownload: () => void;
   index: number;
   C: typeof Colors.light;
   styles: ReturnType<typeof makeStyles>;
@@ -195,11 +155,9 @@ function CategoryCard({
         <View style={styles.categoryInfo}>
           <Text style={styles.categoryName}>{categoryLabel(category)}</Text>
           <Text style={styles.categoryCount}>
-            {count} {count === 1 ? "guide" : "guides"}
-            {downloadState === "downloaded" ? "  ·  saved offline" : ""}
+            {count} {count === 1 ? "guide" : "guides"}  ·  offline
           </Text>
         </View>
-        <DownloadButton state={downloadState} onPress={onDownload} C={C} />
         <Ionicons name="chevron-forward" size={16} color={C.textTertiary} />
       </Pressable>
     </Animated.View>
@@ -261,10 +219,10 @@ export default function KnowledgeScreen() {
   const [requestFormTopic, setRequestFormTopic] = useState<string | null>(null);
   const {
     guides: allGuides,
-    getCategoryState,
-    downloadCategory,
     updateAvailable,
-    checkForUpdates,
+    isDownloadingAll,
+    isSeedingFromBundle,
+    deltaSync,
     availableCategories,
     downloadedCategories,
     onlineGuidesCache,
@@ -274,7 +232,6 @@ export default function KnowledgeScreen() {
   } = useGuideStore();
 
   const totalGuides = allGuides.length;
-  const hasNoGuides = totalGuides === 0;
 
   // When guides haven't been downloaded yet, show available categories from Supabase
   // so the user knows what they can download. Fall back to downloaded guide categories.
@@ -307,14 +264,14 @@ export default function KnowledgeScreen() {
     return counts;
   }, [allGuides]);
 
-  const handleUpdateRefresh = () => {
+  const handleDeltaSync = () => {
     if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    checkForUpdates();
+    deltaSync();
   };
 
   const categoryGuides = useMemo(() => {
     if (!selectedCategory) return [];
-    // Use downloaded guides if category is downloaded, otherwise use online cache
+    // All guides are offline after seeding; fall back to online cache only during initial seed
     let guides: Guide[];
     if (downloadedCategories.has(selectedCategory)) {
       guides = allGuides.filter((g) => g.category === selectedCategory);
@@ -357,15 +314,10 @@ export default function KnowledgeScreen() {
     setSelectedCategory(category);
     setView("category-guides");
     setSearchQuery("");
-    // Fetch guides from Supabase if not downloaded (online browsing)
+    // Fallback: fetch from Supabase if still seeding from bundle (very brief window)
     if (!downloadedCategories.has(category)) {
       fetchOnlineGuides(category);
     }
-  };
-
-  const handleDownloadCategory = (category: GuideCategory) => {
-    if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    downloadCategory(category);
   };
 
   const handleBack = () => {
@@ -406,9 +358,11 @@ export default function KnowledgeScreen() {
           {view === "categories" ? (
             <>
               <Text style={styles.headerSub}>
-                {hasNoGuides ? "Download guides to get started" : `${totalGuides} guides · offline`}
+                {isSeedingFromBundle
+                  ? "Setting up guides…"
+                  : `${totalGuides} guides · offline`}
               </Text>
-              <View style={[styles.layerCountRow, hasNoGuides && { opacity: 0 }]}>
+              <View style={[styles.layerCountRow, totalGuides === 0 && { opacity: 0 }]}>
                 <View style={styles.layerCountItem}>
                   <View style={[styles.layerCountDot, { backgroundColor: LAYER_COLORS.action_card }]} />
                   <Text style={styles.layerCountText}>{layerCounts.action_card} Action</Text>
@@ -456,19 +410,38 @@ export default function KnowledgeScreen() {
         ) : null}
       </View>
 
-      {view === "categories" && updateAvailable ? (
+      {view === "categories" && (updateAvailable || isDownloadingAll) ? (
         <Animated.View entering={FadeIn.duration(300)}>
           <Pressable
-            style={({ pressed }) => [styles.updateBanner, pressed && { opacity: 0.8 }]}
-            onPress={handleUpdateRefresh}
+            style={({ pressed }) => [styles.updateBanner, pressed && !isDownloadingAll && { opacity: 0.8 }]}
+            onPress={isDownloadingAll ? undefined : handleDeltaSync}
+            disabled={isDownloadingAll}
           >
-            <Ionicons name="cloud-download-outline" size={16} color="#fff" />
-            <Text style={styles.updateBannerText}>Guide updates available — tap to refresh</Text>
+            {isDownloadingAll ? (
+              <>
+                <ActivityIndicator size="small" color="#fff" />
+                <Text style={styles.updateBannerText}>Updating guides…</Text>
+              </>
+            ) : (
+              <>
+                <Ionicons name="cloud-download-outline" size={16} color="#fff" />
+                <Text style={styles.updateBannerText}>New guides available</Text>
+                <Text style={styles.updateBannerAction}>Download updates</Text>
+              </>
+            )}
           </Pressable>
         </Animated.View>
       ) : null}
 
       {view === "categories" && !searchQuery ? (
+        isSeedingFromBundle ? (
+          <View style={{ flex: 1, alignItems: "center", justifyContent: "center", gap: 12 }}>
+            <ActivityIndicator size="large" color={C.accent} />
+            <Text style={{ fontSize: 14, fontFamily: "Inter_400Regular", color: C.textSecondary }}>
+              Loading guides…
+            </Text>
+          </View>
+        ) : (
         <ScrollView
           style={styles.scroll}
           contentContainerStyle={[
@@ -482,15 +455,14 @@ export default function KnowledgeScreen() {
               key={cat}
               category={cat}
               count={countByCategory[cat] ?? 0}
-              downloadState={getCategoryState(cat)}
               onPress={() => handleSelectCategory(cat)}
-              onDownload={() => handleDownloadCategory(cat)}
               index={i}
               C={C}
               styles={styles}
             />
           ))}
         </ScrollView>
+        )
       ) : view === "categories" && searchQuery ? (
         <FlatList
           data={searchResults ?? []}
@@ -820,6 +792,13 @@ function makeStyles(C: typeof Colors.light) {
       fontFamily: "Inter_500Medium",
       color: "#fff",
       flex: 1,
+    },
+    updateBannerAction: {
+      fontSize: 12,
+      fontFamily: "Inter_600SemiBold",
+      color: "#fff",
+      opacity: 0.85,
+      textDecorationLine: "underline" as const,
     },
     searchResultsLabel: {
       fontSize: 12,

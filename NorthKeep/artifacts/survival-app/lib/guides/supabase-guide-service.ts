@@ -211,6 +211,147 @@ export async function fetchGuidesByCategory(
   return results;
 }
 
+// ─── Fetch release manifest (slug → versionId, lightweight) ─────────────────
+
+export interface ReleaseManifestItem {
+  slug: string;
+  versionId: string;
+}
+
+export async function fetchReleaseManifest(releaseId: string): Promise<ReleaseManifestItem[]> {
+  const { data, error } = await supabase
+    .from("guide_release_items")
+    .select(`
+      guide_versions!guide_release_items_guide_version_id_fkey (
+        id,
+        guides!guide_versions_guide_id_fkey (
+          slug
+        )
+      )
+    `)
+    .eq("release_id", releaseId);
+
+  if (error || !data) {
+    throw new Error(`Failed to fetch release manifest: ${error?.message}`);
+  }
+
+  const results: ReleaseManifestItem[] = [];
+  for (const item of data) {
+    const version = (item as any).guide_versions;
+    if (!version) continue;
+    const slug = version.guides?.slug;
+    if (!slug) continue;
+    results.push({ slug, versionId: version.id });
+  }
+  return results;
+}
+
+// ─── Fetch full guide data for a list of slugs ────────────────────────────────
+
+export async function fetchGuidesBySlugs(
+  slugs: string[],
+  releaseId: string
+): Promise<Array<{ guide: Guide; versionId: string }>> {
+  if (slugs.length === 0) return [];
+
+  const { data, error } = await supabase
+    .from("guide_release_items")
+    .select(`
+      guide_version_id,
+      guide_versions!guide_release_items_guide_version_id_fkey (
+        id,
+        guide_id,
+        title,
+        layer,
+        guide_type,
+        summary,
+        quick_answer,
+        when_to_use,
+        preferred_action,
+        backup_action,
+        step_by_step_actions,
+        warnings,
+        what_not_to_do,
+        red_flags,
+        preparedness_tips,
+        source_quality,
+        content_status,
+        related_guides,
+        source_references,
+        app_tags,
+        response_role,
+        constraint_tags,
+        blocked_by_constraints,
+        alternative_to_guide_slugs,
+        guides!guide_versions_guide_id_fkey (
+          slug
+        ),
+        guide_categories!guide_versions_category_id_fkey (
+          slug
+        ),
+        guide_parent_topics!guide_versions_parent_topic_id_fkey (
+          name
+        )
+      )
+    `)
+    .eq("release_id", releaseId)
+    .in("guide_versions.guides.slug", slugs);
+
+  if (error || !data) {
+    throw new Error(`Failed to fetch guides by slugs: ${error?.message}`);
+  }
+
+  const results: Array<{ guide: Guide; versionId: string }> = [];
+
+  for (const item of data) {
+    const version = (item as any).guide_versions;
+    if (!version) continue;
+
+    const guideSlug = version.guides?.slug;
+    if (!guideSlug || !slugs.includes(guideSlug)) continue;
+
+    const categorySlug = version.guide_categories?.slug;
+    const parentTopicName = version.guide_parent_topics?.name ?? null;
+
+    const row = {
+      id: version.id,
+      guide_id: version.guide_id,
+      title: version.title,
+      layer: version.layer,
+      guide_type: version.guide_type,
+      summary: version.summary,
+      quick_answer: version.quick_answer,
+      when_to_use: version.when_to_use ?? [],
+      preferred_action: version.preferred_action,
+      backup_action: version.backup_action,
+      step_by_step_actions: version.step_by_step_actions ?? [],
+      warnings: version.warnings ?? [],
+      what_not_to_do: version.what_not_to_do ?? [],
+      red_flags: version.red_flags ?? [],
+      preparedness_tips: version.preparedness_tips ?? [],
+      source_quality: version.source_quality,
+      content_status: version.content_status,
+      related_guides: version.related_guides ?? [],
+      source_references: version.source_references ?? [],
+      app_tags: version.app_tags ?? [],
+      response_role: version.response_role,
+      constraint_tags: version.constraint_tags ?? [],
+      blocked_by_constraints: version.blocked_by_constraints ?? [],
+      alternative_to_guide_slugs: version.alternative_to_guide_slugs ?? [],
+      slug: guideSlug,
+      category_slug: categorySlug,
+      parent_topic_name: parentTopicName,
+    };
+
+    results.push({
+      guide: transformSupabaseRow(row),
+      versionId: version.id,
+    });
+  }
+
+  return results;
+}
+
 // ─── Fetch global metadata for search ────────────────────────────────────────
 
 export async function fetchAllGuidesMetadata(

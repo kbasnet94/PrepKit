@@ -13,6 +13,9 @@ import {
   saveGuidesToCache,
   deleteCachedCategory,
   getDownloadedCategories,
+  hasAnyCachedGuides,
+  getLocalManifest,
+  deleteCachedGuide,
 } from "@/lib/database";
 import { setGuideStore } from "@/lib/guides/guide-store";
 import {
@@ -20,28 +23,36 @@ import {
   fetchAvailableCategories,
   fetchGuidesByCategory,
   fetchAllGuidesMetadata,
+  fetchReleaseManifest,
+  fetchGuidesBySlugs,
 } from "@/lib/guides/supabase-guide-service";
 import type { Guide } from "@/lib/guides/types";
 import type { AvailableCategory } from "@/lib/guides/supabase-guide-service";
 
 const RELEASE_VERSION_KEY = "northkeep_release_version";
 const GLOBAL_METADATA_KEY = "northkeep_global_metadata";
+// Set after seeding from bundle so we know to auto-sync on next online launch
+const SEEDED_FROM_BUNDLE_KEY = "northkeep_seeded_from_bundle";
 
 export type CategoryDownloadState = "idle" | "downloading" | "downloaded";
 
 interface GuideStoreContextValue {
   guides: Guide[];
   isLoaded: boolean;
+  isSeedingFromBundle: boolean;
+  isDownloadingAll: boolean;
   downloadedCategories: Set<string>;
-  downloadingCategories: Set<string>;
   availableCategories: AvailableCategory[];
   updateAvailable: boolean;
   latestReleaseVersion: string | null;
+  deltaSync: () => Promise<void>;
+  checkForUpdates: () => Promise<void>;
+  reloadGuides: () => Promise<void>;
+  // Legacy — kept for backward compat; no-op in new model
+  downloadingCategories: Set<string>;
   getCategoryState: (category: string) => CategoryDownloadState;
   downloadCategory: (categorySlug: string) => Promise<void>;
   removeCategory: (categorySlug: string) => Promise<void>;
-  checkForUpdates: () => Promise<void>;
-  reloadGuides: () => Promise<void>;
   // Online browsing
   onlineGuidesCache: Map<string, Guide[]>;
   onlineFetchingCategories: Set<string>;
@@ -60,8 +71,9 @@ async function loadGuidesFromDB(): Promise<Guide[]> {
 export function GuideStoreProvider({ children }: { children: ReactNode }) {
   const [guides, setGuides] = useState<Guide[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSeedingFromBundle, setIsSeedingFromBundle] = useState(false);
+  const [isDownloadingAll, setIsDownloadingAll] = useState(false);
   const [downloadedCategories, setDownloadedCategories] = useState<Set<string>>(new Set());
-  const [downloadingCategories, setDownloadingCategories] = useState<Set<string>>(new Set());
   const [availableCategories, setAvailableCategories] = useState<AvailableCategory[]>([]);
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [latestReleaseVersion, setLatestReleaseVersion] = useState<string | null>(null);
@@ -72,7 +84,8 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
   const fetchingRef = useRef<Set<string>>(new Set());
   const [globalMetadata, setGlobalMetadata] = useState<Guide[]>([]);
 
-  // Load guides from SQLite on startup
+  // ─── Core reload from SQLite ──────────────────────────────────────────────
+
   const reloadGuides = useCallback(async () => {
     const loaded = await loadGuidesFromDB();
     setGuides(loaded);
@@ -92,11 +105,125 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    reloadGuides();
+  // ─── Seed SQLite from bundled snapshot ───────────────────────────────────
+
+  const seedFromBundle = useCallback(async () => {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const snapshot = require("../assets/guides-snapshot.json") as {
+        releaseVersion: string;
+        guides: Array<{
+          slug: string;
+          title: string;
+          category: string;
+          parentTopic?: string;
+          layer: string;
+          guideData: object;
+          supabaseVersionId?: string;
+          releaseVersion?: string;
+        }>;
+      };
+
+      await saveGuidesToCache(
+        snapshot.guides.map((g) => ({
+          slug: g.slug,
+          title: g.title,
+          category: g.category,
+          parentTopic: g.parentTopic,
+          layer: g.layer,
+          guideData: g.guideData,
+          supabaseVersionId: g.supabaseVersionId,
+          releaseVersion: snapshot.releaseVersion,
+        }))
+      );
+
+      await AsyncStorage.setItem(RELEASE_VERSION_KEY, snapshot.releaseVersion);
+      await AsyncStorage.setItem(SEEDED_FROM_BUNDLE_KEY, "true");
+
+      await reloadGuides();
+    } catch (err) {
+      console.warn("[GuideStore] seedFromBundle failed:", err);
+    }
   }, [reloadGuides]);
 
-  // Check for updates (compare stored version vs Supabase latest)
+  // ─── Delta sync: only download new/changed guides, delete removed ones ────
+
+  const deltaSync = useCallback(async () => {
+    if (isDownloadingAll) return;
+    setIsDownloadingAll(true);
+    try {
+      const release = await fetchLatestRelease();
+      if (!release) return;
+
+      // Lightweight manifest: what's in the latest release
+      const remoteManifest = await fetchReleaseManifest(release.id);
+      const remoteMap = new Map(remoteManifest.map((r) => [r.slug, r.versionId]));
+
+      // What we have locally
+      const localMap = await getLocalManifest();
+
+      // Diff
+      const toDownload: string[] = [];
+      for (const [slug, versionId] of remoteMap) {
+        if (localMap.get(slug) !== versionId) {
+          toDownload.push(slug);
+        }
+      }
+
+      const toDelete: string[] = [];
+      for (const slug of localMap.keys()) {
+        if (!remoteMap.has(slug)) {
+          toDelete.push(slug);
+        }
+      }
+
+      // Apply deletions
+      for (const slug of toDelete) {
+        await deleteCachedGuide(slug);
+      }
+
+      // Fetch and upsert changed/new guides
+      if (toDownload.length > 0) {
+        const items = await fetchGuidesBySlugs(toDownload, release.id);
+        if (items.length > 0) {
+          await saveGuidesToCache(
+            items.map(({ guide, versionId }) => ({
+              slug: guide.slug,
+              title: guide.title,
+              category: guide.category,
+              parentTopic: guide.parentTopic,
+              layer: guide.layer,
+              guideData: guide,
+              supabaseVersionId: versionId,
+              releaseVersion: release.semanticVersion,
+            }))
+          );
+        }
+      }
+
+      // Update stored version and clear flags
+      await AsyncStorage.setItem(RELEASE_VERSION_KEY, release.semanticVersion);
+      await AsyncStorage.removeItem(SEEDED_FROM_BUNDLE_KEY);
+      setLatestReleaseVersion(release.semanticVersion);
+      setUpdateAvailable(false);
+      setOnlineGuidesCache(new Map());
+
+      await reloadGuides();
+
+      const summary = [];
+      if (toDownload.length > 0) summary.push(`${toDownload.length} updated`);
+      if (toDelete.length > 0) summary.push(`${toDelete.length} removed`);
+      if (summary.length === 0) summary.push("already up to date");
+      console.log(`[GuideStore] Delta sync complete: ${summary.join(", ")}`);
+    } catch (err) {
+      console.warn("[GuideStore] deltaSync failed:", err);
+    } finally {
+      setIsDownloadingAll(false);
+    }
+  }, [isDownloadingAll, reloadGuides]);
+
+  // ─── Check for updates (compare stored version vs Supabase latest) ────────
+
   const checkForUpdates = useCallback(async () => {
     try {
       const release = await fetchLatestRelease();
@@ -107,21 +234,17 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
       const stored = await AsyncStorage.getItem(RELEASE_VERSION_KEY);
       if (stored !== release.semanticVersion) {
         setUpdateAvailable(true);
-        // Clear online cache when a new release is detected
         setOnlineGuidesCache(new Map());
-        
-        // Fetch global metadata if we have a new release
+
         const allMeta = await fetchAllGuidesMetadata(release.id);
         await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
         setGlobalMetadata(allMeta);
       } else if (globalMetadata.length === 0) {
-        // If we don't have metadata yet (e.g. first install), fetch it
         const allMeta = await fetchAllGuidesMetadata(release.id);
         await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
         setGlobalMetadata(allMeta);
       }
 
-      // Also fetch available categories for the download UI
       const cats = await fetchAvailableCategories();
       setAvailableCategories(cats);
     } catch {
@@ -129,59 +252,84 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  // Check for updates once on mount (non-blocking)
+  // ─── Initialization ───────────────────────────────────────────────────────
+
   useEffect(() => {
-    checkForUpdates();
-  }, [checkForUpdates]);
+    async function initialize() {
+      // Load whatever is already in SQLite
+      const loaded = await loadGuidesFromDB();
+      setGuides(loaded);
+      setGuideStore(loaded);
+
+      const cats = await getDownloadedCategories();
+      setDownloadedCategories(new Set(cats));
+
+      try {
+        const storedMeta = await AsyncStorage.getItem(GLOBAL_METADATA_KEY);
+        if (storedMeta) setGlobalMetadata(JSON.parse(storedMeta));
+      } catch { /* ignore */ }
+
+      const hasGuides = await hasAnyCachedGuides();
+
+      if (!hasGuides) {
+        // First launch: seed from bundled snapshot immediately
+        setIsSeedingFromBundle(true);
+        await seedFromBundle();
+        setIsSeedingFromBundle(false);
+      }
+
+      setIsLoaded(true);
+
+      // Background: check for updates, then auto-sync if this was a fresh seed
+      (async () => {
+        try {
+          const release = await fetchLatestRelease();
+          if (!release) return;
+
+          setLatestReleaseVersion(release.semanticVersion);
+
+          const stored = await AsyncStorage.getItem(RELEASE_VERSION_KEY);
+          const seededFromBundle = await AsyncStorage.getItem(SEEDED_FROM_BUNDLE_KEY);
+
+          if (stored !== release.semanticVersion) {
+            setUpdateAvailable(true);
+            setOnlineGuidesCache(new Map());
+
+            const allMeta = await fetchAllGuidesMetadata(release.id);
+            await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
+            setGlobalMetadata(allMeta);
+
+            // If we just seeded from bundle, auto-sync silently without user prompt
+            if (seededFromBundle === "true") {
+              await deltaSync();
+            }
+          } else if (globalMetadata.length === 0) {
+            const allMeta = await fetchAllGuidesMetadata(release.id);
+            await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
+            setGlobalMetadata(allMeta);
+          }
+
+          const availCats = await fetchAvailableCategories();
+          setAvailableCategories(availCats);
+        } catch {
+          // No internet — leave bundle data in place silently
+        }
+      })();
+    }
+
+    initialize();
+    // Run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // ─── Legacy: per-category download (kept for backward compat) ────────────
 
   const downloadCategory = useCallback(
     async (categorySlug: string) => {
-      setDownloadingCategories((prev) => new Set(prev).add(categorySlug));
-      try {
-        // Get the latest release id
-        const release = await fetchLatestRelease();
-        if (!release) throw new Error("No published release found");
-
-        const items = await fetchGuidesByCategory(categorySlug, release.id);
-        if (items.length === 0) return;
-
-        await saveGuidesToCache(
-          items.map(({ guide, versionId }) => ({
-            slug: guide.slug,
-            title: guide.title,
-            category: guide.category,
-            parentTopic: guide.parentTopic,
-            layer: guide.layer,
-            guideData: guide,
-            supabaseVersionId: versionId,
-            releaseVersion: release.semanticVersion,
-          }))
-        );
-
-        // Save current release version to AsyncStorage
-        await AsyncStorage.setItem(RELEASE_VERSION_KEY, release.semanticVersion);
-        setLatestReleaseVersion(release.semanticVersion);
-        setUpdateAvailable(false);
-
-        // Clear this category from online cache (now downloaded)
-        setOnlineGuidesCache((prev) => {
-          if (!prev.has(categorySlug)) return prev;
-          const next = new Map(prev);
-          next.delete(categorySlug);
-          return next;
-        });
-
-        // Reload full guide store from SQLite
-        await reloadGuides();
-      } finally {
-        setDownloadingCategories((prev) => {
-          const next = new Set(prev);
-          next.delete(categorySlug);
-          return next;
-        });
-      }
+      // In the new model, all guides are already available. This is a no-op.
+      // Kept so nothing breaks if called from older code paths.
     },
-    [reloadGuides]
+    []
   );
 
   const removeCategory = useCallback(
@@ -194,24 +342,21 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
 
   const getCategoryState = useCallback(
     (category: string): CategoryDownloadState => {
-      if (downloadingCategories.has(category)) return "downloading";
       if (downloadedCategories.has(category)) return "downloaded";
       return "idle";
     },
-    [downloadingCategories, downloadedCategories]
+    [downloadedCategories]
   );
 
-  // Fetch guides for a category from Supabase (online browsing, not persisted)
+  // ─── Online browsing fallback ─────────────────────────────────────────────
+
   const fetchOnlineGuides = useCallback(
     async (categorySlug: string): Promise<Guide[]> => {
-      // Already downloaded — no need for online fetch
       if (downloadedCategories.has(categorySlug)) return [];
 
-      // Already in cache
       const cached = onlineGuidesCache.get(categorySlug);
       if (cached) return cached;
 
-      // Already fetching (dedup)
       if (fetchingRef.current.has(categorySlug)) return [];
 
       fetchingRef.current.add(categorySlug);
@@ -232,7 +377,6 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
 
         return fetchedGuides;
       } catch {
-        // No internet — return empty
         return [];
       } finally {
         fetchingRef.current.delete(categorySlug);
@@ -246,7 +390,6 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     [downloadedCategories, onlineGuidesCache]
   );
 
-  // Look up a single guide across all online caches
   const getOnlineGuide = useCallback(
     (slug: string): Guide | undefined => {
       for (const guides of onlineGuidesCache.values()) {
@@ -263,16 +406,21 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
       value={{
         guides,
         isLoaded,
+        isSeedingFromBundle,
+        isDownloadingAll,
         downloadedCategories,
-        downloadingCategories,
         availableCategories,
         updateAvailable,
         latestReleaseVersion,
+        deltaSync,
+        checkForUpdates,
+        reloadGuides,
+        // Legacy
+        downloadingCategories: new Set<string>(),
         getCategoryState,
         downloadCategory,
         removeCategory,
-        checkForUpdates,
-        reloadGuides,
+        // Online browsing
         onlineGuidesCache,
         onlineFetchingCategories,
         fetchOnlineGuides,
