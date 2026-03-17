@@ -210,3 +210,80 @@ export async function fetchGuidesByCategory(
 
   return results;
 }
+
+// ─── Fetch global metadata for search ────────────────────────────────────────
+
+export async function fetchAllGuidesMetadata(
+  releaseId: string
+): Promise<Guide[]> {
+  const { data, error } = await supabase
+    .from("guide_release_items")
+    .select(`
+      guide_versions!guide_release_items_guide_version_id_fkey (
+        id,
+        guide_id,
+        title,
+        layer,
+        guide_type,
+        summary,
+        source_quality,
+        content_status,
+        app_tags,
+        guides!guide_versions_guide_id_fkey (slug),
+        guide_categories!guide_versions_category_id_fkey (slug),
+        guide_parent_topics!guide_versions_parent_topic_id_fkey (name)
+      )
+    `)
+    .eq("release_id", releaseId);
+
+  if (error || !data) {
+    throw new Error(`Failed to fetch all metadata: ${error?.message}`);
+  }
+
+  const results: Guide[] = [];
+
+  for (const item of data) {
+    const version = (item as any).guide_versions;
+    if (!version) continue;
+
+    const guideSlug = version.guides?.slug;
+    const categorySlugFromJoin = version.guide_categories?.slug;
+    const parentTopicName = version.guide_parent_topics?.name ?? null;
+
+    if (!guideSlug || !categorySlugFromJoin) continue;
+
+    const row = {
+      id: version.id,
+      guide_id: version.guide_id,
+      title: version.title,
+      layer: version.layer,
+      guide_type: version.guide_type,
+      summary: version.summary,
+      quick_answer: null,
+      when_to_use: [],
+      preferred_action: null,
+      backup_action: null,
+      step_by_step_actions: [],
+      warnings: [],
+      what_not_to_do: [],
+      red_flags: [],
+      preparedness_tips: [],
+      source_quality: version.source_quality,
+      content_status: version.content_status,
+      related_guides: [],
+      source_references: [],
+      app_tags: version.app_tags ?? [],
+      response_role: null,
+      constraint_tags: [],
+      blocked_by_constraints: [],
+      alternative_to_guide_slugs: [],
+      slug: guideSlug,
+      category_slug: categorySlugFromJoin,
+      parent_topic_name: parentTopicName,
+    };
+
+    results.push(transformSupabaseRow(row));
+  }
+
+  return results;
+}

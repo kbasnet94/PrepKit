@@ -30,6 +30,7 @@ function RootLayoutNav() {
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="chat/[id]" options={{ headerShown: false }} />
       <Stack.Screen name="knowledge/[id]" options={{ headerShown: false }} />
+      <Stack.Screen name="guides/[slug]" options={{ headerShown: false }} />
       <Stack.Screen
         name="inventory/add"
         options={{

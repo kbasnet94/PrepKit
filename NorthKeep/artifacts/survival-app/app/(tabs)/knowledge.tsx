@@ -270,6 +270,7 @@ export default function KnowledgeScreen() {
     onlineGuidesCache,
     onlineFetchingCategories,
     fetchOnlineGuides,
+    globalMetadata,
   } = useGuideStore();
 
   const totalGuides = allGuides.length;
@@ -333,25 +334,23 @@ export default function KnowledgeScreen() {
   const searchResults = useMemo(() => {
     if (!searchQuery.trim() || view !== "categories") return null;
     const downloaded = searchGuides(searchQuery);
-    // Also search online cached guides
+    
     const downloadedSlugs = new Set(downloaded.map((g) => g.slug));
     const q = searchQuery.trim().toLowerCase();
-    const onlineMatches: Guide[] = [];
-    for (const guides of onlineGuidesCache.values()) {
-      for (const g of guides) {
-        if (downloadedSlugs.has(g.slug)) continue; // avoid duplicates
-        if (
-          g.title.toLowerCase().includes(q) ||
-          g.summary.toLowerCase().includes(q) ||
-          g.category.toLowerCase().includes(q) ||
-          g.tags.some((t) => t.includes(q))
-        ) {
-          onlineMatches.push(g);
-        }
-      }
-    }
+    
+    // Search global metadata (offline-first catalog index)
+    const onlineMatches = globalMetadata.filter((g) => {
+      if (downloadedSlugs.has(g.slug)) return false;
+      return (
+        g.title.toLowerCase().includes(q) ||
+        g.summary.toLowerCase().includes(q) ||
+        g.category.toLowerCase().includes(q) ||
+        g.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    });
+
     return [...downloaded, ...onlineMatches];
-  }, [searchQuery, view, onlineGuidesCache]);
+  }, [searchQuery, view, globalMetadata]);
 
   const handleSelectCategory = (category: GuideCategory) => {
     if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);

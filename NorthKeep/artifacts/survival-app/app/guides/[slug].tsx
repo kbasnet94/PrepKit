@@ -1,6 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { router, useLocalSearchParams } from "expo-router";
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import {
   Platform,
   Pressable,
@@ -194,9 +194,21 @@ export default function GuideDetailScreen() {
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
 
-  const { getOnlineGuide } = useGuideStore();
+  const { getOnlineGuide, fetchOnlineGuides, downloadedCategories, onlineFetchingCategories } = useGuideStore();
   const guide = slug ? (getGuideBySlug(slug) ?? getOnlineGuide(slug)) : undefined;
   const related = guide ? getRelatedGuides(guide) : [];
+
+  useEffect(() => {
+    if (!guide) return;
+    const isDownloaded = downloadedCategories.has(guide.category);
+    const isFetching = onlineFetchingCategories.has(guide.category);
+    const isPlanned = guide.contentStatus === "metadata_only";
+    
+    // If not downloaded, not fetching, not planned, and has no content - fetch it!
+    if (!isDownloaded && !isFetching && !isPlanned && guide.steps.length === 0 && !guide.preferredOption) {
+      fetchOnlineGuides(guide.category);
+    }
+  }, [guide, downloadedCategories, onlineFetchingCategories, fetchOnlineGuides]);
 
   if (!guide) return <NotFoundScreen styles={styles} C={C} />;
 

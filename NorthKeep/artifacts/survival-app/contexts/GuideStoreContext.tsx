@@ -19,11 +19,13 @@ import {
   fetchLatestRelease,
   fetchAvailableCategories,
   fetchGuidesByCategory,
+  fetchAllGuidesMetadata,
 } from "@/lib/guides/supabase-guide-service";
 import type { Guide } from "@/lib/guides/types";
 import type { AvailableCategory } from "@/lib/guides/supabase-guide-service";
 
 const RELEASE_VERSION_KEY = "northkeep_release_version";
+const GLOBAL_METADATA_KEY = "northkeep_global_metadata";
 
 export type CategoryDownloadState = "idle" | "downloading" | "downloaded";
 
@@ -45,6 +47,7 @@ interface GuideStoreContextValue {
   onlineFetchingCategories: Set<string>;
   fetchOnlineGuides: (categorySlug: string) => Promise<Guide[]>;
   getOnlineGuide: (slug: string) => Guide | undefined;
+  globalMetadata: Guide[];
 }
 
 const GuideStoreContext = createContext<GuideStoreContextValue | null>(null);
@@ -67,6 +70,7 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
   const [onlineGuidesCache, setOnlineGuidesCache] = useState<Map<string, Guide[]>>(new Map());
   const [onlineFetchingCategories, setOnlineFetchingCategories] = useState<Set<string>>(new Set());
   const fetchingRef = useRef<Set<string>>(new Set());
+  const [globalMetadata, setGlobalMetadata] = useState<Guide[]>([]);
 
   // Load guides from SQLite on startup
   const reloadGuides = useCallback(async () => {
@@ -77,6 +81,15 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     const cats = await getDownloadedCategories();
     setDownloadedCategories(new Set(cats));
     setIsLoaded(true);
+
+    try {
+      const storedMeta = await AsyncStorage.getItem(GLOBAL_METADATA_KEY);
+      if (storedMeta) {
+        setGlobalMetadata(JSON.parse(storedMeta));
+      }
+    } catch {
+      // Ignore parse errors on startup
+    }
   }, []);
 
   useEffect(() => {
@@ -96,6 +109,16 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         setUpdateAvailable(true);
         // Clear online cache when a new release is detected
         setOnlineGuidesCache(new Map());
+        
+        // Fetch global metadata if we have a new release
+        const allMeta = await fetchAllGuidesMetadata(release.id);
+        await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
+        setGlobalMetadata(allMeta);
+      } else if (globalMetadata.length === 0) {
+        // If we don't have metadata yet (e.g. first install), fetch it
+        const allMeta = await fetchAllGuidesMetadata(release.id);
+        await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
+        setGlobalMetadata(allMeta);
       }
 
       // Also fetch available categories for the download UI
@@ -230,9 +253,9 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         const found = guides.find((g) => g.slug === slug);
         if (found) return found;
       }
-      return undefined;
+      return globalMetadata.find((g) => g.slug === slug);
     },
-    [onlineGuidesCache]
+    [onlineGuidesCache, globalMetadata]
   );
 
   return (
@@ -254,6 +277,7 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         onlineFetchingCategories,
         fetchOnlineGuides,
         getOnlineGuide,
+        globalMetadata,
       }}
     >
       {children}

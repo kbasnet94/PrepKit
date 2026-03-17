@@ -337,7 +337,7 @@ export default function ChatDetailScreen() {
         // fallback: copy to clipboard not available, silently fail
       }
     } else {
-      if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       try {
         await Share.share({ message: text, title: sessionTitle });
       } catch {
@@ -411,6 +411,14 @@ export default function ChatDetailScreen() {
                 <Ionicons name="shield-checkmark" size={32} color={C.accent} />
               </View>
               <Text style={styles.emptyChatTitle}>NorthKeep Assistant</Text>
+              
+              <View style={styles.topBetaWarning}>
+                <Ionicons name="warning" size={16} color="#C0392B" />
+                <Text style={styles.topBetaWarningText}>
+                  BETA DISCLAIMER: Do not rely on AI in active life-or-death emergencies. AI can hallucinate or omit critical steps. Always refer to offline Knowledge guides.
+                </Text>
+              </View>
+
               <Text style={styles.emptyChatSubtitle}>
                 Ask about survival, emergencies, or first aid. Answers are grounded in the guide library — no guessing.
               </Text>
@@ -719,6 +727,25 @@ function makeStyles(C: typeof Colors.light) {
       textAlign: "center",
       lineHeight: 20,
       marginBottom: 20,
+    },
+    topBetaWarning: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      gap: 6,
+      backgroundColor: "#C0392B12",
+      padding: 12,
+      borderRadius: 10,
+      borderWidth: 1,
+      borderColor: "#C0392B30",
+      marginBottom: 16,
+      width: "100%",
+    },
+    topBetaWarningText: {
+      flex: 1,
+      fontSize: 12,
+      fontFamily: "Inter_500Medium",
+      color: "#C0392B",
+      lineHeight: 18,
     },
     emptySuggestions: {
       flexDirection: "row",

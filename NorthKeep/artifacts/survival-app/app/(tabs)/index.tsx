@@ -92,6 +92,16 @@ export default function ChatListScreen() {
         </Pressable>
       </View>
 
+      <View style={styles.betaBanner}>
+        <Ionicons name="warning-outline" size={18} color="#C0392B" />
+        <View style={styles.betaBannerContent}>
+          <Text style={styles.betaBannerTitle}>BETA FEATURE</Text>
+          <Text style={styles.betaBannerText}>
+            Do not rely on this AI during active life-or-death emergencies. AI can make mistakes. Use the offline Knowledge guides for verified instructions.
+          </Text>
+        </View>
+      </View>
+
       {aiCapability && aiCapability.method === "fallback" ? (
         <View style={styles.aiBanner}>
           <Ionicons name="information-circle-outline" size={18} color={C.warning} />
@@ -158,6 +168,35 @@ function makeStyles(C: typeof Colors.light) {
       height: 40,
       alignItems: "center",
       justifyContent: "center",
+    },
+    betaBanner: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      gap: 12,
+      marginHorizontal: 20,
+      marginBottom: 12,
+      padding: 14,
+      backgroundColor: "#C0392B12",
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: "#C0392B30",
+    },
+    betaBannerContent: {
+      flex: 1,
+      gap: 4,
+    },
+    betaBannerTitle: {
+      fontSize: 12,
+      fontFamily: "Inter_700Bold",
+      color: "#C0392B",
+      textTransform: "uppercase",
+      letterSpacing: 0.5,
+    },
+    betaBannerText: {
+      fontSize: 13,
+      fontFamily: "Inter_500Medium",
+      color: C.text,
+      lineHeight: 18,
     },
     aiBanner: {
       flexDirection: "row",

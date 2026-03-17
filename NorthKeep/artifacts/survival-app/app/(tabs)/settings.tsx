@@ -29,7 +29,7 @@ export default function SettingsScreen() {
   const { downloadedCount, totalStorageBytes, deleteAllArticles } = useKnowledge();
   const { mode: aiMode, setMode: setAIMode } = useAIMode();
   const [showAppFeedback, setShowAppFeedback] = useState(false);
-  const { colors: C, isDark, toggleTheme } = useTheme();
+  const { colors: C, mode: themeMode, setTheme } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
 
   const formatBytes = (bytes: number) => {
@@ -79,10 +79,7 @@ export default function SettingsScreen() {
     );
   };
 
-  const handleThemeToggle = () => {
-    if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    toggleTheme();
-  };
+
 
   const SettingsRow = ({
     icon,
@@ -138,19 +135,31 @@ export default function SettingsScreen() {
       >
         <Text style={styles.sectionTitle}>Appearance</Text>
         <View style={styles.section}>
-          <SettingsRow
-            icon={isDark ? "moon" : "sunny-outline"}
-            title="Dark Mode"
-            subtitle={isDark ? "Dark theme enabled" : "Light theme enabled"}
-            rightElement={
-              <Switch
-                value={isDark}
-                onValueChange={handleThemeToggle}
-                trackColor={{ false: C.surfaceSecondary, true: C.accent }}
-                thumbColor="#fff"
-              />
-            }
-          />
+          <View style={styles.settingsRow}>
+            <View style={[styles.settingsIcon, { backgroundColor: C.accentSurface }]}>
+              <Ionicons name="color-palette-outline" size={20} color={C.accent} />
+            </View>
+            <View style={styles.settingsContent}>
+              <Text style={styles.settingsTitle}>Theme</Text>
+              <Text style={styles.settingsSubtitle}>Choose your preferred visual style</Text>
+            </View>
+          </View>
+          <View style={styles.themeModeSelector}>
+            {(["light", "dark", "emergency"] as const).map((m) => (
+              <Pressable
+                key={m}
+                style={[styles.themeModeOption, themeMode === m && styles.themeModeOptionActive]}
+                onPress={() => {
+                  if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  setTheme(m);
+                }}
+              >
+                <Text style={[styles.themeModeOptionText, themeMode === m && styles.themeModeOptionTextActive]}>
+                  {m.charAt(0).toUpperCase() + m.slice(1)}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
         </View>
 
         <Text style={styles.sectionTitle}>Storage</Text>
@@ -213,21 +222,25 @@ export default function SettingsScreen() {
           </View>
         </View>
 
-        <Text style={styles.sectionTitle}>Developer Tools</Text>
-        <View style={styles.section}>
-          <SettingsRow
-            icon="flask-outline"
-            title="Query Tester"
-            subtitle="Test guide matching and query interpretation"
-            onPress={() => router.push("/debug/query-test")}
-          />
-          <SettingsRow
-            icon="document-text-outline"
-            title="Answer Tester"
-            subtitle="Test the structured answer engine against guide content"
-            onPress={() => router.push("/debug/guide-answer-tester")}
-          />
-        </View>
+        {__DEV__ ? (
+          <>
+            <Text style={styles.sectionTitle}>Developer Tools</Text>
+            <View style={styles.section}>
+              <SettingsRow
+                icon="flask-outline"
+                title="Query Tester"
+                subtitle="Test guide matching and query interpretation"
+                onPress={() => router.push("/debug/query-test")}
+              />
+              <SettingsRow
+                icon="document-text-outline"
+                title="Answer Tester"
+                subtitle="Test the structured answer engine against guide content"
+                onPress={() => router.push("/debug/guide-answer-tester")}
+              />
+            </View>
+          </>
+        ) : null}
 
         <Text style={styles.sectionTitle}>Feedback</Text>
         <View style={styles.section}>
@@ -385,6 +398,32 @@ function makeStyles(C: typeof Colors.light) {
       color: C.textTertiary,
     },
     aiModeOptionTextActive: {
+      color: C.accent,
+    },
+    themeModeSelector: {
+      flexDirection: "row",
+      marginHorizontal: 14,
+      marginBottom: 14,
+      backgroundColor: C.surfaceSecondary,
+      borderRadius: 10,
+      padding: 3,
+      gap: 2,
+    },
+    themeModeOption: {
+      flex: 1,
+      paddingVertical: 9,
+      borderRadius: 8,
+      alignItems: "center",
+    },
+    themeModeOptionActive: {
+      backgroundColor: C.surface,
+    },
+    themeModeOptionText: {
+      fontSize: 13,
+      fontFamily: "Inter_600SemiBold",
+      color: C.textTertiary,
+    },
+    themeModeOptionTextActive: {
       color: C.accent,
     },
   });

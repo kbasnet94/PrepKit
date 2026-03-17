@@ -205,13 +205,36 @@ export default function EditItemScreen() {
         </View>
 
         <Text style={styles.label}>EXPIRY DATE (optional)</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="YYYY-MM-DD"
-          placeholderTextColor={C.textTertiary}
-          value={expiryDate}
-          onChangeText={setExpiryDate}
-        />
+        {Platform.OS === "web" ? (
+          <input
+            type="date"
+            style={{
+              backgroundColor: C.surface,
+              borderRadius: 12,
+              paddingLeft: 16,
+              paddingRight: 16,
+              paddingTop: 12,
+              paddingBottom: 12,
+              fontSize: 15,
+              fontFamily: "Inter_400Regular",
+              color: C.text,
+              border: "none",
+              outline: "none",
+              width: "100%",
+              boxSizing: "border-box",
+            }}
+            value={expiryDate}
+            onChange={(e) => setExpiryDate(e.target.value)}
+          />
+        ) : (
+          <TextInput
+            style={styles.input}
+            placeholder="YYYY-MM-DD"
+            placeholderTextColor={C.textTertiary}
+            value={expiryDate}
+            onChangeText={setExpiryDate}
+          />
+        )}
 
         {kits.length > 0 ? (
           <>
