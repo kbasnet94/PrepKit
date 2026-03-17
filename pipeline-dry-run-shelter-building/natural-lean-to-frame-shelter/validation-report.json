@@ -1,0 +1,38 @@
+{
+  "slug": "natural-lean-to-frame-shelter",
+  "validatedAt": "2026-03-16T00:00:00.000Z",
+  "overallResult": "pass_with_warnings",
+  "evidenceTier": "authoritative_plus_field_practice",
+  "schemaChecks": [
+    {"check": "required_fields_present", "passed": true, "evidence": "All 22 required fields present"},
+    {"check": "layer_guidetype_matched", "passed": true, "evidence": "action / action_card — valid pair"},
+    {"check": "valid_category", "passed": true, "evidence": "shelter_fire_warmth is a canonical category"},
+    {"check": "valid_source_quality", "passed": true, "evidence": "strong"},
+    {"check": "array_fields_flat", "passed": true, "evidence": "All array fields are flat string arrays"},
+    {"check": "source_refs_schema", "passed": true, "evidence": "Both source references have title, organization, url, whyUseful"},
+    {"check": "constraint_tags_valid", "passed": true, "evidence": "no_shelter is in canonical registry"},
+    {"check": "response_role_valid", "passed": true, "evidence": "primary is valid"},
+    {"check": "alt_slugs_exist", "passed": true, "evidence": "fast-tarp-lean-to-for-wind-and-rain exists in DB; debris-hut-emergency-overnight will be created in this batch — API will filter if not yet present"},
+    {"check": "no_constraint_overlap", "passed": true, "evidence": "constraintTags=[no_shelter], blockedByConstraints=[] — no overlap"},
+    {"check": "camelCase_fields", "passed": true, "evidence": "No snake_case field names detected"},
+    {"check": "slug_format", "passed": true, "evidence": "Lowercase kebab-case"}
+  ],
+  "safetyChecks": [
+    {"check": "claims_sourced", "passed": true, "severity": null, "evidence": "All stepByStepActions, warnings, and whatNotToDo map to findings in research packet (FM 21-76 and BSA Scout Life)"},
+    {"check": "action_card_has_steps", "passed": true, "severity": null, "evidence": "8 stepByStepActions — exceeds minimum of 3"},
+    {"check": "action_has_warnings", "passed": true, "severity": null, "evidence": "4 warnings present"},
+    {"check": "action_has_red_flags", "passed": true, "severity": null, "evidence": "3 red flags present"}
+  ],
+  "duplicateChecks": [
+    {"check": "no_duplicate_new", "passed": true, "evidence": "Existing tarp-based lean-to guides cover tarp-assisted construction; this guide fills the no-tarp natural-materials slot — differentiated scope"}
+  ],
+  "constraintChecks": [
+    {"check": "role_not_duplicated", "passed": true, "evidence": "No existing guide has responseRole=primary in Tarp and Improvised Shelter Construction + action layer"},
+    {"check": "blocked_makes_sense", "passed": true, "evidence": "No blocked constraints — lean-to is valid in all constraint conditions (just cold without fire)"}
+  ],
+  "blockingIssues": [],
+  "warnings": [
+    "alternativeToGuideSlugs includes debris-hut-emergency-overnight which is being created in this batch — the API may filter it on first import; it will be valid after that guide is staged"
+  ],
+  "recommendation": "Pass with warnings. Import is safe to proceed. The cross-reference to debris-hut-emergency-overnight may be filtered by the API on first import; this is expected and non-blocking."
+}

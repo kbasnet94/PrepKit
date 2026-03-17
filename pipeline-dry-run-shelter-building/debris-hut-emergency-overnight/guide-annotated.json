@@ -1,0 +1,91 @@
+{
+  "slug": "debris-hut-emergency-overnight",
+  "title": "Build a Debris Hut for Overnight Warmth",
+  "category": "shelter_fire_warmth",
+  "parentTopic": "Tarp and Improvised Shelter Construction",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "Build a debris hut — a compact, fully enclosed natural shelter — that uses body heat and thick leaf insulation to stay warm down to 0°F without fire. It takes several hours to build but is the most thermally effective no-equipment shelter in forested environments.",
+  "quickAnswer": "Build a sloped ridgepole frame, add ribbed branches on both sides, pile at least 3 feet of dry leaves outside and 1–2 feet inside on the floor, and seal the entrance with a debris door plug.",
+  "whenToUse": [
+    "You must survive overnight without fire in cold conditions",
+    "You are in a forested area with abundant dry leaf litter or grasses",
+    "Temperatures are dangerously cold (near or below freezing)",
+    "You have several hours before dark to complete construction",
+    "You have no tarp, sleeping bag, or emergency blanket"
+  ],
+  "preferredAction": "Build a full debris hut with ridgepole, ribbed frame, 3-foot exterior debris layer, insulated floor, and a stuffed door plug to fully seal body heat inside.",
+  "backupAction": "If time or debris is limited, build a smaller debris cocoon — dig into a leaf pile 2–3 feet deep, burrow in feet-first, and pull debris over yourself to trap body heat.",
+  "stepByStepActions": [
+    "Choose a site with abundant dry leaf litter, grasses, or dry moss nearby. Avoid areas under widow-maker branches, near ant or wasp nests, and away from creek banks or low ground where water pools.",
+    "Find a ridgepole longer than your body (at least 9–10 feet). Prop one end on a stump, forked branch, or rock about waist height, with the other end on the ground to create a sloped spine.",
+    "Lean shorter 'rib' branches closely and evenly against both sides of the ridgepole to form a tent-like frame. Then weave a tight lattice of thinner branches and vines through the ribs to hold debris in place.",
+    "Size the interior just large enough for your body. An oversized shelter will stay cold because body heat cannot warm the excess space.",
+    "Pile dry leaves, grasses, or moss on the outside, starting at the bottom and working upward. Build the debris layer to at least 3 feet thick (arms-length depth) on all sides. Conifer needles (pine, spruce) are poor insulators — use them only as a last resort.",
+    "Pack the interior floor with 1–2 feet of compressed leaves or grass as a sleeping mat. This ground layer is as important as the outer insulation — cold ground pulls heat away through conduction.",
+    "Leave a small opening at the high end of the ridgepole just large enough to crawl through. Create a door plug by stuffing a shirt, bag, or a large armful of leaves to fully seal the entrance from inside.",
+    "Enter feet-first to avoid disturbing the debris walls. Immediately seal the entrance with the door plug behind you."
+  ],
+  "warnings": [
+    "A debris hut requires abundant dry leaf litter; it is not feasible in arid, alpine, or desert environments where this material is scarce.",
+    "Skimping on interior floor insulation is the most common failure — sleeping on inadequately insulated ground causes rapid conductive heat loss even inside a well-built hut.",
+    "An oversized interior cannot be warmed by body heat alone; build it snug around your body size.",
+    "Wet or damp debris provides almost no insulation; if debris is wet, look for deeper, sheltered leaf litter or consider a lean-to with a fire instead."
+  ],
+  "whatNotToDo": [
+    "Do not use conifer needles (pine, spruce) as the primary insulation layer — they trap less air than broad leaves and are significantly less effective.",
+    "Do not build the debris layer thinner than 3 feet — a shallow layer will not retain body heat in cold overnight conditions.",
+    "Do not enter the shelter head-first — you risk dislodging the debris walls and reducing insulation integrity.",
+    "Do not leave the entrance unsealed — even a small opening will allow cold air to displace trapped body heat."
+  ],
+  "redFlags": [
+    "You are still shivering 20–30 minutes after entering the sealed shelter — insulation is insufficient; add more debris if possible or exit and build a fire.",
+    "Water is seeping into the floor of the shelter — the site is in a low-lying drainage; abandon and rebuild on higher, drier ground.",
+    "The debris pile is collapsing or thinning — the lattice framework was too loose; reinforce the frame before re-entering."
+  ],
+  "preparednessTips": [
+    "Practice building a debris hut at least once in good conditions — the technique is physically demanding and full-sized construction takes 2–4 hours of effort.",
+    "In cold seasons, scout for suitable debris hut sites (forested areas with deep leaf litter) when planning backcountry travel.",
+    "Carrying a small emergency mylar blanket adds significant warmth with minimal weight and can supplement a debris hut's interior insulation."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "new",
+  "upgradesGuide": null,
+  "appTags": [
+    "shelter",
+    "debris hut",
+    "wilderness",
+    "natural materials",
+    "no fire",
+    "overnight",
+    "cold weather",
+    "survival",
+    "improvised",
+    "insulation"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Debris Hut Construction",
+      "organization": "Wilderness College",
+      "url": "https://www.wildernesscollege.com/debris-hut.html",
+      "whyUseful": "Comprehensive authoritative guidance on debris hut site selection, frame construction, insulation depth, material selection, and entrance technique"
+    },
+    {
+      "title": "Wilderness Survival Debris Hut",
+      "organization": "Willow Haven Outdoor",
+      "url": "https://willowhavenoutdoor.com/survival-debris-hut/",
+      "whyUseful": "Detailed guidance on interior floor insulation depth and the conduction heat loss pathway"
+    },
+    {
+      "title": "Taking Shelter",
+      "organization": "Boy Scouts of America (Scout Life)",
+      "url": "https://scoutlife.org/outdoors/3473/taking-shelter/",
+      "whyUseful": "Established outdoor education source on debris cocoon construction, sizing principles, and ground insulation"
+    }
+  ],
+  "responseRole": "backup",
+  "constraintTags": ["no_shelter", "no_fire", "no_heat_source"],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": ["natural-lean-to-frame-shelter", "fast-tarp-lean-to-for-wind-and-rain"]
+}

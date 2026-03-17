@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "natural-lean-to-frame-shelter",
+    "guideId": "aa166178-050b-42b6-85fa-fb5434a6a81b",
+    "versionId": "4692e8e6-4682-4d26-bf15-ba1b9e09cf8f",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "responseRole": "primary",
+    "changeSummary": "New guide: natural lean-to frame shelter using branches and no tarp, sourced from FM 21-76 and BSA Scout Life",
+    "apiWarnings": ["Alternative slug debris-hut-emergency-overnight not found at import time — kept in record; resolved after debris hut was imported"],
+    "validationWarnings": ["alternativeToGuideSlugs cross-reference resolved after batch import"],
+    "importedAt": "2026-03-16T00:00:00.000Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  },
+  {
+    "slug": "debris-hut-emergency-overnight",
+    "guideId": "8b1ee9a6-7c2b-4021-a450-36e3829221dd",
+    "versionId": "61111b83-77ef-4cb0-b369-791d5f5b0f3e",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "responseRole": "backup",
+    "changeSummary": "New guide: debris hut emergency overnight shelter, fire-independent cold weather survival, sourced from Wilderness College and BSA",
+    "apiWarnings": [],
+    "validationWarnings": [],
+    "importedAt": "2026-03-16T00:00:00.000Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  },
+  {
+    "slug": "choosing-emergency-shelter-type",
+    "guideId": "250a560f-a6e1-4435-960a-065ceada573f",
+    "versionId": "0e78b751-2a18-44f2-b739-017febf1d653",
+    "versionNumber": 1,
+    "reviewStatus": "draft",
+    "isNew": true,
+    "responseRole": "reference",
+    "changeSummary": "New guide: reference guide for choosing between tarp, lean-to, and debris hut shelter types",
+    "apiWarnings": [],
+    "validationWarnings": [],
+    "importedAt": "2026-03-16T00:00:00.000Z",
+    "reviewUrl": "http://localhost:3000/review?filter=draft"
+  }
+]

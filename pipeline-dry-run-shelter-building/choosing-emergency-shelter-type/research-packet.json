@@ -1,0 +1,91 @@
+{
+  "workItemRef": {
+    "action": "new",
+    "targetSlug": null,
+    "category": "shelter_fire_warmth",
+    "parentTopic": "Tarp and Improvised Shelter Construction"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "reference",
+  "suggestedGuideType": "reference_guide",
+  "existingGuideUpgradeTarget": null,
+  "researchFindings": [
+    {
+      "claim": "The most important rule of shelter selection is to use what materials are available; knowing multiple shelter types lets you adapt to any environment",
+      "sourceTitle": "Best Survival Shelter: A-Frame, Debris, Teepee, Lean-To?",
+      "sourceOrganization": "Survival Courses Tasmania",
+      "sourceUrl": "https://survivalcoursestasmania.au/best-survival-shelter/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core selection principle — framing for the reference guide"
+    },
+    {
+      "claim": "A tarp shelter is the fastest option when you have a tarp; it can be rigged in minutes and provides excellent rain protection but poor insulation in cold weather",
+      "sourceTitle": "5 Wilderness Survival Shelters You Should Know How to Build",
+      "sourceOrganization": "QuakeKits",
+      "sourceUrl": "https://quakekits.com/blogs/the-art-of-ready/5-wilderness-survival-shelters-you-should-know-how-to-build-1",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Tarp shelter profile — fast but not warm without sleeping gear"
+    },
+    {
+      "claim": "A natural lean-to can be built in under an hour with branches alone; it provides good wind and rain protection when properly oriented but poor insulation — requires a fire on the open side for warmth in cold conditions",
+      "sourceTitle": "Best Survival Shelter: A-Frame, Debris, Teepee, Lean-To?",
+      "sourceOrganization": "Survival Courses Tasmania",
+      "sourceUrl": "https://survivalcoursestasmania.au/best-survival-shelter/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Lean-to profile — speed vs. warmth trade-off"
+    },
+    {
+      "claim": "A debris hut takes several hours to build but provides the best thermal retention of natural shelter types; it can maintain survivable body temperature down to 0°F without fire in a forested environment",
+      "sourceTitle": "Debris Hut Construction",
+      "sourceOrganization": "Wilderness College",
+      "sourceUrl": "https://www.wildernesscollege.com/debris-hut.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Debris hut profile — slow to build but most effective in extreme cold"
+    },
+    {
+      "claim": "Choose a lean-to when: you have fire capability, weather is mild, you need shelter quickly, or you may need to signal rescuers from the open side",
+      "sourceTitle": "U.S. Army Survival Manual FM 21-76",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://trueprepper.com/wp-content/uploads/2022/11/FM-21-76-US-Army-Survival-Manual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Decision rule — when lean-to is the right choice"
+    },
+    {
+      "claim": "Choose a debris hut when: temperatures are dangerously cold, you cannot start a fire, you are in a forested area with abundant leaf litter, and you expect to overnight without fire support",
+      "sourceTitle": "Debris Hut Construction",
+      "sourceOrganization": "Wilderness College",
+      "sourceUrl": "https://www.wildernesscollege.com/debris-hut.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Decision rule — when debris hut is the right choice"
+    },
+    {
+      "claim": "No shelter type compensates for inadequate ground insulation; sleeping on bare ground causes rapid conductive heat loss regardless of overhead cover type",
+      "sourceTitle": "Taking Shelter — Scout Life",
+      "sourceOrganization": "Boy Scouts of America",
+      "sourceUrl": "https://scoutlife.org/outdoors/3473/taking-shelter/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Universal warning applicable to all shelter types"
+    },
+    {
+      "claim": "Do not build a shelter larger than your body requires; excess internal volume cannot be warmed by body heat alone",
+      "sourceTitle": "Taking Shelter — Scout Life",
+      "sourceOrganization": "Boy Scouts of America",
+      "sourceUrl": "https://scoutlife.org/outdoors/3473/taking-shelter/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Universal warning — oversizing is the most common mistake in natural shelter construction"
+    },
+    {
+      "claim": "A debris hut is not feasible in arid, alpine, or desert environments where leaf litter is scarce; in these environments lean-to or tarp shelter with supplemental insulation (emergency blanket) is the correct choice",
+      "sourceTitle": "Debris Hut Construction",
+      "sourceOrganization": "Wilderness College",
+      "sourceUrl": "https://www.wildernesscollege.com/debris-hut.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Environment-specific decision — prevents wasted effort in wrong terrain"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [],
+  "identifiedGaps": [],
+  "recommendation": "Write a reference_guide that helps users choose between tarp shelter, natural lean-to, and debris hut based on available materials, temperature, fire capability, and time available. Use a decision framework (whenToUse, preferredAction, backupAction) and a clear comparison of each shelter type's speed vs. warmth trade-off. No stepByStepActions for a reference guide. Warnings should focus on universal mistakes (oversizing, no ground insulation) that apply across all types."
+}
