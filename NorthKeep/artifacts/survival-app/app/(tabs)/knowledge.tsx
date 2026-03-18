@@ -9,6 +9,7 @@ import {
   Platform,
   Pressable,
   ScrollView,
+  SectionList,
   StyleSheet,
   Text,
   TextInput,
@@ -288,6 +289,23 @@ export default function KnowledgeScreen() {
     );
   }, [allGuides, selectedCategory, searchQuery, downloadedCategories, onlineGuidesCache]);
 
+  const guideSections = useMemo(() => {
+    const groups = new Map<string, Guide[]>();
+    for (const g of categoryGuides) {
+      const topic = g.parentTopic || "General";
+      if (!groups.has(topic)) groups.set(topic, []);
+      groups.get(topic)!.push(g);
+    }
+    // Put "General" (no parentTopic) at the end
+    const sections: { title: string; data: Guide[] }[] = [];
+    for (const [title, data] of groups) {
+      if (title !== "General") sections.push({ title, data });
+    }
+    const general = groups.get("General");
+    if (general) sections.push({ title: "General", data: general });
+    return sections;
+  }, [categoryGuides]);
+
   const searchResults = useMemo(() => {
     if (!searchQuery.trim() || view !== "categories") return null;
     const downloaded = searchGuides(searchQuery);
@@ -501,11 +519,16 @@ export default function KnowledgeScreen() {
           showsVerticalScrollIndicator={false}
         />
       ) : (
-        <FlatList
-          data={categoryGuides}
+        <SectionList
+          sections={guideSections}
           keyExtractor={(item) => item.id}
           renderItem={({ item, index }) => (
             <GuideRow guide={item} index={index} onPress={() => handleOpenGuide(item)} C={C} styles={styles} />
+          )}
+          renderSectionHeader={({ section: { title } }) => (
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionHeaderText}>{title}</Text>
+              </View>
           )}
           contentContainerStyle={[
             styles.listContent,
@@ -542,6 +565,7 @@ export default function KnowledgeScreen() {
               </View>
             )
           }
+          stickySectionHeadersEnabled={false}
           showsVerticalScrollIndicator={false}
         />
       )}
@@ -753,6 +777,17 @@ function makeStyles(C: typeof Colors.light) {
     guideRowMeta: {
       flexDirection: "row",
       alignItems: "center",
+    },
+    sectionHeader: {
+      paddingTop: 16,
+      paddingBottom: 6,
+    },
+    sectionHeaderText: {
+      fontSize: 13,
+      fontFamily: "Inter_600SemiBold",
+      color: C.textSecondary,
+      letterSpacing: 0.2,
+      textTransform: "uppercase" as const,
     },
     layerLegend: {
       flexDirection: "row",
