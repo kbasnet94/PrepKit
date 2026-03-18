@@ -1,5 +1,6 @@
 import type {
   Guide,
+  GuideImage,
   GuideLayer,
   GuideSourceQuality,
   GuideContentStatus,
@@ -87,6 +88,7 @@ export interface SupabaseGuideRow {
   constraint_tags: string[];
   blocked_by_constraints: string[];
   alternative_to_guide_slugs: string[];
+  images: GuideImage[] | null;
   // From joins
   slug: string;
   category_slug: string;
@@ -134,5 +136,16 @@ export function transformSupabaseRow(row: SupabaseGuideRow): Guide {
     constraintTags: Array.isArray(row.constraint_tags) ? row.constraint_tags : undefined,
     blockedByConstraints: Array.isArray(row.blocked_by_constraints) ? row.blocked_by_constraints : undefined,
     alternativeToGuideSlugs: Array.isArray(row.alternative_to_guide_slugs) ? row.alternative_to_guide_slugs : undefined,
+    // Only include images that have been uploaded (storageUrl set) — pending images are admin-only
+    images: Array.isArray(row.images)
+      ? row.images.filter((img: GuideImage) => !!img.storageUrl).map((img: GuideImage) => ({
+          key: img.key,
+          caption: img.caption,
+          altText: img.altText,
+          associatedStepIndex: img.associatedStepIndex,
+          storageUrl: img.storageUrl,
+          // description intentionally excluded — admin-facing only
+        }))
+      : undefined,
   };
 }

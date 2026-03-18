@@ -72,9 +72,12 @@ integrationDecision   - From values above
 upgradesGuide         - slug of guide this replaces, or null
 appTags               - Array of strings for search/filtering
 sourceReferences      - Array of { title, organization, url, whyUseful }
+images                - Array of GuideImage objects (see Image Recommendations section); default []
 ```
 
 **Do NOT populate constraint metadata fields** — that is the Constraint Annotation skill's job. Omit `responseRole`, `constraintTags`, `blockedByConstraints`, and `alternativeToGuideSlugs` from your output.
+
+**Always include `images` in your output.** For most guides this is `[]`. For visual guides, populate it with image recommendation objects (see Image Recommendations section below). Never set `storageUrl` — always leave it `null`.
 
 **Use camelCase throughout. Do not add fields not listed above.**
 
@@ -145,6 +148,66 @@ Each entry must have all four fields:
 ### parentTopic conventions
 Group related guides under a shared parentTopic string. Look at sibling guides in the same category for the right grouping.
 
+## Image Recommendations
+
+### When to recommend images
+
+Recommend images only for guides where a visual meaningfully reduces ambiguity that words cannot resolve. Good candidates:
+
+- **Structural construction**: shelters (A-frame, lean-to, debris hut), knot types, lashing patterns
+- **Hand/body position**: first aid techniques (CPR hand placement, tourniquet placement, sling positioning)
+- **Equipment assembly**: water filter assembly, fire-starting kit layout, signal mirror positioning
+- **Identification**: plant/water source identification guides
+
+Do NOT recommend images for:
+- Purely procedural action cards (steps are sufficient)
+- Text-based checklists or preparedness guides
+- Guides where the "image" would just be a photo of something obvious
+
+### Image count guidance
+
+- Most visual guides: 1–2 images
+- Technique-heavy guides (knots, first aid): up to 4
+- Never exceed 4 images per guide — if more are needed, the guide should be split into sub-guides
+
+### Image object shape
+
+Each image object in the `images` array must have all six fields:
+
+```json
+{
+  "key": "finished-bowline",
+  "description": "Close-up of a completed bowline knot against a neutral background. Must clearly show the characteristic non-slipping loop, the tail exiting through the loop, and both load-bearing strands. Labels for 'working end' and 'standing end' preferred if a diagram. Clean white or grey background.",
+  "caption": "Finished bowline knot",
+  "altText": "A bowline knot showing the fixed loop and the two rope ends",
+  "associatedStepIndex": null,
+  "storageUrl": null
+}
+```
+
+| Field | Rules |
+|---|---|
+| `key` | Lowercase kebab-case, unique within this guide (e.g. `a-frame-side-view`, `step-3-lash-ridge`) |
+| `description` | 2–5 sentences. Describe: subject & angle, what must be clearly visible, preferred format (photo vs. line diagram), background preference. This is the admin's sourcing brief — be specific enough that they can find or create the right image. |
+| `caption` | 3–8 words. Shown to users under the image. |
+| `altText` | 1 sentence describing the image for accessibility. |
+| `associatedStepIndex` | `null` = gallery section (rendered near top of guide). Integer = 0-based step index (image renders next to that step in the Steps section). |
+| `storageUrl` | Always `null` in pipeline output. Admin uploads the file, which populates this field. |
+
+### Guide splitting rule
+
+If a topic would require more than 4 images, it must be split into separate guide cards at the **Planning step**, not patched with more images here. Example: "Emergency Shelters" → split into `build-a-frame-shelter`, `build-a-lean-to`, `build-a-debris-hut`. Each resulting card gets 1–2 images.
+
+### Output
+
+Always include `images` in your guide JSON, even if empty:
+
+```json
+"images": []
+```
+
+For visual guides, populate it before the `sourceReferences` field.
+
 ## What not to do
 
 - Don't invent warnings, red flags, or steps that aren't grounded in source material
@@ -155,6 +218,9 @@ Group related guides under a shared parentTopic string. Look at sibling guides i
 - Don't write stepByStepActions for reference_guides or preparedness_guides
 - Don't use `"high"`, `"low"`, or `"unknown"` for sourceQuality — only `"strong"`, `"mixed"`, `"weak"`
 - Don't populate constraint metadata fields (responseRole, constraintTags, etc.)
+- Don't set `storageUrl` on any image object — always leave it `null`
+- Don't add more than 4 images to a single guide — split the guide instead
+- Don't recommend images for purely procedural or checklist-type guides
 
 ## Subagent Instructions
 

@@ -17,6 +17,9 @@ export function GuidePreview({ version }: { version: GuideVersion }) {
   const constraintTags = Array.isArray(version.constraint_tags) ? version.constraint_tags : [];
   const blockedByConstraints = Array.isArray(version.blocked_by_constraints) ? version.blocked_by_constraints : [];
   const alternativeSlugs = Array.isArray(version.alternative_to_guide_slugs) ? version.alternative_to_guide_slugs : [];
+  const images = Array.isArray(version.images) ? version.images : [];
+  const pendingImages = images.filter((img) => !img.storageUrl);
+  const uploadedImages = images.filter((img) => !!img.storageUrl);
 
   return (
     <Card className="max-w-2xl">
@@ -148,6 +151,29 @@ export function GuidePreview({ version }: { version: GuideVersion }) {
           <section>
             <h3 className="mb-1 font-medium text-sm">Related guides</h3>
             <p className="text-muted-foreground text-sm">{related.join(", ")}</p>
+          </section>
+        )}
+        {images.length > 0 && (
+          <section className="rounded-md border border-blue-200 bg-blue-50/50 p-3 dark:border-blue-900/50 dark:bg-blue-950/20">
+            <h3 className="mb-2 font-medium text-blue-800 text-sm dark:text-blue-200">
+              Images ({uploadedImages.length} uploaded, {pendingImages.length} pending)
+            </h3>
+            <ul className="space-y-2">
+              {images.map((img, i) => (
+                <li key={i} className="text-xs">
+                  <span className="font-mono font-medium">{img.key}</span>
+                  <span className="text-muted-foreground ml-1">
+                    · {img.associatedStepIndex === null ? "Gallery" : `Step ${img.associatedStepIndex + 1}`}
+                    · {img.storageUrl ? (
+                      <span className="text-green-700 dark:text-green-400">Uploaded</span>
+                    ) : (
+                      <span className="text-amber-700 dark:text-amber-400">Awaiting upload</span>
+                    )}
+                  </span>
+                  {img.caption && <span className="text-muted-foreground ml-1">— {img.caption}</span>}
+                </li>
+              ))}
+            </ul>
           </section>
         )}
         {(constraintTags.length > 0 || blockedByConstraints.length > 0 || alternativeSlugs.length > 0) && (

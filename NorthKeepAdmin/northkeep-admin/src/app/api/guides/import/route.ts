@@ -82,6 +82,11 @@ function buildDiff(incoming: NormalizedGuide, current: Record<string, any> | nul
   const curSrc = current ? (Array.isArray(current.source_references) ? current.source_references : []) : [];
   fields.push({ key: "sourceReferences", label: "Source references", type: "sources", incoming: inSrc, current: curSrc, changed: !arrEq(inSrc, curSrc) });
 
+  // images: AI-authored image recommendations (storageUrl null until admin uploads)
+  const inImgs = Array.isArray(incoming.images) ? incoming.images : [];
+  const curImgs = current ? (Array.isArray(current.images) ? current.images : []) : [];
+  fields.push({ key: "images", label: "Images", type: "array", incoming: inImgs, current: curImgs, changed: !arrEq(inImgs, curImgs) });
+
   return { fields, hasChanges: fields.some((f) => f.changed) };
 }
 
@@ -221,6 +226,7 @@ export async function POST(request: Request) {
       constraint_tags: ctResult.valid,
       blocked_by_constraints: bcResult.valid,
       alternative_to_guide_slugs: validAltSlugs,
+      images: Array.isArray(guide.images) ? guide.images : [],
       review_status: "draft",
       change_summary: (body.changeSummary as string) || "Imported from JSON upload",
     };

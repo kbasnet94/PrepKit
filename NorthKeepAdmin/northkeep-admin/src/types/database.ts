@@ -50,6 +50,21 @@ export interface SourceReference {
   whyUseful?: string;
 }
 
+export interface GuideImage {
+  /** Unique within the guide — used as the storage filename (no extension) */
+  key: string;
+  /** AI-authored sourcing brief shown only to admins, never to mobile users */
+  description: string;
+  /** Short label displayed under the image on mobile */
+  caption: string;
+  /** Accessibility alt text */
+  altText: string;
+  /** null = gallery section at top; 0-based index = renders next to that step */
+  associatedStepIndex: number | null;
+  /** null until admin uploads; populated by the image upload API */
+  storageUrl: string | null;
+}
+
 export interface GuideVersion {
   id: string;
   guide_id: string;
@@ -81,6 +96,7 @@ export interface GuideVersion {
   constraint_tags: string[];
   blocked_by_constraints: string[];
   alternative_to_guide_slugs: string[];
+  images: GuideImage[];
   review_status: ReviewStatus;
   change_summary: string | null;
   created_by: string | null;

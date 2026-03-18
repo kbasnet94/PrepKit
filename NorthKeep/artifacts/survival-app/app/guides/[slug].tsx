@@ -1,7 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
+import { Image } from "expo-image";
 import { router, useLocalSearchParams } from "expo-router";
-import React, { useMemo, useEffect } from "react";
+import React, { useMemo, useEffect, useState } from "react";
 import {
+  Dimensions,
+  Modal,
   Platform,
   Pressable,
   ScrollView,
@@ -16,7 +19,7 @@ import Animated, { FadeInDown } from "react-native-reanimated";
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
 import { getGuideBySlug, getRelatedGuides } from "@/lib/guides";
-import type { Guide, GuideSourceRef } from "@/lib/guides";
+import type { Guide, GuideImage, GuideSourceRef } from "@/lib/guides";
 import { GuideFeedback } from "@/components/GuideFeedback";
 import { useGuideStore } from "@/contexts/GuideStoreContext";
 
@@ -175,6 +178,169 @@ function RelatedGuideRow({ guide, styles, C }: { guide: Guide; styles: ReturnTyp
   );
 }
 
+// ─── Image lightbox ───────────────────────────────────────────────────────────
+
+function ImageLightbox({
+  image,
+  onClose,
+}: {
+  image: GuideImage;
+  onClose: () => void;
+}) {
+  const { width, height } = Dimensions.get("window");
+  return (
+    <Modal transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable
+        style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.92)", alignItems: "center", justifyContent: "center" }}
+        onPress={onClose}
+      >
+        <Pressable onPress={(e) => e.stopPropagation()}>
+          <Image
+            source={{ uri: image.storageUrl! }}
+            style={{ width: width - 32, height: height * 0.6, borderRadius: 8 }}
+            contentFit="contain"
+            cachePolicy="disk"
+            accessibilityLabel={image.altText}
+          />
+          {image.caption ? (
+            <Text
+              style={{
+                color: "rgba(255,255,255,0.85)",
+                textAlign: "center",
+                marginTop: 12,
+                fontSize: 14,
+                fontFamily: "Inter_400Regular",
+                paddingHorizontal: 16,
+              }}
+            >
+              {image.caption}
+            </Text>
+          ) : null}
+        </Pressable>
+        <Pressable
+          style={{ position: "absolute", top: 52, right: 20, padding: 8 }}
+          onPress={onClose}
+          hitSlop={12}
+        >
+          <Ionicons name="close-circle" size={28} color="rgba(255,255,255,0.8)" />
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+}
+
+// ─── Single image tile ────────────────────────────────────────────────────────
+
+function GuideImageTile({
+  image,
+  styles,
+}: {
+  image: GuideImage;
+  styles: ReturnType<typeof makeStyles>;
+}) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  if (!image.storageUrl) return null;
+
+  return (
+    <>
+      <Pressable
+        onPress={() => setLightboxOpen(true)}
+        style={({ pressed }) => [styles.imageTile, pressed && { opacity: 0.85 }]}
+        accessibilityRole="button"
+        accessibilityLabel={`View image: ${image.caption || image.altText}`}
+      >
+        <Image
+          source={{ uri: image.storageUrl }}
+          style={styles.imageTileImg}
+          contentFit="cover"
+          cachePolicy="disk"
+          accessibilityLabel={image.altText}
+        />
+        {image.caption ? (
+          <Text style={styles.imageCaption}>{image.caption}</Text>
+        ) : null}
+      </Pressable>
+      {lightboxOpen && (
+        <ImageLightbox image={image} onClose={() => setLightboxOpen(false)} />
+      )}
+    </>
+  );
+}
+
+// ─── Gallery section (images with associatedStepIndex === null) ───────────────
+
+function ImageGallery({
+  images,
+  styles,
+}: {
+  images: GuideImage[];
+  styles: ReturnType<typeof makeStyles>;
+}) {
+  const galleryImages = images.filter((img) => img.associatedStepIndex === null && img.storageUrl);
+  if (galleryImages.length === 0) return null;
+
+  return (
+    <View style={styles.galleryRow}>
+      {galleryImages.map((img) => (
+        <GuideImageTile key={img.key} image={img} styles={styles} />
+      ))}
+    </View>
+  );
+}
+
+// ─── Inline step image (shown after a specific step) ─────────────────────────
+
+function StepImage({
+  stepIndex,
+  images,
+  styles,
+}: {
+  stepIndex: number;
+  images: GuideImage[];
+  styles: ReturnType<typeof makeStyles>;
+}) {
+  const match = images.find((img) => img.associatedStepIndex === stepIndex && img.storageUrl);
+  if (!match) return null;
+  return <GuideImageTile image={match} styles={styles} />;
+}
+
+// ─── StepList with inline images ─────────────────────────────────────────────
+
+function StepListWithImages({
+  steps,
+  images,
+  styles,
+  C,
+}: {
+  steps: string[];
+  images: GuideImage[];
+  styles: ReturnType<typeof makeStyles>;
+  C: typeof Colors.light;
+}) {
+  const hasStepImages = images.some((img) => img.associatedStepIndex !== null && img.storageUrl);
+
+  if (!hasStepImages) {
+    return <StepList steps={steps} styles={styles} C={C} />;
+  }
+
+  return (
+    <View style={styles.stepList}>
+      {steps.map((step, i) => (
+        <View key={i}>
+          <View style={styles.stepRow}>
+            <View style={styles.stepNum}>
+              <Text style={styles.stepNumText}>{i + 1}</Text>
+            </View>
+            <Text style={styles.stepText}>{step}</Text>
+          </View>
+          <StepImage stepIndex={i} images={images} styles={styles} />
+        </View>
+      ))}
+    </View>
+  );
+}
+
 function NotFoundScreen({ styles, C }: { styles: ReturnType<typeof makeStyles>; C: typeof Colors.light }) {
   return (
     <View style={styles.notFound}>
@@ -285,6 +451,13 @@ export default function GuideDetailScreen() {
           </Animated.View>
         ) : null}
 
+        {/* Gallery images (associatedStepIndex === null, storageUrl set) */}
+        {guide.images && guide.images.length > 0 ? (
+          <Animated.View entering={FadeInDown.delay(70).duration(220)}>
+            <ImageGallery images={guide.images} styles={styles} />
+          </Animated.View>
+        ) : null}
+
         {isHigh && isMedical ? (
           <Animated.View entering={FadeInDown.delay(80).duration(220)} style={styles.medicalNotice}>
             <Ionicons name="warning-outline" size={16} color="#C0392B" />
@@ -313,7 +486,12 @@ export default function GuideDetailScreen() {
 
             {guide.steps.length > 0 ? (
               <Section label="Steps" icon="list-outline" delay={nextDelay()} styles={styles} C={C}>
-                <StepList steps={guide.steps} styles={styles} C={C} />
+                <StepListWithImages
+                  steps={guide.steps}
+                  images={guide.images ?? []}
+                  styles={styles}
+                  C={C}
+                />
               </Section>
             ) : null}
 
@@ -716,6 +894,32 @@ function makeStyles(C: typeof Colors.light) {
       fontSize: 14,
       fontFamily: "Inter_500Medium",
       color: C.accent,
+    },
+    // ── Image gallery ────────────────────────────────────────────────────────
+    galleryRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: 10,
+    },
+    imageTile: {
+      borderRadius: 10,
+      overflow: "hidden",
+      backgroundColor: C.surface,
+      // single image: full width; multiple: roughly half-width (flex handles it)
+      flex: 1,
+      minWidth: 140,
+    },
+    imageTileImg: {
+      width: "100%",
+      aspectRatio: 4 / 3,
+    },
+    imageCaption: {
+      fontSize: 12,
+      fontFamily: "Inter_400Regular",
+      color: C.textSecondary,
+      paddingHorizontal: 8,
+      paddingVertical: 6,
+      lineHeight: 17,
     },
   });
 }

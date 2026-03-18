@@ -8,6 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GuidePreview } from "@/components/guides/guide-preview";
 import { GuideEditorForm } from "@/components/guides/guide-editor-form";
 import { ReviewStatusSelect } from "@/components/guides/review-status-select";
+import { GuideImagesManager } from "@/components/guides/guide-images-manager";
+import type { GuideImage } from "@/types/database";
 
 export default async function GuideDetailPage({
   params,
@@ -97,11 +99,19 @@ export default async function GuideDetailPage({
         </Button>
       </div>
 
-      <Tabs defaultValue={tab === "editor" ? "editor" : tab === "versions" ? "versions" : "preview"}>
+      <Tabs defaultValue={tab === "editor" ? "editor" : tab === "versions" ? "versions" : tab === "images" ? "images" : "preview"}>
         <TabsList>
           <TabsTrigger value="preview">Preview</TabsTrigger>
           <TabsTrigger value="versions">Version history</TabsTrigger>
           <TabsTrigger value="editor">Edit</TabsTrigger>
+          <TabsTrigger value="images">
+            Images
+            {latestVersion && Array.isArray((latestVersion as { images?: GuideImage[] }).images) && (latestVersion as { images?: GuideImage[] }).images!.length > 0 && (
+              <span className="ml-1.5 rounded-full bg-amber-500 px-1.5 py-0.5 font-medium text-white text-xs">
+                {(latestVersion as { images?: GuideImage[] }).images!.length}
+              </span>
+            )}
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="preview" className="mt-4">
           {latestVersion ? (
@@ -162,6 +172,25 @@ export default async function GuideDetailPage({
             <Card>
               <CardContent className="pt-6">
                 <p className="text-muted-foreground">Create a version first from the Edit page.</p>
+              </CardContent>
+            </Card>
+          )}
+        </TabsContent>
+        <TabsContent value="images" className="mt-4">
+          {latestVersion ? (
+            <GuideImagesManager
+              versionId={latestVersion.id}
+              guideSlug={guide.slug}
+              initialImages={
+                Array.isArray((latestVersion as { images?: GuideImage[] }).images)
+                  ? (latestVersion as { images?: GuideImage[] }).images!
+                  : []
+              }
+            />
+          ) : (
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground">No version content yet.</p>
               </CardContent>
             </Card>
           )}

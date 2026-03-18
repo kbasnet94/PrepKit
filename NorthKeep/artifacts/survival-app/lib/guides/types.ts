@@ -43,6 +43,20 @@ export type CardType =
   | "Checklist"
   | string;
 
+export interface GuideImage {
+  /** Unique within the guide */
+  key: string;
+  /** Short label displayed under the image */
+  caption: string;
+  /** Accessibility alt text */
+  altText: string;
+  /** null = gallery section; 0-based index = renders next to that step */
+  associatedStepIndex: number | null;
+  /** Public URL from Supabase Storage; null if image not yet uploaded */
+  storageUrl: string | null;
+  // Note: description field is intentionally excluded — it's admin-facing only
+}
+
 export interface GuideSourceRef {
   title: string;
   organization: string;
@@ -82,6 +96,7 @@ export interface Guide {
   constraintTags?: string[];
   blockedByConstraints?: string[];
   alternativeToGuideSlugs?: string[];
+  images?: GuideImage[];
 }
 
 export interface GuideSourceReference {
