@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { GuideVersion } from "@/types/database";
+import type { GuideVersion, ContentGap } from "@/types/database";
 import { validateConstraintTags } from "@/lib/constants/constraint-tags";
 import { isValidResponseRole } from "@/lib/constants/response-roles";
 
@@ -53,6 +53,9 @@ export function GuideEditorForm({
     Array.isArray(version.app_tags) ? version.app_tags.join(", ") : ""
   );
   const [notes, setNotes] = useState(version.notes ?? "");
+  const [contentGaps, setContentGaps] = useState<ContentGap[]>(
+    Array.isArray(version.content_gaps) ? version.content_gaps : []
+  );
   const [responseRole, setResponseRole] = useState<string>(
     (version as { response_role?: string | null }).response_role ?? ""
   );
@@ -137,6 +140,7 @@ export function GuideEditorForm({
           source_references: sourceReferences.filter((s) => s.title),
           app_tags: appTagsStr.split(/[\n,]/).map((t) => t.trim()).filter(Boolean),
           notes: notes || null,
+          content_gaps: contentGaps.filter((g) => g.slug || g.description),
           response_role: responseRole || null,
           constraint_tags: ctResult.valid,
           blocked_by_constraints: bcResult.valid,
@@ -372,6 +376,43 @@ export function GuideEditorForm({
         <div className="grid gap-2">
           <Label htmlFor="notes">Notes (internal)</Label>
           <Textarea id="notes" value={notes} onChange={(e) => setNotes(e.target.value)} rows={3} />
+        </div>
+        <div className="grid gap-2">
+          <Label className="text-orange-700 dark:text-orange-400">Content gaps</Label>
+          <p className="text-muted-foreground text-xs">
+            Companion guides that this guide references but don&apos;t exist yet. Flagged during planning gap analysis.
+          </p>
+          {contentGaps.map((gap, i) => (
+            <div key={i} className="flex flex-col gap-2 rounded border border-orange-200 p-3 dark:border-orange-900">
+              <div className="flex gap-2">
+                <Input
+                  placeholder="suggested-slug"
+                  value={gap.slug}
+                  onChange={(e) => {
+                    const next = [...contentGaps];
+                    next[i] = { ...next[i], slug: e.target.value };
+                    setContentGaps(next);
+                  }}
+                  className="font-mono"
+                />
+                <Button type="button" variant="outline" size="icon" onClick={() => setContentGaps((prev) => prev.filter((_, j) => j !== i))}>
+                  −
+                </Button>
+              </div>
+              <Input
+                placeholder="What this guide should cover"
+                value={gap.description}
+                onChange={(e) => {
+                  const next = [...contentGaps];
+                  next[i] = { ...next[i], description: e.target.value };
+                  setContentGaps(next);
+                }}
+              />
+            </div>
+          ))}
+          <Button type="button" variant="outline" size="sm" onClick={() => setContentGaps((prev) => [...prev, { slug: "", description: "" }])}>
+            + Add content gap
+          </Button>
         </div>
         <div className="flex gap-2">
           <Button onClick={handleSaveDraft} disabled={saving}>

@@ -1,0 +1,160 @@
+{
+  "slug": "foraging",
+  "title": "Wild Plant Identification for Emergency Foraging",
+  "category": "water_food",
+  "parentTopic": "Emergency Food Procurement",
+  "layer": "reference",
+  "guideType": "reference_guide",
+  "summary": "A reference guide to plant identification principles for emergency foraging, covering morphological warning signs, dangerous plant families and lookalikes, the Universal Edibility Test protocol and its limitations, and key poisonous plant profiles. Designed as background knowledge to support the step-by-step foraging procedures in the companion scenario guide.",
+  "quickAnswer": "Never eat a wild plant unless you can positively identify it using at least three independent morphological features confirmed against a regional field guide.",
+  "whenToUse": [
+    "You want to understand how to identify potentially dangerous plants before foraging",
+    "You need reference information on the Universal Edibility Test and when it applies",
+    "You are learning to recognize dangerous plant families such as Apiaceae (carrot/hemlock family)",
+    "You want to understand which poisonous plants are most commonly confused with edible species",
+    "You are building foraging knowledge as part of emergency preparedness"
+  ],
+  "preferredAction": "Obtain a regional field guide and learn to identify at least five dangerous plants in your area before any foraging situation arises.",
+  "backupAction": "If no field guide is available and positive identification is impossible, use the Universal Edibility Test as a last resort — but never apply it to mushrooms.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Misidentification of wild plants is a common and potentially fatal error. The Apiaceae family (carrot/parsley/celery) contains both everyday edible plants and some of the deadliest plants in North America.",
+    "The Universal Edibility Test cannot detect slow-onset toxins, cumulative poisons, or compounds that damage organs without immediate symptoms. It is a last-resort measure, not a reliable safety test.",
+    "Do not apply the Universal Edibility Test to mushrooms under any circumstances. Deadly mushrooms such as the death cap (Amanita phalloides) cause no immediate discomfort but can destroy the liver over 24 to 72 hours.",
+    "Some plants change toxicity by growth stage or preparation method. Elderberries are edible when cooked but toxic raw. Pokeweed young shoots are edible but mature plants are poisonous. Black cherry leaves release hydrocyanic acid after wilting.",
+    "Foraging near roads, industrial sites, farmland edges, or treated lawns risks consuming plants contaminated with pesticides, herbicides, or heavy metals that are invisible and odorless.",
+    "Plant identification apps have meaningful error rates with toxic lookalikes and should never be used as the sole identification source.",
+    "Common names overlap between edible and poisonous species. Always use botanical (Latin) names or multiple morphological features for confirmation.",
+    "Children are at higher risk from plant toxins. Doses that cause mild symptoms in adults can be lethal in children."
+  ],
+  "whatNotToDo": [
+    "Do not eat any plant identified by a single feature or common name alone — require at least three independent morphological identification points.",
+    "Do not consume any plant from the Apiaceae family (umbrella-shaped flower clusters) unless you have extensive specific training, as deadly lookalikes in this family are extremely difficult to distinguish.",
+    "Do not assume a plant is safe because wildlife is eating it — many plants toxic to humans are tolerated by animals.",
+    "Do not apply the Universal Edibility Test to mushrooms or fungi of any kind.",
+    "Do not rely on plant identification apps as your only confirmation method.",
+    "Do not forage from areas near roads, industrial zones, golf courses, or sprayed farmland.",
+    "Do not eat plants that are diseased, discolored, wilted, or growing in stagnant or contaminated water.",
+    "Do not induce vomiting after suspected toxic plant ingestion unless specifically directed by Poison Control."
+  ],
+  "redFlags": [
+    "Burning or tingling sensation in mouth, throat, or lips after tasting any plant part — spit it out immediately and call Poison Control (1-800-222-1222).",
+    "Nausea, vomiting, or severe abdominal pain within minutes to hours of eating a wild plant — call Poison Control immediately.",
+    "Rapid or irregular heartbeat after plant ingestion — call 911.",
+    "Difficulty breathing, throat tightness, or shortness of breath after plant ingestion — call 911.",
+    "Seizures, muscle spasms, or loss of coordination after plant ingestion — call 911 immediately.",
+    "Confusion, disorientation, or sudden drowsiness after plant ingestion — call 911.",
+    "Excessive salivation or drooling after eating a plant — call Poison Control.",
+    "Skin rash, hives, or swelling of face, lips, or throat after plant contact or ingestion — treat as potential anaphylaxis, call 911."
+  ],
+  "preparednessTips": [
+    "Obtain a region-specific field guide to edible and toxic plants before any wilderness trip. Species and lookalikes vary by geography.",
+    "Save Poison Control's number in your phone: 1-800-222-1222 (US, 24/7, free).",
+    "Learn to identify at least five toxic plants common in your region: poison hemlock, water hemlock, deadly nightshade, pokeweed (mature), and foxglove.",
+    "Practice the three-point identification method on safe, well-known plants (dandelion, broadleaf plantain, cattail) before relying on it in emergencies.",
+    "Include a compact regional plant identification laminate or pocket guide in your emergency kit.",
+    "Take a local foraging walk led by a certified instructor — hands-on learning with expert verification is far more reliable than book learning alone.",
+    "Learn to recognize the Apiaceae family's umbrella-shaped flower clusters so you can avoid the entire family unless specifically trained.",
+    "Cross-reference any plant identification with the USDA Plants Database (plants.usda.gov) for regional range maps and distribution data.",
+    "Understand seasonal availability: spring and early summer favor leafy greens; late summer and fall favor fruits, nuts, and seeds."
+  ],
+  "sourceQuality": "mixed",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "foraging",
+  "appTags": [
+    "plant identification",
+    "foraging safety",
+    "poisonous plants",
+    "universal edibility test",
+    "edible plants",
+    "wild food",
+    "toxic lookalikes",
+    "Apiaceae",
+    "poison hemlock",
+    "water hemlock",
+    "emergency food",
+    "wilderness survival",
+    "plant families"
+  ],
+  "images": [
+    {
+      "key": "apiaceae-comparison-chart",
+      "description": "Side-by-side comparison diagram showing the key distinguishing features of four Apiaceae family members: poison hemlock (smooth stem with purple blotches, fern-like leaves), water hemlock (broader leaflets, tuber cluster at base), Queen Anne's Lace (hairy stem, no purple), and wild parsnip (no purple spots). Each plant should be shown as a simplified botanical illustration with callout labels pointing to the distinguishing feature. Clean white background, line diagram style preferred.",
+      "caption": "Distinguishing safe vs. deadly Apiaceae family plants",
+      "altText": "Comparison diagram of poison hemlock, water hemlock, Queen Anne's Lace, and wild parsnip showing their distinguishing stem and leaf features",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    },
+    {
+      "key": "general-plant-warning-signs",
+      "description": "Visual reference card showing the six general morphological warning signs that suggest a plant may be toxic: (1) milky or discolored sap shown as a broken stem dripping white liquid, (2) fine hairs or spines on a stem, (3) umbrella-shaped flower clusters (Apiaceae), (4) green/white/yellow berries on a branch, (5) three-leaved growth pattern, (6) almond scent indicator icon near woody parts. Each sign should be a simple, clear icon or illustration with a short label. Grid layout on white background.",
+      "caption": "Six warning signs of potentially toxic plants",
+      "altText": "Six illustrated warning signs for plant toxicity including milky sap, spines, umbrella flowers, colored berries, three-leaf pattern, and almond scent",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    }
+  ],
+  "sourceReferences": [
+    {
+      "title": "U.S. Army Survival Manual FM 21-76 / ATP 3-50.21 (Chapter 9: Survival Use of Plants)",
+      "organization": "U.S. Department of Defense / U.S. Army",
+      "url": "http://www.equipped.org/fm21-76.htm",
+      "whyUseful": "Source of the Universal Edibility Test protocol and general morphological warning signs for unknown plants in survival situations."
+    },
+    {
+      "title": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "organization": "USDA",
+      "url": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "whyUseful": "Authoritative federal guidance on plant identification methodology, location safety, and the three-point identification principle."
+    },
+    {
+      "title": "Poison Hemlock Identification and Management",
+      "organization": "University of Maryland Extension",
+      "url": "https://extension.umd.edu/resource/poison-hemlock-identification-and-management",
+      "whyUseful": "Detailed identification features and toxicity information for poison hemlock, the most commonly confused deadly Apiaceae member."
+    },
+    {
+      "title": "Poison Hemlock and Western Waterhemlock: Deadly Plants That May Be Growing in Your Pasture",
+      "organization": "Oregon State University Extension Service",
+      "url": "https://extension.oregonstate.edu/catalog/poison-hemlock-western-waterhemlock-deadly-plants-may-be-growing-your-pasture",
+      "whyUseful": "Detailed comparison of poison hemlock vs. water hemlock identification features and toxicity mechanisms."
+    },
+    {
+      "title": "Identifying Danger: Toxic Plants That Look Like Carrots",
+      "organization": "Illinois Extension, University of Illinois",
+      "url": "https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots",
+      "whyUseful": "Authoritative extension resource on distinguishing safe Apiaceae members from deadly lookalikes."
+    },
+    {
+      "title": "Poisonous and Non-Poisonous Plants: An Illustrated List",
+      "organization": "National Capital Poison Center (Poison Control)",
+      "url": "https://www.poison.org/articles/plant",
+      "whyUseful": "Authoritative reference for poisonous plant identification profiles including nightshade, pokeweed, foxglove, and castor bean."
+    },
+    {
+      "title": "Plants | Poison Help",
+      "organization": "HRSA / Poison Help",
+      "url": "https://poisonhelp.hrsa.gov/faq/plants",
+      "whyUseful": "Federal resource establishing Poison Control (1-800-222-1222) as the primary response for suspected plant ingestion emergencies."
+    },
+    {
+      "title": "Foraging 101: What to Eat and Avoid",
+      "organization": "Cleveland Clinic",
+      "url": "https://health.clevelandclinic.org/foraging-101-what-to-eat-and-avoid",
+      "whyUseful": "Clinician-authored guidance on seasonal toxicity variations, plant identification app limitations, and physiological warning signs."
+    },
+    {
+      "title": "Plant Poisoning",
+      "organization": "Merck Manual Professional Edition",
+      "url": "https://www.merckmanuals.com/professional/injuries-poisoning/poisoning/plant-poisoning",
+      "whyUseful": "Clinical reference for plant poisoning mechanisms, symptoms, and treatment approaches for healthcare providers."
+    },
+    {
+      "title": "Sam Thayer's Field Guide to Edible Wild Plants of Eastern and Central North America",
+      "organization": "Forager's Harvest Press",
+      "url": "https://www.foragersharvest.com/sams-books.html",
+      "whyUseful": "Most comprehensive regional field guide (700+ species, 26 commonly mistaken species) with identification system designed for field use alongside phone apps."
+    }
+  ]
+}

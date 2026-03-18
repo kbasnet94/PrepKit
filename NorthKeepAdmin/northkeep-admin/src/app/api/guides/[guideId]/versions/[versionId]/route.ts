@@ -35,7 +35,7 @@ export async function PATCH(
     "title", "summary", "quick_answer", "preferred_action", "backup_action",
     "when_to_use", "step_by_step_actions", "warnings", "what_not_to_do",
     "red_flags", "preparedness_tips", "source_references", "app_tags", "notes",
-    "response_role", "constraint_tags", "blocked_by_constraints", "alternative_to_guide_slugs",
+    "response_role", "constraint_tags", "blocked_by_constraints", "alternative_to_guide_slugs", "content_gaps",
   ];
   const update: Record<string, unknown> = {};
   for (const key of allowed) {

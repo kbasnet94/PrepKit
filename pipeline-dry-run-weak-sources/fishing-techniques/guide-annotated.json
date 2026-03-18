@@ -1,0 +1,128 @@
+{
+  "slug": "fishing-techniques",
+  "title": "Fishing Techniques",
+  "category": "water_food",
+  "parentTopic": "Emergency Food Procurement",
+  "layer": "reference",
+  "guideType": "reference_guide",
+  "summary": "A reference guide to catching fish in survival situations using improvised gear, passive traps, and natural bait. Covers where and when to find fish, how to build hooks and traps from available materials, safe field preparation, and basic preservation without refrigeration.",
+  "quickAnswer": "Fish are one of the most accessible wild protein sources — catch them with improvised hooks, gorge hooks, or funnel traps placed near cover in calm water, and always cook to at least 145°F (63°C) before eating.",
+  "whenToUse": [
+    "You need food in a wilderness survival or extended emergency situation",
+    "You are near a body of water with fish and have limited or no conventional fishing gear",
+    "You need to understand safe preparation and preservation of fish without kitchen equipment"
+  ],
+  "preferredAction": "Set up a combination of passive traps and an active hand line near underwater cover such as submerged logs, eddies, or deep pools to maximize catch with minimal effort.",
+  "backupAction": "If you cannot construct hooks or line, build a funnel-shaped fish basket from sticks and vines placed in a narrow waterway, or construct a tidal stone-wall trap at low tide.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Consuming raw or improperly cooked fish carries significant food-borne illness risk. Always cook fish to at least 145°F (63°C) until flesh is opaque and flakes easily.",
+    "Freshwater fish can harbor a higher diversity of parasites than saltwater fish. Never eat freshwater fish raw.",
+    "Catfish have sharp, needle-like protrusions on dorsal fins and barbels that can cause painful puncture wounds prone to infection. Handle with care.",
+    "Gut fish immediately after catching. At warm temperatures (70–80°F / 21–27°C), ungutted fish can become unsafe to eat within 2–4 hours.",
+    "Setting traps or fishing in many areas requires legal permission. Follow local regulations when it is safe and practical to do so.",
+    "Avoid fish from obviously polluted water sources (near industrial discharge, unusual colors or odors) — toxins can bioaccumulate in fish tissue.",
+    "Several saltwater species are poisonous, including porcupine fish, triggerfish, cowfish, puffer fish, and thorn fish. Barracuda may carry ciguatera toxin."
+  ],
+  "whatNotToDo": [
+    "Do not eat raw freshwater fish — the risk of parasitic and bacterial infection is high.",
+    "Do not store ungutted fish for later in warm weather; spoilage begins rapidly without refrigeration.",
+    "Do not use resinous or evergreen wood for smoking fish — it leaves a sticky, foul-tasting coating that can ruin the meat.",
+    "Do not assume all fish are safe to eat. Avoid brightly colored or oddly shaped saltwater species you cannot identify.",
+    "Do not grab blindly under rocks or banks when hand fishing — unseen hazards include spines, snapping turtles, and snakes."
+  ],
+  "redFlags": [
+    "Nausea, vomiting, diarrhea, or neurological symptoms (tingling, numbness) after consuming fish — possible parasitic infection or ciguatera poisoning.",
+    "Inability to obtain any food or water for more than 24 hours — reassess strategy and consider other food procurement methods.",
+    "Signs of infection at a puncture wound from fish spines — redness, swelling, streaking, or fever.",
+    "Fish flesh that appears discolored, has an unusually strong odor, or shows visible parasites before cooking."
+  ],
+  "preparednessTips": [
+    "Include fishing line (at least 20 feet), a few small hooks, and small sinkers in your emergency kit.",
+    "Carry a small spool of wire that can double as snare wire and fish hook material.",
+    "Learn to tie a gorge hook and a basic fish basket before you need to rely on them.",
+    "Pack a small container of salt — it serves both seasoning and fish preservation purposes.",
+    "Know the waterways in your area and which species are common there before an emergency occurs."
+  ],
+  "sourceQuality": "mixed",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "fishing-techniques",
+  "appTags": [
+    "water_food",
+    "reference",
+    "fishing",
+    "survival-food",
+    "improvised-gear",
+    "food-procurement",
+    "fish-traps",
+    "field-preparation"
+  ],
+  "images": [
+    {
+      "key": "improvised-hooks-diagram",
+      "description": "Line diagram showing three types of improvised fish hooks side by side: (1) a bent-pin or wire hook, (2) a carved wooden hook with bone or nail point lashed into a notch, and (3) a gorge hook (straight shaft sharpened on both ends with cordage tied at the center notch). Each hook should be labeled. Clean white background. Diagram style preferred over photograph for clarity.",
+      "caption": "Three improvised fish hook types",
+      "altText": "Diagram of a bent wire hook, a wooden composite hook, and a double-pointed gorge hook with labels",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    },
+    {
+      "key": "funnel-fish-trap",
+      "description": "Cutaway or semi-transparent diagram of a funnel-shaped fish basket trap made from sticks and vines. Should show the wide funnel entry and narrow interior opening that prevents fish from escaping. Arrow indicating water flow direction and fish entry path. Simple line illustration on a clean background.",
+      "caption": "Funnel-shaped fish basket trap",
+      "altText": "Diagram of a stick-and-vine fish basket trap showing the funnel entry and narrow interior opening",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    }
+  ],
+  "responseRole": "primary",
+  "constraintTags": [
+    "no_clean_water"
+  ],
+  "blockedByConstraints": [
+    "no_water"
+  ],
+  "alternativeToGuideSlugs": [
+    "foraging",
+    "trapping"
+  ],
+  "sourceReferences": [
+    {
+      "title": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "organization": "U.S. Department of the Army",
+      "url": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "whyUseful": "Primary source for improvised fishing methods, hook construction, trap building, bait finding, fish behavior, and field preservation techniques used by military personnel."
+    },
+    {
+      "title": "Safe Minimum Internal Temperature Chart",
+      "organization": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+      "whyUseful": "Authoritative source for the 145°F (63°C) minimum safe cooking temperature for fish."
+    },
+    {
+      "title": "About Anisakiasis",
+      "organization": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/anisakiasis/about/index.html",
+      "whyUseful": "Authoritative source on parasitic risks from undercooked marine fish, including symptoms and prevention."
+    },
+    {
+      "title": "Fish and Fishery Products Hazards and Controls Guidance — Chapter 5: Parasites",
+      "organization": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/files/food/published/Fish-and-Fishery-Products-Hazards-and-Controls-Guidance-Chapter-5-Download.pdf",
+      "whyUseful": "Authoritative reference on parasite diversity in freshwater vs. saltwater fish and associated health risks."
+    },
+    {
+      "title": "Preserving fish safely",
+      "organization": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/preserving-and-preparing/preserving-fish-safely",
+      "whyUseful": "Authoritative guidance on fish spoilage timelines and the importance of immediate gutting in warm conditions."
+    },
+    {
+      "title": "Primitive Fishing Techniques",
+      "organization": "Wilderness College",
+      "url": "https://www.wildernesscollege.com/primitive-fishing-techniques.html",
+      "whyUseful": "Field-practice reference for optimal fishing timing, dawn/dusk feeding patterns, and primitive technique overviews."
+    }
+  ]
+}

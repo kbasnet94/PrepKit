@@ -31,6 +31,11 @@ export async function proxy(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
+  // Allow API routes without authentication (protected by RLS at the DB level)
+  if (pathname.startsWith("/api/")) {
+    return supabaseResponse;
+  }
+
   if (!user && pathname !== "/login") {
     const url = request.nextUrl.clone();
     url.pathname = "/login";

@@ -1,0 +1,213 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "trapping",
+    "category": "water_food",
+    "parentTopic": "Emergency Food Procurement"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "mixed",
+  "suggestedLayer": "reference",
+  "suggestedGuideType": "reference_guide",
+  "existingGuideUpgradeTarget": "trapping",
+  "researchFindings": [
+    {
+      "claim": "Traps work 24/7 and are a form of passive food procurement, conserving energy compared to active hunting which burns many calories for uncertain return.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core rationale for why trapping is preferred over active hunting in survival — belongs in summary/quickAnswer"
+    },
+    {
+      "claim": "The two main categories of survival traps are snares (which use a noose to tighten around an animal) and deadfalls (which use a weighted object to crush the animal when a trigger is released).",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core classification of trap types — reference content"
+    },
+    {
+      "claim": "A simple loop snare (drag noose) uses a noose placed on an animal trail that tightens around the animal's neck as it passes through, with the animal becoming entangled in surrounding brush as it struggles.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual / Wilderness-Survival.net Food Procurement",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://www.wilderness-survival.net/food-2.php",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Description of basic snare type — reference content"
+    },
+    {
+      "claim": "A twitch-up (spring) snare adds mechanical spring action using a bent sapling to yank the noose tight and lift the animal off the ground, preventing other predators from taking the catch.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Description of spring snare type — reference content"
+    },
+    {
+      "claim": "The Figure Four deadfall uses three interlocking sticks carved to form a '4' shape that supports a heavy flat rock or log (at least 3x the weight of the target animal) which falls when triggered.",
+      "sourceTitle": "Survival Trapping: 4 Easy Traps to Learn",
+      "sourceOrganization": "RECOIL OFFGRID",
+      "sourceUrl": "https://www.offgridweb.com/survival/survival-trapping-4-easy-traps-to-learn/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Description of Figure Four deadfall — reference content"
+    },
+    {
+      "claim": "The Paiute deadfall is similar to the Figure Four but uses cordage and a catch stick, making it easier and safer to set because fingers are not positioned under the weight during assembly. It has a higher sensitivity and success rate.",
+      "sourceTitle": "Survival Trapping: 4 Easy Traps to Learn",
+      "sourceOrganization": "RECOIL OFFGRID",
+      "sourceUrl": "https://www.offgridweb.com/survival/survival-trapping-4-easy-traps-to-learn/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Description of Paiute deadfall — reference content"
+    },
+    {
+      "claim": "Traps should be placed where there is evidence of animal activity: game trails (identified by trampled vegetation), scat, tracks, fur, rubs, feeding signs, den entrances, and near water sources.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Trap placement principles — reference content"
+    },
+    {
+      "claim": "Use channelization — construct a funnel-shaped barrier of natural materials extending from the sides of a trail toward the trap, narrowing toward the trap so the animal cannot turn left or right.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Channelization technique for improving trap success — reference content"
+    },
+    {
+      "claim": "Do not use freshly cut live vegetation to construct traps as the bleeding sap has an odor that alerts prey. Remove or mask human scent using mud from areas with rotting vegetation.",
+      "sourceTitle": "How to Build a Small Game Survival Snare",
+      "sourceOrganization": "Art of Manliness / BSA Troop references",
+      "sourceUrl": "https://www.artofmanliness.com/skills/outdoor-survival/how-to-build-a-small-game-survival-snare/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Scent control for trapping — reference content / whatNotToDo"
+    },
+    {
+      "claim": "Setting more traps increases the probability of catching food. In a survival situation, you should continuously build new traps and maintain existing ones.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Principle of trap quantity — reference content"
+    },
+    {
+      "claim": "Concentrate efforts on smaller animals (rabbits, squirrels, ground-dwelling birds) as they are more abundant and easier to catch and prepare than large game.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Target animal selection — reference content"
+    },
+    {
+      "claim": "For snares, the average noose cord length should be 18-24 inches for most small game animals. Wire (brass or copper) is preferred over cordage because it holds its shape and tightens more reliably.",
+      "sourceTitle": "How to Build a Small Game Survival Snare",
+      "sourceOrganization": "Art of Manliness / BSA Troop references",
+      "sourceUrl": "https://www.artofmanliness.com/skills/outdoor-survival/how-to-build-a-small-game-survival-snare/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Snare construction specifics — reference content"
+    },
+    {
+      "claim": "Essential trapping materials for a survival kit are a length of paracord or string and a small roll of copper or brass wire. Deadfalls can be constructed entirely from found natural materials (rocks, logs, branches).",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Materials needed — preparednessTips"
+    },
+    {
+      "claim": "Field dress game as soon as possible after the kill: remove intestines, lungs, liver, and heart. Keep the carcass clean and off the ground. Cool the carcass quickly (below 40 degrees F) to prevent bacterial growth.",
+      "sourceTitle": "Proper Field Dressing and Handling of Wild Game and Fish",
+      "sourceOrganization": "Penn State Extension",
+      "sourceUrl": "https://extension.psu.edu/proper-field-dressing-and-handling-of-wild-game-and-fish",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Safe handling of caught game — warnings / reference content"
+    },
+    {
+      "claim": "Wear gloves (latex or nitrile) when handling wild game to protect against zoonotic diseases. Wash hands and tools with soap and water after handling.",
+      "sourceTitle": "Proper Field Dressing and Handling of Wild Game and Fish",
+      "sourceOrganization": "Penn State Extension",
+      "sourceUrl": "https://extension.psu.edu/proper-field-dressing-and-handling-of-wild-game-and-fish",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Disease prevention — warnings"
+    },
+    {
+      "claim": "Cook all wild game meat thoroughly to a minimum of 165 degrees F. Do not eat any wild game raw. Freezing, microwaving, or smoking may not kill all bacteria, viruses, or parasites (including Trichinella).",
+      "sourceTitle": "How do you handle wild game safely?",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://ask.usda.gov/s/article/How-do-you-handle-wild-game-safely",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Food safety for trapped game — warnings / redFlags"
+    },
+    {
+      "claim": "Do not handle or consume animals that appear sick, act abnormally, or are already dead when found, as they may carry rabies, tularemia, or other zoonotic diseases.",
+      "sourceTitle": "Food Safety Considerations Related to the Consumption and Handling of Game Meat in North America",
+      "sourceOrganization": "PMC / National Institutes of Health",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7712377/",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Disease risk — redFlags / whatNotToDo"
+    },
+    {
+      "claim": "Trapping is regulated in virtually all US jurisdictions. Requirements vary by state and include licensing, species restrictions, trap type restrictions, and check intervals. There is no universal 'survival exemption' from trapping laws, though the legal defense of 'necessity' may apply in genuine life-threatening emergencies on a case-by-case basis.",
+      "sourceTitle": "Trapping",
+      "sourceOrganization": "U.S. Fish & Wildlife Service",
+      "sourceUrl": "https://www.fws.gov/story/trapping",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Legal considerations — warnings"
+    },
+    {
+      "claim": "Improperly set traps (especially deadfalls and spring snares) can cause serious injury to the person setting them. Fingers can be crushed under deadfall weights. Spring poles can lash back if released unexpectedly.",
+      "sourceTitle": "Survival Trapping: 4 Easy Traps to Learn",
+      "sourceOrganization": "RECOIL OFFGRID",
+      "sourceUrl": "https://www.offgridweb.com/survival/survival-trapping-4-easy-traps-to-learn/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Safety during trap construction — warnings"
+    },
+    {
+      "claim": "Prepare trap components away from the trap site and carry them in to avoid disturbing local vegetation and leaving human scent, which alerts prey.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Trap preparation best practice — reference content"
+    },
+    {
+      "claim": "Baiting a trap or snare with food the target animal is familiar with (but not something abundantly available in the area) greatly improves capture success.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual",
+      "sourceOrganization": "US Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Baiting principles — reference content"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Exact snare noose diameter and height above ground for specific species",
+      "issue": "Different field-practice sources give varying measurements. FM 21-76 and various bushcraft sources differ on exact dimensions for rabbit snares (fist-width vs. specific inch measurements).",
+      "sourceA": "FM 21-76 US Army Survival Manual",
+      "sourceB": "Art of Manliness / BSA Troop references",
+      "resolution": "Include general guidance (18-24 inches cord length) without species-specific measurements that vary by source. Reference guides should cover principles rather than exact specs."
+    },
+    {
+      "claim": "Survival exemption from trapping laws",
+      "issue": "Some field-practice sources imply trapping laws do not apply in survival situations. Legal sources indicate there is no automatic exemption — the defense of necessity is evaluated case by case.",
+      "sourceA": "Various survival blogs",
+      "sourceB": "U.S. Fish & Wildlife Service / State wildlife agencies",
+      "resolution": "Follow authoritative legal guidance: note that trapping is regulated, no universal exemption exists, and necessity defense may apply in genuine emergencies. Do not imply trapping is automatically legal in survival situations."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Specific trap designs for different biomes (desert, arctic, tropical)",
+      "impact": "The guide covers general temperate-climate trapping. Biome-specific trap adaptations are not well covered by authoritative sources within scope.",
+      "suggestion": "Acknowledge that trap selection varies by environment but keep the guide focused on universal principles. Biome-specific guides could be separate future additions."
+    },
+    {
+      "area": "Humane dispatch methods for trapped animals",
+      "impact": "Most field manuals assume the animal is dead or dying when found. Guidance on humane dispatch of live-caught animals is sparse in authoritative sources.",
+      "suggestion": "Include a brief note that trapped animals should be dispatched quickly and humanely, but avoid prescribing specific methods without strong sourcing."
+    }
+  ],
+  "recommendation": "Write a reference_guide covering: (1) why passive trapping is preferred over active hunting in survival, (2) two main trap categories (snares and deadfalls) with key subtypes, (3) placement principles (game trails, sign reading, channelization), (4) scent control and construction best practices, (5) materials needed, (6) safe handling and field dressing of caught game with food safety emphasis, (7) legal considerations. Include images for Figure Four deadfall and a basic loop snare to reduce ambiguity in construction. Keep stepByStepActions empty per reference_guide conventions. Preserve existing warnings about regulation and injury risk, and add food safety warnings from USDA/Penn State sources."
+}

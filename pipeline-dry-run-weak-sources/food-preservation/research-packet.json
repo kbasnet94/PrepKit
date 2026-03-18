@@ -1,0 +1,174 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "food-preservation",
+    "category": "water_food",
+    "parentTopic": "Food Safety During Power Outages"
+  },
+  "evidenceTier": "authoritative_only",
+  "topicSourceQuality": "strong",
+  "suggestedLayer": "reference",
+  "suggestedGuideType": "reference_guide",
+  "existingGuideUpgradeTarget": "food-preservation",
+  "researchFindings": [
+    {
+      "claim": "Bacteria grow most rapidly between 40\u00b0F and 140\u00b0F (4\u00b0C and 60\u00b0C), known as the 'Danger Zone,' and can double in number in as little as 20 minutes in this range.",
+      "sourceTitle": "Danger Zone (40\u00b0F - 140\u00b0F)",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core background concept for understanding why temperature control matters; summary and quickAnswer material"
+    },
+    {
+      "claim": "An unopened refrigerator will keep food safe for up to 4 hours during a power outage. A full freezer holds safe temperature for approximately 48 hours (24 hours if half full) with the door closed.",
+      "sourceTitle": "Food and Water Safety During Power Outages and Floods",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key time windows; whenToUse context and core reference content"
+    },
+    {
+      "claim": "Discard refrigerated perishable food (meat, poultry, fish, eggs, milk, cut fruits and vegetables, and leftovers) after 4 hours without power or a cold source.",
+      "sourceTitle": "Keep Food Safe After a Disaster or Emergency",
+      "sourceOrganization": "Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Discard rules for perishable foods; warnings and whatNotToDo"
+    },
+    {
+      "claim": "Hard cheeses, butter, unopened condiments (ketchup, mustard, pickles), jelly, peanut butter, whole uncut fruits and vegetables, bread, and vinegar-based dressings remain safe after a power outage.",
+      "sourceTitle": "Food Safety During Power Outage",
+      "sourceOrganization": "FoodSafety.gov (USDA/FDA/CDC joint site)",
+      "sourceUrl": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Safe-to-keep food categories; core reference content"
+    },
+    {
+      "claim": "Food may be safely refrozen if it still contains ice crystals or is at 40\u00b0F or below, though quality may suffer.",
+      "sourceTitle": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Refreeze decision rule; core reference content"
+    },
+    {
+      "claim": "Never taste food to determine if it is safe. You cannot rely on appearance or odor alone to determine food safety. When in doubt, throw it out.",
+      "sourceTitle": "Food and Water Safety During Power Outages and Floods",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical warning; warnings and whatNotToDo"
+    },
+    {
+      "claim": "Transfer refrigerated perishable food to a cooler with ice or frozen gel packs if power will be out for more than 4 hours. Keep temperature at or below 40\u00b0F.",
+      "sourceTitle": "Food Safety During An Emergency",
+      "sourceOrganization": "American Red Cross",
+      "sourceUrl": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/food-safety.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Cooler use guidance; preferredAction and backupAction"
+    },
+    {
+      "claim": "Fifty pounds of dry ice should hold an 18-cubic-foot fully stocked freezer cold for two days. Do not touch dry ice with bare hands or place it in direct contact with food.",
+      "sourceTitle": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Dry ice guidance; reference content and warnings"
+    },
+    {
+      "claim": "If perishable food has been held at room temperature for 2 hours or more (1 hour if temperature is above 90\u00b0F), it should be discarded.",
+      "sourceTitle": "Danger Zone (40\u00b0F - 140\u00b0F)",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Room temperature discard rule; warnings"
+    },
+    {
+      "claim": "Stock canned foods, dry mixes, and other staples that do not require refrigeration, cooking, water, or special preparation. Include a manual can opener and eating utensils.",
+      "sourceTitle": "Food",
+      "sourceOrganization": "Ready.gov (FEMA)",
+      "sourceUrl": "https://www.ready.gov/food",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Shelf-stable food guidance; preparednessTips and reference content"
+    },
+    {
+      "claim": "Keep appliance thermometers in both the refrigerator and freezer to monitor temperatures. The refrigerator should be at 40\u00b0F or below and the freezer at 0\u00b0F or below.",
+      "sourceTitle": "Food and Water Safety During Power Outages and Floods",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Thermometer monitoring; preparednessTips"
+    },
+    {
+      "claim": "Freeze containers of water and gel packs to help keep food cold. Freeze refrigerated items you may not need immediately (milk, meat, leftovers) to extend safe storage time.",
+      "sourceTitle": "Food and Water Safety During Power Outages and Floods",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Pre-outage preparation; preparednessTips"
+    },
+    {
+      "claim": "Heat destroys active bacteria but not toxins already produced during temperature abuse. Staphylococcus aureus creates heat-stable toxins that cause illness even after thorough cooking.",
+      "sourceTitle": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Why cooking temperature-abused food is unsafe; warnings and whatNotToDo"
+    },
+    {
+      "claim": "Do not place perishable food outside in the snow during winter storms. Outside temperatures vary and food can be exposed to unsanitary conditions and animals.",
+      "sourceTitle": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Common misconception; whatNotToDo"
+    },
+    {
+      "claim": "Perishable foods with temperatures at 45\u00b0F or below (measured with a food thermometer) should be safe but should be cooked and consumed as soon as possible.",
+      "sourceTitle": "Food and Water Safety During Power Outages and Floods",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Borderline temperature guidance; reference content"
+    },
+    {
+      "claim": "Plan to have at least a 3-day supply of non-perishable food on hand for emergencies. Store at least 1 gallon of water per person per day.",
+      "sourceTitle": "Keep Food Safe After a Disaster or Emergency",
+      "sourceOrganization": "Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Emergency supply planning; preparednessTips"
+    },
+    {
+      "claim": "Commercially canned food may be eaten out of the can without warming. Alternative cooking sources in emergencies include candle warmers, chafing dishes, fondue pots, or a fireplace. Charcoal grills and camp stoves are for outdoor use only.",
+      "sourceTitle": "Food",
+      "sourceOrganization": "Ready.gov (FEMA)",
+      "sourceUrl": "https://www.ready.gov/food",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Alternative food preparation; reference content"
+    },
+    {
+      "claim": "Throw out cans or food containers that spurt liquid or foam when opened, or contain food that is discolored, moldy, or smells bad.",
+      "sourceTitle": "Keep Food Safe After a Disaster or Emergency",
+      "sourceOrganization": "Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Signs of unsafe canned food; redFlags"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [],
+  "identifiedGaps": [
+    {
+      "area": "Specific guidance on using snow or outdoor cold as food storage",
+      "impact": "USDA says not to use snow; no authoritative source provides safe protocols for using outdoor cold as a makeshift refrigerator. The guidance is simply 'don't do it.'",
+      "suggestion": "Include the USDA warning against outdoor food storage in whatNotToDo"
+    },
+    {
+      "area": "Quantified dry ice amounts for smaller freezers",
+      "impact": "USDA provides 50-lb/18-cu-ft benchmark but no scaled guidance for smaller units",
+      "suggestion": "Include the 50-lb benchmark and note users should scale accordingly"
+    }
+  ],
+  "recommendation": "The Writing skill should produce a comprehensive reference_guide covering: the danger zone concept, time windows for refrigerator/freezer safety, keep-vs-discard decision rules, cooler and dry ice strategies, shelf-stable alternatives, and the critical 'when in doubt throw it out' principle. The guide upgrades the stub food-preservation guide and should focus squarely on emergency power-outage food safety, not long-term homesteading preservation. All 18 research findings are from authoritative government sources (USDA, FDA, CDC, FEMA/Ready.gov, Red Cross), supporting a 'strong' source quality rating."
+}

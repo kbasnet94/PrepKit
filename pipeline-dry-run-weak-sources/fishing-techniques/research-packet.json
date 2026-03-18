@@ -1,0 +1,198 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "fishing-techniques",
+    "category": "water_food",
+    "parentTopic": "Emergency Food Procurement"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "mixed",
+  "suggestedLayer": "reference",
+  "suggestedGuideType": "reference_guide",
+  "existingGuideUpgradeTarget": "fishing-techniques",
+  "researchFindings": [
+    {
+      "claim": "Fish are a good source of protein and fat in survival situations. They are usually more abundant than mammal wildlife, and the methods to catch them are silent — an advantage for evaders.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "summary / quickAnswer — core rationale for survival fishing"
+    },
+    {
+      "claim": "Fish tend to feed heavily before a storm. They are not likely to feed after a storm when the water is muddy and swollen. Light often attracts fish at night.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — fish behavior and timing"
+    },
+    {
+      "claim": "When there is a heavy current, fish rest in eddies near rocks. Fish also gather in deep pools, under overhanging brush, and around submerged foliage, logs, or other objects that offer shelter.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — where to find fish"
+    },
+    {
+      "claim": "There are no poisonous freshwater fish. However, the catfish species has sharp, needlelike protrusions on its dorsal fins and barbels that can inflict painful puncture wounds that quickly become infected.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "warnings — catfish handling hazard; reference content — freshwater safety"
+    },
+    {
+      "claim": "You can make field-expedient fishhooks from pins, needles, wire, small nails, or any piece of metal. You can also use wood, bone, coconut shell, thorns, flint, seashell, or tortoise shell.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — improvised hooks"
+    },
+    {
+      "claim": "A gorge hook is a small shaft of wood, bone, metal, or other material, sharp on both ends and notched in the middle where you tie cordage. Bait the gorge by placing bait on it lengthwise. When the fish swallows the bait, it also swallows the gorge.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — gorge hook construction"
+    },
+    {
+      "claim": "To make a wooden hook, cut a piece of hardwood about 2.5 cm long and about 6 mm in diameter to form the shank. Cut a notch in one end to place the point (bone, wire, nail), then tie securely so it does not move.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — wooden hook construction detail"
+    },
+    {
+      "claim": "Fish baskets (traps) are constructed by lashing several sticks together with vines into a funnel shape, closing the top and leaving a hole large enough for fish to swim through but difficult to exit.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — fish trap construction"
+    },
+    {
+      "claim": "On sandy shores, use sandbars and the ditches they enclose to trap fish. Build the trap as a low stone wall extending outward into the water and forming an angle with the shore. Pick location at high tide and build at low tide.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — tidal/shore fish traps"
+    },
+    {
+      "claim": "A stakeout fishing device can be constructed by driving two supple saplings into the bottom of a body of water with tops below the surface, tying a cord between them, and attaching short cords with hooks or gorges. This is useful in hostile environments as a passive method.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — passive fishing method"
+    },
+    {
+      "claim": "Improvised gill nets can be made from parachute suspension line or similar cordage. Remove core lines from suspension line, tie casing between two trees, and attach core lines using prusik knots or girth hitches.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — improvised gill net"
+    },
+    {
+      "claim": "Effective natural bait includes earthworms (found in moist soil, under rotting logs or rocks), grasshoppers, crickets, ants, beetles from tall grass, and small crayfish, minnows, or tadpoles from freshwater sources.",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — finding bait in the field"
+    },
+    {
+      "claim": "Cook seafood to an internal temperature of at least 145°F (63°C). Fish is done when flesh is opaque and separates easily with a fork.",
+      "sourceTitle": "Safe Minimum Internal Temperature Chart",
+      "sourceOrganization": "USDA Food Safety and Inspection Service",
+      "sourceUrl": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings / reference content — safe cooking temperature"
+    },
+    {
+      "claim": "Anisakiasis is a parasitic disease caused by ingestion of larvae of roundworms in undercooked marine fish. Cooking to 145°F (63°C) kills parasites. Freezing at -4°F (-20°C) for 7 days also kills larvae.",
+      "sourceTitle": "About Anisakiasis",
+      "sourceOrganization": "Centers for Disease Control and Prevention",
+      "sourceUrl": "https://www.cdc.gov/anisakiasis/about/index.html",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings — parasite risk from undercooked marine fish"
+    },
+    {
+      "claim": "Freshwater fish can harbor a higher diversity of parasites than saltwater fish and should always be cooked thoroughly. The freshwater environment and human pollution promote bacterial and parasitic contamination.",
+      "sourceTitle": "Fish and Fishery Products Hazards and Controls Guidance — Chapter 5: Parasites",
+      "sourceOrganization": "U.S. Food and Drug Administration",
+      "sourceUrl": "https://www.fda.gov/files/food/published/Fish-and-Fishery-Products-Hazards-and-Controls-Guidance-Chapter-5-Download.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings — freshwater parasite risk"
+    },
+    {
+      "claim": "Gut fish immediately after catching to slow spoilage. The gut contains enzymes and bacteria that are primary drivers of rapid deterioration. At warm temperatures (70–80°F), ungutted fish can become unsafe within 2–4 hours.",
+      "sourceTitle": "Preserving fish safely",
+      "sourceOrganization": "University of Minnesota Extension",
+      "sourceUrl": "https://extension.umn.edu/preserving-and-preparing/preserving-fish-safely",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "warnings / reference content — field preparation urgency"
+    },
+    {
+      "claim": "Fish can be preserved without refrigeration by smoking (use hardwood only, not evergreen), sun drying (cut into thin strips 4 inches wide by 10–12 inches long by 1/2 inch thick), or salting (use 6% of the fish's body weight in fine-grained salt).",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — field preservation methods"
+    },
+    {
+      "claim": "Examples of poisonous saltwater fish include porcupine fish, triggerfish, cowfish, thorn fish, oilfish, and puffer fish. Barracuda may transmit ciguatera (fish poisoning).",
+      "sourceTitle": "FM 21-76 US Army Survival Manual — Chapter 8: Food Procurement",
+      "sourceOrganization": "U.S. Department of the Army",
+      "sourceUrl": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "whatNotToDo / warnings — toxic saltwater species"
+    },
+    {
+      "claim": "The best times to fish are around sunrise and sunset, when most species are actively feeding. Overcast or rainy conditions can extend feeding activity throughout the day.",
+      "sourceTitle": "Primitive Fishing Techniques",
+      "sourceOrganization": "Wilderness College",
+      "sourceUrl": "https://www.wildernesscollege.com/primitive-fishing-techniques.html",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — optimal fishing timing"
+    },
+    {
+      "claim": "Passive fishing methods (trotlines, limb lines, funnel traps) let the gear work while you attend to other survival priorities. A mix of active hand-line fishing and passive systems maximizes food procurement odds.",
+      "sourceTitle": "10 Techniques for Catching Fish in a Survival Situation",
+      "sourceOrganization": "Outdoor Life",
+      "sourceUrl": "https://www.outdoorlife.com/blogs/survivalist/10-techniques-catching-fish-survival-situation/",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "reference content — passive vs. active fishing strategy"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "There are no poisonous freshwater fish",
+      "issue": "FM 21-76 states this broadly but does not account for ciguatera in some brackish/freshwater tropical species or for bioaccumulation of environmental toxins. The statement is generally reliable for temperate freshwater fish but should be caveated for tropical and polluted waters.",
+      "sourceA": "FM 21-76 US Army Survival Manual",
+      "sourceB": "FDA Fish and Fishery Products Hazards and Controls",
+      "resolution": "Include the FM 21-76 claim for temperate freshwater but add a warning about avoiding fish from obviously polluted water sources and unknown tropical species."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Spearfishing technique detail",
+      "impact": "FM 21-76 mentions spearfishing in shallow water is viable but provides limited construction/technique detail. Not critical for a reference guide.",
+      "suggestion": "Mention spearfishing as an option but don't attempt to provide detailed instructions without stronger sourcing."
+    },
+    {
+      "area": "Hand fishing / noodling techniques",
+      "impact": "Hand fishing (grabbing fish from under rocks/banks) is a known survival method but carries injury risk. No authoritative source found with safety guidance.",
+      "suggestion": "Mention briefly with a safety caveat about injury risk from bites, spines, and unseen hazards under water."
+    }
+  ],
+  "recommendation": "Write a reference_guide covering: (1) why fish are a priority survival food source, (2) where and when to find fish, (3) improvised hook and line methods (including gorge hooks), (4) passive methods (traps, stakeouts), (5) finding natural bait, (6) safe field preparation (gutting, cooking to 145°F), (7) basic preservation (smoking, drying, salting), (8) species to avoid. Content is primarily sourced from FM 21-76 (field practice tier) with food safety claims backed by USDA/CDC/FDA (authoritative). Source quality is 'mixed' because the core fishing techniques rely on military field manuals rather than peer-reviewed sources, but these are well-established and within the allowed evidence tier. The existing guide's two warnings and two red flags should be preserved and expanded."
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "trapping",
+  "title": "Emergency Trapping for Small Game",
+  "category": "water_food",
+  "parentTopic": "Emergency Food Procurement",
+  "layer": "reference",
+  "guideType": "reference_guide",
+  "summary": "Trapping is a passive food procurement method that works around the clock, conserving energy compared to active hunting. This guide covers the two main trap categories — snares and deadfalls — along with placement principles, scent control, safe handling of caught game, and legal considerations for survival situations.",
+  "quickAnswer": "Set multiple simple snares or deadfall traps along confirmed animal trails near water sources to passively procure small game while conserving your energy for other survival priorities.",
+  "whenToUse": [
+    "You need food in a prolonged wilderness survival situation",
+    "Active hunting is impractical due to lack of weapons or ammunition",
+    "You need to conserve energy while still procuring protein",
+    "You have identified animal sign such as tracks, scat, or game trails in your area"
+  ],
+  "preferredAction": "Set multiple simple loop snares on confirmed game trails using wire or strong cordage, checking them at regular intervals.",
+  "backupAction": "Construct deadfall traps (Figure Four or Paiute) from found natural materials if you have no wire or cordage for snares.",
+  "stepByStepActions": [],
+  "warnings": [
+    "Trapping is regulated or prohibited in many jurisdictions. There is no universal survival exemption from trapping laws in the United States, though a legal defense of necessity may apply in genuine life-threatening emergencies.",
+    "Improperly set traps — especially deadfalls and spring snares — can cause serious injury. Keep fingers clear of crush zones during deadfall assembly and stand clear of spring poles when setting twitch-up snares.",
+    "Never eat wild game raw. All wild game must be cooked thoroughly to at least 165 degrees F to kill bacteria, parasites (including Trichinella), and viruses.",
+    "Field dress caught game as soon as possible after the kill and cool the carcass below 40 degrees F quickly. Delayed gutting promotes dangerous bacterial growth.",
+    "Wear gloves when handling wild game to protect against zoonotic diseases including tularemia, rabies, and parasitic infections. Wash hands and tools with soap and water afterward.",
+    "Do not handle or eat animals that appear sick, behave abnormally, or were found already dead — they may carry rabies or other dangerous diseases.",
+    "Do not use freshly cut live vegetation to build traps; bleeding sap emits odor that alerts prey and reduces trap effectiveness."
+  ],
+  "whatNotToDo": [
+    "Do not rely on a single trap — set as many as practical to increase your odds of catching food.",
+    "Do not set traps randomly in the woods without first identifying animal sign (tracks, scat, trails, den entrances).",
+    "Do not position your fingers under the deadfall weight during assembly — use the Paiute deadfall design which keeps hands clear of the crush zone.",
+    "Do not consume wild game that has not been thoroughly cooked to at least 165 degrees F.",
+    "Do not leave human scent on traps — handle components with muddy hands or gloves and prepare parts away from the trap site.",
+    "Do not ignore local wildlife regulations when not in a genuine survival emergency."
+  ],
+  "redFlags": [
+    "Injury from a trap mechanism (crushed fingers, lacerations from spring poles) that requires first aid or medical attention.",
+    "Signs of foodborne illness after consuming trapped game: severe vomiting, diarrhea, fever, or abdominal pain.",
+    "A trapped animal that appears diseased (unusual behavior, visible lesions, excessive salivation) — do not handle it.",
+    "Symptoms of tularemia or other zoonotic infection after handling wild game: sudden fever, skin ulcers at the handling site, swollen lymph nodes."
+  ],
+  "preparednessTips": [
+    "Include 10-20 feet of brass or copper snare wire and a length of paracord in your survival kit.",
+    "Practice building Figure Four and Paiute deadfall traps before an emergency so you can construct them quickly under stress.",
+    "Learn to identify common small game sign (rabbit pellets, squirrel middens, game trails) in your local area.",
+    "Carry nitrile or latex gloves in your kit for safe handling and field dressing of game.",
+    "Familiarize yourself with your state's trapping regulations and any emergency provisions before heading into the backcountry.",
+    "Study the animal species common to areas you frequent — knowing their habits, preferred habitats, and food sources improves trap placement."
+  ],
+  "sourceQuality": "mixed",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "trapping",
+  "appTags": [
+    "trapping",
+    "snares",
+    "deadfall",
+    "small game",
+    "food procurement",
+    "survival hunting",
+    "wilderness food",
+    "field dressing",
+    "passive hunting"
+  ],
+  "images": [
+    {
+      "key": "figure-four-deadfall",
+      "description": "Clear line diagram of a Figure Four deadfall trap showing the three interlocking sticks in the characteristic '4' shape with a flat rock balanced on top. Labels should identify the upright stick, diagonal stick, trigger stick, and the deadfall weight. Show the bait placement point. Clean white or light grey background preferred.",
+      "caption": "Figure Four deadfall trap",
+      "altText": "A diagram of a Figure Four deadfall trap showing three interlocking sticks supporting a flat rock",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    },
+    {
+      "key": "simple-loop-snare",
+      "description": "Line diagram of a basic loop snare set on a game trail. Show the noose loop positioned at the correct height above the trail, the anchor point (stake or sturdy branch), and channelization barriers (sticks/brush) funneling the trail into the snare. Label the noose, the running loop, the anchor line, and the channelization funnels. Clean background.",
+      "caption": "Simple loop snare with channelization",
+      "altText": "A diagram of a loop snare positioned on a game trail with brush funnels guiding animals into the noose",
+      "associatedStepIndex": null,
+      "storageUrl": null
+    }
+  ],
+  "sourceReferences": [
+    {
+      "title": "FM 21-76 US Army Survival Manual",
+      "organization": "US Department of the Army",
+      "url": "https://dn790002.ca.archive.org/0/items/Fm21-76SurvivalManual/FM21-76_SurvivalManual.pdf",
+      "whyUseful": "Authoritative military survival manual covering trap types, placement principles, channelization, baiting, and scent control for food procurement."
+    },
+    {
+      "title": "Proper Field Dressing and Handling of Wild Game and Fish",
+      "organization": "Penn State Extension",
+      "url": "https://extension.psu.edu/proper-field-dressing-and-handling-of-wild-game-and-fish",
+      "whyUseful": "Authoritative guidance on field dressing, cooling, and safe handling of wild game to prevent foodborne illness."
+    },
+    {
+      "title": "How do you handle wild game safely?",
+      "organization": "USDA Food Safety and Inspection Service",
+      "url": "https://ask.usda.gov/s/article/How-do-you-handle-wild-game-safely",
+      "whyUseful": "USDA guidance on cooking temperatures, disease risks, and safe preparation of wild game meat."
+    },
+    {
+      "title": "Food Safety Considerations Related to the Consumption and Handling of Game Meat in North America",
+      "organization": "PMC / National Institutes of Health",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7712377/",
+      "whyUseful": "Peer-reviewed overview of zoonotic disease risks from handling and consuming wild game."
+    },
+    {
+      "title": "Trapping",
+      "organization": "U.S. Fish & Wildlife Service",
+      "url": "https://www.fws.gov/story/trapping",
+      "whyUseful": "Federal overview of trapping regulations and the legal framework governing wildlife trapping in the United States."
+    },
+    {
+      "title": "Survival Trapping: 4 Easy Traps to Learn",
+      "organization": "RECOIL OFFGRID",
+      "url": "https://www.offgridweb.com/survival/survival-trapping-4-easy-traps-to-learn/",
+      "whyUseful": "Field-practice reference covering Figure Four and Paiute deadfall construction with safety notes on trap assembly."
+    }
+  ],
+  "notes": "This is a reference_guide so stepByStepActions is intentionally empty. The guide was upgraded from a stub with zero steps, zero sources, and a 1-sentence summary. Category placement corrected from 'Water Collection' to 'Emergency Food Procurement'. Two images recommended for trap construction diagrams where visuals meaningfully reduce ambiguity."
+}

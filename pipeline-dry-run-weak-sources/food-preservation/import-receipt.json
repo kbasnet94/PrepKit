@@ -1,0 +1,11 @@
+{
+  "slug": "food-preservation",
+  "versionId": "fffb13f2-30e0-4a69-8615-357316f3ef2e",
+  "versionNumber": 2,
+  "reviewStatus": "draft",
+  "isNew": false,
+  "changeSummary": "Pipeline upgrade: stub guide (1-sentence summary, zero sources, zero steps) upgraded to fully sourced reference guide with authoritative source references, expanded warnings, red flags, preparedness tips, and constraint metadata.",
+  "apiWarnings": [],
+  "importedAt": "2026-03-18T14:10:32.382Z",
+  "reviewUrl": "http://localhost:3000/review?filter=draft"
+}

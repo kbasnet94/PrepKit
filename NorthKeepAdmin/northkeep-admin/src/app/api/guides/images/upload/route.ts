@@ -80,8 +80,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: `Maximum of ${MAX_IMAGES} images per guide` }, { status: 400 });
   }
 
-  // Check for duplicate key
-  if (currentImages.some((img) => img.key === key)) {
+  // Check for duplicate key — if it exists with no storageUrl (placeholder from pipeline),
+  // allow replacing it. Otherwise reject.
+  const existingIndex = currentImages.findIndex((img) => img.key === key);
+  const isPlaceholderReplace = existingIndex !== -1 && !currentImages[existingIndex].storageUrl;
+  if (existingIndex !== -1 && !isPlaceholderReplace) {
     return NextResponse.json(
       { error: `Image key "${key}" already exists on this guide version` },
       { status: 409 }
@@ -120,8 +123,13 @@ export async function POST(request: Request) {
     storageUrl,
   };
 
-  // Append to images array and persist
-  const updatedImages = [...currentImages, newImage];
+  // Replace placeholder or append new image
+  let updatedImages: GuideImage[];
+  if (isPlaceholderReplace) {
+    updatedImages = currentImages.map((img, i) => (i === existingIndex ? newImage : img));
+  } else {
+    updatedImages = [...currentImages, newImage];
+  }
 
   const { error: updateErr } = await supabase
     .from("guide_versions")

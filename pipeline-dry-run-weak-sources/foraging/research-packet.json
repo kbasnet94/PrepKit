@@ -1,0 +1,189 @@
+{
+  "workItemRef": {
+    "action": "upgrade",
+    "targetSlug": "foraging",
+    "category": "water_food",
+    "parentTopic": "Emergency Food Procurement"
+  },
+  "evidenceTier": "authoritative_plus_field_practice",
+  "topicSourceQuality": "mixed",
+  "suggestedLayer": "reference",
+  "suggestedGuideType": "reference_guide",
+  "existingGuideUpgradeTarget": "foraging",
+  "researchFindings": [
+    {
+      "claim": "The Universal Edibility Test (UET) is an 8-step protocol for evaluating unknown plants in survival situations: (1) separate plant into parts (leaves, stems, roots, seeds); (2) smell each part for acidic or almond-like odors; (3) fast for 8 hours; (4) press a piece against inner elbow for 15 minutes, stop if burning/rash/itching; (5) touch a small pinch to outer lip for 3 minutes, stop if burning; (6) hold on tongue 15 minutes without chewing, stop if burning; (7) chew and hold 15 minutes without swallowing, spit out if irritation; (8) swallow small amount and wait 8 hours. If no reaction, eat a quarter-cup and wait another 8 hours. Test one plant part at a time. Process takes approximately 24 hours per part.",
+      "sourceTitle": "U.S. Army Survival Manual FM 21-76 / ATP 3-50.21 (Chapter 9: Survival Use of Plants)",
+      "sourceOrganization": "U.S. Department of Defense / U.S. Army",
+      "sourceUrl": "http://www.equipped.org/fm21-76.htm",
+      "evidenceStrength": "authoritative_field_practice",
+      "fieldRelevance": "Core reference content: the UET is the definitive last-resort protocol for unknown plant evaluation in survival contexts"
+    },
+    {
+      "claim": "The UET does NOT work for mushrooms. Many deadly mushrooms (e.g., Amanita phalloides, the death cap) cause no immediate discomfort but destroy the liver over 24-72 hours. The UET cannot detect slow-onset or cumulative toxins.",
+      "sourceTitle": "U.S. Army Survival Manual FM 21-76 / ATP 3-50.21",
+      "sourceOrganization": "U.S. Department of Defense / U.S. Army",
+      "sourceUrl": "http://www.equipped.org/fm21-76.htm",
+      "evidenceStrength": "authoritative_field_practice",
+      "fieldRelevance": "Critical warning: this limitation must be prominently stated alongside any UET description"
+    },
+    {
+      "claim": "FM 21-76 lists general plant warning signs to avoid: milky or discolored sap, fine hairs or spines, umbrella-shaped flower clusters (Apiaceae family), almond or pear scent in woody parts or leaves, green/white/yellow berries, and three-leaved growth patterns. Animals eating a plant does NOT indicate safety for humans.",
+      "sourceTitle": "U.S. Army Survival Manual FM 21-76 / ATP 3-50.21 (Chapter 9)",
+      "sourceOrganization": "U.S. Department of Defense / U.S. Army",
+      "sourceUrl": "http://www.equipped.org/fm21-76.htm",
+      "evidenceStrength": "authoritative_field_practice",
+      "fieldRelevance": "Core reference content: general morphological warning signs for field identification"
+    },
+    {
+      "claim": "Poison hemlock (Conium maculatum) is identifiable by smooth hollow stems with distinctive purple or reddish splotches, fern-like pinnately compound leaves (hairless), white umbrella-shaped flower clusters, and a fleshy white taproot smelling of carrots/parsnips. Crushed leaves produce a disagreeable mouse-urine-like odor. All parts are extremely toxic and can cause respiratory paralysis. Dead plants remain toxic for three years.",
+      "sourceTitle": "Poison Hemlock Identification and Management",
+      "sourceOrganization": "University of Maryland Extension",
+      "sourceUrl": "https://extension.umd.edu/resource/poison-hemlock-identification-and-management",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key poisonous lookalike profile: hemlock is the most commonly confused deadly plant in the Apiaceae family"
+    },
+    {
+      "claim": "Water hemlock (Cicuta spp.) is described as the most violently toxic plant in North America. Unlike poison hemlock, it produces a cluster of fleshy tubers at the crown and has broader leaflets not finely divided. Leaf veins terminate at the bottom of leaf serrations (not the tips). It lacks the mouse-like smell of poison hemlock. Cicutoxin in the root can cause seizures and death within 15 minutes of ingestion.",
+      "sourceTitle": "Poison Hemlock and Western Waterhemlock: Deadly Plants That May Be Growing in Your Pasture",
+      "sourceOrganization": "Oregon State University Extension Service",
+      "sourceUrl": "https://extension.oregonstate.edu/catalog/poison-hemlock-western-waterhemlock-deadly-plants-may-be-growing-your-pasture",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key poisonous lookalike profile: water hemlock is the most acutely lethal North American plant"
+    },
+    {
+      "claim": "Queen Anne's Lace (wild carrot) is distinguished from poison hemlock by its hairy stem (vs. smooth) and lack of purple blotches. Wild parsnip lacks purple stem spots. Cow parsnip has palmately (fan-shaped) compound leaves vs. poison hemlock's pinnately compound leaves. Poison hemlock is frequently confused with parsley, anise, chervil, wild carrot, and wild parsnip.",
+      "sourceTitle": "Identifying Danger: Toxic Plants That Look Like Carrots",
+      "sourceOrganization": "Illinois Extension, University of Illinois",
+      "sourceUrl": "https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core reference content: distinguishing safe vs. deadly Apiaceae family members"
+    },
+    {
+      "claim": "Deadly nightshade (Atropa belladonna) has dull green leaves and shiny black berries about cherry-size, with light-purple bell-shaped flowers. Contains atropine and scopolamine causing paralysis of involuntary muscles including the heart. Even physical contact with leaves may cause skin irritation.",
+      "sourceTitle": "Poisonous and Non-Poisonous Plants: An Illustrated List",
+      "sourceOrganization": "National Capital Poison Center (Poison Control)",
+      "sourceUrl": "https://www.poison.org/articles/plant",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key poisonous plant profile for reference content"
+    },
+    {
+      "claim": "Pokeweed (Phytolacca americana) has large lance-shaped leaves, red-purple stems up to 10 feet, and dark purple berries in grape-like clusters. Young shoots are edible when properly prepared, but roots, mature plants, and raw berries are poisonous. This seasonal toxicity variation is a critical identification nuance.",
+      "sourceTitle": "Poisonous and Non-Poisonous Plants: An Illustrated List",
+      "sourceOrganization": "National Capital Poison Center (Poison Control)",
+      "sourceUrl": "https://www.poison.org/articles/plant",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key reference content: plants that change toxicity by season/maturity stage"
+    },
+    {
+      "claim": "Foxglove (Digitalis purpurea) has funnel-shaped flowers in clusters around a long stem (pink, purple, yellow, or spotted), grayish-green wooly-underside leaves, grows up to 4 feet. Contains digitalis glycosides causing gastroenteritis, confusion, hyperkalemia, and arrhythmias. All parts poisonous.",
+      "sourceTitle": "Poisonous and Non-Poisonous Plants: An Illustrated List",
+      "sourceOrganization": "National Capital Poison Center (Poison Control)",
+      "sourceUrl": "https://www.poison.org/articles/plant",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key poisonous plant profile for reference content"
+    },
+    {
+      "claim": "Castor bean (Ricinus communis) has star-shaped glossy green lobed leaves (5-11 points, up to 3 feet diameter), feathery flower clusters, grows 6-15 feet. Contains ricin: 1-2 seeds can kill a child, up to 8 can kill an adult. Causes severe vomiting, diarrhea, seizures, and death.",
+      "sourceTitle": "Plant Poisoning",
+      "sourceOrganization": "Merck Manual Professional Edition",
+      "sourceUrl": "https://www.merckmanuals.com/professional/injuries-poisoning/poisoning/plant-poisoning",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key poisonous plant profile for reference content"
+    },
+    {
+      "claim": "For suspected plant poisoning: call Poison Control at 1-800-222-1222 (US, 24/7, free) or call 911 immediately for severe symptoms. Do not induce vomiting unless specifically directed by Poison Control. Bring the plant or a photo to the emergency room.",
+      "sourceTitle": "Plants | Poison Help",
+      "sourceOrganization": "HRSA / Poison Help",
+      "sourceUrl": "https://poisonhelp.hrsa.gov/faq/plants",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Critical emergency response information that must be in the guide"
+    },
+    {
+      "claim": "Plant identification should use at least three independent identification points: leaf shape, stem structure, flower color/arrangement, root type, fragrance, habitat, and season. Relying on a single feature or common name alone is insufficient and dangerous. Common names overlap between edible and poisonous species.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core identification methodology principle for reference guide"
+    },
+    {
+      "claim": "Regional field guides are essential because species and toxic lookalikes vary by geography. Sam Thayer's Field Guide to Edible Wild Plants of Eastern and Central North America (2023, National Outdoor Book Award winner) covers 700 edible species with photos of 26 commonly mistaken species. Uses an identification system designed to work alongside phone apps for confirmation.",
+      "sourceTitle": "Sam Thayer's Field Guide to Edible Wild Plants of Eastern and Central North America",
+      "sourceOrganization": "Forager's Harvest Press",
+      "sourceUrl": "https://www.foragersharvest.com/sams-books.html",
+      "evidenceStrength": "field_practice",
+      "fieldRelevance": "Key recommended field reference for the guide's preparedness tips"
+    },
+    {
+      "claim": "The USDA Plants Database (plants.usda.gov) provides regional identification, range maps, and distribution data for plants across the United States. Useful as a cross-reference for verifying plant identification against regional distribution.",
+      "sourceTitle": "USDA Plants Database",
+      "sourceOrganization": "USDA Natural Resources Conservation Service",
+      "sourceUrl": "https://plants.usda.gov",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Recommended reference tool for the guide"
+    },
+    {
+      "claim": "Some plants are partially edible or change toxicity by stage: elderberries are edible when cooked but toxic raw; rhubarb stalks are edible but leaves are toxic; pokeweed young shoots are edible but mature plants are poisonous; black cherry leaves become toxic (release hydrocyanic acid) after wilting.",
+      "sourceTitle": "Foraging 101: What to Eat and Avoid",
+      "sourceOrganization": "Cleveland Clinic",
+      "sourceUrl": "https://health.clevelandclinic.org/foraging-101-what-to-eat-and-avoid",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Important reference knowledge: the concept that edibility is not always binary"
+    },
+    {
+      "claim": "Avoid foraging near roads, industrial sites, golf courses, city parks, farmland edges, or areas that may have been sprayed with pesticides or herbicides. Contamination from pesticides, herbicides, and heavy metals is invisible and odorless.",
+      "sourceTitle": "Best Practices for Foraging and Harvesting Indigenous and Wild Plants",
+      "sourceOrganization": "USDA",
+      "sourceUrl": "https://www.usda.gov/sites/default/files/documents/foraging-harvesting-indigenous-wild-plants-best-practices.pdf",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Key warning about environmental contamination for reference guide"
+    },
+    {
+      "claim": "Plant identification apps have meaningful error rates with toxic lookalikes and should not be used as the only identification source. They can be used as one input alongside a regional field guide and multiple morphological checks, but never as sole confirmation.",
+      "sourceTitle": "Foraging 101: What to Eat and Avoid",
+      "sourceOrganization": "Cleveland Clinic",
+      "sourceUrl": "https://health.clevelandclinic.org/foraging-101-what-to-eat-and-avoid",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Important warning for reference content about identification methods"
+    },
+    {
+      "claim": "The Apiaceae (carrot/parsley/celery) family is considered one of the most dangerous for foragers because it contains both edible members (carrot, parsnip, celery, parsley) and extremely lethal members (poison hemlock, water hemlock) that closely resemble each other. Many experienced foragers refuse to harvest from this family entirely.",
+      "sourceTitle": "Identifying Danger: Toxic Plants That Look Like Carrots",
+      "sourceOrganization": "Illinois Extension, University of Illinois",
+      "sourceUrl": "https://extension.illinois.edu/blogs/good-growing/2024-05-31-identifying-danger-toxic-plants-look-carrots",
+      "evidenceStrength": "authoritative",
+      "fieldRelevance": "Core reference content: family-level identification risk assessment"
+    }
+  ],
+  "suggestedSubGuides": [],
+  "conflictsOrWeakClaims": [
+    {
+      "claim": "Milky sap as a universal indicator of toxicity",
+      "issue": "FM 21-76 lists milky/discolored sap as a warning sign, but some edible plants (e.g., dandelion, lettuce) have milky sap. The manual itself notes this is a warning indicator, not an absolute rule.",
+      "sourceA": "FM 21-76 Chapter 9",
+      "sourceB": "General botanical knowledge",
+      "resolution": "Include as a caution indicator with the explicit caveat that it is not an absolute rule (some safe plants have milky sap). The guide already notes dandelion is a beginner edible despite milky sap."
+    },
+    {
+      "claim": "Reliability of the Universal Edibility Test",
+      "issue": "The UET is the standard military protocol but has known limitations: it cannot detect slow-onset toxins, cumulative poisons, or organ-damaging compounds that don't cause immediate symptoms. Multiple wilderness medicine educators note it should be a true last resort.",
+      "sourceA": "FM 21-76",
+      "sourceB": "Cleveland Clinic / wilderness medicine educators",
+      "resolution": "Present the UET with its full protocol but include prominent warnings about its limitations. Frame it explicitly as a last-resort measure, not a reliable safety test."
+    }
+  ],
+  "identifiedGaps": [
+    {
+      "area": "Mushroom identification guidance",
+      "impact": "Mushroom foraging is a related but distinct topic with different identification methods and far higher fatality risk. The existing edible-plant-foraging-basics scenario guide explicitly warns against applying the UET to mushrooms, and this reference guide should reinforce that boundary.",
+      "suggestion": "This reference guide should include a clear statement that mushroom identification is out of scope and requires separate specialized knowledge. A future mushroom-specific reference guide could be created."
+    },
+    {
+      "area": "Western/Pacific region field guide recommendations",
+      "impact": "Sam Thayer's guide covers Eastern and Central North America. No equivalent authoritative field guide recommendation was found for Western states.",
+      "suggestion": "Note the regional limitation and suggest the USDA Plants Database as a supplementary cross-reference tool for all regions."
+    }
+  ],
+  "recommendation": "Write a reference_guide focused on plant identification principles, dangerous plant family recognition, the Universal Edibility Test as a last-resort protocol, and key poisonous lookalike profiles. This guide should complement the existing edible-plant-foraging-basics scenario_guide by providing the underlying identification knowledge rather than step-by-step foraging procedures. Key differentiators: (1) family-level recognition (Apiaceae, Solanaceae), (2) morphological warning signs, (3) full UET reference with limitations, (4) poisonous plant profiles with distinguishing features, (5) the concept of partial/seasonal edibility. stepByStepActions must be empty (reference_guide). Move parentTopic from 'Water Collection' to 'Emergency Food Procurement'."
+}

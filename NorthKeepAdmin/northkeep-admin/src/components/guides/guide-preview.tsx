@@ -17,6 +17,7 @@ export function GuidePreview({ version }: { version: GuideVersion }) {
   const constraintTags = Array.isArray(version.constraint_tags) ? version.constraint_tags : [];
   const blockedByConstraints = Array.isArray(version.blocked_by_constraints) ? version.blocked_by_constraints : [];
   const alternativeSlugs = Array.isArray(version.alternative_to_guide_slugs) ? version.alternative_to_guide_slugs : [];
+  const contentGaps = Array.isArray(version.content_gaps) ? version.content_gaps : [];
   const images = Array.isArray(version.images) ? version.images : [];
   const pendingImages = images.filter((img) => !img.storageUrl);
   const uploadedImages = images.filter((img) => !!img.storageUrl);
@@ -171,6 +172,27 @@ export function GuidePreview({ version }: { version: GuideVersion }) {
                     )}
                   </span>
                   {img.caption && <span className="text-muted-foreground ml-1">— {img.caption}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {version.notes && (
+          <section className="rounded-md border border-violet-200 bg-violet-50/50 p-3 dark:border-violet-900/50 dark:bg-violet-950/20">
+            <h3 className="mb-1 font-medium text-violet-800 text-sm dark:text-violet-200">Internal notes</h3>
+            <p className="text-violet-900 text-sm whitespace-pre-wrap dark:text-violet-100">{version.notes}</p>
+          </section>
+        )}
+        {contentGaps.length > 0 && (
+          <section className="rounded-md border border-orange-200 bg-orange-50/50 p-3 dark:border-orange-900/50 dark:bg-orange-950/20">
+            <h3 className="mb-1 font-medium text-orange-800 text-sm dark:text-orange-200">
+              Content gaps ({contentGaps.length})
+            </h3>
+            <ul className="space-y-1 text-sm">
+              {contentGaps.map((gap, i) => (
+                <li key={i} className="text-orange-900 dark:text-orange-100">
+                  <span className="font-mono font-medium">{gap.slug}</span>
+                  {gap.description && <span className="text-orange-700 dark:text-orange-300"> — {gap.description}</span>}
                 </li>
               ))}
             </ul>

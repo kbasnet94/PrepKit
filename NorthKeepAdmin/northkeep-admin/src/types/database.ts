@@ -65,6 +65,13 @@ export interface GuideImage {
   storageUrl: string | null;
 }
 
+export interface ContentGap {
+  /** Suggested slug for the missing companion guide */
+  slug: string;
+  /** What this guide should cover */
+  description: string;
+}
+
 export interface GuideVersion {
   id: string;
   guide_id: string;
@@ -96,6 +103,7 @@ export interface GuideVersion {
   constraint_tags: string[];
   blocked_by_constraints: string[];
   alternative_to_guide_slugs: string[];
+  content_gaps: ContentGap[];
   images: GuideImage[];
   review_status: ReviewStatus;
   change_summary: string | null;
