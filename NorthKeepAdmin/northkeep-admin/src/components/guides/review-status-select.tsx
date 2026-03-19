@@ -13,6 +13,7 @@ import {
 const STATUSES = [
   { value: "draft", label: "Draft" },
   { value: "in_review", label: "In review" },
+  { value: "needs_images", label: "Needs images" },
   { value: "approved", label: "Approved" },
   { value: "archived", label: "Archived" },
 ] as const;
@@ -22,6 +23,7 @@ type Status = (typeof STATUSES)[number]["value"];
 const STATUS_COLORS: Record<string, string> = {
   draft: "text-muted-foreground",
   in_review: "text-blue-600 dark:text-blue-400",
+  needs_images: "text-amber-600 dark:text-amber-400",
   approved: "text-green-600 dark:text-green-400",
   archived: "text-muted-foreground opacity-60",
   published: "text-purple-600 dark:text-purple-400",
