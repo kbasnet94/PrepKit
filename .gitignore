@@ -12,3 +12,6 @@ PrepKit Mobile/node_modules/
 
 # Windows
 Thumbs.db
+
+# Git worktrees
+.worktrees/
