@@ -395,3 +395,40 @@ The current 27 tags in `constraint-tags.ts` are hardcoded. If skills need to pro
 5. Constraint Annotation (needs the full library for context)
 6. Import/Staging (wraps existing API — relatively thin)
 7. Release (wraps existing APIs — thin, but production-adjacent so build last)
+
+---
+
+## Maintenance Skills
+
+These skills sit outside the standard 8-step pipeline. They are invoked on demand or during the Planning step when specific conditions are met.
+
+### Title Simplifier
+
+**Skill:** `skills/northkeep-title-simplifier/SKILL.md`
+
+**Responsibility:** Scan active guide titles for length, structural redundancy, or clarity issues. Propose simplified versions and apply admin-approved renames atomically.
+
+**When to invoke:**
+- During Planning when the planner flags titles exceeding 55 characters or with colon-subtitles
+- After a consolidation run, when the survivor may have inherited a verbose name
+- On direct admin request ("simplify guide titles")
+
+**Inputs:** Live Supabase query of active guides + current published version titles
+
+**Output: `rename-log.json`**
+```json
+{
+  "date": "YYYY-MM-DD",
+  "renames": [
+    {
+      "slug": "build-72-hour-kit",
+      "oldTitle": "72 Hour Home Survival Kit Shelter at Home",
+      "newTitle": "Build a 72-Hour Kit",
+      "rulesTriggered": ["too_long"],
+      "status": "applied"
+    }
+  ]
+}
+```
+
+**Rules applied:** `too_long` (>55 chars), `colon_subtitle`, `parenthetical`, `noun_heavy`
