@@ -60,6 +60,10 @@ export default async function GuideDetailPage({
     .single();
   const latestVersion = latestVersionFull ?? null;
 
+  const stepCount =
+    (latestVersion as { step_by_step_actions?: string[] } | null)
+      ?.step_by_step_actions?.length ?? 0;
+
   const cat = Array.isArray(guide.guide_categories) ? guide.guide_categories[0] : guide.guide_categories;
   const topic = Array.isArray(guide.guide_parent_topics) ? guide.guide_parent_topics[0] : guide.guide_parent_topics;
   const categoryName = cat && typeof cat === "object" && "name" in cat ? String(cat.name) : "—";
@@ -186,6 +190,8 @@ export default async function GuideDetailPage({
                   ? (latestVersion as { images?: GuideImage[] }).images!
                   : []
               }
+              reviewStatus={latestVersion.review_status}
+              stepCount={stepCount}
             />
           ) : (
             <Card>
