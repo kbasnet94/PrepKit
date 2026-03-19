@@ -48,6 +48,8 @@ export default async function ReviewQueuePage({
     list = list.filter((v) => v.review_status === "draft");
   } else if (filter === "in_review") {
     list = list.filter((v) => v.review_status === "in_review");
+  } else if (filter === "needs_images") {
+    list = list.filter((v) => v.review_status === "needs_images");
   } else if (filter === "approved") {
     list = list.filter((v) => v.review_status === "approved");
   } else if (filter === "weak_sources") {
@@ -78,6 +80,9 @@ export default async function ReviewQueuePage({
           </Link>
           <Link href={query ? `/review?filter=in_review&q=${encodeURIComponent(query)}` : "/review?filter=in_review"}>
             <Badge variant={filter === "in_review" ? "default" : "secondary"}>In review</Badge>
+          </Link>
+          <Link href={query ? `/review?filter=needs_images&q=${encodeURIComponent(query)}` : "/review?filter=needs_images"}>
+            <Badge variant={filter === "needs_images" ? "default" : "secondary"}>Needs images</Badge>
           </Link>
           <Link href={query ? `/review?filter=approved&q=${encodeURIComponent(query)}` : "/review?filter=approved"}>
             <Badge variant={filter === "approved" ? "default" : "secondary"}>Approved</Badge>

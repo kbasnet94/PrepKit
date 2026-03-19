@@ -3,7 +3,7 @@ export type Json = string | number | boolean | null | { [key: string]: Json | un
 export type Layer = "action" | "scenario" | "preparedness" | "reference";
 export type GuideType = "action_card" | "scenario_guide" | "preparedness_guide" | "reference_guide";
 export type SourceQuality = "strong" | "mixed" | "weak";
-export type ReviewStatus = "draft" | "in_review" | "approved" | "published" | "archived";
+export type ReviewStatus = "draft" | "in_review" | "needs_images" | "approved" | "published" | "archived";
 export type ReleaseStatus = "draft" | "published" | "deprecated";
 export type ResponseRole = "primary" | "backup" | "supporting" | "reference";
 

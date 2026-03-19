@@ -12,6 +12,8 @@ interface Props {
   versionId: string;
   guideSlug: string;
   initialImages: GuideImage[];
+  reviewStatus: string;
+  stepCount: number;
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -278,9 +280,169 @@ function UploadedImageCard({
   );
 }
 
+// ─── Add Image form (shown when review_status === "needs_images") ──────────────
+
+function AddImageForm({
+  versionId,
+  guideSlug,
+  stepCount,
+  onAdded,
+}: {
+  versionId: string;
+  guideSlug: string;
+  stepCount: number;
+  onAdded: (img: GuideImage) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [key, setKey] = useState("");
+  const [caption, setCaption] = useState("");
+  const [altText, setAltText] = useState("");
+  const [description, setDescription] = useState("");
+  const [stepIndex, setStepIndex] = useState<string>("gallery");
+  const [file, setFile] = useState<File | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!file) {
+      setError("A file is required.");
+      return;
+    }
+    setUploading(true);
+    setError(null);
+
+    const fd = new FormData();
+    fd.append("file", file);
+    fd.append("versionId", versionId);
+    fd.append("guideSlug", guideSlug);
+    fd.append("key", key);
+    fd.append("caption", caption);
+    fd.append("altText", altText);
+    fd.append("description", description);
+    fd.append("associatedStepIndex", stepIndex === "gallery" ? "" : stepIndex);
+
+    try {
+      const res = await fetch("/api/guides/images/upload", { method: "POST", body: fd });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? "Upload failed");
+      } else {
+        onAdded(data.image as GuideImage);
+        setOpen(false);
+        setKey(""); setCaption(""); setAltText(""); setDescription("");
+        setStepIndex("gallery"); setFile(null);
+      }
+    } catch {
+      setError("Network error during upload");
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  if (!open) {
+    return (
+      <Button variant="outline" size="sm" onClick={() => setOpen(true)}>
+        + Add image
+      </Button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3 rounded-lg border p-4">
+      <p className="text-sm font-medium">Add image</p>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Key (unique ID, e.g. hand-position)</label>
+        <input
+          className="w-full rounded border px-2 py-1 text-sm"
+          value={key}
+          onChange={(e) => setKey(e.target.value)}
+          placeholder="hand-position"
+          pattern="[a-z0-9-]+"
+          title="Lowercase letters, numbers, and hyphens only"
+          required
+        />
+      </div>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Caption (shown on mobile)</label>
+        <input
+          className="w-full rounded border px-2 py-1 text-sm"
+          value={caption}
+          onChange={(e) => setCaption(e.target.value)}
+          required
+        />
+      </div>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Alt text (accessibility)</label>
+        <input
+          className="w-full rounded border px-2 py-1 text-sm"
+          value={altText}
+          onChange={(e) => setAltText(e.target.value)}
+          required
+        />
+      </div>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Sourcing note (admin only, optional)</label>
+        <textarea
+          className="w-full rounded border px-2 py-1 text-sm"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          rows={2}
+        />
+      </div>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Step association</label>
+        <select
+          className="w-full rounded border px-2 py-1 text-sm"
+          value={stepIndex}
+          onChange={(e) => setStepIndex(e.target.value)}
+        >
+          <option value="gallery">Gallery (not tied to a step)</option>
+          {Array.from({ length: stepCount }, (_, i) => (
+            <option key={i} value={String(i)}>
+              Step {i + 1}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Image file (JPEG/PNG/WebP, max 5 MB) *</label>
+        <input
+          type="file"
+          accept="image/jpeg,image/jpg,image/png,image/webp"
+          required
+          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+        />
+      </div>
+
+      {error && <p className="text-destructive text-sm">{error}</p>}
+
+      <div className="flex gap-2">
+        <Button type="submit" size="sm" disabled={uploading}>
+          {uploading ? "Uploading…" : "Upload image"}
+        </Button>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={() => setOpen(false)}
+        >
+          Cancel
+        </Button>
+      </div>
+    </form>
+  );
+}
+
 // ─── Main component ────────────────────────────────────────────────────────────
 
-export function GuideImagesManager({ versionId, guideSlug, initialImages }: Props) {
+export function GuideImagesManager({ versionId, guideSlug, initialImages, reviewStatus, stepCount }: Props) {
   const [images, setImages] = useState<GuideImage[]>(initialImages);
 
   function handleUploaded(updated: GuideImage) {
@@ -291,17 +453,35 @@ export function GuideImagesManager({ versionId, guideSlug, initialImages }: Prop
     setImages((prev) => prev.filter((img) => img.key !== key));
   }
 
+  function handleAdded(newImg: GuideImage) {
+    setImages((prev) => [...prev, newImg]);
+  }
+
   const pending = images.filter((img) => !img.storageUrl);
   const uploaded = images.filter((img) => !!img.storageUrl);
 
   if (images.length === 0) {
     return (
       <Card>
-        <CardContent className="pt-6">
-          <p className="text-muted-foreground text-sm">
-            No images recommended for this guide. The Writing pipeline step will populate this
-            section with image briefs when it identifies visual content opportunities.
-          </p>
+        <CardContent className="pt-6 space-y-4">
+          {reviewStatus === "needs_images" ? (
+            <>
+              <p className="text-muted-foreground text-sm">
+                No images yet. Use the form below to upload the first image.
+              </p>
+              <AddImageForm
+                versionId={versionId}
+                guideSlug={guideSlug}
+                stepCount={stepCount}
+                onAdded={handleAdded}
+              />
+            </>
+          ) : (
+            <p className="text-muted-foreground text-sm">
+              No images recommended for this guide. The Writing pipeline step will populate this
+              section with image briefs when it identifies visual content opportunities.
+            </p>
+          )}
         </CardContent>
       </Card>
     );
@@ -358,6 +538,15 @@ export function GuideImagesManager({ versionId, guideSlug, initialImages }: Prop
             </div>
           </CardContent>
         </Card>
+      )}
+
+      {reviewStatus === "needs_images" && (
+        <AddImageForm
+          versionId={versionId}
+          guideSlug={guideSlug}
+          stepCount={stepCount}
+          onAdded={handleAdded}
+        />
       )}
     </div>
   );

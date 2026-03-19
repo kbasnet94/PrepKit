@@ -60,7 +60,7 @@ export async function POST(
         .update({ review_status: "archived" })
         .in("guide_id", guideIds)
         .not("id", "in", `(${versionIds.join(",")})`)
-        .not("review_status", "in", "(archived,published)");
+        .not("review_status", "eq", "archived");
 
       if (archiveError) {
         // Non-fatal: log but don't fail the publish
