@@ -81,7 +81,7 @@ export async function POST(request: Request) {
       .update({ review_status: "archived" })
       .in("guide_id", guideIds)
       .not("id", "in", `(${versionIds.join(",")})`)
-      .not("review_status", "in", "(archived,published)");
+      .not("review_status", "eq", "archived");
 
     if (archiveError) {
       console.error("Auto-archive error:", archiveError.message);
