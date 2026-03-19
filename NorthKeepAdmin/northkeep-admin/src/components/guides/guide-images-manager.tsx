@@ -30,14 +30,23 @@ function PendingImageCard({
   guideSlug,
   versionId,
   onUploaded,
+  onDeleted,
+  onMetaUpdated,
 }: {
   image: GuideImage;
   guideSlug: string;
   versionId: string;
   onUploaded: (updated: GuideImage) => void;
+  onDeleted: (key: string) => void;
+  onMetaUpdated: (key: string, caption: string, altText: string) => Promise<{ error?: string }>;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [draftCaption, setDraftCaption] = useState(image.caption);
+  const [draftAltText, setDraftAltText] = useState(image.altText);
+  const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -74,6 +83,42 @@ function PendingImageCard({
     }
   }
 
+  async function handleDelete() {
+    if (!confirm(`Delete proposed image "${image.key}"? This cannot be undone.`)) return;
+    setDeleting(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/guides/images", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ versionId, guideSlug, imageKey: image.key }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error ?? "Delete failed");
+      } else {
+        onDeleted(image.key);
+      }
+    } catch {
+      setError("Network error during delete");
+    } finally {
+      setDeleting(false);
+    }
+  }
+
+  async function handleSaveMeta() {
+    setSaving(true);
+    setError(null);
+    const result = await onMetaUpdated(image.key, draftCaption, draftAltText);
+    if (result.error) {
+      setError(result.error);
+    } else {
+      setEditing(false);
+    }
+    setSaving(false);
+  }
+
   return (
     <div className="rounded-lg border border-dashed border-amber-300 bg-amber-50/40 p-4 dark:border-amber-800 dark:bg-amber-950/20">
       <div className="mb-2 flex items-start justify-between gap-2">
@@ -94,16 +139,62 @@ function PendingImageCard({
         <p className="text-amber-900 text-sm leading-relaxed dark:text-amber-100">{image.description}</p>
       </div>
 
-      <div className="space-y-1 text-sm">
-        <p>
-          <span className="text-muted-foreground font-medium">Caption: </span>
-          {image.caption}
-        </p>
-        <p>
-          <span className="text-muted-foreground font-medium">Alt text: </span>
-          {image.altText}
-        </p>
-      </div>
+      {editing ? (
+        <div className="space-y-2">
+          <div className="space-y-1">
+            <label className="text-xs font-medium text-muted-foreground">Caption</label>
+            <input
+              className="w-full rounded border px-2 py-1 text-sm"
+              value={draftCaption}
+              onChange={(e) => setDraftCaption(e.target.value)}
+            />
+          </div>
+          <div className="space-y-1">
+            <label className="text-xs font-medium text-muted-foreground">Alt text</label>
+            <input
+              className="w-full rounded border px-2 py-1 text-sm"
+              value={draftAltText}
+              onChange={(e) => setDraftAltText(e.target.value)}
+            />
+          </div>
+          <div className="flex gap-2">
+            <Button size="sm" disabled={saving} onClick={handleSaveMeta}>
+              {saving ? "Saving…" : "Save"}
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              disabled={saving}
+              onClick={() => {
+                setDraftCaption(image.caption);
+                setDraftAltText(image.altText);
+                setEditing(false);
+              }}
+            >
+              Cancel
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-1 text-sm">
+          <p>
+            <span className="text-muted-foreground font-medium">Caption: </span>
+            {image.caption}
+          </p>
+          <p>
+            <span className="text-muted-foreground font-medium">Alt text: </span>
+            {image.altText}
+          </p>
+          <Button
+            size="sm"
+            variant="ghost"
+            className="mt-1 h-auto px-0 py-0 text-xs text-muted-foreground underline"
+            onClick={() => setEditing(true)}
+          >
+            Edit caption
+          </Button>
+        </div>
+      )}
 
       {error && <p className="mt-2 text-destructive text-sm">{error}</p>}
 
@@ -114,15 +205,24 @@ function PendingImageCard({
         className="hidden"
         onChange={handleUpload}
       />
-      <Button
-        size="sm"
-        variant="outline"
-        className="mt-3"
-        disabled={uploading}
-        onClick={() => fileRef.current?.click()}
-      >
-        {uploading ? "Uploading…" : "Upload image"}
-      </Button>
+      <div className="mt-3 flex gap-2">
+        <Button
+          size="sm"
+          variant="outline"
+          disabled={uploading || deleting}
+          onClick={() => fileRef.current?.click()}
+        >
+          {uploading ? "Uploading…" : "Upload image"}
+        </Button>
+        <Button
+          size="sm"
+          variant="destructive"
+          disabled={uploading || deleting}
+          onClick={handleDelete}
+        >
+          {deleting ? "Deleting…" : "Delete"}
+        </Button>
+      </div>
     </div>
   );
 }
@@ -135,17 +235,23 @@ function UploadedImageCard({
   versionId,
   onDeleted,
   onReplace,
+  onMetaUpdated,
 }: {
   image: GuideImage;
   guideSlug: string;
   versionId: string;
   onDeleted: (key: string) => void;
   onReplace: (updated: GuideImage) => void;
+  onMetaUpdated: (key: string, caption: string, altText: string) => Promise<{ error?: string }>;
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [deleting, setDeleting] = useState(false);
   const [replacing, setReplacing] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [draftCaption, setDraftCaption] = useState(image.caption);
+  const [draftAltText, setDraftAltText] = useState(image.altText);
+  const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function handleDelete() {
@@ -170,6 +276,18 @@ function UploadedImageCard({
     } finally {
       setDeleting(false);
     }
+  }
+
+  async function handleSaveMeta() {
+    setSaving(true);
+    setError(null);
+    const result = await onMetaUpdated(image.key, draftCaption, draftAltText);
+    if (result.error) {
+      setError(result.error);
+    } else {
+      setEditing(false);
+    }
+    setSaving(false);
   }
 
   async function handleReplace(e: React.ChangeEvent<HTMLInputElement>) {
@@ -225,14 +343,62 @@ function UploadedImageCard({
           </Badge>
         </div>
 
-        <p className="text-sm">
-          <span className="text-muted-foreground font-medium">Caption: </span>
-          {image.caption}
-        </p>
-        <p className="text-sm">
-          <span className="text-muted-foreground font-medium">Alt text: </span>
-          {image.altText}
-        </p>
+        {editing ? (
+          <div className="space-y-2 mt-1">
+            <div className="space-y-1">
+              <label className="text-xs font-medium text-muted-foreground">Caption</label>
+              <input
+                className="w-full rounded border px-2 py-1 text-sm"
+                value={draftCaption}
+                onChange={(e) => setDraftCaption(e.target.value)}
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-xs font-medium text-muted-foreground">Alt text</label>
+              <input
+                className="w-full rounded border px-2 py-1 text-sm"
+                value={draftAltText}
+                onChange={(e) => setDraftAltText(e.target.value)}
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button size="sm" disabled={saving} onClick={handleSaveMeta}>
+                {saving ? "Saving…" : "Save"}
+              </Button>
+              <Button
+                size="sm"
+                variant="ghost"
+                disabled={saving}
+                onClick={() => {
+                  setDraftCaption(image.caption);
+                  setDraftAltText(image.altText);
+                  setEditing(false);
+                }}
+              >
+                Cancel
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div className="text-sm">
+            <p>
+              <span className="text-muted-foreground font-medium">Caption: </span>
+              {image.caption}
+            </p>
+            <p>
+              <span className="text-muted-foreground font-medium">Alt text: </span>
+              {image.altText}
+            </p>
+            <Button
+              size="sm"
+              variant="ghost"
+              className="mt-1 h-auto px-0 py-0 text-xs text-muted-foreground underline"
+              onClick={() => setEditing(true)}
+            >
+              Edit caption
+            </Button>
+          </div>
+        )}
 
         {image.description && (
           <button
@@ -457,6 +623,23 @@ export function GuideImagesManager({ versionId, guideSlug, initialImages, review
     setImages((prev) => [...prev, newImg]);
   }
 
+  async function handleMetaUpdated(key: string, caption: string, altText: string): Promise<{ error?: string }> {
+    const newImages = images.map((img) => img.key === key ? { ...img, caption, altText } : img);
+    try {
+      const res = await fetch("/api/guides/images", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ versionId, images: newImages }),
+      });
+      const data = await res.json();
+      if (!res.ok) return { error: data.error ?? "Save failed" };
+      setImages(newImages);
+      return {};
+    } catch {
+      return { error: "Network error" };
+    }
+  }
+
   const pending = images.filter((img) => !img.storageUrl);
   const uploaded = images.filter((img) => !!img.storageUrl);
 
@@ -506,6 +689,7 @@ export function GuideImagesManager({ versionId, guideSlug, initialImages, review
                   versionId={versionId}
                   onDeleted={handleDeleted}
                   onReplace={handleUploaded}
+                  onMetaUpdated={handleMetaUpdated}
                 />
               ))}
             </div>
@@ -533,6 +717,8 @@ export function GuideImagesManager({ versionId, guideSlug, initialImages, review
                   guideSlug={guideSlug}
                   versionId={versionId}
                   onUploaded={handleUploaded}
+                  onDeleted={handleDeleted}
+                  onMetaUpdated={handleMetaUpdated}
                 />
               ))}
             </div>
