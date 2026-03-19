@@ -10,8 +10,11 @@ export function ReviewSearchInput() {
   const [value, setValue] = useState(searchParams.get("q") ?? "");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Keep local value in sync if user navigates back/forward
+  // Keep local value in sync when user navigates back/forward.
+  // searchParams is an external router state (not component state), so calling
+  // setState inside this effect is the correct and intentional pattern here.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setValue(searchParams.get("q") ?? "");
   }, [searchParams]);
 
