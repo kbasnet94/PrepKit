@@ -15,6 +15,30 @@ function formatGuideType(type: string): string {
   if (!type || type === "—") return "—";
   return type.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
+
+function getRelease(releaseItems: unknown): string {
+  const items = Array.isArray(releaseItems) ? releaseItems : [];
+  if (items.length === 0) return "—";
+
+  const releases = items
+    .map((ri: Record<string, unknown>) => {
+      const rel = ri.guide_releases;
+      return Array.isArray(rel) ? rel[0] : rel;
+    })
+    .filter(Boolean) as { semantic_version: string; status: string }[];
+
+  const published = releases.filter((r) => r.status === "published");
+  if (published.length > 0) {
+    return published.sort((a, b) =>
+      b.semantic_version.localeCompare(a.semantic_version)
+    )[0].semantic_version;
+  }
+
+  const draft = releases.filter((r) => r.status === "draft");
+  if (draft.length > 0) return `${draft[0].semantic_version} (draft)`;
+
+  return "—";
+}
 import {
   Table,
   TableBody,
@@ -53,7 +77,12 @@ export default async function GuidesPage({
       current_published_version_id,
       guide_categories(slug, name),
       guide_parent_topics(slug, name),
-      guide_versions!guide_id(version_number, review_status, content_status, guide_type, layer, response_role)
+      guide_versions!guide_id(
+        version_number, review_status, content_status, guide_type, layer, response_role,
+        guide_release_items!guide_release_items_guide_version_id_fkey(
+          guide_releases(semantic_version, status)
+        )
+      )
     `,
       { count: "exact" }
     )
@@ -139,6 +168,7 @@ export default async function GuidesPage({
                   <TableHead>Topic</TableHead>
                   <TableHead>Type</TableHead>
                   <TableHead>Status</TableHead>
+                  <TableHead>Release</TableHead>
                   <TableHead className="w-[80px]"></TableHead>
                 </TableRow>
               </TableHeader>
@@ -176,6 +206,9 @@ export default async function GuidesPage({
                       </TableCell>
                       <TableCell>
                         <Badge variant={reviewStatus === "published" ? "default" : "secondary"}>{reviewStatus}</Badge>
+                      </TableCell>
+                      <TableCell className="text-muted-foreground text-sm">
+                        {getRelease((latest as Record<string, unknown>)?.guide_release_items)}
                       </TableCell>
                       <TableCell>
                         <Link href={`/guides/${g.slug}`}>
