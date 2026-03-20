@@ -22,6 +22,7 @@ import { getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import type { Guide, GuideImage, GuideSourceRef } from "@/lib/guides";
 import { GuideFeedback } from "@/components/GuideFeedback";
 import { useGuideStore } from "@/contexts/GuideStoreContext";
+import { recordGuideView } from "@/lib/guide-views";
 
 const RISK_COLORS: Record<string, string> = {
   low: "#2D6A4F",
@@ -363,6 +364,12 @@ export default function GuideDetailScreen() {
   const { getOnlineGuide, fetchOnlineGuides, downloadedCategories, onlineFetchingCategories } = useGuideStore();
   const guide = slug ? (getGuideBySlug(slug) ?? getOnlineGuide(slug)) : undefined;
   const related = guide ? getRelatedGuides(guide) : [];
+
+  useEffect(() => {
+    if (slug) {
+      recordGuideView(slug);
+    }
+  }, [slug]);
 
   useEffect(() => {
     if (!guide) return;

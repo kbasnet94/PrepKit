@@ -28,6 +28,7 @@ import {
 } from "@/lib/guides/supabase-guide-service";
 import type { Guide } from "@/lib/guides/types";
 import type { AvailableCategory } from "@/lib/guides/supabase-guide-service";
+import { syncGuideViews } from "@/lib/guide-views";
 
 const RELEASE_VERSION_KEY = "northkeep_release_version";
 const GLOBAL_METADATA_KEY = "northkeep_global_metadata";
@@ -220,6 +221,9 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
       if (toDelete.length > 0) summary.push(`${toDelete.length} removed`);
       if (summary.length === 0) summary.push("already up to date");
       console.log(`[GuideStore] Delta sync complete: ${summary.join(", ")}`);
+
+      // Sync guide view counts (fire and forget)
+      syncGuideViews().catch((e) => console.warn("[GuideStore] View sync error:", e));
     } catch (err) {
       console.warn("[GuideStore] deltaSync failed:", err);
     } finally {
@@ -349,6 +353,9 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
             if (seededFromBundle === "true") {
               await deltaSync();
             }
+
+            // Sync guide view counts (fire and forget)
+            syncGuideViews().catch((e) => console.warn("[GuideStore] View sync error:", e));
           } else if (globalMetadata.length === 0) {
             const allMeta = await fetchAllGuidesMetadata(release.id);
             await AsyncStorage.setItem(GLOBAL_METADATA_KEY, JSON.stringify(allMeta));
