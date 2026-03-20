@@ -47,6 +47,11 @@ interface GuideStoreContextValue {
   latestReleaseVersion: string | null;
   deltaSync: () => Promise<void>;
   checkForUpdates: () => Promise<void>;
+  fetchUpdateDetails: () => Promise<{
+    newGuides: { slug: string; title: string }[];
+    updatedGuides: { slug: string; title: string }[];
+    count: number;
+  } | null>;
   reloadGuides: () => Promise<void>;
   // Legacy — kept for backward compat; no-op in new model
   downloadingCategories: Set<string>;
@@ -252,6 +257,47 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  // ─── Fetch update details: diff without downloading ──────────────────────
+
+  const fetchUpdateDetails = useCallback(async (): Promise<{
+    newGuides: { slug: string; title: string }[];
+    updatedGuides: { slug: string; title: string }[];
+    count: number;
+  } | null> => {
+    try {
+      const release = await fetchLatestRelease();
+      if (!release) return null;
+
+      const remoteManifest = await fetchReleaseManifest(release.id);
+      const remoteMap = new Map(remoteManifest.map((r) => [r.slug, r.versionId]));
+      const localMap = await getLocalManifest();
+
+      const newSlugs: string[] = [];
+      const updatedSlugs: string[] = [];
+
+      for (const [slug, versionId] of remoteMap) {
+        if (!localMap.has(slug)) {
+          newSlugs.push(slug);
+        } else if (localMap.get(slug) !== versionId) {
+          updatedSlugs.push(slug);
+        }
+      }
+
+      const titleMap = new Map(globalMetadata.map((g) => [g.slug, g.title]));
+
+      const resolve = (slugs: string[]) =>
+        slugs.map((slug) => ({ slug, title: titleMap.get(slug) ?? slug }));
+
+      return {
+        newGuides: resolve(newSlugs),
+        updatedGuides: resolve(updatedSlugs),
+        count: newSlugs.length + updatedSlugs.length,
+      };
+    } catch {
+      return null;
+    }
+  }, [globalMetadata]);
+
   // ─── Initialization ───────────────────────────────────────────────────────
 
   useEffect(() => {
@@ -414,6 +460,7 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         latestReleaseVersion,
         deltaSync,
         checkForUpdates,
+        fetchUpdateDetails,
         reloadGuides,
         // Legacy
         downloadingCategories: new Set<string>(),
