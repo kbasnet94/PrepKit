@@ -15,6 +15,30 @@ import { ReviewSearchInput } from "@/components/guides/review-search-input";
 import { ApprovedGuidesTable, type ApprovedVersion } from "@/components/guides/approved-guides-table";
 import { Suspense } from "react";
 
+function getRelease(releaseItems: unknown): string {
+  const items = Array.isArray(releaseItems) ? releaseItems : [];
+  if (items.length === 0) return "—";
+
+  const releases = items
+    .map((ri: Record<string, unknown>) => {
+      const rel = ri.guide_releases;
+      return Array.isArray(rel) ? rel[0] : rel;
+    })
+    .filter(Boolean) as { semantic_version: string; status: string }[];
+
+  const published = releases.filter((r) => r.status === "published");
+  if (published.length > 0) {
+    return published.sort((a, b) =>
+      b.semantic_version.localeCompare(a.semantic_version)
+    )[0].semantic_version;
+  }
+
+  const draft = releases.filter((r) => r.status === "draft");
+  if (draft.length > 0) return `${draft[0].semantic_version} (draft)`;
+
+  return "—";
+}
+
 export default async function ReviewQueuePage({
   searchParams,
 }: {
@@ -35,7 +59,10 @@ export default async function ReviewQueuePage({
       content_status,
       source_quality,
       updated_at,
-      guides!guide_id(slug, title)
+      guides!guide_id(slug, title),
+      guide_release_items!guide_release_items_guide_version_id_fkey(
+        guide_releases(semantic_version, status)
+      )
     `
     )
     .order("updated_at", { ascending: false })
@@ -124,6 +151,7 @@ export default async function ReviewQueuePage({
                   <TableHead>Review status</TableHead>
                   <TableHead>Content status</TableHead>
                   <TableHead>Source quality</TableHead>
+                  <TableHead>Release</TableHead>
                   <TableHead>Updated</TableHead>
                   <TableHead></TableHead>
                 </TableRow>
@@ -145,6 +173,9 @@ export default async function ReviewQueuePage({
                       </TableCell>
                       <TableCell className="text-muted-foreground text-sm">{v.content_status ?? "—"}</TableCell>
                       <TableCell className="text-muted-foreground text-sm">{v.source_quality ?? "—"}</TableCell>
+                      <TableCell className="text-muted-foreground text-sm">
+                        {getRelease((v as Record<string, unknown>).guide_release_items)}
+                      </TableCell>
                       <TableCell className="text-muted-foreground text-sm">
                         {new Date(v.updated_at).toLocaleDateString()}
                       </TableCell>
