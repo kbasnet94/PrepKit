@@ -8,7 +8,6 @@ import {
   Pressable,
   ScrollView,
   StyleSheet,
-  Switch,
   Text,
   View,
 } from "react-native";
@@ -16,18 +15,13 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
-import { useChat } from "@/contexts/ChatContext";
 import { useKnowledge } from "@/contexts/KnowledgeContext";
-import { useAIMode } from "@/lib/ai/use-ai-mode";
-import type { AIRewriteMode } from "@/lib/ai/types";
 import { AppFeedback } from "@/components/AppFeedback";
 
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const isWeb = Platform.OS === "web";
-  const { sessions, clearAllChats } = useChat();
   const { downloadedCount, totalStorageBytes, deleteAllArticles } = useKnowledge();
-  const { mode: aiMode, setMode: setAIMode } = useAIMode();
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
@@ -37,24 +31,6 @@ export default function SettingsScreen() {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-  };
-
-  const handleClearChats = () => {
-    if (Platform.OS === "web") {
-      clearAllChats();
-      return;
-    }
-    Alert.alert("Clear All Chats", "This will permanently delete all conversations. This cannot be undone.", [
-      { text: "Cancel", style: "cancel" },
-      {
-        text: "Clear All",
-        style: "destructive",
-        onPress: async () => {
-          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
-          await clearAllChats();
-        },
-      },
-    ]);
   };
 
   const handleDeleteDownloads = () => {
@@ -169,24 +145,10 @@ export default function SettingsScreen() {
             title="Downloaded Articles"
             subtitle={`${downloadedCount} articles (${formatBytes(totalStorageBytes)})`}
           />
-          <View style={styles.separator} />
-          <SettingsRow
-            icon="chatbubbles-outline"
-            title="Chat History"
-            subtitle={`${sessions.length} conversation${sessions.length !== 1 ? "s" : ""}`}
-          />
         </View>
 
         <Text style={styles.sectionTitle}>Data Management</Text>
         <View style={styles.section}>
-          <SettingsRow
-            icon="trash-outline"
-            title="Clear Chat History"
-            subtitle="Delete all conversations"
-            onPress={handleClearChats}
-            destructive
-          />
-          <View style={styles.separator} />
           <SettingsRow
             icon="cloud-offline-outline"
             title="Delete All Downloads"
@@ -194,32 +156,6 @@ export default function SettingsScreen() {
             onPress={handleDeleteDownloads}
             destructive
           />
-        </View>
-
-        <Text style={styles.sectionTitle}>AI</Text>
-        <View style={styles.section}>
-          <View style={styles.settingsRow}>
-            <View style={styles.settingsIcon}>
-              <Ionicons name="sparkles-outline" size={20} color={C.accent} />
-            </View>
-            <View style={styles.settingsContent}>
-              <Text style={styles.settingsTitle}>AI Rewrite Mode</Text>
-              <Text style={styles.settingsSubtitle}>Enhance answers with natural language rewriting</Text>
-            </View>
-          </View>
-          <View style={styles.aiModeSelector}>
-            {(["off", "assistive"] as AIRewriteMode[]).map((m) => (
-              <Pressable
-                key={m}
-                style={[styles.aiModeOption, aiMode === m && styles.aiModeOptionActive]}
-                onPress={() => setAIMode(m)}
-              >
-                <Text style={[styles.aiModeOptionText, aiMode === m && styles.aiModeOptionTextActive]}>
-                  {m === "off" ? "Off" : "Assistive"}
-                </Text>
-              </Pressable>
-            ))}
-          </View>
         </View>
 
         {__DEV__ ? (
@@ -373,32 +309,6 @@ function makeStyles(C: typeof Colors.light) {
       color: C.textTertiary,
       textAlign: "center",
       lineHeight: 20,
-    },
-    aiModeSelector: {
-      flexDirection: "row",
-      marginHorizontal: 14,
-      marginBottom: 14,
-      backgroundColor: C.surfaceSecondary,
-      borderRadius: 10,
-      padding: 3,
-      gap: 2,
-    },
-    aiModeOption: {
-      flex: 1,
-      paddingVertical: 9,
-      borderRadius: 8,
-      alignItems: "center",
-    },
-    aiModeOptionActive: {
-      backgroundColor: C.surface,
-    },
-    aiModeOptionText: {
-      fontSize: 13,
-      fontFamily: "Inter_600SemiBold",
-      color: C.textTertiary,
-    },
-    aiModeOptionTextActive: {
-      color: C.accent,
     },
     themeModeSelector: {
       flexDirection: "row",

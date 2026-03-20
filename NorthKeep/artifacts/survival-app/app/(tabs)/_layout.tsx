@@ -12,10 +12,6 @@ import { useTheme } from "@/contexts/ThemeContext";
 function NativeTabLayout() {
   return (
     <NativeTabs>
-      <NativeTabs.Trigger name="index">
-        <Icon sf={{ default: "bubble.left", selected: "bubble.left.fill" }} />
-        <Label>Chat</Label>
-      </NativeTabs.Trigger>
       <NativeTabs.Trigger name="knowledge">
         <Icon sf={{ default: "book", selected: "book.fill" }} />
         <Label>Knowledge</Label>
@@ -77,10 +73,7 @@ function ClassicTabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Chat",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "chatbubble" : "chatbubble-outline"} size={22} color={color} />
-          ),
+          href: null,
         }}
       />
       <Tabs.Screen
