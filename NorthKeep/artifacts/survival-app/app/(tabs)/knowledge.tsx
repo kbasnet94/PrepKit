@@ -20,6 +20,7 @@ import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 
 import { GuideRequestList } from "@/components/GuideRequestList";
 import { GuideRequestForm } from "@/components/GuideRequestForm";
+import { UpdateBanner } from "@/components/UpdateBanner";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -224,6 +225,7 @@ export default function KnowledgeScreen() {
     isDownloadingAll,
     isSeedingFromBundle,
     deltaSync,
+    fetchUpdateDetails,
     availableCategories,
     downloadedCategories,
     onlineGuidesCache,
@@ -264,11 +266,6 @@ export default function KnowledgeScreen() {
     }
     return counts;
   }, [allGuides]);
-
-  const handleDeltaSync = () => {
-    if (Platform.OS !== "web") Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    deltaSync();
-  };
 
   const categoryGuides = useMemo(() => {
     if (!selectedCategory) return [];
@@ -429,26 +426,10 @@ export default function KnowledgeScreen() {
       </View>
 
       {view === "categories" && (updateAvailable || isDownloadingAll) ? (
-        <Animated.View entering={FadeIn.duration(300)}>
-          <Pressable
-            style={({ pressed }) => [styles.updateBanner, pressed && !isDownloadingAll && { opacity: 0.8 }]}
-            onPress={isDownloadingAll ? undefined : handleDeltaSync}
-            disabled={isDownloadingAll}
-          >
-            {isDownloadingAll ? (
-              <>
-                <ActivityIndicator size="small" color="#fff" />
-                <Text style={styles.updateBannerText}>Updating guides…</Text>
-              </>
-            ) : (
-              <>
-                <Ionicons name="cloud-download-outline" size={16} color="#fff" />
-                <Text style={styles.updateBannerText}>New guides available</Text>
-                <Text style={styles.updateBannerAction}>Download updates</Text>
-              </>
-            )}
-          </Pressable>
-        </Animated.View>
+        <UpdateBanner
+          fetchUpdateDetails={fetchUpdateDetails}
+          deltaSync={deltaSync}
+        />
       ) : null}
 
       {view === "categories" && !searchQuery ? (
@@ -810,30 +791,6 @@ function makeStyles(C: typeof Colors.light) {
       fontSize: 11,
       fontFamily: "Inter_400Regular",
       color: C.textSecondary,
-    },
-    updateBanner: {
-      flexDirection: "row",
-      alignItems: "center",
-      backgroundColor: C.accent,
-      marginHorizontal: 20,
-      marginBottom: 8,
-      borderRadius: 10,
-      paddingHorizontal: 14,
-      paddingVertical: 10,
-      gap: 8,
-    },
-    updateBannerText: {
-      fontSize: 13,
-      fontFamily: "Inter_500Medium",
-      color: "#fff",
-      flex: 1,
-    },
-    updateBannerAction: {
-      fontSize: 12,
-      fontFamily: "Inter_600SemiBold",
-      color: "#fff",
-      opacity: 0.85,
-      textDecorationLine: "underline" as const,
     },
     searchResultsLabel: {
       fontSize: 12,
