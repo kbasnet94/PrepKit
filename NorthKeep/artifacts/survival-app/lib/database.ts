@@ -101,6 +101,13 @@ async function initTables(database: any) {
       updated_at INTEGER NOT NULL,
       FOREIGN KEY (kit_id) REFERENCES inventory_kits(id) ON DELETE SET NULL
     );
+
+    CREATE TABLE IF NOT EXISTS guide_views (
+      guide_slug TEXT PRIMARY KEY,
+      view_count INTEGER DEFAULT 0,
+      last_viewed_at TEXT,
+      needs_sync INTEGER DEFAULT 1
+    );
   `);
 }
 
