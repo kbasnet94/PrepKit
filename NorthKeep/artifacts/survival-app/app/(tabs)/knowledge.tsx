@@ -156,7 +156,7 @@ function CategoryCard({
         <View style={styles.categoryInfo}>
           <Text style={styles.categoryName}>{categoryLabel(category)}</Text>
           <Text style={styles.categoryCount}>
-            {count} {count === 1 ? "guide" : "guides"}  ·  offline
+            {count} {count === 1 ? "guide" : "guides"}
           </Text>
         </View>
         <Ionicons name="chevron-forward" size={16} color={C.textTertiary} />
@@ -378,7 +378,7 @@ export default function KnowledgeScreen() {
               <Text style={styles.headerSub}>
                 {isSeedingFromBundle
                   ? "Setting up guides…"
-                  : `${totalGuides} guides · offline`}
+                  : `${totalGuides} guides`}
               </Text>
               <View style={[styles.layerCountRow, totalGuides === 0 && { opacity: 0 }]}>
                 <View style={styles.layerCountItem}>
