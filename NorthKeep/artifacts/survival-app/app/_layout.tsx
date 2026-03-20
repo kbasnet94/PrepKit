@@ -19,23 +19,16 @@ import { KnowledgeProvider } from "@/contexts/KnowledgeContext";
 import { InventoryProvider } from "@/contexts/InventoryContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { GuideStoreProvider } from "@/contexts/GuideStoreContext";
-import { UserProfileProvider, useUserProfile } from "@/contexts/UserProfileContext";
+import { UserProfileProvider } from "@/contexts/UserProfileContext";
 
 SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
 
 function RootLayoutNav() {
-  const { onboardingCompleted } = useUserProfile();
-
-  // Still loading onboarding state — show nothing (splash is still visible)
-  if (onboardingCompleted === null) return null;
-
   return (
     <Stack screenOptions={{ headerBackTitle: "Back" }}>
-      {!onboardingCompleted && (
-        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-      )}
+      <Stack.Screen name="onboarding" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="chat/[id]" options={{ headerShown: false }} />
       <Stack.Screen name="knowledge/[id]" options={{ headerShown: false }} />

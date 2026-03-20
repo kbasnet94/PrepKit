@@ -1,11 +1,13 @@
 import { View, Text, TextInput, StyleSheet, Pressable, Keyboard } from "react-native";
 import { useState } from "react";
+import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useUserProfile } from "@/contexts/UserProfileContext";
 import { isValidEmail } from "@/lib/user-profile";
 
 export default function EmailScreen() {
+  const router = useRouter();
   const insets = useSafeAreaInsets();
   const { colors: C } = useTheme();
   const { profile, updateProfile, completeOnboarding } = useUserProfile();
@@ -24,10 +26,12 @@ export default function EmailScreen() {
       await updateProfile({ email: trimmed });
     }
     await completeOnboarding();
+    router.replace("/knowledge");
   };
 
   const handleSkip = async () => {
     await completeOnboarding();
+    router.replace("/knowledge");
   };
 
   const styles = makeStyles(C, insets);

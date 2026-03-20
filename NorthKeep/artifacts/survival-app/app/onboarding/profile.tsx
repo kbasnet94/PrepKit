@@ -47,6 +47,7 @@ export default function ProfileScreen() {
 
   const handleSkip = async () => {
     await completeOnboarding();
+    router.replace("/knowledge");
   };
 
   const styles = makeStyles(C, insets);

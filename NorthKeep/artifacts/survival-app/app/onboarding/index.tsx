@@ -26,6 +26,7 @@ export default function WelcomeScreen() {
           style={styles.skipButton}
           onPress={async () => {
             await completeOnboarding();
+            router.replace("/knowledge");
           }}
         >
           <Text style={styles.skipText}>Skip</Text>
