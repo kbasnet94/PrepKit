@@ -16,6 +16,8 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useKnowledge } from "@/contexts/KnowledgeContext";
+import { useUserProfile } from "@/contexts/UserProfileContext";
+import { USER_TYPE_LABELS, EXPERIENCE_LABELS, HOUSEHOLD_LABELS } from "@/lib/user-profile";
 import { AppFeedback } from "@/components/AppFeedback";
 
 export default function SettingsScreen() {
@@ -24,7 +26,22 @@ export default function SettingsScreen() {
   const { downloadedCount, totalStorageBytes, deleteAllArticles } = useKnowledge();
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
+  const { profile } = useUserProfile();
   const styles = useMemo(() => makeStyles(C), [C]);
+
+  const userTypeDisplay = profile.userTypes.length > 0
+    ? profile.userTypes.map((t) => USER_TYPE_LABELS[t]).join(", ")
+    : "Not set";
+
+  const experienceDisplay = profile.experienceLevel
+    ? EXPERIENCE_LABELS[profile.experienceLevel]
+    : "Not set";
+
+  const householdDisplay = profile.householdSize
+    ? HOUSEHOLD_LABELS[profile.householdSize]
+    : "Not set";
+
+  const emailDisplay = profile.email ?? "Not provided";
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return "0 B";
@@ -109,6 +126,16 @@ export default function SettingsScreen() {
         contentContainerStyle={{ paddingBottom: isWeb ? 34 + 84 : 100 }}
         showsVerticalScrollIndicator={false}
       >
+        {/* Your Profile */}
+        <Text style={styles.sectionTitle}>Your Profile</Text>
+        <View style={styles.section}>
+          <SettingsRow icon="mail-outline" title="Email" subtitle={emailDisplay} />
+          <SettingsRow icon="people-outline" title="User Type" subtitle={userTypeDisplay} />
+          <SettingsRow icon="trending-up-outline" title="Experience" subtitle={experienceDisplay} />
+          <SettingsRow icon="home-outline" title="Household" subtitle={householdDisplay} />
+          <SettingsRow icon="chatbubble-outline" title="Offline AI Chat" subtitle="Coming Soon" />
+        </View>
+
         <Text style={styles.sectionTitle}>Appearance</Text>
         <View style={styles.section}>
           <View style={styles.settingsRow}>
