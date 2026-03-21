@@ -143,6 +143,7 @@ export async function fetchGuidesByCategory(
         blocked_by_constraints,
         alternative_to_guide_slugs,
         images,
+        tools,
         guides!guide_versions_guide_id_fkey (
           slug
         ),
@@ -199,6 +200,7 @@ export async function fetchGuidesByCategory(
       blocked_by_constraints: version.blocked_by_constraints ?? [],
       alternative_to_guide_slugs: version.alternative_to_guide_slugs ?? [],
       images: version.images ?? null,
+      tools: version.tools ?? null,
       slug: guideSlug,
       category_slug: categorySlugFromJoin,
       parent_topic_name: parentTopicName,
@@ -286,6 +288,7 @@ export async function fetchGuidesBySlugs(
         blocked_by_constraints,
         alternative_to_guide_slugs,
         images,
+        tools,
         guides!guide_versions_guide_id_fkey (
           slug
         ),
@@ -342,6 +345,7 @@ export async function fetchGuidesBySlugs(
       blocked_by_constraints: version.blocked_by_constraints ?? [],
       alternative_to_guide_slugs: version.alternative_to_guide_slugs ?? [],
       images: version.images ?? null,
+      tools: version.tools ?? null,
       slug: guideSlug,
       category_slug: categorySlug,
       parent_topic_name: parentTopicName,
@@ -423,6 +427,7 @@ export async function fetchAllGuidesMetadata(
       blocked_by_constraints: [],
       alternative_to_guide_slugs: [],
       images: null,
+      tools: null,
       slug: guideSlug,
       category_slug: categorySlugFromJoin,
       parent_topic_name: parentTopicName,

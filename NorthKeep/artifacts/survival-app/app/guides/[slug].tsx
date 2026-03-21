@@ -21,6 +21,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import type { Guide, GuideImage, GuideSourceRef } from "@/lib/guides";
 import { GuideFeedback } from "@/components/GuideFeedback";
+import { GuideToolsTab } from "@/components/GuideToolsTab";
 import { useGuideStore } from "@/contexts/GuideStoreContext";
 import { recordGuideView } from "@/lib/guide-views";
 
@@ -361,9 +362,11 @@ export default function GuideDetailScreen() {
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
 
+  const [activeTab, setActiveTab] = useState<"guide" | "tools">("guide");
   const { getOnlineGuide, fetchOnlineGuides, downloadedCategories, onlineFetchingCategories } = useGuideStore();
   const guide = slug ? (getGuideBySlug(slug) ?? getOnlineGuide(slug)) : undefined;
   const related = guide ? getRelatedGuides(guide) : [];
+  const toolsCount = guide?.tools?.length ?? 0;
 
   useEffect(() => {
     if (slug) {
@@ -474,7 +477,35 @@ export default function GuideDetailScreen() {
           </Animated.View>
         ) : null}
 
-        {!isPlanned && hasContent ? (
+        {/* Tab selector */}
+        {!isPlanned ? (
+          <Animated.View entering={FadeInDown.delay(90).duration(220)} style={styles.tabSelector}>
+            <Pressable
+              style={[styles.tabOption, activeTab === "guide" && styles.tabOptionActive]}
+              onPress={() => setActiveTab("guide")}
+            >
+              <Text style={[styles.tabOptionText, activeTab === "guide" && styles.tabOptionTextActive]}>
+                Guide
+              </Text>
+            </Pressable>
+            <Pressable
+              style={[styles.tabOption, activeTab === "tools" && styles.tabOptionActive]}
+              onPress={() => setActiveTab("tools")}
+            >
+              <Text style={[styles.tabOptionText, activeTab === "tools" && styles.tabOptionTextActive]}>
+                Tools{toolsCount > 0 ? ` (${toolsCount})` : ""}
+              </Text>
+            </Pressable>
+          </Animated.View>
+        ) : null}
+
+        {/* Tools tab content */}
+        {!isPlanned && activeTab === "tools" ? (
+          <GuideToolsTab tools={guide.tools ?? []} />
+        ) : null}
+
+        {/* Guide tab content */}
+        {!isPlanned && activeTab === "guide" && hasContent ? (
           <>
             {guide.whenToUse ? (
               <Section label="When to use" icon="time-outline" delay={nextDelay()} styles={styles} C={C}>
@@ -552,7 +583,7 @@ export default function GuideDetailScreen() {
           </>
         ) : null}
 
-        {related.length > 0 ? (
+        {activeTab === "guide" && related.length > 0 ? (
           <Section label="Related guides" icon="layers-outline" delay={nextDelay()} styles={styles} C={C}>
             <View style={styles.relatedList}>
               {related.map((g) => (
@@ -562,7 +593,9 @@ export default function GuideDetailScreen() {
           </Section>
         ) : null}
 
-        <GuideFeedback guideId={guide.id} guideSlug={guide.slug} />
+        {activeTab === "guide" ? (
+          <GuideFeedback guideId={guide.id} guideSlug={guide.slug} />
+        ) : null}
       </ScrollView>
     </View>
   );
@@ -927,6 +960,31 @@ function makeStyles(C: typeof Colors.light) {
       paddingHorizontal: 8,
       paddingVertical: 6,
       lineHeight: 17,
+    },
+    // ── Tab selector ─────────────────────────────────────────────────────────
+    tabSelector: {
+      flexDirection: "row",
+      backgroundColor: C.surfaceSecondary,
+      borderRadius: 10,
+      padding: 3,
+      gap: 2,
+    },
+    tabOption: {
+      flex: 1,
+      paddingVertical: 9,
+      borderRadius: 8,
+      alignItems: "center",
+    },
+    tabOptionActive: {
+      backgroundColor: C.surface,
+    },
+    tabOptionText: {
+      fontSize: 13,
+      fontFamily: "Inter_600SemiBold",
+      color: C.textTertiary,
+    },
+    tabOptionTextActive: {
+      color: C.accent,
     },
   });
 }

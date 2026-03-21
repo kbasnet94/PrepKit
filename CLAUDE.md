@@ -14,12 +14,12 @@ The admin app connects to a **Supabase** backend. Credentials are in `NorthKeepA
 NorthKeep uses an eight-step pipeline to create and upgrade emergency guides. **This is the most important workflow in the project.** When someone asks to "run the pipeline," "do a dry run," "check for gaps," "add a new topic," or "kick off the flow," they mean this pipeline.
 
 ```
-Planning → Research → Writing → Constraint Annotation → Validation → Import/Staging → Human Review → Release
+Planning → Research → Writing → Constraint Annotation → Validation → Tool Extraction → Import/Staging → Human Review → Release
 ```
 
 For duplicate guides, a **Consolidation** step replaces Research + Writing:
 ```
-Planning → Consolidation → Constraint Annotation → Validation → Import/Staging → Human Review → Release
+Planning → Consolidation → Constraint Annotation → Validation → Tool Extraction → Import/Staging → Human Review → Release
 ```
 
 ### Pipeline skills
@@ -34,7 +34,8 @@ Each step has a skill with detailed instructions in `skills/<skill-name>/SKILL.m
 | 3a. Consolidation | `northkeep-consolidator` | Two duplicate guides | `consolidation-report.json` + `guide-draft.json` |
 | 4. Constraint Annotation | `northkeep-constraint-annotator` | Guide draft + full library context | `guide-annotated.json` |
 | 5. Validation | `northkeep-validation` | Annotated guide + research packet + library | `validation-report.json` |
-| 6. Import/Staging | `northkeep-import-staging` | Annotated guide (validated) | `import-receipt.json` |
+| 5.5. Tool Extraction | `northkeep-tool-extractor` | Validated guide | `guide-with-tools.json` |
+| 6. Import/Staging | `northkeep-import-staging` | Guide with tools (validated) | `import-receipt.json` |
 | 7. Human Review | Manual in admin UI | — | Status change: draft → in_review → approved |
 | 8. Release | `northkeep-release` | Approved versions | Published release bundle |
 

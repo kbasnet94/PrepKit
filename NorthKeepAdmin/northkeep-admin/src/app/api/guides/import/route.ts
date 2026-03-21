@@ -87,6 +87,10 @@ function buildDiff(incoming: NormalizedGuide, current: Record<string, any> | nul
   const curImgs = current ? (Array.isArray(current.images) ? current.images : []) : [];
   fields.push({ key: "images", label: "Images", type: "array", incoming: inImgs, current: curImgs, changed: !arrEq(inImgs, curImgs) });
 
+  const inTools = Array.isArray(incoming.tools) ? incoming.tools : [];
+  const curTools = current ? (Array.isArray(current.tools) ? current.tools : []) : [];
+  fields.push({ key: "tools", label: "Tools", type: "array", incoming: inTools, current: curTools, changed: !arrEq(inTools, curTools) });
+
   return { fields, hasChanges: fields.some((f) => f.changed) };
 }
 
@@ -227,6 +231,7 @@ export async function POST(request: Request) {
       blocked_by_constraints: bcResult.valid,
       alternative_to_guide_slugs: validAltSlugs,
       images: Array.isArray(guide.images) ? guide.images : [],
+      tools: Array.isArray(guide.tools) ? guide.tools : [],
       review_status: "draft",
       change_summary: (body.changeSummary as string) || "Imported from JSON upload",
     };

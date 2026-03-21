@@ -5,6 +5,7 @@ import type {
   GuideSourceQuality,
   GuideContentStatus,
   GuideSourceRef,
+  GuideTool,
 } from "./types";
 
 // ─── Field mappers (shared with seed-data.ts) ─────────────────────────────────
@@ -89,6 +90,7 @@ export interface SupabaseGuideRow {
   blocked_by_constraints: string[];
   alternative_to_guide_slugs: string[];
   images: GuideImage[] | null;
+  tools: GuideTool[] | null;
   // From joins
   slug: string;
   category_slug: string;
@@ -147,5 +149,6 @@ export function transformSupabaseRow(row: SupabaseGuideRow): Guide {
           // description intentionally excluded — admin-facing only
         }))
       : undefined,
+    tools: Array.isArray(row.tools) && row.tools.length > 0 ? row.tools : undefined,
   };
 }

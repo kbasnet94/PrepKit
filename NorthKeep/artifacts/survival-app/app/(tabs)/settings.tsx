@@ -1,9 +1,9 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import { router } from "expo-router";
 import React, { useMemo, useState } from "react";
 import {
   Alert,
+  Linking,
   Platform,
   Pressable,
   ScrollView,
@@ -148,7 +148,7 @@ export default function SettingsScreen() {
             </View>
           </View>
           <View style={styles.themeModeSelector}>
-            {(["light", "dark", "emergency"] as const).map((m) => (
+            {(["light", "dark"] as const).map((m) => (
               <Pressable
                 key={m}
                 style={[styles.themeModeOption, themeMode === m && styles.themeModeOptionActive]}
@@ -185,28 +185,15 @@ export default function SettingsScreen() {
           />
         </View>
 
-        {__DEV__ ? (
-          <>
-            <Text style={styles.sectionTitle}>Developer Tools</Text>
-            <View style={styles.section}>
-              <SettingsRow
-                icon="flask-outline"
-                title="Query Tester"
-                subtitle="Test guide matching and query interpretation"
-                onPress={() => router.push("/debug/query-test")}
-              />
-              <SettingsRow
-                icon="document-text-outline"
-                title="Answer Tester"
-                subtitle="Test the structured answer engine against guide content"
-                onPress={() => router.push("/debug/guide-answer-tester")}
-              />
-            </View>
-          </>
-        ) : null}
-
-        <Text style={styles.sectionTitle}>Feedback</Text>
+        <Text style={styles.sectionTitle}>Support & Feedback</Text>
         <View style={styles.section}>
+          <SettingsRow
+            icon="mail-open-outline"
+            title="Contact Support"
+            subtitle="support@northkeepapp.com"
+            onPress={() => Linking.openURL("mailto:support@northkeepapp.com")}
+          />
+          <View style={styles.separator} />
           <SettingsRow
             icon="star-outline"
             title="Rate the App"
@@ -232,7 +219,7 @@ export default function SettingsScreen() {
           <SettingsRow
             icon="information-circle-outline"
             title="Version"
-            subtitle="1.0.0"
+            subtitle="1.0.0 Beta"
           />
         </View>
 

@@ -65,6 +65,13 @@ export interface GuideImage {
   storageUrl: string | null;
 }
 
+export interface GuideTool {
+  name: string;
+  category: string;
+  optional: boolean;
+  context: string;
+}
+
 export interface ContentGap {
   /** Suggested slug for the missing companion guide */
   slug: string;
@@ -105,6 +112,7 @@ export interface GuideVersion {
   alternative_to_guide_slugs: string[];
   content_gaps: ContentGap[];
   images: GuideImage[];
+  tools: GuideTool[];
   review_status: ReviewStatus;
   change_summary: string | null;
   created_by: string | null;

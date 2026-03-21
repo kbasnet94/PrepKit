@@ -4,7 +4,7 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
 import Colors from "@/constants/colors";
 
 type ColorPalette = typeof Colors.light;
-type ThemeMode = "light" | "dark" | "emergency";
+type ThemeMode = "light" | "dark";
 
 interface ThemeContextValue {
   mode: ThemeMode;
@@ -17,19 +17,19 @@ interface ThemeContextValue {
 const STORAGE_KEY = "northkeep_theme_mode";
 
 const ThemeContext = createContext<ThemeContextValue>({
-  mode: "light",
-  colors: Colors.light,
-  isDark: false,
+  mode: "dark",
+  colors: Colors.dark,
+  isDark: true,
   toggleTheme: () => {},
   setTheme: () => {},
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<ThemeMode>("light");
+  const [mode, setModeState] = useState<ThemeMode>("dark");
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((saved) => {
-      if (saved === "dark" || saved === "light" || saved === "emergency") {
+      if (saved === "dark" || saved === "light") {
         setModeState(saved as ThemeMode);
       }
     });
@@ -42,11 +42,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const toggleTheme = useCallback(() => {
     setModeState((prev) => {
-      let next: ThemeMode = "light";
-      if (prev === "light") next = "dark";
-      else if (prev === "dark") next = "emergency";
-      else next = "light";
-      
+      const next: ThemeMode = prev === "light" ? "dark" : "light";
       AsyncStorage.setItem(STORAGE_KEY, next);
       return next;
     });
@@ -55,8 +51,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<ThemeContextValue>(
     () => ({
       mode,
-      colors: Colors[mode] || Colors.light,
-      isDark: mode === "dark" || mode === "emergency",
+      colors: Colors[mode] || Colors.dark,
+      isDark: mode === "dark",
       toggleTheme,
       setTheme,
     }),

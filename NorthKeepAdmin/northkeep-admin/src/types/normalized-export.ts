@@ -20,6 +20,13 @@ export interface NormalizedSourceReference {
   whyUseful?: string;
 }
 
+export interface GuideTool {
+  name: string;
+  category: string;
+  optional: boolean;
+  context: string;
+}
+
 export interface NormalizedGuide {
   id: string;
   slug: string;
@@ -61,6 +68,8 @@ export interface NormalizedGuide {
    * Pipeline should always include this field (default to empty array).
    */
   images?: NormalizedGuideImage[];
+  /** Structured tools/equipment extracted from guide content by the Tool Extractor skill */
+  tools?: GuideTool[];
 }
 
 export interface NormalizedExport {

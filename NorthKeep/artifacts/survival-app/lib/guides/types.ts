@@ -66,6 +66,13 @@ export interface GuideSourceRef {
   reviewStatus: string;
 }
 
+export interface GuideTool {
+  name: string;
+  category: string;
+  optional: boolean;
+  context: string;
+}
+
 export interface Guide {
   id: string;
   slug: string;
@@ -97,6 +104,7 @@ export interface Guide {
   blockedByConstraints?: string[];
   alternativeToGuideSlugs?: string[];
   images?: GuideImage[];
+  tools?: GuideTool[];
 }
 
 export interface GuideSourceReference {
