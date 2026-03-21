@@ -90,7 +90,7 @@ export interface SupabaseGuideRow {
   blocked_by_constraints: string[];
   alternative_to_guide_slugs: string[];
   images: GuideImage[] | null;
-  tools: GuideTool[] | null;
+  tools: any[] | null;
   // From joins
   slug: string;
   category_slug: string;
@@ -149,6 +149,15 @@ export function transformSupabaseRow(row: SupabaseGuideRow): Guide {
           // description intentionally excluded — admin-facing only
         }))
       : undefined,
-    tools: Array.isArray(row.tools) && row.tools.length > 0 ? row.tools : undefined,
+    tools: Array.isArray(row.tools) && row.tools.length > 0
+      ? row.tools.map((t: any) => ({
+          id: t.id ?? "",
+          name: t.name ?? "",
+          category: t.category ?? "",
+          description: t.description ?? t.context ?? "",
+          optional: t.optional ?? false,
+          context: t.context ?? null,
+        }))
+      : undefined,
   };
 }

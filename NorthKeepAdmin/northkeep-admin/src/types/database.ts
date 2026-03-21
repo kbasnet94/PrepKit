@@ -72,6 +72,27 @@ export interface GuideTool {
   context: string;
 }
 
+/** Canonical tool definition (normalized tools table) */
+export interface Tool {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  created_at: string;
+  updated_at: string;
+}
+
+/** Join row linking a guide version to a canonical tool */
+export interface GuideVersionTool {
+  id: string;
+  guide_version_id: string;
+  tool_id: string;
+  optional: boolean;
+  context: string | null;
+  sort_order: number;
+  created_at: string;
+}
+
 export interface ContentGap {
   /** Suggested slug for the missing companion guide */
   slug: string;

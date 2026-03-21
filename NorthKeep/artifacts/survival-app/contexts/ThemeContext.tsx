@@ -1,13 +1,16 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { useColorScheme } from "react-native";
 
 import Colors from "@/constants/colors";
 
 type ColorPalette = typeof Colors.light;
-type ThemeMode = "light" | "dark";
+type ThemeMode = "system" | "light" | "dark";
+type ResolvedMode = "light" | "dark";
 
 interface ThemeContextValue {
   mode: ThemeMode;
+  resolvedMode: ResolvedMode;
   colors: ColorPalette;
   isDark: boolean;
   toggleTheme: () => void;
@@ -17,7 +20,8 @@ interface ThemeContextValue {
 const STORAGE_KEY = "northkeep_theme_mode";
 
 const ThemeContext = createContext<ThemeContextValue>({
-  mode: "dark",
+  mode: "system",
+  resolvedMode: "dark",
   colors: Colors.dark,
   isDark: true,
   toggleTheme: () => {},
@@ -25,15 +29,19 @@ const ThemeContext = createContext<ThemeContextValue>({
 });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<ThemeMode>("dark");
+  const systemScheme = useColorScheme();
+  const [mode, setModeState] = useState<ThemeMode>("system");
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((saved) => {
-      if (saved === "dark" || saved === "light") {
+      if (saved === "system" || saved === "dark" || saved === "light") {
         setModeState(saved as ThemeMode);
       }
     });
   }, []);
+
+  const resolvedMode: ResolvedMode =
+    mode === "system" ? (systemScheme === "light" ? "light" : "dark") : mode;
 
   const setTheme = useCallback((next: ThemeMode) => {
     setModeState(next);
@@ -42,7 +50,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const toggleTheme = useCallback(() => {
     setModeState((prev) => {
-      const next: ThemeMode = prev === "light" ? "dark" : "light";
+      const order: ThemeMode[] = ["system", "light", "dark"];
+      const next = order[(order.indexOf(prev) + 1) % order.length];
       AsyncStorage.setItem(STORAGE_KEY, next);
       return next;
     });
@@ -51,12 +60,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<ThemeContextValue>(
     () => ({
       mode,
-      colors: Colors[mode] || Colors.dark,
-      isDark: mode === "dark",
+      resolvedMode,
+      colors: Colors[resolvedMode] || Colors.dark,
+      isDark: resolvedMode === "dark",
       toggleTheme,
       setTheme,
     }),
-    [mode, toggleTheme, setTheme]
+    [mode, resolvedMode, toggleTheme, setTheme]
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

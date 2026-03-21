@@ -117,7 +117,20 @@ Defined in `NorthKeepAdmin/northkeep-admin/src/lib/constants/constraint-tags.ts`
 
 ### Database
 
-Supabase (PostgreSQL). Key tables: `guides`, `guide_versions`, `guide_categories`, `guide_parent_topics`, `releases`, `release_items`. The admin app uses the **anon key** (not service role) via `createAdminClient()` in `NorthKeepAdmin/northkeep-admin/src/lib/supabase/admin.ts`.
+Supabase (PostgreSQL). Key tables: `guides`, `guide_versions`, `guide_categories`, `guide_parent_topics`, `releases`, `release_items`, `tools`, `guide_version_tools`. The admin app uses the **anon key** (not service role) via `createAdminClient()` in `NorthKeepAdmin/northkeep-admin/src/lib/supabase/admin.ts`.
+
+### Normalized tools
+
+Tools are stored in a normalized schema — NOT as embedded JSONB in `guide_versions`:
+
+- **`tools`** table: Canonical tool definitions (one row per unique tool). Fields: `id`, `name` (UNIQUE), `category`, `description`.
+- **`guide_version_tools`** join table: Links guide versions to tools. Fields: `guide_version_id`, `tool_id`, `optional`, `context` (guide-specific usage note), `sort_order`.
+
+This ensures consistency: if "Paracord" appears in 20 guides, its name, category, and description are defined once. The `optional` flag and `context` are per-guide because a tool may be essential in one guide but optional in another.
+
+The tool extractor skill (`northkeep-tool-extractor`) queries the `tools` table before extraction to reuse existing tools and only creates new rows when no match exists. The import route (`/api/guides/import?action=save`) automatically persists tools to the normalized tables during import.
+
+For the initial backfill of existing guides, use the `northkeep-tool-backfill` skill.
 
 ### Fallback chain pattern
 

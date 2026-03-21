@@ -246,6 +246,46 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: verErr?.message ?? "Failed to create version" }, { status: 400 });
     }
 
+    // ── Persist normalized tools ──────────────────────────────────────────────
+    const incomingTools = Array.isArray(guide.tools) ? guide.tools : [];
+    if (incomingTools.length > 0) {
+      for (let i = 0; i < incomingTools.length; i++) {
+        const t = incomingTools[i];
+        // Upsert canonical tool (match by name)
+        let { data: toolRow } = await supabase
+          .from("tools")
+          .select("id")
+          .eq("name", t.name)
+          .single();
+
+        if (!toolRow) {
+          const { data: newTool } = await supabase
+            .from("tools")
+            .insert({
+              name: t.name,
+              category: t.category,
+              description: (t as any).description || t.context || t.name,
+            })
+            .select("id")
+            .single();
+          toolRow = newTool;
+        }
+
+        if (toolRow) {
+          await supabase.from("guide_version_tools").upsert(
+            {
+              guide_version_id: newVersion.id,
+              tool_id: toolRow.id,
+              optional: t.optional ?? false,
+              context: t.context || null,
+              sort_order: i,
+            },
+            { onConflict: "guide_version_id,tool_id" }
+          );
+        }
+      }
+    }
+
     const warnings: string[] = [];
     if (ctResult.invalid.length) warnings.push(`Invalid constraint tags (filtered): ${ctResult.invalid.join(", ")}`);
     if (bcResult.invalid.length) warnings.push(`Invalid blocked_by_constraints (filtered): ${bcResult.invalid.join(", ")}`);
@@ -255,6 +295,7 @@ export async function POST(request: Request) {
       slug: guide.slug,
       versionId: newVersion.id,
       versionNumber: newVersion.version_number,
+      toolsLinked: incomingTools.length,
       ...(warnings.length ? { warnings } : {}),
     });
   }

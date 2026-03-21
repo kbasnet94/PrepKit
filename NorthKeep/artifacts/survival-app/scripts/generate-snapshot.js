@@ -103,6 +103,25 @@ function transformRow(version, guideSlug, categorySlug, parentTopicName) {
     constraintTags: Array.isArray(version.constraint_tags) ? version.constraint_tags : undefined,
     blockedByConstraints: Array.isArray(version.blocked_by_constraints) ? version.blocked_by_constraints : undefined,
     alternativeToGuideSlugs: Array.isArray(version.alternative_to_guide_slugs) ? version.alternative_to_guide_slugs : undefined,
+    images: Array.isArray(version.images)
+      ? version.images.filter((img) => !!img.storageUrl).map((img) => ({
+          key: img.key,
+          caption: img.caption,
+          altText: img.altText,
+          associatedStepIndex: img.associatedStepIndex,
+          storageUrl: img.storageUrl,
+        }))
+      : undefined,
+    tools: Array.isArray(version.tools) && version.tools.length > 0
+      ? version.tools.map((t) => ({
+          id: t.id ?? "",
+          name: t.name ?? "",
+          category: t.category ?? "",
+          description: t.description ?? t.context ?? "",
+          optional: t.optional ?? false,
+          context: t.context ?? null,
+        }))
+      : undefined,
   };
 }
 
@@ -171,6 +190,8 @@ async function main() {
         constraint_tags,
         blocked_by_constraints,
         alternative_to_guide_slugs,
+        images,
+        tools,
         guides!guide_versions_guide_id_fkey (slug),
         guide_categories!guide_versions_category_id_fkey (slug),
         guide_parent_topics!guide_versions_parent_topic_id_fkey (name)

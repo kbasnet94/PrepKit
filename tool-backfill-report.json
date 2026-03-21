@@ -1,0 +1,2707 @@
+{
+  "backfilledAt": "2026-03-21T13:59:06.875788+00:00",
+  "guidesScanned": 207,
+  "guidesWithTools": 155,
+  "guidesWithNoTools": 52,
+  "canonicalToolsCreated": 84,
+  "joinRowsCreated": 442,
+  "tools": [
+    {
+      "name": "Batteries",
+      "category": "General",
+      "description": "Portable electrochemical power sources for flashlights, radios, and electronic devices",
+      "usedByGuides": [
+        "72-hour-home-survival-kit-shelter-at-home",
+        "alert-systems-smoke-alarms-weather-radio-and-phone-alerts",
+        "apartment-and-multi-unit-housing-generator-safety",
+        "carbon-monoxide-basics-and-symptoms",
+        "charging-plans-and-backup-power-options",
+        "communication-outage-basics",
+        "deciding-whether-to-stay-or-go-during-a-blackout",
+        "dirty-bomb-immediate-response",
+        "emp-effects-and-response",
+        "first-30-minutes-of-a-power-outage",
+        "flood-preparedness",
+        "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+        "kit-maintenance-and-rotation-schedule",
+        "lost-on-land-first-30-minutes",
+        "morse-code",
+        "night-signaling-and-battery",
+        "nuclear-attack-preparedness",
+        "nuclear-explosion-immediate-response",
+        "nuclear-fallout-shelter-in-place",
+        "phone-battery-conservation-in-emergencies",
+        "power-dependent-medical-devices-planning",
+        "safe-home-lighting-during-blackouts",
+        "shelter-in-place-basics",
+        "sos-morse-code",
+        "staying-warm-in-a-cold-home-without-power",
+        "tornado-preparedness",
+        "unsafe-indoor-heating-methods-to-avoid",
+        "using-flashlights-and-battery-lanterns-safely",
+        "when-treated-water-is-still-unsafe-to-drink",
+        "wildfire-preparedness"
+      ],
+      "guideCount": 30
+    },
+    {
+      "name": "Radio",
+      "category": "Communication",
+      "description": "A radio used in survival and emergency preparedness",
+      "usedByGuides": [
+        "72-hour-home-survival-kit-shelter-at-home",
+        "alert-systems-smoke-alarms-weather-radio-and-phone-alerts",
+        "build-72-hour-kit",
+        "charging-plans-and-backup-power-options",
+        "deciding-whether-to-stay-or-go-during-a-blackout",
+        "dirty-bomb-immediate-response",
+        "emp-effects-and-response",
+        "first-30-minutes-of-a-power-outage",
+        "flood-get-to-higher-ground",
+        "flood-preparedness",
+        "kit-maintenance-and-rotation-schedule",
+        "maritime-electronic-distress-basics-sea-and-large-lakes",
+        "maritime-visual-distress-basics-sea-and-large-lakes",
+        "nuclear-attack-preparedness",
+        "nuclear-explosion-immediate-response",
+        "nuclear-fallout-shelter-in-place",
+        "personal-evacuation-go-bag-adult",
+        "shelter-in-place-kit-home",
+        "staying-warm-in-a-cold-home-without-power",
+        "tornado-after",
+        "tornado-preparedness",
+        "tornado-safety-in-a-mobile-home",
+        "tornado-take-shelter",
+        "when-treated-water-is-still-unsafe-to-drink",
+        "whistle-distress-signals-land",
+        "wildfire-preparedness"
+      ],
+      "guideCount": 26
+    },
+    {
+      "name": "Container",
+      "category": "Storage",
+      "description": "A container used in survival and emergency preparedness",
+      "usedByGuides": [
+        "collecting-and-storing-water-safely-before-treatment",
+        "emergency-toilet-and-waste-management",
+        "emergency-water-storage",
+        "emergency-water-storage-at-home",
+        "emp-effects-and-response",
+        "fire-making",
+        "flood-preparedness",
+        "food-preservation",
+        "food-safety-power-outage-action",
+        "fuel-storage-and-handling-during-emergencies",
+        "nuclear-fallout-shelter-in-place",
+        "preparing-your-kitchen-for-future-outages",
+        "purify-water-boiling",
+        "purify-water-chemical-tablets",
+        "purify-water-filter",
+        "safe-placement-and-operation-of-portable-generators",
+        "solar-still",
+        "using-buildings-and-tarps-for-temporary-roof-and-wall-protection",
+        "using-flashlights-and-battery-lanterns-safely",
+        "using-non-drinking-water-safely",
+        "when-its-better-to-risk-untreated-water"
+      ],
+      "guideCount": 21
+    },
+    {
+      "name": "Flashlight",
+      "category": "Lighting",
+      "description": "A battery-powered portable light source for illumination in low-light conditions",
+      "usedByGuides": [
+        "72-hour-home-survival-kit-shelter-at-home",
+        "car-work-mini-emergency-kit-24-72-hours",
+        "child-and-pet-safety-around-emergency-lighting",
+        "earthquake-after-shaking",
+        "evacuation-go-bag",
+        "first-30-minutes-of-a-power-outage",
+        "flood-preparedness",
+        "flood-reentry-cleanup",
+        "kit-maintenance-and-rotation-schedule",
+        "mirror-and-light-signaling-land-day-and-night",
+        "morse-code",
+        "overnight-survival-in-a-vehicle-in-cold-weather",
+        "personal-evacuation-go-bag-adult",
+        "pocket-always-with-you-kit",
+        "safe-behavior-inside-a-damaged-building",
+        "safe-home-lighting-during-blackouts",
+        "shelter-in-place-kit-home",
+        "sos-morse-code",
+        "tornado-after",
+        "tornado-preparedness",
+        "using-flashlights-and-battery-lanterns-safely"
+      ],
+      "guideCount": 21
+    },
+    {
+      "name": "Work gloves",
+      "category": "General",
+      "description": "Durable hand protection for handling rough materials, hot items, and sharp objects",
+      "usedByGuides": [
+        "bleeding-control-pressure-first",
+        "car-work-mini-emergency-kit-24-72-hours",
+        "choosing-a-safe-spot-for-emergency-shelter",
+        "cleaning-and-disinfection-to-prevent-disease-spread",
+        "cold-prevention-layering",
+        "drying-wet-clothing-and-bedding-safely-indoors",
+        "flood-reentry-cleanup",
+        "floodwater-safety",
+        "frostbite-protect-rewarm",
+        "keeping-dry-in-rain-and-snow-outdoors",
+        "layering-clothing-and-bedding-for-maximum-warmth",
+        "managing-small-wounds-and-skin-problems",
+        "morse-code",
+        "overnight-survival-in-a-vehicle-in-cold-weather",
+        "safe-behavior-inside-a-damaged-building",
+        "simple-no-tools-emergency-shelter-inside-buildings",
+        "staying-warm-and-dry-in-cold-weather",
+        "staying-warm-in-a-cold-home-without-power",
+        "tornado-after",
+        "wildfire-return-home"
+      ],
+      "guideCount": 20
+    },
+    {
+      "name": "Whistle",
+      "category": "Communication",
+      "description": "A small device that produces a loud high-pitched sound for signaling and attracting attention",
+      "usedByGuides": [
+        "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+        "build-72-hour-kit",
+        "car-work-mini-emergency-kit-24-72-hours",
+        "daypack-size-emergency-kit-for-hikes",
+        "lost-on-land-first-30-minutes",
+        "maximizing-rescue-visibility-land",
+        "mirror-and-light-signaling-land-day-and-night",
+        "personal-evacuation-go-bag-adult",
+        "pocket-always-with-you-kit",
+        "signal-for-rescue",
+        "simple-survival-priorities-what-comes-first",
+        "sos-morse-code",
+        "stay-put-vs-move-land",
+        "stop-think-observe-plan-first-30-minutes",
+        "when-to-drop-tasks-and-focus-on-signaling",
+        "whistle-distress-signals-land"
+      ],
+      "guideCount": 16
+    },
+    {
+      "name": "Tarp",
+      "category": "Shelter",
+      "description": "A flat sheet of waterproof material used for shelter, ground cover, and rain collection",
+      "usedByGuides": [
+        "building-a-fire-lay-that-survives-rain-and-snow",
+        "choosing-emergency-shelter-type",
+        "cold-wet-exposure-rain-wind-and-chill",
+        "everyday-cordage-uses-in-emergencies",
+        "fast-tarp-lean-to-for-wind-and-rain",
+        "finding-and-using-dry-tinder-in-wet-weather",
+        "ground-to-air-symbols-for-aircraft",
+        "knot-tying",
+        "low-a-frame-tarp-shelter-for-cold-nights",
+        "managing-moisture-inside-tents-and-improvised-shelters",
+        "natural-lean-to-frame-shelter",
+        "safe-fire-site-selection-and-wind-management",
+        "shelter-building",
+        "simple-no-tools-emergency-shelter-inside-buildings",
+        "using-buildings-and-tarps-for-temporary-roof-and-wall-protection"
+      ],
+      "guideCount": 15
+    },
+    {
+      "name": "Emergency blanket",
+      "category": "Shelter",
+      "description": "A lightweight reflective sheet that retains body heat and provides weather protection",
+      "usedByGuides": [
+        "car-work-mini-emergency-kit-24-72-hours",
+        "choosing-emergency-shelter-type",
+        "daypack-size-emergency-kit-for-hikes",
+        "debris-hut-emergency-overnight",
+        "ground-fire-and-passive-visual-signals",
+        "hypothermia-warm-core",
+        "low-a-frame-tarp-shelter-for-cold-nights",
+        "maximizing-rescue-visibility-land",
+        "mirror-and-light-signaling-land-day-and-night",
+        "personal-evacuation-go-bag-adult",
+        "pocket-always-with-you-kit",
+        "shelter-building",
+        "signal-for-rescue",
+        "signs-you-must-switch-to-shelter-and-warmth",
+        "stay-put-vs-move-land"
+      ],
+      "guideCount": 15
+    },
+    {
+      "name": "Map",
+      "category": "Navigation",
+      "description": "A printed representation of terrain, trails, and landmarks used for navigation",
+      "usedByGuides": [
+        "build-72-hour-kit",
+        "car-work-mini-emergency-kit-24-72-hours",
+        "daypack-size-emergency-kit-for-hikes",
+        "during-landslide",
+        "earthquake-preparedness-checklist",
+        "edible-plant-foraging-basics",
+        "emp-effects-and-response",
+        "flood-preparedness",
+        "land-navigation",
+        "lost-on-land-first-30-minutes",
+        "meeting-places-and-reunion-planning",
+        "primitive-fishing-survival",
+        "stay-put-vs-move-land",
+        "stop-think-observe-plan-first-30-minutes"
+      ],
+      "guideCount": 14
+    },
+    {
+      "name": "Cord",
+      "category": "Rope & Cordage",
+      "description": "A cord used in survival and emergency preparedness",
+      "usedByGuides": [
+        "basic-home-hazard-and-injury-prevention-check",
+        "charging-plans-and-backup-power-options",
+        "everyday-cordage-uses-in-emergencies",
+        "knot-tying",
+        "powering-appliances-safely-with-a-generator",
+        "safe-behavior-inside-a-damaged-building",
+        "safe-cutting-tasks-for-shelter-and-repairs",
+        "safe-options-for-heating-indoors-during-power-outages",
+        "safe-placement-and-operation-of-portable-generators",
+        "safe-use-of-extension-cords-and-avoiding-overloads",
+        "safe-use-of-portable-heaters-indoors",
+        "shelter-building",
+        "when-not-to-use-a-knife"
+      ],
+      "guideCount": 13
+    },
+    {
+      "name": "Hat",
+      "category": "General",
+      "description": "Head covering providing protection from sun, rain, and heat loss",
+      "usedByGuides": [
+        "car-work-mini-emergency-kit-24-72-hours",
+        "choosing-a-safe-spot-for-emergency-shelter",
+        "cold-prevention-layering",
+        "daypack-size-emergency-kit-for-hikes",
+        "everyday-extreme-heat-precautions",
+        "everyday-sun-protection-and-uv-safety",
+        "layering-clothing-and-bedding-for-maximum-warmth",
+        "overnight-survival-in-a-vehicle-in-cold-weather",
+        "simple-no-tools-emergency-shelter-inside-buildings",
+        "staying-warm-and-dry-in-cold-weather",
+        "staying-warm-in-a-cold-home-without-power",
+        "working-or-exercising-safely-in-high-heat"
+      ],
+      "guideCount": 12
+    },
+    {
+      "name": "Generator",
+      "category": "General",
+      "description": "A fuel-powered engine that produces electricity for tools, lights, and appliances",
+      "usedByGuides": [
+        "apartment-and-multi-unit-housing-generator-safety",
+        "charging-plans-and-backup-power-options",
+        "fuel-storage-and-handling-during-emergencies",
+        "power-dependent-medical-devices-planning",
+        "powering-appliances-safely-with-a-generator",
+        "preventing-co-poisoning-during-outages",
+        "safe-options-for-heating-indoors-during-power-outages",
+        "safe-placement-and-operation-of-portable-generators",
+        "safe-use-of-extension-cords-and-avoiding-overloads",
+        "shelter-in-place-kit-home",
+        "unsafe-indoor-heating-methods-to-avoid"
+      ],
+      "guideCount": 11
+    },
+    {
+      "name": "First Aid Kit",
+      "category": "First Aid",
+      "description": "A first aid kit used in survival and emergency preparedness",
+      "usedByGuides": [
+        "bleeding-control-pressure-first",
+        "daypack-size-emergency-kit-for-hikes",
+        "flood-preparedness",
+        "heat-exhaustion-cool-rehydrate",
+        "immobilize-sprain-or-fracture",
+        "managing-small-wounds-and-skin-problems",
+        "nuclear-attack-preparedness",
+        "nuclear-fallout-shelter-in-place",
+        "sprains-and-suspected-fractures",
+        "tornado-preparedness"
+      ],
+      "guideCount": 10
+    },
+    {
+      "name": "Thermometer",
+      "category": "First Aid",
+      "description": "A device that measures body temperature to assess fever or hypothermia",
+      "usedByGuides": [
+        "deciding-when-to-throw-away-food-after-an-outage",
+        "emp-effects-and-response",
+        "first-30-minutes-of-a-power-outage",
+        "food-preservation",
+        "food-safety-power-outage-action",
+        "freezer-safety-during-outages",
+        "keeping-food-safe-during-a-power-outage",
+        "preparing-your-kitchen-for-future-outages",
+        "refrigerator-safety-during-outages",
+        "wound-infection-red-flags"
+      ],
+      "guideCount": 10
+    },
+    {
+      "name": "Plastic sheeting",
+      "category": "General",
+      "description": "A large sheet of polyethylene used for waterproofing, vapor barriers, and improvised shelter",
+      "usedByGuides": [
+        "nuclear-attack-preparedness",
+        "nuclear-explosion-immediate-response",
+        "nuclear-fallout-shelter-in-place",
+        "shelter-in-place-kit-home",
+        "simple-no-tools-emergency-shelter-inside-buildings",
+        "solar-still",
+        "staying-warm-and-dry-in-cold-weather",
+        "using-buildings-and-tarps-for-temporary-roof-and-wall-protection"
+      ],
+      "guideCount": 8
+    },
+    {
+      "name": "GPS device",
+      "category": "Navigation",
+      "description": "An electronic device that uses satellite signals to determine geographic position",
+      "usedByGuides": [
+        "daypack-size-emergency-kit-for-hikes",
+        "emp-effects-and-response",
+        "land-navigation",
+        "lost-on-land-first-30-minutes",
+        "phone-battery-conservation-in-emergencies",
+        "signal-for-rescue",
+        "stop-think-observe-plan-first-30-minutes"
+      ],
+      "guideCount": 7
+    },
+    {
+      "name": "Duct Tape",
+      "category": "General",
+      "description": "A duct tape used in survival and emergency preparedness",
+      "usedByGuides": [
+        "car-work-mini-emergency-kit-24-72-hours",
+        "nuclear-attack-preparedness",
+        "nuclear-explosion-immediate-response",
+        "nuclear-fallout-shelter-in-place",
+        "shelter-in-place-kit-home",
+        "simple-no-tools-emergency-shelter-inside-buildings",
+        "using-buildings-and-tarps-for-temporary-roof-and-wall-protection"
+      ],
+      "guideCount": 7
+    },
+    {
+      "name": "Knife",
+      "category": "Cutting",
+      "description": "A fixed or folding blade used for cutting, carving, and general utility tasks",
+      "usedByGuides": [
+        "basic-knife-handling-and-safe-zones",
+        "choking-responsive-adult-or-child",
+        "daypack-size-emergency-kit-for-hikes",
+        "primitive-fishing-survival",
+        "safe-cutting-tasks-for-shelter-and-repairs",
+        "when-not-to-use-a-knife"
+      ],
+      "guideCount": 6
+    },
+    {
+      "name": "Camp stove",
+      "category": "Cooking",
+      "description": "A portable burner fueled by gas canisters or liquid fuel for cooking in the field",
+      "usedByGuides": [
+        "drying-wet-clothing-and-bedding-safely-indoors",
+        "fuel-storage-and-handling-during-emergencies",
+        "preventing-co-poisoning-during-outages",
+        "purify-water-boiling",
+        "safe-options-for-heating-indoors-during-power-outages",
+        "unsafe-indoor-heating-methods-to-avoid"
+      ],
+      "guideCount": 6
+    },
+    {
+      "name": "Tent",
+      "category": "Shelter",
+      "description": "A portable fabric shelter supported by poles, providing protection from weather and insects",
+      "usedByGuides": [
+        "debris-hut-emergency-overnight",
+        "fire-making",
+        "managing-moisture-inside-tents-and-improvised-shelters",
+        "nuclear-fallout-shelter-in-place",
+        "safe-fire-site-selection-and-wind-management",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 6
+    },
+    {
+      "name": "Matches",
+      "category": "Fire",
+      "description": "Friction-ignited sticks used to start fires for warmth, cooking, or signaling",
+      "usedByGuides": [
+        "child-and-pet-safety-around-emergency-lighting",
+        "fire-making",
+        "land-navigation",
+        "pocket-always-with-you-kit",
+        "safe-home-lighting-during-blackouts",
+        "safe-use-of-extension-cords-and-avoiding-overloads"
+      ],
+      "guideCount": 6
+    },
+    {
+      "name": "Power bank",
+      "category": "General",
+      "description": "A rechargeable battery pack used to charge phones and small electronic devices",
+      "usedByGuides": [
+        "apartment-and-multi-unit-housing-generator-safety",
+        "charging-plans-and-backup-power-options",
+        "first-30-minutes-of-a-power-outage",
+        "personal-evacuation-go-bag-adult",
+        "phone-battery-conservation-in-emergencies",
+        "stop-think-observe-plan-first-30-minutes"
+      ],
+      "guideCount": 6
+    },
+    {
+      "name": "Bandage",
+      "category": "First Aid",
+      "description": "A strip of fabric or adhesive material used to cover and protect wounds",
+      "usedByGuides": [
+        "bleeding-control-pressure-first",
+        "immobilize-sprain-or-fracture",
+        "managing-small-wounds-and-skin-problems",
+        "pocket-always-with-you-kit",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Sleeping Bag",
+      "category": "Shelter",
+      "description": "A sleeping bag used in survival and emergency preparedness",
+      "usedByGuides": [
+        "emergency-overnight-setup-when-you-are-already-wet",
+        "hypothermia-warm-core",
+        "layering-clothing-and-bedding-for-maximum-warmth",
+        "overnight-survival-in-a-vehicle-in-cold-weather",
+        "purify-water-filter"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Headlamp",
+      "category": "Lighting",
+      "description": "A hands-free light source worn on the head for illumination during tasks and travel",
+      "usedByGuides": [
+        "daypack-size-emergency-kit-for-hikes",
+        "mirror-and-light-signaling-land-day-and-night",
+        "pocket-always-with-you-kit",
+        "safe-home-lighting-during-blackouts",
+        "using-flashlights-and-battery-lanterns-safely"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Tinder",
+      "category": "Fire",
+      "description": "A tinder used in survival and emergency preparedness",
+      "usedByGuides": [
+        "building-a-fire-lay-that-survives-rain-and-snow",
+        "choosing-and-preparing-dry-fuel",
+        "finding-and-using-dry-tinder-in-wet-weather",
+        "fire-making",
+        "when-not-to-attempt-a-fire-in-wet-conditions"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Lantern",
+      "category": "Lighting",
+      "description": "A portable enclosed light source providing area illumination at camp",
+      "usedByGuides": [
+        "child-and-pet-safety-around-emergency-lighting",
+        "first-30-minutes-of-a-power-outage",
+        "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+        "safe-home-lighting-during-blackouts",
+        "using-flashlights-and-battery-lanterns-safely"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Lighter",
+      "category": "Fire",
+      "description": "A refillable or disposable device that produces a flame on demand for fire starting",
+      "usedByGuides": [
+        "child-and-pet-safety-around-emergency-lighting",
+        "fire-making",
+        "heat-prevention",
+        "pocket-always-with-you-kit",
+        "safe-home-lighting-during-blackouts"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Candle",
+      "category": "Lighting",
+      "description": "A wax cylinder with a wick that provides light and a small amount of heat when burned",
+      "usedByGuides": [
+        "child-and-pet-safety-around-emergency-lighting",
+        "earthquake-after-shaking",
+        "power-outage-basics",
+        "safe-home-lighting-during-blackouts",
+        "using-aqi-and-basic-smoke-air-quality-precautions"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "N95 respirator",
+      "category": "General",
+      "description": "A filtration mask that blocks at least 95% of airborne particles and contaminants",
+      "usedByGuides": [
+        "dust-ash-and-airborne-irritants-after-storms-eruptions-or-collapses",
+        "tornado-after",
+        "using-aqi-and-basic-smoke-air-quality-precautions",
+        "wildfire-preparedness",
+        "wildfire-return-home"
+      ],
+      "guideCount": 5
+    },
+    {
+      "name": "Tent stakes",
+      "category": "Shelter",
+      "description": "Metal or plastic anchors driven into the ground to secure tent and tarp guy lines",
+      "usedByGuides": [
+        "low-a-frame-tarp-shelter-for-cold-nights",
+        "safe-cutting-tasks-for-shelter-and-repairs",
+        "sprains-and-suspected-fractures",
+        "when-not-to-use-a-knife"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Bleach",
+      "category": "Water Purification",
+      "description": "A sodium hypochlorite solution used in small doses to disinfect drinking water",
+      "usedByGuides": [
+        "choosing-safe-hydration-sources",
+        "cleaning-and-disinfection-to-prevent-disease-spread",
+        "purify-water-bleach",
+        "purify-water-boiling"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Signal Mirror",
+      "category": "Signaling",
+      "description": "A signal mirror used in survival and emergency preparedness",
+      "usedByGuides": [
+        "mirror-and-light-signaling-land-day-and-night",
+        "signal-for-rescue",
+        "sos-morse-code",
+        "stay-put-vs-move-land"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Paracord",
+      "category": "Rope & Cordage",
+      "description": "A lightweight nylon cord rated to 550 lbs, used for lashing, rigging, and general-purpose tying",
+      "usedByGuides": [
+        "choosing-emergency-shelter-type",
+        "knot-tying",
+        "natural-lean-to-frame-shelter",
+        "primitive-fishing-survival"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Iodine",
+      "category": "First Aid",
+      "description": "A topical antiseptic solution used for wound disinfection and water purification",
+      "usedByGuides": [
+        "acute-radiation-syndrome",
+        "nuclear-attack-preparedness",
+        "nuclear-explosion-immediate-response",
+        "purify-water-chemical-tablets"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Plastic bags",
+      "category": "Storage",
+      "description": "General-purpose polyethylene bags used for waterproofing, waste, and storage",
+      "usedByGuides": [
+        "collecting-and-storing-water-safely-before-treatment",
+        "dirty-bomb-immediate-response",
+        "nuclear-attack-preparedness",
+        "radiation-decontamination"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Utensil",
+      "category": "Cooking",
+      "description": "A utensil used in survival and emergency preparedness",
+      "usedByGuides": [
+        "food-preservation",
+        "hand-hygiene-and-food-safety-in-the-field",
+        "safe-food-handling-when-water-is-limited",
+        "using-non-drinking-water-safely"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Compass",
+      "category": "Navigation",
+      "description": "A handheld device that uses magnetic north to determine direction of travel",
+      "usedByGuides": [
+        "daypack-size-emergency-kit-for-hikes",
+        "land-navigation",
+        "lost-on-land-first-30-minutes",
+        "stop-think-observe-plan-first-30-minutes"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Multi-tool",
+      "category": "Cutting",
+      "description": "A compact folding tool combining pliers, blades, screwdrivers, and other implements",
+      "usedByGuides": [
+        "basic-knife-handling-and-safe-zones",
+        "car-work-mini-emergency-kit-24-72-hours",
+        "daypack-size-emergency-kit-for-hikes",
+        "primitive-fishing-survival"
+      ],
+      "guideCount": 4
+    },
+    {
+      "name": "Metal cup",
+      "category": "Cooking",
+      "description": "A durable metal drinking vessel that can be used for boiling small quantities of water",
+      "usedByGuides": [
+        "collecting-and-storing-water-safely-before-treatment",
+        "edible-plant-foraging-basics",
+        "solar-still"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Bivy sack",
+      "category": "Shelter",
+      "description": "A compact waterproof sleeping bag cover providing minimal emergency shelter",
+      "usedByGuides": [
+        "daypack-size-emergency-kit-for-hikes",
+        "knot-tying",
+        "low-a-frame-tarp-shelter-for-cold-nights"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Water purification tablets",
+      "category": "Water Purification",
+      "description": "Chemical tablets dissolved in water to kill pathogens and make water safe to drink",
+      "usedByGuides": [
+        "purify-water-boiling",
+        "purify-water-chemical-tablets",
+        "purify-water-filter"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Personal locator beacon",
+      "category": "Communication",
+      "description": "A satellite-linked emergency device that transmits a distress signal with GPS coordinates to search and rescue",
+      "usedByGuides": [
+        "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+        "maritime-electronic-distress-basics-sea-and-large-lakes",
+        "signal-for-rescue"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Trekking poles",
+      "category": "General",
+      "description": "Adjustable walking poles that improve balance, reduce joint strain, and probe terrain",
+      "usedByGuides": [
+        "immobilize-sprain-or-fracture",
+        "shelter-building",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "SAM splint",
+      "category": "First Aid",
+      "description": "A padded malleable aluminum splint that can be shaped to immobilize fractures and sprains",
+      "usedByGuides": [
+        "everyday-cordage-uses-in-emergencies",
+        "immobilize-sprain-or-fracture",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Instant cold pack",
+      "category": "First Aid",
+      "description": "A single-use chemical pack that produces cold when activated, used to reduce swelling",
+      "usedByGuides": [
+        "heat-stroke-emergency",
+        "immobilize-sprain-or-fracture",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Sewing kit",
+      "category": "General",
+      "description": "A compact set of needles, thread, and buttons for mending clothing and gear",
+      "usedByGuides": [
+        "debris-hut-emergency-overnight",
+        "natural-lean-to-frame-shelter",
+        "purify-water-chemical-tablets"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Cordage",
+      "category": "Rope & Cordage",
+      "description": "General-purpose cord or string used for binding, lashing, and tying",
+      "usedByGuides": [
+        "everyday-cordage-uses-in-emergencies",
+        "natural-lean-to-frame-shelter",
+        "primitive-fishing-survival"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Rope",
+      "category": "Rope & Cordage",
+      "description": "A length of thick braided or twisted fiber used for hauling, securing, and climbing",
+      "usedByGuides": [
+        "drying-wet-clothing-and-bedding-safely-indoors",
+        "simple-loops-and-attachment-knots-figure-eight-on-a-bight-bowline",
+        "using-buildings-and-tarps-for-temporary-roof-and-wall-protection"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Sunscreen",
+      "category": "General",
+      "description": "A topical lotion that blocks ultraviolet radiation to prevent sunburn",
+      "usedByGuides": [
+        "everyday-extreme-heat-precautions",
+        "everyday-sun-protection-and-uv-safety",
+        "working-or-exercising-safely-in-high-heat"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Oral rehydration salts",
+      "category": "First Aid",
+      "description": "A balanced mixture of salts and sugar dissolved in water to treat dehydration",
+      "usedByGuides": [
+        "dehydration-reference",
+        "dehydration-signs-and-immediate-care",
+        "heat-exhaustion-cool-rehydrate"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "AED",
+      "category": "First Aid",
+      "description": "An automated external defibrillator that analyzes heart rhythm and delivers an electric shock to restore normal heartbeat",
+      "usedByGuides": [
+        "cardiac-arrest-cpr-steps",
+        "choking-unresponsive-adult-or-child",
+        "cpr-reference"
+      ],
+      "guideCount": 3
+    },
+    {
+      "name": "Gauze",
+      "category": "First Aid",
+      "description": "A lightweight woven fabric used for wound dressing and padding",
+      "usedByGuides": [
+        "bleeding-control-pressure-first",
+        "pocket-always-with-you-kit"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Metal pot",
+      "category": "Cooking",
+      "description": "A heat-resistant metal container used for boiling water or cooking food over an open flame",
+      "usedByGuides": [
+        "collecting-and-storing-water-safely-before-treatment",
+        "purify-water-boiling"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Triangular bandage",
+      "category": "First Aid",
+      "description": "A large triangular cloth used as a sling, bandage, or tourniquet improvisation",
+      "usedByGuides": [
+        "immobilize-sprain-or-fracture",
+        "sprains-and-suspected-fractures"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Heat pack",
+      "category": "First Aid",
+      "description": "A portable chemical or reusable pack that generates warmth for treating hypothermia or muscle pain",
+      "usedByGuides": [
+        "hypothermia-warm-core",
+        "when-not-to-attempt-a-fire-in-wet-conditions"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Poncho",
+      "category": "Shelter",
+      "description": "A waterproof garment that doubles as a rain cover and improvised shelter",
+      "usedByGuides": [
+        "building-a-fire-lay-that-survives-rain-and-snow",
+        "keeping-dry-in-rain-and-snow-outdoors"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Wire",
+      "category": "Rope & Cordage",
+      "description": "A thin flexible metal strand used for snares, repairs, and secure fastening",
+      "usedByGuides": [
+        "emp-effects-and-response",
+        "safe-use-of-extension-cords-and-avoiding-overloads"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Scissors",
+      "category": "Cutting",
+      "description": "A pair of pivoted blades used for cutting fabric, cordage, and light materials",
+      "usedByGuides": [
+        "basic-knife-handling-and-safe-zones",
+        "shelter-in-place-kit-home"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Permanent marker",
+      "category": "General",
+      "description": "A waterproof writing instrument used for labeling gear and leaving messages",
+      "usedByGuides": [
+        "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+        "ground-fire-and-passive-visual-signals"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Bucket",
+      "category": "Storage",
+      "description": "A rigid open-top container used for carrying water and storing supplies",
+      "usedByGuides": [
+        "cleaning-and-disinfection-to-prevent-disease-spread",
+        "emergency-toilet-and-waste-management"
+      ],
+      "guideCount": 2
+    },
+    {
+      "name": "Tourniquet",
+      "category": "First Aid",
+      "description": "A constricting device applied to a limb to control life-threatening bleeding",
+      "usedByGuides": [
+        "bleeding-control-pressure-first"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Pressure bandage",
+      "category": "First Aid",
+      "description": "A tightly applied bandage designed to control bleeding through direct pressure",
+      "usedByGuides": [
+        "bleeding-control-pressure-first"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Sleeping pad",
+      "category": "Shelter",
+      "description": "An insulating mat placed under a sleeping bag to prevent ground heat loss",
+      "usedByGuides": [
+        "low-a-frame-tarp-shelter-for-cold-nights"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Epinephrine auto-injector",
+      "category": "First Aid",
+      "description": "A pre-loaded injection device that delivers epinephrine to treat severe allergic reactions",
+      "usedByGuides": [
+        "allergic-reaction-and-anaphylaxis-warning-signs"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Fire extinguisher",
+      "category": "General",
+      "description": "A pressurized device that discharges a fire-suppressing agent to put out small fires",
+      "usedByGuides": [
+        "home-fire-safety-and-escape-readiness"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Shovel",
+      "category": "General",
+      "description": "A handled digging tool used for excavation, snow removal, and fire management",
+      "usedByGuides": [
+        "overnight-survival-in-a-vehicle-in-cold-weather"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Water bottle",
+      "category": "Storage",
+      "description": "A sealed container for carrying and storing drinking water",
+      "usedByGuides": [
+        "keeping-food-safe-during-a-power-outage"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Saline solution",
+      "category": "First Aid",
+      "description": "A sterile saltwater solution used for wound irrigation and eye flushing",
+      "usedByGuides": [
+        "minor-cuts-scrapes"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Solar charger",
+      "category": "General",
+      "description": "A portable photovoltaic panel that converts sunlight into electrical power for charging devices",
+      "usedByGuides": [
+        "charging-plans-and-backup-power-options"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Trowel",
+      "category": "General",
+      "description": "A small handheld digging tool used for cat holes and light excavation",
+      "usedByGuides": [
+        "human-waste-and-washing-basics"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Antiseptic",
+      "category": "First Aid",
+      "description": "A chemical agent applied to skin or wounds to kill bacteria and prevent infection",
+      "usedByGuides": [
+        "managing-small-wounds-and-skin-problems"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Sunglasses",
+      "category": "General",
+      "description": "Tinted eye protection that blocks UV radiation and reduces glare",
+      "usedByGuides": [
+        "everyday-sun-protection-and-uv-safety"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Adhesive bandages",
+      "category": "First Aid",
+      "description": "Self-sticking wound coverings for small cuts, blisters, and abrasions",
+      "usedByGuides": [
+        "pocket-always-with-you-kit"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Fire Starter",
+      "category": "Fire",
+      "description": "A fire starter used in survival and emergency preparedness",
+      "usedByGuides": [
+        "pocket-always-with-you-kit"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Pry bar",
+      "category": "General",
+      "description": "A metal lever used for forcing open doors, windows, and debris during rescue",
+      "usedByGuides": [
+        "safe-cutting-tasks-for-shelter-and-repairs"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Saw",
+      "category": "Cutting",
+      "description": "A toothed cutting tool used for sawing through wood and other materials",
+      "usedByGuides": [
+        "safe-cutting-tasks-for-shelter-and-repairs"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Satellite communicator",
+      "category": "Communication",
+      "description": "A device that sends and receives messages via satellite in areas without cell coverage",
+      "usedByGuides": [
+        "beacon-and-locator-basics-plb-epirb-satellite-messengers"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Rain gear",
+      "category": "General",
+      "description": "Waterproof outerwear that protects against rain and wind exposure",
+      "usedByGuides": [
+        "cold-wet-exposure-rain-wind-and-chill"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Bandana",
+      "category": "General",
+      "description": "A versatile square of fabric used as a head covering, filter, bandage, or signal",
+      "usedByGuides": [
+        "purify-water-chemical-tablets"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Garbage bags",
+      "category": "Storage",
+      "description": "Large heavy-duty plastic bags useful for rain protection, ground cover, and waste",
+      "usedByGuides": [
+        "nuclear-explosion-immediate-response"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Cell phone",
+      "category": "Communication",
+      "description": "A mobile communication device for calling emergency services and sending location data",
+      "usedByGuides": [
+        "emp-effects-and-response"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Safety Pin",
+      "category": "First Aid",
+      "description": "A safety pin used in survival and emergency preparedness",
+      "usedByGuides": [
+        "primitive-fishing-survival"
+      ],
+      "guideCount": 1
+    },
+    {
+      "name": "Guy lines",
+      "category": "Rope & Cordage",
+      "description": "Lightweight cords used to anchor and stabilize tarps, tents, and shelters",
+      "usedByGuides": [
+        "knot-tying"
+      ],
+      "guideCount": 1
+    }
+  ],
+  "guideDetails": [
+    {
+      "slug": "72-hour-home-survival-kit-shelter-at-home",
+      "versionId": "1de0fcc9-44c0-4966-a2fd-1f5ea2fdb207",
+      "toolCount": 3,
+      "tools": [
+        "Flashlight",
+        "Batteries",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "acute-radiation-syndrome",
+      "versionId": "e09c8993-4e01-4733-a682-aecbcf7eee2d",
+      "toolCount": 1,
+      "tools": [
+        "Iodine"
+      ]
+    },
+    {
+      "slug": "alert-systems-smoke-alarms-weather-radio-and-phone-alerts",
+      "versionId": "6eecc49e-40be-47f2-9cf0-9139de1a3ac1",
+      "toolCount": 2,
+      "tools": [
+        "Radio",
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "allergic-reaction-and-anaphylaxis-warning-signs",
+      "versionId": "fcf004a4-b0ae-4795-84ae-f81ffc95cbdc",
+      "toolCount": 1,
+      "tools": [
+        "Epinephrine auto-injector"
+      ]
+    },
+    {
+      "slug": "apartment-and-multi-unit-housing-generator-safety",
+      "versionId": "aa930cd6-58ff-4aa7-837b-3e8e75e31a44",
+      "toolCount": 3,
+      "tools": [
+        "Generator",
+        "Power bank",
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "basic-home-hazard-and-injury-prevention-check",
+      "versionId": "e1f2d9e3-4bcb-4bd2-84dd-e8b610134478",
+      "toolCount": 1,
+      "tools": [
+        "Cord"
+      ]
+    },
+    {
+      "slug": "basic-knife-handling-and-safe-zones",
+      "versionId": "b15503b0-37f0-454e-accb-bf40214015d0",
+      "toolCount": 3,
+      "tools": [
+        "Knife",
+        "Multi-tool",
+        "Scissors"
+      ]
+    },
+    {
+      "slug": "beacon-and-locator-basics-plb-epirb-satellite-messengers",
+      "versionId": "8196c1ef-a981-49bf-b5f3-eb98ccf547d4",
+      "toolCount": 4,
+      "tools": [
+        "Whistle",
+        "Permanent marker",
+        "Satellite communicator",
+        "Personal locator beacon"
+      ]
+    },
+    {
+      "slug": "bleeding-control-pressure-first",
+      "versionId": "c8302c72-49c1-4836-8de0-c60634f5d531",
+      "toolCount": 6,
+      "tools": [
+        "Bandage",
+        "Tourniquet",
+        "Work gloves",
+        "Pressure bandage",
+        "First Aid Kit",
+        "Gauze"
+      ]
+    },
+    {
+      "slug": "build-72-hour-kit",
+      "versionId": "eca47cae-323c-414e-a509-04976c86d8c2",
+      "toolCount": 3,
+      "tools": [
+        "Whistle",
+        "Radio",
+        "Map"
+      ]
+    },
+    {
+      "slug": "building-a-fire-lay-that-survives-rain-and-snow",
+      "versionId": "a3be2344-0a43-4398-a82c-517d5b30377b",
+      "toolCount": 3,
+      "tools": [
+        "Tinder",
+        "Poncho",
+        "Tarp"
+      ]
+    },
+    {
+      "slug": "car-work-mini-emergency-kit-24-72-hours",
+      "versionId": "50ed8ad5-8a35-47e2-bbe8-2bad506a1cf2",
+      "toolCount": 8,
+      "tools": [
+        "Emergency blanket",
+        "Flashlight",
+        "Work gloves",
+        "Hat",
+        "Multi-tool",
+        "Duct Tape",
+        "Whistle",
+        "Map"
+      ]
+    },
+    {
+      "slug": "carbon-monoxide-basics-and-symptoms",
+      "versionId": "6150b2f0-c8fd-476f-b1dd-903c0a0b82b2",
+      "toolCount": 1,
+      "tools": [
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "cardiac-arrest-cpr-steps",
+      "versionId": "see-database",
+      "toolCount": 1,
+      "tools": [
+        "AED"
+      ]
+    },
+    {
+      "slug": "charging-plans-and-backup-power-options",
+      "versionId": "ddd87afa-7d00-43bf-89b7-f221236ce140",
+      "toolCount": 6,
+      "tools": [
+        "Batteries",
+        "Radio",
+        "Power bank",
+        "Generator",
+        "Cord",
+        "Solar charger"
+      ]
+    },
+    {
+      "slug": "child-and-pet-safety-around-emergency-lighting",
+      "versionId": "8d316c73-f587-46c4-a6e1-61db606958ce",
+      "toolCount": 5,
+      "tools": [
+        "Matches",
+        "Lighter",
+        "Flashlight",
+        "Lantern",
+        "Candle"
+      ]
+    },
+    {
+      "slug": "choking-responsive-adult-or-child",
+      "versionId": "323be41d-e8df-4197-b40b-8c99b916d86b",
+      "toolCount": 1,
+      "tools": [
+        "Knife"
+      ]
+    },
+    {
+      "slug": "choking-unresponsive-adult-or-child",
+      "versionId": "see-database",
+      "toolCount": 1,
+      "tools": [
+        "AED"
+      ]
+    },
+    {
+      "slug": "choosing-a-safe-spot-for-emergency-shelter",
+      "versionId": "61057c97-137b-46e3-8252-e23441eaeb50",
+      "toolCount": 2,
+      "tools": [
+        "Work gloves",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "choosing-and-preparing-dry-fuel",
+      "versionId": "a9d8c32c-acc1-4772-a50e-8a48bedc90a6",
+      "toolCount": 1,
+      "tools": [
+        "Tinder"
+      ]
+    },
+    {
+      "slug": "choosing-emergency-shelter-type",
+      "versionId": "0e78b751-2a18-44f2-b739-017febf1d653",
+      "toolCount": 3,
+      "tools": [
+        "Tarp",
+        "Emergency blanket",
+        "Paracord"
+      ]
+    },
+    {
+      "slug": "choosing-safe-hydration-sources",
+      "versionId": "ce051da8-59af-41ce-86ee-1e5ddd1b4181",
+      "toolCount": 1,
+      "tools": [
+        "Bleach"
+      ]
+    },
+    {
+      "slug": "cleaning-and-disinfection-to-prevent-disease-spread",
+      "versionId": "f346b8b1-3cae-430b-b95b-daaae81a9fb2",
+      "toolCount": 3,
+      "tools": [
+        "Bleach",
+        "Work gloves",
+        "Bucket"
+      ]
+    },
+    {
+      "slug": "cold-prevention-layering",
+      "versionId": "a852126f-c83a-4190-8625-b1c74763927b",
+      "toolCount": 2,
+      "tools": [
+        "Work gloves",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "cold-wet-exposure-rain-wind-and-chill",
+      "versionId": "c7e6e970-1386-4751-8bf0-0d4c288a1793",
+      "toolCount": 2,
+      "tools": [
+        "Tarp",
+        "Rain gear"
+      ]
+    },
+    {
+      "slug": "collecting-and-storing-water-safely-before-treatment",
+      "versionId": "6dcf7d29-9c5c-4f3c-8629-e5ecd18037b4",
+      "toolCount": 4,
+      "tools": [
+        "Container",
+        "Metal pot",
+        "Metal cup",
+        "Plastic bags"
+      ]
+    },
+    {
+      "slug": "communication-outage-basics",
+      "versionId": "40adf3af-f708-42a3-a3b2-8d9444aaa0a2",
+      "toolCount": 1,
+      "tools": [
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "cpr-reference",
+      "versionId": "see-database",
+      "toolCount": 1,
+      "tools": [
+        "AED"
+      ]
+    },
+    {
+      "slug": "daypack-size-emergency-kit-for-hikes",
+      "versionId": "9c5dcbc1-0b90-44f2-a033-f7f566a1e507",
+      "toolCount": 11,
+      "tools": [
+        "Compass",
+        "Map",
+        "GPS device",
+        "Emergency blanket",
+        "Bivy sack",
+        "Hat",
+        "Headlamp",
+        "First Aid Kit",
+        "Multi-tool",
+        "Whistle",
+        "Knife"
+      ]
+    },
+    {
+      "slug": "debris-hut-emergency-overnight",
+      "versionId": "64efde60-1c9c-4fb9-9e3f-86e7db4a62fd",
+      "toolCount": 3,
+      "tools": [
+        "Tent",
+        "Sewing kit",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "deciding-when-to-throw-away-food-after-an-outage",
+      "versionId": "7cbaebd5-f146-4010-baef-00d9c75b45ec",
+      "toolCount": 1,
+      "tools": [
+        "Thermometer"
+      ]
+    },
+    {
+      "slug": "deciding-whether-to-stay-or-go-during-a-blackout",
+      "versionId": "94319ec3-e2aa-483c-9a95-fe6c8306d5c2",
+      "toolCount": 2,
+      "tools": [
+        "Radio",
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "dehydration-reference",
+      "versionId": "c3f7f63d-6e4e-4d8f-b9f6-6d0b9531d5fd",
+      "toolCount": 1,
+      "tools": [
+        "Oral rehydration salts"
+      ]
+    },
+    {
+      "slug": "dehydration-signs-and-immediate-care",
+      "versionId": "4c627d90-7a53-4bfa-bb0c-b121c6957048",
+      "toolCount": 1,
+      "tools": [
+        "Oral rehydration salts"
+      ]
+    },
+    {
+      "slug": "dirty-bomb-immediate-response",
+      "versionId": "09a7a204-a348-4fac-acf3-65ff75a9e83b",
+      "toolCount": 3,
+      "tools": [
+        "Batteries",
+        "Radio",
+        "Plastic bags"
+      ]
+    },
+    {
+      "slug": "drying-wet-clothing-and-bedding-safely-indoors",
+      "versionId": "b4ee0363-51ff-4570-82f8-f2fe79735c64",
+      "toolCount": 3,
+      "tools": [
+        "Camp stove",
+        "Work gloves",
+        "Rope"
+      ]
+    },
+    {
+      "slug": "during-landslide",
+      "versionId": "04867b25-7286-49a2-907a-fb991a294fe2",
+      "toolCount": 1,
+      "tools": [
+        "Map"
+      ]
+    },
+    {
+      "slug": "dust-ash-and-airborne-irritants-after-storms-eruptions-or-collapses",
+      "versionId": "069c2a0f-6993-4a26-9051-2c4104923dab",
+      "toolCount": 1,
+      "tools": [
+        "N95 respirator"
+      ]
+    },
+    {
+      "slug": "earthquake-after-shaking",
+      "versionId": "b6401d1a-0ace-47ca-960c-6974a641a5cd",
+      "toolCount": 2,
+      "tools": [
+        "Candle",
+        "Flashlight"
+      ]
+    },
+    {
+      "slug": "earthquake-preparedness-checklist",
+      "versionId": "bb91f4d6-a75d-42ea-8bbd-22b3167f380d",
+      "toolCount": 1,
+      "tools": [
+        "Map"
+      ]
+    },
+    {
+      "slug": "edible-plant-foraging-basics",
+      "versionId": "b19cba5a-b0fd-43af-909d-c2389e0e9cf4",
+      "toolCount": 2,
+      "tools": [
+        "Metal cup",
+        "Map"
+      ]
+    },
+    {
+      "slug": "emergency-overnight-setup-when-you-are-already-wet",
+      "versionId": "bfdbced2-70b2-4144-87cf-10687368ba68",
+      "toolCount": 1,
+      "tools": [
+        "Sleeping Bag"
+      ]
+    },
+    {
+      "slug": "emergency-toilet-and-waste-management",
+      "versionId": "fcfd9782-2c75-4dc2-a63f-ce22b1c94982",
+      "toolCount": 2,
+      "tools": [
+        "Bucket",
+        "Container"
+      ]
+    },
+    {
+      "slug": "emergency-water-storage",
+      "versionId": "d60f4f72-b932-40b3-ad2f-ab30d2585ade",
+      "toolCount": 1,
+      "tools": [
+        "Container"
+      ]
+    },
+    {
+      "slug": "emergency-water-storage-at-home",
+      "versionId": "7d209edc-850e-450e-835e-9e39dc30169b",
+      "toolCount": 1,
+      "tools": [
+        "Container"
+      ]
+    },
+    {
+      "slug": "emp-effects-and-response",
+      "versionId": "e2555b3a-fd5c-49f7-9426-241687c68efa",
+      "toolCount": 8,
+      "tools": [
+        "Cell phone",
+        "Batteries",
+        "Radio",
+        "GPS device",
+        "Wire",
+        "Map",
+        "Container",
+        "Thermometer"
+      ]
+    },
+    {
+      "slug": "evacuation-go-bag",
+      "versionId": "a8b07ce2-6afe-4778-bad6-10c5e1836a5b",
+      "toolCount": 1,
+      "tools": [
+        "Flashlight"
+      ]
+    },
+    {
+      "slug": "everyday-cordage-uses-in-emergencies",
+      "versionId": "e116a985-8cce-42b2-92ff-d16faa13c7e7",
+      "toolCount": 4,
+      "tools": [
+        "SAM splint",
+        "Cord",
+        "Tarp",
+        "Cordage"
+      ]
+    },
+    {
+      "slug": "everyday-extreme-heat-precautions",
+      "versionId": "6d0a979a-9176-4331-89ba-21012cc0544e",
+      "toolCount": 2,
+      "tools": [
+        "Sunscreen",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "everyday-sun-protection-and-uv-safety",
+      "versionId": "c2f8fad5-c287-4282-af17-214d0db7d2e1",
+      "toolCount": 3,
+      "tools": [
+        "Sunglasses",
+        "Hat",
+        "Sunscreen"
+      ]
+    },
+    {
+      "slug": "fast-tarp-lean-to-for-wind-and-rain",
+      "versionId": "e358b856-8c67-48a0-845d-b72654eb1109",
+      "toolCount": 1,
+      "tools": [
+        "Tarp"
+      ]
+    },
+    {
+      "slug": "finding-and-using-dry-tinder-in-wet-weather",
+      "versionId": "f889b300-926a-415c-9074-f75a1476247f",
+      "toolCount": 2,
+      "tools": [
+        "Tinder",
+        "Tarp"
+      ]
+    },
+    {
+      "slug": "fire-making",
+      "versionId": "e8dac9f4-4121-4341-8e94-63c3e8b88df1",
+      "toolCount": 5,
+      "tools": [
+        "Tent",
+        "Tinder",
+        "Matches",
+        "Lighter",
+        "Container"
+      ]
+    },
+    {
+      "slug": "first-30-minutes-of-a-power-outage",
+      "versionId": "a81f0523-f51d-4863-8821-c812b7ec07ca",
+      "toolCount": 6,
+      "tools": [
+        "Flashlight",
+        "Lantern",
+        "Batteries",
+        "Radio",
+        "Power bank",
+        "Thermometer"
+      ]
+    },
+    {
+      "slug": "flood-get-to-higher-ground",
+      "versionId": "756beef4-7576-4933-a5b1-e7b25c4603c0",
+      "toolCount": 1,
+      "tools": [
+        "Radio"
+      ]
+    },
+    {
+      "slug": "flood-preparedness",
+      "versionId": "dbfa1fb1-2b08-4f6c-b350-10a5cb7744cb",
+      "toolCount": 6,
+      "tools": [
+        "Map",
+        "First Aid Kit",
+        "Flashlight",
+        "Batteries",
+        "Radio",
+        "Container"
+      ]
+    },
+    {
+      "slug": "flood-reentry-cleanup",
+      "versionId": "dfa617c0-d8bc-4fcd-9c80-bb4e2c53af0d",
+      "toolCount": 2,
+      "tools": [
+        "Flashlight",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "floodwater-safety",
+      "versionId": "e9537523-318a-487b-8213-3396b4c4501d",
+      "toolCount": 1,
+      "tools": [
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "food-preservation",
+      "versionId": "fffb13f2-30e0-4a69-8615-357316f3ef2e",
+      "toolCount": 3,
+      "tools": [
+        "Thermometer",
+        "Container",
+        "Utensil"
+      ]
+    },
+    {
+      "slug": "food-safety-power-outage-action",
+      "versionId": "faf46789-5d50-4979-b44f-4b4812bacacd",
+      "toolCount": 2,
+      "tools": [
+        "Thermometer",
+        "Container"
+      ]
+    },
+    {
+      "slug": "freezer-safety-during-outages",
+      "versionId": "e9aace55-a417-4d13-8525-46b580b471d3",
+      "toolCount": 1,
+      "tools": [
+        "Thermometer"
+      ]
+    },
+    {
+      "slug": "frostbite-protect-rewarm",
+      "versionId": "3af06b07-8d53-4317-9108-5478c0696749",
+      "toolCount": 1,
+      "tools": [
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "fuel-burning-lanterns-and-heaters-last-resort-guidance",
+      "versionId": "773c6965-2aa2-4d10-8848-3a69a23dc4a3",
+      "toolCount": 2,
+      "tools": [
+        "Batteries",
+        "Lantern"
+      ]
+    },
+    {
+      "slug": "fuel-storage-and-handling-during-emergencies",
+      "versionId": "479bd3cb-6115-444e-8783-650aa879ab65",
+      "toolCount": 3,
+      "tools": [
+        "Container",
+        "Generator",
+        "Camp stove"
+      ]
+    },
+    {
+      "slug": "ground-fire-and-passive-visual-signals",
+      "versionId": "e9510f00-759a-4bd9-95f0-0c7ba93ef6af",
+      "toolCount": 2,
+      "tools": [
+        "Permanent marker",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "ground-to-air-symbols-for-aircraft",
+      "versionId": "df2290ce-1081-4aef-a3b8-438ed58017c0",
+      "toolCount": 1,
+      "tools": [
+        "Tarp"
+      ]
+    },
+    {
+      "slug": "hand-hygiene-and-food-safety-in-the-field",
+      "versionId": "ea10e9f1-c087-4e10-85cf-b3a1a725c6a0",
+      "toolCount": 1,
+      "tools": [
+        "Utensil"
+      ]
+    },
+    {
+      "slug": "heat-exhaustion-cool-rehydrate",
+      "versionId": "9eab91c9-f99a-44b0-b29b-a1d2fdcf9595",
+      "toolCount": 2,
+      "tools": [
+        "Oral rehydration salts",
+        "First Aid Kit"
+      ]
+    },
+    {
+      "slug": "heat-prevention",
+      "versionId": "8586f3e3-ea96-42a4-bc6b-ba2d04be0197",
+      "toolCount": 1,
+      "tools": [
+        "Lighter"
+      ]
+    },
+    {
+      "slug": "heat-stroke-emergency",
+      "versionId": "c78c4abf-5442-46be-b550-8998fa316129",
+      "toolCount": 1,
+      "tools": [
+        "Instant cold pack"
+      ]
+    },
+    {
+      "slug": "home-fire-safety-and-escape-readiness",
+      "versionId": "2b387cad-03e9-4e82-9e04-a9bbfc5a7cc6",
+      "toolCount": 1,
+      "tools": [
+        "Fire extinguisher"
+      ]
+    },
+    {
+      "slug": "human-waste-and-washing-basics",
+      "versionId": "1efbd06a-bd35-402f-90c0-452acad2ba2c",
+      "toolCount": 1,
+      "tools": [
+        "Trowel"
+      ]
+    },
+    {
+      "slug": "hypothermia-warm-core",
+      "versionId": "296be03a-78a1-48b5-9904-e4992044afda",
+      "toolCount": 3,
+      "tools": [
+        "Sleeping Bag",
+        "Heat pack",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "immobilize-sprain-or-fracture",
+      "versionId": "74abf6c3-4b76-42e3-a708-d1e385fc2b07",
+      "toolCount": 6,
+      "tools": [
+        "SAM splint",
+        "Bandage",
+        "Instant cold pack",
+        "Triangular bandage",
+        "First Aid Kit",
+        "Trekking poles"
+      ]
+    },
+    {
+      "slug": "keeping-dry-in-rain-and-snow-outdoors",
+      "versionId": "a249c694-e4c6-4f5c-baff-14f9d8743ea5",
+      "toolCount": 2,
+      "tools": [
+        "Work gloves",
+        "Poncho"
+      ]
+    },
+    {
+      "slug": "keeping-food-safe-during-a-power-outage",
+      "versionId": "faf0f51b-0c3c-4bc0-bf6b-71468353d131",
+      "toolCount": 2,
+      "tools": [
+        "Thermometer",
+        "Water bottle"
+      ]
+    },
+    {
+      "slug": "kit-maintenance-and-rotation-schedule",
+      "versionId": "55606e88-767a-4cd1-907a-8f3289e98f91",
+      "toolCount": 3,
+      "tools": [
+        "Flashlight",
+        "Batteries",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "knot-tying",
+      "versionId": "e052cb6e-e301-4a52-bdf0-cd447e70ae8e",
+      "toolCount": 5,
+      "tools": [
+        "Cord",
+        "Tarp",
+        "Guy lines",
+        "Bivy sack",
+        "Paracord"
+      ]
+    },
+    {
+      "slug": "land-navigation",
+      "versionId": "075de097-0884-4bcb-b061-b3032a4fd2c6",
+      "toolCount": 4,
+      "tools": [
+        "Compass",
+        "Map",
+        "Matches",
+        "GPS device"
+      ]
+    },
+    {
+      "slug": "layering-clothing-and-bedding-for-maximum-warmth",
+      "versionId": "31a1b958-aa4e-40d1-a727-12f96c9f8fae",
+      "toolCount": 3,
+      "tools": [
+        "Sleeping Bag",
+        "Work gloves",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "lost-on-land-first-30-minutes",
+      "versionId": "20aa5644-904d-4763-b4b0-86cdad6c3994",
+      "toolCount": 5,
+      "tools": [
+        "Whistle",
+        "Batteries",
+        "GPS device",
+        "Compass",
+        "Map"
+      ]
+    },
+    {
+      "slug": "low-a-frame-tarp-shelter-for-cold-nights",
+      "versionId": "c4257367-32cf-4b0c-ba89-4ac70657b3f7",
+      "toolCount": 5,
+      "tools": [
+        "Tarp",
+        "Tent stakes",
+        "Emergency blanket",
+        "Sleeping pad",
+        "Bivy sack"
+      ]
+    },
+    {
+      "slug": "managing-moisture-inside-tents-and-improvised-shelters",
+      "versionId": "96a0abc7-85c9-42e7-8336-070756aa3af8",
+      "toolCount": 2,
+      "tools": [
+        "Tarp",
+        "Tent"
+      ]
+    },
+    {
+      "slug": "managing-small-wounds-and-skin-problems",
+      "versionId": "5fe9447b-cb0e-4577-9d0b-7c18456a758e",
+      "toolCount": 4,
+      "tools": [
+        "Antiseptic",
+        "Bandage",
+        "First Aid Kit",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "maritime-electronic-distress-basics-sea-and-large-lakes",
+      "versionId": "107fc4b3-4ed4-4f89-88bf-cd85dfd06399",
+      "toolCount": 2,
+      "tools": [
+        "Radio",
+        "Personal locator beacon"
+      ]
+    },
+    {
+      "slug": "maritime-visual-distress-basics-sea-and-large-lakes",
+      "versionId": "88b3dc3d-998d-4456-9144-de5f61c1cee8",
+      "toolCount": 1,
+      "tools": [
+        "Radio"
+      ]
+    },
+    {
+      "slug": "maximizing-rescue-visibility-land",
+      "versionId": "1e473773-7474-4a5a-9621-ffe56a4f5f21",
+      "toolCount": 2,
+      "tools": [
+        "Whistle",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "meeting-places-and-reunion-planning",
+      "versionId": "99fadcb4-a10e-43e0-ad7a-3edb666d3e5f",
+      "toolCount": 1,
+      "tools": [
+        "Map"
+      ]
+    },
+    {
+      "slug": "minor-cuts-scrapes",
+      "versionId": "e81741cb-58e2-4a96-88ea-eeca4407d3a4",
+      "toolCount": 1,
+      "tools": [
+        "Saline solution"
+      ]
+    },
+    {
+      "slug": "mirror-and-light-signaling-land-day-and-night",
+      "versionId": "cd5e9feb-f147-4160-99c5-120827188437",
+      "toolCount": 5,
+      "tools": [
+        "Flashlight",
+        "Headlamp",
+        "Whistle",
+        "Signal Mirror",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "morse-code",
+      "versionId": "bbf20a7d-12d0-4e29-9547-cd47c1ab1cdf",
+      "toolCount": 3,
+      "tools": [
+        "Flashlight",
+        "Batteries",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "natural-lean-to-frame-shelter",
+      "versionId": "52c4ff35-2a63-442b-b267-2c94c90e0ef2",
+      "toolCount": 4,
+      "tools": [
+        "Paracord",
+        "Sewing kit",
+        "Tarp",
+        "Cordage"
+      ]
+    },
+    {
+      "slug": "night-signaling-and-battery",
+      "versionId": "2f905fd6-4935-450d-bbc0-27f14b69ee95",
+      "toolCount": 1,
+      "tools": [
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "nuclear-attack-preparedness",
+      "versionId": "0016090a-d9ab-49fe-9ceb-3c11707f241f",
+      "toolCount": 7,
+      "tools": [
+        "Iodine",
+        "Radio",
+        "First Aid Kit",
+        "Plastic bags",
+        "Batteries",
+        "Plastic sheeting",
+        "Duct Tape"
+      ]
+    },
+    {
+      "slug": "nuclear-explosion-immediate-response",
+      "versionId": "edaae0d5-d711-4b21-b01f-4430036be15a",
+      "toolCount": 6,
+      "tools": [
+        "Batteries",
+        "Radio",
+        "Iodine",
+        "Plastic sheeting",
+        "Garbage bags",
+        "Duct Tape"
+      ]
+    },
+    {
+      "slug": "nuclear-fallout-shelter-in-place",
+      "versionId": "bffdbe64-ce38-4d2c-90b0-1a1a14275f8c",
+      "toolCount": 7,
+      "tools": [
+        "Container",
+        "Batteries",
+        "Radio",
+        "Tent",
+        "Plastic sheeting",
+        "First Aid Kit",
+        "Duct Tape"
+      ]
+    },
+    {
+      "slug": "overnight-survival-in-a-vehicle-in-cold-weather",
+      "versionId": "7be6760d-312a-42d4-bb79-ae0ee3452fef",
+      "toolCount": 5,
+      "tools": [
+        "Sleeping Bag",
+        "Flashlight",
+        "Shovel",
+        "Work gloves",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "personal-evacuation-go-bag-adult",
+      "versionId": "1f8115c4-9177-486b-a748-88bc7de1084b",
+      "toolCount": 5,
+      "tools": [
+        "Flashlight",
+        "Power bank",
+        "Radio",
+        "Emergency blanket",
+        "Whistle"
+      ]
+    },
+    {
+      "slug": "phone-battery-conservation-in-emergencies",
+      "versionId": "3df8b21a-9a63-49c8-84b1-8c8783366dd1",
+      "toolCount": 3,
+      "tools": [
+        "Batteries",
+        "GPS device",
+        "Power bank"
+      ]
+    },
+    {
+      "slug": "pocket-always-with-you-kit",
+      "versionId": "6283269f-8eaf-4f25-9c6d-3dc1653673fe",
+      "toolCount": 10,
+      "tools": [
+        "Adhesive bandages",
+        "Flashlight",
+        "Headlamp",
+        "Bandage",
+        "Whistle",
+        "Gauze",
+        "Emergency blanket",
+        "Matches",
+        "Lighter",
+        "Fire Starter"
+      ]
+    },
+    {
+      "slug": "power-dependent-medical-devices-planning",
+      "versionId": "44cf1357-1cee-46c2-b632-842876af3555",
+      "toolCount": 2,
+      "tools": [
+        "Batteries",
+        "Generator"
+      ]
+    },
+    {
+      "slug": "power-outage-basics",
+      "versionId": "6600c4d6-a8e7-45ce-aaeb-e81f94dd4c0c",
+      "toolCount": 1,
+      "tools": [
+        "Candle"
+      ]
+    },
+    {
+      "slug": "powering-appliances-safely-with-a-generator",
+      "versionId": "89f7a0c6-a98f-4a4f-b7bd-a2c064677364",
+      "toolCount": 2,
+      "tools": [
+        "Generator",
+        "Cord"
+      ]
+    },
+    {
+      "slug": "preparing-your-kitchen-for-future-outages",
+      "versionId": "401aa07c-c51c-418a-bbb9-ee36bff595a6",
+      "toolCount": 2,
+      "tools": [
+        "Thermometer",
+        "Container"
+      ]
+    },
+    {
+      "slug": "preventing-co-poisoning-during-outages",
+      "versionId": "d65da57f-7061-47e4-93fe-8557f8e315e5",
+      "toolCount": 2,
+      "tools": [
+        "Generator",
+        "Camp stove"
+      ]
+    },
+    {
+      "slug": "primitive-fishing-survival",
+      "versionId": "016b6464-585d-45e3-8d18-d07aa7d8bfd7",
+      "toolCount": 6,
+      "tools": [
+        "Safety Pin",
+        "Paracord",
+        "Cordage",
+        "Knife",
+        "Map",
+        "Multi-tool"
+      ]
+    },
+    {
+      "slug": "purify-water-bleach",
+      "versionId": "b8b5a30f-c8d5-40ac-9e14-6f93943d0729",
+      "toolCount": 1,
+      "tools": [
+        "Bleach"
+      ]
+    },
+    {
+      "slug": "purify-water-boiling",
+      "versionId": "da591407-f399-4d36-927c-541f4f809a2c",
+      "toolCount": 5,
+      "tools": [
+        "Metal pot",
+        "Container",
+        "Bleach",
+        "Water purification tablets",
+        "Camp stove"
+      ]
+    },
+    {
+      "slug": "purify-water-chemical-tablets",
+      "versionId": "d69b2261-8a3d-47f8-a97a-824e72157577",
+      "toolCount": 5,
+      "tools": [
+        "Container",
+        "Water purification tablets",
+        "Iodine",
+        "Sewing kit",
+        "Bandana"
+      ]
+    },
+    {
+      "slug": "purify-water-filter",
+      "versionId": "ce2154f0-6cd0-4a19-99d2-3dd791a8656c",
+      "toolCount": 3,
+      "tools": [
+        "Container",
+        "Water purification tablets",
+        "Sleeping Bag"
+      ]
+    },
+    {
+      "slug": "radiation-decontamination",
+      "versionId": "ec3c30b2-dd7b-469a-975f-7a3d388ae451",
+      "toolCount": 1,
+      "tools": [
+        "Plastic bags"
+      ]
+    },
+    {
+      "slug": "refrigerator-safety-during-outages",
+      "versionId": "6c30bfc4-a751-4dc8-abef-387252f5c8b3",
+      "toolCount": 1,
+      "tools": [
+        "Thermometer"
+      ]
+    },
+    {
+      "slug": "safe-behavior-inside-a-damaged-building",
+      "versionId": "de25dadd-a34c-472d-8fe7-ac016f6a8fd7",
+      "toolCount": 3,
+      "tools": [
+        "Flashlight",
+        "Cord",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "safe-cutting-tasks-for-shelter-and-repairs",
+      "versionId": "247a85fa-fd57-4377-9d7f-f212453a3b0a",
+      "toolCount": 5,
+      "tools": [
+        "Tent stakes",
+        "Knife",
+        "Cord",
+        "Pry bar",
+        "Saw"
+      ]
+    },
+    {
+      "slug": "safe-fire-site-selection-and-wind-management",
+      "versionId": "40e06eb9-7366-40e6-9df6-491080890a34",
+      "toolCount": 2,
+      "tools": [
+        "Tarp",
+        "Tent"
+      ]
+    },
+    {
+      "slug": "safe-food-handling-when-water-is-limited",
+      "versionId": "ac1939f7-1f87-440d-8121-6f18b46cc9a4",
+      "toolCount": 1,
+      "tools": [
+        "Utensil"
+      ]
+    },
+    {
+      "slug": "safe-home-lighting-during-blackouts",
+      "versionId": "a7a28cfd-0412-4e16-9491-e3ccff1f79f4",
+      "toolCount": 7,
+      "tools": [
+        "Flashlight",
+        "Lantern",
+        "Batteries",
+        "Headlamp",
+        "Candle",
+        "Matches",
+        "Lighter"
+      ]
+    },
+    {
+      "slug": "safe-options-for-heating-indoors-during-power-outages",
+      "versionId": "9f9c5647-1819-4d5e-8fd4-6f9428e8cd2e",
+      "toolCount": 3,
+      "tools": [
+        "Camp stove",
+        "Generator",
+        "Cord"
+      ]
+    },
+    {
+      "slug": "safe-placement-and-operation-of-portable-generators",
+      "versionId": "561aff09-e4b7-4e07-80da-cc9da6eae32d",
+      "toolCount": 3,
+      "tools": [
+        "Generator",
+        "Cord",
+        "Container"
+      ]
+    },
+    {
+      "slug": "safe-use-of-extension-cords-and-avoiding-overloads",
+      "versionId": "98b34f7e-7198-4cae-9fc8-157e5f84564e",
+      "toolCount": 4,
+      "tools": [
+        "Matches",
+        "Cord",
+        "Wire",
+        "Generator"
+      ]
+    },
+    {
+      "slug": "safe-use-of-portable-heaters-indoors",
+      "versionId": "e96ea2a9-a0a9-4156-956f-c0c1c83732d6",
+      "toolCount": 1,
+      "tools": [
+        "Cord"
+      ]
+    },
+    {
+      "slug": "shelter-building",
+      "versionId": "19bd6d1c-32b1-4aca-ba44-68ee712fcb33",
+      "toolCount": 4,
+      "tools": [
+        "Trekking poles",
+        "Tarp",
+        "Cord",
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "shelter-in-place-basics",
+      "versionId": "9cd75ddf-c321-470e-bc59-995eb52eac29",
+      "toolCount": 1,
+      "tools": [
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "shelter-in-place-kit-home",
+      "versionId": "2a75189d-7b7c-4eca-960c-2b8c6f001f80",
+      "toolCount": 6,
+      "tools": [
+        "Flashlight",
+        "Radio",
+        "Plastic sheeting",
+        "Duct Tape",
+        "Scissors",
+        "Generator"
+      ]
+    },
+    {
+      "slug": "signal-for-rescue",
+      "versionId": "df51ca38-328e-47e8-a505-384442c949b2",
+      "toolCount": 5,
+      "tools": [
+        "Whistle",
+        "Emergency blanket",
+        "Signal Mirror",
+        "Personal locator beacon",
+        "GPS device"
+      ]
+    },
+    {
+      "slug": "signs-you-must-switch-to-shelter-and-warmth",
+      "versionId": "12724c8a-a175-4ebc-b103-9b8124626fe0",
+      "toolCount": 1,
+      "tools": [
+        "Emergency blanket"
+      ]
+    },
+    {
+      "slug": "simple-loops-and-attachment-knots-figure-eight-on-a-bight-bowline",
+      "versionId": "68b750d4-ec49-4016-b669-db5afdce6081",
+      "toolCount": 1,
+      "tools": [
+        "Rope"
+      ]
+    },
+    {
+      "slug": "simple-no-tools-emergency-shelter-inside-buildings",
+      "versionId": "14ccc79f-7949-42f0-986d-bb1795ed92c8",
+      "toolCount": 5,
+      "tools": [
+        "Plastic sheeting",
+        "Tarp",
+        "Hat",
+        "Duct Tape",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "simple-survival-priorities-what-comes-first",
+      "versionId": "8c6ae29b-741e-4f2e-ace2-fc6ecd450845",
+      "toolCount": 1,
+      "tools": [
+        "Whistle"
+      ]
+    },
+    {
+      "slug": "solar-still",
+      "versionId": "decec7ae-d0cc-47bb-85f8-1eb20650a93b",
+      "toolCount": 3,
+      "tools": [
+        "Metal cup",
+        "Container",
+        "Plastic sheeting"
+      ]
+    },
+    {
+      "slug": "sos-morse-code",
+      "versionId": "56eaf943-1a28-4315-b3f9-6e2fd9576e89",
+      "toolCount": 4,
+      "tools": [
+        "Flashlight",
+        "Whistle",
+        "Batteries",
+        "Signal Mirror"
+      ]
+    },
+    {
+      "slug": "sprains-and-suspected-fractures",
+      "versionId": "4fa53f57-dbe8-48ec-b478-ba3065ee8365",
+      "toolCount": 8,
+      "tools": [
+        "Trekking poles",
+        "SAM splint",
+        "Instant cold pack",
+        "Triangular bandage",
+        "First Aid Kit",
+        "Bandage",
+        "Tent stakes",
+        "Tent"
+      ]
+    },
+    {
+      "slug": "stay-put-vs-move-land",
+      "versionId": "d4b598f7-e88d-43c8-9bcf-b90f8b21b4d5",
+      "toolCount": 4,
+      "tools": [
+        "Whistle",
+        "Emergency blanket",
+        "Signal Mirror",
+        "Map"
+      ]
+    },
+    {
+      "slug": "staying-warm-and-dry-in-cold-weather",
+      "versionId": "0df9d54e-3615-4f82-9fee-8e04d62777f1",
+      "toolCount": 3,
+      "tools": [
+        "Work gloves",
+        "Hat",
+        "Plastic sheeting"
+      ]
+    },
+    {
+      "slug": "staying-warm-in-a-cold-home-without-power",
+      "versionId": "7c735c4c-673d-4295-9b50-2cb3a6a0a00b",
+      "toolCount": 4,
+      "tools": [
+        "Work gloves",
+        "Hat",
+        "Batteries",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "stop-think-observe-plan-first-30-minutes",
+      "versionId": "24ddb99a-ddc7-42fa-bd08-23bf68a4f3e9",
+      "toolCount": 5,
+      "tools": [
+        "GPS device",
+        "Power bank",
+        "Compass",
+        "Whistle",
+        "Map"
+      ]
+    },
+    {
+      "slug": "tornado-after",
+      "versionId": "2da60406-825a-4205-a774-ed1b7e99269f",
+      "toolCount": 4,
+      "tools": [
+        "Radio",
+        "Work gloves",
+        "Flashlight",
+        "N95 respirator"
+      ]
+    },
+    {
+      "slug": "tornado-preparedness",
+      "versionId": "22c764ba-fc67-42fb-9474-6ac4ed3a389e",
+      "toolCount": 4,
+      "tools": [
+        "Batteries",
+        "Radio",
+        "First Aid Kit",
+        "Flashlight"
+      ]
+    },
+    {
+      "slug": "tornado-safety-in-a-mobile-home",
+      "versionId": "4334bd67-29e4-4202-839a-ac35185378e2",
+      "toolCount": 1,
+      "tools": [
+        "Radio"
+      ]
+    },
+    {
+      "slug": "tornado-take-shelter",
+      "versionId": "b7974294-7597-4d9c-98a6-5e242c857c1c",
+      "toolCount": 1,
+      "tools": [
+        "Radio"
+      ]
+    },
+    {
+      "slug": "unsafe-indoor-heating-methods-to-avoid",
+      "versionId": "97054f54-6437-43fb-8d23-9d278b729641",
+      "toolCount": 3,
+      "tools": [
+        "Generator",
+        "Camp stove",
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "using-aqi-and-basic-smoke-air-quality-precautions",
+      "versionId": "01fa9ecf-56a0-4654-beb4-dcd0aea79137",
+      "toolCount": 2,
+      "tools": [
+        "Candle",
+        "N95 respirator"
+      ]
+    },
+    {
+      "slug": "using-buildings-and-tarps-for-temporary-roof-and-wall-protection",
+      "versionId": "5c21428a-9506-43a1-b27d-72b8addc9c94",
+      "toolCount": 5,
+      "tools": [
+        "Tarp",
+        "Rope",
+        "Plastic sheeting",
+        "Container",
+        "Duct Tape"
+      ]
+    },
+    {
+      "slug": "using-flashlights-and-battery-lanterns-safely",
+      "versionId": "0bc680da-96a4-41cd-840b-6fb3d3158046",
+      "toolCount": 5,
+      "tools": [
+        "Lantern",
+        "Headlamp",
+        "Container",
+        "Flashlight",
+        "Batteries"
+      ]
+    },
+    {
+      "slug": "using-non-drinking-water-safely",
+      "versionId": "17cc4608-855c-4e05-b0ef-4de94c311c7e",
+      "toolCount": 2,
+      "tools": [
+        "Container",
+        "Utensil"
+      ]
+    },
+    {
+      "slug": "when-its-better-to-risk-untreated-water",
+      "versionId": "4695c12e-85cc-425d-9c25-7ec24acb868e",
+      "toolCount": 1,
+      "tools": [
+        "Container"
+      ]
+    },
+    {
+      "slug": "when-not-to-attempt-a-fire-in-wet-conditions",
+      "versionId": "6d2cd92e-3cfd-48a2-9aad-a366146bc78a",
+      "toolCount": 2,
+      "tools": [
+        "Tinder",
+        "Heat pack"
+      ]
+    },
+    {
+      "slug": "when-not-to-use-a-knife",
+      "versionId": "6f4418a1-a840-4157-8ae5-b2639e3b76da",
+      "toolCount": 3,
+      "tools": [
+        "Knife",
+        "Tent stakes",
+        "Cord"
+      ]
+    },
+    {
+      "slug": "when-to-drop-tasks-and-focus-on-signaling",
+      "versionId": "b83ce9fa-8214-4e75-8e0a-3fa98a35557d",
+      "toolCount": 1,
+      "tools": [
+        "Whistle"
+      ]
+    },
+    {
+      "slug": "when-treated-water-is-still-unsafe-to-drink",
+      "versionId": "98636422-bdca-4bda-a32a-cffface43863",
+      "toolCount": 2,
+      "tools": [
+        "Batteries",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "whistle-distress-signals-land",
+      "versionId": "2b8b68b8-ea5c-4a35-9856-9c5e243fc7db",
+      "toolCount": 2,
+      "tools": [
+        "Whistle",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "wildfire-preparedness",
+      "versionId": "3d9b3024-e5a3-444e-aae4-32a5be83db55",
+      "toolCount": 3,
+      "tools": [
+        "N95 respirator",
+        "Batteries",
+        "Radio"
+      ]
+    },
+    {
+      "slug": "wildfire-return-home",
+      "versionId": "456c336b-300f-4648-a508-ea7d9e03b8a8",
+      "toolCount": 2,
+      "tools": [
+        "N95 respirator",
+        "Work gloves"
+      ]
+    },
+    {
+      "slug": "working-or-exercising-safely-in-high-heat",
+      "versionId": "d51e5943-d835-4532-83c9-8fad09bd9a15",
+      "toolCount": 2,
+      "tools": [
+        "Sunscreen",
+        "Hat"
+      ]
+    },
+    {
+      "slug": "wound-infection-red-flags",
+      "versionId": "54607c70-09db-4f7a-b76a-af52f27b6586",
+      "toolCount": 1,
+      "tools": [
+        "Thermometer"
+      ]
+    }
+  ],
+  "noToolGuides": [
+    "after-landslide",
+    "balancing-activity-and-rest-to-avoid-exhaustion",
+    "basic-altitude-illness-prevention-for-trekkers",
+    "basic-family-emergency-communication-plan",
+    "burns-that-need-emergency-care",
+    "checking-if-a-building-is-safe-to-enter-after-a-disaster",
+    "choosing-the-safest-available-water-source",
+    "deciding-when-shelter-matters-more-than-fire",
+    "distress-signaling",
+    "driving-in-flood-conditions",
+    "earthquake-during-shaking",
+    "earthquake-safety-reference",
+    "earthquake-tsunami-risk",
+    "essential-medication-backup-planning",
+    "family-emergency-plan",
+    "first-aid-for-burns-minor",
+    "first-aid-reference",
+    "fishing-techniques",
+    "flood-survival-reference",
+    "food-safety-no-fridge",
+    "foraging",
+    "fully-extinguishing-outdoor-fires",
+    "hand-hygiene-when-water-or-soap-is-scarce",
+    "household-critical-documents-kit",
+    "hypothermia-reference",
+    "immediate-actions-if-thunderstorm-or-lightning-approaches-outdoors",
+    "keeping-children-elderly-and-frail-adults-warm-safely",
+    "medical-information-and-health-document-backup",
+    "nuclear-threat-understanding",
+    "pet-emergency-go-kit",
+    "pet-evacuation-and-shelter-planning",
+    "practice-drills-and-plan-refresh",
+    "prioritizing-tasks-in-the-first-30-minutes-of-exposure",
+    "recognizing-and-responding-to-a-gas-leak",
+    "recognizing-and-responding-to-carbon-monoxide-exposure",
+    "school-work-and-caregiver-coordination",
+    "severe-bleeding-get-help-fast",
+    "stay-put-vs-move",
+    "tornado-safety-in-a-vehicle",
+    "tornado-safety-reference",
+    "tornado-vehicle-mobile-home",
+    "trapping",
+    "utility-shutoff-and-gas-leak-safety",
+    "water-purification-reference",
+    "weather-related-red-flag-symptoms",
+    "when-not-to-touch-utility-controls-and-call-the-utility-instead",
+    "when-to-leave-and-not-return-until-professionally-inspected",
+    "when-to-seek-public-shelters-or-warming-centers",
+    "wildfire-evacuate-early",
+    "wildfire-smoke-protection",
+    "wound-care-reference",
+    "wound-needs-urgent-care"
+  ]
+}

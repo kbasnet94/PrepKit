@@ -62,7 +62,7 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
         category: mapToolCategory(tool.category),
         quantity: 1,
         unit: null,
-        notes: tool.context,
+        notes: null,
         condition: "Good",
         expiryDate: null,
         kitId: null,
@@ -107,7 +107,10 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
               <Text style={styles.toolCategory}>{tool.category}</Text>
             </View>
 
-            <Text style={styles.toolContext}>{tool.context}</Text>
+            <Text style={styles.toolDescription}>{tool.description}</Text>
+            {tool.context ? (
+              <Text style={styles.toolContext}>{tool.context}</Text>
+            ) : null}
 
             <View style={styles.toolFooter}>
               {hasMatch ? (
@@ -213,11 +216,18 @@ function makeStyles(C: typeof Colors.light) {
       textTransform: "uppercase",
       letterSpacing: 0.4,
     },
-    toolContext: {
+    toolDescription: {
       fontSize: 13,
       fontFamily: "Inter_400Regular",
       color: C.textSecondary,
       lineHeight: 19,
+    },
+    toolContext: {
+      fontSize: 12,
+      fontFamily: "Inter_400Regular",
+      fontStyle: "italic",
+      color: C.textTertiary,
+      lineHeight: 18,
     },
     toolFooter: {
       flexDirection: "row",

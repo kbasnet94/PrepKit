@@ -67,10 +67,12 @@ export interface GuideSourceRef {
 }
 
 export interface GuideTool {
+  id: string;
   name: string;
   category: string;
+  description: string;
   optional: boolean;
-  context: string;
+  context: string | null;
 }
 
 export interface Guide {

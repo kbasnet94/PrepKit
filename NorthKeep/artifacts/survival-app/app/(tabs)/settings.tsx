@@ -148,7 +148,7 @@ export default function SettingsScreen() {
             </View>
           </View>
           <View style={styles.themeModeSelector}>
-            {(["light", "dark"] as const).map((m) => (
+            {(["system", "light", "dark"] as const).map((m) => (
               <Pressable
                 key={m}
                 style={[styles.themeModeOption, themeMode === m && styles.themeModeOptionActive]}
