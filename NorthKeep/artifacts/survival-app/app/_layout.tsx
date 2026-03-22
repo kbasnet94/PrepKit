@@ -6,7 +6,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/inter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Stack } from "expo-router";
+import { Redirect, Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -19,13 +19,27 @@ import { KnowledgeProvider } from "@/contexts/KnowledgeContext";
 import { InventoryProvider } from "@/contexts/InventoryContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { GuideStoreProvider } from "@/contexts/GuideStoreContext";
-import { UserProfileProvider } from "@/contexts/UserProfileContext";
+import { UserProfileProvider, useUserProfile } from "@/contexts/UserProfileContext";
 
 SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
 
 function RootLayoutNav() {
+  const { onboardingCompleted } = useUserProfile();
+
+  useEffect(() => {
+    if (onboardingCompleted !== null) {
+      SplashScreen.hideAsync();
+    }
+  }, [onboardingCompleted]);
+
+  // Still loading from AsyncStorage — keep splash visible
+  if (onboardingCompleted === null) return null;
+
+  // Not completed — redirect to onboarding before showing any screens
+  if (!onboardingCompleted) return <Redirect href="/onboarding" />;
+
   return (
     <Stack screenOptions={{ headerBackTitle: "Back" }}>
       <Stack.Screen name="onboarding" options={{ headerShown: false }} />
@@ -71,12 +85,6 @@ export default function RootLayout() {
     Inter_600SemiBold,
     Inter_700Bold,
   });
-
-  useEffect(() => {
-    if (fontsLoaded || fontError) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontError]);
 
   if (!fontsLoaded && !fontError) return null;
 
