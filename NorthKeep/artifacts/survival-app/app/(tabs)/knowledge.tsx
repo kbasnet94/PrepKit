@@ -67,6 +67,12 @@ const CATEGORY_LABELS: Record<string, string> = {
   core_skills: "Core Skills",
 };
 
+const CATEGORY_ORDER = [
+  "natural_disasters", "medical_safety", "water_food", "preparedness",
+  "communication", "navigation", "power_utilities_home_safety",
+  "shelter_fire_warmth", "weather_environment", "core_skills",
+];
+
 const LAYER_LABELS: Record<string, string> = {
   action_card: "Action",
   scenario_guide: "Scenario",
@@ -240,24 +246,31 @@ export default function KnowledgeScreen() {
   // so the user knows what they can download. Fall back to downloaded guide categories.
   const categories = useMemo(() => {
     if (availableCategories.length > 0) {
-      const CATEGORY_ORDER = [
-        "natural_disasters", "medical_safety", "water_food", "preparedness",
-        "communication", "navigation", "power_utilities_home_safety",
-        "shelter_fire_warmth", "weather_environment", "core_skills",
-      ];
       return CATEGORY_ORDER.filter((c) =>
         availableCategories.some((a) => a.slug === c)
       ) as GuideCategory[];
     }
+    // Offline: derive from globalMetadata if available
+    if (globalMetadata.length > 0) {
+      const metaCats = new Set(globalMetadata.map((g) => g.category));
+      return CATEGORY_ORDER.filter((c) => metaCats.has(c)) as GuideCategory[];
+    }
     return getAllCategories();
-  }, [availableCategories, allGuides]);
+  }, [availableCategories, allGuides, globalMetadata]);
 
   const countByCategory = useMemo(() => {
     if (availableCategories.length > 0) {
       return Object.fromEntries(availableCategories.map((c) => [c.slug, c.guideCount]));
     }
+    if (globalMetadata.length > 0) {
+      const counts: Record<string, number> = {};
+      globalMetadata.forEach((g) => {
+        counts[g.category] = (counts[g.category] || 0) + 1;
+      });
+      return counts;
+    }
     return getGuideCountByCategory();
-  }, [availableCategories, allGuides]);
+  }, [availableCategories, globalMetadata]);
 
   const layerCounts = useMemo(() => {
     const counts = { action_card: 0, scenario_guide: 0, reference_guide: 0, preparedness: 0 };
@@ -273,8 +286,11 @@ export default function KnowledgeScreen() {
     let guides: Guide[];
     if (downloadedCategories.has(selectedCategory)) {
       guides = allGuides.filter((g) => g.category === selectedCategory);
+    } else if (onlineGuidesCache.has(selectedCategory)) {
+      guides = onlineGuidesCache.get(selectedCategory)!;
     } else {
-      guides = onlineGuidesCache.get(selectedCategory) ?? [];
+      // Offline fallback: use persisted metadata for preview cards
+      guides = globalMetadata.filter((g) => g.category === selectedCategory);
     }
     if (!searchQuery.trim()) return guides;
     const q = searchQuery.toLowerCase();
@@ -284,7 +300,7 @@ export default function KnowledgeScreen() {
         g.summary.toLowerCase().includes(q) ||
         g.tags.some((t) => t.includes(q))
     );
-  }, [allGuides, selectedCategory, searchQuery, downloadedCategories, onlineGuidesCache]);
+  }, [allGuides, selectedCategory, searchQuery, downloadedCategories, onlineGuidesCache, globalMetadata]);
 
   const guideSections = useMemo(() => {
     const groups = new Map<string, Guide[]>();

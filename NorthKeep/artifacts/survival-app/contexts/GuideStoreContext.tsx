@@ -32,6 +32,7 @@ import { syncGuideViews } from "@/lib/guide-views";
 
 const RELEASE_VERSION_KEY = "northkeep_release_version";
 const GLOBAL_METADATA_KEY = "northkeep_global_metadata";
+const AVAILABLE_CATEGORIES_KEY = "northkeep_available_categories";
 // Set after seeding from bundle so we know to auto-sync on next online launch
 const SEEDED_FROM_BUNDLE_KEY = "northkeep_seeded_from_bundle";
 
@@ -319,6 +320,11 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
         if (storedMeta) setGlobalMetadata(JSON.parse(storedMeta));
       } catch { /* ignore */ }
 
+      try {
+        const storedCats = await AsyncStorage.getItem(AVAILABLE_CATEGORIES_KEY);
+        if (storedCats) setAvailableCategories(JSON.parse(storedCats));
+      } catch { /* ignore */ }
+
       const hasGuides = await hasAnyCachedGuides();
 
       if (!hasGuides) {
@@ -364,6 +370,7 @@ export function GuideStoreProvider({ children }: { children: ReactNode }) {
 
           const availCats = await fetchAvailableCategories();
           setAvailableCategories(availCats);
+          await AsyncStorage.setItem(AVAILABLE_CATEGORIES_KEY, JSON.stringify(availCats));
         } catch {
           // No internet — leave bundle data in place silently
         }
