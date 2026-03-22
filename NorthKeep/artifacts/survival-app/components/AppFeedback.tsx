@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useMemo, useState } from "react";
 import {
   ActivityIndicator,
@@ -19,9 +20,10 @@ import { submitAppFeedback } from "@/lib/feedback";
 interface Props {
   visible: boolean;
   onClose: () => void;
+  onRated?: () => void;
 }
 
-export function AppFeedback({ visible, onClose }: Props) {
+export function AppFeedback({ visible, onClose, onRated }: Props) {
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
 
@@ -41,6 +43,8 @@ export function AppFeedback({ visible, onClose }: Props) {
     if (starRating === 0) return;
     setSubmitting(true);
     await submitAppFeedback({ starRating, comment: comment.trim() || undefined });
+    await AsyncStorage.setItem("northkeep_has_rated", "true");
+    onRated?.();
     setSubmitting(false);
     setSubmitted(true);
     setTimeout(handleClose, 1500);

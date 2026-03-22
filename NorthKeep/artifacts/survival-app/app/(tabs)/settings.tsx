@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
-import React, { useMemo, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Linking,
   Platform,
@@ -22,9 +23,16 @@ export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const isWeb = Platform.OS === "web";
   const [showAppFeedback, setShowAppFeedback] = useState(false);
+  const [hasRated, setHasRated] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
   const { profile } = useUserProfile();
   const styles = useMemo(() => makeStyles(C), [C]);
+
+  useEffect(() => {
+    AsyncStorage.getItem("northkeep_has_rated").then((v) => {
+      if (v === "true") setHasRated(true);
+    });
+  }, []);
 
   const userTypeDisplay = profile.userTypes.length > 0
     ? profile.userTypes.map((t) => USER_TYPE_LABELS[t]).join(", ")
@@ -139,13 +147,17 @@ export default function SettingsScreen() {
             subtitle="support@northkeepapp.com"
             onPress={() => Linking.openURL("mailto:support@northkeepapp.com")}
           />
-          <View style={styles.separator} />
-          <SettingsRow
-            icon="star-outline"
-            title="Rate the App"
-            subtitle="Share your thoughts on NorthKeep"
-            onPress={() => setShowAppFeedback(true)}
-          />
+          {!hasRated && (
+            <>
+              <View style={styles.separator} />
+              <SettingsRow
+                icon="star-outline"
+                title="Rate the App"
+                subtitle="Share your thoughts on NorthKeep"
+                onPress={() => setShowAppFeedback(true)}
+              />
+            </>
+          )}
         </View>
 
         <Text style={styles.sectionTitle}>About</Text>
@@ -176,7 +188,11 @@ export default function SettingsScreen() {
         </View>
       </ScrollView>
 
-      <AppFeedback visible={showAppFeedback} onClose={() => setShowAppFeedback(false)} />
+      <AppFeedback
+        visible={showAppFeedback}
+        onClose={() => setShowAppFeedback(false)}
+        onRated={() => setHasRated(true)}
+      />
     </View>
   );
 }
