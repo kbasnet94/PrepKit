@@ -1,0 +1,12 @@
+node_modules
+.git
+*.log
+*.orig
+android/build
+android/.gradle
+android/app/build
+ios/build
+ios/Pods
+static-build
+dist
+.expo
