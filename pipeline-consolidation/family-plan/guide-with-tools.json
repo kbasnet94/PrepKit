@@ -1,0 +1,111 @@
+{
+  "slug": "family-emergency-plan",
+  "title": "Make a Family Emergency Plan",
+  "category": "preparedness",
+  "parentTopic": "Family Emergency and Communication Planning",
+  "layer": "scenario",
+  "guideType": "scenario_guide",
+  "summary": "Create a plan so every household member knows who to contact, how to reach them, where to meet, and what to do if phones, travel, or normal routines are disrupted during an emergency.",
+  "quickAnswer": "Write down contacts, choose meeting points, assign roles, pick an out-of-area relay contact, and give every household member a copy of the plan.",
+  "whenToUse": [
+    "Use for household preparedness before disasters or trips.",
+    "Use for all households, especially those with children, older adults, caregivers, or family members who spend the day in different places."
+  ],
+  "preferredAction": "Create a printed family emergency plan with contact numbers, meeting points, assigned roles, and an out-of-area relay contact. Give every household member a copy.",
+  "backupAction": "If you cannot print, handwrite the plan and store photos of it on phones plus one paper copy in a visible home location.",
+  "stepByStepActions": [
+    "Discuss likely local hazards and what each person should do in each scenario.",
+    "List every household member's name, mobile number, email, and any key medical needs.",
+    "Write down multiple contact methods for each person, including text, calls, and email.",
+    "Choose one out-of-area contact who can relay updates if local lines are overwhelmed.",
+    "Record local emergency numbers and official hotlines.",
+    "Choose household and neighborhood meeting points for reuniting.",
+    "Create wallet cards with emergency contacts, meeting points, and medical info.",
+    "Store copies of the plan at home, in go-bags, and on every member's phone.",
+    "Practice the plan periodically and review it after any move, number change, or annually."
+  ],
+  "warnings": [
+    "Plans not practiced regularly are forgotten under stress.",
+    "Plans that do not account for all household members, including pets and those with medical needs, may fail during real emergencies.",
+    "Phone networks may be overloaded; texts may work when calls do not.",
+    "A single app or single device is not enough for family communication resilience."
+  ],
+  "whatNotToDo": [
+    "Do not assume everyone remembers phone numbers from memory.",
+    "Do not keep the only copy of the plan on one phone."
+  ],
+  "redFlags": [
+    "Cannot locate a household member during an emergency with no agreed meeting point or contact plan.",
+    "If family members are unreachable during an active life-threatening incident, contact authorities.",
+    "If a dependent person with urgent medical needs loses caregiver contact, seek emergency help."
+  ],
+  "preparednessTips": [
+    "Teach children how to call emergency services and state their name and address.",
+    "Set ICE contacts on phones."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "family-emergency-plan",
+  "appTags": [
+    "preparedness",
+    "family-plan",
+    "planning",
+    "communication",
+    "family",
+    "contacts",
+    "kids",
+    "template",
+    "offline"
+  ],
+  "sourceReferences": [
+    {
+      "title": "How to Prepare for Emergencies",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+      "whyUseful": "Family-focused planning, kits, and drills."
+    },
+    {
+      "title": "Make A Plan",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/plan",
+      "whyUseful": "Family communication and evacuation planning with downloadable templates."
+    },
+    {
+      "title": "Build A Kit",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/kit",
+      "whyUseful": "Core kit item list and practical household baseline."
+    },
+    {
+      "title": "Shelter",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/shelter",
+      "whyUseful": "Shelter-in-place basics and official guidance."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from family-emergency-plan (canonical, scenario layer) and basic-family-emergency-communication-plan (archived, preparedness layer). Steps merged: 9 total from both guides, deduplicated. Warnings, whatNotToDo, redFlags, and preparednessTips union-merged. Source refs from canonical (4 real URLs). Archive slug should be set to review_status:archived after this version is approved. Layer mismatch (scenario vs preparedness) resolved in favor of canonical -- may warrant human review.",
+  "responseRole": "primary",
+  "constraintTags": [],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [
+    "communication-outage-basics"
+  ],
+  "tools": [
+    {
+      "name": "Cell phone",
+      "category": "Communication",
+      "description": "A mobile communication device for calling emergency services and sending location data",
+      "optional": false,
+      "context": "Primary device for storing plan photos and contacting family members during emergencies"
+    },
+    {
+      "name": "Permanent marker",
+      "category": "General",
+      "description": "A waterproof writing instrument used for labeling gear and leaving messages",
+      "optional": true,
+      "context": "For handwriting the emergency plan as a backup if printing is unavailable"
+    }
+  ]
+}

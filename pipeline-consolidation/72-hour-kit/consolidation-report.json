@@ -1,0 +1,130 @@
+{
+  "canonicalSlug": "build-72-hour-kit",
+  "archiveSlug": "72-hour-home-survival-kit-shelter-at-home",
+  "canonicalChoiceReason": "User designated build-72-hour-kit as the 'keep' slug. It also has the cleaner, shorter slug and more source references with real URLs (4 vs 2). Both are published.",
+  "layerMismatchNote": "The canonical guide is layer:scenario / scenario_guide; the archive guide is layer:preparedness / preparedness_guide. The merged guide adopts the canonical's layer (preparedness) and guideType (preparedness_guide) since the content is fundamentally a preparedness checklist. This is a deliberate upgrade from scenario to preparedness framing, keeping the richer checklist-style content.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical-preferred",
+      "source": "build-72-hour-kit: 'Build a 72-Hour Emergency Kit' — cleaner, action-verb phrasing",
+      "note": null
+    },
+    {
+      "field": "layer",
+      "decision": "set-to-preparedness",
+      "source": "Content is a preparedness checklist; 'preparedness' layer fits better than 'scenario'",
+      "note": "Guide B was preparedness; Guide A was scenario. Merged guide uses preparedness since this is a kit-building guide."
+    },
+    {
+      "field": "guideType",
+      "decision": "set-to-preparedness_guide",
+      "source": "Matches the preparedness layer assignment",
+      "note": null
+    },
+    {
+      "field": "summary",
+      "decision": "synthesized",
+      "source": "Combined specificity from both guides into one concise summary",
+      "note": null
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "synthesized",
+      "source": "Merged actionable detail from both guides",
+      "note": null
+    },
+    {
+      "field": "preferredAction",
+      "decision": "archive-preferred",
+      "source": "Archive guide's version ('Build one centralized kit sized for everyone in the household for at least 72 hours') is more specific than canonical ('Build a ready-to-grab kit with enough core supplies for at least several days')",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "archive-only",
+      "source": "Canonical had null; archive had a useful fallback about starting small",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "7 steps from archive + 2 unique steps from canonical (maps/tools, whistle), deduplicated and reordered to 9 total",
+      "note": "Archive had more granular steps; canonical added maps, phone charging, basic tools, and whistle. Combined and capped under 10."
+    },
+    {
+      "field": "warnings",
+      "decision": "union-merged",
+      "source": "2 from archive + 1 from canonical, deduplicated to 3",
+      "note": null
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "archive-only",
+      "source": "Canonical had empty array; archive had 2 items",
+      "note": null
+    },
+    {
+      "field": "redFlags",
+      "decision": "union-merged",
+      "source": "2 from archive + 2 from canonical, deduplicated to 4",
+      "note": null
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "archive-only",
+      "source": "Canonical had empty array; archive had 2 useful tips",
+      "note": null
+    },
+    {
+      "field": "whenToUse",
+      "decision": "union-merged",
+      "source": "Both had similar triggers; merged into one comprehensive array",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "union-merged",
+      "source": "4 from canonical (all real URLs) + 2 from archive (real URLs). Deduplicated by organization+topic to 4 unique refs.",
+      "note": "Archive refs were subsets of canonical refs (same orgs, same or similar URLs)."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "both-strong",
+      "source": "Both guides had sourceQuality: strong",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "union-merged",
+      "source": "3 from canonical + 8 from archive, deduplicated to 10",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "layer",
+      "valueA": "scenario",
+      "sourceA": "build-72-hour-kit",
+      "valueB": "preparedness",
+      "sourceB": "72-hour-home-survival-kit-shelter-at-home",
+      "resolution": "Use 'preparedness' — the content is a kit-building checklist, which is fundamentally preparedness guidance, not a scenario response",
+      "status": "resolved"
+    },
+    {
+      "field": "guideType",
+      "valueA": "scenario_guide",
+      "sourceA": "build-72-hour-kit",
+      "valueB": "preparedness_guide",
+      "sourceB": "72-hour-home-survival-kit-shelter-at-home",
+      "resolution": "Use 'preparedness_guide' to match the preparedness layer",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "No other guides currently have alternativeToGuideSlugs pointing to 72-hour-home-survival-kit-shelter-at-home — safe to archive.",
+    "The archive guide is currently published (review_status: published). Set to archived only after the merged version is approved and released."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

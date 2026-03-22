@@ -1,0 +1,137 @@
+{
+  "canonicalSlug": "immobilize-sprain-or-fracture",
+  "archiveSlug": "sprains-and-suspected-fractures",
+  "canonicalChoiceReason": "User-designated keep slug. Published v2 action_card with primary responseRole, real source URLs, and guide images. Cleaner action-verb slug.",
+  "layerMismatchNote": "These guides are in different layers (action vs scenario) and different guideTypes (action_card vs scenario_guide). Normally the consolidator would not merge cross-layer guides, but this consolidation was explicitly requested. The merged guide retains the canonical guide's layer (action) and guideType (action_card). Unique scenario-layer content (Ottawa Ankle Rules tip, ER vs urgent care decision guidance) has been folded into the merged steps and tips.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical-preferred",
+      "source": "immobilize-sprain-or-fracture",
+      "note": "Action-verb phrasing 'Sprain or Suspected Fracture: Immobilize and Cool' is clearer for a panicked user than the generic 'Sprains and Suspected Fractures'."
+    },
+    {
+      "field": "summary",
+      "decision": "synthesized",
+      "source": "Both guides contributed. Archive guide added the decision-making framing about when to call 911 vs wait for urgent care.",
+      "note": null
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "canonical-preferred",
+      "source": "immobilize-sprain-or-fracture",
+      "note": "Canonical version is more actionable and specific."
+    },
+    {
+      "field": "preferredAction",
+      "decision": "synthesized",
+      "source": "Both. Archive version added 'arrange medical evaluation / X-ray if cannot bear weight'. Merged into canonical's stronger action phrasing.",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "synthesized",
+      "source": "Both are similar. Archive added 'do not attempt to walk the person out on an injured lower limb without immobilization'. Merged.",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "10 steps from canonical + 9 steps from archive. Deduplicated to 10 merged steps. Archive contributed: Ottawa Ankle Rules awareness in step 9, child fracture note folded into step 2, explicit shock monitoring language strengthened in step 10.",
+      "note": null
+    },
+    {
+      "field": "warnings",
+      "decision": "union-merged",
+      "source": "5 from canonical + 5 from archive. Deduplicated to 5 (all substantively identical across both guides).",
+      "note": null
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "union-merged",
+      "source": "6 from canonical + 5 from archive. Deduplicated to 6. Archive's 'Do not use tight compression' and 'Do not give food/drink' already present in canonical.",
+      "note": null
+    },
+    {
+      "field": "redFlags",
+      "decision": "union-merged",
+      "source": "6 from canonical + 6 from archive. Deduplicated to 7. Archive contributed unique item: 'Child with significant limb pain after trauma — fractures in children can be subtle; get imaging'.",
+      "note": null
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "union-merged",
+      "source": "3 from canonical + 3 from archive. Deduplicated to 4. Archive contributed unique item about Ottawa Ankle Rules for deciding urgent care vs ER.",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "union-deduplicated",
+      "source": "Both guides cite the same 3 sources (Red Cross Muscle/Bone/Joint, Red Cross Fractures, AHA/Red Cross 2024). All have real URLs. Kept 3 refs with canonical's whyUseful descriptions (slightly more detailed).",
+      "note": null
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "canonical-preferred",
+      "source": "Both are 'strong'. Kept 'strong'.",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "union-merged",
+      "source": "10 from canonical + 10 from archive. Deduplicated to 11. Archive added 'RICE' (already in canonical) and 'medical' (excluded as too generic).",
+      "note": null
+    },
+    {
+      "field": "whenToUse",
+      "decision": "union-merged",
+      "source": "4 from canonical + 3 from archive. Deduplicated to 5. Archive contributed unique item about deciding between emergency care and urgent care.",
+      "note": null
+    },
+    {
+      "field": "layer",
+      "decision": "canonical-preferred",
+      "source": "immobilize-sprain-or-fracture (action layer)",
+      "note": "Archive was scenario layer. Cross-layer merge; canonical layer retained."
+    },
+    {
+      "field": "guideType",
+      "decision": "canonical-preferred",
+      "source": "immobilize-sprain-or-fracture (action_card)",
+      "note": "Archive was scenario_guide. Canonical type retained."
+    },
+    {
+      "field": "images",
+      "decision": "canonical-preferred",
+      "source": "immobilize-sprain-or-fracture has 2 images (improvised-splint, ankle-wrap). Archive has none.",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "stepByStepActions — step ordering (splint before cold pack vs interleaved)",
+      "valueA": "Steps 4-6: splint, then step 7: cold pack, then step 8: elevate",
+      "sourceA": "immobilize-sprain-or-fracture",
+      "valueB": "Steps 4-5: splint, then step 6: cold pack, then step 7: elevate",
+      "sourceB": "sprains-and-suspected-fractures",
+      "resolution": "Same sequence, just different step numbering. Both agree: splint first, then cold, then elevate. No substantive conflict.",
+      "status": "resolved"
+    },
+    {
+      "field": "step 9 — medical evaluation guidance",
+      "valueA": "No explicit step about arranging medical evaluation (covered implicitly in 'keep the person still until help arrives')",
+      "sourceA": "immobilize-sprain-or-fracture",
+      "valueB": "Step 9: 'Arrange medical evaluation: urgent care or an emergency room depending on severity. Any suspected fracture or inability to bear weight needs imaging to rule out a break.'",
+      "sourceB": "sprains-and-suspected-fractures",
+      "resolution": "Added archive's step 9 content as a merged step — valuable decision-making guidance. Fits within 10-step cap.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "sprains-and-suspected-fractures v2 has alternativeToGuideSlugs: ['immobilize-sprain-or-fracture'] — this points TO the canonical slug, so archiving is safe (no dangling references).",
+    "No other guides in the library have alternativeToGuideSlugs pointing to sprains-and-suspected-fractures — safe to archive.",
+    "sprains-and-suspected-fractures has a current_published_version_id set. The archive action should set review_status to 'archived' on this version after the merged version is approved."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

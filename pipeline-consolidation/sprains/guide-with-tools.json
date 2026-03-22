@@ -1,0 +1,187 @@
+{
+  "slug": "immobilize-sprain-or-fracture",
+  "title": "Sprain or Suspected Fracture: Immobilize and Cool",
+  "category": "medical_safety",
+  "parentTopic": "musculoskeletal-injuries",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "If you cannot tell whether an injury is a sprain or fracture, treat it as a fracture. Stop the person from moving the limb, apply an improvised splint in the position found, cool with a wrapped cold pack for 20 minutes, and elevate. Check circulation below the injury before and after splinting. Call 911 for visible bone, deformity, numbness below the injury, or signs of shock.",
+  "quickAnswer": "Stop movement, splint the limb in the position found (immobilize one joint above and one below the injury), apply a wrapped cold pack for up to 20 minutes, and elevate. Call 911 for visible bone, deformity, numbness below the injury, or signs of shock.",
+  "whenToUse": [
+    "After a fall, twist, or impact with pain, swelling, or difficulty moving or bearing weight on a limb",
+    "When you suspect a fracture but cannot confirm it — treat as a fracture when in doubt",
+    "When professional medical care is delayed and you need to stabilize the injury for transport",
+    "When someone cannot bear weight or move a joint after an injury",
+    "When deciding whether the injury needs emergency care (911) or can wait for urgent care"
+  ],
+  "preferredAction": "Stop the person from moving or testing the injured limb. Splint it in the exact position you find it — do not try to straighten it. Immobilize the joint above and below the injury. Apply a cold pack wrapped in cloth for up to 20 minutes, and gently elevate if it does not cause more pain. Arrange medical evaluation — even an apparent sprain warrants an X-ray if the person cannot bear weight.",
+  "backupAction": "If no splinting materials are available, bind an injured leg to the uninjured leg with cloth strips, or use a folded blanket or pillow to support an injured ankle or foot. Do not attempt to walk the person out on an injured lower limb without immobilization. Keep the person still and call 911.",
+  "stepByStepActions": [
+    "Tell the person to stop moving the injured area. Do not ask them to move or test the limb to assess the injury.",
+    "Call 911 if you see: bone protruding through skin, gross deformity, numbness or coldness below the injury, suspected head/neck/spine injury, signs of shock (pale, cold, faint, rapid breathing), a large-bone injury (hip, femur/thigh, pelvis), or a child with significant limb pain after trauma.",
+    "Check circulation below the injury: feel for warmth, look at skin color (pink vs. pale or blue), and ask if they have normal sensation in fingers or toes. Note what you find.",
+    "Build or find a splint: use a rigid object (rolled magazine, piece of wood, umbrella, folded cardboard, trekking pole) or a soft support (pillow, folded blanket for ankle or foot). Pad it with clothing or cloth to prevent pressure.",
+    "Position the splint to immobilize the joint one level above AND one level below the injury. For a forearm fracture, the splint runs from above the elbow to below the wrist. For a lower leg fracture, from above the knee to below the ankle.",
+    "Secure the splint with cloth strips, bandages, or tape. Tie firmly but not so tight that it cuts off circulation — you should be able to slip a finger under the tie.",
+    "Re-check circulation after splinting: warmth, color, and sensation below the injury. If the limb becomes colder, paler, or more numb after splinting, loosen the ties immediately.",
+    "Apply a cold pack wrapped in a cloth (never directly on skin) to the injured area for up to 20 minutes. Remove it after 20 minutes — do not leave ice on longer.",
+    "Gently elevate the injured limb above the level of the heart if this does not increase pain. This reduces swelling and internal bleeding.",
+    "Keep the person still, warm, and calm. Monitor for signs of shock and reassess circulation every 10–15 minutes. Arrange medical evaluation — urgent care or emergency room depending on severity. Any suspected fracture or inability to bear weight needs imaging."
+  ],
+  "warnings": [
+    "You cannot reliably tell a sprain from a fracture without an X-ray. When in doubt, treat it as a fracture.",
+    "Large-bone fractures (femur/thigh, hip, pelvis) can cause life-threatening internal bleeding — 1–2 liters of blood can collect around the thigh alone. These are emergencies even if no bone is visible.",
+    "Suspected spinal, neck, or head injury: do not move the person. Leave them in position found, tell them to stay still, and call 911 immediately.",
+    "Never apply ice directly to skin or for more than 20 consecutive minutes — this can cause frostbite and skin damage.",
+    "A splint that is too tight can cut off circulation to the limb. Check warmth, color, and sensation below the splint frequently."
+  ],
+  "whatNotToDo": [
+    "Do not ask the person to move, wiggle, or bear weight on the injured area to 'test' it — this can worsen a fracture.",
+    "Do not try to straighten, realign, or reduce a deformed limb — splint it in the position you find it.",
+    "Do not push a bone protruding through the skin back in — cover the wound loosely with a clean cloth and call 911.",
+    "Do not apply tight compression directly over a suspected fracture or open wound.",
+    "Do not remove a splint once applied unless circulation below the limb is being cut off.",
+    "Do not give food or drink — the person may need surgery."
+  ],
+  "redFlags": [
+    "Bone visible through the skin (open/compound fracture) — call 911 immediately",
+    "Numbness, tingling, pale or blue skin, or coldness below the injury — possible nerve or blood vessel damage, call 911",
+    "Signs of shock: pale or ashen skin, cold clamminess, faintness, rapid shallow breathing — call 911",
+    "Severe deformity or limb at an unnatural angle — call 911",
+    "Suspected hip, pelvis, or upper thigh (femur) fracture — call 911, do not attempt to move the person",
+    "Limb becomes colder or more numb after splinting — loosen ties and reassess immediately",
+    "Child with significant limb pain after trauma — fractures in children can be subtle; get imaging"
+  ],
+  "preparednessTips": [
+    "Include triangular bandages (slings), elastic wraps, and SAM splints in your first aid kit — they are lightweight and work for most limb injuries.",
+    "Practice identifying splint materials: a rolled-up magazine, a trekking pole, or a sturdy stick all work. The key is rigidity and padding.",
+    "Know the circulation check: warmth (feel the skin), color (pink vs. pale/blue), sensation (can they feel you touch their fingers/toes). Take 5 seconds to check before and after splinting.",
+    "Know the Ottawa Ankle Rules: an ankle X-ray is needed if there is pain near the ankle bone and inability to bear weight for four steps. This helps decide urgent care vs. ER."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "immobilize-sprain-or-fracture",
+  "appTags": [
+    "sprain",
+    "fracture",
+    "broken bone",
+    "immobilize",
+    "splint",
+    "RICE",
+    "swelling",
+    "fall",
+    "musculoskeletal",
+    "limb injury"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Muscle, Bone and Joint Injury — First Aid",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/muscle-bone-joint-injury",
+      "whyUseful": "Primary source for RICE steps, splinting technique, circulation checks, and what not to do for bystander management of sprains and suspected fractures."
+    },
+    {
+      "title": "Fractures: Types, Symptoms, and Treatment",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/take-a-class/resources/learn-first-aid/fractures",
+      "whyUseful": "Source for fracture recognition signs, 911 call criteria, shock risk from large-bone fractures, and open fracture handling."
+    },
+    {
+      "title": "2024 American Heart Association and American Red Cross Guidelines for First Aid",
+      "organization": "American Heart Association / American Red Cross",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001281",
+      "whyUseful": "Most recent comprehensive update of authoritative first aid guidelines (2024), co-authored by AHA and Red Cross, covering musculoskeletal injury management."
+    }
+  ],
+  "images": [
+    {
+      "key": "improvised-splint",
+      "altText": "Improvised splint on forearm using sticks and cloth strips",
+      "caption": "Splint with padding and bandage",
+      "storageUrl": "https://vluxgffxhuymarvhwlso.supabase.co/storage/v1/object/public/guide-images/immobilize-sprain-or-fracture/improvised-splint.jpg",
+      "description": "Forearm splinted with two padded sticks, secured with fabric strips above and below injury. Clear knot placement.",
+      "associatedStepIndex": 4
+    },
+    {
+      "key": "ankle-wrap",
+      "altText": "Sequential diagram of figure-8 ankle wrap technique",
+      "caption": "Figure-8 ankle wrap",
+      "storageUrl": "https://vluxgffxhuymarvhwlso.supabase.co/storage/v1/object/public/guide-images/immobilize-sprain-or-fracture/ankle-wrap.jpg",
+      "description": "Figure-8 ankle wrap: 3 sequential panels — starting position, around heel, completing over top of foot.",
+      "associatedStepIndex": 5
+    }
+  ],
+  "notes": "Consolidated from immobilize-sprain-or-fracture (canonical, action layer) and sprains-and-suspected-fractures (archived, scenario layer). Cross-layer merge: canonical action_card layer retained. Steps merged: 10 total (canonical's 10 steps augmented with archive's unique content — child fracture 911 criterion, Ottawa Ankle Rules tip, medical evaluation decision step). Red flags: 7 (added child fracture item from archive). Preparedness tips: 4 (added Ottawa Ankle Rules from archive). Source refs identical across both guides (3 refs with real URLs). Archive slug sprains-and-suspected-fractures should be set to review_status:archived after this version is approved.",
+  "responseRole": "primary",
+  "constraintTags": [
+    "cant_move",
+    "getting_worse"
+  ],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [],
+  "constraintAnnotationSummary": {
+    "responseRole": "primary — This is the main go-to guide for limb injury immobilization in the Musculoskeletal Injuries parentTopic. It was already primary in the cluster. The archive guide (sprains-and-suspected-fractures) was supporting. After consolidation, only this guide remains active, so primary is correct.",
+    "constraintTags": "cant_move (guide is specifically about immobilizing an injury when the person cannot move the limb), getting_worse (guide covers escalation signs like shock, worsening numbness, and when to call 911). These match the existing tags on the canonical guide.",
+    "blockedByConstraints": "Empty — this guide applies universally to limb injuries regardless of environmental constraints. No tags from the canonical 19-tag registry would make this guide inapplicable.",
+    "alternativeToGuideSlugs": "Empty — after archiving sprains-and-suspected-fractures, there are no other guides in this parentTopic that this guide serves as an alternative to. It is the sole primary guide."
+  },
+  "tools": [
+    {
+      "name": "SAM splint",
+      "category": "First Aid",
+      "description": "A padded malleable aluminum splint that can be shaped to immobilize fractures and sprains",
+      "optional": false,
+      "context": "Primary splinting material for immobilizing the joint above and below a suspected fracture or sprain"
+    },
+    {
+      "name": "Bandage",
+      "category": "First Aid",
+      "description": "A strip of fabric or adhesive material used to cover and protect wounds",
+      "optional": false,
+      "context": "Used to secure the splint in place with ties firm enough to stabilize but loose enough to preserve circulation"
+    },
+    {
+      "name": "Instant cold pack",
+      "category": "First Aid",
+      "description": "A single-use chemical pack that produces cold when activated, used to reduce swelling",
+      "optional": false,
+      "context": "Applied wrapped in cloth to the injured area for up to 20 minutes to reduce swelling and pain"
+    },
+    {
+      "name": "Triangular bandage",
+      "category": "First Aid",
+      "description": "A large triangular cloth used as a sling, bandage, or tourniquet improvisation",
+      "optional": true,
+      "context": "Used as an arm sling or to secure a splint; lightweight and versatile for most limb injuries"
+    },
+    {
+      "name": "First Aid Kit",
+      "category": "First Aid",
+      "description": "A first aid kit used in survival and emergency preparedness",
+      "optional": true,
+      "context": "Should contain triangular bandages, elastic wraps, and SAM splints for handling limb injuries"
+    },
+    {
+      "name": "Trekking poles",
+      "category": "General",
+      "description": "Adjustable walking poles that improve balance, reduce joint strain, and probe terrain",
+      "optional": true,
+      "context": "Can serve as an improvised rigid splint material when padded with clothing"
+    },
+    {
+      "name": "Tent stakes",
+      "category": "Shelter",
+      "description": "Metal or plastic anchors driven into the ground to secure tent and tarp guy lines",
+      "optional": true,
+      "context": "In backcountry settings, a tent stake padded with clothing makes an effective improvised splint"
+    },
+    {
+      "name": "Duct Tape",
+      "category": "General",
+      "description": "A duct tape used in survival and emergency preparedness",
+      "optional": true,
+      "context": "Alternative to cloth strips for securing a splint when bandages are unavailable"
+    }
+  ]
+}

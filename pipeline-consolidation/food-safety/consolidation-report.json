@@ -1,0 +1,153 @@
+{
+  "canonicalSlug": "food-safety-no-fridge",
+  "archiveSlugs": ["food-preservation", "food-safety-power-outage-action"],
+  "mergeType": "3-way",
+  "canonicalChoiceReason": "User-designated keep slug. Published v1 already in library. Broadest scope ('without refrigeration') naturally encompasses the power-outage-specific and preservation-specific guides.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "synthesized",
+      "source": "Rewritten for clarity. Original 'Food Safety Without Refrigeration' retained but expanded slightly to 'Food Safety Without Refrigeration' — already concise and action-oriented.",
+      "note": null
+    },
+    {
+      "field": "layer",
+      "decision": "changed",
+      "source": "Changed from 'scenario' to 'action' — the merged guide now has step-by-step actions and functions as an action card, not just a scenario reference.",
+      "note": "food-safety-power-outage-action was action layer; food-preservation was reference layer. The merged guide's primary purpose is actionable guidance."
+    },
+    {
+      "field": "guideType",
+      "decision": "changed",
+      "source": "Changed from 'scenario_guide' to 'action_card' to match the action layer and step-by-step content.",
+      "note": null
+    },
+    {
+      "field": "summary",
+      "decision": "synthesized",
+      "source": "Combined the comprehensive framing from food-preservation v2 with the actionable focus of food-safety-power-outage-action.",
+      "note": null
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "food-safety-power-outage-action",
+      "source": "food-safety-power-outage-action had the most specific and actionable quick answer with concrete time windows.",
+      "note": null
+    },
+    {
+      "field": "preferredAction",
+      "decision": "merged",
+      "source": "Combined food-preservation v2 (thermometer monitoring) with food-safety-power-outage-action (door-closed tracking).",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "food-safety-power-outage-action",
+      "source": "Cooler transfer guidance from food-safety-power-outage-action, supplemented by food-preservation v2's cooler detail.",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "7 steps from food-safety-power-outage-action formed the base. Added cooler temperature monitoring detail from food-preservation v2. Deduplicated to 8 final steps.",
+      "note": "food-safety-no-fridge v1 had 0 steps. food-preservation v2 had 0 steps (reference_guide). food-safety-power-outage-action had 7 steps."
+    },
+    {
+      "field": "warnings",
+      "decision": "union-merged",
+      "source": "7 from food-preservation v2 + 3 from food-safety-power-outage-action + 2 from food-safety-no-fridge v1, deduplicated to 9.",
+      "note": null
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "union-merged",
+      "source": "5 from food-preservation v2 + 3 from food-safety-power-outage-action, deduplicated to 6.",
+      "note": "food-safety-no-fridge v1 had 0 whatNotToDo items."
+    },
+    {
+      "field": "redFlags",
+      "decision": "union-merged",
+      "source": "5 from food-preservation v2 + 3 from food-safety-power-outage-action + 2 from food-safety-no-fridge v1, deduplicated to 7.",
+      "note": null
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "union-merged",
+      "source": "8 from food-preservation v2 + 3 from food-safety-power-outage-action, deduplicated to 8.",
+      "note": "food-safety-no-fridge v1 had 0 preparedness tips."
+    },
+    {
+      "field": "whenToUse",
+      "decision": "union-merged",
+      "source": "5 from food-preservation v2 + 3 from food-safety-power-outage-action + 1 from food-safety-no-fridge v1, deduplicated to 5.",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "union-merged",
+      "source": "7 from food-preservation v2 + 4 from food-safety-power-outage-action + 1 from food-safety-no-fridge v1. Deduplicated by organization+topic to 7 (food-preservation v2 had the most comprehensive set with real URLs; food-safety-power-outage-action refs were subsets).",
+      "note": "food-safety-no-fridge v1 had 1 CDC ref; covered by food-preservation v2's CDC entry."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "strongest",
+      "source": "Both food-preservation v2 and food-safety-power-outage-action are 'strong'. Merged guide is 'strong'.",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "union-merged",
+      "source": "Union of all three guides' tags, deduplicated.",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "layer",
+      "valueA": "scenario",
+      "sourceA": "food-safety-no-fridge",
+      "valueB": "reference",
+      "sourceB": "food-preservation",
+      "valueC": "action",
+      "sourceC": "food-safety-power-outage-action",
+      "resolution": "Use 'action' — the merged guide has step-by-step actions and serves as the primary action card for this topic. The reference content from food-preservation is incorporated into the warnings, tips, and supporting text.",
+      "status": "resolved"
+    },
+    {
+      "field": "guideType",
+      "valueA": "scenario_guide",
+      "sourceA": "food-safety-no-fridge",
+      "valueB": "reference_guide",
+      "sourceB": "food-preservation",
+      "valueC": "action_card",
+      "sourceC": "food-safety-power-outage-action",
+      "resolution": "Use 'action_card' — consistent with action layer and step-by-step format.",
+      "status": "resolved"
+    },
+    {
+      "field": "warnings (dry ice)",
+      "valueA": "Dry ice can cause severe frostbite — never touch it with bare hands and never place it in direct contact with food.",
+      "sourceA": "food-preservation",
+      "valueB": null,
+      "sourceB": "food-safety-power-outage-action",
+      "resolution": "Included from food-preservation — important safety warning not present in the action card.",
+      "status": "resolved"
+    },
+    {
+      "field": "warnings (high temp threshold)",
+      "valueA": "If outdoor temperature is above 90\u00b0F, perishable food left out is unsafe after just 1 hour.",
+      "sourceA": "food-preservation",
+      "valueB": null,
+      "sourceB": "food-safety-power-outage-action",
+      "resolution": "Included from food-preservation — relevant 1-hour rule for hot weather scenarios.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "food-preservation v2 has alternativeToGuideSlugs pointing to 'food-safety-no-fridge' — this link becomes moot since food-preservation is being archived into food-safety-no-fridge.",
+    "food-safety-power-outage-action has alternativeToGuideSlugs pointing to 'refrigerator-safety-during-outages' — this relationship should be carried forward in the merged guide's constraint metadata.",
+    "No other guides in the library reference food-preservation or food-safety-power-outage-action as alternatives — safe to archive both."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

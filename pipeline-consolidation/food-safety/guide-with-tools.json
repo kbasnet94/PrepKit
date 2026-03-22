@@ -1,0 +1,167 @@
+{
+  "slug": "food-safety-no-fridge",
+  "title": "Food Safety Without Refrigeration",
+  "category": "water_food",
+  "parentTopic": "Food Safety During Power Outages",
+  "layer": "action",
+  "guideType": "action_card",
+  "summary": "When power goes out or refrigeration is unavailable, food safety depends on temperature control, timing, and knowing what to keep versus discard. A closed refrigerator holds safe temperatures for about 4 hours; a full freezer for 48 hours. This guide covers the critical time windows, keep-or-toss decision rules, cooler transfer strategy, and the cardinal rule: never taste food to judge safety.",
+  "quickAnswer": "Keep refrigerator and freezer doors closed — food stays safe for 4 hours (fridge) or 24-48 hours (freezer). Never taste food to test safety. When in doubt, throw it out.",
+  "whenToUse": [
+    "Power has just gone out and you need to know what to do immediately",
+    "Deciding whether refrigerated or frozen food is still safe after an outage",
+    "You need to transfer perishables to a cooler during an extended outage",
+    "Power has returned and you need to evaluate what to keep or discard",
+    "Planning emergency food supplies before a storm or expected outage"
+  ],
+  "preferredAction": "Keep both the refrigerator and freezer doors closed to preserve cold air, and use an appliance thermometer to verify whether food has stayed at or below 40\u00b0F (4\u00b0C).",
+  "backupAction": "If the outage will exceed 4 hours, transfer refrigerated perishables to a cooler packed with ice or frozen gel packs, keeping the internal temperature at or below 40\u00b0F.",
+  "stepByStepActions": [
+    "Keep the refrigerator door closed — every opening costs 20-30 minutes of safe storage time. Food stays safe for up to 4 hours with the door closed.",
+    "Keep the freezer door closed — a full freezer stays safe for 48 hours; a half-full freezer stays safe for 24 hours.",
+    "If the outage is expected to last more than 4 hours, transfer refrigerated perishables (meat, poultry, fish, eggs, milk, and leftovers) to a cooler packed with ice. Keep the cooler at 40\u00b0F or below.",
+    "Use an appliance thermometer to monitor refrigerator and freezer temperatures — do not rely on guessing whether food has stayed cold enough.",
+    "When power is restored (or after 4+ hours without power), check refrigerated food: discard any raw or cooked meat, poultry, fish, seafood, eggs, and leftovers that have been above 40\u00b0F for more than 2 hours.",
+    "Check freezer food when power returns: if items still contain ice crystals or register 40\u00b0F or below, they may be safely refrozen. If fully thawed and above 40\u00b0F, discard meat, poultry, seafood, and egg-based items.",
+    "Never taste food to test whether it is safe — bacteria that cause food poisoning have no odor, color, or taste.",
+    "When in doubt, throw it out — the cost of replacing food is far less than the cost of foodborne illness."
+  ],
+  "warnings": [
+    "Bacteria multiply rapidly between 40\u00b0F and 140\u00b0F (the danger zone) and can double in number in as little as 20 minutes.",
+    "Never taste food to determine if it is safe — you cannot rely on appearance or odor alone.",
+    "Cooking temperature-abused food does not make it safe: some bacteria produce heat-stable toxins that survive thorough cooking.",
+    "Food that smells normal can still be unsafe to eat after temperature abuse.",
+    "Food poisoning bacteria are odorless, colorless, and tasteless — safe-looking food can be dangerous after temperature abuse.",
+    "Opened condiments (mayonnaise, tartar sauce, horseradish) must be discarded if held above 50\u00b0F for more than 8 hours.",
+    "Dry ice can cause severe frostbite — never touch it with bare hands and never place it in direct contact with food.",
+    "If outdoor temperature is above 90\u00b0F, perishable food left out is unsafe after just 1 hour.",
+    "Children, pregnant people, older adults, and immunocompromised people are at higher risk from foodborne illness."
+  ],
+  "whatNotToDo": [
+    "Do not open refrigerator or freezer doors unnecessarily during an outage — each opening significantly reduces the time food stays cold.",
+    "Do not taste food to determine if it is safe — never rely on smell, color, or taste.",
+    "Do not refreeze meat, poultry, or seafood that has fully thawed above 40\u00b0F.",
+    "Do not place perishable food outside in the snow: outdoor temperatures fluctuate and food is exposed to unsanitary conditions and animals.",
+    "Do not assume cooked food is safe if raw ingredients sat in the danger zone for more than 2 hours — bacterial toxins survive cooking.",
+    "Do not rely on appearance, smell, or taste to judge whether food is safe after a power outage."
+  ],
+  "redFlags": [
+    "Vomiting, diarrhea, high fever, or severe abdominal pain after eating food stored without refrigeration or during an outage.",
+    "Dehydration or confusion in vulnerable people after suspected foodborne illness.",
+    "Cans or containers that spurt liquid or foam when opened.",
+    "Food that is discolored, moldy, or has an unusual odor or texture.",
+    "Bloated or leaking containers.",
+    "Refrigerator or freezer thermometer reading above 40\u00b0F with no power for more than 4 hours.",
+    "Power has been out more than 4 hours and you have no cooler with ice for perishables."
+  ],
+  "preparednessTips": [
+    "Keep appliance thermometers in both the refrigerator (at or below 40\u00b0F) and freezer (at or below 0\u00b0F) at all times.",
+    "Freeze containers of water, gel packs, or bags of ice to fill empty freezer space — a full freezer stays cold longer and provides drinking water if needed.",
+    "Freeze perishable items you may not need immediately (milk, meat, leftovers) before an expected outage to extend safe storage time.",
+    "Keep one or more coolers and frozen gel packs ready for transferring refrigerated food if power will be out more than 4 hours.",
+    "Stock at least a 3-day supply of shelf-stable food per person: canned meats, fruits, and vegetables; peanut butter; crackers; dried fruit; protein bars; and canned or powdered milk.",
+    "Keep a manual can opener and eating utensils with your emergency food supply.",
+    "Know where to obtain dry ice or block ice in your area before an outage occurs.",
+    "Store boxed and dry foods in tightly closed plastic or metal containers and rotate stock regularly."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "food-safety-no-fridge",
+  "appTags": [
+    "food safety",
+    "power outage",
+    "refrigerator",
+    "freezer",
+    "danger zone",
+    "temperature",
+    "shelf stable",
+    "cooler",
+    "dry ice",
+    "perishable food",
+    "emergency food",
+    "food poisoning",
+    "electricity",
+    "no power",
+    "food spoilage"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Danger Zone (40\u00b0F - 140\u00b0F)",
+      "organization": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+      "whyUseful": "Defines the critical temperature range where bacteria multiply rapidly in food, the foundational concept for all power-outage food safety decisions."
+    },
+    {
+      "title": "Food and Water Safety During Power Outages and Floods",
+      "organization": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-and-water-safety-during-power-outages-and-floods",
+      "whyUseful": "Comprehensive FDA guidance on refrigerator/freezer time windows, thermometer use, refreeze rules, and the principle of never tasting food to judge safety."
+    },
+    {
+      "title": "Keep Your Food Safe During Emergencies: Power Outages, Floods & Fires",
+      "organization": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/emergencies/keep-your-food-safe-during-emergencies",
+      "whyUseful": "USDA emergency-specific guidance covering dry ice quantities, why cooking does not neutralize all toxins, and the warning against storing food outdoors in snow."
+    },
+    {
+      "title": "Keep Food Safe After a Disaster or Emergency",
+      "organization": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html",
+      "whyUseful": "CDC post-disaster food safety guidance including when to discard perishable food, signs of unsafe canned goods, and emergency supply planning."
+    },
+    {
+      "title": "Food Safety During Power Outage",
+      "organization": "FoodSafety.gov (USDA/FDA/CDC joint site)",
+      "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "whyUseful": "Detailed keep-or-toss chart listing specific food categories and their safety status after a power outage."
+    },
+    {
+      "title": "Food Safety During An Emergency",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/food-safety.html",
+      "whyUseful": "Red Cross guidance on using coolers and ice for extended outages and the recommendation to eat shelf-stable foods instead of risking perishable items."
+    },
+    {
+      "title": "Food",
+      "organization": "Ready.gov (FEMA)",
+      "url": "https://www.ready.gov/food",
+      "whyUseful": "Federal emergency preparedness guidance on stocking shelf-stable food supplies, alternative cooking methods, and the safety of eating commercially canned food without heating."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from food-safety-no-fridge (canonical, keep), food-preservation (archive), and food-safety-power-outage-action (archive). 3-way merge: action steps from food-safety-power-outage-action, reference content (warnings, prep tips, sources) from food-preservation v2, identity from food-safety-no-fridge. Layer changed from scenario to action to match step-by-step content. Archive both food-preservation and food-safety-power-outage-action after this version is approved.",
+  "responseRole": "primary",
+  "constraintTags": [
+    "no_power"
+  ],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [
+    "refrigerator-safety-during-outages",
+    "freezer-safety-during-outages",
+    "deciding-when-to-throw-away-food-after-an-outage"
+  ],
+  "tools": [
+    {
+      "name": "Thermometer",
+      "category": "First Aid",
+      "description": "A device that measures body temperature to assess fever or hypothermia",
+      "optional": false,
+      "context": "Used to monitor refrigerator and freezer temperatures to verify food has stayed at or below 40\u00b0F during an outage"
+    },
+    {
+      "name": "Container",
+      "category": "Storage",
+      "description": "A container used in survival and emergency preparedness",
+      "optional": true,
+      "context": "Freeze containers of water to fill empty freezer space, increasing thermal mass and extending safe temperature windows"
+    },
+    {
+      "name": "Utensil",
+      "category": "Cooking",
+      "description": "A utensil used in survival and emergency preparedness",
+      "optional": true,
+      "context": "Keep a manual can opener and eating utensils with emergency food supplies for accessing shelf-stable canned goods"
+    }
+  ]
+}

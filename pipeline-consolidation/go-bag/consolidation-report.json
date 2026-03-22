@@ -1,0 +1,137 @@
+{
+  "canonicalSlug": "evacuation-go-bag",
+  "archiveSlug": "personal-evacuation-go-bag-adult",
+  "canonicalChoiceReason": "User-designated keep slug. Has 4 source references with real URLs (vs 2 for archive). Cleaner, shorter slug. Both are published.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical-preferred",
+      "source": "evacuation-go-bag",
+      "note": "Shortened to 'Evacuation Go-Bag' for clarity in a crisis. Both titles are adequate but the canonical is more concise."
+    },
+    {
+      "field": "layer",
+      "decision": "canonical-preferred",
+      "source": "evacuation-go-bag",
+      "note": "Canonical is 'scenario', archive is 'preparedness'. Using canonical's layer per identity-fields rule. The merged guide absorbs preparedness content into a scenario-layer guide."
+    },
+    {
+      "field": "guideType",
+      "decision": "canonical-preferred",
+      "source": "evacuation-go-bag",
+      "note": "Canonical is 'scenario_guide', archive is 'preparedness_guide'. Using canonical per identity-fields rule."
+    },
+    {
+      "field": "summary",
+      "decision": "archive-preferred",
+      "source": "personal-evacuation-go-bag-adult",
+      "note": "Archive summary is more specific, listing the categories of items to pack. Lightly edited for clarity."
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "archive-preferred",
+      "source": "personal-evacuation-go-bag-adult",
+      "note": "Archive version is more actionable and specific than canonical's identical-to-summary text."
+    },
+    {
+      "field": "preferredAction",
+      "decision": "merged",
+      "source": "both",
+      "note": "Combined canonical's emphasis on speed with archive's mention of official guidance."
+    },
+    {
+      "field": "backupAction",
+      "decision": "archive-preferred",
+      "source": "personal-evacuation-go-bag-adult",
+      "note": "Canonical had no backupAction. Archive provides a practical fallback for minimal packing."
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "6 steps from archive + 2 unique elements from canonical (child/pet/disability items, protective footwear), deduplicated to 8 steps",
+      "note": "Archive had more granular steps. Canonical added child/pet/disability item mention and protective footwear. Merged and ordered logically."
+    },
+    {
+      "field": "warnings",
+      "decision": "merged",
+      "source": "Union of both guides, deduplicated to 3 unique warnings",
+      "note": "Canonical had weight and delay warnings. Archive had weight and medication rotation warnings. Weight warning deduplicated."
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "archive-preferred",
+      "source": "personal-evacuation-go-bag-adult",
+      "note": "Canonical had no whatNotToDo entries. Archive had 2 good entries."
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "Union of both guides, deduplicated to 3 unique red flags",
+      "note": "Both had relevant but distinct red flags. All kept."
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "archive-preferred",
+      "source": "personal-evacuation-go-bag-adult",
+      "note": "Canonical had no preparednessTips. Archive had 3 useful tips."
+    },
+    {
+      "field": "whenToUse",
+      "decision": "merged",
+      "source": "both",
+      "note": "Combined canonical's disaster-type list with archive's short-notice framing."
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "merged",
+      "source": "4 from canonical + 1 unique from archive (BC Gov), deduplicated by organization+topic to 5 total",
+      "note": "Both had Ready.gov 'Build A Kit' — kept canonical's version. Archive added BC Government source."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "both-equal",
+      "source": "both are 'strong'",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "Union of both guides' tags, deduplicated to 6",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "layer",
+      "valueA": "scenario",
+      "sourceA": "evacuation-go-bag",
+      "valueB": "preparedness",
+      "sourceB": "personal-evacuation-go-bag-adult",
+      "resolution": "Using canonical's 'scenario' layer per consolidator identity-fields rule. The merged guide incorporates preparedness content within the scenario framing.",
+      "status": "resolved"
+    },
+    {
+      "field": "guideType",
+      "valueA": "scenario_guide",
+      "sourceA": "evacuation-go-bag",
+      "valueB": "preparedness_guide",
+      "sourceB": "personal-evacuation-go-bag-adult",
+      "resolution": "Using canonical's 'scenario_guide' type per identity-fields rule.",
+      "status": "resolved"
+    },
+    {
+      "field": "stepByStepActions",
+      "valueA": "4 high-level steps combining multiple items per step",
+      "sourceA": "evacuation-go-bag",
+      "valueB": "6 more granular steps with specific categories per step",
+      "sourceB": "personal-evacuation-go-bag-adult",
+      "resolution": "Merged using archive's more granular structure as base, incorporating canonical's unique items (child/pet/disability gear, protective footwear). No safety-critical factual conflict.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "expedition-preparation-checklist has alternativeToGuideSlugs pointing to personal-evacuation-go-bag-adult — this reference must be updated to evacuation-go-bag after the archive slug is retired."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

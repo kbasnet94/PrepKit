@@ -1,0 +1,115 @@
+{
+  "slug": "emergency-water-storage",
+  "title": "Emergency Water Storage",
+  "category": "preparedness",
+  "parentTopic": "72-hour-emergency-supplies-and-go-bags",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "Store at least one gallon of safe water per person per day for a minimum of three days in clean food-grade containers. Plan for home, vehicle, and workplace storage, and rotate supplies regularly.",
+  "quickAnswer": "Store at least one gallon of water per person per day for three days minimum, in food-grade containers kept in a cool dark place, and rotate every six months.",
+  "whenToUse": [
+    "Use before emergencies to build a reliable water reserve at home, in your vehicle, or at work.",
+    "Use when you still have safe water and time to prepare for storms, outages, or disaster disruption."
+  ],
+  "preferredAction": "Store safe tap or bottled water in clean, tightly sealed food-grade containers in cool, dark locations away from chemicals.",
+  "backupAction": "If ideal containers are unavailable, carefully reuse suitable beverage bottles such as PET soda bottles after proper cleaning and sanitizing.",
+  "stepByStepActions": [
+    "Calculate your water needs: at least one gallon per person per day, with extra for hot climates, children, pets, illness, or special medical needs.",
+    "Choose food-grade containers that close tightly and have never stored chemicals, gasoline, or pesticides.",
+    "Wash, rinse, sanitize, and dry self-filled containers before use.",
+    "Fill containers with safe tap or bottled water and seal tightly.",
+    "Label each container with the fill date and mark as drinking water.",
+    "Store containers in a cool, dark, protected location away from sunlight, heat, fuels, pesticides, and chemical vapors.",
+    "Rotate self-filled stored water every six months by emptying, cleaning, and refilling."
+  ],
+  "warnings": [
+    "Use only food-grade containers; do not reuse containers that previously held toxic substances, and note that vapors from gasoline, pesticides, and chemicals can penetrate some plastics.",
+    "Milk jugs and some food containers are poor long-term choices because residues can promote bacterial growth.",
+    "Stored water needs to be rotated and refreshed periodically to remain safe."
+  ],
+  "whatNotToDo": [
+    "Do not partially close containers.",
+    "Do not keep topping off old water without emptying, cleaning, and refilling.",
+    "Do not assume unknown plastics are food-grade."
+  ],
+  "redFlags": [
+    "Stored water smells foul, appears slimy, or has visible growth.",
+    "An emergency occurs and you have no safe stored water and the public supply is unsafe.",
+    "Water was stored in containers that previously held toxic substances."
+  ],
+  "preparednessTips": [
+    "Plan extra water for hot climates, children, medical needs, and pets.",
+    "Aim for a two-week supply if space and budget allow.",
+    "Store smaller grab-and-go bottles as well as larger home containers.",
+    "Use reminders to rotate stored water every six months."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "emergency-water-storage",
+  "appTags": [
+    "water",
+    "storage",
+    "preparedness",
+    "home",
+    "rotation",
+    "cdc"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Emergency Disinfection of Drinking Water",
+      "organization": "US EPA",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "whyUseful": "Step-by-step emergency boiling and bleach methods, plus container guidance."
+    },
+    {
+      "title": "How to Make Water Safe in an Emergency",
+      "organization": "CDC",
+      "url": "https://www.cdc.gov/water-emergency/about/index.html",
+      "whyUseful": "Confirms primary treatment methods and explains treatment limits."
+    },
+    {
+      "title": "How to Create and Store an Emergency Water Supply",
+      "organization": "CDC",
+      "url": "https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html",
+      "whyUseful": "Primary household storage quantities, container handling, cleaning, and rotation guidance."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from emergency-water-storage (canonical) and emergency-water-storage-at-home (archived). Steps merged: 7 total (6 from archive guide's more detailed sequence, plus canonical's broader scope elements). Layer upgraded from scenario to preparedness to match content nature. Guide type upgraded to preparedness_guide. Source refs from canonical (3 real URLs); archive's refs pointed to the same CDC page. Archive slug should be set to review_status:archived after this version is approved.",
+  "responseRole": "supporting",
+  "constraintTags": [],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [],
+  "constraintAnnotationNotes": "This is a preparedness guide about storing water in advance. It does not depend on specific equipment or conditions that would be blocked by any canonical constraints — you can store water regardless of whether you can boil, have bleach, etc. It does not become more relevant under any specific constraint either, since storage is a universal preparedness action. Role is 'supporting' because the 72-Hour Emergency Supplies parentTopic has no primary preparedness guide currently, but this guide covers a narrow subtopic (water only) rather than the full kit, so 'supporting' is appropriate. No alternative slugs are needed as this is a standalone preparedness guide.",
+  "tools": [
+    {
+      "name": "Container",
+      "category": "Storage",
+      "description": "A container used in survival and emergency preparedness",
+      "optional": false,
+      "context": "Food-grade containers are essential for safely storing emergency drinking water."
+    },
+    {
+      "name": "Bleach",
+      "category": "Water Purification",
+      "description": "A sodium hypochlorite solution used in small doses to disinfect drinking water",
+      "optional": true,
+      "context": "Used to sanitize self-filled containers before storing water."
+    },
+    {
+      "name": "Permanent marker",
+      "category": "General",
+      "description": "A waterproof writing instrument used for labeling gear and leaving messages",
+      "optional": false,
+      "context": "Used to label containers with fill date and drinking-water designation."
+    },
+    {
+      "name": "Water bottle",
+      "category": "Storage",
+      "description": "A sealed container for carrying and storing drinking water",
+      "optional": true,
+      "context": "Smaller grab-and-go bottles supplement larger home storage containers for evacuation scenarios."
+    }
+  ]
+}

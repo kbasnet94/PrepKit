@@ -1,0 +1,118 @@
+{
+  "canonicalSlug": "family-emergency-plan",
+  "archiveSlug": "basic-family-emergency-communication-plan",
+  "canonicalChoiceReason": "User-designated keep slug; has more source references (4 vs 2) with real URLs; cleaner, shorter slug",
+  "layerMismatchWarning": "Canonical guide is layer=scenario/scenario_guide; archive guide is layer=preparedness/preparedness_guide. Merged guide uses canonical's layer (scenario). Review whether the merged content still fits the scenario layer or should be reclassified to preparedness.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical-preferred",
+      "source": "family-emergency-plan",
+      "note": "'Make a Family Emergency Plan' is action-verb phrasing, clearer for a panicked user than 'Basic Family Emergency Communication Plan'"
+    },
+    {
+      "field": "summary",
+      "decision": "synthesized",
+      "source": "both",
+      "note": "Combined canonical's broader scope (reconnect, meet, communication failure) with archive's specificity (contacts, methods, disrupted routines)"
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "synthesized",
+      "source": "both",
+      "note": "Merged to cover both planning breadth and communication specificity"
+    },
+    {
+      "field": "whenToUse",
+      "decision": "merged",
+      "source": "both",
+      "note": "Union of both; canonical covers pre-disaster/trip, archive adds households with children/older adults/caregivers"
+    },
+    {
+      "field": "preferredAction",
+      "decision": "synthesized",
+      "source": "both",
+      "note": "Combined canonical's meeting points/roles/contact approach with archive's printed plan approach"
+    },
+    {
+      "field": "backupAction",
+      "decision": "archive-preferred",
+      "source": "basic-family-emergency-communication-plan",
+      "note": "Canonical had null backupAction; archive's handwritten plan fallback is useful"
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "5 steps from canonical + 7 from archive, deduplicated and merged to 9",
+      "note": "Deduplicated overlapping steps (out-of-area contact, phone numbers, practice/review). Ordered logically: discuss hazards -> list contacts -> choose contact methods -> out-of-area contact -> emergency numbers -> meeting points -> wallet cards -> store copies -> practice/review"
+    },
+    {
+      "field": "warnings",
+      "decision": "merged",
+      "source": "both",
+      "note": "Union of 2+2=4 warnings, all unique"
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "archive-preferred",
+      "source": "basic-family-emergency-communication-plan",
+      "note": "Canonical had empty array; archive had 2 useful items"
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "both",
+      "note": "Union of 1+2=3 red flags, all unique"
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "archive-preferred",
+      "source": "basic-family-emergency-communication-plan",
+      "note": "Canonical had empty array; archive had 2 useful tips"
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "merged",
+      "source": "both",
+      "note": "Canonical has 4 refs with real URLs (Red Cross, Ready.gov plan/kit/shelter). Archive has 2 refs (Ready.gov plan, Red Cross). Deduplicated by org+topic to 4 unique refs from canonical."
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "equal",
+      "source": "both",
+      "note": "Both are 'strong'"
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "both",
+      "note": "Union of all tags from both guides, deduplicated"
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "layer",
+      "valueA": "scenario",
+      "sourceA": "family-emergency-plan",
+      "valueB": "preparedness",
+      "sourceB": "basic-family-emergency-communication-plan",
+      "resolution": "Use canonical's layer (scenario). The merged guide covers both planning and scenario content. May warrant human review to decide if preparedness is more appropriate.",
+      "status": "resolved"
+    },
+    {
+      "field": "guideType",
+      "valueA": "scenario_guide",
+      "sourceA": "family-emergency-plan",
+      "valueB": "preparedness_guide",
+      "sourceB": "basic-family-emergency-communication-plan",
+      "resolution": "Use canonical's guideType (scenario_guide), consistent with layer decision.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "No other guides currently have alternativeToGuideSlugs pointing to basic-family-emergency-communication-plan -- safe to archive.",
+    "basic-family-emergency-communication-plan is currently published (review_status=published). Archive only after merged version is approved."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

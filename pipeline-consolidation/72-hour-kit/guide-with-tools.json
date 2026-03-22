@@ -1,0 +1,185 @@
+{
+  "slug": "build-72-hour-kit",
+  "title": "Build a 72-Hour Emergency Kit",
+  "category": "preparedness",
+  "parentTopic": "72-hour-emergency-supplies-and-go-bags",
+  "layer": "preparedness",
+  "guideType": "preparedness_guide",
+  "summary": "Build a centralized 72-hour emergency kit with water, food, lighting, a radio, first aid supplies, medications, sanitation items, documents, and communication tools so your household can shelter in place or grab and go.",
+  "quickAnswer": "Store at least 3 days of water (1 gallon per person per day), shelf-stable food, a flashlight, batteries, a radio, first aid supplies, prescription medications, sanitation items, copies of key documents, and a whistle in one clearly labeled kit.",
+  "whenToUse": [
+    "Use before storms, earthquakes, floods, wildfires, or prolonged service disruptions when you may need to remain at home or evacuate without outside help.",
+    "Use when building or refreshing household emergency supplies."
+  ],
+  "preferredAction": "Build one centralized kit sized for everyone in the household for at least 72 hours.",
+  "backupAction": "If you cannot fully stock 72 hours, start with water, a flashlight, a radio, medications, and basic food, then expand over time.",
+  "stepByStepActions": [
+    "Choose a durable container and a storage location that is easy to access in an emergency.",
+    "Store at least 1 gallon of water per person per day for 3 days.",
+    "Pack 3 days of shelf-stable, easy-to-eat food and a manual can opener.",
+    "Add a flashlight, spare batteries, and a battery-powered or hand-crank radio.",
+    "Include a first aid kit, prescription medications, and essential medical supplies.",
+    "Pack sanitation items, hygiene supplies, blankets, and sturdy shoes.",
+    "Keep copies of important documents, emergency contacts, and cash in the kit.",
+    "Add a whistle, local maps, a phone charger or power bank, and basic tools such as a multi-tool.",
+    "Include infant, child, pet, or special-needs items as required.",
+    "Review and refresh the kit every 6 to 12 months, replacing expired items."
+  ],
+  "warnings": [
+    "Utilities, tap water, and fuel may be unavailable after major disasters.",
+    "Temperature-sensitive medicines and devices need special planning during outages.",
+    "Kits not maintained or rotated regularly may contain expired food, medications, or depleted batteries when needed."
+  ],
+  "whatNotToDo": [
+    "Do not rely only on foods that require large amounts of water or fuel to prepare.",
+    "Do not scatter supplies randomly around the house without one clearly marked core kit."
+  ],
+  "redFlags": [
+    "Running out of life-sustaining medication, safe water, or basic shelter supplies during an active emergency needs urgent outside help or official support.",
+    "Chest pain, confusion, breathing trouble, or medication failure should be treated as urgent medical issues.",
+    "You are forced to evacuate immediately with no kit available.",
+    "Kit contents are expired or unusable when an emergency strikes."
+  ],
+  "preparednessTips": [
+    "Aim toward a 2-week home supply over time, even if 72 hours is your baseline.",
+    "Keep a written inventory taped to or stored inside the kit.",
+    "Consider keeping a smaller secondary kit in your car or workplace."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "build-72-hour-kit",
+  "appTags": [
+    "preparedness",
+    "kit",
+    "72-hour",
+    "kits",
+    "home",
+    "checklist",
+    "shelter-in-place",
+    "food-water",
+    "first-aid",
+    "documents"
+  ],
+  "sourceReferences": [
+    {
+      "title": "How to Prepare for Emergencies",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+      "whyUseful": "Family-focused planning, kits, and drills."
+    },
+    {
+      "title": "Build A Kit",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/kit",
+      "whyUseful": "Core kit item list and practical household baseline."
+    },
+    {
+      "title": "Make A Plan",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/plan",
+      "whyUseful": "Family communication and evacuation planning."
+    },
+    {
+      "title": "Shelter",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/shelter",
+      "whyUseful": "Shelter-in-place basics and official guidance."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from build-72-hour-kit (canonical) and 72-hour-home-survival-kit-shelter-at-home (archived). Steps merged: 10 total (7 from archive expanded, 3 unique additions from canonical including whistle, maps, tools). Layer upgraded from scenario to preparedness. Source refs from canonical (4 real URLs). Archive slug should be set to review_status:archived after this version is approved.",
+  "responseRole": "primary",
+  "constraintTags": [],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [
+    "evacuation-go-bag",
+    "car-work-mini-emergency-kit-24-72-hours"
+  ],
+  "tools": [
+    {
+      "name": "Flashlight",
+      "category": "Lighting",
+      "description": "A battery-powered portable light source for illumination in low-light conditions",
+      "optional": false,
+      "context": "Essential for visibility during power outages or nighttime emergencies"
+    },
+    {
+      "name": "Batteries",
+      "category": "General",
+      "description": "Portable electrochemical power sources for flashlights, radios, and electronic devices",
+      "optional": false,
+      "context": "Powers flashlight, radio, and other critical electronics in the kit"
+    },
+    {
+      "name": "Radio",
+      "category": "Communication",
+      "description": "A radio used in survival and emergency preparedness",
+      "optional": false,
+      "context": "Receives weather alerts and emergency broadcasts when cell networks are down"
+    },
+    {
+      "name": "First Aid Kit",
+      "category": "First Aid",
+      "description": "A first aid kit used in survival and emergency preparedness",
+      "optional": false,
+      "context": "Provides wound care, bandages, and basic medical supplies for injuries"
+    },
+    {
+      "name": "Whistle",
+      "category": "Communication",
+      "description": "A small device that produces a loud high-pitched sound for signaling and attracting attention",
+      "optional": false,
+      "context": "Signals for help when voice cannot carry far enough"
+    },
+    {
+      "name": "Multi-tool",
+      "category": "Cutting",
+      "description": "A compact folding tool combining pliers, blades, screwdrivers, and other implements",
+      "optional": false,
+      "context": "Provides cutting, prying, and repair capability in a single compact tool"
+    },
+    {
+      "name": "Map",
+      "category": "Navigation",
+      "description": "A printed representation of terrain, trails, and landmarks used for navigation",
+      "optional": false,
+      "context": "Enables route planning when GPS and cell service are unavailable"
+    },
+    {
+      "name": "Power bank",
+      "category": "General",
+      "description": "A rechargeable battery pack used to charge phones and small electronic devices",
+      "optional": false,
+      "context": "Keeps phone charged for emergency calls and information access"
+    },
+    {
+      "name": "Water bottle",
+      "category": "Storage",
+      "description": "A sealed container for carrying and storing drinking water",
+      "optional": true,
+      "context": "Stores portion of the 1-gallon-per-person-per-day water supply"
+    },
+    {
+      "name": "Emergency blanket",
+      "category": "Shelter",
+      "description": "A lightweight reflective sheet that retains body heat and provides weather protection",
+      "optional": true,
+      "context": "Provides warmth and weather protection if heating is unavailable"
+    },
+    {
+      "name": "Garbage bags",
+      "category": "Storage",
+      "description": "Large heavy-duty plastic bags useful for rain protection, ground cover, and waste",
+      "optional": true,
+      "context": "Used for sanitation, waste containment, and improvised waterproofing"
+    },
+    {
+      "name": "Permanent marker",
+      "category": "General",
+      "description": "A waterproof writing instrument used for labeling gear and leaving messages",
+      "optional": true,
+      "context": "Labels containers, marks dates on stored items, and leaves messages if evacuating"
+    }
+  ]
+}

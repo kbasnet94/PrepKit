@@ -1,0 +1,120 @@
+{
+  "canonicalSlug": "refrigerator-safety-during-outages",
+  "archiveSlug": "freezer-safety-during-outages",
+  "canonicalGuideId": "6f922761-025d-467c-997e-ff4c19f1d51b",
+  "archiveGuideId": "6b78f75a-968a-4b75-96fa-913926f4c592",
+  "archivePublishedVersionId": "e9aace55-a417-4d13-8525-46b580b471d3",
+  "canonicalChoiceReason": "Both guides are published v1 with identical source URLs and strong quality. Refrigerator guide was created first (earlier timestamp), has more complete warnings (2 vs 2) and red flags (2 vs 1), and the thermometer tool is marked required vs optional. Kept refrigerator slug as canonical since it was the earlier, slightly more thorough entry.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "synthesized",
+      "source": "Neither original title covers the merged scope. New title: 'Fridge and Freezer Safety During Outages' — shorter, covers both appliances, action-oriented.",
+      "note": null
+    },
+    {
+      "field": "summary",
+      "decision": "synthesized",
+      "source": "Combined key facts from both: fridge safe ~4h, full freezer ~48h, half-full ~24h.",
+      "note": null
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "synthesized",
+      "source": "Merged both quick answers into a single comprehensive statement covering both appliances.",
+      "note": null
+    },
+    {
+      "field": "preferredAction",
+      "decision": "synthesized",
+      "source": "Both say keep doors closed. Merged into single statement covering both appliances.",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "merged",
+      "source": "Fridge guide mentions cooler with ice/gel packs; freezer guide adds grouping foods and dry ice. Combined both.",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "5 steps from refrigerator guide + 5 from freezer guide, deduplicated to 8 unique steps covering both appliances.",
+      "note": null
+    },
+    {
+      "field": "warnings",
+      "decision": "merged",
+      "source": "2 from refrigerator + 2 from freezer, deduplicated to 3 unique warnings.",
+      "note": null
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "merged",
+      "source": "3 from refrigerator + 3 from freezer, deduplicated to 5 unique items.",
+      "note": null
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "2 from refrigerator + 1 from freezer, deduplicated to 2 unique red flags (freezer's was a subset of refrigerator's).",
+      "note": null
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "merged",
+      "source": "3 from refrigerator + 3 from freezer, deduplicated to 5 unique tips.",
+      "note": null
+    },
+    {
+      "field": "whenToUse",
+      "decision": "synthesized",
+      "source": "Combined both triggers into a single broader statement.",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "canonical-preferred",
+      "source": "Both cite the same USDA/FoodSafety.gov page with identical URL. Kept single entry with merged whyUseful.",
+      "note": null
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "canonical",
+      "source": "Both are 'strong'. Kept 'strong'.",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "Union of both tag sets; added 'freezer' from archive guide to canonical's set.",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "stepByStepActions — temperature threshold",
+      "valueA": "Discard high-risk foods that were above 4°C / 40°F for too long.",
+      "sourceA": "refrigerator-safety-during-outages",
+      "valueB": "Discard foods that have been above safe temperatures too long.",
+      "sourceB": "freezer-safety-during-outages",
+      "resolution": "No conflict — both reference the same USDA 40°F threshold. Refrigerator guide is more specific; used its phrasing. Freezer guide adds the ice-crystal check which is a separate step.",
+      "status": "resolved"
+    },
+    {
+      "field": "tools — thermometer optional flag",
+      "valueA": "Thermometer marked optional: false (required)",
+      "sourceA": "refrigerator-safety-during-outages",
+      "valueB": "Thermometer marked optional: true",
+      "sourceB": "freezer-safety-during-outages",
+      "resolution": "Set as required (optional: false) — USDA guidance emphasizes thermometer use for both fridge and freezer safety checks.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "food-safety-no-fridge (draft version) has alternativeToGuideSlugs pointing to 'freezer-safety-during-outages' — this reference should be updated to 'refrigerator-safety-during-outages' after archival.",
+    "food-safety-power-outage-action (archived) has alternativeToGuideSlugs pointing to 'refrigerator-safety-during-outages' — no change needed, that slug survives."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

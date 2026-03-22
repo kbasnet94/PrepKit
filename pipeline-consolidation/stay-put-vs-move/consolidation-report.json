@@ -1,0 +1,108 @@
+{
+  "canonicalSlug": "stay-put-vs-move",
+  "archiveSlug": "stay-put-vs-move-land",
+  "canonicalChoiceReason": "User-specified keep slug. stay-put-vs-move is the shorter, more general slug and is currently published at v1. stay-put-vs-move-land v2 already contains a consolidation of both guides with superior content — that content will be carried into the new version under the canonical slug.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "synthesized",
+      "source": "Changed from 'Stay Put vs Move' (canonical) and 'Stay Put vs Move (Land)' (archive) to 'Stay Put vs Move When Lost on Land' — clearer action framing for a panicked user",
+      "note": "Matches the title already used in archive v2's consolidation"
+    },
+    {
+      "field": "summary",
+      "decision": "archive-preferred",
+      "source": "Archive v2 summary is far more specific and actionable than canonical v1's generic summary",
+      "note": null
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "archive-preferred",
+      "source": "Archive v2 quickAnswer gives a concrete instruction ('Stop moving, assess, stay put') vs. canonical v1's vague restatement of summary",
+      "note": null
+    },
+    {
+      "field": "whenToUse",
+      "decision": "archive-preferred",
+      "source": "Archive v2 has 3 specific trigger scenarios vs. canonical v1's single generic trigger",
+      "note": null
+    },
+    {
+      "field": "preferredAction",
+      "decision": "archive-preferred",
+      "source": "Archive v2 is more specific: mentions shelter, visibility, and signaling",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "archive-preferred",
+      "source": "Archive v2 gives concrete movement targets (higher ground, clearing, trail edge) vs. canonical v1's vague 'move only if clearly more dangerous'",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "7 steps from archive v2 (which itself integrated canonical v1's assessment framing). Canonical v1 had 4 steps; archive v1 had 6; archive v2 merged to 7. No unique content remains in canonical v1 that isn't already captured.",
+      "note": null
+    },
+    {
+      "field": "warnings",
+      "decision": "archive-preferred",
+      "source": "Archive v2 has 2 strong, specific warnings. Canonical v1's single warning ('Panic movement can increase exposure') is subsumed by archive v2's first warning about enlarging search area.",
+      "note": null
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "merged",
+      "source": "Union of canonical v1 (2 items) and archive v2 (3 items), deduplicated to 4. Canonical's 'Do not wander aimlessly' is subsumed by archive v2's first item. Canonical's 'Do not abandon a strong shelter or signal position' is unique and retained.",
+      "note": null
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "Union of canonical v1 (2 items) and archive v2 (3 items), deduplicated to 3. Canonical's 'Imminent hazard at current location' is covered more specifically by archive v2's 'Active fire, unstable ground' item. Canonical's 'Severely injured person' merges with archive v2's similar item.",
+      "note": null
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "archive-preferred",
+      "source": "Canonical v1 has 0 tips; archive v2 has 3 strong tips. All 3 retained.",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "archive-preferred",
+      "source": "Archive v2 has 2 authoritative wilderness-specific sources (NPS, American Hiking Society) with real URLs. Canonical v1's sources (NIST telecom technical note, DOT rail transit guidelines) are wholly inappropriate for wilderness lost-person content and are discarded.",
+      "note": "Canonical v1 sources flagged as poor fit in archive v2's consolidation notes"
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "archive-preferred",
+      "source": "Archive is 'strong' (NPS + AHS sources); canonical is 'mixed' (inappropriate sources). Merged guide takes 'strong' since the strong-quality refs survive.",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "Union of canonical v1 tags ['lost', 'navigation', 'decision-making'] and archive v2 tags ['lost', 'navigation', 'stay put', 'search and rescue', 'SAR', 'self rescue', 'wilderness', 'hiking', 'survival'], deduplicated to 10",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "stepByStepActions",
+      "valueA": "Choose the safer option rather than the option that feels more active.",
+      "sourceA": "stay-put-vs-move (canonical v1, step 2)",
+      "valueB": "If no immediate danger exists, stay near your last known location. Rescuers will begin searching along your planned route and from the last known point.",
+      "sourceB": "stay-put-vs-move-land (archive v2, step 3)",
+      "resolution": "Both say 'stay put is usually safer.' Archive v2 phrasing is more concrete and actionable. Canonical v1's philosophical framing ('safer vs. more active') is captured in whatNotToDo item 1 instead.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "stay-put-vs-move-land has alternativeToGuideSlugs: ['lost-on-land-first-30-minutes'] in its published version. After archiving, the merged guide under stay-put-vs-move should inherit this alternative link.",
+    "No other guides currently have alternativeToGuideSlugs pointing to stay-put-vs-move-land — safe to archive."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

@@ -1,0 +1,127 @@
+{
+  "canonicalSlug": "emergency-water-storage",
+  "archiveSlug": "emergency-water-storage-at-home",
+  "canonicalChoiceReason": "User designated as 'keep' slug; shorter, more general slug that covers all storage scenarios (home, vehicle, workplace) rather than home-only; published v1 in the 72-Hour Emergency Supplies parentTopic.",
+  "crossParentTopicNote": "These guides are in different parentTopics (72-Hour Emergency Supplies vs Safe Drinking Water) and different layers (scenario vs preparedness). The merged guide retains the canonical guide's parentTopic/category/layer. The archive guide's richer content (detailed steps, whatNotToDo, backupAction, preparednessTips) is merged in. The archive guide's parentTopic (Safe Drinking Water) already has extensive coverage from other guides.",
+  "fieldDecisions": [
+    {
+      "field": "title",
+      "decision": "canonical-preferred",
+      "source": "Kept 'Emergency Water Storage' — broader scope than 'Emergency Water Storage at Home'",
+      "note": null
+    },
+    {
+      "field": "summary",
+      "decision": "archive-preferred",
+      "source": "Archive version is more specific with '1 gallon per person per day for 3 days' quantitative guidance",
+      "note": "Synthesized to combine archive's specificity with canonical's broader scope"
+    },
+    {
+      "field": "quickAnswer",
+      "decision": "archive-preferred",
+      "source": "Archive version includes concrete quantity guidance",
+      "note": "Synthesized to include both quantity and scope"
+    },
+    {
+      "field": "whenToUse",
+      "decision": "merged",
+      "source": "Combined canonical's multi-location scope with archive's timing emphasis",
+      "note": null
+    },
+    {
+      "field": "preferredAction",
+      "decision": "archive-preferred",
+      "source": "Archive is more specific about storage method (food-grade containers, cool/dark locations)",
+      "note": null
+    },
+    {
+      "field": "backupAction",
+      "decision": "archive-only",
+      "source": "Only archive guide had a backupAction about reusing PET soda bottles",
+      "note": null
+    },
+    {
+      "field": "stepByStepActions",
+      "decision": "merged",
+      "source": "6 steps from archive + 1 unique from canonical, deduplicated to 7 steps",
+      "note": "Archive had more thorough step-by-step; canonical added 'rotate or refresh' which was already covered by archive step 6"
+    },
+    {
+      "field": "warnings",
+      "decision": "merged",
+      "source": "2 from canonical + 2 from archive, deduplicated to 3 unique warnings",
+      "note": "Canonical's 'containers must be food-grade' and archive's 'chemicals can penetrate plastics' merged into one stronger warning"
+    },
+    {
+      "field": "whatNotToDo",
+      "decision": "archive-only",
+      "source": "3 items from archive; canonical had none",
+      "note": null
+    },
+    {
+      "field": "redFlags",
+      "decision": "merged",
+      "source": "2 from canonical + 2 from archive, deduplicated to 3 unique red flags",
+      "note": "Both had similar 'water smells/looks bad' entries — kept archive's more specific phrasing"
+    },
+    {
+      "field": "preparednessTips",
+      "decision": "merged",
+      "source": "1 from canonical + 3 from archive, deduplicated to 4 tips",
+      "note": null
+    },
+    {
+      "field": "sourceReferences",
+      "decision": "merged",
+      "source": "3 refs from canonical (all real URLs) + 2 from archive (real URLs, same CDC page); deduplicated to 3 unique references",
+      "note": "Archive's two refs both pointed to the same CDC page already in canonical's refs"
+    },
+    {
+      "field": "sourceQuality",
+      "decision": "both-equal",
+      "source": "Both are 'strong'",
+      "note": null
+    },
+    {
+      "field": "appTags",
+      "decision": "merged",
+      "source": "Union of both tag sets: water, storage, preparedness, home, rotation, cdc",
+      "note": null
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "category/parentTopic/layer",
+      "valueA": "Preparedness / 72-Hour Emergency Supplies and Go-Bags / scenario",
+      "sourceA": "emergency-water-storage",
+      "valueB": "Water Food / Safe Drinking Water in Emergencies / preparedness",
+      "sourceB": "emergency-water-storage-at-home",
+      "resolution": "Using canonical guide's identity (Preparedness / 72-Hour Emergency Supplies / scenario) per user instruction. The archive guide's parentTopic already has robust coverage from purification and hydration guides.",
+      "status": "resolved"
+    },
+    {
+      "field": "guideType",
+      "valueA": "scenario_guide",
+      "sourceA": "emergency-water-storage",
+      "valueB": "preparedness_guide",
+      "sourceB": "emergency-water-storage-at-home",
+      "resolution": "Upgraded to preparedness_guide — the merged content is fundamentally about advance preparation (calculating supply, choosing containers, rotation schedule), which aligns with the preparedness guide type better than scenario.",
+      "status": "resolved"
+    },
+    {
+      "field": "layer",
+      "valueA": "scenario",
+      "sourceA": "emergency-water-storage",
+      "valueB": "preparedness",
+      "sourceB": "emergency-water-storage-at-home",
+      "resolution": "Upgraded to preparedness — the merged guide is about advance planning, not in-the-moment action. This also avoids duplicating the scenario layer in the 72-Hour Supplies parentTopic which already has scenario guides.",
+      "status": "resolved"
+    }
+  ],
+  "archiveCandidateWarnings": [
+    "emergency-water-storage-at-home has response_role 'reference' in the Safe Drinking Water parentTopic — archiving removes it from that cluster. However, water storage is tangential to that cluster's core purpose (water purification/sourcing), so impact is minimal.",
+    "No other guides have alternativeToGuideSlugs pointing to emergency-water-storage-at-home — safe to archive."
+  ],
+  "readyForAnnotation": true,
+  "blockers": []
+}

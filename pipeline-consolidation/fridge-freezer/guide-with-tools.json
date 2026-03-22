@@ -1,0 +1,96 @@
+{
+  "slug": "refrigerator-safety-during-outages",
+  "title": "Fridge and Freezer Safety During Outages",
+  "category": "water_food",
+  "parentTopic": "Food Safety During Power Outages",
+  "layer": "scenario",
+  "guideType": "scenario_guide",
+  "summary": "Keep fridge and freezer doors closed during a power outage. An unopened refrigerator keeps food safe for about 4 hours; a full freezer holds temperature for about 48 hours (24 hours if half-full). After power returns, check temperatures and discard anything that spent too long above 40°F / 4°C.",
+  "quickAnswer": "Keep doors shut. Fridge food stays safe about 4 hours; a full freezer about 48 hours (half-full about 24 hours). After power returns, check temperatures — discard perishables that were above 40°F / 4°C too long, and refreeze only items that still have ice crystals or stayed cold enough.",
+  "whenToUse": [
+    "Use during and immediately after a power outage when you have refrigerated or frozen food that may be at risk."
+  ],
+  "preferredAction": "Keep both refrigerator and freezer doors closed as much as possible to preserve cold temperatures.",
+  "backupAction": "If the outage will be long, move the most perishable items to coolers with ice or gel packs. For frozen food, group items together and add dry ice if available to extend hold time.",
+  "stepByStepActions": [
+    "Before an outage, keep a thermometer in both the fridge and freezer so you can check temperatures quickly.",
+    "Keep the freezer reasonably full — a full freezer holds cold longer. Fill gaps with water containers if needed.",
+    "During the outage, keep both fridge and freezer doors closed. Resist the urge to check.",
+    "After power returns, check the refrigerator temperature first — discard perishable foods that were above 40°F / 4°C for more than 2 hours.",
+    "Check the freezer: foods that still contain ice crystals or are at 40°F / 4°C or below may be safely refrozen or cooked.",
+    "Discard any frozen foods that fully thawed and stayed above 40°F / 4°C too long.",
+    "Keep low-risk, shelf-stable items only if they remained sealed and are otherwise safe.",
+    "When in doubt, throw it out — do not taste-test questionable food."
+  ],
+  "warnings": [
+    "Danger-zone temperatures (40°F–140°F / 4°C–60°C) allow rapid bacterial growth that can cause serious illness.",
+    "Smell and appearance are not reliable indicators of food safety — bacteria that cause foodborne illness are often undetectable.",
+    "Food can become unsafe even if it still looks and smells normal after thawing."
+  ],
+  "whatNotToDo": [
+    "Do not repeatedly open the refrigerator or freezer just to check — each opening lets cold air escape.",
+    "Do not taste food to test whether it is still safe.",
+    "Do not keep leftovers or perishable foods that sat at warm temperatures too long.",
+    "Do not refreeze food that has been above safe temperatures for an extended period.",
+    "Do not leave thawed food at room temperature — cook or discard promptly."
+  ],
+  "redFlags": [
+    "Several people develop vomiting, diarrhea, or fever after eating outage-affected refrigerated or frozen food.",
+    "Vulnerable household members (young children, elderly, pregnant, immunocompromised) show symptoms after eating questionable food."
+  ],
+  "preparednessTips": [
+    "Keep an appliance thermometer in both the fridge and the freezer at all times.",
+    "Store shelf-stable foods that do not require refrigeration as backup.",
+    "Keep extra ice, gel packs, or dry ice available for coolers during longer outages.",
+    "Label and group frozen foods for quicker decision-making after an outage.",
+    "Fill empty freezer space with water containers to increase thermal mass."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "refrigerator-safety-during-outages",
+  "appTags": [
+    "food",
+    "refrigerator",
+    "freezer",
+    "power-outage",
+    "temperature",
+    "usda",
+    "foodsafety"
+  ],
+  "sourceReferences": [
+    {
+      "title": "Food safety during power outages",
+      "organization": "USDA / FoodSafety.gov",
+      "url": "https://www.foodsafety.gov/food-safety-charts/food-safety-during-power-outage",
+      "whyUseful": "Primary USDA source for both refrigerator and freezer hold times, temperature thresholds, and discard decisions during power outages."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from refrigerator-safety-during-outages (canonical) and freezer-safety-during-outages (archived). Steps merged: 8 total from 5+5 originals, deduplicated. Warnings merged: 3 from 2+2. Source refs identical (same USDA page). Archive slug freezer-safety-during-outages should be set to review_status:archived after this version is approved. Note: food-safety-no-fridge draft version references the archive slug in alternativeToGuideSlugs and should be updated.",
+  "responseRole": "primary",
+  "constraintTags": [
+    "no_power"
+  ],
+  "blockedByConstraints": [],
+  "alternativeToGuideSlugs": [
+    "food-safety-no-fridge",
+    "deciding-when-to-throw-away-food-after-an-outage"
+  ],
+  "tools": [
+    {
+      "name": "Thermometer",
+      "category": "First Aid",
+      "description": "A device that measures body temperature to assess fever or hypothermia",
+      "optional": false,
+      "context": "Essential for checking fridge and freezer temperatures after power returns to determine food safety"
+    },
+    {
+      "name": "Instant cold pack",
+      "category": "First Aid",
+      "description": "A single-use chemical pack that produces cold when activated, used to reduce swelling",
+      "optional": true,
+      "context": "Can supplement ice in a cooler to keep perishable foods cold during extended outages"
+    }
+  ]
+}

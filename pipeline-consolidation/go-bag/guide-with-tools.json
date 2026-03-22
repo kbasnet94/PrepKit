@@ -1,0 +1,164 @@
+{
+  "slug": "evacuation-go-bag",
+  "title": "Evacuation Go-Bag",
+  "category": "preparedness",
+  "parentTopic": "72-Hour Emergency Supplies and Go-Bags",
+  "layer": "scenario",
+  "guideType": "scenario_guide",
+  "summary": "Keep a small, portable bag ready with water, food, light, communications, first aid, hygiene, documents, and basic tools so you can leave home quickly during an evacuation.",
+  "quickAnswer": "Pack a grab-and-go bag with water, food, flashlight, radio, first aid, medications, hygiene supplies, copies of important documents, cash, and seasonal clothing. Store it near an exit and review it regularly.",
+  "whenToUse": [
+    "For evacuations, sudden disasters (fire, flood, earthquake, storm, conflict), or when you must leave home or work on short notice."
+  ],
+  "preferredAction": "Pack a portable bag with essentials you can carry quickly, following official emergency kit guidance and customizing for your household.",
+  "backupAction": "If you cannot assemble a full bag, gather the highest-priority items: medications, water, IDs, a flashlight, and a way to contact family.",
+  "stepByStepActions": [
+    "Choose a durable, comfortable bag you can carry at a run — a backpack works best.",
+    "Pack non-perishable food and water for at least 72 hours where feasible.",
+    "Add a flashlight, batteries or hand-crank light, a radio, phone charger, and a power bank.",
+    "Include a first aid kit, personal medications, and basic hygiene items.",
+    "Add copies of important documents (IDs, insurance, emergency contacts) and cash in small bills.",
+    "Include seasonal clothing layers, protective footwear, an emergency blanket, and a whistle.",
+    "Add child, pet, or disability-specific items if needed.",
+    "Store the bag near an exit and review or rotate contents at least every six months."
+  ],
+  "warnings": [
+    "A bag too heavy to carry quickly may delay evacuation — balance completeness with portability.",
+    "Do not delay evacuation waiting to pack more items.",
+    "Medications expire and must be rotated regularly."
+  ],
+  "whatNotToDo": [
+    "Do not rely on last-minute packing during an evacuation.",
+    "Do not store the kit where it can be blocked in an emergency."
+  ],
+  "redFlags": [
+    "Evacuation order issued with no bag ready.",
+    "Go-bag contents include medications that have expired or are now missing.",
+    "If local authorities issue evacuation or shelter-in-place orders, follow them and bring your bag."
+  ],
+  "preparednessTips": [
+    "Follow local or national emergency preparedness websites for region-specific recommendations.",
+    "Include items for children, elders, and pets as needed.",
+    "Practice a quick grab-and-go drill with your household."
+  ],
+  "sourceQuality": "strong",
+  "contentStatus": "draft",
+  "integrationDecision": "upgrade",
+  "upgradesGuide": "evacuation-go-bag",
+  "appTags": [
+    "preparedness",
+    "go-bag",
+    "evacuation",
+    "emergency-kit",
+    "grab-and-go",
+    "household-prep"
+  ],
+  "sourceReferences": [
+    {
+      "title": "How to Prepare for Emergencies",
+      "organization": "American Red Cross",
+      "url": "https://www.redcross.org/get-help/how-to-prepare-for-emergencies.html",
+      "whyUseful": "Family-focused planning, kits, and drills."
+    },
+    {
+      "title": "Build A Kit",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/kit",
+      "whyUseful": "Core kit item list and practical household baseline."
+    },
+    {
+      "title": "Make A Plan",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/plan",
+      "whyUseful": "Family communication and evacuation planning."
+    },
+    {
+      "title": "Shelter",
+      "organization": "Ready.gov",
+      "url": "https://www.ready.gov/shelter",
+      "whyUseful": "Shelter-in-place basics and official guidance."
+    },
+    {
+      "title": "Build an Emergency Kit and Grab-and-Go Bag",
+      "organization": "Government of British Columbia",
+      "url": "https://www2.gov.bc.ca/gov/content/safety/emergency-management/preparedness-response-recovery/preparedness-at-home/build-an-emergency-kit-and-grab-and-go-bag",
+      "whyUseful": "Detailed official grab-and-go guidance for household evacuation readiness."
+    }
+  ],
+  "images": [],
+  "notes": "Consolidated from evacuation-go-bag (canonical, scenario layer) and personal-evacuation-go-bag-adult (archived, preparedness layer). Steps merged: 8 total (6 from archive as base structure, enriched with canonical's child/pet/disability and footwear items). Source refs: 5 total (4 from canonical + 1 unique from archive). Archive slug should be set to review_status:archived after this version is approved. Note: expedition-preparation-checklist has alternativeToGuideSlugs referencing the archive slug — update that reference to evacuation-go-bag.",
+  "responseRole": "primary",
+  "constraintTags": [],
+  "blockedByConstraints": [
+    "cant_move"
+  ],
+  "alternativeToGuideSlugs": [
+    "build-72-hour-kit",
+    "72-hour-home-survival-kit-shelter-at-home"
+  ],
+  "tools": [
+    {
+      "name": "Flashlight",
+      "category": "Lighting",
+      "description": "A battery-powered portable light source for illumination in low-light conditions",
+      "optional": false,
+      "context": "Essential for navigating in the dark during an evacuation or power outage"
+    },
+    {
+      "name": "Power bank",
+      "category": "General",
+      "description": "A rechargeable battery pack used to charge phones and small electronic devices",
+      "optional": false,
+      "context": "Keeps phone and communication devices charged when grid power is unavailable"
+    },
+    {
+      "name": "Radio",
+      "category": "Communication",
+      "description": "A radio used in survival and emergency preparedness",
+      "optional": false,
+      "context": "Receives emergency broadcasts and evacuation updates when cell networks are down"
+    },
+    {
+      "name": "First Aid Kit",
+      "category": "First Aid",
+      "description": "A first aid kit used in survival and emergency preparedness",
+      "optional": false,
+      "context": "Provides immediate wound care and medical supplies during evacuation"
+    },
+    {
+      "name": "Emergency blanket",
+      "category": "Shelter",
+      "description": "A lightweight reflective sheet that retains body heat and provides weather protection",
+      "optional": false,
+      "context": "Provides warmth and weather protection if sheltering outdoors after evacuation"
+    },
+    {
+      "name": "Whistle",
+      "category": "Communication",
+      "description": "A small device that produces a loud high-pitched sound for signaling and attracting attention",
+      "optional": false,
+      "context": "Signals for help if trapped or separated from group during evacuation"
+    },
+    {
+      "name": "Batteries",
+      "category": "General",
+      "description": "Portable electrochemical power sources for flashlights, radios, and electronic devices",
+      "optional": false,
+      "context": "Powers flashlight and radio when rechargeable options are depleted"
+    },
+    {
+      "name": "Knife",
+      "category": "Cutting",
+      "description": "A fixed or folding blade used for cutting, carving, and general utility tasks",
+      "optional": true,
+      "context": "General utility tool for opening packages, cutting cordage, and improvised repairs"
+    },
+    {
+      "name": "Water bottle",
+      "category": "Storage",
+      "description": "A sealed container for carrying and storing drinking water",
+      "optional": false,
+      "context": "Carries drinking water supply for the evacuation period"
+    }
+  ]
+}
