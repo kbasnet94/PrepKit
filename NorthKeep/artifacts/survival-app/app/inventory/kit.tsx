@@ -3,6 +3,7 @@ import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
 import React, { useMemo, useState } from "react";
 import {
+  KeyboardAvoidingView,
   Platform,
   Pressable,
   StyleSheet,
@@ -10,6 +11,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -19,6 +21,7 @@ export default function KitScreen() {
   const { addKit } = useInventory();
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
+  const insets = useSafeAreaInsets();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
 
@@ -31,20 +34,29 @@ export default function KitScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Pressable onPress={() => router.back()} style={({ pressed }) => [pressed && { opacity: 0.7 }]}>
+      <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) + 8 }]}>
+        <Pressable
+          onPress={() => router.back()}
+          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+          style={({ pressed }) => [styles.headerButton, pressed && { opacity: 0.7 }]}
+        >
           <Text style={styles.cancelText}>Cancel</Text>
         </Pressable>
         <Text style={styles.headerTitle}>New Kit</Text>
         <Pressable
           onPress={handleSave}
           disabled={!name.trim()}
-          style={({ pressed }) => [pressed && { opacity: 0.7 }]}
+          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+          style={({ pressed }) => [styles.headerButton, pressed && { opacity: 0.7 }]}
         >
           <Text style={[styles.saveText, !name.trim() && styles.saveTextDisabled]}>Save</Text>
         </Pressable>
       </View>
 
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        style={{ flex: 1 }}
+      >
       <View style={styles.content}>
         <Text style={styles.label}>KIT NAME</Text>
         <TextInput
@@ -65,6 +77,7 @@ export default function KitScreen() {
           onChangeText={setDescription}
         />
       </View>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -80,8 +93,11 @@ function makeStyles(C: typeof Colors.light) {
       justifyContent: "space-between",
       alignItems: "center",
       paddingHorizontal: 20,
-      paddingTop: 20,
       paddingBottom: 12,
+    },
+    headerButton: {
+      paddingVertical: 8,
+      paddingHorizontal: 4,
     },
     cancelText: {
       fontSize: 16,

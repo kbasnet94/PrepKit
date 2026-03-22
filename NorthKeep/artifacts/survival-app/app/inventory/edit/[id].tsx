@@ -12,6 +12,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -29,6 +30,7 @@ export default function EditItemScreen() {
   const { items, kits, updateItem, deleteItem, markAsPurchased } = useInventory();
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
+  const insets = useSafeAreaInsets();
   const item = items.find((i) => i.id === id);
 
   const [name, setName] = useState("");
@@ -124,15 +126,20 @@ export default function EditItemScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Pressable onPress={() => router.back()} style={({ pressed }) => [pressed && { opacity: 0.7 }]}>
+      <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) + 8 }]}>
+        <Pressable
+          onPress={() => router.back()}
+          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+          style={({ pressed }) => [styles.headerButton, pressed && { opacity: 0.7 }]}
+        >
           <Text style={styles.cancelText}>Cancel</Text>
         </Pressable>
         <Text style={styles.headerTitle}>Edit Item</Text>
         <Pressable
           onPress={handleSave}
           disabled={!name.trim()}
-          style={({ pressed }) => [pressed && { opacity: 0.7 }]}
+          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+          style={({ pressed }) => [styles.headerButton, pressed && { opacity: 0.7 }]}
         >
           <Text style={[styles.saveText, !name.trim() && styles.saveTextDisabled]}>Save</Text>
         </Pressable>
@@ -333,8 +340,11 @@ function makeStyles(C: typeof Colors.light) {
       justifyContent: "space-between",
       alignItems: "center",
       paddingHorizontal: 20,
-      paddingTop: 20,
       paddingBottom: 12,
+    },
+    headerButton: {
+      paddingVertical: 8,
+      paddingHorizontal: 4,
     },
     cancelText: {
       fontSize: 16,
