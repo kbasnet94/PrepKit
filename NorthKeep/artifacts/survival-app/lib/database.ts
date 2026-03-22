@@ -97,6 +97,7 @@ async function initTables(database: any) {
       condition TEXT NOT NULL DEFAULT 'good',
       expiry_date INTEGER,
       kit_id TEXT,
+      status TEXT NOT NULL DEFAULT 'owned',
       created_at INTEGER NOT NULL,
       updated_at INTEGER NOT NULL,
       FOREIGN KEY (kit_id) REFERENCES inventory_kits(id) ON DELETE SET NULL
@@ -109,6 +110,15 @@ async function initTables(database: any) {
       needs_sync INTEGER DEFAULT 1
     );
   `);
+
+  // Migration: add status column to existing inventory_items tables
+  try {
+    await database.runAsync(
+      "ALTER TABLE inventory_items ADD COLUMN status TEXT NOT NULL DEFAULT 'owned'"
+    );
+  } catch (_) {
+    // Column already exists — safe to ignore
+  }
 }
 
 export function generateId(): string {

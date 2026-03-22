@@ -20,6 +20,7 @@ import {
   CONDITIONS,
   ItemCategory,
   ItemCondition,
+  ItemStatus,
 } from "@/contexts/InventoryContext";
 
 export default function AddItemScreen() {
@@ -34,6 +35,7 @@ export default function AddItemScreen() {
   const [condition, setCondition] = useState<ItemCondition>("Good");
   const [expiryDate, setExpiryDate] = useState("");
   const [kitId, setKitId] = useState<string | null>(null);
+  const [status, setStatus] = useState<ItemStatus>("owned");
 
   const handleSave = async () => {
     if (!name.trim()) return;
@@ -54,6 +56,7 @@ export default function AddItemScreen() {
       condition,
       expiryDate: expiry,
       kitId,
+      status,
     });
     router.back();
   };
@@ -99,6 +102,26 @@ export default function AddItemScreen() {
           autoFocus
           testID="item-name-input"
         />
+
+        <Text style={styles.label}>STATUS</Text>
+        <View style={styles.chipRow}>
+          <Pressable
+            onPress={() => setStatus("owned")}
+            style={[styles.chip, status === "owned" && { backgroundColor: C.statusGood, borderColor: C.statusGood }]}
+          >
+            <Text style={[styles.chipText, status === "owned" && { color: "#fff" }]}>
+              I Have This
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setStatus("need_to_buy")}
+            style={[styles.chip, status === "need_to_buy" && { backgroundColor: C.warning, borderColor: C.warning }]}
+          >
+            <Text style={[styles.chipText, status === "need_to_buy" && { color: "#fff" }]}>
+              Need to Buy
+            </Text>
+          </Pressable>
+        </View>
 
         <Text style={styles.label}>CATEGORY</Text>
         <View style={styles.chipRow}>

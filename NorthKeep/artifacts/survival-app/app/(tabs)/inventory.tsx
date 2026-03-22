@@ -23,6 +23,7 @@ import {
   CATEGORY_ICONS,
   ItemCategory,
   InventoryItem,
+  ItemStatus,
 } from "@/contexts/InventoryContext";
 
 function SwipeDeleteAction({ C }: { C: typeof Colors.light }) {
@@ -49,11 +50,13 @@ export default function InventoryScreen() {
     getItemsByKit,
     getExpiringItems,
     getExpiredItems,
+    getNeedToBuyItems,
+    markAsPurchased,
   } = useInventory();
 
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(CATEGORIES));
   const [expandedKits, setExpandedKits] = useState<Set<string>>(new Set());
-  const [viewMode, setViewMode] = useState<"category" | "kit">("category");
+  const [viewMode, setViewMode] = useState<"category" | "kit" | "shopping">("category");
 
   useEffect(() => {
     loadInventory();
@@ -66,6 +69,7 @@ export default function InventoryScreen() {
   const itemsByCategory = getItemsByCategory();
   const expiringItems = getExpiringItems();
   const expiredItems = getExpiredItems();
+  const needToBuyItems = getNeedToBuyItems();
 
   const toggleCategory = (cat: string) => {
     setExpandedCategories((prev) => {
@@ -148,13 +152,23 @@ export default function InventoryScreen() {
           <View style={styles.itemInfo}>
             <Text style={styles.itemName} numberOfLines={1}>{item.name}</Text>
             <View style={styles.itemMeta}>
+              {item.status === "need_to_buy" && viewMode !== "shopping" ? (
+                <View style={styles.needToBuyBadge}>
+                  <Ionicons name="cart" size={10} color={C.warning} />
+                  <Text style={styles.needToBuyBadgeText}>Need to Buy</Text>
+                </View>
+              ) : null}
               <Text style={styles.itemQuantity}>
                 {item.quantity}{item.unit ? ` ${item.unit}` : ""}
               </Text>
-              <View style={[styles.conditionDot, { backgroundColor: conditionColor(item.condition) }]} />
-              <Text style={[styles.conditionText, { color: conditionColor(item.condition) }]}>
-                {item.condition}
-              </Text>
+              {item.status !== "need_to_buy" ? (
+                <>
+                  <View style={[styles.conditionDot, { backgroundColor: conditionColor(item.condition) }]} />
+                  <Text style={[styles.conditionText, { color: conditionColor(item.condition) }]}>
+                    {item.condition}
+                  </Text>
+                </>
+              ) : null}
               {viewMode === "category" && kit ? (
                 <View style={styles.kitBadge}>
                   <Ionicons name="cube-outline" size={10} color={C.accent} />
@@ -329,6 +343,83 @@ export default function InventoryScreen() {
     </>
   );
 
+  const handleMarkPurchased = useCallback(async (item: InventoryItem) => {
+    if (Platform.OS !== "web") Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    await markAsPurchased(item.id);
+  }, [markAsPurchased]);
+
+  const renderShoppingListView = () => {
+    if (needToBuyItems.length === 0) {
+      return (
+        <View style={styles.emptyContainer}>
+          <View style={styles.emptyIcon}>
+            <Ionicons name="cart-outline" size={48} color={C.textTertiary} />
+          </View>
+          <Text style={styles.emptyTitle}>Shopping List Empty</Text>
+          <Text style={styles.emptySubtitle}>
+            Browse guides and tap "Need to Buy" on tools you want to purchase
+          </Text>
+        </View>
+      );
+    }
+
+    const grouped: Record<ItemCategory, InventoryItem[]> = {
+      Food: [], Water: [], Tools: [], Medical: [], Shelter: [], Comms: [], Other: [],
+    };
+    for (const item of needToBuyItems) {
+      if (grouped[item.category]) grouped[item.category].push(item);
+    }
+
+    return (
+      <>
+        {CATEGORIES.map((category) => {
+          const catItems = grouped[category];
+          if (catItems.length === 0) return null;
+          return (
+            <Animated.View key={category} entering={FadeInDown.duration(300)}>
+              <View style={styles.categoryHeader}>
+                <View style={styles.categoryLeft}>
+                  <View style={[styles.categoryIcon, { backgroundColor: C.warningSurface }]}>
+                    <Ionicons
+                      name={CATEGORY_ICONS[category as ItemCategory] as any}
+                      size={18}
+                      color={C.warning}
+                    />
+                  </View>
+                  <Text style={styles.categoryTitle}>{category}</Text>
+                  <View style={styles.categoryCount}>
+                    <Text style={styles.categoryCountText}>{catItems.length}</Text>
+                  </View>
+                </View>
+              </View>
+              <View style={styles.categoryItems}>
+                {catItems.map((item, idx) => (
+                  <Animated.View key={item.id} entering={FadeInRight.delay(idx * 30).duration(200)}>
+                    <View style={styles.shoppingItem}>
+                      <View style={styles.itemInfo}>
+                        <Text style={styles.itemName} numberOfLines={1}>{item.name}</Text>
+                        <Text style={styles.itemQuantity}>
+                          {item.quantity}{item.unit ? ` ${item.unit}` : ""}
+                        </Text>
+                      </View>
+                      <Pressable
+                        onPress={() => handleMarkPurchased(item)}
+                        style={({ pressed }) => [styles.purchasedButton, pressed && { opacity: 0.7 }]}
+                      >
+                        <Ionicons name="checkmark-circle-outline" size={16} color={C.statusGood} />
+                        <Text style={styles.purchasedText}>Bought</Text>
+                      </Pressable>
+                    </View>
+                  </Animated.View>
+                ))}
+              </View>
+            </Animated.View>
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <View style={[styles.container, { paddingTop: isWeb ? insets.top + 67 : insets.top }]}>
       <View style={styles.header}>
@@ -374,18 +465,16 @@ export default function InventoryScreen() {
 
       <View style={styles.statsRow}>
         <View style={styles.statBox}>
-          <Text style={styles.statNumber}>{items.length}</Text>
-          <Text style={styles.statLabel}>Items</Text>
+          <Text style={styles.statNumber}>{items.filter((i) => i.status !== "need_to_buy").length}</Text>
+          <Text style={styles.statLabel}>Owned</Text>
+        </View>
+        <View style={styles.statBox}>
+          <Text style={[styles.statNumber, needToBuyItems.length > 0 ? { color: C.warning } : undefined]}>{needToBuyItems.length}</Text>
+          <Text style={styles.statLabel}>To Buy</Text>
         </View>
         <View style={styles.statBox}>
           <Text style={styles.statNumber}>{kits.length}</Text>
           <Text style={styles.statLabel}>Kits</Text>
-        </View>
-        <View style={styles.statBox}>
-          <Text style={styles.statNumber}>
-            {CATEGORIES.filter((c) => itemsByCategory[c].length > 0).length}
-          </Text>
-          <Text style={styles.statLabel}>Categories</Text>
         </View>
       </View>
 
@@ -417,6 +506,19 @@ export default function InventoryScreen() {
               By Kit
             </Text>
           </Pressable>
+          <Pressable
+            onPress={() => setViewMode("shopping")}
+            style={[styles.toggleButton, viewMode === "shopping" && styles.toggleButtonShoppingActive]}
+          >
+            <Ionicons
+              name="cart-outline"
+              size={14}
+              color={viewMode === "shopping" ? "#fff" : C.textSecondary}
+            />
+            <Text style={[styles.toggleText, viewMode === "shopping" && styles.toggleTextActive]}>
+              To Buy{needToBuyItems.length > 0 ? ` (${needToBuyItems.length})` : ""}
+            </Text>
+          </Pressable>
         </View>
       ) : null}
 
@@ -425,7 +527,9 @@ export default function InventoryScreen() {
         contentContainerStyle={{ paddingBottom: isWeb ? 34 + 84 : 100 }}
         showsVerticalScrollIndicator={false}
       >
-        {items.length === 0 ? (
+        {viewMode === "shopping" ? (
+          renderShoppingListView()
+        ) : items.length === 0 ? (
           <View style={styles.emptyContainer}>
             <View style={styles.emptyIcon}>
               <Ionicons name="cube-outline" size={48} color={C.textTertiary} />
@@ -544,6 +648,9 @@ function makeStyles(C: typeof Colors.light) {
     },
     toggleButtonActive: {
       backgroundColor: C.accent,
+    },
+    toggleButtonShoppingActive: {
+      backgroundColor: C.warning,
     },
     toggleText: {
       fontSize: 13,
@@ -735,6 +842,42 @@ function makeStyles(C: typeof Colors.light) {
       textAlign: "center",
       lineHeight: 22,
       marginBottom: 24,
+    },
+    needToBuyBadge: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 3,
+      backgroundColor: C.warningSurface,
+      paddingHorizontal: 6,
+      paddingVertical: 2,
+      borderRadius: 6,
+    },
+    needToBuyBadgeText: {
+      fontSize: 10,
+      fontFamily: "Inter_600SemiBold",
+      color: C.warning,
+    },
+    shoppingItem: {
+      backgroundColor: C.surface,
+      borderRadius: 12,
+      padding: 14,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    purchasedButton: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 5,
+      paddingVertical: 6,
+      paddingHorizontal: 12,
+      borderRadius: 8,
+      backgroundColor: C.accentSurface,
+    },
+    purchasedText: {
+      fontSize: 13,
+      fontFamily: "Inter_600SemiBold",
+      color: C.statusGood,
     },
     emptyButton: {
       flexDirection: "row",

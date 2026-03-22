@@ -3,6 +3,7 @@ import { getDatabase, generateId } from "@/lib/database";
 
 export type ItemCategory = "Food" | "Water" | "Tools" | "Medical" | "Shelter" | "Comms" | "Other";
 export type ItemCondition = "Good" | "Fair" | "Poor" | "Expired";
+export type ItemStatus = "owned" | "need_to_buy";
 
 export const CATEGORIES: ItemCategory[] = ["Food", "Water", "Tools", "Medical", "Shelter", "Comms", "Other"];
 export const CONDITIONS: ItemCondition[] = ["Good", "Fair", "Poor", "Expired"];
@@ -27,6 +28,7 @@ export interface InventoryItem {
   condition: ItemCondition;
   expiryDate: number | null;
   kitId: string | null;
+  status: ItemStatus;
   createdAt: number;
   updatedAt: number;
 }
@@ -54,6 +56,8 @@ interface InventoryContextValue {
   getItemsByKit: (kitId: string) => InventoryItem[];
   getExpiringItems: () => InventoryItem[];
   getExpiredItems: () => InventoryItem[];
+  getNeedToBuyItems: () => InventoryItem[];
+  markAsPurchased: (id: string) => Promise<void>;
 }
 
 const InventoryContext = createContext<InventoryContextValue | null>(null);
@@ -79,6 +83,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
           condition: r.condition as ItemCondition,
           expiryDate: r.expiry_date,
           kitId: r.kit_id,
+          status: (r.status as ItemStatus) || "owned",
           createdAt: r.created_at,
           updatedAt: r.updated_at,
         }))
@@ -103,8 +108,8 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     const id = generateId();
     const now = Date.now();
     await db.runAsync(
-      "INSERT INTO inventory_items (id, name, category, quantity, unit, notes, condition, expiry_date, kit_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      id, item.name, item.category, item.quantity, item.unit || null, item.notes || null, item.condition, item.expiryDate || null, item.kitId || null, now, now
+      "INSERT INTO inventory_items (id, name, category, quantity, unit, notes, condition, expiry_date, kit_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      id, item.name, item.category, item.quantity, item.unit || null, item.notes || null, item.condition, item.expiryDate || null, item.kitId || null, item.status || "owned", now, now
     );
     const newItem: InventoryItem = { ...item, id, createdAt: now, updatedAt: now };
     setItems((prev) => [...prev, newItem].sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name)));
@@ -125,6 +130,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     if (updates.condition !== undefined) { sets.push("condition = ?"); vals.push(updates.condition); }
     if (updates.expiryDate !== undefined) { sets.push("expiry_date = ?"); vals.push(updates.expiryDate); }
     if (updates.kitId !== undefined) { sets.push("kit_id = ?"); vals.push(updates.kitId); }
+    if (updates.status !== undefined) { sets.push("status = ?"); vals.push(updates.status); }
 
     vals.push(id);
     await db.runAsync(`UPDATE inventory_items SET ${sets.join(", ")} WHERE id = ?`, ...vals);
@@ -187,12 +193,21 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     return items.filter((i) => i.expiryDate && i.expiryDate <= Date.now());
   }, [items]);
 
+  const getNeedToBuyItems = useCallback(() => {
+    return items.filter((i) => i.status === "need_to_buy");
+  }, [items]);
+
+  const markAsPurchased = useCallback(async (id: string) => {
+    await updateItem(id, { status: "owned", condition: "Good" });
+  }, [updateItem]);
+
   const value = useMemo(
     () => ({
       items, kits, isLoading, loadInventory, addItem, updateItem, deleteItem,
       addKit, updateKit, deleteKit, getItemsByCategory, getItemsByKit, getExpiringItems, getExpiredItems,
+      getNeedToBuyItems, markAsPurchased,
     }),
-    [items, kits, isLoading, loadInventory, addItem, updateItem, deleteItem, addKit, updateKit, deleteKit, getItemsByCategory, getItemsByKit, getExpiringItems, getExpiredItems]
+    [items, kits, isLoading, loadInventory, addItem, updateItem, deleteItem, addKit, updateKit, deleteKit, getItemsByCategory, getItemsByKit, getExpiringItems, getExpiredItems, getNeedToBuyItems, markAsPurchased]
   );
 
   return <InventoryContext.Provider value={value}>{children}</InventoryContext.Provider>;

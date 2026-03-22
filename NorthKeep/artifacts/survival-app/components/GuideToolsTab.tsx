@@ -54,7 +54,7 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
   const styles = useMemo(() => makeStyles(C), [C]);
 
   const handleAdd = useCallback(
-    async (tool: GuideTool) => {
+    async (tool: GuideTool, status: "owned" | "need_to_buy" = "owned") => {
       if (Platform.OS !== "web")
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
       await addItem({
@@ -63,9 +63,10 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
         quantity: 1,
         unit: null,
         notes: null,
-        condition: "Good",
+        condition: status === "owned" ? "Good" : "Good",
         expiryDate: null,
         kitId: null,
+        status,
       });
     },
     [addItem]
@@ -113,7 +114,23 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
             ) : null}
 
             <View style={styles.toolFooter}>
-              {hasMatch ? (
+              {hasMatch && match?.status === "need_to_buy" ? (
+                <View style={styles.needToBuy}>
+                  <Ionicons
+                    name="cart"
+                    size={16}
+                    color={C.warning}
+                  />
+                  <Text style={[styles.inventoryText, { color: C.warning }]}>
+                    Need to Buy
+                  </Text>
+                  {match && (
+                    <Text style={styles.matchDetail}>
+                      ({match.quantity} {match.unit ?? "pcs"})
+                    </Text>
+                  )}
+                </View>
+              ) : hasMatch ? (
                 <View style={styles.inInventory}>
                   <Ionicons
                     name="checkmark-circle"
@@ -130,16 +147,28 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
                   )}
                 </View>
               ) : (
-                <Pressable
-                  style={({ pressed }) => [
-                    styles.addButton,
-                    pressed && { opacity: 0.7 },
-                  ]}
-                  onPress={() => handleAdd(tool)}
-                >
-                  <Ionicons name="add-circle-outline" size={16} color={C.accent} />
-                  <Text style={styles.addText}>Add to Inventory</Text>
-                </Pressable>
+                <View style={styles.actionButtons}>
+                  <Pressable
+                    style={({ pressed }) => [
+                      styles.addButton,
+                      pressed && { opacity: 0.7 },
+                    ]}
+                    onPress={() => handleAdd(tool, "owned")}
+                  >
+                    <Ionicons name="add-circle-outline" size={16} color={C.accent} />
+                    <Text style={styles.addText}>Add to Inventory</Text>
+                  </Pressable>
+                  <Pressable
+                    style={({ pressed }) => [
+                      styles.needToBuyButton,
+                      pressed && { opacity: 0.7 },
+                    ]}
+                    onPress={() => handleAdd(tool, "need_to_buy")}
+                  >
+                    <Ionicons name="cart-outline" size={16} color={C.warning} />
+                    <Text style={styles.needToBuyText}>Need to Buy</Text>
+                  </Pressable>
+                </View>
               )}
             </View>
           </Animated.View>
@@ -239,6 +268,11 @@ function makeStyles(C: typeof Colors.light) {
       alignItems: "center",
       gap: 5,
     },
+    needToBuy: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 5,
+    },
     inventoryText: {
       fontSize: 13,
       fontFamily: "Inter_600SemiBold",
@@ -247,6 +281,11 @@ function makeStyles(C: typeof Colors.light) {
       fontSize: 12,
       fontFamily: "Inter_400Regular",
       color: C.textTertiary,
+    },
+    actionButtons: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 8,
     },
     addButton: {
       flexDirection: "row",
@@ -261,6 +300,20 @@ function makeStyles(C: typeof Colors.light) {
       fontSize: 13,
       fontFamily: "Inter_600SemiBold",
       color: C.accent,
+    },
+    needToBuyButton: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 5,
+      paddingVertical: 4,
+      paddingHorizontal: 10,
+      borderRadius: 8,
+      backgroundColor: C.warningSurface,
+    },
+    needToBuyText: {
+      fontSize: 13,
+      fontFamily: "Inter_600SemiBold",
+      color: C.warning,
     },
   });
 }

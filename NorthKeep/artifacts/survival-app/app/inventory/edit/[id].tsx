@@ -21,11 +21,12 @@ import {
   CONDITIONS,
   ItemCategory,
   ItemCondition,
+  ItemStatus,
 } from "@/contexts/InventoryContext";
 
 export default function EditItemScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { items, kits, updateItem, deleteItem } = useInventory();
+  const { items, kits, updateItem, deleteItem, markAsPurchased } = useInventory();
   const { colors: C } = useTheme();
   const styles = useMemo(() => makeStyles(C), [C]);
   const item = items.find((i) => i.id === id);
@@ -38,6 +39,7 @@ export default function EditItemScreen() {
   const [condition, setCondition] = useState<ItemCondition>("Good");
   const [expiryDate, setExpiryDate] = useState("");
   const [kitId, setKitId] = useState<string | null>(null);
+  const [status, setStatus] = useState<ItemStatus>("owned");
 
   useEffect(() => {
     if (item) {
@@ -49,6 +51,7 @@ export default function EditItemScreen() {
       setCondition(item.condition);
       setExpiryDate(item.expiryDate ? new Date(item.expiryDate).toISOString().split("T")[0] : "");
       setKitId(item.kitId);
+      setStatus(item.status || "owned");
     }
   }, [item]);
 
@@ -85,6 +88,7 @@ export default function EditItemScreen() {
       condition,
       expiryDate: expiry,
       kitId,
+      status,
     });
     router.back();
   };
@@ -140,6 +144,20 @@ export default function EditItemScreen() {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
+        {status === "need_to_buy" ? (
+          <Pressable
+            onPress={async () => {
+              if (Platform.OS !== "web") Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+              await markAsPurchased(id!);
+              router.back();
+            }}
+            style={({ pressed }) => [styles.markPurchasedButton, pressed && { opacity: 0.8 }]}
+          >
+            <Ionicons name="checkmark-circle" size={20} color="#fff" />
+            <Text style={styles.markPurchasedText}>Mark as Purchased</Text>
+          </Pressable>
+        ) : null}
+
         <Text style={styles.label}>NAME</Text>
         <TextInput
           style={styles.input}
@@ -148,6 +166,26 @@ export default function EditItemScreen() {
           value={name}
           onChangeText={setName}
         />
+
+        <Text style={styles.label}>STATUS</Text>
+        <View style={styles.chipRow}>
+          <Pressable
+            onPress={() => setStatus("owned")}
+            style={[styles.chip, status === "owned" && { backgroundColor: C.statusGood, borderColor: C.statusGood }]}
+          >
+            <Text style={[styles.chipText, status === "owned" && { color: "#fff" }]}>
+              I Have This
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setStatus("need_to_buy")}
+            style={[styles.chip, status === "need_to_buy" && { backgroundColor: C.warning, borderColor: C.warning }]}
+          >
+            <Text style={[styles.chipText, status === "need_to_buy" && { color: "#fff" }]}>
+              Need to Buy
+            </Text>
+          </Pressable>
+        </View>
 
         <Text style={styles.label}>CATEGORY</Text>
         <View style={styles.chipRow}>
@@ -374,6 +412,20 @@ function makeStyles(C: typeof Colors.light) {
       color: C.textSecondary,
     },
     chipTextSelected: {
+      color: "#fff",
+    },
+    markPurchasedButton: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 8,
+      paddingVertical: 14,
+      borderRadius: 12,
+      backgroundColor: C.statusGood,
+    },
+    markPurchasedText: {
+      fontSize: 15,
+      fontFamily: "Inter_600SemiBold",
       color: "#fff",
     },
     deleteButton: {
