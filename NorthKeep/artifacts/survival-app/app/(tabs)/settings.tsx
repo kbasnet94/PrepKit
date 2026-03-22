@@ -2,7 +2,6 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import React, { useMemo, useState } from "react";
 import {
-  Alert,
   Linking,
   Platform,
   Pressable,
@@ -15,7 +14,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
-import { useKnowledge } from "@/contexts/KnowledgeContext";
 import { useUserProfile } from "@/contexts/UserProfileContext";
 import { USER_TYPE_LABELS, EXPERIENCE_LABELS, HOUSEHOLD_LABELS } from "@/lib/user-profile";
 import { AppFeedback } from "@/components/AppFeedback";
@@ -23,7 +21,6 @@ import { AppFeedback } from "@/components/AppFeedback";
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
   const isWeb = Platform.OS === "web";
-  const { downloadedCount, totalStorageBytes, deleteAllArticles } = useKnowledge();
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
   const { profile } = useUserProfile();
@@ -42,37 +39,6 @@ export default function SettingsScreen() {
     : "Not set";
 
   const emailDisplay = profile.email ?? "Not provided";
-
-  const formatBytes = (bytes: number) => {
-    if (bytes === 0) return "0 B";
-    if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-  };
-
-  const handleDeleteDownloads = () => {
-    if (Platform.OS === "web") {
-      deleteAllArticles();
-      return;
-    }
-    Alert.alert(
-      "Delete All Downloads",
-      "This will remove all downloaded articles. You can re-download them later.",
-      [
-        { text: "Cancel", style: "cancel" },
-        {
-          text: "Delete All",
-          style: "destructive",
-          onPress: async () => {
-            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
-            await deleteAllArticles();
-          },
-        },
-      ]
-    );
-  };
-
-
 
   const SettingsRow = ({
     icon,
@@ -163,26 +129,6 @@ export default function SettingsScreen() {
               </Pressable>
             ))}
           </View>
-        </View>
-
-        <Text style={styles.sectionTitle}>Storage</Text>
-        <View style={styles.section}>
-          <SettingsRow
-            icon="cloud-download-outline"
-            title="Downloaded Articles"
-            subtitle={`${downloadedCount} articles (${formatBytes(totalStorageBytes)})`}
-          />
-        </View>
-
-        <Text style={styles.sectionTitle}>Data Management</Text>
-        <View style={styles.section}>
-          <SettingsRow
-            icon="cloud-offline-outline"
-            title="Delete All Downloads"
-            subtitle="Remove all saved articles"
-            onPress={handleDeleteDownloads}
-            destructive
-          />
         </View>
 
         <Text style={styles.sectionTitle}>Support & Feedback</Text>
