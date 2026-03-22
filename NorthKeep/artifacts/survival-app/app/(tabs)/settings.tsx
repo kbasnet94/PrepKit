@@ -17,6 +17,7 @@ import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useUserProfile } from "@/contexts/UserProfileContext";
 import { USER_TYPE_LABELS, EXPERIENCE_LABELS, HOUSEHOLD_LABELS } from "@/lib/user-profile";
+import { AboutModal } from "@/components/AboutModal";
 import { AppFeedback } from "@/components/AppFeedback";
 
 export default function SettingsScreen() {
@@ -24,6 +25,7 @@ export default function SettingsScreen() {
   const isWeb = Platform.OS === "web";
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const [hasRated, setHasRated] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
   const { profile } = useUserProfile();
   const styles = useMemo(() => makeStyles(C), [C]);
@@ -166,6 +168,7 @@ export default function SettingsScreen() {
             icon="shield-checkmark-outline"
             title="NorthKeep"
             subtitle="Offline survival companion"
+            onPress={() => setShowAbout(true)}
           />
           <View style={styles.separator} />
           <SettingsRow
@@ -193,6 +196,7 @@ export default function SettingsScreen() {
         onClose={() => setShowAppFeedback(false)}
         onRated={() => setHasRated(true)}
       />
+      <AboutModal visible={showAbout} onClose={() => setShowAbout(false)} />
     </View>
   );
 }
