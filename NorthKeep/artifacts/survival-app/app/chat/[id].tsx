@@ -14,7 +14,7 @@ import {
   TextInput,
   View,
 } from "react-native";
-import { KeyboardAvoidingView } from "react-native-keyboard-controller";
+import { KeyboardAvoidingView, KeyboardProvider } from "react-native-keyboard-controller";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Colors from "@/constants/colors";
@@ -349,6 +349,7 @@ export default function ChatDetailScreen() {
   const reversedMessages = [...messages].reverse();
 
   return (
+    <KeyboardProvider>
     <View style={[styles.container, { paddingTop: isWeb ? insets.top + 67 : insets.top }]}>
       <View style={styles.header}>
         <Pressable
@@ -481,6 +482,7 @@ export default function ChatDetailScreen() {
         </View>
       </KeyboardAvoidingView>
     </View>
+    </KeyboardProvider>
   );
 }
 

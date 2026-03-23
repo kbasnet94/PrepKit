@@ -4,6 +4,7 @@ import * as Haptics from "expo-haptics";
 import React, { useMemo, useState, useEffect } from "react";
 import {
   Alert,
+  KeyboardAvoidingView,
   Platform,
   Pressable,
   ScrollView,
@@ -126,7 +127,7 @@ export default function EditItemScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) + 8 }]}>
+      <View style={[styles.header, { paddingTop: insets.top + 16 }]}>
         <Pressable
           onPress={() => router.back()}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -145,9 +146,13 @@ export default function EditItemScreen() {
         </Pressable>
       </View>
 
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        style={{ flex: 1 }}
+      >
       <ScrollView
         style={styles.scrollView}
-        contentContainerStyle={styles.scrollContent}
+        contentContainerStyle={[styles.scrollContent, { paddingBottom: insets.bottom + 40 }]}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
@@ -325,6 +330,7 @@ export default function EditItemScreen() {
           <Text style={styles.deleteText}>Delete Item</Text>
         </Pressable>
       </ScrollView>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -340,7 +346,8 @@ function makeStyles(C: typeof Colors.light) {
       justifyContent: "space-between",
       alignItems: "center",
       paddingHorizontal: 20,
-      paddingBottom: 12,
+      paddingBottom: 16,
+      zIndex: 1,
     },
     headerButton: {
       paddingVertical: 8,
@@ -368,7 +375,8 @@ function makeStyles(C: typeof Colors.light) {
       flex: 1,
     },
     scrollContent: {
-      padding: 20,
+      paddingHorizontal: 20,
+      paddingTop: 4,
       paddingBottom: 40,
     },
     label: {

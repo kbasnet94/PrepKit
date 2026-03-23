@@ -3,6 +3,7 @@ import { router } from "expo-router";
 import * as Haptics from "expo-haptics";
 import React, { useMemo, useState } from "react";
 import {
+  KeyboardAvoidingView,
   Platform,
   Pressable,
   ScrollView,
@@ -74,7 +75,7 @@ export default function AddItemScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) + 8 }]}>
+      <View style={[styles.header, { paddingTop: insets.top + 16 }]}>
         <Pressable
           onPress={() => router.back()}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -93,9 +94,13 @@ export default function AddItemScreen() {
         </Pressable>
       </View>
 
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : undefined}
+        style={{ flex: 1 }}
+      >
       <ScrollView
         style={styles.scrollView}
-        contentContainerStyle={styles.scrollContent}
+        contentContainerStyle={[styles.scrollContent, { paddingBottom: insets.bottom + 40 }]}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
@@ -106,7 +111,6 @@ export default function AddItemScreen() {
           placeholderTextColor={C.textTertiary}
           value={name}
           onChangeText={setName}
-          autoFocus
           testID="item-name-input"
         />
 
@@ -255,6 +259,7 @@ export default function AddItemScreen() {
           numberOfLines={3}
         />
       </ScrollView>
+      </KeyboardAvoidingView>
     </View>
   );
 }
@@ -270,7 +275,8 @@ function makeStyles(C: typeof Colors.light) {
       justifyContent: "space-between",
       alignItems: "center",
       paddingHorizontal: 20,
-      paddingBottom: 12,
+      paddingBottom: 16,
+      zIndex: 1,
     },
     headerButton: {
       paddingVertical: 8,
@@ -298,7 +304,8 @@ function makeStyles(C: typeof Colors.light) {
       flex: 1,
     },
     scrollContent: {
-      padding: 20,
+      paddingHorizontal: 20,
+      paddingTop: 4,
       paddingBottom: 40,
     },
     label: {

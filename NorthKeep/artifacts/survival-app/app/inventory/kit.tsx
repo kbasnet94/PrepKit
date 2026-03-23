@@ -34,7 +34,7 @@ export default function KitScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={[styles.header, { paddingTop: Math.max(insets.top, 12) + 8 }]}>
+      <View style={[styles.header, { paddingTop: insets.top + 16 }]}>
         <Pressable
           onPress={() => router.back()}
           hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
@@ -93,7 +93,8 @@ function makeStyles(C: typeof Colors.light) {
       justifyContent: "space-between",
       alignItems: "center",
       paddingHorizontal: 20,
-      paddingBottom: 12,
+      paddingBottom: 16,
+      zIndex: 1,
     },
     headerButton: {
       paddingVertical: 8,

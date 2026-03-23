@@ -5,7 +5,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 // expo-sqlite is lazy-imported only on native to prevent its web worker (OPFS
 // VFS) from initialising and crashing with xLock/xFileControl errors.
 
-let db: any = null;
+let dbPromise: Promise<any> | null = null;
 
 // No-op mock for web: all reads return empty, all writes are silent.
 const webMockDb = {
@@ -20,12 +20,16 @@ export async function getDatabase(): Promise<any> {
   if (Platform.OS === "web") {
     return webMockDb;
   }
-  if (db) return db;
-  const SQLite = await import("expo-sqlite");
-  db = await SQLite.openDatabaseAsync("northkeep.db");
-  await db.execAsync(`PRAGMA journal_mode = WAL;`);
-  await initTables(db);
-  return db;
+  if (!dbPromise) {
+    dbPromise = (async () => {
+      const SQLite = await import("expo-sqlite");
+      const database = await SQLite.openDatabaseAsync("northkeep.db");
+      await database.execAsync(`PRAGMA journal_mode = WAL;`);
+      await initTables(database);
+      return database;
+    })();
+  }
+  return dbPromise;
 }
 
 async function initTables(database: any) {

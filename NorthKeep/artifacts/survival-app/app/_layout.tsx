@@ -6,11 +6,10 @@ import {
   useFonts,
 } from "@expo-google-fonts/inter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Redirect, Stack } from "expo-router";
+import { Redirect, Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { KeyboardProvider } from "react-native-keyboard-controller";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -27,6 +26,8 @@ const queryClient = new QueryClient();
 
 function RootLayoutNav() {
   const { onboardingCompleted } = useUserProfile();
+  const router = useRouter();
+  const didRedirect = useRef(false);
 
   useEffect(() => {
     if (onboardingCompleted !== null) {
@@ -34,11 +35,16 @@ function RootLayoutNav() {
     }
   }, [onboardingCompleted]);
 
+  // Navigate to onboarding imperatively (avoids remounting providers)
+  useEffect(() => {
+    if (onboardingCompleted === false && !didRedirect.current) {
+      didRedirect.current = true;
+      router.replace("/onboarding");
+    }
+  }, [onboardingCompleted, router]);
+
   // Still loading from AsyncStorage — keep splash visible
   if (onboardingCompleted === null) return null;
-
-  // Not completed — redirect to onboarding before showing any screens
-  if (!onboardingCompleted) return <Redirect href="/onboarding" />;
 
   return (
     <Stack screenOptions={{ headerBackTitle: "Back" }}>
@@ -47,33 +53,9 @@ function RootLayoutNav() {
       <Stack.Screen name="chat/[id]" options={{ headerShown: false }} />
       <Stack.Screen name="knowledge/[id]" options={{ headerShown: false }} />
       <Stack.Screen name="guides/[slug]" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="inventory/add"
-        options={{
-          presentation: "formSheet",
-          sheetAllowedDetents: [0.85],
-          sheetGrabberVisible: true,
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="inventory/edit/[id]"
-        options={{
-          presentation: "formSheet",
-          sheetAllowedDetents: [0.85],
-          sheetGrabberVisible: true,
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="inventory/kit"
-        options={{
-          presentation: "formSheet",
-          sheetAllowedDetents: [0.4],
-          sheetGrabberVisible: true,
-          headerShown: false,
-        }}
-      />
+      <Stack.Screen name="inventory/add" options={{ headerShown: false, animation: "slide_from_bottom" }} />
+      <Stack.Screen name="inventory/edit/[id]" options={{ headerShown: false, animation: "slide_from_bottom" }} />
+      <Stack.Screen name="inventory/kit" options={{ headerShown: false, animation: "slide_from_bottom" }} />
     </Stack>
   );
 }
@@ -93,21 +75,19 @@ export default function RootLayout() {
       <ErrorBoundary>
         <QueryClientProvider client={queryClient}>
           <GestureHandlerRootView style={{ flex: 1 }}>
-            <KeyboardProvider>
-              <ThemeProvider>
-                <UserProfileProvider>
-                  <GuideStoreProvider>
-                    <ChatProvider>
-                      <KnowledgeProvider>
-                        <InventoryProvider>
-                          <RootLayoutNav />
-                        </InventoryProvider>
-                      </KnowledgeProvider>
-                    </ChatProvider>
-                  </GuideStoreProvider>
-                </UserProfileProvider>
-              </ThemeProvider>
-            </KeyboardProvider>
+            <ThemeProvider>
+              <UserProfileProvider>
+                <GuideStoreProvider>
+                  <ChatProvider>
+                    <KnowledgeProvider>
+                      <InventoryProvider>
+                        <RootLayoutNav />
+                      </InventoryProvider>
+                    </KnowledgeProvider>
+                  </ChatProvider>
+                </GuideStoreProvider>
+              </UserProfileProvider>
+            </ThemeProvider>
           </GestureHandlerRootView>
         </QueryClientProvider>
       </ErrorBoundary>
