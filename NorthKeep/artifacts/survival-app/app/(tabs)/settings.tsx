@@ -146,8 +146,8 @@ export default function SettingsScreen() {
           <SettingsRow
             icon="mail-open-outline"
             title="Contact Support"
-            subtitle="support@northkeepapp.com"
-            onPress={() => Linking.openURL("mailto:support@northkeepapp.com")}
+            subtitle="kb@support.northkeep.app"
+            onPress={() => Linking.openURL("mailto:kb@support.northkeep.app")}
           />
           {!hasRated && (
             <>
