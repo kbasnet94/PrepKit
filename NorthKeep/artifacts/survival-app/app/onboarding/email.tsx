@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet, Pressable, Keyboard } from "react-native";
+import { View, Text, TextInput, StyleSheet, Pressable, Keyboard, Linking } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -64,6 +64,23 @@ export default function EmailScreen() {
       </View>
 
       <View style={styles.footer}>
+        <Text style={styles.legalText}>
+          By continuing, you agree to our{" "}
+          <Text
+            style={styles.legalLink}
+            onPress={() => Linking.openURL("https://northkeep.app/#/privacy")}
+          >
+            Privacy Policy
+          </Text>{" "}
+          and{" "}
+          <Text
+            style={styles.legalLink}
+            onPress={() => Linking.openURL("https://northkeep.app/#/terms")}
+          >
+            Terms of Use
+          </Text>
+          .
+        </Text>
         <Pressable style={styles.primaryButton} onPress={handleSubmit}>
           <Text style={styles.primaryButtonText}>
             {email.trim() ? "Continue" : "Continue without email"}
@@ -119,6 +136,17 @@ function makeStyles(C: any, insets: any) {
     },
     footer: {
       gap: 12,
+    },
+    legalText: {
+      fontSize: 13,
+      color: C.textSecondary,
+      textAlign: "center",
+      lineHeight: 20,
+      marginBottom: 4,
+    },
+    legalLink: {
+      color: C.accent ?? "#4a90d9",
+      textDecorationLine: "underline" as const,
     },
     primaryButton: {
       backgroundColor: C.accent,

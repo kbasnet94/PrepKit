@@ -19,6 +19,7 @@ import { useUserProfile } from "@/contexts/UserProfileContext";
 import { USER_TYPE_LABELS, EXPERIENCE_LABELS, HOUSEHOLD_LABELS } from "@/lib/user-profile";
 import { AboutModal } from "@/components/AboutModal";
 import { AppFeedback } from "@/components/AppFeedback";
+import { DeleteDataModal } from "@/components/DeleteDataModal";
 
 export default function SettingsScreen() {
   const insets = useSafeAreaInsets();
@@ -26,6 +27,7 @@ export default function SettingsScreen() {
   const [showAppFeedback, setShowAppFeedback] = useState(false);
   const [hasRated, setHasRated] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showDeleteData, setShowDeleteData] = useState(false);
   const { colors: C, mode: themeMode, setTheme } = useTheme();
   const { profile } = useUserProfile();
   const styles = useMemo(() => makeStyles(C), [C]);
@@ -173,14 +175,30 @@ export default function SettingsScreen() {
           <View style={styles.separator} />
           <SettingsRow
             icon="lock-closed-outline"
-            title="Privacy"
-            subtitle="All data stored locally on your device"
+            title="Privacy Policy"
+            subtitle="How we handle your data"
+            onPress={() => Linking.openURL("https://northkeep.app/#/privacy")}
+          />
+          <View style={styles.separator} />
+          <SettingsRow
+            icon="document-text-outline"
+            title="Terms of Use"
+            subtitle="App usage terms and conditions"
+            onPress={() => Linking.openURL("https://northkeep.app/#/terms")}
           />
           <View style={styles.separator} />
           <SettingsRow
             icon="information-circle-outline"
             title="Version"
             subtitle="1.0.0 Beta"
+          />
+          <View style={styles.separator} />
+          <SettingsRow
+            icon="trash-outline"
+            title="Delete My Data"
+            subtitle="Request deletion of your server data"
+            onPress={() => setShowDeleteData(true)}
+            destructive
           />
         </View>
 
@@ -197,6 +215,7 @@ export default function SettingsScreen() {
         onRated={() => setHasRated(true)}
       />
       <AboutModal visible={showAbout} onClose={() => setShowAbout(false)} />
+      <DeleteDataModal visible={showDeleteData} onClose={() => setShowDeleteData(false)} />
     </View>
   );
 }
