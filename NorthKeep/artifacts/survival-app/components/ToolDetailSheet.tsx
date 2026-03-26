@@ -109,15 +109,11 @@ export function ToolDetailSheet({
             { paddingBottom: insets.bottom + 20 },
           ]}
         >
-          {/* ── Handle + close ──────────────────────────────────────────── */}
+          {/* ── Handle + Close ────────────────────────────────────────── */}
           <View style={styles.sheetHeader}>
             <View style={styles.sheetHandle} />
-            <Pressable
-              onPress={onClose}
-              hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
-              style={styles.closeButton}
-            >
-              <Ionicons name="close-circle" size={26} color={C.textSecondary} />
+            <Pressable onPress={onClose} style={styles.closeTextButton}>
+              <Text style={styles.closeText}>Close</Text>
             </Pressable>
           </View>
 
@@ -317,15 +313,15 @@ function makeStyles(C: typeof Colors.light) {
       backgroundColor: C.background,
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
-      maxHeight: "85%",
+      maxHeight: "80%",
       zIndex: 10,
     },
     sheetHeader: {
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "center",
-      paddingTop: 10,
-      paddingBottom: 4,
+      paddingTop: 14,
+      paddingBottom: 8,
       paddingHorizontal: 16,
     },
     sheetHandle: {
@@ -334,12 +330,16 @@ function makeStyles(C: typeof Colors.light) {
       borderRadius: 2,
       backgroundColor: C.borderLight,
     },
-    closeButton: {
+    closeTextButton: {
       position: "absolute",
-      right: 12,
-      top: 6,
-      padding: 8,
-      zIndex: 20,
+      right: 16,
+      top: 12,
+      padding: 4,
+    },
+    closeText: {
+      fontSize: 15,
+      fontFamily: "Inter_500Medium",
+      color: C.accent,
     },
     scrollContent: {
       paddingHorizontal: 20,

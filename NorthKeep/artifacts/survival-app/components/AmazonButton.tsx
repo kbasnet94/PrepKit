@@ -33,8 +33,8 @@ export function AmazonButton({ keywords, compact = false }: AmazonButtonProps) {
           },
         ]}
       >
-        <Ionicons name="cart-outline" size={14} color="#fff" />
-        <Text style={styles.compactLabel}>Shop</Text>
+        <Ionicons name="search-outline" size={14} color="#fff" />
+        <Text style={styles.compactLabel}>Find on Amazon</Text>
       </Pressable>
     );
   }
@@ -50,8 +50,8 @@ export function AmazonButton({ keywords, compact = false }: AmazonButtonProps) {
         },
       ]}
     >
-      <Ionicons name="cart-outline" size={18} color="#fff" />
-      <Text style={styles.label}>Shop on Amazon</Text>
+      <Ionicons name="search-outline" size={18} color="#fff" />
+      <Text style={styles.label}>Find on Amazon</Text>
       <Ionicons
         name="open-outline"
         size={14}
