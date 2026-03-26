@@ -22,6 +22,7 @@ import {
   Upload,
   MessageSquare,
   Lightbulb,
+  Wrench,
 } from "lucide-react";
 import { LogoutButton } from "@/components/auth/logout-button";
 
@@ -31,6 +32,7 @@ const navItems = [
   { title: "Import JSON", href: "/guides/import", icon: Upload },
   { title: "Review Queue", href: "/review", icon: ClipboardList },
   { title: "Releases", href: "/releases", icon: Package },
+  { title: "Tools", href: "/tools", icon: Wrench },
   { title: "Feedback", href: "/feedback", icon: MessageSquare },
   { title: "Requests", href: "/requests", icon: Lightbulb },
 ];

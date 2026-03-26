@@ -8,6 +8,7 @@ import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useInventory, type ItemCategory, type InventoryItem } from "@/contexts/InventoryContext";
 import type { GuideTool } from "@/lib/guides/types";
+import { AmazonButton } from "@/components/AmazonButton";
 
 // ── Tool category → Inventory category mapping ─────────────────────────────
 
@@ -111,6 +112,12 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
             <Text style={styles.toolDescription}>{tool.description}</Text>
             {tool.context ? (
               <Text style={styles.toolContext}>{tool.context}</Text>
+            ) : null}
+
+            {tool.amazonEnabled && tool.amazonSearchKeywords ? (
+              <View style={styles.amazonRow}>
+                <AmazonButton keywords={tool.amazonSearchKeywords} compact />
+              </View>
             ) : null}
 
             <View style={styles.toolFooter}>
@@ -257,6 +264,11 @@ function makeStyles(C: typeof Colors.light) {
       fontStyle: "italic",
       color: C.textTertiary,
       lineHeight: 18,
+    },
+    amazonRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginTop: 2,
     },
     toolFooter: {
       flexDirection: "row",

@@ -248,13 +248,14 @@ export async function POST(request: Request) {
 
     // ── Persist normalized tools ──────────────────────────────────────────────
     const incomingTools = Array.isArray(guide.tools) ? guide.tools : [];
+    const enrichedTools: Record<string, unknown>[] = [];
     if (incomingTools.length > 0) {
       for (let i = 0; i < incomingTools.length; i++) {
         const t = incomingTools[i];
         // Upsert canonical tool (match by name)
         let { data: toolRow } = await supabase
           .from("tools")
-          .select("id")
+          .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled")
           .eq("name", t.name)
           .single();
 
@@ -266,7 +267,7 @@ export async function POST(request: Request) {
               category: t.category,
               description: (t as any).description || t.context || t.name,
             })
-            .select("id")
+            .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled")
             .single();
           toolRow = newTool;
         }
@@ -282,7 +283,25 @@ export async function POST(request: Request) {
             },
             { onConflict: "guide_version_id,tool_id" }
           );
+
+          // Enrich the tool entry with canonical metadata for the denormalized JSONB
+          enrichedTools.push({
+            ...t,
+            id: toolRow.id,
+            icon: toolRow.icon ?? null,
+            use_cases: toolRow.use_cases ?? [],
+            amazon_search_keywords: toolRow.amazon_search_keywords ?? null,
+            amazon_enabled: toolRow.amazon_enabled ?? false,
+          });
         }
+      }
+
+      // Update the guide_versions.tools JSONB with enriched data
+      if (enrichedTools.length > 0) {
+        await supabase
+          .from("guide_versions")
+          .update({ tools: enrichedTools })
+          .eq("id", newVersion.id);
       }
     }
 

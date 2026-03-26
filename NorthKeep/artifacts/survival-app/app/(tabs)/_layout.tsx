@@ -20,6 +20,10 @@ function NativeTabLayout() {
         <Icon sf={{ default: "shippingbox", selected: "shippingbox.fill" }} />
         <Label>Inventory</Label>
       </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="gear">
+        <Icon sf={{ default: "wrench.and.screwdriver", selected: "wrench.and.screwdriver.fill" }} />
+        <Label>Gear</Label>
+      </NativeTabs.Trigger>
       <NativeTabs.Trigger name="settings">
         <Icon sf={{ default: "gearshape", selected: "gearshape.fill" }} />
         <Label>Settings</Label>
@@ -91,6 +95,15 @@ function ClassicTabLayout() {
           title: "Inventory",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? "cube" : "cube-outline"} size={22} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="gear"
+        options={{
+          title: "Gear",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? "construct" : "construct-outline"} size={22} color={color} />
           ),
         }}
       />

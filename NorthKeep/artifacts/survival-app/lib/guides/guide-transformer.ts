@@ -157,6 +157,10 @@ export function transformSupabaseRow(row: SupabaseGuideRow): Guide {
           description: t.description ?? t.context ?? "",
           optional: t.optional ?? false,
           context: t.context ?? null,
+          icon: t.icon ?? undefined,
+          useCases: Array.isArray(t.use_cases) ? t.use_cases : undefined,
+          amazonSearchKeywords: t.amazon_search_keywords ?? null,
+          amazonEnabled: t.amazon_enabled ?? false,
         }))
       : undefined,
   };

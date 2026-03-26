@@ -73,6 +73,11 @@ export interface GuideTool {
   description: string;
   optional: boolean;
   context: string | null;
+  // Display + Amazon fields (from canonical tools table)
+  icon?: string;
+  useCases?: string[];
+  amazonSearchKeywords?: string | null;
+  amazonEnabled?: boolean;
 }
 
 export interface Guide {

@@ -34,6 +34,7 @@
     },
     "extra": {
       "router": {},
+      "amazonAffiliateTag": "northkeep-20",
       "eas": {
         "projectId": "0c82587d-6c44-4e9e-a541-9581c18cf384"
       }

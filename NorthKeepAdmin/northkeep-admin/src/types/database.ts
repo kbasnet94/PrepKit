@@ -78,6 +78,10 @@ export interface Tool {
   name: string;
   category: string;
   description: string;
+  amazon_search_keywords: string | null;
+  amazon_enabled: boolean;
+  icon: string | null;
+  use_cases: string[];
   created_at: string;
   updated_at: string;
 }
