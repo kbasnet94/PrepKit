@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Animated, { FadeInUp } from "react-native-reanimated";
+// Animated.View removed — Modal handles its own slide animation
 
 import Colors from "@/constants/colors";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -103,8 +103,7 @@ export function ToolDetailSheet({
       <View style={styles.overlay}>
         <Pressable style={styles.backdrop} onPress={onClose} />
 
-        <Animated.View
-          entering={FadeInUp.duration(250)}
+        <View
           style={[
             styles.sheet,
             { paddingBottom: insets.bottom + 20 },
@@ -113,8 +112,12 @@ export function ToolDetailSheet({
           {/* ── Handle + close ──────────────────────────────────────────── */}
           <View style={styles.sheetHeader}>
             <View style={styles.sheetHandle} />
-            <Pressable onPress={onClose} style={styles.closeButton}>
-              <Ionicons name="close" size={20} color={C.textSecondary} />
+            <Pressable
+              onPress={onClose}
+              hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+              style={styles.closeButton}
+            >
+              <Ionicons name="close-circle" size={26} color={C.textSecondary} />
             </Pressable>
           </View>
 
@@ -269,7 +272,7 @@ export function ToolDetailSheet({
               ))}
             </View>
           </ScrollView>
-        </Animated.View>
+        </View>
       </View>
     </Modal>
   );
@@ -292,9 +295,12 @@ function makeStyles(C: typeof Colors.light) {
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
       maxHeight: "85%",
+      zIndex: 10,
     },
     sheetHeader: {
+      flexDirection: "row",
       alignItems: "center",
+      justifyContent: "center",
       paddingTop: 10,
       paddingBottom: 4,
       paddingHorizontal: 16,
@@ -307,9 +313,10 @@ function makeStyles(C: typeof Colors.light) {
     },
     closeButton: {
       position: "absolute",
-      right: 16,
-      top: 10,
-      padding: 4,
+      right: 12,
+      top: 6,
+      padding: 8,
+      zIndex: 20,
     },
     scrollContent: {
       paddingHorizontal: 20,
