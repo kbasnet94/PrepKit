@@ -255,7 +255,7 @@ export async function POST(request: Request) {
         // Upsert canonical tool (match by name)
         let { data: toolRow } = await supabase
           .from("tools")
-          .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled")
+          .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled, variants")
           .eq("name", t.name)
           .single();
 
@@ -267,7 +267,7 @@ export async function POST(request: Request) {
               category: t.category,
               description: (t as any).description || t.context || t.name,
             })
-            .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled")
+            .select("id, icon, use_cases, amazon_search_keywords, amazon_enabled, variants")
             .single();
           toolRow = newTool;
         }
@@ -292,6 +292,7 @@ export async function POST(request: Request) {
             use_cases: toolRow.use_cases ?? [],
             amazon_search_keywords: toolRow.amazon_search_keywords ?? null,
             amazon_enabled: toolRow.amazon_enabled ?? false,
+            variants: toolRow.variants ?? [],
           });
         }
       }

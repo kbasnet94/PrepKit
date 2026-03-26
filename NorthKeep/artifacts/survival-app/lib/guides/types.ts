@@ -66,6 +66,13 @@ export interface GuideSourceRef {
   reviewStatus: string;
 }
 
+/** A product variant/subtype of a tool */
+export interface ToolVariant {
+  label: string;
+  description: string;
+  amazonSearchKeywords: string;
+}
+
 export interface GuideTool {
   id: string;
   name: string;
@@ -78,6 +85,7 @@ export interface GuideTool {
   useCases?: string[];
   amazonSearchKeywords?: string | null;
   amazonEnabled?: boolean;
+  variants?: ToolVariant[];
 }
 
 export interface Guide {

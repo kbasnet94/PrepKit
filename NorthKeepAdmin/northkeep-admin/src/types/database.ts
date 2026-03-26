@@ -72,6 +72,13 @@ export interface GuideTool {
   context: string;
 }
 
+/** A product variant/subtype of a tool (stored as JSONB array on tools table) */
+export interface ToolVariant {
+  label: string;
+  description: string;
+  amazonSearchKeywords: string;
+}
+
 /** Canonical tool definition (normalized tools table) */
 export interface Tool {
   id: string;
@@ -82,6 +89,7 @@ export interface Tool {
   amazon_enabled: boolean;
   icon: string | null;
   use_cases: string[];
+  variants: ToolVariant[];
   created_at: string;
   updated_at: string;
 }

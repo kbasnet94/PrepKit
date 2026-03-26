@@ -233,12 +233,35 @@ export function ToolDetailSheet({
               )}
             </View>
 
-            {/* ── Amazon ────────────────────────────────────────────────── */}
-            {tool.amazonEnabled && tool.amazonSearchKeywords && (
+            {/* ── Variants / Amazon ─────────────────────────────────────── */}
+            {tool.amazonEnabled &&
+            tool.variants &&
+            tool.variants.length > 0 ? (
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Types</Text>
+                {tool.variants.map((v, i) => (
+                  <View key={i} style={styles.variantCard}>
+                    <Text style={styles.variantLabel}>{v.label}</Text>
+                    {v.description ? (
+                      <Text
+                        style={styles.variantDescription}
+                        numberOfLines={3}
+                      >
+                        {v.description}
+                      </Text>
+                    ) : null}
+                    <AmazonButton
+                      keywords={v.amazonSearchKeywords}
+                      compact
+                    />
+                  </View>
+                ))}
+              </View>
+            ) : tool.amazonEnabled && tool.amazonSearchKeywords ? (
               <View style={styles.section}>
                 <AmazonButton keywords={tool.amazonSearchKeywords} />
               </View>
-            )}
+            ) : null}
 
             {/* ── Linked guides ─────────────────────────────────────────── */}
             <View style={styles.section}>
@@ -354,6 +377,25 @@ function makeStyles(C: typeof Colors.light) {
       color: C.textSecondary,
       lineHeight: 22,
       marginBottom: 16,
+    },
+    variantCard: {
+      backgroundColor: C.surface,
+      borderRadius: 10,
+      padding: 12,
+      marginBottom: 8,
+      gap: 4,
+    },
+    variantLabel: {
+      fontSize: 14,
+      fontFamily: "Inter_600SemiBold",
+      color: C.text,
+    },
+    variantDescription: {
+      fontSize: 13,
+      fontFamily: "Inter_400Regular",
+      color: C.textSecondary,
+      lineHeight: 18,
+      marginBottom: 4,
     },
     section: {
       marginBottom: 20,

@@ -87,12 +87,32 @@ export async function PATCH(
     "use_cases",
     "amazon_search_keywords",
     "amazon_enabled",
+    "variants",
   ] as const;
 
   const updates: Record<string, unknown> = {};
   for (const field of allowedFields) {
     if (field in body) {
       updates[field] = body[field];
+    }
+  }
+
+  // Validate variants
+  if (updates.variants !== undefined) {
+    const variants = updates.variants;
+    if (!Array.isArray(variants)) {
+      return NextResponse.json({ error: "variants must be an array" }, { status: 400 });
+    }
+    if (variants.length > 4) {
+      return NextResponse.json({ error: "Maximum 4 variants allowed" }, { status: 400 });
+    }
+    for (const v of variants) {
+      if (!v.label?.trim() || !v.amazonSearchKeywords?.trim()) {
+        return NextResponse.json(
+          { error: "Each variant needs a label and Amazon search keywords" },
+          { status: 400 }
+        );
+      }
     }
   }
 

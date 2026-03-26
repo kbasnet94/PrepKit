@@ -25,7 +25,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { buildAmazonSearchUrl } from "@/lib/amazon";
-import type { Tool } from "@/types/database";
+import type { Tool, ToolVariant } from "@/types/database";
 
 type LinkedGuide = {
   slug: string;
@@ -54,6 +54,9 @@ export function ToolEditForm({
     tool.amazon_search_keywords ?? ""
   );
   const [amazonEnabled, setAmazonEnabled] = useState(tool.amazon_enabled);
+  const [variants, setVariants] = useState<ToolVariant[]>(
+    tool.variants ?? []
+  );
 
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{
@@ -70,6 +73,26 @@ export function ToolEditForm({
   };
   const removeUseCase = (i: number) =>
     setUseCases(useCases.filter((_, idx) => idx !== i));
+
+  // ── Variants array management ───────────────────────────────────────────
+  const addVariant = () => {
+    if (variants.length >= 4) return;
+    setVariants([
+      ...variants,
+      { label: "", description: "", amazonSearchKeywords: "" },
+    ]);
+  };
+  const updateVariant = (
+    i: number,
+    field: keyof ToolVariant,
+    val: string
+  ) => {
+    const next = [...variants];
+    next[i] = { ...next[i], [field]: val };
+    setVariants(next);
+  };
+  const removeVariant = (i: number) =>
+    setVariants(variants.filter((_, idx) => idx !== i));
 
   // ── Save ──────────────────────────────────────────────────────────────────
   const handleSave = async () => {
@@ -88,6 +111,7 @@ export function ToolEditForm({
           use_cases: useCases.filter((u) => u.trim()),
           amazon_search_keywords: amazonKeywords.trim() || null,
           amazon_enabled: amazonEnabled,
+          variants: variants.filter((v) => v.label.trim()),
         }),
       });
 
@@ -294,6 +318,110 @@ export function ToolEditForm({
                   </a>
                 </div>
               )}
+            </CardContent>
+          </Card>
+
+          {/* Variants / Types */}
+          <Card
+            className={
+              !amazonEnabled ? "opacity-50 pointer-events-none" : ""
+            }
+          >
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <span className="text-base">Variants / Types</span>
+                <Badge variant="secondary" className="ml-auto">
+                  {variants.length}/4
+                </Badge>
+              </CardTitle>
+              <CardDescription>
+                Add 2-4 product types users should know about. Leave empty
+                for tools with only one type (e.g., Paracord, Duct Tape).
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {variants.map((v, i) => (
+                <div
+                  key={i}
+                  className="relative rounded-lg border bg-muted/20 p-4 space-y-3"
+                >
+                  <Button
+                    variant="ghost"
+                    size="icon-xs"
+                    className="absolute top-2 right-2"
+                    onClick={() => removeVariant(i)}
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </Button>
+
+                  <div className="space-y-1.5">
+                    <Label className="text-xs">Label</Label>
+                    <Input
+                      value={v.label}
+                      onChange={(e) =>
+                        updateVariant(i, "label", e.target.value)
+                      }
+                      placeholder="Hand-Crank Radio"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label className="text-xs">Description</Label>
+                    <Textarea
+                      value={v.description}
+                      onChange={(e) =>
+                        updateVariant(i, "description", e.target.value)
+                      }
+                      rows={2}
+                      placeholder="No batteries needed. Most models include NOAA weather bands and a built-in flashlight."
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label className="text-xs">Amazon search keywords</Label>
+                    <Input
+                      value={v.amazonSearchKeywords}
+                      onChange={(e) =>
+                        updateVariant(
+                          i,
+                          "amazonSearchKeywords",
+                          e.target.value
+                        )
+                      }
+                      placeholder="hand crank emergency radio NOAA weather"
+                    />
+                  </div>
+
+                  {v.amazonSearchKeywords.trim() && (
+                    <div className="rounded border bg-muted/30 px-2.5 py-1.5">
+                      <a
+                        href={buildAmazonSearchUrl(
+                          v.amazonSearchKeywords.trim()
+                        )}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary inline-flex items-center gap-1 text-xs break-all hover:underline"
+                      >
+                        {buildAmazonSearchUrl(
+                          v.amazonSearchKeywords.trim()
+                        )}
+                        <ExternalLink className="h-2.5 w-2.5 shrink-0" />
+                      </a>
+                    </div>
+                  )}
+                </div>
+              ))}
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={addVariant}
+                disabled={variants.length >= 4 || !amazonEnabled}
+              >
+                <Plus className="mr-1.5 h-3.5 w-3.5" />
+                Add variant
+                {variants.length >= 4 && " (max reached)"}
+              </Button>
             </CardContent>
           </Card>
         </div>

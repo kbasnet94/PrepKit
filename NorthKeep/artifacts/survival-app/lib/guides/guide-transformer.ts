@@ -161,6 +161,7 @@ export function transformSupabaseRow(row: SupabaseGuideRow): Guide {
           useCases: Array.isArray(t.use_cases) ? t.use_cases : undefined,
           amazonSearchKeywords: t.amazon_search_keywords ?? null,
           amazonEnabled: t.amazon_enabled ?? false,
+          variants: Array.isArray(t.variants) ? t.variants : undefined,
         }))
       : undefined,
   };
