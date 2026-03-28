@@ -32,13 +32,27 @@ export function AboutModal({ visible, onClose }: Props) {
             guidance — even with no signal, no Wi-Fi, nothing.
           </Text>
           <Text style={styles.paragraph}>
-            No ads, no subscriptions, no data collection. Just the knowledge you need, when you need
-            it most.
+            No ads, no subscriptions. Just the knowledge you need, when you need it most.
           </Text>
           <Text style={styles.paragraph}>
             I hope it helps you and the people you care about stay safe.
           </Text>
           <Text style={styles.signature}>— Karan</Text>
+          <View style={styles.divider} />
+          <Text style={styles.supportHeader}>Want to support NorthKeep?</Text>
+          <Text style={styles.supportText}>
+            If you find a useful tool in one of our guides and buy it through the Amazon link — that
+            actually helps keep this app free. We're part of the Amazon Associates Program, which
+            means we earn a small commission on purchases made through our links (at no extra cost to
+            you).
+          </Text>
+          <Text style={styles.supportText}>
+            Every tool recommendation comes from the guides themselves — never from a paid placement.
+            We only link to gear that's relevant to your safety.
+          </Text>
+          <Text style={styles.supportNote}>
+            We don't see what you buy or collect any shopping data.
+          </Text>
           <Text style={styles.version}>Version 1.0.0 Beta</Text>
         </ScrollView>
       </View>
@@ -102,6 +116,31 @@ function makeStyles(C: typeof Colors.light) {
       color: C.textTertiary,
       textAlign: "center",
       marginTop: 8,
+    },
+    divider: {
+      height: StyleSheet.hairlineWidth,
+      backgroundColor: C.border,
+      marginVertical: 20,
+    },
+    supportHeader: {
+      fontSize: 15,
+      fontFamily: "Inter_600SemiBold",
+      color: C.accent,
+      marginBottom: 10,
+    },
+    supportText: {
+      fontSize: 14,
+      fontFamily: "Inter_400Regular",
+      color: C.textSecondary,
+      lineHeight: 22,
+      marginBottom: 12,
+    },
+    supportNote: {
+      fontSize: 13,
+      fontFamily: "Inter_400Regular",
+      color: C.textTertiary,
+      fontStyle: "italic",
+      marginBottom: 16,
     },
   });
 }
