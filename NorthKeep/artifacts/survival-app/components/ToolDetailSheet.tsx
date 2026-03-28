@@ -149,9 +149,17 @@ export function ToolDetailSheet({
               </View>
             )}
 
-            {/* ── Inventory status ──────────────────────────────────────── */}
+            {/* ── Actions: Amazon + Inventory ──────────────────────────── */}
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Inventory</Text>
+              {/* Amazon — full-width primary CTA */}
+              {tool.amazonEnabled && tool.amazonSearchKeywords && !tool.variants?.length ? (
+                <AmazonButton keywords={tool.amazonSearchKeywords} />
+              ) : null}
+
+              {/* Inventory — segmented control */}
+              <Text style={[styles.sectionTitle, tool.amazonEnabled && tool.amazonSearchKeywords && !tool.variants?.length ? { marginTop: 14 } : undefined]}>
+                Inventory
+              </Text>
               {inventoryMatch ? (
                 <View style={styles.inventoryStatus}>
                   <Ionicons
@@ -188,40 +196,31 @@ export function ToolDetailSheet({
                   </Text>
                 </View>
               ) : (
-                <View style={styles.inventoryActions}>
+                <View style={styles.segmentedControl}>
                   <Pressable
                     onPress={() => handleAddToInventory("owned")}
                     style={({ pressed }) => [
-                      styles.inventoryButton,
+                      styles.segmentLeft,
                       { backgroundColor: C.accentSurface },
                       pressed && { opacity: 0.7 },
                     ]}
                   >
-                    <Ionicons
-                      name="add-circle-outline"
-                      size={16}
-                      color={C.accent}
-                    />
-                    <Text style={[styles.inventoryButtonText, { color: C.accent }]}>
-                      Add to Inventory
+                    <Ionicons name="checkmark" size={16} color={C.accent} />
+                    <Text style={[styles.segmentLabel, { color: C.accent }]}>
+                      I Own This
                     </Text>
                   </Pressable>
+                  <View style={[styles.segmentDivider, { backgroundColor: C.border }]} />
                   <Pressable
                     onPress={() => handleAddToInventory("need_to_buy")}
                     style={({ pressed }) => [
-                      styles.inventoryButton,
+                      styles.segmentRight,
                       { backgroundColor: C.warningSurface },
                       pressed && { opacity: 0.7 },
                     ]}
                   >
-                    <Ionicons
-                      name="cart-outline"
-                      size={16}
-                      color={C.warning}
-                    />
-                    <Text
-                      style={[styles.inventoryButtonText, { color: C.warning }]}
-                    >
+                    <Ionicons name="cart-outline" size={16} color={C.warning} />
+                    <Text style={[styles.segmentLabel, { color: C.warning }]}>
                       Need to Buy
                     </Text>
                   </Pressable>
@@ -252,10 +251,6 @@ export function ToolDetailSheet({
                     />
                   </View>
                 ))}
-              </View>
-            ) : tool.amazonEnabled && tool.amazonSearchKeywords ? (
-              <View style={styles.section}>
-                <AmazonButton keywords={tool.amazonSearchKeywords} />
               </View>
             ) : null}
 
@@ -435,19 +430,37 @@ function makeStyles(C: typeof Colors.light) {
       fontFamily: "Inter_400Regular",
       color: C.textTertiary,
     },
-    inventoryActions: {
-      flexDirection: "row",
-      gap: 10,
-    },
-    inventoryButton: {
+    segmentedControl: {
       flexDirection: "row",
       alignItems: "center",
-      gap: 6,
-      paddingVertical: 8,
-      paddingHorizontal: 14,
-      borderRadius: 8,
+      borderRadius: 10,
+      overflow: "hidden",
     },
-    inventoryButtonText: {
+    segmentLeft: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      paddingVertical: 10,
+      borderTopLeftRadius: 10,
+      borderBottomLeftRadius: 10,
+    },
+    segmentDivider: {
+      width: 1,
+      height: 22,
+    },
+    segmentRight: {
+      flex: 1,
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 6,
+      paddingVertical: 10,
+      borderTopRightRadius: 10,
+      borderBottomRightRadius: 10,
+    },
+    segmentLabel: {
       fontSize: 14,
       fontFamily: "Inter_600SemiBold",
     },

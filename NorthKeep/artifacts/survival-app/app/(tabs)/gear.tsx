@@ -193,11 +193,6 @@ export default function GearTab() {
                     <Text style={styles.toolName} numberOfLines={1}>
                       {item.name}
                     </Text>
-                    {item.optional && (
-                      <View style={styles.optionalBadge}>
-                        <Text style={styles.optionalText}>Optional</Text>
-                      </View>
-                    )}
                   </View>
                   <Text
                     style={styles.toolDescription}
@@ -358,19 +353,6 @@ function makeStyles(C: typeof Colors.light) {
       fontFamily: "Inter_600SemiBold",
       color: C.text,
       flexShrink: 1,
-    },
-    optionalBadge: {
-      backgroundColor: C.warningSurface,
-      paddingHorizontal: 6,
-      paddingVertical: 1,
-      borderRadius: 4,
-    },
-    optionalText: {
-      fontSize: 9,
-      fontFamily: "Inter_600SemiBold",
-      color: C.warning,
-      textTransform: "uppercase",
-      letterSpacing: 0.3,
     },
     toolDescription: {
       fontSize: 13,

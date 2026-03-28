@@ -100,11 +100,6 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
             <View style={styles.toolHeader}>
               <View style={styles.toolNameRow}>
                 <Text style={styles.toolName}>{tool.name}</Text>
-                {tool.optional && (
-                  <View style={styles.optionalBadge}>
-                    <Text style={styles.optionalText}>Optional</Text>
-                  </View>
-                )}
               </View>
               <Text style={styles.toolCategory}>{tool.category}</Text>
             </View>
@@ -122,12 +117,8 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
 
             <View style={styles.toolFooter}>
               {hasMatch && match?.status === "need_to_buy" ? (
-                <View style={styles.needToBuy}>
-                  <Ionicons
-                    name="cart"
-                    size={16}
-                    color={C.warning}
-                  />
+                <View style={styles.statusRow}>
+                  <Ionicons name="cart" size={16} color={C.warning} />
                   <Text style={[styles.inventoryText, { color: C.warning }]}>
                     Need to Buy
                   </Text>
@@ -138,7 +129,7 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
                   )}
                 </View>
               ) : hasMatch ? (
-                <View style={styles.inInventory}>
+                <View style={styles.statusRow}>
                   <Ionicons
                     name="checkmark-circle"
                     size={16}
@@ -154,26 +145,33 @@ export function GuideToolsTab({ tools }: { tools: GuideTool[] }) {
                   )}
                 </View>
               ) : (
-                <View style={styles.actionButtons}>
+                <View style={styles.segmentedPill}>
                   <Pressable
                     style={({ pressed }) => [
-                      styles.addButton,
+                      styles.segmentLeft,
+                      { backgroundColor: C.accentSurface },
                       pressed && { opacity: 0.7 },
                     ]}
                     onPress={() => handleAdd(tool, "owned")}
                   >
-                    <Ionicons name="add-circle-outline" size={16} color={C.accent} />
-                    <Text style={styles.addText}>Add to Inventory</Text>
+                    <Ionicons name="checkmark" size={14} color={C.accent} />
+                    <Text style={[styles.segmentText, { color: C.accent }]}>
+                      Own
+                    </Text>
                   </Pressable>
+                  <View style={[styles.segmentDivider, { backgroundColor: C.border }]} />
                   <Pressable
                     style={({ pressed }) => [
-                      styles.needToBuyButton,
+                      styles.segmentRight,
+                      { backgroundColor: C.warningSurface },
                       pressed && { opacity: 0.7 },
                     ]}
                     onPress={() => handleAdd(tool, "need_to_buy")}
                   >
-                    <Ionicons name="cart-outline" size={16} color={C.warning} />
-                    <Text style={styles.needToBuyText}>Need to Buy</Text>
+                    <Ionicons name="cart-outline" size={14} color={C.warning} />
+                    <Text style={[styles.segmentText, { color: C.warning }]}>
+                      Need
+                    </Text>
                   </Pressable>
                 </View>
               )}
@@ -232,19 +230,6 @@ function makeStyles(C: typeof Colors.light) {
       color: C.text,
       flexShrink: 1,
     },
-    optionalBadge: {
-      backgroundColor: C.warningSurface,
-      paddingHorizontal: 7,
-      paddingVertical: 2,
-      borderRadius: 6,
-    },
-    optionalText: {
-      fontSize: 10,
-      fontFamily: "Inter_600SemiBold",
-      color: C.warning,
-      textTransform: "uppercase",
-      letterSpacing: 0.3,
-    },
     toolCategory: {
       fontSize: 11,
       fontFamily: "Inter_500Medium",
@@ -275,12 +260,7 @@ function makeStyles(C: typeof Colors.light) {
       alignItems: "center",
       marginTop: 2,
     },
-    inInventory: {
-      flexDirection: "row",
-      alignItems: "center",
-      gap: 5,
-    },
-    needToBuy: {
+    statusRow: {
       flexDirection: "row",
       alignItems: "center",
       gap: 5,
@@ -294,38 +274,37 @@ function makeStyles(C: typeof Colors.light) {
       fontFamily: "Inter_400Regular",
       color: C.textTertiary,
     },
-    actionButtons: {
+    segmentedPill: {
       flexDirection: "row",
       alignItems: "center",
-      gap: 8,
-    },
-    addButton: {
-      flexDirection: "row",
-      alignItems: "center",
-      gap: 5,
-      paddingVertical: 4,
-      paddingHorizontal: 10,
       borderRadius: 8,
-      backgroundColor: C.accentSurface,
+      overflow: "hidden",
     },
-    addText: {
-      fontSize: 13,
-      fontFamily: "Inter_600SemiBold",
-      color: C.accent,
-    },
-    needToBuyButton: {
+    segmentLeft: {
       flexDirection: "row",
       alignItems: "center",
-      gap: 5,
-      paddingVertical: 4,
+      gap: 4,
+      paddingVertical: 5,
       paddingHorizontal: 10,
-      borderRadius: 8,
-      backgroundColor: C.warningSurface,
+      borderTopLeftRadius: 8,
+      borderBottomLeftRadius: 8,
     },
-    needToBuyText: {
-      fontSize: 13,
+    segmentDivider: {
+      width: 1,
+      height: 18,
+    },
+    segmentRight: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 4,
+      paddingVertical: 5,
+      paddingHorizontal: 10,
+      borderTopRightRadius: 8,
+      borderBottomRightRadius: 8,
+    },
+    segmentText: {
+      fontSize: 12,
       fontFamily: "Inter_600SemiBold",
-      color: C.warning,
     },
   });
 }
