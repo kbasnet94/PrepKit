@@ -94,14 +94,61 @@ function buildDiff(incoming: NormalizedGuide, current: Record<string, any> | nul
   return { fields, hasChanges: fields.some((f) => f.changed) };
 }
 
+const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const MAX_TEXT = 10_000;
+const MAX_ARRAY_ITEMS = 200;
+
+function isStr(v: unknown): v is string {
+  return typeof v === "string";
+}
+
+function validateGuideInput(guide: NormalizedGuide): string | null {
+  if (!guide || typeof guide !== "object") return "Guide must be an object";
+  if (!isStr(guide.slug) || !SLUG_RE.test(guide.slug)) return "Invalid slug format (lowercase, hyphens only)";
+  if (!isStr(guide.title) || guide.title.length > MAX_TEXT) return "Title missing or too long";
+  if (guide.slug.length > 200) return "Slug too long (max 200)";
+
+  const textFields = ["summary", "quickAnswer", "preferredAction", "backupAction", "notes", "contentStatus", "integrationDecision"] as const;
+  for (const key of textFields) {
+    const val = guide[key];
+    if (val != null && (!isStr(val) || val.length > MAX_TEXT)) return `${key} must be a string under ${MAX_TEXT} chars`;
+  }
+
+  const arrayFields = ["whenToUse", "stepByStepActions", "warnings", "whatNotToDo", "redFlags", "preparednessTips", "appTags", "relatedGuides"] as const;
+  for (const key of arrayFields) {
+    const val = guide[key];
+    if (val != null && (!Array.isArray(val) || val.length > MAX_ARRAY_ITEMS)) return `${key} must be an array with max ${MAX_ARRAY_ITEMS} items`;
+  }
+
+  if (guide.sourceReferences != null && (!Array.isArray(guide.sourceReferences) || guide.sourceReferences.length > 50))
+    return "sourceReferences must be an array with max 50 items";
+
+  if (guide.tools != null && (!Array.isArray(guide.tools) || guide.tools.length > 100))
+    return "tools must be an array with max 100 items";
+
+  return null;
+}
+
 export async function POST(request: Request) {
   const { searchParams } = new URL(request.url);
   const action = searchParams.get("action") ?? "preview";
-  const body = await request.json();
+
+  let body: Record<string, unknown>;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
   const guide = body.guide as NormalizedGuide;
 
   if (!guide?.slug || !guide?.title) {
     return NextResponse.json({ error: "Missing required fields: slug, title" }, { status: 400 });
+  }
+
+  const validationError = validateGuideInput(guide);
+  if (validationError) {
+    return NextResponse.json({ error: validationError }, { status: 400 });
   }
 
   const supabase = createAdminClient();
