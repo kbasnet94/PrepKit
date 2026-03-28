@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { openAmazonLink } from "@/lib/amazon-link";
 import { useTheme } from "@/contexts/ThemeContext";
+import { AffiliateDisclosure } from "./AffiliateDisclosure";
 
 interface AmazonButtonProps {
   keywords: string;
@@ -40,24 +41,27 @@ export function AmazonButton({ keywords, compact = false }: AmazonButtonProps) {
   }
 
   return (
-    <Pressable
-      onPress={handlePress}
-      style={({ pressed }) => [
-        styles.button,
-        {
-          backgroundColor: C.accent,
-          opacity: pressed ? 0.85 : 1,
-        },
-      ]}
-    >
-      <Ionicons name="search-outline" size={18} color="#fff" />
-      <Text style={styles.label}>Find on Amazon</Text>
-      <Ionicons
-        name="open-outline"
-        size={14}
-        color="rgba(255,255,255,0.7)"
-      />
-    </Pressable>
+    <>
+      <Pressable
+        onPress={handlePress}
+        style={({ pressed }) => [
+          styles.button,
+          {
+            backgroundColor: C.accent,
+            opacity: pressed ? 0.85 : 1,
+          },
+        ]}
+      >
+        <Ionicons name="search-outline" size={18} color="#fff" />
+        <Text style={styles.label}>Find on Amazon</Text>
+        <Ionicons
+          name="open-outline"
+          size={14}
+          color="rgba(255,255,255,0.7)"
+        />
+      </Pressable>
+      <AffiliateDisclosure />
+    </>
   );
 }
 
