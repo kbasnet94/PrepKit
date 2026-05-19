@@ -15,3 +15,6 @@ Thumbs.db
 
 # Git worktrees
 .worktrees/
+
+# Supabase CLI temp cache
+**/supabase/.temp/
